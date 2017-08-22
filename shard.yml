@@ -11,4 +11,7 @@ dependencies:
   bindgen:
     github: Papierkorb/bindgen
 
+scripts:
+  postinstall: (cd ext && make)
+
 license: MPL-2
