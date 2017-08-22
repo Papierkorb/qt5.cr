@@ -1,6 +1,6 @@
 # Crystal Bindings to Qt 5 <sup>Technology Preview</sup>
 
-**Technology Preview** Bindings for the Qt5 Framework.
+Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bindgen).
 
 Please note that this is **not** production-ready – yet!
 
