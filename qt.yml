@@ -1,0 +1,285 @@
+# This is the binding configuration for Qt5.
+# Targeted version: Qt 5.9.1
+# Main Page: https://www.qt.io/
+# C++ Documentation: https://doc.qt.io/qt-5/index.html
+#
+# Please take note of Qts own license at:
+#   https://doc.qt.io/qt-5/licensing.html
+# Also see the license of THE BINDINGS in the LICENSE file.
+#
+# These bindings will, as configured, bind to Qt dynamically.
+
+module: Qt
+
+library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
+classes:
+  QObject: Object
+  "QMetaObject::Connection": SignalConnection
+  QAbstractEventDispatcher: AbstractEventDispatcher
+  QAbstractEventDispatcher::TimerInfo: EventDispatcherTimerInfo
+  QWidget: Widget
+  QAbstractButton: AbstractButton
+  QFrame: Frame
+  QAbstractScrollArea: AbstractScrollArea
+  QScrollArea: ScrollArea
+  QMenuBar: MenuBar
+  QMenu: Menu
+  QAction: Action
+  QMainWindow: MainWindow
+  QDialog: Dialog
+  QLabel: Label
+  QLCDNumber: LcdNumber
+  QPushButton: PushButton
+  QCheckBox: CheckBox
+  QCoreApplication: CoreApplication
+  QGuiApplication: GuiApplication
+  QApplication: Application
+  QImage: Image
+  QPixmap: Pixmap
+  QEventLoop: EventLoop
+  QTabWidget: TabWidget
+  QLayoutItem: LayoutItem
+  QLayout: Layout
+  QBoxLayout: BoxLayout
+  QHBoxLayout: HBoxLayout
+  QVBoxLayout: VBoxLayout
+  QPoint: Point
+  QKeySequence: KeySequence
+  QLineEdit: LineEdit
+  QTextEdit: TextEdit
+  QFileDialog: FileDialog
+  QTextOption: TextOption
+  QTextDocument: TextDocument
+  QTextCursor: TextCursor
+  QDir: Dir
+
+enums:
+  "Qt::CheckState": CheckState
+  "Qt::ConnectionType": ConnectionType
+  "Qt::TimerType": TimerType
+  "Qt::GestureType": GestureType
+  "Qt::GestureFlags": GestureFlags
+  "Qt::LayoutDirection": LayoutDirection
+  "Qt::FocusReason": FocusReason
+  "Qt::FocusPolicy": FocusPolicy
+  "Qt::ContextMenuPolicy": ContextMenuPolicy
+  "Qt::ShortcutContext": ShortcutContext
+  "Qt::WindowFlags": WindowFlags
+  "Qt::WindowModality": WindowModality
+  "Qt::WindowStates": WindowStates
+  "Qt::WindowType": WindowType
+  # "Qt::WindowAttribute": WindowAttribute
+  "Qt::InputMethodQuery": InputMethodQuery
+  "Qt::InputMethodHints": InputMethodHints
+  "Qt::TextFormat": TextFormat
+  "Qt::Alignment": Alignment
+  "Qt::TextInteractionFlags": TextInteractionFlags
+  "Qt::UIEffect": UIEffect
+  "Qt::ApplicationAttribute": ApplicationAttribute
+  "Qt::ScrollBarPolicy": ScrollBarPolicy
+  "Qt::ItemSelectionMode": ItemSelectionMode
+  "Qt::SortOrder": SortOrder
+  "Qt::ItemSelectionOperation": ItemSelectionOperation
+  "Qt::SizeHint": SizeHint
+  "Qt::WindowFrameSection": WindowFrameSection
+  "Qt::CursorMoveStyle": CursorMoveStyle
+  "QEventLoop::ProcessEventsFlags": EventLoop::ProcessEventsFlags
+  "Qt::KeyboardModifiers": KeyboardModifiers
+  "Qt::MouseButtons": MouseButtons
+  "Qt::ApplicationState": ApplicationState
+  "QSizePolicy::Policy": SizePolicy::Policy
+  "Qt::WidgetAttribute": WidgetAttribute
+  "QPalette::ColorRole": PaletteColorRole #Palette::ColorRole
+  "QWidget::RenderFlags": Widget::RenderFlags
+  "QFrame::Shape": Frame::Shape
+  "QFrame::Shadow": Frame::Shadow
+  "QImage::Format": Image::Format
+  "Qt::ImageConversionFlags": ImageConversionFlags
+  "Qt::GlobalColor": GlobalColor
+  "Qt::MaskMode": MaskMode
+  "Qt::AspectRatioMode": AspectRatioMode
+  "Qt::TransformationMode": TransformationMode
+  "QImage::InvertMode": Image::InvertMode
+  "QLCDNumber::Mode": LcdNumber::Mode
+  "QLCDNumber::SegmentStyle": LcdNumber::SegmentStyle
+  "QTabWidget::TabShape": TabWidget::TabShape
+  "QTabWidget::TabPosition": TabWidget::TabPosition
+  "Qt::Corner": Corner
+  "Qt::TextElideMode": TextElideMode
+  "Qt::ToolButtonStyle": ToolButtonStyle
+  "QMainWindow::DockOptions": MainWindow::DockOptions
+  "Qt::DockWidgetArea": DockWidgetArea
+  "Qt::DockWidgetAreas": DockWidgetAreas
+  "Qt::ToolBarArea": ToolBarArea
+  "Qt::Orientation": Orientation
+  "Qt::Orientations": Orientations
+  "QLayout::SizeConstraint": Layout::SizeConstraint
+  "QBoxLayout::Direction": BoxLayout::Direction
+  "Qt::FindChildOptions": FindChildOptions
+  "QPaintDevice::PaintDeviceMetric": PaintDeviceMetric # PaintDevice::PaintDeviceMetric
+  "QAction::ActionEvent": Action::Event
+  "QAction::MenuRole": Action::MenuRole
+  "QAction::Priority": Action::Priority
+  "QKeySequence::StandardKey": KeySequence::StandardKey
+  "QKeySequence::SequenceFormat": KeySequence::SequenceFormat
+  "QKeySequence::SequenceMatch": KeySequence::SequenceMatch
+  "QGraphicsScene::ItemIndexMethod": GraphicsScene::ItemIndexMethod
+  "QGraphicsScene::SceneLayer": GraphicsScene::SceneLayer
+  "QGraphicsScene::SceneLayers": GraphicsScene::SceneLayers
+  "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
+  "QLineEdit::ActionPosition": LineEdit::ActionPosition
+  "QLineEdit::EchoMode": LineEdit::EchoMode
+  "QTextEdit::AutoFormatting": TextEdit::AutoFormatting
+  "QTextEdit::AutoFormattingFlag": TextEdit::AutoFormattingFlag
+  "QTextEdit::LineWrapMode": TextEdit::LineWrapMode
+  "QDialog::DialogCode": Dialog::DialogCode
+  "QFileDialog::AcceptMode": FileDialog::AcceptMode
+  "QFileDialog::DialogLabel": FileDialog::DialogLabel
+  "QFileDialog::FileMode": FileDialog::FileMode
+  "QFileDialog::Option": FileDialog::Option
+  "QFileDialog::Options": FileDialog::Options
+  "QFileDialog::ViewMode": FileDialog::ViewMode
+  "QUrl::ComponentFormattingOption": Url::ComponentFormattingOption
+  "QUrl::ComponentFormattingOptions": Url::ComponentFormattingOptions
+  "QUrl::FormattingOptions": Url::FormattingOptions
+  "QUrl::ParsingMode": Url::ParsingMode
+  "QUrl::UrlFormattingOption": Url::UrlFormattingOption
+  "QUrl::UserInputResolutionOption": Url::UserInputResolutionOption
+  "QUrl::UserInputResolutionOptions": Url::UserInputResolutionOptions
+  "QDir::Filters": Dir::Filters
+  "QTextOption::Flags": TextOptionFlags # TextOption::Flags
+  "QTextDocument::MetaInformation": TextDocumentMetaInformation # TextDocument::MetaInformation
+  "QTextDocument::Stacks": TextDocumentStacks # TextDocument::Stacks
+  "QTextOption::WrapMode": TextOptionWrapMode # TextOption::WrapMode
+  "QTextDocument::FindFlags": TextDocumentFindFlags # TextDocument::FindFlags
+  "QTextCursor::MoveOperation": TextCursorMoveOperation # TextCursor::MoveOperation
+  "QTextCursor::MoveMode": TextCursorMoveMode # TextCursor::MoveMode
+  "QTextCursor::SelectionType": TextCursorSelectionType # TextCursor::SelectionType
+  "QTextListFormat::Style": TextListFormatStyle # TextListFormat::Style
+  "QTextFrameFormat::Position": TextFrameFormatPosition # TextFrameFormat::Position
+  "QDir::SortFlags": Dir::SortFlags
+
+types: # Type rewrite rules
+  QString: # Convert QString instances using that:
+    converter: Qt::Converter::QString
+    crystal_type: String
+    cpp_type: CrystalString
+    binding_type: CrystalString
+    to_cpp: "QString::fromUtf8(%.ptr, %.size)"
+    from_cpp: "qstring_to_crystal(%)"
+    kind: Struct
+    pass_by: Value
+    wrapper_pass_by: Value
+  "QMetaObject::Connection":
+    crystal_type: SignalConnection
+    cpp_type: "QMetaObject::Connection"
+    binding_type: QMetaObjectConnection
+  QSessionManager:
+    pass_by: Reference
+    from_cpp: "(%)"
+  QKeySequencePrivate: { ignore: true }
+  QUrlPrivate: { ignore: true }
+  QImageData: { ignore: true }
+  QImage: { sub_class: false }
+  QPixmap: { sub_class: false }
+  QPoint: # Manual implementation with a structure copy.
+    copy_structure: true
+    binding_type: QPoint
+    generate_binding: false # Wrap this one manually
+    generate_wrapper: false
+  QKeySequence:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  "QAbstractEventDispatcher::TimerInfo":
+    binding_type: EventDispatcherTimerInfo
+    generate_binding: false
+    generate_wrapper: false
+    copy_structure: true
+    pass_by: Value
+    kind: Struct
+
+  # TODO: Some kind of platform-matching.  That'll be fun.
+  WId: { ignore: true }
+  QVariant: { ignore: true }
+  "QPixmap::DataPtr": { ignore: true }
+  QRgb: { ignore: true, crystal_type: UInt32 }
+  QPixelFormat: { ignore: true }
+
+  "QSizePolicy": { ignore: true }
+  "QSizePolicy::Policy": { ignore: true }
+  "QSizePolicy::ControlTypes": { ignore: true }
+
+  # Rewrite `QList<T>` typedefs
+  QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
+  QStringList: { alias_for: "QList<QString>" }
+  QWidgetList: { alias_for: "QList<QWidget *>" }
+  QObjectList: { alias_for: "QList<QObject *>" }
+  "QList<QObject *>": { ignore: true } # One remaining bug .. I guess
+  "QList<QTextEdit::ExtraSelection>": { ignore: true }
+
+  "QList<QGraphicsWidget *>": { ignore: true }
+  "QList<QKeySequence>": { ignore: true }
+  "QList<QTextOption::Tab>": { ignore: true }
+  "QVector<QTextFormat>": { ignore: true }
+
+  # ignore types:
+  "std::chrono::milliseconds": { ignore: true }
+  "QtPrivateSignal": { ignore: true }
+  "QObject::QPrivateSignal": { ignore: true }
+  "QCoreApplication::QPrivateSignal": { ignore: true }
+  "QMetaObject::Call": { ignore: true }
+  "QList<T>": { ignore: true }
+  "QList<QScreen *>": { ignore: true }
+  "QList<QAction *>": { ignore: true }
+  "QList<QByteArray>": { ignore: true }
+  "QList<QDockWidget *>": { ignore: true }
+  "QVector<QRgb>": { ignore: true }
+  "Func1": { ignore: true } # Fake types used in QObject::connect().
+  "Func2": { ignore: true }
+  "QtPrivate::FunctionPointer<Func1>::Object": { ignore: true }
+  "QtPrivate::FunctionPointer<Func2>::Object": { ignore: true }
+  "T": { ignore: true }
+  "void ()": { ignore: true }
+  "void (void *)": { ignore: true }
+  "qreal": { ignore: true }
+  "QList<qreal>": { ignore: true }
+  # "QUrl": { ignore: true }
+
+containers:
+  - class: QList
+    type: Sequential
+    instantiations:
+      - [ "QString" ] # `QStringList`
+      - [ "QObject *" ] # `QObjectList`
+      - [ "QWidget *" ] # `QWidgetList`
+      - [ "QAction *" ]
+      - [ "QUrl" ]
+      - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
+
+output:
+  cpp: ext/qt_binding.cpp
+  crystal: src/qt5/binding.cr
+  cpp_preamble: |-
+    #include <gc/gc_cpp.h>
+    #include "converters.hpp"
+  cpp_build: make
+
+parser: # Clang parser configuration
+  # binary: path/to/clang/bindgen
+  flags:
+    - -x
+    - c++
+    - -std=c++11
+  files:
+    - QtCore/QtCore
+    - QtGui/QtGui
+    - QtWidgets/QtWidgets
+  includes:
+    - /usr/include/qt/
+    - /usr/include/qt/QtCore/
+    - /usr/include/qt/QtGui/
+    - /usr/include/qt/QtWidgets/
+    - /usr/lib/clang/4.0.1/include/
+  defines:
+    - __STDC_CONSTANT_MACROS
+    - __STDC_LIMIT_MACROS

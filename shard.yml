@@ -1,0 +1,14 @@
+name: qt5
+version: 0.1.0
+description: Qt5 bindings for Crystal
+
+authors:
+  - Stefan Merettig <stefan-merettig@nuriaproject.org>
+
+crystal: 0.23.1
+
+dependencies:
+  bindgen:
+    github: Papierkorb/bindgen
+
+license: MPL-2
