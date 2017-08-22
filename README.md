@@ -1,4 +1,4 @@
-# Qt 5 Technology Preview
+# Crystal Bindings to Qt 5 <sup>Technology Preview</sup>
 
 **Technology Preview** Bindings for the Qt5 Framework.
 
@@ -45,7 +45,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   qt5:
-    github: Papierkorb/qt5
+    github: Papierkorb/qt5.cr
     branch: master-ready-to-use
 ```
 
@@ -54,7 +54,7 @@ If you want to generate the bindings yourself, use:
 ```yaml
 dependencies:
   qt5:
-    github: Papierkorb/qt5
+    github: Papierkorb/qt5.cr
     branch: master
 ```
 
@@ -62,7 +62,7 @@ And then run `crystal deps` and `lib/bindgen/tool.sh qt.yml` to generate them.
 
 ### Sample code
 
-Have a look in [samples/](https://github.com/Papierkorb/qt5/tree/master/samples)!
+Have a look in [samples/](https://github.com/Papierkorb/qt5.cr/tree/master/samples)!
 
 Though, to make this not look empty, here's the possibly simplest program imaginable:
 
