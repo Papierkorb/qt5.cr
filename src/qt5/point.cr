@@ -3,8 +3,8 @@ module Qt
   struct Point
     getter unwrap : Binding::QPoint
 
-    def to_unsafe : Binding::QPoint*
-      pointerof(@unwrap)
+    def to_unsafe : Binding::QPoint
+      @unwrap
     end
 
     def initialize(x : Int32 = 0, y : Int32 = 0)
@@ -74,6 +74,14 @@ module Qt
     # manhattan length of an vector from the origin to the point.
     def manhattan_length : Int32
       x.abs + y.abs
+    end
+
+    def to_s(io)
+      io << "#{x}, #{y}"
+    end
+
+    def inspect(io)
+      io << "<Point: #{x}, #{y}>"
     end
   end
 end
