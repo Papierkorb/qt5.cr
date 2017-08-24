@@ -10,5 +10,6 @@ crystal: 0.23.1
 dependencies:
   bindgen:
     github: Papierkorb/bindgen
+    branch: master
 
 license: MPL-2
