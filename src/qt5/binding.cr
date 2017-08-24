@@ -349,7 +349,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -404,7 +403,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -454,7 +452,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -510,7 +507,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -566,7 +562,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QObject_timerEvent_QTimerEvent_X : CrystalProc
@@ -617,7 +612,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -668,7 +662,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QObject_eventFilter_QObject_X_QEvent_X : CrystalProc
@@ -730,7 +723,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -787,7 +779,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -838,7 +829,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QObject_eventFilter_QObject_X_QEvent_X : CrystalProc
@@ -888,7 +878,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -943,7 +932,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -997,7 +985,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -1103,7 +1090,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -1296,7 +1282,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
       bg_QObject_eventFilter_QObject_X_QEvent_X : CrystalProc
@@ -1358,7 +1343,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QObject_childEvent_QChildEvent_X : CrystalProc
       bg_QObject_customEvent_QEvent_X : CrystalProc
@@ -1411,7 +1395,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X : CrystalProc
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
       bg_QWidget_initPainter_QPainter_X : CrystalProc
-      bg_QWidget_redirected_QPoint_X : CrystalProc
       bg_QWidget_sharedPainter_ : CrystalProc
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X : CrystalProc
       bg_QWidget_focusNextPrevChild_bool : CrystalProc
@@ -1606,12 +1589,12 @@ module Qt
     fun bg_QWidget_setFixedSize_int_int(_self_ : QWidget*, w : Int32, h : Int32) : Void
     fun bg_QWidget_setFixedWidth_int(_self_ : QWidget*, w : Int32) : Void
     fun bg_QWidget_setFixedHeight_int(_self_ : QWidget*, h : Int32) : Void
-    fun bg_QWidget_mapToGlobal_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint*) : QPoint
-    fun bg_QWidget_mapFromGlobal_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint*) : QPoint
-    fun bg_QWidget_mapToParent_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint*) : QPoint
-    fun bg_QWidget_mapFromParent_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint*) : QPoint
-    fun bg_QWidget_mapTo_const_QWidget_X_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QWidget*, unnamed_arg_1 : QPoint*) : QPoint
-    fun bg_QWidget_mapFrom_const_QWidget_X_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QWidget*, unnamed_arg_1 : QPoint*) : QPoint
+    fun bg_QWidget_mapToGlobal_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint) : QPoint
+    fun bg_QWidget_mapFromGlobal_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint) : QPoint
+    fun bg_QWidget_mapToParent_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint) : QPoint
+    fun bg_QWidget_mapFromParent_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint) : QPoint
+    fun bg_QWidget_mapTo_const_QWidget_X_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QWidget*, unnamed_arg_1 : QPoint) : QPoint
+    fun bg_QWidget_mapFrom_const_QWidget_X_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QWidget*, unnamed_arg_1 : QPoint) : QPoint
     fun bg_QWidget_window_(_self_ : QWidget*) : QWidget*
     fun bg_QWidget_nativeParentWidget_(_self_ : QWidget*) : QWidget*
     fun bg_QWidget_topLevelWidget_(_self_ : QWidget*) : QWidget*
@@ -1638,13 +1621,13 @@ module Qt
     fun bg_QWidget_mask_(_self_ : QWidget*) : QRegion*
     fun bg_QWidget_clearMask_(_self_ : QWidget*) : Void
     fun bg_QWidget_render_QPaintDevice_X(_self_ : QWidget*, target : QPaintDevice*) : Void
-    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint*) : Void
-    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint*, source_region : QRegion*) : Void
-    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint*, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint) : Void
+    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint, source_region : QRegion*) : Void
+    fun bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(_self_ : QWidget*, target : QPaintDevice*, target_offset : QPoint, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
     fun bg_QWidget_render_QPainter_X(_self_ : QWidget*, painter : QPainter*) : Void
-    fun bg_QWidget_render_QPainter_X_const_QPoint_R(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint*) : Void
-    fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint*, source_region : QRegion*) : Void
-    fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint*, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    fun bg_QWidget_render_QPainter_X_const_QPoint_R(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint) : Void
+    fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint, source_region : QRegion*) : Void
+    fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(_self_ : QWidget*, painter : QPainter*, target_offset : QPoint, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
     fun bg_QWidget_grab_(_self_ : QWidget*) : QPixmap*
     fun bg_QWidget_grab_const_QRect_R(_self_ : QWidget*, rectangle : QRect*) : QPixmap*
     fun bg_QWidget_graphicsEffect_(_self_ : QWidget*) : QGraphicsEffect*
@@ -1733,7 +1716,7 @@ module Qt
     fun bg_QWidget_lower_(_self_ : QWidget*) : Void
     fun bg_QWidget_stackUnder_QWidget_X(_self_ : QWidget*, unnamed_arg_0 : QWidget*) : Void
     fun bg_QWidget_move_int_int(_self_ : QWidget*, x : Int32, y : Int32) : Void
-    fun bg_QWidget_move_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint*) : Void
+    fun bg_QWidget_move_const_QPoint_R(_self_ : QWidget*, unnamed_arg_0 : QPoint) : Void
     fun bg_QWidget_resize_int_int(_self_ : QWidget*, w : Int32, h : Int32) : Void
     fun bg_QWidget_resize_const_QSize_R(_self_ : QWidget*, unnamed_arg_0 : QSize*) : Void
     fun bg_QWidget_setGeometry_int_int_int_int(_self_ : QWidget*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
@@ -1782,7 +1765,7 @@ module Qt
     fun bg_QWidget_overrideWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowType_(_self_ : QWidget*) : WindowType
     fun bg_QWidget_childAt_int_int(_self_ : QWidget*, x : Int32, y : Int32) : QWidget*
-    fun bg_QWidget_childAt_const_QPoint_R(_self_ : QWidget*, p : QPoint*) : QWidget*
+    fun bg_QWidget_childAt_const_QPoint_R(_self_ : QWidget*, p : QPoint) : QWidget*
     fun bg_QWidget_setAttribute_Qt__WidgetAttribute_bool(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute, on : Bool) : Void
     fun bg_QWidget_testAttribute_Qt__WidgetAttribute(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute) : Bool
     fun bg_QWidget_paintEngine_(_self_ : QWidget*) : QPaintEngine*
@@ -1800,8 +1783,8 @@ module Qt
     fun bg_QWidget_windowIconChanged_CONNECT_CrystalProc_void__const_QIconR_(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWidget_windowIconTextChanged_const_QString_R(_self_ : QWidget*, icon_text : CrystalString) : Void
     fun bg_QWidget_windowIconTextChanged_CONNECT_CrystalProc_void__const_CrystalString_(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_QWidget_customContextMenuRequested_const_QPoint_R(_self_ : QWidget*, pos : QPoint*) : Void
-    fun bg_QWidget_customContextMenuRequested_CONNECT_CrystalProc_void__const_QPointR_(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
+    fun bg_QWidget_customContextMenuRequested_const_QPoint_R(_self_ : QWidget*, pos : QPoint) : Void
+    fun bg_QWidget_customContextMenuRequested_CONNECT_CrystalProc_void__const_QPoint_(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWidget_event_QEvent_X(_self_ : QWidget*, event : QEvent*) : Bool
     fun bg_QWidget_mousePressEvent_QMouseEvent_X(_self_ : QWidget*, event : QMouseEvent*) : Void
     fun bg_QWidget_mouseReleaseEvent_QMouseEvent_X(_self_ : QWidget*, event : QMouseEvent*) : Void
@@ -1831,7 +1814,6 @@ module Qt
     fun bg_QWidget_changeEvent_QEvent_X(_self_ : QWidget*, unnamed_arg_0 : QEvent*) : Void
     fun bg_QWidget_metric_QPaintDevice__PaintDeviceMetric(_self_ : QWidget*, unnamed_arg_0 : PaintDeviceMetric) : Int32
     fun bg_QWidget_initPainter_QPainter_X(_self_ : QWidget*, painter : QPainter*) : Void
-    fun bg_QWidget_redirected_QPoint_X(_self_ : QWidget*, offset : QPoint*) : QPaintDevice*
     fun bg_QWidget_sharedPainter_(_self_ : QWidget*) : QPainter*
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : QWidget*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_inputMethodHints_(_self_ : QWidget*) : InputMethodHints
@@ -1883,7 +1865,7 @@ module Qt
     fun bg_QAbstractButton_toggled_bool(_self_ : QAbstractButton*, checked : Bool) : Void
     fun bg_QAbstractButton_toggled_CONNECT_CrystalProc_void__bool_(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_paintEvent_QPaintEvent_X(_self_ : QAbstractButton*, e : QPaintEvent*) : Void
-    fun bg_QAbstractButton_hitButton_const_QPoint_R(_self_ : QAbstractButton*, pos : QPoint*) : Bool
+    fun bg_QAbstractButton_hitButton_const_QPoint_R(_self_ : QAbstractButton*, pos : QPoint) : Bool
     fun bg_QAbstractButton_checkStateSet_(_self_ : QAbstractButton*) : Void
     fun bg_QAbstractButton_nextCheckState_(_self_ : QAbstractButton*) : Void
     fun bg_QAbstractButton_event_QEvent_X(_self_ : QAbstractButton*, e : QEvent*) : Bool
@@ -2019,7 +2001,7 @@ module Qt
     fun bg_QMenuBar_minimumSizeHint_(_self_ : QMenuBar*) : QSize*
     fun bg_QMenuBar_heightForWidth_int(_self_ : QMenuBar*, unnamed_arg_0 : Int32) : Int32
     fun bg_QMenuBar_actionGeometry_QAction_X(_self_ : QMenuBar*, unnamed_arg_0 : QAction*) : QRect*
-    fun bg_QMenuBar_actionAt_const_QPoint_R(_self_ : QMenuBar*, unnamed_arg_0 : QPoint*) : QAction*
+    fun bg_QMenuBar_actionAt_const_QPoint_R(_self_ : QMenuBar*, unnamed_arg_0 : QPoint) : QAction*
     fun bg_QMenuBar_setCornerWidget_QWidget_X_Qt__Corner(_self_ : QMenuBar*, w : QWidget*, corner : Corner) : Void
     fun bg_QMenuBar_cornerWidget_Qt__Corner(_self_ : QMenuBar*, corner : Corner) : QWidget*
     fun bg_QMenuBar_isNativeMenuBar_(_self_ : QMenuBar*) : Bool
@@ -2074,18 +2056,18 @@ module Qt
     fun bg_QMenu_isTearOffEnabled_(_self_ : QMenu*) : Bool
     fun bg_QMenu_isTearOffMenuVisible_(_self_ : QMenu*) : Bool
     fun bg_QMenu_showTearOffMenu_(_self_ : QMenu*) : Void
-    fun bg_QMenu_showTearOffMenu_const_QPoint_R(_self_ : QMenu*, pos : QPoint*) : Void
+    fun bg_QMenu_showTearOffMenu_const_QPoint_R(_self_ : QMenu*, pos : QPoint) : Void
     fun bg_QMenu_hideTearOffMenu_(_self_ : QMenu*) : Void
     fun bg_QMenu_setDefaultAction_QAction_X(_self_ : QMenu*, unnamed_arg_0 : QAction*) : Void
     fun bg_QMenu_defaultAction_(_self_ : QMenu*) : QAction*
     fun bg_QMenu_setActiveAction_QAction_X(_self_ : QMenu*, act : QAction*) : Void
     fun bg_QMenu_activeAction_(_self_ : QMenu*) : QAction*
-    fun bg_QMenu_popup_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint*, at : QAction*) : Void
+    fun bg_QMenu_popup_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint, at : QAction*) : Void
     fun bg_QMenu_exec_(_self_ : QMenu*) : QAction*
-    fun bg_QMenu_exec_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint*, at : QAction*) : QAction*
+    fun bg_QMenu_exec_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint, at : QAction*) : QAction*
     fun bg_QMenu_sizeHint_(_self_ : QMenu*) : QSize*
     fun bg_QMenu_actionGeometry_QAction_X(_self_ : QMenu*, unnamed_arg_0 : QAction*) : QRect*
-    fun bg_QMenu_actionAt_const_QPoint_R(_self_ : QMenu*, unnamed_arg_0 : QPoint*) : QAction*
+    fun bg_QMenu_actionAt_const_QPoint_R(_self_ : QMenu*, unnamed_arg_0 : QPoint) : QAction*
     fun bg_QMenu_menuAction_(_self_ : QMenu*) : QAction*
     fun bg_QMenu_title_(_self_ : QMenu*) : CrystalString
     fun bg_QMenu_setTitle_const_QString_R(_self_ : QMenu*, title : CrystalString) : Void
@@ -2211,7 +2193,7 @@ module Qt
     fun bg_QMainWindow_setTabPosition_Qt__DockWidgetAreas_QTabWidget__TabPosition(_self_ : QMainWindow*, areas : DockWidgetAreas, tab_position : TabWidget::TabPosition) : Void
     fun bg_QMainWindow_setDockOptions_QMainWindow__DockOptions(_self_ : QMainWindow*, options : MainWindow::DockOptions) : Void
     fun bg_QMainWindow_dockOptions_(_self_ : QMainWindow*) : MainWindow::DockOptions
-    fun bg_QMainWindow_isSeparator_const_QPoint_R(_self_ : QMainWindow*, pos : QPoint*) : Bool
+    fun bg_QMainWindow_isSeparator_const_QPoint_R(_self_ : QMainWindow*, pos : QPoint) : Bool
     fun bg_QMainWindow_menuBar_(_self_ : QMainWindow*) : QMenuBar*
     fun bg_QMainWindow_setMenuBar_QMenuBar_X(_self_ : QMainWindow*, menubar : QMenuBar*) : Void
     fun bg_QMainWindow_menuWidget_(_self_ : QMainWindow*) : QWidget*
@@ -2428,7 +2410,7 @@ module Qt
     fun bg_QCheckBox_stateChanged_int(_self_ : QCheckBox*, unnamed_arg_0 : Int32) : Void
     fun bg_QCheckBox_stateChanged_CONNECT_CrystalProc_void__int_(_self_ : QCheckBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QCheckBox_event_QEvent_X(_self_ : QCheckBox*, e : QEvent*) : Bool
-    fun bg_QCheckBox_hitButton_const_QPoint_R(_self_ : QCheckBox*, pos : QPoint*) : Bool
+    fun bg_QCheckBox_hitButton_const_QPoint_R(_self_ : QCheckBox*, pos : QPoint) : Bool
     fun bg_QCheckBox_checkStateSet_(_self_ : QCheckBox*) : Void
     fun bg_QCheckBox_nextCheckState_(_self_ : QCheckBox*) : Void
     fun bg_QCheckBox_paintEvent_QPaintEvent_X(_self_ : QCheckBox*, unnamed_arg_0 : QPaintEvent*) : Void
@@ -2508,7 +2490,7 @@ module Qt
     fun bg_QGuiApplication_desktopFileName_STATIC_() : CrystalString
     fun bg_QGuiApplication_allWindows_STATIC_() : QWindowList*
     fun bg_QGuiApplication_topLevelWindows_STATIC_() : QWindowList*
-    fun bg_QGuiApplication_topLevelAt_STATIC_const_QPoint_R(pos : QPoint*) : QWindow*
+    fun bg_QGuiApplication_topLevelAt_STATIC_const_QPoint_R(pos : QPoint) : QWindow*
     fun bg_QGuiApplication_setWindowIcon_STATIC_const_QIcon_R(icon : QIcon*) : Void
     fun bg_QGuiApplication_windowIcon_STATIC_() : QIcon*
     fun bg_QGuiApplication_platformName_STATIC_() : CrystalString
@@ -2607,9 +2589,9 @@ module Qt
     fun bg_QApplication_focusWidget_STATIC_() : QWidget*
     fun bg_QApplication_activeWindow_STATIC_() : QWidget*
     fun bg_QApplication_setActiveWindow_STATIC_QWidget_X(act : QWidget*) : Void
-    fun bg_QApplication_widgetAt_STATIC_const_QPoint_R(p : QPoint*) : QWidget*
+    fun bg_QApplication_widgetAt_STATIC_const_QPoint_R(p : QPoint) : QWidget*
     fun bg_QApplication_widgetAt_STATIC_int_int(x : Int32, y : Int32) : QWidget*
-    fun bg_QApplication_topLevelAt_STATIC_const_QPoint_R(p : QPoint*) : QWidget*
+    fun bg_QApplication_topLevelAt_STATIC_const_QPoint_R(p : QPoint) : QWidget*
     fun bg_QApplication_topLevelAt_STATIC_int_int(x : Int32, y : Int32) : QWidget*
     fun bg_QApplication_beep_STATIC_() : Void
     fun bg_QApplication_alert_STATIC_QWidget_X_int(widget : QWidget*, duration : Int32) : Void
@@ -2676,15 +2658,15 @@ module Qt
     fun bg_QImage_constScanLine_int(_self_ : QImage*, unnamed_arg_0 : Int32) : UInt8*
     fun bg_QImage_bytesPerLine_(_self_ : QImage*) : Int32
     fun bg_QImage_valid_int_int(_self_ : QImage*, x : Int32, y : Int32) : Bool
-    fun bg_QImage_valid_const_QPoint_R(_self_ : QImage*, pt : QPoint*) : Bool
+    fun bg_QImage_valid_const_QPoint_R(_self_ : QImage*, pt : QPoint) : Bool
     fun bg_QImage_pixelIndex_int_int(_self_ : QImage*, x : Int32, y : Int32) : Int32
-    fun bg_QImage_pixelIndex_const_QPoint_R(_self_ : QImage*, pt : QPoint*) : Int32
+    fun bg_QImage_pixelIndex_const_QPoint_R(_self_ : QImage*, pt : QPoint) : Int32
     fun bg_QImage_setPixel_int_int_uint(_self_ : QImage*, x : Int32, y : Int32, index_or_rgb : UInt32) : Void
-    fun bg_QImage_setPixel_const_QPoint_R_uint(_self_ : QImage*, pt : QPoint*, index_or_rgb : UInt32) : Void
+    fun bg_QImage_setPixel_const_QPoint_R_uint(_self_ : QImage*, pt : QPoint, index_or_rgb : UInt32) : Void
     fun bg_QImage_pixelColor_int_int(_self_ : QImage*, x : Int32, y : Int32) : QColor*
-    fun bg_QImage_pixelColor_const_QPoint_R(_self_ : QImage*, pt : QPoint*) : QColor*
+    fun bg_QImage_pixelColor_const_QPoint_R(_self_ : QImage*, pt : QPoint) : QColor*
     fun bg_QImage_setPixelColor_int_int_const_QColor_R(_self_ : QImage*, x : Int32, y : Int32, c : QColor*) : Void
-    fun bg_QImage_setPixelColor_const_QPoint_R_const_QColor_R(_self_ : QImage*, pt : QPoint*, c : QColor*) : Void
+    fun bg_QImage_setPixelColor_const_QPoint_R_const_QColor_R(_self_ : QImage*, pt : QPoint, c : QColor*) : Void
     fun bg_QImage_fill_uint(_self_ : QImage*, pixel : UInt32) : Void
     fun bg_QImage_fill_const_QColor_R(_self_ : QImage*, color : QColor*) : Void
     fun bg_QImage_fill_Qt__GlobalColor(_self_ : QImage*, color : GlobalColor) : Void
@@ -2720,7 +2702,7 @@ module Qt
     fun bg_QImage_setDotsPerMeterX_int(_self_ : QImage*, unnamed_arg_0 : Int32) : Void
     fun bg_QImage_setDotsPerMeterY_int(_self_ : QImage*, unnamed_arg_0 : Int32) : Void
     fun bg_QImage_offset_(_self_ : QImage*) : QPoint
-    fun bg_QImage_setOffset_const_QPoint_R(_self_ : QImage*, unnamed_arg_0 : QPoint*) : Void
+    fun bg_QImage_setOffset_const_QPoint_R(_self_ : QImage*, unnamed_arg_0 : QPoint) : Void
     fun bg_QImage_textKeys_(_self_ : QImage*) : Void*
     fun bg_QImage_text_(_self_ : QImage*) : CrystalString
     fun bg_QImage_text_const_QString_R(_self_ : QImage*, key : CrystalString) : CrystalString
@@ -2752,7 +2734,7 @@ module Qt
     fun bg_QPixmap_defaultDepth_STATIC_() : Int32
     fun bg_QPixmap_fill_(_self_ : QPixmap*) : Void
     fun bg_QPixmap_fill_const_QColor_R(_self_ : QPixmap*, fill_color : QColor*) : Void
-    fun bg_QPixmap_fill_const_QPaintDevice_X_const_QPoint_R(_self_ : QPixmap*, device : QPaintDevice*, ofs : QPoint*) : Void
+    fun bg_QPixmap_fill_const_QPaintDevice_X_const_QPoint_R(_self_ : QPixmap*, device : QPaintDevice*, ofs : QPoint) : Void
     fun bg_QPixmap_fill_const_QPaintDevice_X_int_int(_self_ : QPixmap*, device : QPaintDevice*, xofs : Int32, yofs : Int32) : Void
     fun bg_QPixmap_mask_(_self_ : QPixmap*) : QBitmap*
     fun bg_QPixmap_setMask_const_QBitmap_R(_self_ : QPixmap*, unnamed_arg_0 : QBitmap*) : Void
@@ -3061,7 +3043,7 @@ module Qt
     fun bg_QLineEdit_minimumSizeHint_(_self_ : QLineEdit*) : QSize*
     fun bg_QLineEdit_cursorPosition_(_self_ : QLineEdit*) : Int32
     fun bg_QLineEdit_setCursorPosition_int(_self_ : QLineEdit*, unnamed_arg_0 : Int32) : Void
-    fun bg_QLineEdit_cursorPositionAt_const_QPoint_R(_self_ : QLineEdit*, pos : QPoint*) : Int32
+    fun bg_QLineEdit_cursorPositionAt_const_QPoint_R(_self_ : QLineEdit*, pos : QPoint) : Int32
     fun bg_QLineEdit_setAlignment_Qt__Alignment(_self_ : QLineEdit*, flag : Alignment) : Void
     fun bg_QLineEdit_alignment_(_self_ : QLineEdit*) : Alignment
     fun bg_QLineEdit_cursorForward_bool_int(_self_ : QLineEdit*, mark : Bool, steps : Int32) : Void
@@ -3184,11 +3166,11 @@ module Qt
     fun bg_QTextEdit_toHtml_(_self_ : QTextEdit*) : CrystalString
     fun bg_QTextEdit_ensureCursorVisible_(_self_ : QTextEdit*) : Void
     fun bg_QTextEdit_createStandardContextMenu_(_self_ : QTextEdit*) : QMenu*
-    fun bg_QTextEdit_createStandardContextMenu_const_QPoint_R(_self_ : QTextEdit*, position : QPoint*) : QMenu*
-    fun bg_QTextEdit_cursorForPosition_const_QPoint_R(_self_ : QTextEdit*, pos : QPoint*) : QTextCursor*
+    fun bg_QTextEdit_createStandardContextMenu_const_QPoint_R(_self_ : QTextEdit*, position : QPoint) : QMenu*
+    fun bg_QTextEdit_cursorForPosition_const_QPoint_R(_self_ : QTextEdit*, pos : QPoint) : QTextCursor*
     fun bg_QTextEdit_cursorRect_const_QTextCursor_R(_self_ : QTextEdit*, cursor : QTextCursor*) : QRect*
     fun bg_QTextEdit_cursorRect_(_self_ : QTextEdit*) : QRect*
-    fun bg_QTextEdit_anchorAt_const_QPoint_R(_self_ : QTextEdit*, pos : QPoint*) : CrystalString
+    fun bg_QTextEdit_anchorAt_const_QPoint_R(_self_ : QTextEdit*, pos : QPoint) : CrystalString
     fun bg_QTextEdit_overwriteMode_(_self_ : QTextEdit*) : Bool
     fun bg_QTextEdit_setOverwriteMode_bool(_self_ : QTextEdit*, overwrite : Bool) : Void
     fun bg_QTextEdit_tabStopWidth_(_self_ : QTextEdit*) : Int32
@@ -4815,7 +4797,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Widget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQWidget.new(
       bg_QWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -4856,7 +4838,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -4878,7 +4859,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Widget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQWidget.new(
       bg_QWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -4919,7 +4900,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -4994,8 +4974,8 @@ module Qt
     def y() : Int32
       Binding.bg_QWidget_y_(self)
     end
-    def pos() : Binding::Point
-      Binding.bg_QWidget_pos_(self)
+    def pos() : Point
+      Point.new(unwrap: Binding.bg_QWidget_pos_(self))
     end
     def frame_size() : QSize*
       Binding.bg_QWidget_frameSize_(self)
@@ -5090,23 +5070,23 @@ module Qt
     def fixed_height=(h : Int32) : Void
       Binding.bg_QWidget_setFixedHeight_int(self, h)
     end
-    def map_to_global(unnamed_arg_0 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapToGlobal_const_QPoint_R(self, unnamed_arg_0)
+    def map_to_global(unnamed_arg_0 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapToGlobal_const_QPoint_R(self, unnamed_arg_0))
     end
-    def map_from_global(unnamed_arg_0 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapFromGlobal_const_QPoint_R(self, unnamed_arg_0)
+    def map_from_global(unnamed_arg_0 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapFromGlobal_const_QPoint_R(self, unnamed_arg_0))
     end
-    def map_to_parent(unnamed_arg_0 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapToParent_const_QPoint_R(self, unnamed_arg_0)
+    def map_to_parent(unnamed_arg_0 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapToParent_const_QPoint_R(self, unnamed_arg_0))
     end
-    def map_from_parent(unnamed_arg_0 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapFromParent_const_QPoint_R(self, unnamed_arg_0)
+    def map_from_parent(unnamed_arg_0 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapFromParent_const_QPoint_R(self, unnamed_arg_0))
     end
-    def map_to(unnamed_arg_0 : Widget, unnamed_arg_1 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapTo_const_QWidget_X_const_QPoint_R(self, unnamed_arg_0, unnamed_arg_1)
+    def map_to(unnamed_arg_0 : Widget, unnamed_arg_1 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapTo_const_QWidget_X_const_QPoint_R(self, unnamed_arg_0, unnamed_arg_1))
     end
-    def map_from(unnamed_arg_0 : Widget, unnamed_arg_1 : Binding::Point) : Binding::Point
-      Binding.bg_QWidget_mapFrom_const_QWidget_X_const_QPoint_R(self, unnamed_arg_0, unnamed_arg_1)
+    def map_from(unnamed_arg_0 : Widget, unnamed_arg_1 : Point) : Point
+      Point.new(unwrap: Binding.bg_QWidget_mapFrom_const_QWidget_X_const_QPoint_R(self, unnamed_arg_0, unnamed_arg_1))
     end
     def window() : Widget
       Widget.new(unwrap: Binding.bg_QWidget_window_(self))
@@ -5186,25 +5166,25 @@ module Qt
     def render(target : QPaintDevice*) : Void
       Binding.bg_QWidget_render_QPaintDevice_X(self, target)
     end
-    def render(target : QPaintDevice*, target_offset : Binding::Point) : Void
+    def render(target : QPaintDevice*, target_offset : Point) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R(self, target, target_offset)
     end
-    def render(target : QPaintDevice*, target_offset : Binding::Point, source_region : QRegion*) : Void
+    def render(target : QPaintDevice*, target_offset : Point, source_region : QRegion*) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R(self, target, target_offset, source_region)
     end
-    def render(target : QPaintDevice*, target_offset : Binding::Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    def render(target : QPaintDevice*, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(self, target, target_offset, source_region, render_flags)
     end
     def render(painter : QPainter*) : Void
       Binding.bg_QWidget_render_QPainter_X(self, painter)
     end
-    def render(painter : QPainter*, target_offset : Binding::Point) : Void
+    def render(painter : QPainter*, target_offset : Point) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R(self, painter, target_offset)
     end
-    def render(painter : QPainter*, target_offset : Binding::Point, source_region : QRegion*) : Void
+    def render(painter : QPainter*, target_offset : Point, source_region : QRegion*) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R(self, painter, target_offset, source_region)
     end
-    def render(painter : QPainter*, target_offset : Binding::Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    def render(painter : QPainter*, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(self, painter, target_offset, source_region, render_flags)
     end
     def grab() : Pixmap
@@ -5471,7 +5451,7 @@ module Qt
     def move(x : Int32, y : Int32) : Void
       Binding.bg_QWidget_move_int_int(self, x, y)
     end
-    def move(unnamed_arg_0 : Binding::Point) : Void
+    def move(unnamed_arg_0 : Point) : Void
       Binding.bg_QWidget_move_const_QPoint_R(self, unnamed_arg_0)
     end
     def resize(w : Int32, h : Int32) : Void
@@ -5618,7 +5598,7 @@ module Qt
     def child_at(x : Int32, y : Int32) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_childAt_int_int(self, x, y))
     end
-    def child_at(p : Binding::Point) : Widget
+    def child_at(p : Point) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_childAt_const_QPoint_R(self, p))
     end
     def set_attribute(unnamed_arg_0 : WidgetAttribute, on : Bool = true) : Void
@@ -5672,11 +5652,11 @@ module Qt
     def on_window_icon_text_changed(&block : Proc(String, Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QWidget_windowIconTextChanged_CONNECT_CrystalProc_void__const_CrystalString_(self, BindgenHelper.wrap_proc(->(icon_text : CrystalString){ block.call(Qt::Converter::QString.unwrap(icon_text)) })))
     end
-    def custom_context_menu_requested(pos : Binding::Point) : Void
+    def custom_context_menu_requested(pos : Point) : Void
       Binding.bg_QWidget_customContextMenuRequested_const_QPoint_R(self, pos)
     end
-    def on_custom_context_menu_requested(&block : Proc(Binding::Point, Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QWidget_customContextMenuRequested_CONNECT_CrystalProc_void__const_QPointR_(self, BindgenHelper.wrap_proc(->(pos : QPoint*){ block.call(pos) })))
+    def on_custom_context_menu_requested(&block : Proc(Point, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QWidget_customContextMenuRequested_CONNECT_CrystalProc_void__const_QPoint_(self, BindgenHelper.wrap_proc(->(pos : QPoint){ block.call(Point.new(unwrap: pos)) })))
     end
     protected def event(event : QEvent*) : Bool
       Binding.bg_QWidget_event_QEvent_X(self, event)
@@ -5765,9 +5745,6 @@ module Qt
     protected def init_painter(painter : QPainter*) : Void
       Binding.bg_QWidget_initPainter_QPainter_X(self, painter)
     end
-    protected def redirected(offset : Binding::Point) : QPaintDevice*
-      Binding.bg_QWidget_redirected_QPoint_X(self, offset)
-    end
     protected def shared_painter() : QPainter*
       Binding.bg_QWidget_sharedPainter_(self)
     end
@@ -5802,7 +5779,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Widget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQWidget.new(
       bg_QWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -5843,7 +5820,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -5881,13 +5857,13 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(AbstractButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQAbstractButton.new(
       bg_QAbstractButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QAbstractButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QAbstractButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
@@ -5926,7 +5902,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6043,7 +6018,7 @@ module Qt
       SignalConnection.new(unwrap: Binding.bg_QAbstractButton_toggled_CONNECT_CrystalProc_void__bool_(self, BindgenHelper.wrap_proc(->(checked : Bool){ block.call(checked) })))
     end
     protected abstract def paint_event(e : QPaintEvent*) : Void
-    protected def hit_button(pos : Binding::Point) : Bool
+    protected def hit_button(pos : Point) : Bool
       Binding.bg_QAbstractButton_hitButton_const_QPoint_R(self, pos)
     end
     protected def check_state_set() : Void
@@ -6089,13 +6064,13 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(AbstractButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQAbstractButton.new(
       bg_QAbstractButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QAbstractButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QAbstractButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
@@ -6134,7 +6109,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6193,7 +6167,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFrame.new(
       bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6234,7 +6208,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6256,7 +6229,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFrame.new(
       bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6297,7 +6270,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6373,7 +6345,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFrame.new(
       bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6414,7 +6386,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6436,7 +6407,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFrame.new(
       bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6477,7 +6448,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6523,7 +6493,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(AbstractScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQAbstractScrollArea.new(
       bg_QAbstractScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6569,7 +6539,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6650,7 +6619,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(AbstractScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQAbstractScrollArea.new(
       bg_QAbstractScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6696,7 +6665,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -6796,7 +6764,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(ScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQScrollArea.new(
       bg_QScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6843,7 +6811,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
@@ -6896,7 +6863,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(ScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQScrollArea.new(
       bg_QScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -6943,7 +6910,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
@@ -6994,7 +6960,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(MenuBar)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width visible= change_event key_press_event mouse_release_event mouse_press_event mouse_move_event leave_event paint_event resize_event action_event focus_out_event focus_in_event timer_event event_filter event dev_type has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event move_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width visible= change_event key_press_event mouse_release_event mouse_press_event mouse_move_event leave_event paint_event resize_event action_event focus_out_event focus_in_event timer_event event_filter event dev_type has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event move_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMenuBar.new(
       bg_QMenuBar_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -7037,7 +7003,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -7101,7 +7066,7 @@ module Qt
     def action_geometry(unnamed_arg_0 : Action) : QRect*
       Binding.bg_QMenuBar_actionGeometry_QAction_X(self, unnamed_arg_0)
     end
-    def action_at(unnamed_arg_0 : Binding::Point) : Action
+    def action_at(unnamed_arg_0 : Point) : Action
       Action.new(unwrap: Binding.bg_QMenuBar_actionAt_const_QPoint_R(self, unnamed_arg_0))
     end
     def set_corner_widget(w : Widget, corner : Corner = Corner::TopRightCorner) : Void
@@ -7202,7 +7167,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMenu.new(
       bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -7245,7 +7210,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -7265,7 +7229,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMenu.new(
       bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -7308,7 +7272,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -7387,7 +7350,7 @@ module Qt
     def show_tear_off_menu() : Void
       Binding.bg_QMenu_showTearOffMenu_(self)
     end
-    def show_tear_off_menu(pos : Binding::Point) : Void
+    def show_tear_off_menu(pos : Point) : Void
       Binding.bg_QMenu_showTearOffMenu_const_QPoint_R(self, pos)
     end
     def hide_tear_off_menu() : Void
@@ -7405,13 +7368,13 @@ module Qt
     def active_action() : Action
       Action.new(unwrap: Binding.bg_QMenu_activeAction_(self))
     end
-    def popup(pos : Binding::Point, at : Action? = nil) : Void
+    def popup(pos : Point, at : Action? = nil) : Void
       Binding.bg_QMenu_popup_const_QPoint_R_QAction_X(self, pos, at)
     end
     def exec() : Action
       Action.new(unwrap: Binding.bg_QMenu_exec_(self))
     end
-    def exec(pos : Binding::Point, at : Action? = nil) : Action
+    def exec(pos : Point, at : Action? = nil) : Action
       Action.new(unwrap: Binding.bg_QMenu_exec_const_QPoint_R_QAction_X(self, pos, at))
     end
     def size_hint() : QSize*
@@ -7420,7 +7383,7 @@ module Qt
     def action_geometry(unnamed_arg_0 : Action) : QRect*
       Binding.bg_QMenu_actionGeometry_QAction_X(self, unnamed_arg_0)
     end
-    def action_at(unnamed_arg_0 : Binding::Point) : Action
+    def action_at(unnamed_arg_0 : Point) : Action
       Action.new(unwrap: Binding.bg_QMenu_actionAt_const_QPoint_R(self, unnamed_arg_0))
     end
     def menu_action() : Action
@@ -7538,7 +7501,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMenu.new(
       bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -7581,7 +7544,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -7930,7 +7892,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(MainWindow)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast create_popup_menu context_menu_event event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast create_popup_menu context_menu_event event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMainWindow.new(
       bg_QMainWindow_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -7972,7 +7934,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -7994,7 +7955,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(MainWindow)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast create_popup_menu context_menu_event event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast create_popup_menu context_menu_event event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQMainWindow.new(
       bg_QMainWindow_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8036,7 +7997,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -8093,7 +8053,7 @@ module Qt
     def dock_options() : MainWindow::DockOptions
       MainWindow::DockOptions.new(unwrap: Binding.bg_QMainWindow_dockOptions_(self))
     end
-    def is_separator(pos : Binding::Point) : Bool
+    def is_separator(pos : Point) : Bool
       Binding.bg_QMainWindow_isSeparator_const_QPoint_R(self, pos)
     end
     def menu_bar() : MenuBar
@@ -8252,7 +8212,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Dialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQDialog.new(
       bg_QDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8299,7 +8259,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -8320,7 +8279,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Dialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQDialog.new(
       bg_QDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8367,7 +8326,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -8460,7 +8418,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Dialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQDialog.new(
       bg_QDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8507,7 +8465,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -8528,7 +8485,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Dialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQDialog.new(
       bg_QDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8575,7 +8532,6 @@ module Qt
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -8633,7 +8589,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLabel.new(
       bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8675,7 +8631,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -8696,7 +8651,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLabel.new(
       bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8738,7 +8693,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -8759,7 +8713,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLabel.new(
       bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8801,7 +8755,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -8822,7 +8775,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLabel.new(
       bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -8864,7 +8817,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -9065,7 +9017,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(LcdNumber)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLCDNumber.new(
       bg_QLCDNumber_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9106,7 +9058,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9128,7 +9079,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(LcdNumber)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLCDNumber.new(
       bg_QLCDNumber_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9169,7 +9120,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9279,7 +9229,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQPushButton.new(
       bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9291,7 +9241,7 @@ module Qt
       bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
@@ -9324,7 +9274,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9345,7 +9294,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQPushButton.new(
       bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9357,7 +9306,7 @@ module Qt
       bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
@@ -9390,7 +9339,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9411,7 +9359,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQPushButton.new(
       bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9423,7 +9371,7 @@ module Qt
       bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
@@ -9456,7 +9404,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9528,7 +9475,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQPushButton.new(
       bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9540,7 +9487,7 @@ module Qt
       bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
@@ -9573,7 +9520,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9610,7 +9556,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(CheckBox)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQCheckBox.new(
       bg_QCheckBox_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9618,7 +9564,7 @@ module Qt
       bg_QCheckBox_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
       bg_QCheckBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QCheckBox_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QCheckBox_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
@@ -9655,7 +9601,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9676,7 +9621,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(CheckBox)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQCheckBox.new(
       bg_QCheckBox_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -9684,7 +9629,7 @@ module Qt
       bg_QCheckBox_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
       bg_QCheckBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QCheckBox_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
+      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint){ self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QCheckBox_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
       bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
       bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
@@ -9721,7 +9666,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -9762,7 +9706,7 @@ module Qt
     protected def event(e : QEvent*) : Bool
       Binding.bg_QCheckBox_event_QEvent_X(self, e)
     end
-    protected def hit_button(pos : Binding::Point) : Bool
+    protected def hit_button(pos : Point) : Bool
       Binding.bg_QCheckBox_hitButton_const_QPoint_R(self, pos)
     end
     protected def check_state_set() : Void
@@ -10073,7 +10017,7 @@ module Qt
     def self.top_level_windows() : QWindowList*
       Binding.bg_QGuiApplication_topLevelWindows_STATIC_()
     end
-    def self.top_level_at(pos : Binding::Point) : QWindow*
+    def self.top_level_at(pos : Point) : QWindow*
       Binding.bg_QGuiApplication_topLevelAt_STATIC_const_QPoint_R(pos)
     end
     def self.window_icon=(icon : QIcon*) : Void
@@ -10417,13 +10361,13 @@ module Qt
     def self.active_window=(act : Widget) : Void
       Binding.bg_QApplication_setActiveWindow_STATIC_QWidget_X(act)
     end
-    def self.widget_at(p : Binding::Point) : Widget
+    def self.widget_at(p : Point) : Widget
       Widget.new(unwrap: Binding.bg_QApplication_widgetAt_STATIC_const_QPoint_R(p))
     end
     def self.widget_at(x : Int32, y : Int32) : Widget
       Widget.new(unwrap: Binding.bg_QApplication_widgetAt_STATIC_int_int(x, y))
     end
-    def self.top_level_at(p : Binding::Point) : Widget
+    def self.top_level_at(p : Point) : Widget
       Widget.new(unwrap: Binding.bg_QApplication_topLevelAt_STATIC_const_QPoint_R(p))
     end
     def self.top_level_at(x : Int32, y : Int32) : Widget
@@ -10671,31 +10615,31 @@ module Qt
     def valid(x : Int32, y : Int32) : Bool
       Binding.bg_QImage_valid_int_int(self, x, y)
     end
-    def valid(pt : Binding::Point) : Bool
+    def valid(pt : Point) : Bool
       Binding.bg_QImage_valid_const_QPoint_R(self, pt)
     end
     def pixel_index(x : Int32, y : Int32) : Int32
       Binding.bg_QImage_pixelIndex_int_int(self, x, y)
     end
-    def pixel_index(pt : Binding::Point) : Int32
+    def pixel_index(pt : Point) : Int32
       Binding.bg_QImage_pixelIndex_const_QPoint_R(self, pt)
     end
     def set_pixel(x : Int32, y : Int32, index_or_rgb : UInt32) : Void
       Binding.bg_QImage_setPixel_int_int_uint(self, x, y, index_or_rgb)
     end
-    def set_pixel(pt : Binding::Point, index_or_rgb : UInt32) : Void
+    def set_pixel(pt : Point, index_or_rgb : UInt32) : Void
       Binding.bg_QImage_setPixel_const_QPoint_R_uint(self, pt, index_or_rgb)
     end
     def pixel_color(x : Int32, y : Int32) : QColor*
       Binding.bg_QImage_pixelColor_int_int(self, x, y)
     end
-    def pixel_color(pt : Binding::Point) : QColor*
+    def pixel_color(pt : Point) : QColor*
       Binding.bg_QImage_pixelColor_const_QPoint_R(self, pt)
     end
     def set_pixel_color(x : Int32, y : Int32, c : QColor*) : Void
       Binding.bg_QImage_setPixelColor_int_int_const_QColor_R(self, x, y, c)
     end
-    def set_pixel_color(pt : Binding::Point, c : QColor*) : Void
+    def set_pixel_color(pt : Point, c : QColor*) : Void
       Binding.bg_QImage_setPixelColor_const_QPoint_R_const_QColor_R(self, pt, c)
     end
     def fill(pixel : UInt32) : Void
@@ -10800,10 +10744,10 @@ module Qt
     def dots_per_meter_y=(unnamed_arg_0 : Int32) : Void
       Binding.bg_QImage_setDotsPerMeterY_int(self, unnamed_arg_0)
     end
-    def offset() : Binding::Point
-      Binding.bg_QImage_offset_(self)
+    def offset() : Point
+      Point.new(unwrap: Binding.bg_QImage_offset_(self))
     end
-    def offset=(unnamed_arg_0 : Binding::Point) : Void
+    def offset=(unnamed_arg_0 : Point) : Void
       Binding.bg_QImage_setOffset_const_QPoint_R(self, unnamed_arg_0)
     end
     def text_keys() : Enumerable(String)
@@ -10918,7 +10862,7 @@ module Qt
     def fill(fill_color : QColor*) : Void
       Binding.bg_QPixmap_fill_const_QColor_R(self, fill_color)
     end
-    def fill(device : QPaintDevice*, ofs : Binding::Point) : Void
+    def fill(device : QPaintDevice*, ofs : Point) : Void
       Binding.bg_QPixmap_fill_const_QPaintDevice_X_const_QPoint_R(self, device, ofs)
     end
     def fill(device : QPaintDevice*, xofs : Int32, yofs : Int32) : Void
@@ -11172,7 +11116,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(TabWidget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width has_height_for_width? tab_inserted tab_removed show_event resize_event key_press_event paint_event change_event event dev_type visible= paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width has_height_for_width? tab_inserted tab_removed show_event resize_event key_press_event paint_event change_event event dev_type visible= paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQTabWidget.new(
       bg_QTabWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -11215,7 +11159,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -12409,7 +12352,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(LineEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLineEdit.new(
       bg_QLineEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -12451,7 +12394,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -12472,7 +12414,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(LineEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQLineEdit.new(
       bg_QLineEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -12514,7 +12456,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
@@ -12594,7 +12535,7 @@ module Qt
     def cursor_position=(unnamed_arg_0 : Int32) : Void
       Binding.bg_QLineEdit_setCursorPosition_int(self, unnamed_arg_0)
     end
-    def cursor_position_at(pos : Binding::Point) : Int32
+    def cursor_position_at(pos : Point) : Int32
       Binding.bg_QLineEdit_cursorPositionAt_const_QPoint_R(self, pos)
     end
     def alignment=(flag : Alignment) : Void
@@ -12853,7 +12794,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(TextEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter redirected shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQTextEdit.new(
       bg_QTextEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -12906,7 +12847,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
@@ -12924,7 +12864,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(TextEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter redirected shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQTextEdit.new(
       bg_QTextEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -12977,7 +12917,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
@@ -13117,10 +13056,10 @@ module Qt
     def create_standard_context_menu() : Menu
       Menu.new(unwrap: Binding.bg_QTextEdit_createStandardContextMenu_(self))
     end
-    def create_standard_context_menu(position : Binding::Point) : Menu
+    def create_standard_context_menu(position : Point) : Menu
       Menu.new(unwrap: Binding.bg_QTextEdit_createStandardContextMenu_const_QPoint_R(self, position))
     end
-    def cursor_for_position(pos : Binding::Point) : TextCursor
+    def cursor_for_position(pos : Point) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextEdit_cursorForPosition_const_QPoint_R(self, pos))
     end
     def cursor_rect(cursor : TextCursor) : QRect*
@@ -13129,7 +13068,7 @@ module Qt
     def cursor_rect() : QRect*
       Binding.bg_QTextEdit_cursorRect_(self)
     end
-    def anchor_at(pos : Binding::Point) : String
+    def anchor_at(pos : Point) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_anchorAt_const_QPoint_R(self, pos))
     end
     def overwrite_mode() : Bool
@@ -13361,7 +13300,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(TextEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter redirected shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQTextEdit.new(
       bg_QTextEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13414,7 +13353,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
@@ -13500,7 +13438,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13547,7 +13485,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -13568,7 +13505,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13615,7 +13552,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -13636,7 +13572,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13683,7 +13619,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -13704,7 +13639,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13751,7 +13686,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -13772,7 +13706,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -13819,7 +13753,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -14167,7 +14100,7 @@ module Qt
     {%
       methods = [] of Def
       ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQFileDialog.new(
       bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
@@ -14214,7 +14147,6 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
