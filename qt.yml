@@ -52,6 +52,22 @@ classes:
   QTextDocument: TextDocument
   QTextCursor: TextCursor
   QDir: Dir
+  QGraphicsItem: GraphicsItem
+  QGraphicsScene: GraphicsScene
+  QGraphicsView: GraphicsView
+  QGraphicsObject: GraphicsObject
+  QGraphicsWidget: GraphicsWidget
+  QGraphicsTextItem: GraphicsTextItem
+  QGraphicsTransform: GraphicsTransform
+  QAbstractGraphicsShapeItem: AbstractGraphicsShapeItem
+  QGraphicsEllipseItem: GraphicsEllipseItem
+  QGraphicsPathItem: GraphicsPathItem
+  QGraphicsPolygonItem: GraphicsPolygonItem
+  QGraphicsRectItem: GraphicsRectItem
+  QGraphicsSimpleTextItem: GraphicsSimpleTextItem
+  QGraphicsPixmapItem: GraphicsPixmapItem
+  QBrush: Brush
+  QColor: Color
 
 enums:
   "Qt::CheckState": CheckState
@@ -63,12 +79,12 @@ enums:
   "Qt::FocusReason": FocusReason
   "Qt::FocusPolicy": FocusPolicy
   "Qt::ContextMenuPolicy": ContextMenuPolicy
+  "Qt::BrushStyle": BrushStyle
   "Qt::ShortcutContext": ShortcutContext
   "Qt::WindowFlags": WindowFlags
   "Qt::WindowModality": WindowModality
   "Qt::WindowStates": WindowStates
   "Qt::WindowType": WindowType
-  # "Qt::WindowAttribute": WindowAttribute
   "Qt::InputMethodQuery": InputMethodQuery
   "Qt::InputMethodHints": InputMethodHints
   "Qt::TextFormat": TextFormat
@@ -87,6 +103,7 @@ enums:
   "Qt::KeyboardModifiers": KeyboardModifiers
   "Qt::MouseButtons": MouseButtons
   "Qt::ApplicationState": ApplicationState
+  "Qt::FillRule": FillRule
   "QSizePolicy::Policy": SizePolicy::Policy
   "Qt::WidgetAttribute": WidgetAttribute
   "QPalette::ColorRole": PaletteColorRole #Palette::ColorRole
@@ -123,9 +140,23 @@ enums:
   "QKeySequence::StandardKey": KeySequence::StandardKey
   "QKeySequence::SequenceFormat": KeySequence::SequenceFormat
   "QKeySequence::SequenceMatch": KeySequence::SequenceMatch
+  "QGraphicsItem::GraphicsItemFlags": GraphicsItem::GraphicsItemFlags
+  "QGraphicsItem::GraphicsItemFlag": GraphicsItem::GraphicsItemFlag
+  "QGraphicsItem::CacheMode": GraphicsItem::CacheMode
+  "QGraphicsItem::PanelModality": GraphicsItem::PanelModality
+  "QGraphicsItem::Extension": GraphicsItem::Extension
+  "QPainter::RenderHints": PainterRenderHints # Painter::RenderHints
+  "QPainter::RenderHint": PainterRenderHint # Painter::RenderHint
+  "QGraphicsView::ViewportAnchor": GraphicsView::ViewportAnchor
+  "QGraphicsView::ViewportUpdateMode": GraphicsView::ViewportUpdateMode
+  "QGraphicsView::OptimizationFlags": GraphicsView::OptimizationFlags
+  "QGraphicsView::OptimizationFlag": GraphicsView::OptimizationFlag
+  "QGraphicsView::DragMode": GraphicsView::DragMode
+  "QGraphicsView::CacheMode": GraphicsView::CacheMode
   "QGraphicsScene::ItemIndexMethod": GraphicsScene::ItemIndexMethod
   "QGraphicsScene::SceneLayer": GraphicsScene::SceneLayer
   "QGraphicsScene::SceneLayers": GraphicsScene::SceneLayers
+  "QGraphicsPixmapItem::ShapeMode": GraphicsPixmapItem::ShapeMode
   "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
   "QLineEdit::ActionPosition": LineEdit::ActionPosition
   "QLineEdit::EchoMode": LineEdit::EchoMode
@@ -158,6 +189,8 @@ enums:
   "QTextListFormat::Style": TextListFormatStyle # TextListFormat::Style
   "QTextFrameFormat::Position": TextFrameFormatPosition # TextFrameFormat::Position
   "QDir::SortFlags": Dir::SortFlags
+  "QColor::NameFormat": Color::NameFormat
+  "QColor::Spec": Color::Spec
 
 types: # Type rewrite rules
   QString: # Convert QString instances using that:
@@ -206,6 +239,7 @@ types: # Type rewrite rules
   WId: { ignore: true }
   QVariant: { ignore: true }
   "QPixmap::DataPtr": { ignore: true }
+  "QBrush::DataPtr": { ignore: true }
   QRgb: { ignore: true, crystal_type: UInt32 }
   QPixelFormat: { ignore: true }
 
@@ -245,9 +279,8 @@ types: # Type rewrite rules
   "T": { ignore: true }
   "void ()": { ignore: true }
   "void (void *)": { ignore: true }
-  "qreal": { ignore: true }
+  "QList<QRectF>": { ignore: true }
   "QList<qreal>": { ignore: true }
-  # "QUrl": { ignore: true }
 
 containers:
   - class: QList
@@ -258,6 +291,10 @@ containers:
       - [ "QWidget *" ] # `QWidgetList`
       - [ "QAction *" ]
       - [ "QUrl" ]
+      - [ "QGraphicsItem *" ]
+      - [ "QGraphicsWidget *" ]
+      - [ "QGraphicsTransform *" ]
+      - [ "QGraphicsView *" ]
       - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
 
 output:
