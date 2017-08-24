@@ -1469,13 +1469,8 @@ module Qt
     fun bg_QList_QAbstractEventDispatcher__TimerInfo_DESTROY_(_self_ : QList_QAbstractEventDispatcher__TimerInfo*) : Void
     fun bg_QObject_metaObject_(_self_ : QObject*) : QMetaObject*
     fun bg_QObject_qt_metacast_const_char_X(_self_ : QObject*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QObject_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QObject_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QObject_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QObject_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QObject_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QObject_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QObject_CONSTRUCT_() : QObject*
     fun bg_QObject_CONSTRUCT_QObject_X(parent : QObject*) : QObject*
     fun bg_QObject_event_QEvent_X(_self_ : QObject*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QObject*, watched : QObject*, event : QEvent*) : Bool
@@ -1487,25 +1482,17 @@ module Qt
     fun bg_QObject_blockSignals_bool(_self_ : QObject*, b : Bool) : Bool
     fun bg_QObject_thread_(_self_ : QObject*) : QThread*
     fun bg_QObject_moveToThread_QThread_X(_self_ : QObject*, thread : QThread*) : Void
-    fun bg_QObject_startTimer_int(_self_ : QObject*, interval : Int32) : Int32
     fun bg_QObject_startTimer_int_Qt__TimerType(_self_ : QObject*, interval : Int32, timer_type : TimerType) : Int32
     fun bg_QObject_killTimer_int(_self_ : QObject*, id : Int32) : Void
     fun bg_QObject_setParent_QObject_X(_self_ : QObject*, parent : QObject*) : Void
     fun bg_QObject_installEventFilter_QObject_X(_self_ : QObject*, filter_obj : QObject*) : Void
     fun bg_QObject_removeEventFilter_QObject_X(_self_ : QObject*, obj : QObject*) : Void
-    fun bg_QObject_connect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X(sender : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*) : QMetaObjectConnection*
     fun bg_QObject_connect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X_Qt__ConnectionType(sender : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*, unnamed_arg_4 : ConnectionType) : QMetaObjectConnection*
-    fun bg_QObject_connect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender : QObject*, signal : QMetaMethod*, receiver : QObject*, method : QMetaMethod*) : QMetaObjectConnection*
     fun bg_QObject_connect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R_Qt__ConnectionType(sender : QObject*, signal : QMetaMethod*, receiver : QObject*, method : QMetaMethod*, type : ConnectionType) : QMetaObjectConnection*
-    fun bg_QObject_connect_const_QObject_X_const_char_X_const_char_X(_self_ : QObject*, sender : QObject*, signal : UInt8*, member : UInt8*) : QMetaObjectConnection*
     fun bg_QObject_connect_const_QObject_X_const_char_X_const_char_X_Qt__ConnectionType(_self_ : QObject*, sender : QObject*, signal : UInt8*, member : UInt8*, type : ConnectionType) : QMetaObjectConnection*
     fun bg_QObject_disconnect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X(sender : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*) : Bool
     fun bg_QObject_disconnect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender : QObject*, signal : QMetaMethod*, receiver : QObject*, member : QMetaMethod*) : Bool
-    fun bg_QObject_disconnect_(_self_ : QObject*) : Bool
-    fun bg_QObject_disconnect_const_char_X(_self_ : QObject*, signal : UInt8*) : Bool
-    fun bg_QObject_disconnect_const_char_X_const_QObject_X(_self_ : QObject*, signal : UInt8*, receiver : QObject*) : Bool
     fun bg_QObject_disconnect_const_char_X_const_QObject_X_const_char_X(_self_ : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*) : Bool
-    fun bg_QObject_disconnect_const_QObject_X(_self_ : QObject*, receiver : QObject*) : Bool
     fun bg_QObject_disconnect_const_QObject_X_const_char_X(_self_ : QObject*, receiver : QObject*, member : UInt8*) : Bool
     fun bg_QObject_disconnect_STATIC_const_QMetaObject__Connection_R(unnamed_arg_0 : QMetaObjectConnection*) : Bool
     fun bg_QObject_dumpObjectTree_(_self_ : QObject*) : Void
@@ -1513,8 +1500,6 @@ module Qt
     fun bg_QObject_registerUserData_STATIC_() : UInt32
     fun bg_QObject_setUserData_uint_QObjectUserData_X(_self_ : QObject*, id : UInt32, data : QObjectUserData*) : Void
     fun bg_QObject_userData_uint(_self_ : QObject*, id : UInt32) : QObjectUserData*
-    fun bg_QObject_destroyed_(_self_ : QObject*) : Void
-    fun bg_QObject_destroyed_CONNECT_CrystalProc_void_(_self_ : QObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QObject_destroyed_QObject_X(_self_ : QObject*, unnamed_arg_0 : QObject*) : Void
     fun bg_QObject_destroyed_CONNECT_CrystalProc_void__QObjectX_(_self_ : QObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QObject_parent_(_self_ : QObject*) : QObject*
@@ -1529,22 +1514,15 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QObject*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QObject*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QObject*, signal : QMetaMethod*) : Void
-    fun bg_QObject_CONSTRUCT_QObjectPrivate_R(dd : QObjectPrivate*) : QObject*
     fun bg_QObject_CONSTRUCT_QObjectPrivate_R_QObject_X(dd : QObjectPrivate*, parent : QObject*) : QObject*
     fun bg_QObject_DESTROY_(_self_ : QObject*) : Void
     fun bg_QMetaObject__Connection_CONSTRUCT_() : QMetaObjectConnection*
     fun bg_QMetaObject__Connection_DESTROY_(_self_ : QMetaObjectConnection*) : Void
     fun bg_QAbstractEventDispatcher_metaObject_(_self_ : QAbstractEventDispatcher*) : QMetaObject*
     fun bg_QAbstractEventDispatcher_qt_metacast_const_char_X(_self_ : QAbstractEventDispatcher*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractEventDispatcher_CONSTRUCT_() : QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_CONSTRUCT_QObject_X(parent : QObject*) : QAbstractEventDispatcher*
-    fun bg_QAbstractEventDispatcher_instance_STATIC_() : QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_instance_STATIC_QThread_X(thread : QThread*) : QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_processEvents_QEventLoop__ProcessEventsFlags(_self_ : QAbstractEventDispatcher*, flags : EventLoop::ProcessEventsFlags) : Bool
     fun bg_QAbstractEventDispatcher_hasPendingEvents_(_self_ : QAbstractEventDispatcher*) : Bool
@@ -1572,13 +1550,8 @@ module Qt
     fun bg_QAbstractEventDispatcher_DESTROY_(_self_ : QAbstractEventDispatcher*) : Void
     fun bg_QWidget_metaObject_(_self_ : QWidget*) : QMetaObject*
     fun bg_QWidget_qt_metacast_const_char_X(_self_ : QWidget*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QWidget_CONSTRUCT_() : QWidget*
     fun bg_QWidget_CONSTRUCT_QWidget_X(parent : QWidget*) : QWidget*
     fun bg_QWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QWidget*
     fun bg_QWidget_devType_(_self_ : QWidget*) : Int32
@@ -1730,12 +1703,9 @@ module Qt
     fun bg_QWidget_releaseMouse_(_self_ : QWidget*) : Void
     fun bg_QWidget_grabKeyboard_(_self_ : QWidget*) : Void
     fun bg_QWidget_releaseKeyboard_(_self_ : QWidget*) : Void
-    fun bg_QWidget_grabShortcut_const_QKeySequence_R(_self_ : QWidget*, key : QKeySequence*) : Int32
     fun bg_QWidget_grabShortcut_const_QKeySequence_R_Qt__ShortcutContext(_self_ : QWidget*, key : QKeySequence*, context : ShortcutContext) : Int32
     fun bg_QWidget_releaseShortcut_int(_self_ : QWidget*, id : Int32) : Void
-    fun bg_QWidget_setShortcutEnabled_int(_self_ : QWidget*, id : Int32) : Void
     fun bg_QWidget_setShortcutEnabled_int_bool(_self_ : QWidget*, id : Int32, enable : Bool) : Void
-    fun bg_QWidget_setShortcutAutoRepeat_int(_self_ : QWidget*, id : Int32) : Void
     fun bg_QWidget_setShortcutAutoRepeat_int_bool(_self_ : QWidget*, id : Int32, enable : Bool) : Void
     fun bg_QWidget_mouseGrabber_STATIC_() : QWidget*
     fun bg_QWidget_keyboardGrabber_STATIC_() : QWidget*
@@ -1808,13 +1778,11 @@ module Qt
     fun bg_QWidget_parentWidget_(_self_ : QWidget*) : QWidget*
     fun bg_QWidget_setWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowFlags_(_self_ : QWidget*) : WindowFlags
-    fun bg_QWidget_setWindowFlag_Qt__WindowType(_self_ : QWidget*, unnamed_arg_0 : WindowType) : Void
     fun bg_QWidget_setWindowFlag_Qt__WindowType_bool(_self_ : QWidget*, unnamed_arg_0 : WindowType, on : Bool) : Void
     fun bg_QWidget_overrideWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowType_(_self_ : QWidget*) : WindowType
     fun bg_QWidget_childAt_int_int(_self_ : QWidget*, x : Int32, y : Int32) : QWidget*
     fun bg_QWidget_childAt_const_QPoint_R(_self_ : QWidget*, p : QPoint*) : QWidget*
-    fun bg_QWidget_setAttribute_Qt__WidgetAttribute(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute) : Void
     fun bg_QWidget_setAttribute_Qt__WidgetAttribute_bool(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute, on : Bool) : Void
     fun bg_QWidget_testAttribute_Qt__WidgetAttribute(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute) : Bool
     fun bg_QWidget_paintEngine_(_self_ : QWidget*) : QPaintEngine*
@@ -1824,7 +1792,6 @@ module Qt
     fun bg_QWidget_setAutoFillBackground_bool(_self_ : QWidget*, enabled : Bool) : Void
     fun bg_QWidget_backingStore_(_self_ : QWidget*) : QBackingStore*
     fun bg_QWidget_windowHandle_(_self_ : QWidget*) : QWindow*
-    fun bg_QWidget_createWindowContainer_STATIC_QWindow_X(window : QWindow*) : QWidget*
     fun bg_QWidget_createWindowContainer_STATIC_QWindow_X_QWidget_X(window : QWindow*, parent : QWidget*) : QWidget*
     fun bg_QWidget_createWindowContainer_STATIC_QWindow_X_QWidget_X_Qt__WindowFlags(window : QWindow*, parent : QWidget*, flags : WindowFlags) : QWidget*
     fun bg_QWidget_windowTitleChanged_const_QString_R(_self_ : QWidget*, title : CrystalString) : Void
@@ -1870,9 +1837,6 @@ module Qt
     fun bg_QWidget_inputMethodHints_(_self_ : QWidget*) : InputMethodHints
     fun bg_QWidget_setInputMethodHints_Qt__InputMethodHints(_self_ : QWidget*, hints : InputMethodHints) : Void
     fun bg_QWidget_updateMicroFocus_(_self_ : QWidget*) : Void
-    fun bg_QWidget_create_(_self_ : QWidget*) : Void
-    fun bg_QWidget_destroy_(_self_ : QWidget*) : Void
-    fun bg_QWidget_destroy_bool(_self_ : QWidget*, destroy_window : Bool) : Void
     fun bg_QWidget_destroy_bool_bool(_self_ : QWidget*, destroy_window : Bool, destroy_sub_windows : Bool) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QWidget*, next_ : Bool) : Bool
     fun bg_QWidget_focusNextChild_(_self_ : QWidget*) : Bool
@@ -1881,13 +1845,8 @@ module Qt
     fun bg_QWidget_DESTROY_(_self_ : QWidget*) : Void
     fun bg_QAbstractButton_metaObject_(_self_ : QAbstractButton*) : QMetaObject*
     fun bg_QAbstractButton_qt_metacast_const_char_X(_self_ : QAbstractButton*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QAbstractButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractButton_CONSTRUCT_() : QAbstractButton*
     fun bg_QAbstractButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractButton*
     fun bg_QAbstractButton_setText_const_QString_R(_self_ : QAbstractButton*, text : CrystalString) : Void
     fun bg_QAbstractButton_text_(_self_ : QAbstractButton*) : CrystalString
@@ -1911,7 +1870,6 @@ module Qt
     fun bg_QAbstractButton_autoExclusive_(_self_ : QAbstractButton*) : Bool
     fun bg_QAbstractButton_group_(_self_ : QAbstractButton*) : QButtonGroup*
     fun bg_QAbstractButton_setIconSize_const_QSize_R(_self_ : QAbstractButton*, size : QSize*) : Void
-    fun bg_QAbstractButton_animateClick_(_self_ : QAbstractButton*) : Void
     fun bg_QAbstractButton_animateClick_int(_self_ : QAbstractButton*, msec : Int32) : Void
     fun bg_QAbstractButton_click_(_self_ : QAbstractButton*) : Void
     fun bg_QAbstractButton_toggle_(_self_ : QAbstractButton*) : Void
@@ -1920,8 +1878,6 @@ module Qt
     fun bg_QAbstractButton_pressed_CONNECT_CrystalProc_void_(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_released_(_self_ : QAbstractButton*) : Void
     fun bg_QAbstractButton_released_CONNECT_CrystalProc_void_(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_QAbstractButton_clicked_(_self_ : QAbstractButton*) : Void
-    fun bg_QAbstractButton_clicked_CONNECT_CrystalProc_void_(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_clicked_bool(_self_ : QAbstractButton*, checked : Bool) : Void
     fun bg_QAbstractButton_clicked_CONNECT_CrystalProc_void__bool_(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_toggled_bool(_self_ : QAbstractButton*, checked : Bool) : Void
@@ -1940,18 +1896,12 @@ module Qt
     fun bg_QAbstractButton_focusOutEvent_QFocusEvent_X(_self_ : QAbstractButton*, e : QFocusEvent*) : Void
     fun bg_QAbstractButton_changeEvent_QEvent_X(_self_ : QAbstractButton*, e : QEvent*) : Void
     fun bg_QAbstractButton_timerEvent_QTimerEvent_X(_self_ : QAbstractButton*, e : QTimerEvent*) : Void
-    fun bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R(dd : QAbstractButtonPrivate*) : QAbstractButton*
     fun bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd : QAbstractButtonPrivate*, parent : QWidget*) : QAbstractButton*
     fun bg_QAbstractButton_DESTROY_(_self_ : QAbstractButton*) : Void
     fun bg_QFrame_metaObject_(_self_ : QFrame*) : QMetaObject*
     fun bg_QFrame_qt_metacast_const_char_X(_self_ : QFrame*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QFrame_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QFrame_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFrame_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QFrame_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QFrame_CONSTRUCT_() : QFrame*
     fun bg_QFrame_CONSTRUCT_QWidget_X(parent : QWidget*) : QFrame*
     fun bg_QFrame_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFrame*
     fun bg_QFrame_frameStyle_(_self_ : QFrame*) : Int32
@@ -1972,20 +1922,14 @@ module Qt
     fun bg_QFrame_paintEvent_QPaintEvent_X(_self_ : QFrame*, unnamed_arg_0 : QPaintEvent*) : Void
     fun bg_QFrame_changeEvent_QEvent_X(_self_ : QFrame*, unnamed_arg_0 : QEvent*) : Void
     fun bg_QFrame_drawFrame_QPainter_X(_self_ : QFrame*, unnamed_arg_0 : QPainter*) : Void
-    fun bg_QFrame_CONSTRUCT_QFramePrivate_R(dd : QFramePrivate*) : QFrame*
     fun bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X(dd : QFramePrivate*, parent : QWidget*) : QFrame*
     fun bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd : QFramePrivate*, parent : QWidget*, f : WindowFlags) : QFrame*
     fun bg_QFrame_initStyleOption_QStyleOptionFrame_X(_self_ : QFrame*, option : QStyleOptionFrame*) : Void
     fun bg_QFrame_DESTROY_(_self_ : QFrame*) : Void
     fun bg_QAbstractScrollArea_metaObject_(_self_ : QAbstractScrollArea*) : QMetaObject*
     fun bg_QAbstractScrollArea_qt_metacast_const_char_X(_self_ : QAbstractScrollArea*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QAbstractScrollArea_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractScrollArea_CONSTRUCT_() : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_verticalScrollBarPolicy_(_self_ : QAbstractScrollArea*) : ScrollBarPolicy
     fun bg_QAbstractScrollArea_setVerticalScrollBarPolicy_Qt__ScrollBarPolicy(_self_ : QAbstractScrollArea*, unnamed_arg_0 : ScrollBarPolicy) : Void
@@ -2007,7 +1951,6 @@ module Qt
     fun bg_QAbstractScrollArea_setupViewport_QWidget_X(_self_ : QAbstractScrollArea*, viewport : QWidget*) : Void
     fun bg_QAbstractScrollArea_sizeAdjustPolicy_(_self_ : QAbstractScrollArea*) : AbstractScrollArea::SizeAdjustPolicy
     fun bg_QAbstractScrollArea_setSizeAdjustPolicy_QAbstractScrollArea__SizeAdjustPolicy(_self_ : QAbstractScrollArea*, policy : AbstractScrollArea::SizeAdjustPolicy) : Void
-    fun bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R(dd : QAbstractScrollAreaPrivate*) : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd : QAbstractScrollAreaPrivate*, parent : QWidget*) : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_setViewportMargins_int_int_int_int(_self_ : QAbstractScrollArea*, left : Int32, top : Int32, right : Int32, bottom : Int32) : Void
     fun bg_QAbstractScrollArea_setViewportMargins_const_QMargins_R(_self_ : QAbstractScrollArea*, margins : QMargins*) : Void
@@ -2033,13 +1976,8 @@ module Qt
     fun bg_QAbstractScrollArea_DESTROY_(_self_ : QAbstractScrollArea*) : Void
     fun bg_QScrollArea_metaObject_(_self_ : QScrollArea*) : QMetaObject*
     fun bg_QScrollArea_qt_metacast_const_char_X(_self_ : QScrollArea*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QScrollArea_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QScrollArea_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollArea_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QScrollArea_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QScrollArea_CONSTRUCT_() : QScrollArea*
     fun bg_QScrollArea_CONSTRUCT_QWidget_X(parent : QWidget*) : QScrollArea*
     fun bg_QScrollArea_widget_(_self_ : QScrollArea*) : QWidget*
     fun bg_QScrollArea_setWidget_QWidget_X(_self_ : QScrollArea*, widget : QWidget*) : Void
@@ -2050,13 +1988,8 @@ module Qt
     fun bg_QScrollArea_focusNextPrevChild_bool(_self_ : QScrollArea*, next_ : Bool) : Bool
     fun bg_QScrollArea_alignment_(_self_ : QScrollArea*) : Alignment
     fun bg_QScrollArea_setAlignment_Qt__Alignment(_self_ : QScrollArea*, unnamed_arg_0 : Alignment) : Void
-    fun bg_QScrollArea_ensureVisible_int_int(_self_ : QScrollArea*, x : Int32, y : Int32) : Void
-    fun bg_QScrollArea_ensureVisible_int_int_int(_self_ : QScrollArea*, x : Int32, y : Int32, xmargin : Int32) : Void
     fun bg_QScrollArea_ensureVisible_int_int_int_int(_self_ : QScrollArea*, x : Int32, y : Int32, xmargin : Int32, ymargin : Int32) : Void
-    fun bg_QScrollArea_ensureWidgetVisible_QWidget_X(_self_ : QScrollArea*, child_widget : QWidget*) : Void
-    fun bg_QScrollArea_ensureWidgetVisible_QWidget_X_int(_self_ : QScrollArea*, child_widget : QWidget*, xmargin : Int32) : Void
     fun bg_QScrollArea_ensureWidgetVisible_QWidget_X_int_int(_self_ : QScrollArea*, child_widget : QWidget*, xmargin : Int32, ymargin : Int32) : Void
-    fun bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R(dd : QScrollAreaPrivate*) : QScrollArea*
     fun bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd : QScrollAreaPrivate*, parent : QWidget*) : QScrollArea*
     fun bg_QScrollArea_event_QEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QScrollArea_eventFilter_QObject_X_QEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*) : Bool
@@ -2066,13 +1999,8 @@ module Qt
     fun bg_QScrollArea_DESTROY_(_self_ : QScrollArea*) : Void
     fun bg_QMenuBar_metaObject_(_self_ : QMenuBar*) : QMetaObject*
     fun bg_QMenuBar_qt_metacast_const_char_X(_self_ : QMenuBar*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QMenuBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMenuBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenuBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenuBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenuBar_CONSTRUCT_() : QMenuBar*
     fun bg_QMenuBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QMenuBar*
     fun bg_QMenuBar_addAction_const_QString_R(_self_ : QMenuBar*, text : CrystalString) : QAction*
     fun bg_QMenuBar_addAction_const_QString_R_const_QObject_X_const_char_X(_self_ : QMenuBar*, text : CrystalString, receiver : QObject*, member : UInt8*) : QAction*
@@ -2092,9 +2020,7 @@ module Qt
     fun bg_QMenuBar_heightForWidth_int(_self_ : QMenuBar*, unnamed_arg_0 : Int32) : Int32
     fun bg_QMenuBar_actionGeometry_QAction_X(_self_ : QMenuBar*, unnamed_arg_0 : QAction*) : QRect*
     fun bg_QMenuBar_actionAt_const_QPoint_R(_self_ : QMenuBar*, unnamed_arg_0 : QPoint*) : QAction*
-    fun bg_QMenuBar_setCornerWidget_QWidget_X(_self_ : QMenuBar*, w : QWidget*) : Void
     fun bg_QMenuBar_setCornerWidget_QWidget_X_Qt__Corner(_self_ : QMenuBar*, w : QWidget*, corner : Corner) : Void
-    fun bg_QMenuBar_cornerWidget_(_self_ : QMenuBar*) : QWidget*
     fun bg_QMenuBar_cornerWidget_Qt__Corner(_self_ : QMenuBar*, corner : Corner) : QWidget*
     fun bg_QMenuBar_isNativeMenuBar_(_self_ : QMenuBar*) : Bool
     fun bg_QMenuBar_setNativeMenuBar_bool(_self_ : QMenuBar*, native_menu_bar : Bool) : Void
@@ -2122,15 +2048,9 @@ module Qt
     fun bg_QMenuBar_DESTROY_(_self_ : QMenuBar*) : Void
     fun bg_QMenu_metaObject_(_self_ : QMenu*) : QMetaObject*
     fun bg_QMenu_qt_metacast_const_char_X(_self_ : QMenu*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QMenu_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMenu_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenu_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenu_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenu_CONSTRUCT_() : QMenu*
     fun bg_QMenu_CONSTRUCT_QWidget_X(parent : QWidget*) : QMenu*
-    fun bg_QMenu_CONSTRUCT_const_QString_R(title : CrystalString) : QMenu*
     fun bg_QMenu_CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QMenu*
     fun bg_QMenu_addAction_const_QString_R(_self_ : QMenu*, text : CrystalString) : QAction*
     fun bg_QMenu_addAction_const_QIcon_R_const_QString_R(_self_ : QMenu*, icon : QIcon*, text : CrystalString) : QAction*
@@ -2160,10 +2080,8 @@ module Qt
     fun bg_QMenu_defaultAction_(_self_ : QMenu*) : QAction*
     fun bg_QMenu_setActiveAction_QAction_X(_self_ : QMenu*, act : QAction*) : Void
     fun bg_QMenu_activeAction_(_self_ : QMenu*) : QAction*
-    fun bg_QMenu_popup_const_QPoint_R(_self_ : QMenu*, pos : QPoint*) : Void
     fun bg_QMenu_popup_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint*, at : QAction*) : Void
     fun bg_QMenu_exec_(_self_ : QMenu*) : QAction*
-    fun bg_QMenu_exec_const_QPoint_R(_self_ : QMenu*, pos : QPoint*) : QAction*
     fun bg_QMenu_exec_const_QPoint_R_QAction_X(_self_ : QMenu*, pos : QPoint*, at : QAction*) : QAction*
     fun bg_QMenu_sizeHint_(_self_ : QMenu*) : QSize*
     fun bg_QMenu_actionGeometry_QAction_X(_self_ : QMenu*, unnamed_arg_0 : QAction*) : QRect*
@@ -2204,22 +2122,14 @@ module Qt
     fun bg_QMenu_event_QEvent_X(_self_ : QMenu*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QMenu_focusNextPrevChild_bool(_self_ : QMenu*, next_ : Bool) : Bool
     fun bg_QMenu_initStyleOption_QStyleOptionMenuItem_X_const_QAction_X(_self_ : QMenu*, option : QStyleOptionMenuItem*, action : QAction*) : Void
-    fun bg_QMenu_CONSTRUCT_QMenuPrivate_R(dd : QMenuPrivate*) : QMenu*
     fun bg_QMenu_CONSTRUCT_QMenuPrivate_R_QWidget_X(dd : QMenuPrivate*, parent : QWidget*) : QMenu*
     fun bg_QMenu_DESTROY_(_self_ : QMenu*) : Void
     fun bg_QAction_metaObject_(_self_ : QAction*) : QMetaObject*
     fun bg_QAction_qt_metacast_const_char_X(_self_ : QAction*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QAction_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAction_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAction_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAction_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QAction_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAction_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAction_CONSTRUCT_() : QAction*
     fun bg_QAction_CONSTRUCT_QObject_X(parent : QObject*) : QAction*
-    fun bg_QAction_CONSTRUCT_const_QString_R(text : CrystalString) : QAction*
     fun bg_QAction_CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QAction*
-    fun bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R(icon : QIcon*, text : CrystalString) : QAction*
     fun bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon : QIcon*, text : CrystalString, parent : QObject*) : QAction*
     fun bg_QAction_setActionGroup_QActionGroup_X(_self_ : QAction*, group : QActionGroup*) : Void
     fun bg_QAction_actionGroup_(_self_ : QAction*) : QActionGroup*
@@ -2256,7 +2166,6 @@ module Qt
     fun bg_QAction_isEnabled_(_self_ : QAction*) : Bool
     fun bg_QAction_isVisible_(_self_ : QAction*) : Bool
     fun bg_QAction_activate_QAction__ActionEvent(_self_ : QAction*, event : Action::Event) : Void
-    fun bg_QAction_showStatusText_(_self_ : QAction*) : Bool
     fun bg_QAction_showStatusText_QWidget_X(_self_ : QAction*, widget : QWidget*) : Bool
     fun bg_QAction_setMenuRole_QAction__MenuRole(_self_ : QAction*, menu_role : Action::MenuRole) : Void
     fun bg_QAction_menuRole_(_self_ : QAction*) : Action::MenuRole
@@ -2275,8 +2184,6 @@ module Qt
     fun bg_QAction_setVisible_bool(_self_ : QAction*, unnamed_arg_0 : Bool) : Void
     fun bg_QAction_changed_(_self_ : QAction*) : Void
     fun bg_QAction_changed_CONNECT_CrystalProc_void_(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_QAction_triggered_(_self_ : QAction*) : Void
-    fun bg_QAction_triggered_CONNECT_CrystalProc_void_(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAction_triggered_bool(_self_ : QAction*, checked : Bool) : Void
     fun bg_QAction_triggered_CONNECT_CrystalProc_void__bool_(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAction_hovered_(_self_ : QAction*) : Void
@@ -2286,13 +2193,8 @@ module Qt
     fun bg_QAction_DESTROY_(_self_ : QAction*) : Void
     fun bg_QMainWindow_metaObject_(_self_ : QMainWindow*) : QMetaObject*
     fun bg_QMainWindow_qt_metacast_const_char_X(_self_ : QMainWindow*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QMainWindow_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMainWindow_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMainWindow_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMainWindow_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMainWindow_CONSTRUCT_() : QMainWindow*
     fun bg_QMainWindow_CONSTRUCT_QWidget_X(parent : QWidget*) : QMainWindow*
     fun bg_QMainWindow_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, flags : WindowFlags) : QMainWindow*
     fun bg_QMainWindow_iconSize_(_self_ : QMainWindow*) : QSize*
@@ -2321,7 +2223,6 @@ module Qt
     fun bg_QMainWindow_takeCentralWidget_(_self_ : QMainWindow*) : QWidget*
     fun bg_QMainWindow_setCorner_Qt__Corner_Qt__DockWidgetArea(_self_ : QMainWindow*, corner : Corner, area : DockWidgetArea) : Void
     fun bg_QMainWindow_corner_Qt__Corner(_self_ : QMainWindow*, corner : Corner) : DockWidgetArea
-    fun bg_QMainWindow_addToolBarBreak_(_self_ : QMainWindow*) : Void
     fun bg_QMainWindow_addToolBarBreak_Qt__ToolBarArea(_self_ : QMainWindow*, area : ToolBarArea) : Void
     fun bg_QMainWindow_insertToolBarBreak_QToolBar_X(_self_ : QMainWindow*, before : QToolBar*) : Void
     fun bg_QMainWindow_addToolBar_Qt__ToolBarArea_QToolBar_X(_self_ : QMainWindow*, area : ToolBarArea, toolbar : QToolBar*) : Void
@@ -2340,9 +2241,7 @@ module Qt
     fun bg_QMainWindow_removeDockWidget_QDockWidget_X(_self_ : QMainWindow*, dockwidget : QDockWidget*) : Void
     fun bg_QMainWindow_restoreDockWidget_QDockWidget_X(_self_ : QMainWindow*, dockwidget : QDockWidget*) : Bool
     fun bg_QMainWindow_dockWidgetArea_QDockWidget_X(_self_ : QMainWindow*, dockwidget : QDockWidget*) : DockWidgetArea
-    fun bg_QMainWindow_saveState_(_self_ : QMainWindow*) : QByteArray*
     fun bg_QMainWindow_saveState_int(_self_ : QMainWindow*, version : Int32) : QByteArray*
-    fun bg_QMainWindow_restoreState_const_QByteArray_R(_self_ : QMainWindow*, state : QByteArray*) : Bool
     fun bg_QMainWindow_restoreState_const_QByteArray_R_int(_self_ : QMainWindow*, state : QByteArray*, version : Int32) : Bool
     fun bg_QMainWindow_createPopupMenu_(_self_ : QMainWindow*) : QMenu*
     fun bg_QMainWindow_setAnimated_bool(_self_ : QMainWindow*, enabled : Bool) : Void
@@ -2359,13 +2258,8 @@ module Qt
     fun bg_QMainWindow_DESTROY_(_self_ : QMainWindow*) : Void
     fun bg_QDialog_metaObject_(_self_ : QDialog*) : QMetaObject*
     fun bg_QDialog_qt_metacast_const_char_X(_self_ : QDialog*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QDialog_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QDialog_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDialog_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDialog_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDialog_CONSTRUCT_() : QDialog*
     fun bg_QDialog_CONSTRUCT_QWidget_X(parent : QWidget*) : QDialog*
     fun bg_QDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QDialog*
     fun bg_QDialog_result_(_self_ : QDialog*) : Int32
@@ -2404,16 +2298,10 @@ module Qt
     fun bg_QDialog_DESTROY_(_self_ : QDialog*) : Void
     fun bg_QLabel_metaObject_(_self_ : QLabel*) : QMetaObject*
     fun bg_QLabel_qt_metacast_const_char_X(_self_ : QLabel*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QLabel_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLabel_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLabel_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLabel_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLabel_CONSTRUCT_() : QLabel*
     fun bg_QLabel_CONSTRUCT_QWidget_X(parent : QWidget*) : QLabel*
     fun bg_QLabel_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QLabel*
-    fun bg_QLabel_CONSTRUCT_const_QString_R(text : CrystalString) : QLabel*
     fun bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QLabel*
     fun bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(text : CrystalString, parent : QWidget*, f : WindowFlags) : QLabel*
     fun bg_QLabel_text_(_self_ : QLabel*) : CrystalString
@@ -2470,15 +2358,9 @@ module Qt
     fun bg_QLabel_DESTROY_(_self_ : QLabel*) : Void
     fun bg_QLCDNumber_metaObject_(_self_ : QLCDNumber*) : QMetaObject*
     fun bg_QLCDNumber_qt_metacast_const_char_X(_self_ : QLCDNumber*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QLCDNumber_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLCDNumber_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLCDNumber_CONSTRUCT_() : QLCDNumber*
     fun bg_QLCDNumber_CONSTRUCT_QWidget_X(parent : QWidget*) : QLCDNumber*
-    fun bg_QLCDNumber_CONSTRUCT_uint(num_digits : UInt32) : QLCDNumber*
     fun bg_QLCDNumber_CONSTRUCT_uint_QWidget_X(num_digits : UInt32, parent : QWidget*) : QLCDNumber*
     fun bg_QLCDNumber_smallDecimalPoint_(_self_ : QLCDNumber*) : Bool
     fun bg_QLCDNumber_digitCount_(_self_ : QLCDNumber*) : Int32
@@ -2507,17 +2389,10 @@ module Qt
     fun bg_QLCDNumber_DESTROY_(_self_ : QLCDNumber*) : Void
     fun bg_QPushButton_metaObject_(_self_ : QPushButton*) : QMetaObject*
     fun bg_QPushButton_qt_metacast_const_char_X(_self_ : QPushButton*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QPushButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QPushButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QPushButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QPushButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QPushButton_CONSTRUCT_() : QPushButton*
     fun bg_QPushButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QPushButton*
-    fun bg_QPushButton_CONSTRUCT_const_QString_R(text : CrystalString) : QPushButton*
     fun bg_QPushButton_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QPushButton*
-    fun bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R(icon : QIcon*, text : CrystalString) : QPushButton*
     fun bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon : QIcon*, text : CrystalString, parent : QWidget*) : QPushButton*
     fun bg_QPushButton_sizeHint_(_self_ : QPushButton*) : QSize*
     fun bg_QPushButton_minimumSizeHint_(_self_ : QPushButton*) : QSize*
@@ -2536,24 +2411,16 @@ module Qt
     fun bg_QPushButton_focusInEvent_QFocusEvent_X(_self_ : QPushButton*, unnamed_arg_0 : QFocusEvent*) : Void
     fun bg_QPushButton_focusOutEvent_QFocusEvent_X(_self_ : QPushButton*, unnamed_arg_0 : QFocusEvent*) : Void
     fun bg_QPushButton_initStyleOption_QStyleOptionButton_X(_self_ : QPushButton*, option : QStyleOptionButton*) : Void
-    fun bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R(dd : QPushButtonPrivate*) : QPushButton*
     fun bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd : QPushButtonPrivate*, parent : QWidget*) : QPushButton*
     fun bg_QPushButton_DESTROY_(_self_ : QPushButton*) : Void
     fun bg_QCheckBox_metaObject_(_self_ : QCheckBox*) : QMetaObject*
     fun bg_QCheckBox_qt_metacast_const_char_X(_self_ : QCheckBox*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QCheckBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QCheckBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCheckBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCheckBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCheckBox_CONSTRUCT_() : QCheckBox*
     fun bg_QCheckBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QCheckBox*
-    fun bg_QCheckBox_CONSTRUCT_const_QString_R(text : CrystalString) : QCheckBox*
     fun bg_QCheckBox_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QCheckBox*
     fun bg_QCheckBox_sizeHint_(_self_ : QCheckBox*) : QSize*
     fun bg_QCheckBox_minimumSizeHint_(_self_ : QCheckBox*) : QSize*
-    fun bg_QCheckBox_setTristate_(_self_ : QCheckBox*) : Void
     fun bg_QCheckBox_setTristate_bool(_self_ : QCheckBox*, y : Bool) : Void
     fun bg_QCheckBox_isTristate_(_self_ : QCheckBox*) : Bool
     fun bg_QCheckBox_checkState_(_self_ : QCheckBox*) : CheckState
@@ -2570,16 +2437,10 @@ module Qt
     fun bg_QCheckBox_DESTROY_(_self_ : QCheckBox*) : Void
     fun bg_QCoreApplication_metaObject_(_self_ : QCoreApplication*) : QMetaObject*
     fun bg_QCoreApplication_qt_metacast_const_char_X(_self_ : QCoreApplication*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QCoreApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCoreApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCoreApplication_CONSTRUCT_int_R_char_XX(argc : Int32*, argv : UInt8**) : QCoreApplication*
     fun bg_QCoreApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QCoreApplication*
     fun bg_QCoreApplication_arguments_STATIC_() : Void*
-    fun bg_QCoreApplication_setAttribute_STATIC_Qt__ApplicationAttribute(attribute : ApplicationAttribute) : Void
     fun bg_QCoreApplication_setAttribute_STATIC_Qt__ApplicationAttribute_bool(attribute : ApplicationAttribute, on : Bool) : Void
     fun bg_QCoreApplication_testAttribute_STATIC_Qt__ApplicationAttribute(attribute : ApplicationAttribute) : Bool
     fun bg_QCoreApplication_setOrganizationDomain_STATIC_const_QString_R(org_domain : CrystalString) : Void
@@ -2597,15 +2458,10 @@ module Qt
     fun bg_QCoreApplication_processEvents_STATIC_() : Void
     fun bg_QCoreApplication_processEvents_STATIC_QEventLoop__ProcessEventsFlags(flags : EventLoop::ProcessEventsFlags) : Void
     fun bg_QCoreApplication_processEvents_STATIC_QEventLoop__ProcessEventsFlags_int(flags : EventLoop::ProcessEventsFlags, maxtime : Int32) : Void
-    fun bg_QCoreApplication_exit_STATIC_() : Void
     fun bg_QCoreApplication_exit_STATIC_int(retcode : Int32) : Void
     fun bg_QCoreApplication_sendEvent_STATIC_QObject_X_QEvent_X(receiver : QObject*, event : QEvent*) : Bool
-    fun bg_QCoreApplication_postEvent_STATIC_QObject_X_QEvent_X(receiver : QObject*, event : QEvent*) : Void
     fun bg_QCoreApplication_postEvent_STATIC_QObject_X_QEvent_X_int(receiver : QObject*, event : QEvent*, priority : Int32) : Void
-    fun bg_QCoreApplication_sendPostedEvents_STATIC_() : Void
-    fun bg_QCoreApplication_sendPostedEvents_STATIC_QObject_X(receiver : QObject*) : Void
     fun bg_QCoreApplication_sendPostedEvents_STATIC_QObject_X_int(receiver : QObject*, event_type : Int32) : Void
-    fun bg_QCoreApplication_removePostedEvents_STATIC_QObject_X(receiver : QObject*) : Void
     fun bg_QCoreApplication_removePostedEvents_STATIC_QObject_X_int(receiver : QObject*, event_type : Int32) : Void
     fun bg_QCoreApplication_hasPendingEvents_STATIC_() : Bool
     fun bg_QCoreApplication_eventDispatcher_STATIC_() : QAbstractEventDispatcher*
@@ -2622,8 +2478,6 @@ module Qt
     fun bg_QCoreApplication_removeLibraryPath_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : Void
     fun bg_QCoreApplication_installTranslator_STATIC_QTranslator_X(message_file : QTranslator*) : Bool
     fun bg_QCoreApplication_removeTranslator_STATIC_QTranslator_X(message_file : QTranslator*) : Bool
-    fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X(context : UInt8*, key : UInt8*) : CrystalString
-    fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X(context : UInt8*, key : UInt8*, disambiguation : UInt8*) : CrystalString
     fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X_int(context : UInt8*, key : UInt8*, disambiguation : UInt8*, n : Int32) : CrystalString
     fun bg_QCoreApplication_flush_STATIC_() : Void
     fun bg_QCoreApplication_installNativeEventFilter_QAbstractNativeEventFilter_X(_self_ : QCoreApplication*, filter_obj : QAbstractNativeEventFilter*) : Void
@@ -2645,13 +2499,8 @@ module Qt
     fun bg_QCoreApplication_DESTROY_(_self_ : QCoreApplication*) : Void
     fun bg_QGuiApplication_metaObject_(_self_ : QGuiApplication*) : QMetaObject*
     fun bg_QGuiApplication_qt_metacast_const_char_X(_self_ : QGuiApplication*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QGuiApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGuiApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGuiApplication_CONSTRUCT_int_R_char_XX(argc : Int32*, argv : UInt8**) : QGuiApplication*
     fun bg_QGuiApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QGuiApplication*
     fun bg_QGuiApplication_setApplicationDisplayName_STATIC_const_QString_R(name : CrystalString) : Void
     fun bg_QGuiApplication_applicationDisplayName_STATIC_() : CrystalString
@@ -2732,13 +2581,8 @@ module Qt
     fun bg_QGuiApplication_DESTROY_(_self_ : QGuiApplication*) : Void
     fun bg_QApplication_metaObject_(_self_ : QApplication*) : QMetaObject*
     fun bg_QApplication_qt_metacast_const_char_X(_self_ : QApplication*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QApplication_CONSTRUCT_int_R_char_XX(argc : Int32*, argv : UInt8**) : QApplication*
     fun bg_QApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QApplication*
     fun bg_QApplication_style_STATIC_() : QStyle*
     fun bg_QApplication_setStyle_STATIC_QStyle_X(unnamed_arg_0 : QStyle*) : Void
@@ -2747,12 +2591,10 @@ module Qt
     fun bg_QApplication_setColorSpec_STATIC_int(unnamed_arg_0 : Int32) : Void
     fun bg_QApplication_palette_STATIC_const_QWidget_X(unnamed_arg_0 : QWidget*) : QPalette*
     fun bg_QApplication_palette_STATIC_const_char_X(class_name : UInt8*) : QPalette*
-    fun bg_QApplication_setPalette_STATIC_const_QPalette_R(unnamed_arg_0 : QPalette*) : Void
     fun bg_QApplication_setPalette_STATIC_const_QPalette_R_const_char_X(unnamed_arg_0 : QPalette*, class_name : UInt8*) : Void
     fun bg_QApplication_font_STATIC_() : QFont*
     fun bg_QApplication_font_STATIC_const_QWidget_X(unnamed_arg_0 : QWidget*) : QFont*
     fun bg_QApplication_font_STATIC_const_char_X(class_name : UInt8*) : QFont*
-    fun bg_QApplication_setFont_STATIC_const_QFont_R(unnamed_arg_0 : QFont*) : Void
     fun bg_QApplication_setFont_STATIC_const_QFont_R_const_char_X(unnamed_arg_0 : QFont*, class_name : UInt8*) : Void
     fun bg_QApplication_fontMetrics_STATIC_() : QFontMetrics*
     fun bg_QApplication_setWindowIcon_STATIC_const_QIcon_R(icon : QIcon*) : Void
@@ -2770,7 +2612,6 @@ module Qt
     fun bg_QApplication_topLevelAt_STATIC_const_QPoint_R(p : QPoint*) : QWidget*
     fun bg_QApplication_topLevelAt_STATIC_int_int(x : Int32, y : Int32) : QWidget*
     fun bg_QApplication_beep_STATIC_() : Void
-    fun bg_QApplication_alert_STATIC_QWidget_X(widget : QWidget*) : Void
     fun bg_QApplication_alert_STATIC_QWidget_X_int(widget : QWidget*, duration : Int32) : Void
     fun bg_QApplication_setCursorFlashTime_STATIC_int(unnamed_arg_0 : Int32) : Void
     fun bg_QApplication_cursorFlashTime_STATIC_() : Int32
@@ -2787,7 +2628,6 @@ module Qt
     fun bg_QApplication_setStartDragDistance_STATIC_int(l : Int32) : Void
     fun bg_QApplication_startDragDistance_STATIC_() : Int32
     fun bg_QApplication_isEffectEnabled_STATIC_Qt__UIEffect(unnamed_arg_0 : UIEffect) : Bool
-    fun bg_QApplication_setEffectEnabled_STATIC_Qt__UIEffect(unnamed_arg_0 : UIEffect) : Void
     fun bg_QApplication_setEffectEnabled_STATIC_Qt__UIEffect_bool(unnamed_arg_0 : UIEffect, enable : Bool) : Void
     fun bg_QApplication_exec_STATIC_() : Int32
     fun bg_QApplication_notify_QObject_X_QEvent_X(_self_ : QApplication*, unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*) : Bool
@@ -2805,12 +2645,7 @@ module Qt
     fun bg_QImage_CONSTRUCT_() : QImage*
     fun bg_QImage_CONSTRUCT_const_QSize_R_QImage__Format(size : QSize*, format : Image::Format) : QImage*
     fun bg_QImage_CONSTRUCT_int_int_QImage__Format(width : Int32, height : Int32, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_uchar_X_int_int_QImage__Format(data : UInt8*, width : Int32, height : Int32, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_const_uchar_X_int_int_QImage__Format(data : UInt8*, width : Int32, height : Int32, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_uchar_X_int_int_int_QImage__Format(data : UInt8*, width : Int32, height : Int32, bytes_per_line : Int32, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_const_uchar_X_int_int_int_QImage__Format(data : UInt8*, width : Int32, height : Int32, bytes_per_line : Int32, format : Image::Format) : QImage*
     fun bg_QImage_CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QImage*
-    fun bg_QImage_CONSTRUCT_const_QString_R(file_name : CrystalString) : QImage*
     fun bg_QImage_CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QImage*
     fun bg_QImage_swap_QImage_R(_self_ : QImage*, other : QImage*) : Void
     fun bg_QImage_isNull_(_self_ : QImage*) : Bool
@@ -2858,46 +2693,25 @@ module Qt
     fun bg_QImage_alphaChannel_(_self_ : QImage*) : QImage*
     fun bg_QImage_createAlphaMask_(_self_ : QImage*) : QImage*
     fun bg_QImage_createAlphaMask_Qt__ImageConversionFlags(_self_ : QImage*, flags : ImageConversionFlags) : QImage*
-    fun bg_QImage_createHeuristicMask_(_self_ : QImage*) : QImage*
     fun bg_QImage_createHeuristicMask_bool(_self_ : QImage*, clip_tight : Bool) : QImage*
-    fun bg_QImage_scaled_int_int(_self_ : QImage*, w : Int32, h : Int32) : QImage*
-    fun bg_QImage_scaled_int_int_Qt__AspectRatioMode(_self_ : QImage*, w : Int32, h : Int32, aspect_mode : AspectRatioMode) : QImage*
     fun bg_QImage_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : QImage*, w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : QImage*
-    fun bg_QImage_scaled_const_QSize_R(_self_ : QImage*, s : QSize*) : QImage*
-    fun bg_QImage_scaled_const_QSize_R_Qt__AspectRatioMode(_self_ : QImage*, s : QSize*, aspect_mode : AspectRatioMode) : QImage*
     fun bg_QImage_scaled_const_QSize_R_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : QImage*, s : QSize*, aspect_mode : AspectRatioMode, mode : TransformationMode) : QImage*
-    fun bg_QImage_scaledToWidth_int(_self_ : QImage*, w : Int32) : QImage*
     fun bg_QImage_scaledToWidth_int_Qt__TransformationMode(_self_ : QImage*, w : Int32, mode : TransformationMode) : QImage*
-    fun bg_QImage_scaledToHeight_int(_self_ : QImage*, h : Int32) : QImage*
     fun bg_QImage_scaledToHeight_int_Qt__TransformationMode(_self_ : QImage*, h : Int32, mode : TransformationMode) : QImage*
-    fun bg_QImage_transformed_const_QMatrix_R(_self_ : QImage*, matrix : QMatrix*) : QImage*
     fun bg_QImage_transformed_const_QMatrix_R_Qt__TransformationMode(_self_ : QImage*, matrix : QMatrix*, mode : TransformationMode) : QImage*
     fun bg_QImage_trueMatrix_STATIC_const_QMatrix_R_int_int(unnamed_arg_0 : QMatrix*, w : Int32, h : Int32) : QMatrix*
-    fun bg_QImage_transformed_const_QTransform_R(_self_ : QImage*, matrix : QTransform*) : QImage*
     fun bg_QImage_transformed_const_QTransform_R_Qt__TransformationMode(_self_ : QImage*, matrix : QTransform*, mode : TransformationMode) : QImage*
     fun bg_QImage_trueMatrix_STATIC_const_QTransform_R_int_int(unnamed_arg_0 : QTransform*, w : Int32, h : Int32) : QTransform*
-    fun bg_QImage_mirrored_(_self_ : QImage*) : QImage*
-    fun bg_QImage_mirrored_bool(_self_ : QImage*, horizontally : Bool) : QImage*
     fun bg_QImage_mirrored_bool_bool(_self_ : QImage*, horizontally : Bool, vertically : Bool) : QImage*
     fun bg_QImage_rgbSwapped_(_self_ : QImage*) : QImage*
-    fun bg_QImage_invertPixels_(_self_ : QImage*) : Void
     fun bg_QImage_invertPixels_QImage__InvertMode(_self_ : QImage*, unnamed_arg_0 : Image::InvertMode) : Void
     fun bg_QImage_load_QIODevice_X_const_char_X(_self_ : QImage*, device : QIODevice*, format : UInt8*) : Bool
-    fun bg_QImage_load_const_QString_R(_self_ : QImage*, file_name : CrystalString) : Bool
     fun bg_QImage_load_const_QString_R_const_char_X(_self_ : QImage*, file_name : CrystalString, format : UInt8*) : Bool
-    fun bg_QImage_loadFromData_const_uchar_X_int(_self_ : QImage*, buf : UInt8*, len : Int32) : Bool
     fun bg_QImage_loadFromData_const_uchar_X_int_const_char_X(_self_ : QImage*, buf : UInt8*, len : Int32, format : UInt8*) : Bool
-    fun bg_QImage_loadFromData_const_QByteArray_R(_self_ : QImage*, data : QByteArray*) : Bool
     fun bg_QImage_loadFromData_const_QByteArray_R_const_char_X(_self_ : QImage*, data : QByteArray*, aformat : UInt8*) : Bool
-    fun bg_QImage_save_const_QString_R(_self_ : QImage*, file_name : CrystalString) : Bool
-    fun bg_QImage_save_const_QString_R_const_char_X(_self_ : QImage*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QImage_save_const_QString_R_const_char_X_int(_self_ : QImage*, file_name : CrystalString, format : UInt8*, quality : Int32) : Bool
-    fun bg_QImage_save_QIODevice_X(_self_ : QImage*, device : QIODevice*) : Bool
-    fun bg_QImage_save_QIODevice_X_const_char_X(_self_ : QImage*, device : QIODevice*, format : UInt8*) : Bool
     fun bg_QImage_save_QIODevice_X_const_char_X_int(_self_ : QImage*, device : QIODevice*, format : UInt8*, quality : Int32) : Bool
-    fun bg_QImage_fromData_STATIC_const_uchar_X_int(data : UInt8*, size : Int32) : QImage*
     fun bg_QImage_fromData_STATIC_const_uchar_X_int_const_char_X(data : UInt8*, size : Int32, format : UInt8*) : QImage*
-    fun bg_QImage_fromData_STATIC_const_QByteArray_R(data : QByteArray*) : QImage*
     fun bg_QImage_fromData_STATIC_const_QByteArray_R_const_char_X(data : QByteArray*, format : UInt8*) : QImage*
     fun bg_QImage_cacheKey_(_self_ : QImage*) : Int64
     fun bg_QImage_paintEngine_(_self_ : QImage*) : QPaintEngine*
@@ -2924,7 +2738,6 @@ module Qt
     fun bg_QPixmap_CONSTRUCT_QPlatformPixmap_X(data : QPlatformPixmap*) : QPixmap*
     fun bg_QPixmap_CONSTRUCT_int_int(w : Int32, h : Int32) : QPixmap*
     fun bg_QPixmap_CONSTRUCT_const_QSize_R(unnamed_arg_0 : QSize*) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_const_QString_R(file_name : CrystalString) : QPixmap*
     fun bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QPixmap*
     fun bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(file_name : CrystalString, format : UInt8*, flags : ImageConversionFlags) : QPixmap*
     fun bg_QPixmap_CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QPixmap*
@@ -2945,30 +2758,16 @@ module Qt
     fun bg_QPixmap_setMask_const_QBitmap_R(_self_ : QPixmap*, unnamed_arg_0 : QBitmap*) : Void
     fun bg_QPixmap_hasAlpha_(_self_ : QPixmap*) : Bool
     fun bg_QPixmap_hasAlphaChannel_(_self_ : QPixmap*) : Bool
-    fun bg_QPixmap_createHeuristicMask_(_self_ : QPixmap*) : QBitmap*
     fun bg_QPixmap_createHeuristicMask_bool(_self_ : QPixmap*, clip_tight : Bool) : QBitmap*
-    fun bg_QPixmap_createMaskFromColor_const_QColor_R(_self_ : QPixmap*, mask_color : QColor*) : QBitmap*
     fun bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(_self_ : QPixmap*, mask_color : QColor*, mode : MaskMode) : QBitmap*
     fun bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget : QObject*, rect : QRect*) : QPixmap*
-    fun bg_QPixmap_grabWidget_STATIC_QObject_X(widget : QObject*) : QPixmap*
-    fun bg_QPixmap_grabWidget_STATIC_QObject_X_int(widget : QObject*, x : Int32) : QPixmap*
-    fun bg_QPixmap_grabWidget_STATIC_QObject_X_int_int(widget : QObject*, x : Int32, y : Int32) : QPixmap*
-    fun bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int(widget : QObject*, x : Int32, y : Int32, w : Int32) : QPixmap*
     fun bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int_int(widget : QObject*, x : Int32, y : Int32, w : Int32, h : Int32) : QPixmap*
-    fun bg_QPixmap_scaled_int_int(_self_ : QPixmap*, w : Int32, h : Int32) : QPixmap*
-    fun bg_QPixmap_scaled_int_int_Qt__AspectRatioMode(_self_ : QPixmap*, w : Int32, h : Int32, aspect_mode : AspectRatioMode) : QPixmap*
     fun bg_QPixmap_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : QPixmap*, w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : QPixmap*
-    fun bg_QPixmap_scaled_const_QSize_R(_self_ : QPixmap*, s : QSize*) : QPixmap*
-    fun bg_QPixmap_scaled_const_QSize_R_Qt__AspectRatioMode(_self_ : QPixmap*, s : QSize*, aspect_mode : AspectRatioMode) : QPixmap*
     fun bg_QPixmap_scaled_const_QSize_R_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : QPixmap*, s : QSize*, aspect_mode : AspectRatioMode, mode : TransformationMode) : QPixmap*
-    fun bg_QPixmap_scaledToWidth_int(_self_ : QPixmap*, w : Int32) : QPixmap*
     fun bg_QPixmap_scaledToWidth_int_Qt__TransformationMode(_self_ : QPixmap*, w : Int32, mode : TransformationMode) : QPixmap*
-    fun bg_QPixmap_scaledToHeight_int(_self_ : QPixmap*, h : Int32) : QPixmap*
     fun bg_QPixmap_scaledToHeight_int_Qt__TransformationMode(_self_ : QPixmap*, h : Int32, mode : TransformationMode) : QPixmap*
-    fun bg_QPixmap_transformed_const_QMatrix_R(_self_ : QPixmap*, unnamed_arg_0 : QMatrix*) : QPixmap*
     fun bg_QPixmap_transformed_const_QMatrix_R_Qt__TransformationMode(_self_ : QPixmap*, unnamed_arg_0 : QMatrix*, mode : TransformationMode) : QPixmap*
     fun bg_QPixmap_trueMatrix_STATIC_const_QMatrix_R_int_int(m : QMatrix*, w : Int32, h : Int32) : QMatrix*
-    fun bg_QPixmap_transformed_const_QTransform_R(_self_ : QPixmap*, unnamed_arg_0 : QTransform*) : QPixmap*
     fun bg_QPixmap_transformed_const_QTransform_R_Qt__TransformationMode(_self_ : QPixmap*, unnamed_arg_0 : QTransform*, mode : TransformationMode) : QPixmap*
     fun bg_QPixmap_trueMatrix_STATIC_const_QTransform_R_int_int(m : QTransform*, w : Int32, h : Int32) : QTransform*
     fun bg_QPixmap_toImage_(_self_ : QPixmap*) : QImage*
@@ -2976,29 +2775,20 @@ module Qt
     fun bg_QPixmap_fromImage_STATIC_const_QImage_R_Qt__ImageConversionFlags(image : QImage*, flags : ImageConversionFlags) : QPixmap*
     fun bg_QPixmap_fromImageReader_STATIC_QImageReader_X(image_reader : QImageReader*) : QPixmap*
     fun bg_QPixmap_fromImageReader_STATIC_QImageReader_X_Qt__ImageConversionFlags(image_reader : QImageReader*, flags : ImageConversionFlags) : QPixmap*
-    fun bg_QPixmap_load_const_QString_R(_self_ : QPixmap*, file_name : CrystalString) : Bool
     fun bg_QPixmap_load_const_QString_R_const_char_X(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QPixmap_load_const_QString_R_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*, flags : ImageConversionFlags) : Bool
-    fun bg_QPixmap_loadFromData_const_uchar_X_uint(_self_ : QPixmap*, buf : UInt8*, len : UInt32) : Bool
     fun bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X(_self_ : QPixmap*, buf : UInt8*, len : UInt32, format : UInt8*) : Bool
     fun bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, buf : UInt8*, len : UInt32, format : UInt8*, flags : ImageConversionFlags) : Bool
-    fun bg_QPixmap_loadFromData_const_QByteArray_R(_self_ : QPixmap*, data : QByteArray*) : Bool
     fun bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X(_self_ : QPixmap*, data : QByteArray*, format : UInt8*) : Bool
     fun bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, data : QByteArray*, format : UInt8*, flags : ImageConversionFlags) : Bool
-    fun bg_QPixmap_save_const_QString_R(_self_ : QPixmap*, file_name : CrystalString) : Bool
-    fun bg_QPixmap_save_const_QString_R_const_char_X(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QPixmap_save_const_QString_R_const_char_X_int(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*, quality : Int32) : Bool
-    fun bg_QPixmap_save_QIODevice_X(_self_ : QPixmap*, device : QIODevice*) : Bool
-    fun bg_QPixmap_save_QIODevice_X_const_char_X(_self_ : QPixmap*, device : QIODevice*, format : UInt8*) : Bool
     fun bg_QPixmap_save_QIODevice_X_const_char_X_int(_self_ : QPixmap*, device : QIODevice*, format : UInt8*, quality : Int32) : Bool
     fun bg_QPixmap_convertFromImage_const_QImage_R(_self_ : QPixmap*, img : QImage*) : Bool
     fun bg_QPixmap_convertFromImage_const_QImage_R_Qt__ImageConversionFlags(_self_ : QPixmap*, img : QImage*, flags : ImageConversionFlags) : Bool
     fun bg_QPixmap_copy_int_int_int_int(_self_ : QPixmap*, x : Int32, y : Int32, width : Int32, height : Int32) : QPixmap*
     fun bg_QPixmap_copy_(_self_ : QPixmap*) : QPixmap*
     fun bg_QPixmap_copy_const_QRect_R(_self_ : QPixmap*, rect : QRect*) : QPixmap*
-    fun bg_QPixmap_scroll_int_int_int_int_int_int(_self_ : QPixmap*, dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32) : Void
     fun bg_QPixmap_scroll_int_int_int_int_int_int_QRegion_X(_self_ : QPixmap*, dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32, exposed : QRegion*) : Void
-    fun bg_QPixmap_scroll_int_int_const_QRect_R(_self_ : QPixmap*, dx : Int32, dy : Int32, rect : QRect*) : Void
     fun bg_QPixmap_scroll_int_int_const_QRect_R_QRegion_X(_self_ : QPixmap*, dx : Int32, dy : Int32, rect : QRect*, exposed : QRegion*) : Void
     fun bg_QPixmap_cacheKey_(_self_ : QPixmap*) : Int64
     fun bg_QPixmap_isDetached_(_self_ : QPixmap*) : Bool
@@ -3012,20 +2802,14 @@ module Qt
     fun bg_QPixmap_DESTROY_(_self_ : QPixmap*) : Void
     fun bg_QEventLoop_metaObject_(_self_ : QEventLoop*) : QMetaObject*
     fun bg_QEventLoop_qt_metacast_const_char_X(_self_ : QEventLoop*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QEventLoop_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QEventLoop_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QEventLoop_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QEventLoop_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QEventLoop_CONSTRUCT_() : QEventLoop*
     fun bg_QEventLoop_CONSTRUCT_QObject_X(parent : QObject*) : QEventLoop*
     fun bg_QEventLoop_processEvents_(_self_ : QEventLoop*) : Bool
     fun bg_QEventLoop_processEvents_QEventLoop__ProcessEventsFlags(_self_ : QEventLoop*, flags : EventLoop::ProcessEventsFlags) : Bool
     fun bg_QEventLoop_processEvents_QEventLoop__ProcessEventsFlags_int(_self_ : QEventLoop*, flags : EventLoop::ProcessEventsFlags, maximum_time : Int32) : Void
     fun bg_QEventLoop_exec_(_self_ : QEventLoop*) : Int32
     fun bg_QEventLoop_exec_QEventLoop__ProcessEventsFlags(_self_ : QEventLoop*, flags : EventLoop::ProcessEventsFlags) : Int32
-    fun bg_QEventLoop_exit_(_self_ : QEventLoop*) : Void
     fun bg_QEventLoop_exit_int(_self_ : QEventLoop*, return_code : Int32) : Void
     fun bg_QEventLoop_isRunning_(_self_ : QEventLoop*) : Bool
     fun bg_QEventLoop_wakeUp_(_self_ : QEventLoop*) : Void
@@ -3034,13 +2818,8 @@ module Qt
     fun bg_QEventLoop_DESTROY_(_self_ : QEventLoop*) : Void
     fun bg_QTabWidget_metaObject_(_self_ : QTabWidget*) : QMetaObject*
     fun bg_QTabWidget_qt_metacast_const_char_X(_self_ : QTabWidget*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QTabWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTabWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTabWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTabWidget_CONSTRUCT_() : QTabWidget*
     fun bg_QTabWidget_CONSTRUCT_QWidget_X(parent : QWidget*) : QTabWidget*
     fun bg_QTabWidget_addTab_QWidget_X_const_QString_R(_self_ : QTabWidget*, widget : QWidget*, unnamed_arg_1 : CrystalString) : Int32
     fun bg_QTabWidget_addTab_QWidget_X_const_QIcon_R_const_QString_R(_self_ : QTabWidget*, widget : QWidget*, icon : QIcon*, label : CrystalString) : Int32
@@ -3074,9 +2853,7 @@ module Qt
     fun bg_QTabWidget_minimumSizeHint_(_self_ : QTabWidget*) : QSize*
     fun bg_QTabWidget_heightForWidth_int(_self_ : QTabWidget*, width : Int32) : Int32
     fun bg_QTabWidget_hasHeightForWidth_(_self_ : QTabWidget*) : Bool
-    fun bg_QTabWidget_setCornerWidget_QWidget_X(_self_ : QTabWidget*, w : QWidget*) : Void
     fun bg_QTabWidget_setCornerWidget_QWidget_X_Qt__Corner(_self_ : QTabWidget*, w : QWidget*, corner : Corner) : Void
-    fun bg_QTabWidget_cornerWidget_(_self_ : QTabWidget*) : QWidget*
     fun bg_QTabWidget_cornerWidget_Qt__Corner(_self_ : QTabWidget*, corner : Corner) : QWidget*
     fun bg_QTabWidget_elideMode_(_self_ : QTabWidget*) : TextElideMode
     fun bg_QTabWidget_setElideMode_Qt__TextElideMode(_self_ : QTabWidget*, unnamed_arg_0 : TextElideMode) : Void
@@ -3132,11 +2909,7 @@ module Qt
     fun bg_QLayoutItem_DESTROY_(_self_ : QLayoutItem*) : Void
     fun bg_QLayout_metaObject_(_self_ : QLayout*) : QMetaObject*
     fun bg_QLayout_qt_metacast_const_char_X(_self_ : QLayout*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QLayout*
     fun bg_QLayout_CONSTRUCT_() : QLayout*
@@ -3194,35 +2967,24 @@ module Qt
     fun bg_QLayout_bg_QLayout_AS_QLayoutItem_(_self_ : QLayout*) : QLayoutItem*
     fun bg_QBoxLayout_metaObject_(_self_ : QBoxLayout*) : QMetaObject*
     fun bg_QBoxLayout_qt_metacast_const_char_X(_self_ : QBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction(unnamed_arg_0 : BoxLayout::Direction) : QBoxLayout*
     fun bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0 : BoxLayout::Direction, parent : QWidget*) : QBoxLayout*
     fun bg_QBoxLayout_direction_(_self_ : QBoxLayout*) : BoxLayout::Direction
     fun bg_QBoxLayout_setDirection_QBoxLayout__Direction(_self_ : QBoxLayout*, unnamed_arg_0 : BoxLayout::Direction) : Void
     fun bg_QBoxLayout_addSpacing_int(_self_ : QBoxLayout*, size : Int32) : Void
-    fun bg_QBoxLayout_addStretch_(_self_ : QBoxLayout*) : Void
     fun bg_QBoxLayout_addStretch_int(_self_ : QBoxLayout*, stretch : Int32) : Void
     fun bg_QBoxLayout_addSpacerItem_QSpacerItem_X(_self_ : QBoxLayout*, spacer_item : QSpacerItem*) : Void
-    fun bg_QBoxLayout_addWidget_QWidget_X(_self_ : QBoxLayout*, unnamed_arg_0 : QWidget*) : Void
     fun bg_QBoxLayout_addWidget_QWidget_X_int(_self_ : QBoxLayout*, unnamed_arg_0 : QWidget*, stretch : Int32) : Void
     fun bg_QBoxLayout_addWidget_QWidget_X_int_Qt__Alignment(_self_ : QBoxLayout*, unnamed_arg_0 : QWidget*, stretch : Int32, alignment : Alignment) : Void
-    fun bg_QBoxLayout_addLayout_QLayout_X(_self_ : QBoxLayout*, layout : QLayout*) : Void
     fun bg_QBoxLayout_addLayout_QLayout_X_int(_self_ : QBoxLayout*, layout : QLayout*, stretch : Int32) : Void
     fun bg_QBoxLayout_addStrut_int(_self_ : QBoxLayout*, unnamed_arg_0 : Int32) : Void
     fun bg_QBoxLayout_addItem_QLayoutItem_X(_self_ : QBoxLayout*, unnamed_arg_0 : QLayoutItem*) : Void
     fun bg_QBoxLayout_insertSpacing_int_int(_self_ : QBoxLayout*, index : Int32, size : Int32) : Void
-    fun bg_QBoxLayout_insertStretch_int(_self_ : QBoxLayout*, index : Int32) : Void
     fun bg_QBoxLayout_insertStretch_int_int(_self_ : QBoxLayout*, index : Int32, stretch : Int32) : Void
     fun bg_QBoxLayout_insertSpacerItem_int_QSpacerItem_X(_self_ : QBoxLayout*, index : Int32, spacer_item : QSpacerItem*) : Void
-    fun bg_QBoxLayout_insertWidget_int_QWidget_X(_self_ : QBoxLayout*, index : Int32, widget : QWidget*) : Void
     fun bg_QBoxLayout_insertWidget_int_QWidget_X_int(_self_ : QBoxLayout*, index : Int32, widget : QWidget*, stretch : Int32) : Void
     fun bg_QBoxLayout_insertWidget_int_QWidget_X_int_Qt__Alignment(_self_ : QBoxLayout*, index : Int32, widget : QWidget*, stretch : Int32, alignment : Alignment) : Void
-    fun bg_QBoxLayout_insertLayout_int_QLayout_X(_self_ : QBoxLayout*, index : Int32, layout : QLayout*) : Void
     fun bg_QBoxLayout_insertLayout_int_QLayout_X_int(_self_ : QBoxLayout*, index : Int32, layout : QLayout*, stretch : Int32) : Void
     fun bg_QBoxLayout_insertItem_int_QLayoutItem_X(_self_ : QBoxLayout*, index : Int32, unnamed_arg_1 : QLayoutItem*) : Void
     fun bg_QBoxLayout_spacing_(_self_ : QBoxLayout*) : Int32
@@ -3246,39 +3008,25 @@ module Qt
     fun bg_QBoxLayout_DESTROY_(_self_ : QBoxLayout*) : Void
     fun bg_QHBoxLayout_metaObject_(_self_ : QHBoxLayout*) : QMetaObject*
     fun bg_QHBoxLayout_qt_metacast_const_char_X(_self_ : QHBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QHBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QHBoxLayout_CONSTRUCT_() : QHBoxLayout*
     fun bg_QHBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QHBoxLayout*
     fun bg_QHBoxLayout_DESTROY_(_self_ : QHBoxLayout*) : Void
     fun bg_QVBoxLayout_metaObject_(_self_ : QVBoxLayout*) : QMetaObject*
     fun bg_QVBoxLayout_qt_metacast_const_char_X(_self_ : QVBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QVBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QVBoxLayout_CONSTRUCT_() : QVBoxLayout*
     fun bg_QVBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QVBoxLayout*
     fun bg_QVBoxLayout_DESTROY_(_self_ : QVBoxLayout*) : Void
     fun bg_QKeySequence_CONSTRUCT_() : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_const_QString_R(key : CrystalString) : QKeySequence*
     fun bg_QKeySequence_CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(key : CrystalString, format : KeySequence::SequenceFormat) : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_int(k1 : Int32) : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_int_int(k1 : Int32, k2 : Int32) : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_int_int_int(k1 : Int32, k2 : Int32, k3 : Int32) : QKeySequence*
     fun bg_QKeySequence_CONSTRUCT_int_int_int_int(k1 : Int32, k2 : Int32, k3 : Int32, k4 : Int32) : QKeySequence*
     fun bg_QKeySequence_CONSTRUCT_QKeySequence__StandardKey(key : KeySequence::StandardKey) : QKeySequence*
     fun bg_QKeySequence_count_(_self_ : QKeySequence*) : Int32
     fun bg_QKeySequence_isEmpty_(_self_ : QKeySequence*) : Bool
-    fun bg_QKeySequence_toString_(_self_ : QKeySequence*) : CrystalString
     fun bg_QKeySequence_toString_QKeySequence__SequenceFormat(_self_ : QKeySequence*, format : KeySequence::SequenceFormat) : CrystalString
-    fun bg_QKeySequence_fromString_STATIC_const_QString_R(str : CrystalString) : QKeySequence*
     fun bg_QKeySequence_fromString_STATIC_const_QString_R_QKeySequence__SequenceFormat(str : CrystalString, format : KeySequence::SequenceFormat) : QKeySequence*
     fun bg_QKeySequence_matches_const_QKeySequence_R(_self_ : QKeySequence*, seq : QKeySequence*) : KeySequence::SequenceMatch
     fun bg_QKeySequence_mnemonic_STATIC_const_QString_R(text : CrystalString) : QKeySequence*
@@ -3287,15 +3035,9 @@ module Qt
     fun bg_QKeySequence_DESTROY_(_self_ : QKeySequence*) : Void
     fun bg_QLineEdit_metaObject_(_self_ : QLineEdit*) : QMetaObject*
     fun bg_QLineEdit_qt_metacast_const_char_X(_self_ : QLineEdit*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QLineEdit_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLineEdit_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLineEdit_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLineEdit_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLineEdit_CONSTRUCT_() : QLineEdit*
     fun bg_QLineEdit_CONSTRUCT_QWidget_X(parent : QWidget*) : QLineEdit*
-    fun bg_QLineEdit_CONSTRUCT_const_QString_R(unnamed_arg_0 : CrystalString) : QLineEdit*
     fun bg_QLineEdit_CONSTRUCT_const_QString_R_QWidget_X(unnamed_arg_0 : CrystalString, parent : QWidget*) : QLineEdit*
     fun bg_QLineEdit_text_(_self_ : QLineEdit*) : CrystalString
     fun bg_QLineEdit_displayText_(_self_ : QLineEdit*) : CrystalString
@@ -3322,9 +3064,7 @@ module Qt
     fun bg_QLineEdit_cursorPositionAt_const_QPoint_R(_self_ : QLineEdit*, pos : QPoint*) : Int32
     fun bg_QLineEdit_setAlignment_Qt__Alignment(_self_ : QLineEdit*, flag : Alignment) : Void
     fun bg_QLineEdit_alignment_(_self_ : QLineEdit*) : Alignment
-    fun bg_QLineEdit_cursorForward_bool(_self_ : QLineEdit*, mark : Bool) : Void
     fun bg_QLineEdit_cursorForward_bool_int(_self_ : QLineEdit*, mark : Bool, steps : Int32) : Void
-    fun bg_QLineEdit_cursorBackward_bool(_self_ : QLineEdit*, mark : Bool) : Void
     fun bg_QLineEdit_cursorBackward_bool_int(_self_ : QLineEdit*, mark : Bool, steps : Int32) : Void
     fun bg_QLineEdit_cursorWordForward_bool(_self_ : QLineEdit*, mark : Bool) : Void
     fun bg_QLineEdit_cursorWordBackward_bool(_self_ : QLineEdit*, mark : Bool) : Void
@@ -3397,15 +3137,9 @@ module Qt
     fun bg_QLineEdit_DESTROY_(_self_ : QLineEdit*) : Void
     fun bg_QTextEdit_metaObject_(_self_ : QTextEdit*) : QMetaObject*
     fun bg_QTextEdit_qt_metacast_const_char_X(_self_ : QTextEdit*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QTextEdit_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTextEdit_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextEdit_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextEdit_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextEdit_CONSTRUCT_() : QTextEdit*
     fun bg_QTextEdit_CONSTRUCT_QWidget_X(parent : QWidget*) : QTextEdit*
-    fun bg_QTextEdit_CONSTRUCT_const_QString_R(text : CrystalString) : QTextEdit*
     fun bg_QTextEdit_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QTextEdit*
     fun bg_QTextEdit_setDocument_QTextDocument_X(_self_ : QTextEdit*, document : QTextDocument*) : Void
     fun bg_QTextEdit_document_(_self_ : QTextEdit*) : QTextDocument*
@@ -3463,7 +3197,6 @@ module Qt
     fun bg_QTextEdit_setCursorWidth_int(_self_ : QTextEdit*, width : Int32) : Void
     fun bg_QTextEdit_acceptRichText_(_self_ : QTextEdit*) : Bool
     fun bg_QTextEdit_setAcceptRichText_bool(_self_ : QTextEdit*, accept : Bool) : Void
-    fun bg_QTextEdit_moveCursor_QTextCursor__MoveOperation(_self_ : QTextEdit*, operation : TextCursorMoveOperation) : Void
     fun bg_QTextEdit_moveCursor_QTextCursor__MoveOperation_QTextCursor__MoveMode(_self_ : QTextEdit*, operation : TextCursorMoveOperation, mode : TextCursorMoveMode) : Void
     fun bg_QTextEdit_canPaste_(_self_ : QTextEdit*) : Bool
     fun bg_QTextEdit_print_QPagedPaintDevice_X(_self_ : QTextEdit*, printer : QPagedPaintDevice*) : Void
@@ -3489,9 +3222,7 @@ module Qt
     fun bg_QTextEdit_insertHtml_const_QString_R(_self_ : QTextEdit*, text : CrystalString) : Void
     fun bg_QTextEdit_append_const_QString_R(_self_ : QTextEdit*, text : CrystalString) : Void
     fun bg_QTextEdit_scrollToAnchor_const_QString_R(_self_ : QTextEdit*, name : CrystalString) : Void
-    fun bg_QTextEdit_zoomIn_(_self_ : QTextEdit*) : Void
     fun bg_QTextEdit_zoomIn_int(_self_ : QTextEdit*, range : Int32) : Void
-    fun bg_QTextEdit_zoomOut_(_self_ : QTextEdit*) : Void
     fun bg_QTextEdit_zoomOut_int(_self_ : QTextEdit*, range : Int32) : Void
     fun bg_QTextEdit_textChanged_(_self_ : QTextEdit*) : Void
     fun bg_QTextEdit_textChanged_CONNECT_CrystalProc_void_(_self_ : QTextEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
@@ -3539,14 +3270,9 @@ module Qt
     fun bg_QTextEdit_DESTROY_(_self_ : QTextEdit*) : Void
     fun bg_QFileDialog_metaObject_(_self_ : QFileDialog*) : QMetaObject*
     fun bg_QFileDialog_qt_metacast_const_char_X(_self_ : QFileDialog*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QFileDialog_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QFileDialog_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFileDialog_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QFileDialog_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QFileDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFileDialog*
-    fun bg_QFileDialog_CONSTRUCT_() : QFileDialog*
     fun bg_QFileDialog_CONSTRUCT_QWidget_X(parent : QWidget*) : QFileDialog*
     fun bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : QFileDialog*
     fun bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, directory : CrystalString) : QFileDialog*
@@ -3603,7 +3329,6 @@ module Qt
     fun bg_QFileDialog_supportedSchemes_(_self_ : QFileDialog*) : Void*
     fun bg_QFileDialog_setProxyModel_QAbstractProxyModel_X(_self_ : QFileDialog*, model : QAbstractProxyModel*) : Void
     fun bg_QFileDialog_proxyModel_(_self_ : QFileDialog*) : QAbstractProxyModel*
-    fun bg_QFileDialog_setOption_QFileDialog__Option(_self_ : QFileDialog*, option : FileDialog::Option) : Void
     fun bg_QFileDialog_setOption_QFileDialog__Option_bool(_self_ : QFileDialog*, option : FileDialog::Option, on : Bool) : Void
     fun bg_QFileDialog_testOption_QFileDialog__Option(_self_ : QFileDialog*, option : FileDialog::Option) : Bool
     fun bg_QFileDialog_setOptions_QFileDialog__Options(_self_ : QFileDialog*, options : FileDialog::Options) : Void
@@ -3628,43 +3353,35 @@ module Qt
     fun bg_QFileDialog_directoryUrlEntered_CONNECT_CrystalProc_void__const_QUrlR_(_self_ : QFileDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QFileDialog_filterSelected_const_QString_R(_self_ : QFileDialog*, filter : CrystalString) : Void
     fun bg_QFileDialog_filterSelected_CONNECT_CrystalProc_void__const_CrystalString_(_self_ : QFileDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_QFileDialog_getOpenFileName_STATIC_() : CrystalString
     fun bg_QFileDialog_getOpenFileName_STATIC_QWidget_X(parent : QWidget*) : CrystalString
     fun bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : CrystalString
     fun bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString) : CrystalString
     fun bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString, filter : CrystalString) : CrystalString
-    fun bg_QFileDialog_getOpenFileUrl_STATIC_() : QUrl*
     fun bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X(parent : QWidget*) : QUrl*
     fun bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : QUrl*
     fun bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : QUrl*
     fun bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, filter : CrystalString) : QUrl*
-    fun bg_QFileDialog_getSaveFileName_STATIC_() : CrystalString
     fun bg_QFileDialog_getSaveFileName_STATIC_QWidget_X(parent : QWidget*) : CrystalString
     fun bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : CrystalString
     fun bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString) : CrystalString
     fun bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString, filter : CrystalString) : CrystalString
-    fun bg_QFileDialog_getSaveFileUrl_STATIC_() : QUrl*
     fun bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X(parent : QWidget*) : QUrl*
     fun bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : QUrl*
     fun bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : QUrl*
     fun bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, filter : CrystalString) : QUrl*
-    fun bg_QFileDialog_getExistingDirectory_STATIC_() : CrystalString
     fun bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X(parent : QWidget*) : CrystalString
     fun bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : CrystalString
     fun bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString) : CrystalString
     fun bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R_const_QString_R_QFileDialog__Options(parent : QWidget*, caption : CrystalString, dir : CrystalString, options : FileDialog::Options) : CrystalString
-    fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_() : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X(parent : QWidget*) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options(parent : QWidget*, caption : CrystalString, dir : QUrl*, options : FileDialog::Options) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, options : FileDialog::Options, supported_schemes : Void*) : QUrl*
-    fun bg_QFileDialog_getOpenFileNames_STATIC_() : Void*
     fun bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X(parent : QWidget*) : Void*
     fun bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : Void*
     fun bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString) : Void*
     fun bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : CrystalString, filter : CrystalString) : Void*
-    fun bg_QFileDialog_getOpenFileUrls_STATIC_() : Void*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X(parent : QWidget*) : Void*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : Void*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : Void*
@@ -3689,17 +3406,10 @@ module Qt
     fun bg_QTextOption_DESTROY_(_self_ : QTextOption*) : Void
     fun bg_QTextDocument_metaObject_(_self_ : QTextDocument*) : QMetaObject*
     fun bg_QTextDocument_qt_metacast_const_char_X(_self_ : QTextDocument*, unnamed_arg_0 : UInt8*) : Void*
-    fun bg_QTextDocument_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTextDocument_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextDocument_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextDocument_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
-    fun bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextDocument_CONSTRUCT_() : QTextDocument*
     fun bg_QTextDocument_CONSTRUCT_QObject_X(parent : QObject*) : QTextDocument*
-    fun bg_QTextDocument_CONSTRUCT_const_QString_R(text : CrystalString) : QTextDocument*
     fun bg_QTextDocument_CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QTextDocument*
-    fun bg_QTextDocument_clone_(_self_ : QTextDocument*) : QTextDocument*
     fun bg_QTextDocument_clone_QObject_X(_self_ : QTextDocument*, parent : QObject*) : QTextDocument*
     fun bg_QTextDocument_isEmpty_(_self_ : QTextDocument*) : Bool
     fun bg_QTextDocument_clear_(_self_ : QTextDocument*) : Void
@@ -3721,17 +3431,14 @@ module Qt
     fun bg_QTextDocument_toPlainText_(_self_ : QTextDocument*) : CrystalString
     fun bg_QTextDocument_setPlainText_const_QString_R(_self_ : QTextDocument*, text : CrystalString) : Void
     fun bg_QTextDocument_characterAt_int(_self_ : QTextDocument*, pos : Int32) : QChar*
-    fun bg_QTextDocument_find_const_QString_R(_self_ : QTextDocument*, sub_string : CrystalString) : QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_int(_self_ : QTextDocument*, sub_string : CrystalString, from : Int32) : QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_int_QTextDocument__FindFlags(_self_ : QTextDocument*, sub_string : CrystalString, from : Int32, options : TextDocumentFindFlags) : QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_const_QTextCursor_R(_self_ : QTextDocument*, sub_string : CrystalString, cursor : QTextCursor*) : QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_const_QTextCursor_R_QTextDocument__FindFlags(_self_ : QTextDocument*, sub_string : CrystalString, cursor : QTextCursor*, options : TextDocumentFindFlags) : QTextCursor*
-    fun bg_QTextDocument_find_const_QRegExp_R(_self_ : QTextDocument*, expr : QRegExp*) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegExp_R_int(_self_ : QTextDocument*, expr : QRegExp*, from : Int32) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegExp_R_int_QTextDocument__FindFlags(_self_ : QTextDocument*, expr : QRegExp*, from : Int32, options : TextDocumentFindFlags) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegExp_R_const_QTextCursor_R(_self_ : QTextDocument*, expr : QRegExp*, cursor : QTextCursor*) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegExp_R_const_QTextCursor_R_QTextDocument__FindFlags(_self_ : QTextDocument*, expr : QRegExp*, cursor : QTextCursor*, options : TextDocumentFindFlags) : QTextCursor*
-    fun bg_QTextDocument_find_const_QRegularExpression_R(_self_ : QTextDocument*, expr : QRegularExpression*) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegularExpression_R_int(_self_ : QTextDocument*, expr : QRegularExpression*, from : Int32) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegularExpression_R_int_QTextDocument__FindFlags(_self_ : QTextDocument*, expr : QRegularExpression*, from : Int32, options : TextDocumentFindFlags) : QTextCursor*
     fun bg_QTextDocument_find_const_QRegularExpression_R_const_QTextCursor_R(_self_ : QTextDocument*, expr : QRegularExpression*, cursor : QTextCursor*) : QTextCursor*
@@ -3768,7 +3475,6 @@ module Qt
     fun bg_QTextDocument_defaultStyleSheet_(_self_ : QTextDocument*) : CrystalString
     fun bg_QTextDocument_undo_QTextCursor_X(_self_ : QTextDocument*, cursor : QTextCursor*) : Void
     fun bg_QTextDocument_redo_QTextCursor_X(_self_ : QTextDocument*, cursor : QTextCursor*) : Void
-    fun bg_QTextDocument_clearUndoRedoStacks_(_self_ : QTextDocument*) : Void
     fun bg_QTextDocument_clearUndoRedoStacks_QTextDocument__Stacks(_self_ : QTextDocument*, history_to_clear : TextDocumentStacks) : Void
     fun bg_QTextDocument_maximumBlockCount_(_self_ : QTextDocument*) : Int32
     fun bg_QTextDocument_setMaximumBlockCount_int(_self_ : QTextDocument*, maximum : Int32) : Void
@@ -3801,7 +3507,6 @@ module Qt
     fun bg_QTextDocument_undo_(_self_ : QTextDocument*) : Void
     fun bg_QTextDocument_redo_(_self_ : QTextDocument*) : Void
     fun bg_QTextDocument_appendUndoItem_QAbstractUndoItem_X(_self_ : QTextDocument*, unnamed_arg_0 : QAbstractUndoItem*) : Void
-    fun bg_QTextDocument_setModified_(_self_ : QTextDocument*) : Void
     fun bg_QTextDocument_setModified_bool(_self_ : QTextDocument*, m : Bool) : Void
     fun bg_QTextDocument_createObject_const_QTextFormat_R(_self_ : QTextDocument*, f : QTextFormat*) : QTextObject*
     fun bg_QTextDocument_CONSTRUCT_QTextDocumentPrivate_R_QObject_X(dd : QTextDocumentPrivate*, parent : QObject*) : QTextDocument*
@@ -3815,15 +3520,12 @@ module Qt
     fun bg_QTextCursor_CONSTRUCT_const_QTextBlock_R(block : QTextBlock*) : QTextCursor*
     fun bg_QTextCursor_swap_QTextCursor_R(_self_ : QTextCursor*, other : QTextCursor*) : Void
     fun bg_QTextCursor_isNull_(_self_ : QTextCursor*) : Bool
-    fun bg_QTextCursor_setPosition_int(_self_ : QTextCursor*, pos : Int32) : Void
     fun bg_QTextCursor_setPosition_int_QTextCursor__MoveMode(_self_ : QTextCursor*, pos : Int32, mode : TextCursorMoveMode) : Void
     fun bg_QTextCursor_position_(_self_ : QTextCursor*) : Int32
     fun bg_QTextCursor_positionInBlock_(_self_ : QTextCursor*) : Int32
     fun bg_QTextCursor_anchor_(_self_ : QTextCursor*) : Int32
     fun bg_QTextCursor_insertText_const_QString_R(_self_ : QTextCursor*, text : CrystalString) : Void
     fun bg_QTextCursor_insertText_const_QString_R_const_QTextCharFormat_R(_self_ : QTextCursor*, text : CrystalString, format : QTextCharFormat*) : Void
-    fun bg_QTextCursor_movePosition_QTextCursor__MoveOperation(_self_ : QTextCursor*, op : TextCursorMoveOperation) : Bool
-    fun bg_QTextCursor_movePosition_QTextCursor__MoveOperation_QTextCursor__MoveMode(_self_ : QTextCursor*, op : TextCursorMoveOperation, unnamed_arg_1 : TextCursorMoveMode) : Bool
     fun bg_QTextCursor_movePosition_QTextCursor__MoveOperation_QTextCursor__MoveMode_int(_self_ : QTextCursor*, op : TextCursorMoveOperation, unnamed_arg_1 : TextCursorMoveMode, n : Int32) : Bool
     fun bg_QTextCursor_visualNavigation_(_self_ : QTextCursor*) : Bool
     fun bg_QTextCursor_setVisualNavigation_bool(_self_ : QTextCursor*, b : Bool) : Void
@@ -4713,49 +4415,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QObject_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QObject_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Object)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQObject.new(
-      bg_QObject_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QObject_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QObject_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Object)
+    def initialize(parent : Object? = nil)
       unwrap = Binding.bg_QObject_CONSTRUCT_QObject_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -4809,10 +4475,7 @@ module Qt
     def move_to_thread(thread : QThread*) : Void
       Binding.bg_QObject_moveToThread_QThread_X(self, thread)
     end
-    def start_timer(interval : Int32) : Int32
-      Binding.bg_QObject_startTimer_int(self, interval)
-    end
-    def start_timer(interval : Int32, timer_type : TimerType) : Int32
+    def start_timer(interval : Int32, timer_type : TimerType = TimerType::CoarseTimer) : Int32
       Binding.bg_QObject_startTimer_int_Qt__TimerType(self, interval, timer_type)
     end
     def kill_timer(id : Int32) : Void
@@ -4827,22 +4490,13 @@ module Qt
     def remove_event_filter(obj : Object) : Void
       Binding.bg_QObject_removeEventFilter_QObject_X(self, obj)
     end
-    def self.connect(sender : Object, signal : UInt8*, receiver : Object, member : UInt8*) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QObject_connect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X(sender, signal, receiver, member))
-    end
-    def self.connect(sender : Object, signal : UInt8*, receiver : Object, member : UInt8*, unnamed_arg_4 : ConnectionType) : SignalConnection
+    def self.connect(sender : Object, signal : UInt8*, receiver : Object, member : UInt8*, unnamed_arg_4 : ConnectionType = ConnectionType::AutoConnection) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QObject_connect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X_Qt__ConnectionType(sender, signal, receiver, member, unnamed_arg_4))
     end
-    def self.connect(sender : Object, signal : QMetaMethod*, receiver : Object, method : QMetaMethod*) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QObject_connect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender, signal, receiver, method))
-    end
-    def self.connect(sender : Object, signal : QMetaMethod*, receiver : Object, method : QMetaMethod*, type : ConnectionType) : SignalConnection
+    def self.connect(sender : Object, signal : QMetaMethod*, receiver : Object, method : QMetaMethod*, type : ConnectionType = ConnectionType::AutoConnection) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QObject_connect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R_Qt__ConnectionType(sender, signal, receiver, method, type))
     end
-    def connect(sender : Object, signal : UInt8*, member : UInt8*) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QObject_connect_const_QObject_X_const_char_X_const_char_X(self, sender, signal, member))
-    end
-    def connect(sender : Object, signal : UInt8*, member : UInt8*, type : ConnectionType) : SignalConnection
+    def connect(sender : Object, signal : UInt8*, member : UInt8*, type : ConnectionType = ConnectionType::AutoConnection) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QObject_connect_const_QObject_X_const_char_X_const_char_X_Qt__ConnectionType(self, sender, signal, member, type))
     end
     def self.disconnect(sender : Object, signal : UInt8*, receiver : Object, member : UInt8*) : Bool
@@ -4851,22 +4505,10 @@ module Qt
     def self.disconnect(sender : Object, signal : QMetaMethod*, receiver : Object, member : QMetaMethod*) : Bool
       Binding.bg_QObject_disconnect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender, signal, receiver, member)
     end
-    def disconnect() : Bool
-      Binding.bg_QObject_disconnect_(self)
-    end
-    def disconnect(signal : UInt8*) : Bool
-      Binding.bg_QObject_disconnect_const_char_X(self, signal)
-    end
-    def disconnect(signal : UInt8*, receiver : Object) : Bool
-      Binding.bg_QObject_disconnect_const_char_X_const_QObject_X(self, signal, receiver)
-    end
-    def disconnect(signal : UInt8*, receiver : Object, member : UInt8*) : Bool
+    def disconnect(signal : UInt8*? = nil, receiver : Object? = nil, member : UInt8*? = nil) : Bool
       Binding.bg_QObject_disconnect_const_char_X_const_QObject_X_const_char_X(self, signal, receiver, member)
     end
-    def disconnect(receiver : Object) : Bool
-      Binding.bg_QObject_disconnect_const_QObject_X(self, receiver)
-    end
-    def disconnect(receiver : Object, member : UInt8*) : Bool
+    def disconnect(receiver : Object, member : UInt8*? = nil) : Bool
       Binding.bg_QObject_disconnect_const_QObject_X_const_char_X(self, receiver, member)
     end
     def self.disconnect(unnamed_arg_0 : SignalConnection) : Bool
@@ -4887,16 +4529,10 @@ module Qt
     def user_data(id : UInt32) : QObjectUserData*
       Binding.bg_QObject_userData_uint(self, id)
     end
-    def destroyed() : Void
-      Binding.bg_QObject_destroyed_(self)
-    end
-    def on_destroyed(&block : Proc(Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QObject_destroyed_CONNECT_CrystalProc_void_(self, BindgenHelper.wrap_proc(->(){ block.call() })))
-    end
-    def destroyed(unnamed_arg_0 : Object) : Void
+    def destroyed(unnamed_arg_0 : Object? = nil) : Void
       Binding.bg_QObject_destroyed_QObject_X(self, unnamed_arg_0)
     end
-    def on_destroyed(&block : Proc(Object, Void)) : SignalConnection
+    def on_destroyed(&block : Proc(Object?, Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QObject_destroyed_CONNECT_CrystalProc_void__QObjectX_(self, BindgenHelper.wrap_proc(->(unnamed_arg_0 : QObject*){ block.call(Object.new(unwrap: unnamed_arg_0)) })))
     end
     def parent() : Object
@@ -4935,31 +4571,7 @@ module Qt
     protected def disconnect_notify(signal : QMetaMethod*) : Void
       Binding.bg_QObject_disconnectNotify_const_QMetaMethod_R(self, signal)
     end
-    protected def initialize(dd : QObjectPrivate*)
-      unwrap = Binding.bg_QObject_CONSTRUCT_QObjectPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Object)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQObject.new(
-      bg_QObject_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QObject_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QObject_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QObjectPrivate*, parent : Object)
+    protected def initialize(dd : QObjectPrivate*, parent : Object? = nil)
       unwrap = Binding.bg_QObject_CONSTRUCT_QObjectPrivate_R_QObject_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -5006,63 +4618,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QAbstractEventDispatcher_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QAbstractEventDispatcher_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(AbstractEventDispatcher)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast process_events has_pending_events? register_socket_notifier unregister_socket_notifier register_timer unregister_timer unregister_timers registered_timers remaining_time wake_up interrupt flush starting_up closing_down event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAbstractEventDispatcher.new(
-      bg_QAbstractEventDispatcher_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_processEvents_QEventLoop__ProcessEventsFlags: BindgenHelper.wrap_proc({% if forwarded.includes?("process_events") %} ->(flags : EventLoop::ProcessEventsFlags){ self.process_events(EventLoop::ProcessEventsFlags.new(unwrap: flags)) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_hasPendingEvents_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_pending_events?") %} ->(){ self.has_pending_events?() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_registerSocketNotifier_QSocketNotifier_X: BindgenHelper.wrap_proc({% if forwarded.includes?("register_socket_notifier") %} ->(notifier : QSocketNotifier*){ self.register_socket_notifier(notifier) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_unregisterSocketNotifier_QSocketNotifier_X: BindgenHelper.wrap_proc({% if forwarded.includes?("unregister_socket_notifier") %} ->(notifier : QSocketNotifier*){ self.unregister_socket_notifier(notifier) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_registerTimer_int_int_Qt__TimerType_QObject_X: BindgenHelper.wrap_proc({% if forwarded.includes?("register_timer") %} ->(timer_id : Int32, interval : Int32, timer_type : TimerType, object : QObject*){ self.register_timer(timer_id, interval, TimerType.new(unwrap: timer_type), Object.new(unwrap: object)) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_unregisterTimer_int: BindgenHelper.wrap_proc({% if forwarded.includes?("unregister_timer") %} ->(timer_id : Int32){ self.unregister_timer(timer_id) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_unregisterTimers_QObject_X: BindgenHelper.wrap_proc({% if forwarded.includes?("unregister_timers") %} ->(object : QObject*){ self.unregister_timers(Object.new(unwrap: object)) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_registeredTimers_QObject_X: BindgenHelper.wrap_proc({% if forwarded.includes?("registered_timers") %} ->(object : QObject*){ BindgenHelper.wrap_container(QList_QAbstractEventDispatcher__TimerInfo, self.registered_timers(Object.new(unwrap: object))) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_remainingTime_int: BindgenHelper.wrap_proc({% if forwarded.includes?("remaining_time") %} ->(timer_id : Int32){ self.remaining_time(timer_id) } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_wakeUp_: BindgenHelper.wrap_proc({% if forwarded.includes?("wake_up") %} ->(){ self.wake_up() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_interrupt_: BindgenHelper.wrap_proc({% if forwarded.includes?("interrupt") %} ->(){ self.interrupt() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_flush_: BindgenHelper.wrap_proc({% if forwarded.includes?("flush") %} ->(){ self.flush() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_startingUp_: BindgenHelper.wrap_proc({% if forwarded.includes?("starting_up") %} ->(){ self.starting_up() } {% else %} nil {% end %}),
-      bg_QAbstractEventDispatcher_closingDown_: BindgenHelper.wrap_proc({% if forwarded.includes?("closing_down") %} ->(){ self.closing_down() } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAbstractEventDispatcher_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Object)
+    def initialize(parent : Object? = nil)
       unwrap = Binding.bg_QAbstractEventDispatcher_CONSTRUCT_QObject_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -5100,10 +4662,7 @@ module Qt
     {% end %}
     
     end
-    def self.instance() : AbstractEventDispatcher
-      AbstractEventDispatcher.new(unwrap: Binding.bg_QAbstractEventDispatcher_instance_STATIC_())
-    end
-    def self.instance(thread : QThread*) : AbstractEventDispatcher
+    def self.instance(thread : QThread*? = nil) : AbstractEventDispatcher
       AbstractEventDispatcher.new(unwrap: Binding.bg_QAbstractEventDispatcher_instance_STATIC_QThread_X(thread))
     end
     abstract def process_events(flags : EventLoop::ProcessEventsFlags) : Bool
@@ -5243,88 +4802,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QWidget_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QWidget_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Widget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQWidget.new(
-      bg_QWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(event : QPaintEvent*){ self.paint_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QWidget_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QWidget_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -5387,7 +4871,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, f : WindowFlags)
+    def initialize(parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -5897,25 +5381,16 @@ module Qt
     def release_keyboard() : Void
       Binding.bg_QWidget_releaseKeyboard_(self)
     end
-    def grab_shortcut(key : KeySequence) : Int32
-      Binding.bg_QWidget_grabShortcut_const_QKeySequence_R(self, key)
-    end
-    def grab_shortcut(key : KeySequence, context : ShortcutContext) : Int32
+    def grab_shortcut(key : KeySequence, context : ShortcutContext = ShortcutContext::WindowShortcut) : Int32
       Binding.bg_QWidget_grabShortcut_const_QKeySequence_R_Qt__ShortcutContext(self, key, context)
     end
     def release_shortcut(id : Int32) : Void
       Binding.bg_QWidget_releaseShortcut_int(self, id)
     end
-    def shortcut_enabled=(id : Int32) : Void
-      Binding.bg_QWidget_setShortcutEnabled_int(self, id)
-    end
-    def set_shortcut_enabled(id : Int32, enable : Bool) : Void
+    def set_shortcut_enabled(id : Int32, enable : Bool = true) : Void
       Binding.bg_QWidget_setShortcutEnabled_int_bool(self, id, enable)
     end
-    def shortcut_auto_repeat=(id : Int32) : Void
-      Binding.bg_QWidget_setShortcutAutoRepeat_int(self, id)
-    end
-    def set_shortcut_auto_repeat(id : Int32, enable : Bool) : Void
+    def set_shortcut_auto_repeat(id : Int32, enable : Bool = true) : Void
       Binding.bg_QWidget_setShortcutAutoRepeat_int_bool(self, id, enable)
     end
     def self.mouse_grabber() : Widget
@@ -6131,10 +5606,7 @@ module Qt
     def window_flags() : WindowFlags
       WindowFlags.new(unwrap: Binding.bg_QWidget_windowFlags_(self))
     end
-    def window_flag=(unnamed_arg_0 : WindowType) : Void
-      Binding.bg_QWidget_setWindowFlag_Qt__WindowType(self, unnamed_arg_0)
-    end
-    def set_window_flag(unnamed_arg_0 : WindowType, on : Bool) : Void
+    def set_window_flag(unnamed_arg_0 : WindowType, on : Bool = true) : Void
       Binding.bg_QWidget_setWindowFlag_Qt__WindowType_bool(self, unnamed_arg_0, on)
     end
     def override_window_flags(type : WindowFlags) : Void
@@ -6149,10 +5621,7 @@ module Qt
     def child_at(p : Binding::Point) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_childAt_const_QPoint_R(self, p))
     end
-    def attribute=(unnamed_arg_0 : WidgetAttribute) : Void
-      Binding.bg_QWidget_setAttribute_Qt__WidgetAttribute(self, unnamed_arg_0)
-    end
-    def set_attribute(unnamed_arg_0 : WidgetAttribute, on : Bool) : Void
+    def set_attribute(unnamed_arg_0 : WidgetAttribute, on : Bool = true) : Void
       Binding.bg_QWidget_setAttribute_Qt__WidgetAttribute_bool(self, unnamed_arg_0, on)
     end
     def test_attribute(unnamed_arg_0 : WidgetAttribute) : Bool
@@ -6179,13 +5648,10 @@ module Qt
     def window_handle() : QWindow*
       Binding.bg_QWidget_windowHandle_(self)
     end
-    def self.create_window_container(window : QWindow*) : Widget
-      Widget.new(unwrap: Binding.bg_QWidget_createWindowContainer_STATIC_QWindow_X(window))
-    end
-    def self.create_window_container(window : QWindow*, parent : Widget) : Widget
+    def self.create_window_container(window : QWindow*, parent : Widget? = nil) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_createWindowContainer_STATIC_QWindow_X_QWidget_X(window, parent))
     end
-    def self.create_window_container(window : QWindow*, parent : Widget, flags : WindowFlags) : Widget
+    def self.create_window_container(window : QWindow*, parent : Widget?, flags : WindowFlags) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_createWindowContainer_STATIC_QWindow_X_QWidget_X_Qt__WindowFlags(window, parent, flags))
     end
     def window_title_changed(title : String) : Void
@@ -6317,16 +5783,7 @@ module Qt
     protected def update_micro_focus() : Void
       Binding.bg_QWidget_updateMicroFocus_(self)
     end
-    protected def create() : Void
-      Binding.bg_QWidget_create_(self)
-    end
-    protected def destroy() : Void
-      Binding.bg_QWidget_destroy_(self)
-    end
-    protected def destroy(destroy_window : Bool) : Void
-      Binding.bg_QWidget_destroy_bool(self, destroy_window)
-    end
-    protected def destroy(destroy_window : Bool, destroy_sub_windows : Bool) : Void
+    protected def destroy(destroy_window : Bool = true, destroy_sub_windows : Bool = true) : Void
       Binding.bg_QWidget_destroy_bool_bool(self, destroy_window, destroy_sub_windows)
     end
     protected def focus_next_prev_child(next_ : Bool) : Bool
@@ -6411,91 +5868,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QAbstractButton_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QAbstractButton_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(AbstractButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAbstractButton.new(
-      bg_QAbstractButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAbstractButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAbstractButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QAbstractButton_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -6627,10 +6006,7 @@ module Qt
     def icon_size=(size : QSize*) : Void
       Binding.bg_QAbstractButton_setIconSize_const_QSize_R(self, size)
     end
-    def animate_click() : Void
-      Binding.bg_QAbstractButton_animateClick_(self)
-    end
-    def animate_click(msec : Int32) : Void
+    def animate_click(msec : Int32 = 100) : Void
       Binding.bg_QAbstractButton_animateClick_int(self, msec)
     end
     def click() : Void
@@ -6653,12 +6029,6 @@ module Qt
     end
     def on_released(&block : Proc(Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QAbstractButton_released_CONNECT_CrystalProc_void_(self, BindgenHelper.wrap_proc(->(){ block.call() })))
-    end
-    def clicked() : Void
-      Binding.bg_QAbstractButton_clicked_(self)
-    end
-    def on_clicked(&block : Proc(Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QAbstractButton_clicked_CONNECT_CrystalProc_void_(self, BindgenHelper.wrap_proc(->(){ block.call() })))
     end
     def clicked(checked : Bool) : Void
       Binding.bg_QAbstractButton_clicked_bool(self, checked)
@@ -6712,73 +6082,7 @@ module Qt
     protected def timer_event(e : QTimerEvent*) : Void
       Binding.bg_QAbstractButton_timerEvent_QTimerEvent_X(self, e)
     end
-    protected def initialize(dd : QAbstractButtonPrivate*)
-      unwrap = Binding.bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(AbstractButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast paint_event hit_button check_state_set next_check_state event key_press_event key_release_event mouse_press_event mouse_release_event mouse_move_event focus_in_event focus_out_event change_event timer_event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAbstractButton.new(
-      bg_QAbstractButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAbstractButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAbstractButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QAbstractButtonPrivate*, parent : Widget)
+    protected def initialize(dd : QAbstractButtonPrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -6876,88 +6180,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QFrame_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QFrame_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQFrame.new(
-      bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QFrame_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QFrame_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QFrame_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QFrame_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QFrame_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -7020,7 +6249,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, f : WindowFlags)
+    def initialize(parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QFrame_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -7137,70 +6366,7 @@ module Qt
     protected def draw_frame(unnamed_arg_0 : QPainter*) : Void
       Binding.bg_QFrame_drawFrame_QPainter_X(self, unnamed_arg_0)
     end
-    protected def initialize(dd : QFramePrivate*)
-      unwrap = Binding.bg_QFrame_CONSTRUCT_QFramePrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Frame)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQFrame.new(
-      bg_QFrame_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QFrame_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QFrame_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QFrame_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QFrame_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QFramePrivate*, parent : Widget)
+    protected def initialize(dd : QFramePrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -7263,7 +6429,7 @@ module Qt
     {% end %}
     
     end
-    protected def initialize(dd : QFramePrivate*, parent : Widget, f : WindowFlags)
+    protected def initialize(dd : QFramePrivate*, parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd, parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -7344,92 +6510,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QAbstractScrollArea_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QAbstractScrollArea_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(AbstractScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAbstractScrollArea.new(
-      bg_QAbstractScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(unnamed_arg_0 : QDragMoveEvent*){ self.drag_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(unnamed_arg_0 : QDragLeaveEvent*){ self.drag_leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAbstractScrollArea_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QAbstractScrollArea_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -7556,74 +6643,7 @@ module Qt
     def size_adjust_policy=(policy : AbstractScrollArea::SizeAdjustPolicy) : Void
       Binding.bg_QAbstractScrollArea_setSizeAdjustPolicy_QAbstractScrollArea__SizeAdjustPolicy(self, policy)
     end
-    protected def initialize(dd : QAbstractScrollAreaPrivate*)
-      unwrap = Binding.bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(AbstractScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast minimum_size_hint size_hint setup_viewport event_filter event viewport_event resize_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event scroll_contents_by viewport_size_hint change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAbstractScrollArea.new(
-      bg_QAbstractScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(unnamed_arg_0 : QDragMoveEvent*){ self.drag_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(unnamed_arg_0 : QDragLeaveEvent*){ self.drag_leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAbstractScrollArea_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QAbstractScrollAreaPrivate*, parent : Widget)
+    protected def initialize(dd : QAbstractScrollAreaPrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -7763,92 +6783,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QScrollArea_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QScrollArea_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(ScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQScrollArea.new(
-      bg_QScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QScrollArea_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QScrollArea_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QScrollArea_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QScrollArea_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(unnamed_arg_0 : QDragMoveEvent*){ self.drag_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(unnamed_arg_0 : QDragLeaveEvent*){ self.drag_leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QScrollArea_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QScrollArea_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -7942,92 +6883,13 @@ module Qt
     def alignment=(unnamed_arg_0 : Alignment) : Void
       Binding.bg_QScrollArea_setAlignment_Qt__Alignment(self, unnamed_arg_0)
     end
-    def ensure_visible(x : Int32, y : Int32) : Void
-      Binding.bg_QScrollArea_ensureVisible_int_int(self, x, y)
-    end
-    def ensure_visible(x : Int32, y : Int32, xmargin : Int32) : Void
-      Binding.bg_QScrollArea_ensureVisible_int_int_int(self, x, y, xmargin)
-    end
-    def ensure_visible(x : Int32, y : Int32, xmargin : Int32, ymargin : Int32) : Void
+    def ensure_visible(x : Int32, y : Int32, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
       Binding.bg_QScrollArea_ensureVisible_int_int_int_int(self, x, y, xmargin, ymargin)
     end
-    def ensure_widget_visible(child_widget : Widget) : Void
-      Binding.bg_QScrollArea_ensureWidgetVisible_QWidget_X(self, child_widget)
-    end
-    def ensure_widget_visible(child_widget : Widget, xmargin : Int32) : Void
-      Binding.bg_QScrollArea_ensureWidgetVisible_QWidget_X_int(self, child_widget, xmargin)
-    end
-    def ensure_widget_visible(child_widget : Widget, xmargin : Int32, ymargin : Int32) : Void
+    def ensure_widget_visible(child_widget : Widget, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
       Binding.bg_QScrollArea_ensureWidgetVisible_QWidget_X_int_int(self, child_widget, xmargin, ymargin)
     end
-    protected def initialize(dd : QScrollAreaPrivate*)
-      unwrap = Binding.bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(ScrollArea)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint focus_next_prev_child event event_filter resize_event scroll_contents_by viewport_size_hint minimum_size_hint setup_viewport viewport_event paint_event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event context_menu_event drag_enter_event drag_move_event drag_leave_event drop_event key_press_event change_event dev_type visible= height_for_width has_height_for_width? paint_engine key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQScrollArea.new(
-      bg_QScrollArea_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QScrollArea_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QScrollArea_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QScrollArea_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QScrollArea_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(unnamed_arg_0 : QDragMoveEvent*){ self.drag_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(unnamed_arg_0 : QDragLeaveEvent*){ self.drag_leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QScrollArea_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QScrollAreaPrivate*, parent : Widget)
+    protected def initialize(dd : QScrollAreaPrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -8119,88 +6981,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QMenuBar_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QMenuBar_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(MenuBar)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width visible= change_event key_press_event mouse_release_event mouse_press_event mouse_move_event leave_event paint_event resize_event action_event focus_out_event focus_in_event timer_event event_filter event dev_type has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event move_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQMenuBar.new(
-      bg_QMenuBar_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QMenuBar_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QMenuBar_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QMenuBar_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QMenuBar_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(unnamed_arg_0 : QEvent*){ self.leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(unnamed_arg_0 : QActionEvent*){ self.action_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(unnamed_arg_0 : QTimerEvent*){ self.timer_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenuBar_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QMenuBar_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QMenuBar_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QMenuBar_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -8317,16 +7104,10 @@ module Qt
     def action_at(unnamed_arg_0 : Binding::Point) : Action
       Action.new(unwrap: Binding.bg_QMenuBar_actionAt_const_QPoint_R(self, unnamed_arg_0))
     end
-    def corner_widget=(w : Widget) : Void
-      Binding.bg_QMenuBar_setCornerWidget_QWidget_X(self, w)
-    end
-    def set_corner_widget(w : Widget, corner : Corner) : Void
+    def set_corner_widget(w : Widget, corner : Corner = Corner::TopRightCorner) : Void
       Binding.bg_QMenuBar_setCornerWidget_QWidget_X_Qt__Corner(self, w, corner)
     end
-    def corner_widget() : Widget
-      Widget.new(unwrap: Binding.bg_QMenuBar_cornerWidget_(self))
-    end
-    def corner_widget(corner : Corner) : Widget
+    def corner_widget(corner : Corner = Corner::TopRightCorner) : Widget
       Widget.new(unwrap: Binding.bg_QMenuBar_cornerWidget_Qt__Corner(self, corner))
     end
     def native_menu_bar?() : Bool
@@ -8408,88 +7189,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QMenu_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QMenu_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQMenu.new(
-      bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QMenu_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(unnamed_arg_0 : QEvent*){ self.enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(unnamed_arg_0 : QEvent*){ self.leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(unnamed_arg_0 : QHideEvent*){ self.hide_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(unnamed_arg_0 : QActionEvent*){ self.action_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(unnamed_arg_0 : QTimerEvent*){ self.timer_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QMenu_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QMenu_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -8552,70 +7258,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(title : String)
-      unwrap = Binding.bg_QMenu_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(title))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQMenu.new(
-      bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QMenu_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(unnamed_arg_0 : QEvent*){ self.enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(unnamed_arg_0 : QEvent*){ self.leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(unnamed_arg_0 : QHideEvent*){ self.hide_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(unnamed_arg_0 : QActionEvent*){ self.action_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(unnamed_arg_0 : QTimerEvent*){ self.timer_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QMenu_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(title : String, parent : Widget)
+    def initialize(title : String, parent : Widget? = nil)
       unwrap = Binding.bg_QMenu_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
     @unwrap = unwrap
     {% begin %}
@@ -8762,19 +7405,13 @@ module Qt
     def active_action() : Action
       Action.new(unwrap: Binding.bg_QMenu_activeAction_(self))
     end
-    def popup(pos : Binding::Point) : Void
-      Binding.bg_QMenu_popup_const_QPoint_R(self, pos)
-    end
-    def popup(pos : Binding::Point, at : Action) : Void
+    def popup(pos : Binding::Point, at : Action? = nil) : Void
       Binding.bg_QMenu_popup_const_QPoint_R_QAction_X(self, pos, at)
     end
     def exec() : Action
       Action.new(unwrap: Binding.bg_QMenu_exec_(self))
     end
-    def exec(pos : Binding::Point) : Action
-      Action.new(unwrap: Binding.bg_QMenu_exec_const_QPoint_R(self, pos))
-    end
-    def exec(pos : Binding::Point, at : Action) : Action
+    def exec(pos : Binding::Point, at : Action? = nil) : Action
       Action.new(unwrap: Binding.bg_QMenu_exec_const_QPoint_R_QAction_X(self, pos, at))
     end
     def size_hint() : QSize*
@@ -8894,70 +7531,7 @@ module Qt
     protected def init_style_option(option : QStyleOptionMenuItem*, action : Action) : Void
       Binding.bg_QMenu_initStyleOption_QStyleOptionMenuItem_X_const_QAction_X(self, option, action)
     end
-    protected def initialize(dd : QMenuPrivate*)
-      unwrap = Binding.bg_QMenu_CONSTRUCT_QMenuPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Menu)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint change_event key_press_event mouse_release_event mouse_press_event mouse_move_event wheel_event enter_event leave_event hide_event paint_event action_event timer_event event focus_next_prev_child dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_double_click_event key_release_event focus_in_event focus_out_event move_event resize_event close_event context_menu_event tablet_event drag_enter_event drag_move_event drag_leave_event drop_event show_event native_event metric init_painter redirected shared_painter input_method_event event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQMenu.new(
-      bg_QMenu_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QMenu_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(unnamed_arg_0 : QWheelEvent*){ self.wheel_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(unnamed_arg_0 : QEvent*){ self.enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(unnamed_arg_0 : QEvent*){ self.leave_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(unnamed_arg_0 : QHideEvent*){ self.hide_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(unnamed_arg_0 : QActionEvent*){ self.action_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(unnamed_arg_0 : QTimerEvent*){ self.timer_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMenu_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QMenu_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QMenuPrivate*, parent : Widget)
+    protected def initialize(dd : QMenuPrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QMenu_CONSTRUCT_QMenuPrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -9048,49 +7622,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QAction_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QAction_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Action)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAction.new(
-      bg_QAction_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAction_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAction_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAction_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Object)
+    def initialize(parent : Object? = nil)
       unwrap = Binding.bg_QAction_CONSTRUCT_QObject_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -9114,31 +7652,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QAction_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Action)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAction.new(
-      bg_QAction_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAction_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAction_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAction_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Object)
+    def initialize(text : String, parent : Object? = nil)
       unwrap = Binding.bg_QAction_CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -9162,31 +7676,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(icon : QIcon*, text : String)
-      unwrap = Binding.bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R(icon, Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Action)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQAction.new(
-      bg_QAction_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QAction_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAction_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QAction_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(icon : QIcon*, text : String, parent : Object)
+    def initialize(icon : QIcon*, text : String, parent : Object? = nil)
       unwrap = Binding.bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon, Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -9315,10 +7805,7 @@ module Qt
     def activate(event : Action::Event) : Void
       Binding.bg_QAction_activate_QAction__ActionEvent(self, event)
     end
-    def show_status_text() : Bool
-      Binding.bg_QAction_showStatusText_(self)
-    end
-    def show_status_text(widget : Widget) : Bool
+    def show_status_text(widget : Widget? = nil) : Bool
       Binding.bg_QAction_showStatusText_QWidget_X(self, widget)
     end
     def menu_role=(menu_role : Action::MenuRole) : Void
@@ -9393,12 +7880,6 @@ module Qt
     def on_changed(&block : Proc(Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QAction_changed_CONNECT_CrystalProc_void_(self, BindgenHelper.wrap_proc(->(){ block.call() })))
     end
-    def triggered() : Void
-      Binding.bg_QAction_triggered_(self)
-    end
-    def on_triggered(&block : Proc(Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QAction_triggered_CONNECT_CrystalProc_void_(self, BindgenHelper.wrap_proc(->(){ block.call() })))
-    end
     def triggered(checked : Bool) : Void
       Binding.bg_QAction_triggered_bool(self, checked)
     end
@@ -9436,89 +7917,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QMainWindow_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QMainWindow_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(MainWindow)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast create_popup_menu context_menu_event event dev_type visible= size_hint minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQMainWindow.new(
-      bg_QMainWindow_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QMainWindow_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QMainWindow_createPopupMenu_: BindgenHelper.wrap_proc({% if forwarded.includes?("create_popup_menu") %} ->(){ Menu.new(unwrap: self.create_popup_menu()) } {% else %} nil {% end %}),
-      bg_QMainWindow_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QMainWindow_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(event : QPaintEvent*){ self.paint_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QMainWindow_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QMainWindow_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -9582,7 +7987,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, flags : WindowFlags)
+    def initialize(parent : Widget?, flags : WindowFlags)
       unwrap = Binding.bg_QMainWindow_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, flags)
     @unwrap = unwrap
     {% begin %}
@@ -9724,10 +8129,7 @@ module Qt
     def corner(corner : Corner) : DockWidgetArea
       DockWidgetArea.new(unwrap: Binding.bg_QMainWindow_corner_Qt__Corner(self, corner))
     end
-    def add_tool_bar_break() : Void
-      Binding.bg_QMainWindow_addToolBarBreak_(self)
-    end
-    def add_tool_bar_break(area : ToolBarArea) : Void
+    def add_tool_bar_break(area : ToolBarArea = ToolBarArea::TopToolBarArea) : Void
       Binding.bg_QMainWindow_addToolBarBreak_Qt__ToolBarArea(self, area)
     end
     def insert_tool_bar_break(before : QToolBar*) : Void
@@ -9781,16 +8183,10 @@ module Qt
     def dock_widget_area(dockwidget : QDockWidget*) : DockWidgetArea
       DockWidgetArea.new(unwrap: Binding.bg_QMainWindow_dockWidgetArea_QDockWidget_X(self, dockwidget))
     end
-    def save_state() : QByteArray*
-      Binding.bg_QMainWindow_saveState_(self)
-    end
-    def save_state(version : Int32) : QByteArray*
+    def save_state(version : Int32 = 0) : QByteArray*
       Binding.bg_QMainWindow_saveState_int(self, version)
     end
-    def restore_state(state : QByteArray*) : Bool
-      Binding.bg_QMainWindow_restoreState_const_QByteArray_R(self, state)
-    end
-    def restore_state(state : QByteArray*, version : Int32) : Bool
+    def restore_state(state : QByteArray*, version : Int32 = 0) : Bool
       Binding.bg_QMainWindow_restoreState_const_QByteArray_R_int(self, state, version)
     end
     def create_popup_menu() : Menu
@@ -9843,93 +8239,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QDialog_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QDialog_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Dialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= size_hint minimum_size_hint open exec done accept reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event change_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQDialog.new(
-      bg_QDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QDialog_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QDialog_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QDialog_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QDialog_open_: BindgenHelper.wrap_proc({% if forwarded.includes?("open") %} ->(){ self.open() } {% else %} nil {% end %}),
-      bg_QDialog_exec_: BindgenHelper.wrap_proc({% if forwarded.includes?("exec") %} ->(){ self.exec() } {% else %} nil {% end %}),
-      bg_QDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} ->(unnamed_arg_0 : Int32){ self.done(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} ->(){ self.accept() } {% else %} nil {% end %}),
-      bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} ->(){ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(unnamed_arg_0 : QCloseEvent*){ self.close_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(unnamed_arg_0 : QShowEvent*){ self.show_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(event : QPaintEvent*){ self.paint_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QDialog_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QDialog_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -9997,7 +8313,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, f : WindowFlags)
+    def initialize(parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -10304,88 +8620,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QLabel_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QLabel_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLabel.new(
-      bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLabel_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(ev : QKeyEvent*){ self.key_press_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(ev : QMouseEvent*){ self.mouse_press_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(ev : QMouseEvent*){ self.mouse_move_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(ev : QMouseEvent*){ self.mouse_release_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(ev : QContextMenuEvent*){ self.context_menu_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(ev : QFocusEvent*){ self.focus_in_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(ev : QFocusEvent*){ self.focus_out_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLabel_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QLabel_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -10448,7 +8689,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, f : WindowFlags)
+    def initialize(parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QLabel_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -10511,70 +8752,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QLabel_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Label)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width event key_press_event paint_event change_event mouse_press_event mouse_move_event mouse_release_event context_menu_event focus_in_event focus_out_event focus_next_prev_child dev_type visible= has_height_for_width? paint_engine mouse_double_click_event wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLabel.new(
-      bg_QLabel_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLabel_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(ev : QKeyEvent*){ self.key_press_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(ev : QMouseEvent*){ self.mouse_press_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(ev : QMouseEvent*){ self.mouse_move_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(ev : QMouseEvent*){ self.mouse_release_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(ev : QContextMenuEvent*){ self.context_menu_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(ev : QFocusEvent*){ self.focus_in_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(ev : QFocusEvent*){ self.focus_out_event(ev) } {% else %} nil {% end %}),
-      bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLabel_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Widget)
+    def initialize(text : String, parent : Widget? = nil)
       unwrap = Binding.bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -10637,7 +8815,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String, parent : Widget, f : WindowFlags)
+    def initialize(text : String, parent : Widget?, f : WindowFlags)
       unwrap = Binding.bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(Qt::Converter::QString.wrap(text), parent, f)
     @unwrap = unwrap
     {% begin %}
@@ -10874,88 +9052,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QLCDNumber_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QLCDNumber_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(LcdNumber)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLCDNumber.new(
-      bg_QLCDNumber_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLCDNumber_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLCDNumber_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLCDNumber_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QLCDNumber_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLCDNumber_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QLCDNumber_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -11018,70 +9121,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(num_digits : UInt32)
-      unwrap = Binding.bg_QLCDNumber_CONSTRUCT_uint(num_digits)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(LcdNumber)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint event paint_event change_event dev_type visible= minimum_size_hint height_for_width has_height_for_width? paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_press_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLCDNumber.new(
-      bg_QLCDNumber_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLCDNumber_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLCDNumber_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLCDNumber_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QLCDNumber_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(event : QKeyEvent*){ self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLCDNumber_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(num_digits : UInt32, parent : Widget)
+    def initialize(num_digits : UInt32, parent : Widget? = nil)
       unwrap = Binding.bg_QLCDNumber_CONSTRUCT_uint_QWidget_X(num_digits, parent)
     @unwrap = unwrap
     {% begin %}
@@ -11226,91 +9266,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QPushButton_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QPushButton_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQPushButton.new(
-      bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QPushButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QPushButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QPushButton_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -11376,73 +9338,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QPushButton_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQPushButton.new(
-      bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QPushButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QPushButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Widget)
+    def initialize(text : String, parent : Widget? = nil)
       unwrap = Binding.bg_QPushButton_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -11508,73 +9404,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(icon : QIcon*, text : String)
-      unwrap = Binding.bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R(icon, Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQPushButton.new(
-      bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QPushButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QPushButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(icon : QIcon*, text : String, parent : Widget)
+    def initialize(icon : QIcon*, text : String, parent : Widget? = nil)
       unwrap = Binding.bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon, Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -11691,73 +9521,7 @@ module Qt
     protected def init_style_option(option : QStyleOptionButton*) : Void
       Binding.bg_QPushButton_initStyleOption_QStyleOptionButton_X(self, option)
     end
-    protected def initialize(dd : QPushButtonPrivate*)
-      unwrap = Binding.bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R(dd)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(PushButton)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event paint_event key_press_event focus_in_event focus_out_event hit_button check_state_set next_check_state key_release_event mouse_press_event mouse_release_event mouse_move_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQPushButton.new(
-      bg_QPushButton_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QPushButton_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QPushButton_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    protected def initialize(dd : QPushButtonPrivate*, parent : Widget)
+    protected def initialize(dd : QPushButtonPrivate*, parent : Widget? = nil)
       unwrap = Binding.bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd, parent)
     @unwrap = unwrap
     {% begin %}
@@ -11833,91 +9597,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QCheckBox_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QCheckBox_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(CheckBox)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQCheckBox.new(
-      bg_QCheckBox_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QCheckBox_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCheckBox_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QCheckBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QCheckBox_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QCheckBox_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCheckBox_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QCheckBox_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QCheckBox_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -11983,73 +9669,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QCheckBox_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(CheckBox)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint event hit_button check_state_set next_check_state paint_event mouse_move_event key_press_event key_release_event mouse_press_event mouse_release_event focus_in_event focus_out_event change_event timer_event dev_type visible= height_for_width has_height_for_width? paint_engine mouse_double_click_event wheel_event enter_event leave_event move_event resize_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event show_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQCheckBox.new(
-      bg_QCheckBox_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QCheckBox_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCheckBox_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QCheckBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QCheckBox_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QCheckBox_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} ->(pos : QPoint*){ self.hit_button(pos) } {% else %} nil {% end %}),
-      bg_QCheckBox_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} ->(){ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} ->(){ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCheckBox_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QCheckBox_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Widget)
+    def initialize(text : String, parent : Widget? = nil)
       unwrap = Binding.bg_QCheckBox_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -12121,10 +9741,7 @@ module Qt
     def minimum_size_hint() : QSize*
       Binding.bg_QCheckBox_minimumSizeHint_(self)
     end
-    def set_tristate() : Void
-      Binding.bg_QCheckBox_setTristate_(self)
-    end
-    def tristate=(y : Bool) : Void
+    def tristate=(y : Bool = true) : Void
       Binding.bg_QCheckBox_setTristate_bool(self, y)
     end
     def tristate?() : Bool
@@ -12173,51 +9790,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QCoreApplication_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize(argc : Int32*, argv : UInt8**)
-      unwrap = Binding.bg_QCoreApplication_CONSTRUCT_int_R_char_XX(argc, argv)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(CoreApplication)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast notify event compress_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQCoreApplication.new(
-      bg_QCoreApplication_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QCoreApplication_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCoreApplication_notify_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("notify") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.notify(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QCoreApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QCoreApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} ->(unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*){ self.compress_event(unnamed_arg_0, Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QCoreApplication_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
       unwrap = Binding.bg_QCoreApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = unwrap
     {% begin %}
@@ -12246,10 +9825,7 @@ module Qt
     def self.arguments() : Enumerable(String)
       QList_QString.new(unwrap: Binding.bg_QCoreApplication_arguments_STATIC_())
     end
-    def self.attribute=(attribute : ApplicationAttribute) : Void
-      Binding.bg_QCoreApplication_setAttribute_STATIC_Qt__ApplicationAttribute(attribute)
-    end
-    def self.set_attribute(attribute : ApplicationAttribute, on : Bool) : Void
+    def self.set_attribute(attribute : ApplicationAttribute, on : Bool = true) : Void
       Binding.bg_QCoreApplication_setAttribute_STATIC_Qt__ApplicationAttribute_bool(attribute, on)
     end
     def self.test_attribute(attribute : ApplicationAttribute) : Bool
@@ -12300,34 +9876,19 @@ module Qt
     def self.process_events(flags : EventLoop::ProcessEventsFlags, maxtime : Int32) : Void
       Binding.bg_QCoreApplication_processEvents_STATIC_QEventLoop__ProcessEventsFlags_int(flags, maxtime)
     end
-    def self.exit() : Void
-      Binding.bg_QCoreApplication_exit_STATIC_()
-    end
-    def self.exit(retcode : Int32) : Void
+    def self.exit(retcode : Int32 = 0) : Void
       Binding.bg_QCoreApplication_exit_STATIC_int(retcode)
     end
     def self.send_event(receiver : Object, event : QEvent*) : Bool
       Binding.bg_QCoreApplication_sendEvent_STATIC_QObject_X_QEvent_X(receiver, event)
     end
-    def self.post_event(receiver : Object, event : QEvent*) : Void
-      Binding.bg_QCoreApplication_postEvent_STATIC_QObject_X_QEvent_X(receiver, event)
-    end
-    def self.post_event(receiver : Object, event : QEvent*, priority : Int32) : Void
+    def self.post_event(receiver : Object, event : QEvent*, priority : Int32 = 0) : Void
       Binding.bg_QCoreApplication_postEvent_STATIC_QObject_X_QEvent_X_int(receiver, event, priority)
     end
-    def self.send_posted_events() : Void
-      Binding.bg_QCoreApplication_sendPostedEvents_STATIC_()
-    end
-    def self.send_posted_events(receiver : Object) : Void
-      Binding.bg_QCoreApplication_sendPostedEvents_STATIC_QObject_X(receiver)
-    end
-    def self.send_posted_events(receiver : Object, event_type : Int32) : Void
+    def self.send_posted_events(receiver : Object? = nil, event_type : Int32 = 0) : Void
       Binding.bg_QCoreApplication_sendPostedEvents_STATIC_QObject_X_int(receiver, event_type)
     end
-    def self.remove_posted_events(receiver : Object) : Void
-      Binding.bg_QCoreApplication_removePostedEvents_STATIC_QObject_X(receiver)
-    end
-    def self.remove_posted_events(receiver : Object, event_type : Int32) : Void
+    def self.remove_posted_events(receiver : Object, event_type : Int32 = 0) : Void
       Binding.bg_QCoreApplication_removePostedEvents_STATIC_QObject_X_int(receiver, event_type)
     end
     def self.has_pending_events?() : Bool
@@ -12375,13 +9936,7 @@ module Qt
     def self.remove_translator(message_file : QTranslator*) : Bool
       Binding.bg_QCoreApplication_removeTranslator_STATIC_QTranslator_X(message_file)
     end
-    def self.translate(context : UInt8*, key : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X(context, key))
-    end
-    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X(context, key, disambiguation))
-    end
-    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*, n : Int32) : String
+    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X_int(context, key, disambiguation, n))
     end
     def self.flush() : Void
@@ -12468,51 +10023,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QGuiApplication_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize(argc : Int32*, argv : UInt8**)
-      unwrap = Binding.bg_QGuiApplication_CONSTRUCT_int_R_char_XX(argc, argv)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(GuiApplication)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast notify event compress_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQGuiApplication.new(
-      bg_QGuiApplication_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QGuiApplication_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGuiApplication_notify_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("notify") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.notify(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QGuiApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGuiApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} ->(unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*){ self.compress_event(unnamed_arg_0, Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QGuiApplication_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
       unwrap = Binding.bg_QGuiApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = unwrap
     {% begin %}
@@ -12799,51 +10316,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QApplication_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize(argc : Int32*, argv : UInt8**)
-      unwrap = Binding.bg_QApplication_CONSTRUCT_int_R_char_XX(argc, argv)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(Application)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast notify event compress_event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQApplication.new(
-      bg_QApplication_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QApplication_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QApplication_notify_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("notify") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.notify(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} ->(unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*){ self.compress_event(unnamed_arg_0, Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QApplication_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
       unwrap = Binding.bg_QApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = unwrap
     {% begin %}
@@ -12890,10 +10369,7 @@ module Qt
     def self.palette(class_name : UInt8*) : QPalette*
       Binding.bg_QApplication_palette_STATIC_const_char_X(class_name)
     end
-    def self.palette=(unnamed_arg_0 : QPalette*) : Void
-      Binding.bg_QApplication_setPalette_STATIC_const_QPalette_R(unnamed_arg_0)
-    end
-    def self.set_palette(unnamed_arg_0 : QPalette*, class_name : UInt8*) : Void
+    def self.set_palette(unnamed_arg_0 : QPalette*, class_name : UInt8*? = nil) : Void
       Binding.bg_QApplication_setPalette_STATIC_const_QPalette_R_const_char_X(unnamed_arg_0, class_name)
     end
     def self.font() : QFont*
@@ -12905,10 +10381,7 @@ module Qt
     def self.font(class_name : UInt8*) : QFont*
       Binding.bg_QApplication_font_STATIC_const_char_X(class_name)
     end
-    def self.font=(unnamed_arg_0 : QFont*) : Void
-      Binding.bg_QApplication_setFont_STATIC_const_QFont_R(unnamed_arg_0)
-    end
-    def self.set_font(unnamed_arg_0 : QFont*, class_name : UInt8*) : Void
+    def self.set_font(unnamed_arg_0 : QFont*, class_name : UInt8*? = nil) : Void
       Binding.bg_QApplication_setFont_STATIC_const_QFont_R_const_char_X(unnamed_arg_0, class_name)
     end
     def self.font_metrics() : QFontMetrics*
@@ -12959,10 +10432,7 @@ module Qt
     def self.beep() : Void
       Binding.bg_QApplication_beep_STATIC_()
     end
-    def self.alert(widget : Widget) : Void
-      Binding.bg_QApplication_alert_STATIC_QWidget_X(widget)
-    end
-    def self.alert(widget : Widget, duration : Int32) : Void
+    def self.alert(widget : Widget, duration : Int32 = 0) : Void
       Binding.bg_QApplication_alert_STATIC_QWidget_X_int(widget, duration)
     end
     def self.cursor_flash_time=(unnamed_arg_0 : Int32) : Void
@@ -13010,10 +10480,7 @@ module Qt
     def self.is_effect_enabled(unnamed_arg_0 : UIEffect) : Bool
       Binding.bg_QApplication_isEffectEnabled_STATIC_Qt__UIEffect(unnamed_arg_0)
     end
-    def self.effect_enabled=(unnamed_arg_0 : UIEffect) : Void
-      Binding.bg_QApplication_setEffectEnabled_STATIC_Qt__UIEffect(unnamed_arg_0)
-    end
-    def self.set_effect_enabled(unnamed_arg_0 : UIEffect, enable : Bool) : Void
+    def self.set_effect_enabled(unnamed_arg_0 : UIEffect, enable : Bool = true) : Void
       Binding.bg_QApplication_setEffectEnabled_STATIC_Qt__UIEffect_bool(unnamed_arg_0, enable)
     end
     def self.exec() : Int32
@@ -13107,37 +10574,12 @@ module Qt
     @unwrap = unwrap
     
     end
-    def initialize(data : UInt8*, width : Int32, height : Int32, format : Image::Format)
-      unwrap = Binding.bg_QImage_CONSTRUCT_uchar_X_int_int_QImage__Format(data, width, height, format)
-    @unwrap = unwrap
-    
-    end
-    def initialize(data : UInt8*, width : Int32, height : Int32, format : Image::Format)
-      unwrap = Binding.bg_QImage_CONSTRUCT_const_uchar_X_int_int_QImage__Format(data, width, height, format)
-    @unwrap = unwrap
-    
-    end
-    def initialize(data : UInt8*, width : Int32, height : Int32, bytes_per_line : Int32, format : Image::Format)
-      unwrap = Binding.bg_QImage_CONSTRUCT_uchar_X_int_int_int_QImage__Format(data, width, height, bytes_per_line, format)
-    @unwrap = unwrap
-    
-    end
-    def initialize(data : UInt8*, width : Int32, height : Int32, bytes_per_line : Int32, format : Image::Format)
-      unwrap = Binding.bg_QImage_CONSTRUCT_const_uchar_X_int_int_int_QImage__Format(data, width, height, bytes_per_line, format)
-    @unwrap = unwrap
-    
-    end
     def initialize(xpm : UInt8**)
       unwrap = Binding.bg_QImage_CONSTRUCT_const_char_Xconst_X(xpm)
     @unwrap = unwrap
     
     end
-    def initialize(file_name : String)
-      unwrap = Binding.bg_QImage_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
-    @unwrap = unwrap
-    
-    end
-    def initialize(file_name : String, format : UInt8*)
+    def initialize(file_name : String, format : UInt8*? = nil)
       unwrap = Binding.bg_QImage_CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
     @unwrap = unwrap
     
@@ -13280,127 +10722,64 @@ module Qt
     def create_alpha_mask(flags : ImageConversionFlags) : Image
       Image.new(unwrap: Binding.bg_QImage_createAlphaMask_Qt__ImageConversionFlags(self, flags))
     end
-    def create_heuristic_mask() : Image
-      Image.new(unwrap: Binding.bg_QImage_createHeuristicMask_(self))
-    end
-    def create_heuristic_mask(clip_tight : Bool) : Image
+    def create_heuristic_mask(clip_tight : Bool = true) : Image
       Image.new(unwrap: Binding.bg_QImage_createHeuristicMask_bool(self, clip_tight))
     end
-    def scaled(w : Int32, h : Int32) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaled_int_int(self, w, h))
-    end
-    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaled_int_int_Qt__AspectRatioMode(self, w, h, aspect_mode))
-    end
-    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : Image
+    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(self, w, h, aspect_mode, mode))
     end
-    def scaled(s : QSize*) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaled_const_QSize_R(self, s))
-    end
-    def scaled(s : QSize*, aspect_mode : AspectRatioMode) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaled_const_QSize_R_Qt__AspectRatioMode(self, s, aspect_mode))
-    end
-    def scaled(s : QSize*, aspect_mode : AspectRatioMode, mode : TransformationMode) : Image
+    def scaled(s : QSize*, aspect_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_scaled_const_QSize_R_Qt__AspectRatioMode_Qt__TransformationMode(self, s, aspect_mode, mode))
     end
-    def scaled_to_width(w : Int32) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaledToWidth_int(self, w))
-    end
-    def scaled_to_width(w : Int32, mode : TransformationMode) : Image
+    def scaled_to_width(w : Int32, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_scaledToWidth_int_Qt__TransformationMode(self, w, mode))
     end
-    def scaled_to_height(h : Int32) : Image
-      Image.new(unwrap: Binding.bg_QImage_scaledToHeight_int(self, h))
-    end
-    def scaled_to_height(h : Int32, mode : TransformationMode) : Image
+    def scaled_to_height(h : Int32, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_scaledToHeight_int_Qt__TransformationMode(self, h, mode))
     end
-    def transformed(matrix : QMatrix*) : Image
-      Image.new(unwrap: Binding.bg_QImage_transformed_const_QMatrix_R(self, matrix))
-    end
-    def transformed(matrix : QMatrix*, mode : TransformationMode) : Image
+    def transformed(matrix : QMatrix*, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_transformed_const_QMatrix_R_Qt__TransformationMode(self, matrix, mode))
     end
     def self.true_matrix(unnamed_arg_0 : QMatrix*, w : Int32, h : Int32) : QMatrix*
       Binding.bg_QImage_trueMatrix_STATIC_const_QMatrix_R_int_int(unnamed_arg_0, w, h)
     end
-    def transformed(matrix : QTransform*) : Image
-      Image.new(unwrap: Binding.bg_QImage_transformed_const_QTransform_R(self, matrix))
-    end
-    def transformed(matrix : QTransform*, mode : TransformationMode) : Image
+    def transformed(matrix : QTransform*, mode : TransformationMode = TransformationMode::FastTransformation) : Image
       Image.new(unwrap: Binding.bg_QImage_transformed_const_QTransform_R_Qt__TransformationMode(self, matrix, mode))
     end
     def self.true_matrix(unnamed_arg_0 : QTransform*, w : Int32, h : Int32) : QTransform*
       Binding.bg_QImage_trueMatrix_STATIC_const_QTransform_R_int_int(unnamed_arg_0, w, h)
     end
-    def mirrored() : Image
-      Image.new(unwrap: Binding.bg_QImage_mirrored_(self))
-    end
-    def mirrored(horizontally : Bool) : Image
-      Image.new(unwrap: Binding.bg_QImage_mirrored_bool(self, horizontally))
-    end
-    def mirrored(horizontally : Bool, vertically : Bool) : Image
+    def mirrored(horizontally : Bool, vertically : Bool = true) : Image
       Image.new(unwrap: Binding.bg_QImage_mirrored_bool_bool(self, horizontally, vertically))
     end
     def rgb_swapped() : Image
       Image.new(unwrap: Binding.bg_QImage_rgbSwapped_(self))
     end
-    def invert_pixels() : Void
-      Binding.bg_QImage_invertPixels_(self)
-    end
-    def invert_pixels(unnamed_arg_0 : Image::InvertMode) : Void
+    def invert_pixels(unnamed_arg_0 : Image::InvertMode = Image::InvertMode::InvertRgb) : Void
       Binding.bg_QImage_invertPixels_QImage__InvertMode(self, unnamed_arg_0)
     end
     def load(device : QIODevice*, format : UInt8*) : Bool
       Binding.bg_QImage_load_QIODevice_X_const_char_X(self, device, format)
     end
-    def load(file_name : String) : Bool
-      Binding.bg_QImage_load_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
-    end
-    def load(file_name : String, format : UInt8*) : Bool
+    def load(file_name : String, format : UInt8*? = nil) : Bool
       Binding.bg_QImage_load_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
     end
-    def load_from_data(buf : UInt8*, len : Int32) : Bool
-      Binding.bg_QImage_loadFromData_const_uchar_X_int(self, buf, len)
-    end
-    def load_from_data(buf : UInt8*, len : Int32, format : UInt8*) : Bool
+    def load_from_data(buf : UInt8*, len : Int32, format : UInt8*? = nil) : Bool
       Binding.bg_QImage_loadFromData_const_uchar_X_int_const_char_X(self, buf, len, format)
     end
-    def load_from_data(data : QByteArray*) : Bool
-      Binding.bg_QImage_loadFromData_const_QByteArray_R(self, data)
-    end
-    def load_from_data(data : QByteArray*, aformat : UInt8*) : Bool
+    def load_from_data(data : QByteArray*, aformat : UInt8*? = nil) : Bool
       Binding.bg_QImage_loadFromData_const_QByteArray_R_const_char_X(self, data, aformat)
     end
-    def save(file_name : String) : Bool
-      Binding.bg_QImage_save_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
-    end
-    def save(file_name : String, format : UInt8*) : Bool
-      Binding.bg_QImage_save_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
-    end
-    def save(file_name : String, format : UInt8*, quality : Int32) : Bool
+    def save(file_name : String, format : UInt8*? = nil, quality : Int32 = -1) : Bool
       Binding.bg_QImage_save_const_QString_R_const_char_X_int(self, Qt::Converter::QString.wrap(file_name), format, quality)
     end
-    def save(device : QIODevice*) : Bool
-      Binding.bg_QImage_save_QIODevice_X(self, device)
-    end
-    def save(device : QIODevice*, format : UInt8*) : Bool
-      Binding.bg_QImage_save_QIODevice_X_const_char_X(self, device, format)
-    end
-    def save(device : QIODevice*, format : UInt8*, quality : Int32) : Bool
+    def save(device : QIODevice*, format : UInt8*? = nil, quality : Int32 = -1) : Bool
       Binding.bg_QImage_save_QIODevice_X_const_char_X_int(self, device, format, quality)
     end
-    def self.from_data(data : UInt8*, size : Int32) : Image
-      Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_uchar_X_int(data, size))
-    end
-    def self.from_data(data : UInt8*, size : Int32, format : UInt8*) : Image
+    def self.from_data(data : UInt8*, size : Int32, format : UInt8*? = nil) : Image
       Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_uchar_X_int_const_char_X(data, size, format))
     end
-    def self.from_data(data : QByteArray*) : Image
-      Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_QByteArray_R(data))
-    end
-    def self.from_data(data : QByteArray*, format : UInt8*) : Image
+    def self.from_data(data : QByteArray*, format : UInt8*? = nil) : Image
       Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_QByteArray_R_const_char_X(data, format))
     end
     def cache_key() : Int64
@@ -13491,17 +10870,12 @@ module Qt
     @unwrap = unwrap
     
     end
-    def initialize(file_name : String)
-      unwrap = Binding.bg_QPixmap_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
-    @unwrap = unwrap
-    
-    end
-    def initialize(file_name : String, format : UInt8*)
+    def initialize(file_name : String, format : UInt8*? = nil)
       unwrap = Binding.bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
     @unwrap = unwrap
     
     end
-    def initialize(file_name : String, format : UInt8*, flags : ImageConversionFlags)
+    def initialize(file_name : String, format : UInt8*?, flags : ImageConversionFlags)
       unwrap = Binding.bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(Qt::Converter::QString.wrap(file_name), format, flags)
     @unwrap = unwrap
     
@@ -13562,79 +10936,37 @@ module Qt
     def has_alpha_channel?() : Bool
       Binding.bg_QPixmap_hasAlphaChannel_(self)
     end
-    def create_heuristic_mask() : QBitmap*
-      Binding.bg_QPixmap_createHeuristicMask_(self)
-    end
-    def create_heuristic_mask(clip_tight : Bool) : QBitmap*
+    def create_heuristic_mask(clip_tight : Bool = true) : QBitmap*
       Binding.bg_QPixmap_createHeuristicMask_bool(self, clip_tight)
     end
-    def create_mask_from_color(mask_color : QColor*) : QBitmap*
-      Binding.bg_QPixmap_createMaskFromColor_const_QColor_R(self, mask_color)
-    end
-    def create_mask_from_color(mask_color : QColor*, mode : MaskMode) : QBitmap*
+    def create_mask_from_color(mask_color : QColor*, mode : MaskMode = MaskMode::MaskInColor) : QBitmap*
       Binding.bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(self, mask_color, mode)
     end
     def self.grab_widget(widget : Object, rect : QRect*) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget, rect))
     end
-    def self.grab_widget(widget : Object) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X(widget))
-    end
-    def self.grab_widget(widget : Object, x : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_int(widget, x))
-    end
-    def self.grab_widget(widget : Object, x : Int32, y : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_int_int(widget, x, y))
-    end
-    def self.grab_widget(widget : Object, x : Int32, y : Int32, w : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int(widget, x, y, w))
-    end
-    def self.grab_widget(widget : Object, x : Int32, y : Int32, w : Int32, h : Int32) : Pixmap
+    def self.grab_widget(widget : Object, x : Int32 = 0, y : Int32 = 0, w : Int32 = -1, h : Int32 = -1) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int_int(widget, x, y, w, h))
     end
-    def scaled(w : Int32, h : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_int_int(self, w, h))
-    end
-    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_int_int_Qt__AspectRatioMode(self, w, h, aspect_mode))
-    end
-    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : Pixmap
+    def scaled(w : Int32, h : Int32, aspect_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(self, w, h, aspect_mode, mode))
     end
-    def scaled(s : QSize*) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_const_QSize_R(self, s))
-    end
-    def scaled(s : QSize*, aspect_mode : AspectRatioMode) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_const_QSize_R_Qt__AspectRatioMode(self, s, aspect_mode))
-    end
-    def scaled(s : QSize*, aspect_mode : AspectRatioMode, mode : TransformationMode) : Pixmap
+    def scaled(s : QSize*, aspect_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_scaled_const_QSize_R_Qt__AspectRatioMode_Qt__TransformationMode(self, s, aspect_mode, mode))
     end
-    def scaled_to_width(w : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaledToWidth_int(self, w))
-    end
-    def scaled_to_width(w : Int32, mode : TransformationMode) : Pixmap
+    def scaled_to_width(w : Int32, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_scaledToWidth_int_Qt__TransformationMode(self, w, mode))
     end
-    def scaled_to_height(h : Int32) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_scaledToHeight_int(self, h))
-    end
-    def scaled_to_height(h : Int32, mode : TransformationMode) : Pixmap
+    def scaled_to_height(h : Int32, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_scaledToHeight_int_Qt__TransformationMode(self, h, mode))
     end
-    def transformed(unnamed_arg_0 : QMatrix*) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_transformed_const_QMatrix_R(self, unnamed_arg_0))
-    end
-    def transformed(unnamed_arg_0 : QMatrix*, mode : TransformationMode) : Pixmap
+    def transformed(unnamed_arg_0 : QMatrix*, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_transformed_const_QMatrix_R_Qt__TransformationMode(self, unnamed_arg_0, mode))
     end
     def self.true_matrix(m : QMatrix*, w : Int32, h : Int32) : QMatrix*
       Binding.bg_QPixmap_trueMatrix_STATIC_const_QMatrix_R_int_int(m, w, h)
     end
-    def transformed(unnamed_arg_0 : QTransform*) : Pixmap
-      Pixmap.new(unwrap: Binding.bg_QPixmap_transformed_const_QTransform_R(self, unnamed_arg_0))
-    end
-    def transformed(unnamed_arg_0 : QTransform*, mode : TransformationMode) : Pixmap
+    def transformed(unnamed_arg_0 : QTransform*, mode : TransformationMode = TransformationMode::FastTransformation) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_transformed_const_QTransform_R_Qt__TransformationMode(self, unnamed_arg_0, mode))
     end
     def self.true_matrix(m : QTransform*, w : Int32, h : Int32) : QTransform*
@@ -13655,49 +10987,28 @@ module Qt
     def self.from_image_reader(image_reader : QImageReader*, flags : ImageConversionFlags) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_fromImageReader_STATIC_QImageReader_X_Qt__ImageConversionFlags(image_reader, flags))
     end
-    def load(file_name : String) : Bool
-      Binding.bg_QPixmap_load_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
-    end
-    def load(file_name : String, format : UInt8*) : Bool
+    def load(file_name : String, format : UInt8*? = nil) : Bool
       Binding.bg_QPixmap_load_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
     end
-    def load(file_name : String, format : UInt8*, flags : ImageConversionFlags) : Bool
+    def load(file_name : String, format : UInt8*?, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_load_const_QString_R_const_char_X_Qt__ImageConversionFlags(self, Qt::Converter::QString.wrap(file_name), format, flags)
     end
-    def load_from_data(buf : UInt8*, len : UInt32) : Bool
-      Binding.bg_QPixmap_loadFromData_const_uchar_X_uint(self, buf, len)
-    end
-    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*) : Bool
+    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*? = nil) : Bool
       Binding.bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X(self, buf, len, format)
     end
-    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*, flags : ImageConversionFlags) : Bool
+    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*?, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X_Qt__ImageConversionFlags(self, buf, len, format, flags)
     end
-    def load_from_data(data : QByteArray*) : Bool
-      Binding.bg_QPixmap_loadFromData_const_QByteArray_R(self, data)
-    end
-    def load_from_data(data : QByteArray*, format : UInt8*) : Bool
+    def load_from_data(data : QByteArray*, format : UInt8*? = nil) : Bool
       Binding.bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X(self, data, format)
     end
-    def load_from_data(data : QByteArray*, format : UInt8*, flags : ImageConversionFlags) : Bool
+    def load_from_data(data : QByteArray*, format : UInt8*?, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X_Qt__ImageConversionFlags(self, data, format, flags)
     end
-    def save(file_name : String) : Bool
-      Binding.bg_QPixmap_save_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
-    end
-    def save(file_name : String, format : UInt8*) : Bool
-      Binding.bg_QPixmap_save_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
-    end
-    def save(file_name : String, format : UInt8*, quality : Int32) : Bool
+    def save(file_name : String, format : UInt8*? = nil, quality : Int32 = -1) : Bool
       Binding.bg_QPixmap_save_const_QString_R_const_char_X_int(self, Qt::Converter::QString.wrap(file_name), format, quality)
     end
-    def save(device : QIODevice*) : Bool
-      Binding.bg_QPixmap_save_QIODevice_X(self, device)
-    end
-    def save(device : QIODevice*, format : UInt8*) : Bool
-      Binding.bg_QPixmap_save_QIODevice_X_const_char_X(self, device, format)
-    end
-    def save(device : QIODevice*, format : UInt8*, quality : Int32) : Bool
+    def save(device : QIODevice*, format : UInt8*? = nil, quality : Int32 = -1) : Bool
       Binding.bg_QPixmap_save_QIODevice_X_const_char_X_int(self, device, format, quality)
     end
     def convert_from_image(img : Image) : Bool
@@ -13715,16 +11026,10 @@ module Qt
     def copy(rect : QRect*) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_copy_const_QRect_R(self, rect))
     end
-    def scroll(dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32) : Void
-      Binding.bg_QPixmap_scroll_int_int_int_int_int_int(self, dx, dy, x, y, width, height)
-    end
-    def scroll(dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32, exposed : QRegion*) : Void
+    def scroll(dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32, exposed : QRegion*? = nil) : Void
       Binding.bg_QPixmap_scroll_int_int_int_int_int_int_QRegion_X(self, dx, dy, x, y, width, height, exposed)
     end
-    def scroll(dx : Int32, dy : Int32, rect : QRect*) : Void
-      Binding.bg_QPixmap_scroll_int_int_const_QRect_R(self, dx, dy, rect)
-    end
-    def scroll(dx : Int32, dy : Int32, rect : QRect*, exposed : QRegion*) : Void
+    def scroll(dx : Int32, dy : Int32, rect : QRect*, exposed : QRegion*? = nil) : Void
       Binding.bg_QPixmap_scroll_int_int_const_QRect_R_QRegion_X(self, dx, dy, rect, exposed)
     end
     def cache_key() : Int64
@@ -13774,49 +11079,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QEventLoop_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QEventLoop_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(EventLoop)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQEventLoop.new(
-      bg_QEventLoop_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QEventLoop_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QEventLoop_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QEventLoop_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Object)
+    def initialize(parent : Object? = nil)
       unwrap = Binding.bg_QEventLoop_CONSTRUCT_QObject_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -13855,10 +11124,7 @@ module Qt
     def exec(flags : EventLoop::ProcessEventsFlags) : Int32
       Binding.bg_QEventLoop_exec_QEventLoop__ProcessEventsFlags(self, flags)
     end
-    def exit() : Void
-      Binding.bg_QEventLoop_exit_(self)
-    end
-    def exit(return_code : Int32) : Void
+    def exit(return_code : Int32 = 0) : Void
       Binding.bg_QEventLoop_exit_int(self, return_code)
     end
     def running?() : Bool
@@ -13893,90 +11159,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QTabWidget_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QTabWidget_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(TabWidget)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint height_for_width has_height_for_width? tab_inserted tab_removed show_event resize_event key_press_event paint_event change_event event dev_type visible= paint_engine mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event move_event close_event context_menu_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQTabWidget.new(
-      bg_QTabWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QTabWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QTabWidget_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QTabWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(width : Int32){ self.height_for_width(width) } {% else %} nil {% end %}),
-      bg_QTabWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QTabWidget_tabInserted_int: BindgenHelper.wrap_proc({% if forwarded.includes?("tab_inserted") %} ->(index : Int32){ self.tab_inserted(index) } {% else %} nil {% end %}),
-      bg_QTabWidget_tabRemoved_int: BindgenHelper.wrap_proc({% if forwarded.includes?("tab_removed") %} ->(index : Int32){ self.tab_removed(index) } {% else %} nil {% end %}),
-      bg_QTabWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(unnamed_arg_0 : QShowEvent*){ self.show_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTabWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(event : QContextMenuEvent*){ self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QTabWidget_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QTabWidget_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -14137,16 +11326,10 @@ module Qt
     def has_height_for_width?() : Bool
       Binding.bg_QTabWidget_hasHeightForWidth_(self)
     end
-    def corner_widget=(w : Widget) : Void
-      Binding.bg_QTabWidget_setCornerWidget_QWidget_X(self, w)
-    end
-    def set_corner_widget(w : Widget, corner : Corner) : Void
+    def set_corner_widget(w : Widget, corner : Corner = Corner::TopRightCorner) : Void
       Binding.bg_QTabWidget_setCornerWidget_QWidget_X_Qt__Corner(self, w, corner)
     end
-    def corner_widget() : Widget
-      Widget.new(unwrap: Binding.bg_QTabWidget_cornerWidget_(self))
-    end
-    def corner_widget(corner : Corner) : Widget
+    def corner_widget(corner : Corner = Corner::TopRightCorner) : Widget
       Widget.new(unwrap: Binding.bg_QTabWidget_cornerWidget_Qt__Corner(self, corner))
     end
     def elide_mode() : TextElideMode
@@ -14392,22 +11575,10 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     def initialize(parent : Widget)
@@ -14713,68 +11884,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QBoxLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize(unnamed_arg_0 : BoxLayout::Direction)
-      unwrap = Binding.bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction(unnamed_arg_0)
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(BoxLayout)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast add_item size_hint minimum_size maximum_size has_height_for_width? height_for_width minimum_height_for_width expanding_directions invalidate item_at take_at count geometry= geometry index_of empty? layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify widget spacer_item ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQBoxLayout.new(
-      bg_QBoxLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QBoxLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QBoxLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QBoxLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QBoxLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
-      bg_QBoxLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
-      bg_QBoxLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QBoxLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QBoxLayout_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QBoxLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ Orientations.new(unwrap: self.expanding_directions()) } {% else %} nil {% end %}),
-      bg_QBoxLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
-      bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
-      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
-      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
-      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()) } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
-    )
-    Binding.bg_QBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(unnamed_arg_0 : BoxLayout::Direction, parent : Widget)
+    def initialize(unnamed_arg_0 : BoxLayout::Direction, parent : Widget? = nil)
       unwrap = Binding.bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0, parent)
     @unwrap = unwrap
     {% begin %}
@@ -14826,28 +11942,19 @@ module Qt
     def add_spacing(size : Int32) : Void
       Binding.bg_QBoxLayout_addSpacing_int(self, size)
     end
-    def add_stretch() : Void
-      Binding.bg_QBoxLayout_addStretch_(self)
-    end
-    def add_stretch(stretch : Int32) : Void
+    def add_stretch(stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_addStretch_int(self, stretch)
     end
     def add_spacer_item(spacer_item : QSpacerItem*) : Void
       Binding.bg_QBoxLayout_addSpacerItem_QSpacerItem_X(self, spacer_item)
     end
-    def add_widget(unnamed_arg_0 : Widget) : Void
-      Binding.bg_QBoxLayout_addWidget_QWidget_X(self, unnamed_arg_0)
-    end
-    def add_widget(unnamed_arg_0 : Widget, stretch : Int32) : Void
+    def add_widget(unnamed_arg_0 : Widget, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_addWidget_QWidget_X_int(self, unnamed_arg_0, stretch)
     end
     def add_widget(unnamed_arg_0 : Widget, stretch : Int32, alignment : Alignment) : Void
       Binding.bg_QBoxLayout_addWidget_QWidget_X_int_Qt__Alignment(self, unnamed_arg_0, stretch, alignment)
     end
-    def add_layout(layout : Layout) : Void
-      Binding.bg_QBoxLayout_addLayout_QLayout_X(self, layout)
-    end
-    def add_layout(layout : Layout, stretch : Int32) : Void
+    def add_layout(layout : Layout, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_addLayout_QLayout_X_int(self, layout, stretch)
     end
     def add_strut(unnamed_arg_0 : Int32) : Void
@@ -14859,28 +11966,19 @@ module Qt
     def insert_spacing(index : Int32, size : Int32) : Void
       Binding.bg_QBoxLayout_insertSpacing_int_int(self, index, size)
     end
-    def insert_stretch(index : Int32) : Void
-      Binding.bg_QBoxLayout_insertStretch_int(self, index)
-    end
-    def insert_stretch(index : Int32, stretch : Int32) : Void
+    def insert_stretch(index : Int32, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_insertStretch_int_int(self, index, stretch)
     end
     def insert_spacer_item(index : Int32, spacer_item : QSpacerItem*) : Void
       Binding.bg_QBoxLayout_insertSpacerItem_int_QSpacerItem_X(self, index, spacer_item)
     end
-    def insert_widget(index : Int32, widget : Widget) : Void
-      Binding.bg_QBoxLayout_insertWidget_int_QWidget_X(self, index, widget)
-    end
-    def insert_widget(index : Int32, widget : Widget, stretch : Int32) : Void
+    def insert_widget(index : Int32, widget : Widget, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_insertWidget_int_QWidget_X_int(self, index, widget, stretch)
     end
     def insert_widget(index : Int32, widget : Widget, stretch : Int32, alignment : Alignment) : Void
       Binding.bg_QBoxLayout_insertWidget_int_QWidget_X_int_Qt__Alignment(self, index, widget, stretch, alignment)
     end
-    def insert_layout(index : Int32, layout : Layout) : Void
-      Binding.bg_QBoxLayout_insertLayout_int_QLayout_X(self, index, layout)
-    end
-    def insert_layout(index : Int32, layout : Layout, stretch : Int32) : Void
+    def insert_layout(index : Int32, layout : Layout, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_insertLayout_int_QLayout_X_int(self, index, layout, stretch)
     end
     def insert_item(index : Int32, unnamed_arg_1 : LayoutItem) : Void
@@ -14950,22 +12048,10 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QHBoxLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     def initialize()
@@ -15064,22 +12150,10 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QVBoxLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     def initialize()
@@ -15263,32 +12337,12 @@ module Qt
     @unwrap = unwrap
     
     end
-    def initialize(key : String)
-      unwrap = Binding.bg_QKeySequence_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(key))
-    @unwrap = unwrap
-    
-    end
-    def initialize(key : String, format : KeySequence::SequenceFormat)
+    def initialize(key : String, format : KeySequence::SequenceFormat = KeySequence::SequenceFormat::NativeText)
       unwrap = Binding.bg_QKeySequence_CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(Qt::Converter::QString.wrap(key), format)
     @unwrap = unwrap
     
     end
-    def initialize(k1 : Int32)
-      unwrap = Binding.bg_QKeySequence_CONSTRUCT_int(k1)
-    @unwrap = unwrap
-    
-    end
-    def initialize(k1 : Int32, k2 : Int32)
-      unwrap = Binding.bg_QKeySequence_CONSTRUCT_int_int(k1, k2)
-    @unwrap = unwrap
-    
-    end
-    def initialize(k1 : Int32, k2 : Int32, k3 : Int32)
-      unwrap = Binding.bg_QKeySequence_CONSTRUCT_int_int_int(k1, k2, k3)
-    @unwrap = unwrap
-    
-    end
-    def initialize(k1 : Int32, k2 : Int32, k3 : Int32, k4 : Int32)
+    def initialize(k1 : Int32, k2 : Int32 = 0, k3 : Int32 = 0, k4 : Int32 = 0)
       unwrap = Binding.bg_QKeySequence_CONSTRUCT_int_int_int_int(k1, k2, k3, k4)
     @unwrap = unwrap
     
@@ -15304,16 +12358,10 @@ module Qt
     def empty?() : Bool
       Binding.bg_QKeySequence_isEmpty_(self)
     end
-    def to_string() : String
-      Qt::Converter::QString.unwrap(Binding.bg_QKeySequence_toString_(self))
-    end
-    def to_string(format : KeySequence::SequenceFormat) : String
+    def to_string(format : KeySequence::SequenceFormat = KeySequence::SequenceFormat::PortableText) : String
       Qt::Converter::QString.unwrap(Binding.bg_QKeySequence_toString_QKeySequence__SequenceFormat(self, format))
     end
-    def self.from_string(str : String) : KeySequence
-      KeySequence.new(unwrap: Binding.bg_QKeySequence_fromString_STATIC_const_QString_R(Qt::Converter::QString.wrap(str)))
-    end
-    def self.from_string(str : String, format : KeySequence::SequenceFormat) : KeySequence
+    def self.from_string(str : String, format : KeySequence::SequenceFormat = KeySequence::SequenceFormat::PortableText) : KeySequence
       KeySequence.new(unwrap: Binding.bg_QKeySequence_fromString_STATIC_const_QString_R_QKeySequence__SequenceFormat(Qt::Converter::QString.wrap(str), format))
     end
     def matches(seq : KeySequence) : KeySequence::SequenceMatch
@@ -15348,88 +12396,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QLineEdit_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QLineEdit_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(LineEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLineEdit.new(
-      bg_QLineEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLineEdit_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLineEdit_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QLineEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(e : QDragMoveEvent*){ self.drag_move_event(e) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(e : QDragLeaveEvent*){ self.drag_leave_event(e) } {% else %} nil {% end %}),
-      bg_QLineEdit_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLineEdit_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QLineEdit_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -15492,70 +12465,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(unnamed_arg_0 : String)
-      unwrap = Binding.bg_QLineEdit_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(LineEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast size_hint minimum_size_hint mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event key_press_event focus_in_event focus_out_event paint_event drag_enter_event drag_move_event drag_leave_event drop_event change_event context_menu_event input_method_event event dev_type visible= height_for_width has_height_for_width? paint_engine wheel_event key_release_event enter_event leave_event move_event resize_event close_event tablet_event action_event show_event hide_event native_event metric init_painter redirected shared_painter focus_next_prev_child event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQLineEdit.new(
-      bg_QLineEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QLineEdit_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QLineEdit_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QLineEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_move_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(unnamed_arg_0 : QMouseEvent*){ self.mouse_double_click_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_in_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(unnamed_arg_0 : QFocusEvent*){ self.focus_out_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(unnamed_arg_0 : QPaintEvent*){ self.paint_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(unnamed_arg_0 : QDragEnterEvent*){ self.drag_enter_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(e : QDragMoveEvent*){ self.drag_move_event(e) } {% else %} nil {% end %}),
-      bg_QLineEdit_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(e : QDragLeaveEvent*){ self.drag_leave_event(e) } {% else %} nil {% end %}),
-      bg_QLineEdit_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(unnamed_arg_0 : QDropEvent*){ self.drop_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : QEvent*){ self.change_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLineEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(unnamed_arg_0 : QEvent*){ self.event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(event : QResizeEvent*){ self.resize_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : QShowEvent*){ self.show_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QLineEdit_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(unnamed_arg_0 : String, parent : Widget)
+    def initialize(unnamed_arg_0 : String, parent : Widget? = nil)
       unwrap = Binding.bg_QLineEdit_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(unnamed_arg_0), parent)
     @unwrap = unwrap
     {% begin %}
@@ -15693,16 +12603,10 @@ module Qt
     def alignment() : Alignment
       Alignment.new(unwrap: Binding.bg_QLineEdit_alignment_(self))
     end
-    def cursor_forward(mark : Bool) : Void
-      Binding.bg_QLineEdit_cursorForward_bool(self, mark)
-    end
-    def cursor_forward(mark : Bool, steps : Int32) : Void
+    def cursor_forward(mark : Bool, steps : Int32 = 1) : Void
       Binding.bg_QLineEdit_cursorForward_bool_int(self, mark, steps)
     end
-    def cursor_backward(mark : Bool) : Void
-      Binding.bg_QLineEdit_cursorBackward_bool(self, mark)
-    end
-    def cursor_backward(mark : Bool, steps : Int32) : Void
+    def cursor_backward(mark : Bool, steps : Int32 = 1) : Void
       Binding.bg_QLineEdit_cursorBackward_bool_int(self, mark, steps)
     end
     def cursor_word_forward(mark : Bool) : Void
@@ -15936,96 +12840,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QTextEdit_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QTextEdit_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(TextEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter redirected shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQTextEdit.new(
-      bg_QTextEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QTextEdit_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(e : QResizeEvent*){ self.resize_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(e : QMouseEvent*){ self.mouse_double_click_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QTextEdit_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(e : QContextMenuEvent*){ self.context_menu_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(e : QDragEnterEvent*){ self.drag_enter_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(e : QDragLeaveEvent*){ self.drag_leave_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(e : QDragMoveEvent*){ self.drag_move_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(e : QDropEvent*){ self.drop_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(unnamed_arg_0 : QShowEvent*){ self.show_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(e : QWheelEvent*){ self.wheel_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_createMimeDataFromSelection_: BindgenHelper.wrap_proc({% if forwarded.includes?("create_mime_data_from_selection") %} ->(){ self.create_mime_data_from_selection() } {% else %} nil {% end %}),
-      bg_QTextEdit_canInsertFromMimeData_const_QMimeData_X: BindgenHelper.wrap_proc({% if forwarded.includes?("can_insert_from_mime_data") %} ->(source : QMimeData*){ self.can_insert_from_mime_data(source) } {% else %} nil {% end %}),
-      bg_QTextEdit_insertFromMimeData_const_QMimeData_X: BindgenHelper.wrap_proc({% if forwarded.includes?("insert_from_mime_data") %} ->(source : QMimeData*){ self.insert_from_mime_data(source) } {% else %} nil {% end %}),
-      bg_QTextEdit_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QTextEdit_doSetTextCursor_const_QTextCursor_R: BindgenHelper.wrap_proc({% if forwarded.includes?("do_set_text_cursor") %} ->(cursor : QTextCursor*){ self.do_set_text_cursor(TextCursor.new(unwrap: cursor)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QTextEdit_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QTextEdit_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -16096,78 +12917,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QTextEdit_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(TextEdit)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast event timer_event key_press_event key_release_event resize_event paint_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event focus_next_prev_child context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event show_event change_event wheel_event create_mime_data_from_selection can_insert_from_mime_data insert_from_mime_data input_method_event scroll_contents_by do_set_text_cursor minimum_size_hint size_hint setup_viewport event_filter viewport_event viewport_size_hint dev_type visible= height_for_width has_height_for_width? paint_engine enter_event leave_event move_event close_event tablet_event action_event hide_event native_event metric init_painter redirected shared_painter child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQTextEdit.new(
-      bg_QTextEdit_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QTextEdit_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(e : QEvent*){ self.event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(e : QTimerEvent*){ self.timer_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(e : QKeyEvent*){ self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(e : QKeyEvent*){ self.key_release_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(e : QResizeEvent*){ self.resize_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(e : QPaintEvent*){ self.paint_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(e : QMouseEvent*){ self.mouse_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(e : QMouseEvent*){ self.mouse_move_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(e : QMouseEvent*){ self.mouse_release_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(e : QMouseEvent*){ self.mouse_double_click_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QTextEdit_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(e : QContextMenuEvent*){ self.context_menu_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(e : QDragEnterEvent*){ self.drag_enter_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(e : QDragLeaveEvent*){ self.drag_leave_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(e : QDragMoveEvent*){ self.drag_move_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(e : QDropEvent*){ self.drop_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(e : QFocusEvent*){ self.focus_in_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(e : QFocusEvent*){ self.focus_out_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(unnamed_arg_0 : QShowEvent*){ self.show_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(e : QWheelEvent*){ self.wheel_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_createMimeDataFromSelection_: BindgenHelper.wrap_proc({% if forwarded.includes?("create_mime_data_from_selection") %} ->(){ self.create_mime_data_from_selection() } {% else %} nil {% end %}),
-      bg_QTextEdit_canInsertFromMimeData_const_QMimeData_X: BindgenHelper.wrap_proc({% if forwarded.includes?("can_insert_from_mime_data") %} ->(source : QMimeData*){ self.can_insert_from_mime_data(source) } {% else %} nil {% end %}),
-      bg_QTextEdit_insertFromMimeData_const_QMimeData_X: BindgenHelper.wrap_proc({% if forwarded.includes?("insert_from_mime_data") %} ->(source : QMimeData*){ self.insert_from_mime_data(source) } {% else %} nil {% end %}),
-      bg_QTextEdit_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextEdit_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
-      bg_QTextEdit_doSetTextCursor_const_QTextCursor_R: BindgenHelper.wrap_proc({% if forwarded.includes?("do_set_text_cursor") %} ->(cursor : QTextCursor*){ self.do_set_text_cursor(TextCursor.new(unwrap: cursor)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_setupViewport_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("setup_viewport") %} ->(viewport : QWidget*){ self.setup_viewport(Widget.new(unwrap: viewport)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} ->(unnamed_arg_0 : QEvent*){ self.viewport_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : QCloseEvent*){ self.close_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QTextEdit_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Widget)
+    def initialize(text : String, parent : Widget? = nil)
       unwrap = Binding.bg_QTextEdit_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -16406,10 +13156,7 @@ module Qt
     def accept_rich_text=(accept : Bool) : Void
       Binding.bg_QTextEdit_setAcceptRichText_bool(self, accept)
     end
-    def move_cursor(operation : TextCursorMoveOperation) : Void
-      Binding.bg_QTextEdit_moveCursor_QTextCursor__MoveOperation(self, operation)
-    end
-    def move_cursor(operation : TextCursorMoveOperation, mode : TextCursorMoveMode) : Void
+    def move_cursor(operation : TextCursorMoveOperation, mode : TextCursorMoveMode = TextCursorMoveMode::MoveAnchor) : Void
       Binding.bg_QTextEdit_moveCursor_QTextCursor__MoveOperation_QTextCursor__MoveMode(self, operation, mode)
     end
     def can_paste() : Bool
@@ -16484,16 +13231,10 @@ module Qt
     def scroll_to_anchor(name : String) : Void
       Binding.bg_QTextEdit_scrollToAnchor_const_QString_R(self, Qt::Converter::QString.wrap(name))
     end
-    def zoom_in() : Void
-      Binding.bg_QTextEdit_zoomIn_(self)
-    end
-    def zoom_in(range : Int32) : Void
+    def zoom_in(range : Int32 = 1) : Void
       Binding.bg_QTextEdit_zoomIn_int(self, range)
     end
-    def zoom_out() : Void
-      Binding.bg_QTextEdit_zoomOut_(self)
-    end
-    def zoom_out(range : Int32) : Void
+    def zoom_out(range : Int32 = 1) : Void
       Binding.bg_QTextEdit_zoomOut_int(self, range)
     end
     def text_changed() : Void
@@ -16746,22 +13487,10 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QFileDialog_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     def initialize(parent : Widget, f : WindowFlags)
@@ -16832,75 +13561,7 @@ module Qt
     {% end %}
     
     end
-    def initialize()
-      unwrap = Binding.bg_QFileDialog_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(FileDialog)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast visible= done accept change_event size_hint minimum_size_hint open exec reject key_press_event close_event show_event resize_event context_menu_event event_filter dev_type height_for_width has_height_for_width? paint_engine event mouse_press_event mouse_release_event mouse_double_click_event mouse_move_event wheel_event key_release_event focus_in_event focus_out_event enter_event leave_event paint_event move_event tablet_event action_event drag_enter_event drag_move_event drag_leave_event drop_event hide_event native_event metric init_painter redirected shared_painter input_method_event focus_next_prev_child timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQFileDialog.new(
-      bg_QFileDialog_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QFileDialog_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QFileDialog_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} ->(visible : Bool){ self.visible=(visible) } {% else %} nil {% end %}),
-      bg_QFileDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} ->(result : Int32){ self.done(result) } {% else %} nil {% end %}),
-      bg_QFileDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} ->(){ self.accept() } {% else %} nil {% end %}),
-      bg_QFileDialog_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(e : QEvent*){ self.change_event(e) } {% else %} nil {% end %}),
-      bg_QDialog_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
-      bg_QDialog_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
-      bg_QDialog_open_: BindgenHelper.wrap_proc({% if forwarded.includes?("open") %} ->(){ self.open() } {% else %} nil {% end %}),
-      bg_QDialog_exec_: BindgenHelper.wrap_proc({% if forwarded.includes?("exec") %} ->(){ self.exec() } {% else %} nil {% end %}),
-      bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} ->(){ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} ->(unnamed_arg_0 : QKeyEvent*){ self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(unnamed_arg_0 : QCloseEvent*){ self.close_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(unnamed_arg_0 : QShowEvent*){ self.show_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} ->(unnamed_arg_0 : QResizeEvent*){ self.resize_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} ->(unnamed_arg_0 : QContextMenuEvent*){ self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QDialog_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), unnamed_arg_1) } {% else %} nil {% end %}),
-      bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
-      bg_QWidget_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
-      bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
-      bg_QWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} ->(event : QMouseEvent*){ self.mouse_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} ->(event : QMouseEvent*){ self.mouse_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} ->(event : QMouseEvent*){ self.mouse_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} ->(event : QKeyEvent*){ self.key_release_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} ->(event : QFocusEvent*){ self.focus_in_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} ->(event : QFocusEvent*){ self.focus_out_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} ->(event : QEvent*){ self.enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} ->(event : QEvent*){ self.leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} ->(event : QPaintEvent*){ self.paint_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} ->(event : QMoveEvent*){ self.move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_tabletEvent_QTabletEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("tablet_event") %} ->(event : QTabletEvent*){ self.tablet_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_actionEvent_QActionEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("action_event") %} ->(event : QActionEvent*){ self.action_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragEnterEvent_QDragEnterEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} ->(event : QDragEnterEvent*){ self.drag_enter_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} ->(event : QDragMoveEvent*){ self.drag_move_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} ->(event : QDragLeaveEvent*){ self.drag_leave_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} ->(event : QDropEvent*){ self.drop_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : QHideEvent*){ self.hide_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
-      bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(PaintDeviceMetric.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_redirected_QPoint_X: BindgenHelper.wrap_proc({% if forwarded.includes?("redirected") %} ->(offset : QPoint*){ self.redirected(offset) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
-      bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : QInputMethodEvent*){ self.input_method_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QFileDialog_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Widget)
+    def initialize(parent : Widget? = nil)
       unwrap = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -16968,7 +13629,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, caption : String)
+    def initialize(parent : Widget?, caption : String)
       unwrap = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption))
     @unwrap = unwrap
     {% begin %}
@@ -17036,7 +13697,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, caption : String, directory : String)
+    def initialize(parent : Widget?, caption : String, directory : String)
       unwrap = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(directory))
     @unwrap = unwrap
     {% begin %}
@@ -17104,7 +13765,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(parent : Widget, caption : String, directory : String, filter : String)
+    def initialize(parent : Widget?, caption : String, directory : String, filter : String)
       unwrap = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(directory), Qt::Converter::QString.wrap(filter))
     @unwrap = unwrap
     {% begin %}
@@ -17328,10 +13989,7 @@ module Qt
     def proxy_model() : QAbstractProxyModel*
       Binding.bg_QFileDialog_proxyModel_(self)
     end
-    def option=(option : FileDialog::Option) : Void
-      Binding.bg_QFileDialog_setOption_QFileDialog__Option(self, option)
-    end
-    def set_option(option : FileDialog::Option, on : Bool) : Void
+    def set_option(option : FileDialog::Option, on : Bool = true) : Void
       Binding.bg_QFileDialog_setOption_QFileDialog__Option_bool(self, option, on)
     end
     def test_option(option : FileDialog::Option) : Bool
@@ -17403,127 +14061,103 @@ module Qt
     def on_filter_selected(&block : Proc(String, Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QFileDialog_filterSelected_CONNECT_CrystalProc_void__const_CrystalString_(self, BindgenHelper.wrap_proc(->(filter : CrystalString){ block.call(Qt::Converter::QString.unwrap(filter)) })))
     end
-    def self.open_file_name() : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getOpenFileName_STATIC_())
-    end
-    def self.get_open_file_name(parent : Widget) : String
+    def self.get_open_file_name(parent : Widget? = nil) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getOpenFileName_STATIC_QWidget_X(parent))
     end
-    def self.get_open_file_name(parent : Widget, caption : String) : String
+    def self.get_open_file_name(parent : Widget?, caption : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption)))
     end
-    def self.get_open_file_name(parent : Widget, caption : String, dir : String) : String
+    def self.get_open_file_name(parent : Widget?, caption : String, dir : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir)))
     end
-    def self.get_open_file_name(parent : Widget, caption : String, dir : String, filter : String) : String
+    def self.get_open_file_name(parent : Widget?, caption : String, dir : String, filter : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getOpenFileName_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir), Qt::Converter::QString.wrap(filter)))
     end
-    def self.open_file_url() : QUrl*
-      Binding.bg_QFileDialog_getOpenFileUrl_STATIC_()
-    end
-    def self.get_open_file_url(parent : Widget) : QUrl*
+    def self.get_open_file_url(parent : Widget? = nil) : QUrl*
       Binding.bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X(parent)
     end
-    def self.get_open_file_url(parent : Widget, caption : String) : QUrl*
+    def self.get_open_file_url(parent : Widget?, caption : String) : QUrl*
       Binding.bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption))
     end
-    def self.get_open_file_url(parent : Widget, caption : String, dir : QUrl*) : QUrl*
+    def self.get_open_file_url(parent : Widget?, caption : String, dir : QUrl*) : QUrl*
       Binding.bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent, Qt::Converter::QString.wrap(caption), dir)
     end
-    def self.get_open_file_url(parent : Widget, caption : String, dir : QUrl*, filter : String) : QUrl*
+    def self.get_open_file_url(parent : Widget?, caption : String, dir : QUrl*, filter : String) : QUrl*
       Binding.bg_QFileDialog_getOpenFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), dir, Qt::Converter::QString.wrap(filter))
     end
-    def self.save_file_name() : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getSaveFileName_STATIC_())
-    end
-    def self.get_save_file_name(parent : Widget) : String
+    def self.get_save_file_name(parent : Widget? = nil) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getSaveFileName_STATIC_QWidget_X(parent))
     end
-    def self.get_save_file_name(parent : Widget, caption : String) : String
+    def self.get_save_file_name(parent : Widget?, caption : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption)))
     end
-    def self.get_save_file_name(parent : Widget, caption : String, dir : String) : String
+    def self.get_save_file_name(parent : Widget?, caption : String, dir : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir)))
     end
-    def self.get_save_file_name(parent : Widget, caption : String, dir : String, filter : String) : String
+    def self.get_save_file_name(parent : Widget?, caption : String, dir : String, filter : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getSaveFileName_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir), Qt::Converter::QString.wrap(filter)))
     end
-    def self.save_file_url() : QUrl*
-      Binding.bg_QFileDialog_getSaveFileUrl_STATIC_()
-    end
-    def self.get_save_file_url(parent : Widget) : QUrl*
+    def self.get_save_file_url(parent : Widget? = nil) : QUrl*
       Binding.bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X(parent)
     end
-    def self.get_save_file_url(parent : Widget, caption : String) : QUrl*
+    def self.get_save_file_url(parent : Widget?, caption : String) : QUrl*
       Binding.bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption))
     end
-    def self.get_save_file_url(parent : Widget, caption : String, dir : QUrl*) : QUrl*
+    def self.get_save_file_url(parent : Widget?, caption : String, dir : QUrl*) : QUrl*
       Binding.bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent, Qt::Converter::QString.wrap(caption), dir)
     end
-    def self.get_save_file_url(parent : Widget, caption : String, dir : QUrl*, filter : String) : QUrl*
+    def self.get_save_file_url(parent : Widget?, caption : String, dir : QUrl*, filter : String) : QUrl*
       Binding.bg_QFileDialog_getSaveFileUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), dir, Qt::Converter::QString.wrap(filter))
     end
-    def self.existing_directory() : String
-      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getExistingDirectory_STATIC_())
-    end
-    def self.get_existing_directory(parent : Widget) : String
+    def self.get_existing_directory(parent : Widget? = nil) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X(parent))
     end
-    def self.get_existing_directory(parent : Widget, caption : String) : String
+    def self.get_existing_directory(parent : Widget?, caption : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption)))
     end
-    def self.get_existing_directory(parent : Widget, caption : String, dir : String) : String
+    def self.get_existing_directory(parent : Widget?, caption : String, dir : String) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir)))
     end
-    def self.get_existing_directory(parent : Widget, caption : String, dir : String, options : FileDialog::Options) : String
+    def self.get_existing_directory(parent : Widget?, caption : String, dir : String, options : FileDialog::Options) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_getExistingDirectory_STATIC_QWidget_X_const_QString_R_const_QString_R_QFileDialog__Options(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir), options))
     end
-    def self.existing_directory_url() : QUrl*
-      Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_()
-    end
-    def self.get_existing_directory_url(parent : Widget) : QUrl*
+    def self.get_existing_directory_url(parent : Widget? = nil) : QUrl*
       Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X(parent)
     end
-    def self.get_existing_directory_url(parent : Widget, caption : String) : QUrl*
+    def self.get_existing_directory_url(parent : Widget?, caption : String) : QUrl*
       Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption))
     end
-    def self.get_existing_directory_url(parent : Widget, caption : String, dir : QUrl*) : QUrl*
+    def self.get_existing_directory_url(parent : Widget?, caption : String, dir : QUrl*) : QUrl*
       Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent, Qt::Converter::QString.wrap(caption), dir)
     end
-    def self.get_existing_directory_url(parent : Widget, caption : String, dir : QUrl*, options : FileDialog::Options) : QUrl*
+    def self.get_existing_directory_url(parent : Widget?, caption : String, dir : QUrl*, options : FileDialog::Options) : QUrl*
       Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options(parent, Qt::Converter::QString.wrap(caption), dir, options)
     end
-    def self.get_existing_directory_url(parent : Widget, caption : String, dir : QUrl*, options : FileDialog::Options, supported_schemes : Enumerable(String)) : QUrl*
+    def self.get_existing_directory_url(parent : Widget?, caption : String, dir : QUrl*, options : FileDialog::Options, supported_schemes : Enumerable(String)) : QUrl*
       Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent, Qt::Converter::QString.wrap(caption), dir, options, BindgenHelper.wrap_container(QList_QString, supported_schemes))
     end
-    def self.open_file_names() : Enumerable(String)
-      QList_QString.new(unwrap: Binding.bg_QFileDialog_getOpenFileNames_STATIC_())
-    end
-    def self.get_open_file_names(parent : Widget) : Enumerable(String)
+    def self.get_open_file_names(parent : Widget? = nil) : Enumerable(String)
       QList_QString.new(unwrap: Binding.bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X(parent))
     end
-    def self.get_open_file_names(parent : Widget, caption : String) : Enumerable(String)
+    def self.get_open_file_names(parent : Widget?, caption : String) : Enumerable(String)
       QList_QString.new(unwrap: Binding.bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption)))
     end
-    def self.get_open_file_names(parent : Widget, caption : String, dir : String) : Enumerable(String)
+    def self.get_open_file_names(parent : Widget?, caption : String, dir : String) : Enumerable(String)
       QList_QString.new(unwrap: Binding.bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir)))
     end
-    def self.get_open_file_names(parent : Widget, caption : String, dir : String, filter : String) : Enumerable(String)
+    def self.get_open_file_names(parent : Widget?, caption : String, dir : String, filter : String) : Enumerable(String)
       QList_QString.new(unwrap: Binding.bg_QFileDialog_getOpenFileNames_STATIC_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(dir), Qt::Converter::QString.wrap(filter)))
     end
-    def self.open_file_urls() : Enumerable(QUrl)
-      QList_QUrl.new(unwrap: Binding.bg_QFileDialog_getOpenFileUrls_STATIC_())
-    end
-    def self.get_open_file_urls(parent : Widget) : Enumerable(QUrl)
+    def self.get_open_file_urls(parent : Widget? = nil) : Enumerable(QUrl)
       QList_QUrl.new(unwrap: Binding.bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X(parent))
     end
-    def self.get_open_file_urls(parent : Widget, caption : String) : Enumerable(QUrl)
+    def self.get_open_file_urls(parent : Widget?, caption : String) : Enumerable(QUrl)
       QList_QUrl.new(unwrap: Binding.bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R(parent, Qt::Converter::QString.wrap(caption)))
     end
-    def self.get_open_file_urls(parent : Widget, caption : String, dir : QUrl*) : Enumerable(QUrl)
+    def self.get_open_file_urls(parent : Widget?, caption : String, dir : QUrl*) : Enumerable(QUrl)
       QList_QUrl.new(unwrap: Binding.bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent, Qt::Converter::QString.wrap(caption), dir))
     end
-    def self.get_open_file_urls(parent : Widget, caption : String, dir : QUrl*, filter : String) : Enumerable(QUrl)
+    def self.get_open_file_urls(parent : Widget?, caption : String, dir : QUrl*, filter : String) : Enumerable(QUrl)
       QList_QUrl.new(unwrap: Binding.bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), dir, Qt::Converter::QString.wrap(filter)))
     end
     protected def initialize(args : QFileDialogArgs*)
@@ -17661,51 +14295,13 @@ module Qt
     def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
       Binding.bg_QTextDocument_qt_metacast_const_char_X(self, unnamed_arg_0)
     end
-    def self.tr(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X(s))
-    end
-    def self.tr(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def self.tr_utf8(s : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X(s))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X(s, c))
-    end
-    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32) : String
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
-    def initialize()
-      unwrap = Binding.bg_QTextDocument_CONSTRUCT_()
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(TextDocument)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast clear create_object event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQTextDocument.new(
-      bg_QTextDocument_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QTextDocument_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextDocument_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} ->(){ self.clear() } {% else %} nil {% end %}),
-      bg_QTextDocument_createObject_const_QTextFormat_R: BindgenHelper.wrap_proc({% if forwarded.includes?("create_object") %} ->(f : QTextFormat*){ self.create_object(f) } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QTextDocument_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(parent : Object)
+    def initialize(parent : Object? = nil)
       unwrap = Binding.bg_QTextDocument_CONSTRUCT_QObject_X(parent)
     @unwrap = unwrap
     {% begin %}
@@ -17731,33 +14327,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(text : String)
-      unwrap = Binding.bg_QTextDocument_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(text))
-    @unwrap = unwrap
-    {% begin %}
-    {%
-      methods = [] of Def
-      ([@type] + @type.ancestors).select(&.<(TextDocument)).map{|x| methods = methods + x.methods}
-      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast clear create_object event event_filter timer_event child_event custom_event connect_notify disconnect_notify ].includes?(m) }.uniq
-    %}
-    jump_table = Binding::BgTableQTextDocument.new(
-      bg_QTextDocument_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
-      bg_QTextDocument_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QTextDocument_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} ->(){ self.clear() } {% else %} nil {% end %}),
-      bg_QTextDocument_createObject_const_QTextFormat_R: BindgenHelper.wrap_proc({% if forwarded.includes?("create_object") %} ->(f : QTextFormat*){ self.create_object(f) } {% else %} nil {% end %}),
-      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : QEvent*){ self.event(event) } {% else %} nil {% end %}),
-      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : QObject*, event : QEvent*){ self.event_filter(Object.new(unwrap: watched), event) } {% else %} nil {% end %}),
-      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : QTimerEvent*){ self.timer_event(event) } {% else %} nil {% end %}),
-      bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
-      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : QEvent*){ self.custom_event(event) } {% else %} nil {% end %}),
-      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
-      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
-    )
-    Binding.bg_QTextDocument_JUMPTABLE unwrap, pointerof(jump_table)
-    {% end %}
-    
-    end
-    def initialize(text : String, parent : Object)
+    def initialize(text : String, parent : Object? = nil)
       unwrap = Binding.bg_QTextDocument_CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = unwrap
     {% begin %}
@@ -17783,10 +14353,7 @@ module Qt
     {% end %}
     
     end
-    def clone() : TextDocument
-      TextDocument.new(unwrap: Binding.bg_QTextDocument_clone_(self))
-    end
-    def clone(parent : Object) : TextDocument
+    def clone(parent : Object? = nil) : TextDocument
       TextDocument.new(unwrap: Binding.bg_QTextDocument_clone_QObject_X(self, parent))
     end
     def empty?() : Bool
@@ -17849,10 +14416,7 @@ module Qt
     def character_at(pos : Int32) : QChar*
       Binding.bg_QTextDocument_characterAt_int(self, pos)
     end
-    def find(sub_string : String) : TextCursor
-      TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QString_R(self, Qt::Converter::QString.wrap(sub_string)))
-    end
-    def find(sub_string : String, from : Int32) : TextCursor
+    def find(sub_string : String, from : Int32 = 0) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QString_R_int(self, Qt::Converter::QString.wrap(sub_string), from))
     end
     def find(sub_string : String, from : Int32, options : TextDocumentFindFlags) : TextCursor
@@ -17864,10 +14428,7 @@ module Qt
     def find(sub_string : String, cursor : TextCursor, options : TextDocumentFindFlags) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QString_R_const_QTextCursor_R_QTextDocument__FindFlags(self, Qt::Converter::QString.wrap(sub_string), cursor, options))
     end
-    def find(expr : QRegExp*) : TextCursor
-      TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QRegExp_R(self, expr))
-    end
-    def find(expr : QRegExp*, from : Int32) : TextCursor
+    def find(expr : QRegExp*, from : Int32 = 0) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QRegExp_R_int(self, expr, from))
     end
     def find(expr : QRegExp*, from : Int32, options : TextDocumentFindFlags) : TextCursor
@@ -17879,10 +14440,7 @@ module Qt
     def find(expr : QRegExp*, cursor : TextCursor, options : TextDocumentFindFlags) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QRegExp_R_const_QTextCursor_R_QTextDocument__FindFlags(self, expr, cursor, options))
     end
-    def find(expr : QRegularExpression*) : TextCursor
-      TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QRegularExpression_R(self, expr))
-    end
-    def find(expr : QRegularExpression*, from : Int32) : TextCursor
+    def find(expr : QRegularExpression*, from : Int32 = 0) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QRegularExpression_R_int(self, expr, from))
     end
     def find(expr : QRegularExpression*, from : Int32, options : TextDocumentFindFlags) : TextCursor
@@ -17990,10 +14548,7 @@ module Qt
     def redo(cursor : TextCursor) : Void
       Binding.bg_QTextDocument_redo_QTextCursor_X(self, cursor)
     end
-    def clear_undo_redo_stacks() : Void
-      Binding.bg_QTextDocument_clearUndoRedoStacks_(self)
-    end
-    def clear_undo_redo_stacks(history_to_clear : TextDocumentStacks) : Void
+    def clear_undo_redo_stacks(history_to_clear : TextDocumentStacks = TextDocumentStacks::UndoAndRedoStacks) : Void
       Binding.bg_QTextDocument_clearUndoRedoStacks_QTextDocument__Stacks(self, history_to_clear)
     end
     def maximum_block_count() : Int32
@@ -18089,10 +14644,7 @@ module Qt
     def append_undo_item(unnamed_arg_0 : QAbstractUndoItem*) : Void
       Binding.bg_QTextDocument_appendUndoItem_QAbstractUndoItem_X(self, unnamed_arg_0)
     end
-    def set_modified() : Void
-      Binding.bg_QTextDocument_setModified_(self)
-    end
-    def modified=(m : Bool) : Void
+    def modified=(m : Bool = true) : Void
       Binding.bg_QTextDocument_setModified_bool(self, m)
     end
     protected def create_object(f : QTextFormat*) : QTextObject*
@@ -18171,10 +14723,7 @@ module Qt
     def null?() : Bool
       Binding.bg_QTextCursor_isNull_(self)
     end
-    def position=(pos : Int32) : Void
-      Binding.bg_QTextCursor_setPosition_int(self, pos)
-    end
-    def set_position(pos : Int32, mode : TextCursorMoveMode) : Void
+    def set_position(pos : Int32, mode : TextCursorMoveMode = TextCursorMoveMode::MoveAnchor) : Void
       Binding.bg_QTextCursor_setPosition_int_QTextCursor__MoveMode(self, pos, mode)
     end
     def position() : Int32
@@ -18192,13 +14741,7 @@ module Qt
     def insert_text(text : String, format : QTextCharFormat*) : Void
       Binding.bg_QTextCursor_insertText_const_QString_R_const_QTextCharFormat_R(self, Qt::Converter::QString.wrap(text), format)
     end
-    def move_position(op : TextCursorMoveOperation) : Bool
-      Binding.bg_QTextCursor_movePosition_QTextCursor__MoveOperation(self, op)
-    end
-    def move_position(op : TextCursorMoveOperation, unnamed_arg_1 : TextCursorMoveMode) : Bool
-      Binding.bg_QTextCursor_movePosition_QTextCursor__MoveOperation_QTextCursor__MoveMode(self, op, unnamed_arg_1)
-    end
-    def move_position(op : TextCursorMoveOperation, unnamed_arg_1 : TextCursorMoveMode, n : Int32) : Bool
+    def move_position(op : TextCursorMoveOperation, unnamed_arg_1 : TextCursorMoveMode = TextCursorMoveMode::MoveAnchor, n : Int32 = 1) : Bool
       Binding.bg_QTextCursor_movePosition_QTextCursor__MoveOperation_QTextCursor__MoveMode_int(self, op, unnamed_arg_1, n)
     end
     def visual_navigation() : Bool
