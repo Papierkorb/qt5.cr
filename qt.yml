@@ -187,6 +187,10 @@ types: # Type rewrite rules
     binding_type: QPoint
     generate_binding: false # Wrap this one manually
     generate_wrapper: false
+    # As we're not generating a wrapper, it won't set the `crystal_type` by
+    # itself.
+    crystal_type: Point
+    pass_by: Value
   QKeySequence:
     ignore_methods:
       - qt_check_for_QGADGET_macro
