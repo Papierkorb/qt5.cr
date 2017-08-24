@@ -35,7 +35,7 @@ end
 # Clicking on "Open" ...
 open_action.on_triggered do
   # Show a "Open file..." dialog
-  file_path = Qt::FileDialog.open_file_name
+  file_path = Qt::FileDialog.get_open_file_name
 
   unless file_path.empty? # Did the user choose something?
     pixmap = Qt::Pixmap.new
