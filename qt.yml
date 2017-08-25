@@ -234,6 +234,16 @@ types: # Type rewrite rules
     copy_structure: true
     pass_by: Value
     kind: Struct
+  "std::chrono::milliseconds":
+    cpp_type: int64_t
+    binding_type: Int64
+    crystal_type: Time::Span
+    generate_binding: false
+    generate_wrapper: false
+    pass_by: Value
+    to_cpp: "std::chrono::milliseconds(%)"
+    from_cpp: "(%.count())"
+    converter: Qt::Converter::TimeSpan
 
   # TODO: Some kind of platform-matching.  That'll be fun.
   WId: { ignore: true }
@@ -261,7 +271,6 @@ types: # Type rewrite rules
   "QVector<QTextFormat>": { ignore: true }
 
   # ignore types:
-  "std::chrono::milliseconds": { ignore: true }
   "QtPrivateSignal": { ignore: true }
   "QObject::QPrivateSignal": { ignore: true }
   "QCoreApplication::QPrivateSignal": { ignore: true }

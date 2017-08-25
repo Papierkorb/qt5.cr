@@ -14,5 +14,16 @@ module Qt
         Binding::CrystalString.new(ptr: string.to_unsafe, size: string.bytesize)
       end
     end
+
+    module TimeSpan
+      def self.unwrap(msec : Int64) : Time::Span
+        ticks = Time::Span::TicksPerMillisecond * msec
+        Time::Span.new(ticks)
+      end
+
+      def self.wrap(duration : Time::Span) : Int64
+        duration.ticks / Time::Span::TicksPerMillisecond
+      end
+    end
   end
 end
