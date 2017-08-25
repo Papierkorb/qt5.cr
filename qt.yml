@@ -17,6 +17,7 @@ classes:
   "QMetaObject::Connection": SignalConnection
   QAbstractEventDispatcher: AbstractEventDispatcher
   QAbstractEventDispatcher::TimerInfo: EventDispatcherTimerInfo
+  QPaintDevice: PaintDevice
   QWidget: Widget
   QAbstractButton: AbstractButton
   QFrame: Frame
@@ -44,6 +45,9 @@ classes:
   QHBoxLayout: HBoxLayout
   QVBoxLayout: VBoxLayout
   QPoint: Point
+  QPointF: PointF
+  QRect: Rect
+  QRectF: RectF
   QKeySequence: KeySequence
   QLineEdit: LineEdit
   QTextEdit: TextEdit
@@ -104,6 +108,10 @@ classes:
   QGraphicsSceneEvent: GraphicsSceneEvent
   QIODevice: IODevice
   QGesture: Gesture
+  QPainter: Painter
+  # "QPainter::PixmapFragment": PainterPixmapFragment
+  QLine: QLine
+  QLineF: QLineF
 
 enums:
   "Qt::CheckState": CheckState
@@ -140,6 +148,10 @@ enums:
   "Qt::MouseButtons": MouseButtons
   "Qt::ApplicationState": ApplicationState
   "Qt::FillRule": FillRule
+  "Qt::BGMode": BgMode
+  "Qt::SizeMode": SizeMode
+  "Qt::ClipOperation": ClipOperation
+  "Qt::PenStyle": PenStyle
   "QSizePolicy::Policy": SizePolicy::Policy
   "Qt::WidgetAttribute": WidgetAttribute
   "QPalette::ColorRole": PaletteColorRole #Palette::ColorRole
@@ -181,8 +193,11 @@ enums:
   "QGraphicsItem::CacheMode": GraphicsItem::CacheMode
   "QGraphicsItem::PanelModality": GraphicsItem::PanelModality
   "QGraphicsItem::Extension": GraphicsItem::Extension
-  "QPainter::RenderHints": PainterRenderHints # Painter::RenderHints
-  "QPainter::RenderHint": PainterRenderHint # Painter::RenderHint
+  "QPainter::RenderHints": Painter::RenderHints
+  "QPainter::RenderHint": Painter::RenderHint
+  "QPainter::CompositionMode": Painter::CompositionMode
+  "QPainter::PixmapFragmentHint": Painter::PixmapFragmentHint
+  "QPainter::PixmapFragmentHints": Painter::PixmapFragmentHints
   "QGraphicsView::ViewportAnchor": GraphicsView::ViewportAnchor
   "QGraphicsView::ViewportUpdateMode": GraphicsView::ViewportUpdateMode
   "QGraphicsView::OptimizationFlags": GraphicsView::OptimizationFlags
@@ -277,6 +292,28 @@ types: # Type rewrite rules
     # itself.
     crystal_type: Point
     pass_by: Value
+  QPointF:
+    copy_structure: true
+    binding_type: QPointF
+    generate_binding: false
+    generate_wrapper: false
+    crystal_type: PointF
+    pass_by: Value
+  QRect:
+    copy_structure: true
+  QRectF:
+    copy_structure: true
+  QPainter:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  "QPainter::PixmapFragment":
+    ignore: true
+    # copy_structure: true
+    # binding_type: QPainterPixmapFragment
+    # generate_binding: false
+    # generate_wrapper: false
+    # crystal_type: PainterPixmapFragment
+    # pass_by: Pointer
   QKeySequence:
     ignore_methods:
       - qt_check_for_QGADGET_macro
@@ -360,6 +397,15 @@ containers:
       - [ "QGraphicsTransform *" ]
       - [ "QGraphicsView *" ]
       - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
+  - class: QVector
+    type: Sequential
+    instantiations:
+      - [ "QLine" ]
+      - [ "QLineF" ]
+      - [ "QPoint" ]
+      - [ "QPointF" ]
+      - [ "QRect" ]
+      - [ "QRectF" ]
 
 output:
   cpp: ext/qt_binding.cpp
