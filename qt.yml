@@ -68,6 +68,42 @@ classes:
   QGraphicsPixmapItem: GraphicsPixmapItem
   QBrush: Brush
   QColor: Color
+  QEvent: Event
+  QTimerEvent: TimerEvent
+  QDynamicPropertyChangeEvent: DynamicPropertyChangeEvent
+  QDeferredDeleteEvent: DeferredDeleteEvent
+  QInputEvent: InputEvent
+  QMouseEvent: MouseEvent
+  QEnterEvent: EnterEvent
+  QFocusEvent: FocusEvent
+  QPaintEvent: PaintEvent
+  QMoveEvent: MoveEvent
+  QExposeEvent: ExposeEvent
+  QPlatformSurfaceEvent: PlatformSurfaceEvent
+  QResizeEvent: ResizeEvent
+  QCloseEvent: CloseEvent
+  QIconDragEvent: IconDragEvent
+  QShowEvent: ShowEvent
+  QHideEvent: HideEvent
+  QInputMethodEvent: InputMethodEvent
+  QInputMethodQueryEvent: InputMethodQueryEvent
+  QDropEvent: DropEvent
+  QDragLeaveEvent: DragLeaveEvent
+  QHelpEvent: HelpEvent
+  QStatusTipEvent: StatusTipEvent
+  QWhatsThisClickedEvent: WhatsThisClickedEvent
+  QActionEvent: ActionEvent
+  QFileOpenEvent: FileOpenEvent
+  QToolBarChangeEvent: ToolBarChangeEvent
+  QShortcutEvent: ShortcutEvent
+  QScrollPrepareEvent: ScrollPrepareEvent
+  QScrollEvent: ScrollEvent
+  QScreenOrientationChangeEvent: ScreenOrientationChangeEvent
+  QApplicationStateChangeEvent: ApplicationStateChangeEvent
+  QGestureEvent: GestureEvent
+  QGraphicsSceneEvent: GraphicsSceneEvent
+  QIODevice: IODevice
+  QGesture: Gesture
 
 enums:
   "Qt::CheckState": CheckState
@@ -191,6 +227,20 @@ enums:
   "QDir::SortFlags": Dir::SortFlags
   "QColor::NameFormat": Color::NameFormat
   "QColor::Spec": Color::Spec
+  "QEvent::Type": Event::Type
+  "QInputMethodEvent::AttributeType": InputMethodEvent::AttributeType
+  "QPlatformSurfaceEvent::SurfaceEventType": PlatformSurfaceEvent::SurfaceEventType
+  "Qt::InputMethodQueries": InputMethodQueries
+  "Qt::DropActions": DropActions
+  "Qt::DropAction": DropAction
+  "QIODevice::OpenMode": IODevice::OpenMode
+  "QScrollEvent::ScrollState": ScrollEvent::ScrollState
+  "Qt::ScreenOrientation": ScreenOrientation
+  "Qt::GestureState": GestureState
+  "QGesture::GestureCancelPolicy": Gesture::GestureCancelPolicy
+  "Qt::MouseButton": MouseButton
+  "Qt::MouseEventSource": MouseEventSource
+  "Qt::MouseEventFlags": MouseEventFlags
 
 types: # Type rewrite rules
   QString: # Convert QString instances using that:
@@ -210,6 +260,9 @@ types: # Type rewrite rules
   QSessionManager:
     pass_by: Reference
     from_cpp: "(%)"
+  QEvent:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
   QKeySequencePrivate: { ignore: true }
   QUrlPrivate: { ignore: true }
   QImageData: { ignore: true }
@@ -277,7 +330,6 @@ types: # Type rewrite rules
   "QMetaObject::Call": { ignore: true }
   "QList<T>": { ignore: true }
   "QList<QScreen *>": { ignore: true }
-  "QList<QAction *>": { ignore: true }
   "QList<QByteArray>": { ignore: true }
   "QList<QDockWidget *>": { ignore: true }
   "QVector<QRgb>": { ignore: true }
@@ -290,6 +342,8 @@ types: # Type rewrite rules
   "void (void *)": { ignore: true }
   "QList<QRectF>": { ignore: true }
   "QList<qreal>": { ignore: true }
+  "QList<QInputMethodEvent::Attribute>": { ignore: true }
+  "QInputMethodEvent::Attribute": { ignore: true }
 
 containers:
   - class: QList
@@ -299,6 +353,7 @@ containers:
       - [ "QObject *" ] # `QObjectList`
       - [ "QWidget *" ] # `QWidgetList`
       - [ "QAction *" ]
+      - [ "QGesture *" ]
       - [ "QUrl" ]
       - [ "QGraphicsItem *" ]
       - [ "QGraphicsWidget *" ]
