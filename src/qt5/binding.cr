@@ -109,6 +109,16 @@ module Qt
     alias QList_QGraphicsView_X = Void
     alias QGraphicsView = Void
     alias QList_QAbstractEventDispatcher__TimerInfo = Void
+    alias QVector_QLine = Void
+    alias QLine = Void
+    alias QVector_QLineF = Void
+    alias QLineF = Void
+    alias QVector_QPoint = Void
+    alias QVector_QPointF = Void
+    alias QVector_QRect = Void
+    alias QRect = Void
+    alias QVector_QRectF = Void
+    alias QRectF = Void
     alias QMetaObject = Void
     alias QEvent = Void
     alias QThread = Void
@@ -122,8 +132,10 @@ module Qt
     alias QAbstractNativeEventFilter = Void
     alias QByteArray = Void
     alias QAbstractEventDispatcherPrivate = Void
+    alias QPaintDevice = Void
+    alias QPaintEngine = Void
+    alias QPainter = Void
     alias QStyle = Void
-    alias QRect = Void
     alias QSize = Void
     alias QRegion = Void
     alias QPalette = Void
@@ -132,8 +144,6 @@ module Qt
     alias QFontInfo = Void
     alias QCursor = Void
     alias QBitmap = Void
-    alias QPaintDevice = Void
-    alias QPainter = Void
     alias QPixmap = Void
     alias QGraphicsEffect = Void
     alias QIcon = Void
@@ -142,7 +152,6 @@ module Qt
     alias QGraphicsProxyWidget = Void
     alias QMargins = Void
     alias QLayout = Void
-    alias QPaintEngine = Void
     alias QBackingStore = Void
     alias QWindow = Void
     alias QMouseEvent = Void
@@ -229,6 +238,8 @@ module Qt
     alias QBoxLayout = Void
     alias QHBoxLayout = Void
     alias QVBoxLayout = Void
+    alias QSizeF = Void
+    alias QMarginsF = Void
     alias QLineEdit = Void
     alias QValidator = Void
     alias QCompleter = Void
@@ -254,8 +265,6 @@ module Qt
     alias QTextObject = Void
     alias QTextFormat = Void
     alias QTextBlock = Void
-    alias QSizeF = Void
-    alias QRectF = Void
     alias QAbstractUndoItem = Void
     alias QTextDocumentPrivate = Void
     alias QTextCursorPrivate = Void
@@ -272,7 +281,6 @@ module Qt
     alias QGraphicsScene = Void
     alias QGraphicsObject = Void
     alias QGraphicsItemGroup = Void
-    alias QPointF = Void
     alias QPainterPath = Void
     alias QStyleOptionGraphicsItem = Void
     alias QPolygonF = Void
@@ -286,7 +294,6 @@ module Qt
     alias QPen = Void
     alias QBrush = Void
     alias QGraphicsLineItem = Void
-    alias QLineF = Void
     alias QGraphicsPathItem = Void
     alias QGraphicsPixmapItem = Void
     alias QGraphicsPolygonItem = Void
@@ -332,6 +339,9 @@ module Qt
     alias QGraphicsSceneEventPrivate = Void
     alias QIODevicePrivate = Void
     alias QGesturePrivate = Void
+    alias QGlyphRun = Void
+    alias QStaticText = Void
+    alias QTextItem = Void
     struct EventDispatcherTimerInfo
       timer_id : Int32
       interval : Int32
@@ -340,6 +350,22 @@ module Qt
     struct QPoint
       xp : Int32
       yp : Int32
+    end
+    struct QPointF
+      xp : Float64
+      yp : Float64
+    end
+    struct Rect
+      x1 : Int32
+      y1 : Int32
+      x2 : Int32
+      y2 : Int32
+    end
+    struct RectF
+      xp : Float64
+      yp : Float64
+      w : Float64
+      h : Float64
     end
 
     struct BgTableQObject
@@ -380,6 +406,14 @@ module Qt
       bg_QObject_disconnectNotify_const_QMetaMethod_R : CrystalProc
     end
     fun bg_QAbstractEventDispatcher_JUMPTABLE(self : QAbstractEventDispatcher*, table : BgTableQAbstractEventDispatcher*) : Void
+    struct BgTableQPaintDevice
+      bg_QPaintDevice_devType_ : CrystalProc
+      bg_QPaintDevice_paintEngine_ : CrystalProc
+      bg_QPaintDevice_metric_QPaintDevice__PaintDeviceMetric : CrystalProc
+      bg_QPaintDevice_initPainter_QPainter_X : CrystalProc
+      bg_QPaintDevice_sharedPainter_ : CrystalProc
+    end
+    fun bg_QPaintDevice_JUMPTABLE(self : QPaintDevice*, table : BgTableQPaintDevice*) : Void
     struct BgTableQWidget
       bg_QWidget_metaObject_ : CrystalProc
       bg_QWidget_qt_metacast_const_char_X : CrystalProc
@@ -2107,6 +2141,36 @@ module Qt
     fun bg_QList_QAbstractEventDispatcher__TimerInfo_push_back_QAbstractEventDispatcher__TimerInfo(_self_ : Binding::QList_QAbstractEventDispatcher__TimerInfo*, value : EventDispatcherTimerInfo) : Void
     fun bg_QList_QAbstractEventDispatcher__TimerInfo_size_(_self_ : Binding::QList_QAbstractEventDispatcher__TimerInfo*) : Int32
     fun bg_QList_QAbstractEventDispatcher__TimerInfo_DESTROY_(_self_ : Binding::QList_QAbstractEventDispatcher__TimerInfo*) : Void
+    fun bg_QVector_QLine_CONSTRUCT_() : QVector_QLine*
+    fun bg_QVector_QLine_at_int(_self_ : Binding::QVector_QLine*, index : Int32) : Binding::QLine*
+    fun bg_QVector_QLine_push_back_QLine(_self_ : Binding::QVector_QLine*, value : QLine*) : Void
+    fun bg_QVector_QLine_size_(_self_ : Binding::QVector_QLine*) : Int32
+    fun bg_QVector_QLine_DESTROY_(_self_ : Binding::QVector_QLine*) : Void
+    fun bg_QVector_QLineF_CONSTRUCT_() : QVector_QLineF*
+    fun bg_QVector_QLineF_at_int(_self_ : Binding::QVector_QLineF*, index : Int32) : Binding::QLineF*
+    fun bg_QVector_QLineF_push_back_QLineF(_self_ : Binding::QVector_QLineF*, value : QLineF*) : Void
+    fun bg_QVector_QLineF_size_(_self_ : Binding::QVector_QLineF*) : Int32
+    fun bg_QVector_QLineF_DESTROY_(_self_ : Binding::QVector_QLineF*) : Void
+    fun bg_QVector_QPoint_CONSTRUCT_() : QVector_QPoint*
+    fun bg_QVector_QPoint_at_int(_self_ : Binding::QVector_QPoint*, index : Int32) : Binding::QPoint
+    fun bg_QVector_QPoint_push_back_QPoint(_self_ : Binding::QVector_QPoint*, value : QPoint) : Void
+    fun bg_QVector_QPoint_size_(_self_ : Binding::QVector_QPoint*) : Int32
+    fun bg_QVector_QPoint_DESTROY_(_self_ : Binding::QVector_QPoint*) : Void
+    fun bg_QVector_QPointF_CONSTRUCT_() : QVector_QPointF*
+    fun bg_QVector_QPointF_at_int(_self_ : Binding::QVector_QPointF*, index : Int32) : Binding::QPointF
+    fun bg_QVector_QPointF_push_back_QPointF(_self_ : Binding::QVector_QPointF*, value : QPointF) : Void
+    fun bg_QVector_QPointF_size_(_self_ : Binding::QVector_QPointF*) : Int32
+    fun bg_QVector_QPointF_DESTROY_(_self_ : Binding::QVector_QPointF*) : Void
+    fun bg_QVector_QRect_CONSTRUCT_() : QVector_QRect*
+    fun bg_QVector_QRect_at_int(_self_ : Binding::QVector_QRect*, index : Int32) : Binding::Rect
+    fun bg_QVector_QRect_push_back_QRect(_self_ : Binding::QVector_QRect*, value : Rect) : Void
+    fun bg_QVector_QRect_size_(_self_ : Binding::QVector_QRect*) : Int32
+    fun bg_QVector_QRect_DESTROY_(_self_ : Binding::QVector_QRect*) : Void
+    fun bg_QVector_QRectF_CONSTRUCT_() : QVector_QRectF*
+    fun bg_QVector_QRectF_at_int(_self_ : Binding::QVector_QRectF*, index : Int32) : Binding::RectF
+    fun bg_QVector_QRectF_push_back_QRectF(_self_ : Binding::QVector_QRectF*, value : RectF) : Void
+    fun bg_QVector_QRectF_size_(_self_ : Binding::QVector_QRectF*) : Int32
+    fun bg_QVector_QRectF_DESTROY_(_self_ : Binding::QVector_QRectF*) : Void
     fun bg_QObject_metaObject_(_self_ : Binding::QObject*) : QMetaObject*
     fun bg_QObject_qt_metacast_const_char_X(_self_ : Binding::QObject*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QObject_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
@@ -2189,6 +2253,27 @@ module Qt
     fun bg_QAbstractEventDispatcher_awake_CONNECT_CrystalProc_void_(_self_ : Binding::QAbstractEventDispatcher*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
     fun bg_QAbstractEventDispatcher_CONSTRUCT_QAbstractEventDispatcherPrivate_R_QObject_X(unnamed_arg_0 : QAbstractEventDispatcherPrivate*, parent : QObject*) : Binding::QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_DESTROY_(_self_ : Binding::QAbstractEventDispatcher*) : Void
+    fun bg_QPaintDevice_devType_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_paintingActive_(_self_ : Binding::QPaintDevice*) : Bool
+    fun bg_QPaintDevice_paintEngine_(_self_ : Binding::QPaintDevice*) : QPaintEngine*
+    fun bg_QPaintDevice_width_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_height_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_widthMM_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_heightMM_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_logicalDpiX_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_logicalDpiY_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_physicalDpiX_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_physicalDpiY_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_devicePixelRatio_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_devicePixelRatioF_(_self_ : Binding::QPaintDevice*) : Float64
+    fun bg_QPaintDevice_colorCount_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_depth_(_self_ : Binding::QPaintDevice*) : Int32
+    fun bg_QPaintDevice_devicePixelRatioFScale_STATIC_() : Float64
+    fun bg_QPaintDevice_CONSTRUCT_() : Binding::QPaintDevice*
+    fun bg_QPaintDevice_metric_QPaintDevice__PaintDeviceMetric(_self_ : Binding::QPaintDevice*, metric : PaintDeviceMetric) : Int32
+    fun bg_QPaintDevice_initPainter_QPainter_X(_self_ : Binding::QPaintDevice*, painter : QPainter*) : Void
+    fun bg_QPaintDevice_sharedPainter_(_self_ : Binding::QPaintDevice*) : Binding::QPainter*
+    fun bg_QPaintDevice_DESTROY_(_self_ : Binding::QPaintDevice*) : Void
     fun bg_QWidget_metaObject_(_self_ : Binding::QWidget*) : QMetaObject*
     fun bg_QWidget_qt_metacast_const_char_X(_self_ : Binding::QWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
@@ -2210,9 +2295,9 @@ module Qt
     fun bg_QWidget_setEnabled_bool(_self_ : Binding::QWidget*, unnamed_arg_0 : Bool) : Void
     fun bg_QWidget_setDisabled_bool(_self_ : Binding::QWidget*, unnamed_arg_0 : Bool) : Void
     fun bg_QWidget_setWindowModified_bool(_self_ : Binding::QWidget*, unnamed_arg_0 : Bool) : Void
-    fun bg_QWidget_frameGeometry_(_self_ : Binding::QWidget*) : QRect*
-    fun bg_QWidget_geometry_(_self_ : Binding::QWidget*) : QRect*
-    fun bg_QWidget_normalGeometry_(_self_ : Binding::QWidget*) : QRect*
+    fun bg_QWidget_frameGeometry_(_self_ : Binding::QWidget*) : Binding::Rect
+    fun bg_QWidget_geometry_(_self_ : Binding::QWidget*) : Binding::Rect*
+    fun bg_QWidget_normalGeometry_(_self_ : Binding::QWidget*) : Binding::Rect
     fun bg_QWidget_x_(_self_ : Binding::QWidget*) : Int32
     fun bg_QWidget_y_(_self_ : Binding::QWidget*) : Int32
     fun bg_QWidget_pos_(_self_ : Binding::QWidget*) : Binding::QPoint
@@ -2220,8 +2305,8 @@ module Qt
     fun bg_QWidget_size_(_self_ : Binding::QWidget*) : QSize*
     fun bg_QWidget_width_(_self_ : Binding::QWidget*) : Int32
     fun bg_QWidget_height_(_self_ : Binding::QWidget*) : Int32
-    fun bg_QWidget_rect_(_self_ : Binding::QWidget*) : QRect*
-    fun bg_QWidget_childrenRect_(_self_ : Binding::QWidget*) : QRect*
+    fun bg_QWidget_rect_(_self_ : Binding::QWidget*) : Binding::Rect
+    fun bg_QWidget_childrenRect_(_self_ : Binding::QWidget*) : Binding::Rect
     fun bg_QWidget_childrenRegion_(_self_ : Binding::QWidget*) : QRegion*
     fun bg_QWidget_minimumSize_(_self_ : Binding::QWidget*) : QSize*
     fun bg_QWidget_maximumSize_(_self_ : Binding::QWidget*) : QSize*
@@ -2287,7 +2372,7 @@ module Qt
     fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R(_self_ : Binding::QWidget*, painter : QPainter*, target_offset : QPoint, source_region : QRegion*) : Void
     fun bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(_self_ : Binding::QWidget*, painter : QPainter*, target_offset : QPoint, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
     fun bg_QWidget_grab_(_self_ : Binding::QWidget*) : Binding::QPixmap*
-    fun bg_QWidget_grab_const_QRect_R(_self_ : Binding::QWidget*, rectangle : QRect*) : Binding::QPixmap*
+    fun bg_QWidget_grab_const_QRect_R(_self_ : Binding::QWidget*, rectangle : Rect*) : Binding::QPixmap*
     fun bg_QWidget_graphicsEffect_(_self_ : Binding::QWidget*) : QGraphicsEffect*
     fun bg_QWidget_setGraphicsEffect_QGraphicsEffect_X(_self_ : Binding::QWidget*, effect : QGraphicsEffect*) : Void
     fun bg_QWidget_grabGesture_Qt__GestureType(_self_ : Binding::QWidget*, type : GestureType) : Void
@@ -2358,10 +2443,10 @@ module Qt
     fun bg_QWidget_update_(_self_ : Binding::QWidget*) : Void
     fun bg_QWidget_repaint_(_self_ : Binding::QWidget*) : Void
     fun bg_QWidget_update_int_int_int_int(_self_ : Binding::QWidget*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
-    fun bg_QWidget_update_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QWidget_update_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : Rect*) : Void
     fun bg_QWidget_update_const_QRegion_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QRegion*) : Void
     fun bg_QWidget_repaint_int_int_int_int(_self_ : Binding::QWidget*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
-    fun bg_QWidget_repaint_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QWidget_repaint_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : Rect*) : Void
     fun bg_QWidget_repaint_const_QRegion_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QRegion*) : Void
     fun bg_QWidget_setVisible_bool(_self_ : Binding::QWidget*, visible : Bool) : Void
     fun bg_QWidget_setHidden_bool(_self_ : Binding::QWidget*, hidden : Bool) : Void
@@ -2380,7 +2465,7 @@ module Qt
     fun bg_QWidget_resize_int_int(_self_ : Binding::QWidget*, w : Int32, h : Int32) : Void
     fun bg_QWidget_resize_const_QSize_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QSize*) : Void
     fun bg_QWidget_setGeometry_int_int_int_int(_self_ : Binding::QWidget*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
-    fun bg_QWidget_setGeometry_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QWidget_setGeometry_const_QRect_R(_self_ : Binding::QWidget*, unnamed_arg_0 : Rect*) : Void
     fun bg_QWidget_saveGeometry_(_self_ : Binding::QWidget*) : QByteArray*
     fun bg_QWidget_restoreGeometry_const_QByteArray_R(_self_ : Binding::QWidget*, geometry : QByteArray*) : Bool
     fun bg_QWidget_adjustSize_(_self_ : Binding::QWidget*) : Void
@@ -2402,14 +2487,14 @@ module Qt
     fun bg_QWidget_setContentsMargins_const_QMargins_R(_self_ : Binding::QWidget*, margins : QMargins*) : Void
     fun bg_QWidget_getContentsMargins_int_X_int_X_int_X_int_X(_self_ : Binding::QWidget*, left : Int32*, top : Int32*, right : Int32*, bottom : Int32*) : Void
     fun bg_QWidget_contentsMargins_(_self_ : Binding::QWidget*) : QMargins*
-    fun bg_QWidget_contentsRect_(_self_ : Binding::QWidget*) : QRect*
+    fun bg_QWidget_contentsRect_(_self_ : Binding::QWidget*) : Binding::Rect
     fun bg_QWidget_layout_(_self_ : Binding::QWidget*) : Binding::QLayout*
     fun bg_QWidget_setLayout_QLayout_X(_self_ : Binding::QWidget*, unnamed_arg_0 : QLayout*) : Void
     fun bg_QWidget_updateGeometry_(_self_ : Binding::QWidget*) : Void
     fun bg_QWidget_setParent_QWidget_X(_self_ : Binding::QWidget*, parent : QWidget*) : Void
     fun bg_QWidget_setParent_QWidget_X_Qt__WindowFlags(_self_ : Binding::QWidget*, parent : QWidget*, f : WindowFlags) : Void
     fun bg_QWidget_scroll_int_int(_self_ : Binding::QWidget*, dx : Int32, dy : Int32) : Void
-    fun bg_QWidget_scroll_int_int_const_QRect_R(_self_ : Binding::QWidget*, dx : Int32, dy : Int32, unnamed_arg_2 : QRect*) : Void
+    fun bg_QWidget_scroll_int_int_const_QRect_R(_self_ : Binding::QWidget*, dx : Int32, dy : Int32, unnamed_arg_2 : Rect*) : Void
     fun bg_QWidget_focusWidget_(_self_ : Binding::QWidget*) : Binding::QWidget*
     fun bg_QWidget_nextInFocusChain_(_self_ : Binding::QWidget*) : Binding::QWidget*
     fun bg_QWidget_previousInFocusChain_(_self_ : Binding::QWidget*) : Binding::QWidget*
@@ -2477,7 +2562,7 @@ module Qt
     fun bg_QWidget_changeEvent_QEvent_X(_self_ : Binding::QWidget*, unnamed_arg_0 : QEvent*) : Void
     fun bg_QWidget_metric_QPaintDevice__PaintDeviceMetric(_self_ : Binding::QWidget*, unnamed_arg_0 : PaintDeviceMetric) : Int32
     fun bg_QWidget_initPainter_QPainter_X(_self_ : Binding::QWidget*, painter : QPainter*) : Void
-    fun bg_QWidget_sharedPainter_(_self_ : Binding::QWidget*) : QPainter*
+    fun bg_QWidget_sharedPainter_(_self_ : Binding::QWidget*) : Binding::QPainter*
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : Binding::QWidget*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_inputMethodHints_(_self_ : Binding::QWidget*) : InputMethodHints
     fun bg_QWidget_setInputMethodHints_Qt__InputMethodHints(_self_ : Binding::QWidget*, hints : InputMethodHints) : Void
@@ -2488,6 +2573,7 @@ module Qt
     fun bg_QWidget_focusPreviousChild_(_self_ : Binding::QWidget*) : Bool
     fun bg_QWidget_CONSTRUCT_QWidgetPrivate_R_QWidget_X_Qt__WindowFlags(d : QWidgetPrivate*, parent : QWidget*, f : WindowFlags) : Binding::QWidget*
     fun bg_QWidget_DESTROY_(_self_ : Binding::QWidget*) : Void
+    fun bg_QWidget_AS_QPaintDevice_(_self_ : Binding::QWidget*) : Binding::QPaintDevice*
     fun bg_QAbstractButton_metaObject_(_self_ : Binding::QAbstractButton*) : QMetaObject*
     fun bg_QAbstractButton_qt_metacast_const_char_X(_self_ : Binding::QAbstractButton*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
@@ -2561,8 +2647,8 @@ module Qt
     fun bg_QFrame_setLineWidth_int(_self_ : Binding::QFrame*, unnamed_arg_0 : Int32) : Void
     fun bg_QFrame_midLineWidth_(_self_ : Binding::QFrame*) : Int32
     fun bg_QFrame_setMidLineWidth_int(_self_ : Binding::QFrame*, unnamed_arg_0 : Int32) : Void
-    fun bg_QFrame_frameRect_(_self_ : Binding::QFrame*) : QRect*
-    fun bg_QFrame_setFrameRect_const_QRect_R(_self_ : Binding::QFrame*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QFrame_frameRect_(_self_ : Binding::QFrame*) : Binding::Rect
+    fun bg_QFrame_setFrameRect_const_QRect_R(_self_ : Binding::QFrame*, unnamed_arg_0 : Rect*) : Void
     fun bg_QFrame_event_QEvent_X(_self_ : Binding::QFrame*, e : QEvent*) : Bool
     fun bg_QFrame_paintEvent_QPaintEvent_X(_self_ : Binding::QFrame*, unnamed_arg_0 : QPaintEvent*) : Void
     fun bg_QFrame_changeEvent_QEvent_X(_self_ : Binding::QFrame*, unnamed_arg_0 : QEvent*) : Void
@@ -2663,7 +2749,7 @@ module Qt
     fun bg_QMenuBar_sizeHint_(_self_ : Binding::QMenuBar*) : QSize*
     fun bg_QMenuBar_minimumSizeHint_(_self_ : Binding::QMenuBar*) : QSize*
     fun bg_QMenuBar_heightForWidth_int(_self_ : Binding::QMenuBar*, unnamed_arg_0 : Int32) : Int32
-    fun bg_QMenuBar_actionGeometry_QAction_X(_self_ : Binding::QMenuBar*, unnamed_arg_0 : QAction*) : QRect*
+    fun bg_QMenuBar_actionGeometry_QAction_X(_self_ : Binding::QMenuBar*, unnamed_arg_0 : QAction*) : Binding::Rect
     fun bg_QMenuBar_actionAt_const_QPoint_R(_self_ : Binding::QMenuBar*, unnamed_arg_0 : QPoint) : Binding::QAction*
     fun bg_QMenuBar_setCornerWidget_QWidget_X_Qt__Corner(_self_ : Binding::QMenuBar*, w : QWidget*, corner : Corner) : Void
     fun bg_QMenuBar_cornerWidget_Qt__Corner(_self_ : Binding::QMenuBar*, corner : Corner) : Binding::QWidget*
@@ -2730,7 +2816,7 @@ module Qt
     fun bg_QMenu_exec_const_QPoint_R_QAction_X(_self_ : Binding::QMenu*, pos : QPoint, at : QAction*) : Binding::QAction*
     fun bg_QMenu_exec_STATIC_QList_QAction_X__const_QPoint_R_QAction_X_QWidget_X(actions : Void*, pos : QPoint, at : QAction*, parent : QWidget*) : Binding::QAction*
     fun bg_QMenu_sizeHint_(_self_ : Binding::QMenu*) : QSize*
-    fun bg_QMenu_actionGeometry_QAction_X(_self_ : Binding::QMenu*, unnamed_arg_0 : QAction*) : QRect*
+    fun bg_QMenu_actionGeometry_QAction_X(_self_ : Binding::QMenu*, unnamed_arg_0 : QAction*) : Binding::Rect
     fun bg_QMenu_actionAt_const_QPoint_R(_self_ : Binding::QMenu*, unnamed_arg_0 : QPoint) : Binding::QAction*
     fun bg_QMenu_menuAction_(_self_ : Binding::QMenu*) : Binding::QAction*
     fun bg_QMenu_title_(_self_ : Binding::QMenu*) : Binding::CrystalString
@@ -3300,7 +3386,7 @@ module Qt
     fun bg_QImage_detach_(_self_ : Binding::QImage*) : Void
     fun bg_QImage_isDetached_(_self_ : Binding::QImage*) : Bool
     fun bg_QImage_copy_(_self_ : Binding::QImage*) : Binding::QImage*
-    fun bg_QImage_copy_const_QRect_R(_self_ : Binding::QImage*, rect : QRect*) : Binding::QImage*
+    fun bg_QImage_copy_const_QRect_R(_self_ : Binding::QImage*, rect : Rect*) : Binding::QImage*
     fun bg_QImage_copy_int_int_int_int(_self_ : Binding::QImage*, x : Int32, y : Int32, w : Int32, h : Int32) : Binding::QImage*
     fun bg_QImage_format_(_self_ : Binding::QImage*) : Image::Format
     fun bg_QImage_convertToFormat_QImage__Format(_self_ : Binding::QImage*, f : Image::Format) : Binding::QImage*
@@ -3309,7 +3395,7 @@ module Qt
     fun bg_QImage_width_(_self_ : Binding::QImage*) : Int32
     fun bg_QImage_height_(_self_ : Binding::QImage*) : Int32
     fun bg_QImage_size_(_self_ : Binding::QImage*) : QSize*
-    fun bg_QImage_rect_(_self_ : Binding::QImage*) : QRect*
+    fun bg_QImage_rect_(_self_ : Binding::QImage*) : Binding::Rect
     fun bg_QImage_depth_(_self_ : Binding::QImage*) : Int32
     fun bg_QImage_colorCount_(_self_ : Binding::QImage*) : Int32
     fun bg_QImage_bitPlaneCount_(_self_ : Binding::QImage*) : Int32
@@ -3396,7 +3482,7 @@ module Qt
     fun bg_QPixmap_width_(_self_ : Binding::QPixmap*) : Int32
     fun bg_QPixmap_height_(_self_ : Binding::QPixmap*) : Int32
     fun bg_QPixmap_size_(_self_ : Binding::QPixmap*) : QSize*
-    fun bg_QPixmap_rect_(_self_ : Binding::QPixmap*) : QRect*
+    fun bg_QPixmap_rect_(_self_ : Binding::QPixmap*) : Binding::Rect
     fun bg_QPixmap_depth_(_self_ : Binding::QPixmap*) : Int32
     fun bg_QPixmap_defaultDepth_STATIC_() : Int32
     fun bg_QPixmap_fill_(_self_ : Binding::QPixmap*) : Void
@@ -3411,7 +3497,7 @@ module Qt
     fun bg_QPixmap_hasAlphaChannel_(_self_ : Binding::QPixmap*) : Bool
     fun bg_QPixmap_createHeuristicMask_bool(_self_ : Binding::QPixmap*, clip_tight : Bool) : QBitmap*
     fun bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(_self_ : Binding::QPixmap*, mask_color : QColor*, mode : MaskMode) : QBitmap*
-    fun bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget : QObject*, rect : QRect*) : Binding::QPixmap*
+    fun bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget : QObject*, rect : Rect*) : Binding::QPixmap*
     fun bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int_int(widget : QObject*, x : Int32, y : Int32, w : Int32, h : Int32) : Binding::QPixmap*
     fun bg_QPixmap_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : Binding::QPixmap*, w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : Binding::QPixmap*
     fun bg_QPixmap_scaled_const_QSize_R_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : Binding::QPixmap*, s : QSize*, aspect_mode : AspectRatioMode, mode : TransformationMode) : Binding::QPixmap*
@@ -3438,9 +3524,9 @@ module Qt
     fun bg_QPixmap_convertFromImage_const_QImage_R_Qt__ImageConversionFlags(_self_ : Binding::QPixmap*, img : QImage*, flags : ImageConversionFlags) : Bool
     fun bg_QPixmap_copy_int_int_int_int(_self_ : Binding::QPixmap*, x : Int32, y : Int32, width : Int32, height : Int32) : Binding::QPixmap*
     fun bg_QPixmap_copy_(_self_ : Binding::QPixmap*) : Binding::QPixmap*
-    fun bg_QPixmap_copy_const_QRect_R(_self_ : Binding::QPixmap*, rect : QRect*) : Binding::QPixmap*
+    fun bg_QPixmap_copy_const_QRect_R(_self_ : Binding::QPixmap*, rect : Rect*) : Binding::QPixmap*
     fun bg_QPixmap_scroll_int_int_int_int_int_int_QRegion_X(_self_ : Binding::QPixmap*, dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32, exposed : QRegion*) : Void
-    fun bg_QPixmap_scroll_int_int_const_QRect_R_QRegion_X(_self_ : Binding::QPixmap*, dx : Int32, dy : Int32, rect : QRect*, exposed : QRegion*) : Void
+    fun bg_QPixmap_scroll_int_int_const_QRect_R_QRegion_X(_self_ : Binding::QPixmap*, dx : Int32, dy : Int32, rect : Rect*, exposed : QRegion*) : Void
     fun bg_QPixmap_cacheKey_(_self_ : Binding::QPixmap*) : Int64
     fun bg_QPixmap_isDetached_(_self_ : Binding::QPixmap*) : Bool
     fun bg_QPixmap_detach_(_self_ : Binding::QPixmap*) : Void
@@ -3545,8 +3631,8 @@ module Qt
     fun bg_QLayoutItem_minimumSize_(_self_ : Binding::QLayoutItem*) : QSize*
     fun bg_QLayoutItem_maximumSize_(_self_ : Binding::QLayoutItem*) : QSize*
     fun bg_QLayoutItem_expandingDirections_(_self_ : Binding::QLayoutItem*) : Orientations
-    fun bg_QLayoutItem_setGeometry_const_QRect_R(_self_ : Binding::QLayoutItem*, unnamed_arg_0 : QRect*) : Void
-    fun bg_QLayoutItem_geometry_(_self_ : Binding::QLayoutItem*) : QRect*
+    fun bg_QLayoutItem_setGeometry_const_QRect_R(_self_ : Binding::QLayoutItem*, unnamed_arg_0 : Rect*) : Void
+    fun bg_QLayoutItem_geometry_(_self_ : Binding::QLayoutItem*) : Binding::Rect
     fun bg_QLayoutItem_isEmpty_(_self_ : Binding::QLayoutItem*) : Bool
     fun bg_QLayoutItem_hasHeightForWidth_(_self_ : Binding::QLayoutItem*) : Bool
     fun bg_QLayoutItem_heightForWidth_int(_self_ : Binding::QLayoutItem*, unnamed_arg_0 : Int32) : Int32
@@ -3572,7 +3658,7 @@ module Qt
     fun bg_QLayout_setContentsMargins_const_QMargins_R(_self_ : Binding::QLayout*, margins : QMargins*) : Void
     fun bg_QLayout_getContentsMargins_int_X_int_X_int_X_int_X(_self_ : Binding::QLayout*, left : Int32*, top : Int32*, right : Int32*, bottom : Int32*) : Void
     fun bg_QLayout_contentsMargins_(_self_ : Binding::QLayout*) : QMargins*
-    fun bg_QLayout_contentsRect_(_self_ : Binding::QLayout*) : QRect*
+    fun bg_QLayout_contentsRect_(_self_ : Binding::QLayout*) : Binding::Rect
     fun bg_QLayout_setAlignment_QWidget_X_Qt__Alignment(_self_ : Binding::QLayout*, w : QWidget*, alignment : Alignment) : Bool
     fun bg_QLayout_setAlignment_QLayout_X_Qt__Alignment(_self_ : Binding::QLayout*, l : QLayout*, alignment : Alignment) : Bool
     fun bg_QLayout_setSizeConstraint_QLayout__SizeConstraint(_self_ : Binding::QLayout*, unnamed_arg_0 : Layout::SizeConstraint) : Void
@@ -3581,7 +3667,7 @@ module Qt
     fun bg_QLayout_menuBar_(_self_ : Binding::QLayout*) : Binding::QWidget*
     fun bg_QLayout_parentWidget_(_self_ : Binding::QLayout*) : Binding::QWidget*
     fun bg_QLayout_invalidate_(_self_ : Binding::QLayout*) : Void
-    fun bg_QLayout_geometry_(_self_ : Binding::QLayout*) : QRect*
+    fun bg_QLayout_geometry_(_self_ : Binding::QLayout*) : Binding::Rect
     fun bg_QLayout_activate_(_self_ : Binding::QLayout*) : Bool
     fun bg_QLayout_update_(_self_ : Binding::QLayout*) : Void
     fun bg_QLayout_addWidget_QWidget_X(_self_ : Binding::QLayout*, w : QWidget*) : Void
@@ -3591,7 +3677,7 @@ module Qt
     fun bg_QLayout_expandingDirections_(_self_ : Binding::QLayout*) : Orientations
     fun bg_QLayout_minimumSize_(_self_ : Binding::QLayout*) : QSize*
     fun bg_QLayout_maximumSize_(_self_ : Binding::QLayout*) : QSize*
-    fun bg_QLayout_setGeometry_const_QRect_R(_self_ : Binding::QLayout*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QLayout_setGeometry_const_QRect_R(_self_ : Binding::QLayout*, unnamed_arg_0 : Rect*) : Void
     fun bg_QLayout_itemAt_int(_self_ : Binding::QLayout*, index : Int32) : Binding::QLayoutItem*
     fun bg_QLayout_takeAt_int(_self_ : Binding::QLayout*, index : Int32) : Binding::QLayoutItem*
     fun bg_QLayout_indexOf_QWidget_X(_self_ : Binding::QLayout*, unnamed_arg_0 : QWidget*) : Int32
@@ -3612,10 +3698,10 @@ module Qt
     fun bg_QLayout_addChildLayout_QLayout_X(_self_ : Binding::QLayout*, l : QLayout*) : Void
     fun bg_QLayout_addChildWidget_QWidget_X(_self_ : Binding::QLayout*, w : QWidget*) : Void
     fun bg_QLayout_adoptLayout_QLayout_X(_self_ : Binding::QLayout*, layout : QLayout*) : Bool
-    fun bg_QLayout_alignmentRect_const_QRect_R(_self_ : Binding::QLayout*, unnamed_arg_0 : QRect*) : QRect*
+    fun bg_QLayout_alignmentRect_const_QRect_R(_self_ : Binding::QLayout*, unnamed_arg_0 : Rect*) : Binding::Rect
     fun bg_QLayout_CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d : QLayoutPrivate*, unnamed_arg_1 : QLayout*, unnamed_arg_2 : QWidget*) : Binding::QLayout*
     fun bg_QLayout_DESTROY_(_self_ : Binding::QLayout*) : Void
-    fun bg_QLayout_bg_QLayout_AS_QLayoutItem_(_self_ : Binding::QLayout*) : Binding::QLayoutItem*
+    fun bg_QLayout_AS_QLayoutItem_(_self_ : Binding::QLayout*) : Binding::QLayoutItem*
     fun bg_QBoxLayout_metaObject_(_self_ : Binding::QBoxLayout*) : QMetaObject*
     fun bg_QBoxLayout_qt_metacast_const_char_X(_self_ : Binding::QBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
@@ -3655,7 +3741,7 @@ module Qt
     fun bg_QBoxLayout_itemAt_int(_self_ : Binding::QBoxLayout*, unnamed_arg_0 : Int32) : Binding::QLayoutItem*
     fun bg_QBoxLayout_takeAt_int(_self_ : Binding::QBoxLayout*, unnamed_arg_0 : Int32) : Binding::QLayoutItem*
     fun bg_QBoxLayout_count_(_self_ : Binding::QBoxLayout*) : Int32
-    fun bg_QBoxLayout_setGeometry_const_QRect_R(_self_ : Binding::QBoxLayout*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QBoxLayout_setGeometry_const_QRect_R(_self_ : Binding::QBoxLayout*, unnamed_arg_0 : Rect*) : Void
     fun bg_QBoxLayout_DESTROY_(_self_ : Binding::QBoxLayout*) : Void
     fun bg_QHBoxLayout_metaObject_(_self_ : Binding::QHBoxLayout*) : QMetaObject*
     fun bg_QHBoxLayout_qt_metacast_const_char_X(_self_ : Binding::QHBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
@@ -3671,6 +3757,142 @@ module Qt
     fun bg_QVBoxLayout_CONSTRUCT_() : Binding::QVBoxLayout*
     fun bg_QVBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : Binding::QVBoxLayout*
     fun bg_QVBoxLayout_DESTROY_(_self_ : Binding::QVBoxLayout*) : Void
+    fun bg_QRect_CONSTRUCT_() : Binding::Rect*
+    fun bg_QRect_CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft : QPoint, bottomright : QPoint) : Binding::Rect*
+    fun bg_QRect_CONSTRUCT_const_QPoint_R_const_QSize_R(topleft : QPoint, size : QSize*) : Binding::Rect*
+    fun bg_QRect_CONSTRUCT_int_int_int_int(left : Int32, top : Int32, width : Int32, height : Int32) : Binding::Rect*
+    fun bg_QRect_isNull_(_self_ : Binding::Rect*) : Bool
+    fun bg_QRect_isEmpty_(_self_ : Binding::Rect*) : Bool
+    fun bg_QRect_isValid_(_self_ : Binding::Rect*) : Bool
+    fun bg_QRect_left_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_top_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_right_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_bottom_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_normalized_(_self_ : Binding::Rect*) : Binding::Rect
+    fun bg_QRect_x_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_y_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_setLeft_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_setTop_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_setRight_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_setBottom_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_setX_int(_self_ : Binding::Rect*, x : Int32) : Void
+    fun bg_QRect_setY_int(_self_ : Binding::Rect*, y : Int32) : Void
+    fun bg_QRect_setTopLeft_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_setBottomRight_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_setTopRight_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_setBottomLeft_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_topLeft_(_self_ : Binding::Rect*) : Binding::QPoint
+    fun bg_QRect_bottomRight_(_self_ : Binding::Rect*) : Binding::QPoint
+    fun bg_QRect_topRight_(_self_ : Binding::Rect*) : Binding::QPoint
+    fun bg_QRect_bottomLeft_(_self_ : Binding::Rect*) : Binding::QPoint
+    fun bg_QRect_center_(_self_ : Binding::Rect*) : Binding::QPoint
+    fun bg_QRect_moveLeft_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_moveTop_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_moveRight_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_moveBottom_int(_self_ : Binding::Rect*, pos : Int32) : Void
+    fun bg_QRect_moveTopLeft_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_moveBottomRight_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_moveTopRight_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_moveBottomLeft_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_moveCenter_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_translate_int_int(_self_ : Binding::Rect*, dx : Int32, dy : Int32) : Void
+    fun bg_QRect_translate_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_translated_int_int(_self_ : Binding::Rect*, dx : Int32, dy : Int32) : Binding::Rect
+    fun bg_QRect_translated_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Binding::Rect
+    fun bg_QRect_transposed_(_self_ : Binding::Rect*) : Binding::Rect
+    fun bg_QRect_moveTo_int_int(_self_ : Binding::Rect*, x : Int32, t : Int32) : Void
+    fun bg_QRect_moveTo_const_QPoint_R(_self_ : Binding::Rect*, p : QPoint) : Void
+    fun bg_QRect_setRect_int_int_int_int(_self_ : Binding::Rect*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
+    fun bg_QRect_getRect_int_X_int_X_int_X_int_X(_self_ : Binding::Rect*, x : Int32*, y : Int32*, w : Int32*, h : Int32*) : Void
+    fun bg_QRect_setCoords_int_int_int_int(_self_ : Binding::Rect*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+    fun bg_QRect_getCoords_int_X_int_X_int_X_int_X(_self_ : Binding::Rect*, x1 : Int32*, y1 : Int32*, x2 : Int32*, y2 : Int32*) : Void
+    fun bg_QRect_adjust_int_int_int_int(_self_ : Binding::Rect*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+    fun bg_QRect_adjusted_int_int_int_int(_self_ : Binding::Rect*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Binding::Rect
+    fun bg_QRect_size_(_self_ : Binding::Rect*) : QSize*
+    fun bg_QRect_width_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_height_(_self_ : Binding::Rect*) : Int32
+    fun bg_QRect_setWidth_int(_self_ : Binding::Rect*, w : Int32) : Void
+    fun bg_QRect_setHeight_int(_self_ : Binding::Rect*, h : Int32) : Void
+    fun bg_QRect_setSize_const_QSize_R(_self_ : Binding::Rect*, s : QSize*) : Void
+    fun bg_QRect_contains_const_QRect_R_bool(_self_ : Binding::Rect*, r : Rect*, proper : Bool) : Bool
+    fun bg_QRect_contains_const_QPoint_R_bool(_self_ : Binding::Rect*, p : QPoint, proper : Bool) : Bool
+    fun bg_QRect_contains_int_int(_self_ : Binding::Rect*, x : Int32, y : Int32) : Bool
+    fun bg_QRect_contains_int_int_bool(_self_ : Binding::Rect*, x : Int32, y : Int32, proper : Bool) : Bool
+    fun bg_QRect_united_const_QRect_R(_self_ : Binding::Rect*, other : Rect*) : Binding::Rect
+    fun bg_QRect_intersected_const_QRect_R(_self_ : Binding::Rect*, other : Rect*) : Binding::Rect
+    fun bg_QRect_intersects_const_QRect_R(_self_ : Binding::Rect*, r : Rect*) : Bool
+    fun bg_QRect_marginsAdded_const_QMargins_R(_self_ : Binding::Rect*, margins : QMargins*) : Binding::Rect
+    fun bg_QRect_marginsRemoved_const_QMargins_R(_self_ : Binding::Rect*, margins : QMargins*) : Binding::Rect
+    fun bg_QRect_DESTROY_(_self_ : Binding::Rect*) : Void
+    fun bg_QRectF_CONSTRUCT_() : Binding::RectF*
+    fun bg_QRectF_CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft : QPointF, size : QSizeF*) : Binding::RectF*
+    fun bg_QRectF_CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft : QPointF, bottom_right : QPointF) : Binding::RectF*
+    fun bg_QRectF_CONSTRUCT_qreal_qreal_qreal_qreal(left : Float64, top : Float64, width : Float64, height : Float64) : Binding::RectF*
+    fun bg_QRectF_CONSTRUCT_const_QRect_R(rect : Rect*) : Binding::RectF*
+    fun bg_QRectF_isNull_(_self_ : Binding::RectF*) : Bool
+    fun bg_QRectF_isEmpty_(_self_ : Binding::RectF*) : Bool
+    fun bg_QRectF_isValid_(_self_ : Binding::RectF*) : Bool
+    fun bg_QRectF_normalized_(_self_ : Binding::RectF*) : Binding::RectF
+    fun bg_QRectF_left_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_top_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_right_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_bottom_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_x_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_y_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_setLeft_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_setTop_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_setRight_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_setBottom_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_setX_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_setY_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_topLeft_(_self_ : Binding::RectF*) : Binding::QPointF
+    fun bg_QRectF_bottomRight_(_self_ : Binding::RectF*) : Binding::QPointF
+    fun bg_QRectF_topRight_(_self_ : Binding::RectF*) : Binding::QPointF
+    fun bg_QRectF_bottomLeft_(_self_ : Binding::RectF*) : Binding::QPointF
+    fun bg_QRectF_center_(_self_ : Binding::RectF*) : Binding::QPointF
+    fun bg_QRectF_setTopLeft_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_setBottomRight_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_setTopRight_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_setBottomLeft_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_moveLeft_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_moveTop_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_moveRight_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_moveBottom_qreal(_self_ : Binding::RectF*, pos : Float64) : Void
+    fun bg_QRectF_moveTopLeft_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_moveBottomRight_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_moveTopRight_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_moveBottomLeft_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_moveCenter_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_translate_qreal_qreal(_self_ : Binding::RectF*, dx : Float64, dy : Float64) : Void
+    fun bg_QRectF_translate_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_translated_qreal_qreal(_self_ : Binding::RectF*, dx : Float64, dy : Float64) : Binding::RectF
+    fun bg_QRectF_translated_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Binding::RectF
+    fun bg_QRectF_transposed_(_self_ : Binding::RectF*) : Binding::RectF
+    fun bg_QRectF_moveTo_qreal_qreal(_self_ : Binding::RectF*, x : Float64, y : Float64) : Void
+    fun bg_QRectF_moveTo_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Void
+    fun bg_QRectF_setRect_qreal_qreal_qreal_qreal(_self_ : Binding::RectF*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
+    fun bg_QRectF_getRect_qreal_X_qreal_X_qreal_X_qreal_X(_self_ : Binding::RectF*, x : Float64*, y : Float64*, w : Float64*, h : Float64*) : Void
+    fun bg_QRectF_setCoords_qreal_qreal_qreal_qreal(_self_ : Binding::RectF*, x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+    fun bg_QRectF_getCoords_qreal_X_qreal_X_qreal_X_qreal_X(_self_ : Binding::RectF*, x1 : Float64*, y1 : Float64*, x2 : Float64*, y2 : Float64*) : Void
+    fun bg_QRectF_adjust_qreal_qreal_qreal_qreal(_self_ : Binding::RectF*, x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+    fun bg_QRectF_adjusted_qreal_qreal_qreal_qreal(_self_ : Binding::RectF*, x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Binding::RectF
+    fun bg_QRectF_size_(_self_ : Binding::RectF*) : QSizeF*
+    fun bg_QRectF_width_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_height_(_self_ : Binding::RectF*) : Float64
+    fun bg_QRectF_setWidth_qreal(_self_ : Binding::RectF*, w : Float64) : Void
+    fun bg_QRectF_setHeight_qreal(_self_ : Binding::RectF*, h : Float64) : Void
+    fun bg_QRectF_setSize_const_QSizeF_R(_self_ : Binding::RectF*, s : QSizeF*) : Void
+    fun bg_QRectF_contains_const_QRectF_R(_self_ : Binding::RectF*, r : RectF*) : Bool
+    fun bg_QRectF_contains_const_QPointF_R(_self_ : Binding::RectF*, p : QPointF) : Bool
+    fun bg_QRectF_contains_qreal_qreal(_self_ : Binding::RectF*, x : Float64, y : Float64) : Bool
+    fun bg_QRectF_united_const_QRectF_R(_self_ : Binding::RectF*, other : RectF*) : Binding::RectF
+    fun bg_QRectF_intersected_const_QRectF_R(_self_ : Binding::RectF*, other : RectF*) : Binding::RectF
+    fun bg_QRectF_intersects_const_QRectF_R(_self_ : Binding::RectF*, r : RectF*) : Bool
+    fun bg_QRectF_marginsAdded_const_QMarginsF_R(_self_ : Binding::RectF*, margins : QMarginsF*) : Binding::RectF
+    fun bg_QRectF_marginsRemoved_const_QMarginsF_R(_self_ : Binding::RectF*, margins : QMarginsF*) : Binding::RectF
+    fun bg_QRectF_toRect_(_self_ : Binding::RectF*) : Binding::Rect
+    fun bg_QRectF_toAlignedRect_(_self_ : Binding::RectF*) : Binding::Rect
+    fun bg_QRectF_DESTROY_(_self_ : Binding::RectF*) : Void
     fun bg_QKeySequence_CONSTRUCT_() : Binding::QKeySequence*
     fun bg_QKeySequence_CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(key : CrystalString, format : KeySequence::SequenceFormat) : Binding::QKeySequence*
     fun bg_QKeySequence_CONSTRUCT_int_int_int_int(k1 : Int32, k2 : Int32, k3 : Int32, k4 : Int32) : Binding::QKeySequence*
@@ -3784,7 +4006,7 @@ module Qt
     fun bg_QLineEdit_inputMethodEvent_QInputMethodEvent_X(_self_ : Binding::QLineEdit*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QLineEdit_initStyleOption_QStyleOptionFrame_X(_self_ : Binding::QLineEdit*, option : QStyleOptionFrame*) : Void
     fun bg_QLineEdit_event_QEvent_X(_self_ : Binding::QLineEdit*, unnamed_arg_0 : QEvent*) : Bool
-    fun bg_QLineEdit_cursorRect_(_self_ : Binding::QLineEdit*) : QRect*
+    fun bg_QLineEdit_cursorRect_(_self_ : Binding::QLineEdit*) : Binding::Rect
     fun bg_QLineEdit_DESTROY_(_self_ : Binding::QLineEdit*) : Void
     fun bg_QTextEdit_metaObject_(_self_ : Binding::QTextEdit*) : QMetaObject*
     fun bg_QTextEdit_qt_metacast_const_char_X(_self_ : Binding::QTextEdit*, unnamed_arg_0 : UInt8*) : Void*
@@ -3838,8 +4060,8 @@ module Qt
     fun bg_QTextEdit_createStandardContextMenu_(_self_ : Binding::QTextEdit*) : Binding::QMenu*
     fun bg_QTextEdit_createStandardContextMenu_const_QPoint_R(_self_ : Binding::QTextEdit*, position : QPoint) : Binding::QMenu*
     fun bg_QTextEdit_cursorForPosition_const_QPoint_R(_self_ : Binding::QTextEdit*, pos : QPoint) : Binding::QTextCursor*
-    fun bg_QTextEdit_cursorRect_const_QTextCursor_R(_self_ : Binding::QTextEdit*, cursor : QTextCursor*) : QRect*
-    fun bg_QTextEdit_cursorRect_(_self_ : Binding::QTextEdit*) : QRect*
+    fun bg_QTextEdit_cursorRect_const_QTextCursor_R(_self_ : Binding::QTextEdit*, cursor : QTextCursor*) : Binding::Rect
+    fun bg_QTextEdit_cursorRect_(_self_ : Binding::QTextEdit*) : Binding::Rect
     fun bg_QTextEdit_anchorAt_const_QPoint_R(_self_ : Binding::QTextEdit*, pos : QPoint) : Binding::CrystalString
     fun bg_QTextEdit_overwriteMode_(_self_ : Binding::QTextEdit*) : Bool
     fun bg_QTextEdit_setOverwriteMode_bool(_self_ : Binding::QTextEdit*, overwrite : Bool) : Void
@@ -4120,7 +4342,7 @@ module Qt
     fun bg_QTextDocument_setUseDesignMetrics_bool(_self_ : Binding::QTextDocument*, b : Bool) : Void
     fun bg_QTextDocument_useDesignMetrics_(_self_ : Binding::QTextDocument*) : Bool
     fun bg_QTextDocument_drawContents_QPainter_X(_self_ : Binding::QTextDocument*, painter : QPainter*) : Void
-    fun bg_QTextDocument_drawContents_QPainter_X_const_QRectF_R(_self_ : Binding::QTextDocument*, painter : QPainter*, rect : QRectF*) : Void
+    fun bg_QTextDocument_drawContents_QPainter_X_const_QRectF_R(_self_ : Binding::QTextDocument*, painter : QPainter*, rect : RectF*) : Void
     fun bg_QTextDocument_setTextWidth_qreal(_self_ : Binding::QTextDocument*, width : Float64) : Void
     fun bg_QTextDocument_textWidth_(_self_ : Binding::QTextDocument*) : Float64
     fun bg_QTextDocument_idealWidth_(_self_ : Binding::QTextDocument*) : Float64
@@ -4398,19 +4620,19 @@ module Qt
     fun bg_QGraphicsItem_ungrabMouse_(_self_ : Binding::QGraphicsItem*) : Void
     fun bg_QGraphicsItem_grabKeyboard_(_self_ : Binding::QGraphicsItem*) : Void
     fun bg_QGraphicsItem_ungrabKeyboard_(_self_ : Binding::QGraphicsItem*) : Void
-    fun bg_QGraphicsItem_pos_(_self_ : Binding::QGraphicsItem*) : QPointF*
+    fun bg_QGraphicsItem_pos_(_self_ : Binding::QGraphicsItem*) : Binding::QPointF
     fun bg_QGraphicsItem_x_(_self_ : Binding::QGraphicsItem*) : Float64
     fun bg_QGraphicsItem_setX_qreal(_self_ : Binding::QGraphicsItem*, x : Float64) : Void
     fun bg_QGraphicsItem_y_(_self_ : Binding::QGraphicsItem*) : Float64
     fun bg_QGraphicsItem_setY_qreal(_self_ : Binding::QGraphicsItem*, y : Float64) : Void
-    fun bg_QGraphicsItem_scenePos_(_self_ : Binding::QGraphicsItem*) : QPointF*
-    fun bg_QGraphicsItem_setPos_const_QPointF_R(_self_ : Binding::QGraphicsItem*, pos : QPointF*) : Void
+    fun bg_QGraphicsItem_scenePos_(_self_ : Binding::QGraphicsItem*) : Binding::QPointF
+    fun bg_QGraphicsItem_setPos_const_QPointF_R(_self_ : Binding::QGraphicsItem*, pos : QPointF) : Void
     fun bg_QGraphicsItem_setPos_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : Void
     fun bg_QGraphicsItem_moveBy_qreal_qreal(_self_ : Binding::QGraphicsItem*, dx : Float64, dy : Float64) : Void
     fun bg_QGraphicsItem_ensureVisible_(_self_ : Binding::QGraphicsItem*) : Void
-    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : Void
-    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R_int(_self_ : Binding::QGraphicsItem*, rect : QRectF*, xmargin : Int32) : Void
-    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R_int_int(_self_ : Binding::QGraphicsItem*, rect : QRectF*, xmargin : Int32, ymargin : Int32) : Void
+    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Void
+    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R_int(_self_ : Binding::QGraphicsItem*, rect : RectF*, xmargin : Int32) : Void
+    fun bg_QGraphicsItem_ensureVisible_const_QRectF_R_int_int(_self_ : Binding::QGraphicsItem*, rect : RectF*, xmargin : Int32, ymargin : Int32) : Void
     fun bg_QGraphicsItem_ensureVisible_qreal_qreal_qreal_qreal_int_int(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64, xmargin : Int32, ymargin : Int32) : Void
     fun bg_QGraphicsItem_matrix_(_self_ : Binding::QGraphicsItem*) : QMatrix*
     fun bg_QGraphicsItem_sceneMatrix_(_self_ : Binding::QGraphicsItem*) : QMatrix*
@@ -4428,25 +4650,25 @@ module Qt
     fun bg_QGraphicsItem_scale_(_self_ : Binding::QGraphicsItem*) : Float64
     fun bg_QGraphicsItem_transformations_(_self_ : Binding::QGraphicsItem*) : Void*
     fun bg_QGraphicsItem_setTransformations_const_QList_QGraphicsTransform_X__R(_self_ : Binding::QGraphicsItem*, transformations : Void*) : Void
-    fun bg_QGraphicsItem_transformOriginPoint_(_self_ : Binding::QGraphicsItem*) : QPointF*
-    fun bg_QGraphicsItem_setTransformOriginPoint_const_QPointF_R(_self_ : Binding::QGraphicsItem*, origin : QPointF*) : Void
+    fun bg_QGraphicsItem_transformOriginPoint_(_self_ : Binding::QGraphicsItem*) : Binding::QPointF
+    fun bg_QGraphicsItem_setTransformOriginPoint_const_QPointF_R(_self_ : Binding::QGraphicsItem*, origin : QPointF) : Void
     fun bg_QGraphicsItem_setTransformOriginPoint_qreal_qreal(_self_ : Binding::QGraphicsItem*, ax : Float64, ay : Float64) : Void
     fun bg_QGraphicsItem_advance_int(_self_ : Binding::QGraphicsItem*, phase : Int32) : Void
     fun bg_QGraphicsItem_zValue_(_self_ : Binding::QGraphicsItem*) : Float64
     fun bg_QGraphicsItem_setZValue_qreal(_self_ : Binding::QGraphicsItem*, z : Float64) : Void
     fun bg_QGraphicsItem_stackBefore_const_QGraphicsItem_X(_self_ : Binding::QGraphicsItem*, sibling : QGraphicsItem*) : Void
-    fun bg_QGraphicsItem_boundingRect_(_self_ : Binding::QGraphicsItem*) : QRectF*
-    fun bg_QGraphicsItem_childrenBoundingRect_(_self_ : Binding::QGraphicsItem*) : QRectF*
-    fun bg_QGraphicsItem_sceneBoundingRect_(_self_ : Binding::QGraphicsItem*) : QRectF*
+    fun bg_QGraphicsItem_boundingRect_(_self_ : Binding::QGraphicsItem*) : Binding::RectF
+    fun bg_QGraphicsItem_childrenBoundingRect_(_self_ : Binding::QGraphicsItem*) : Binding::RectF
+    fun bg_QGraphicsItem_sceneBoundingRect_(_self_ : Binding::QGraphicsItem*) : Binding::RectF
     fun bg_QGraphicsItem_shape_(_self_ : Binding::QGraphicsItem*) : QPainterPath*
     fun bg_QGraphicsItem_isClipped_(_self_ : Binding::QGraphicsItem*) : Bool
     fun bg_QGraphicsItem_clipPath_(_self_ : Binding::QGraphicsItem*) : QPainterPath*
-    fun bg_QGraphicsItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF) : Bool
     fun bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsItem*, other : QGraphicsItem*, mode : ItemSelectionMode) : Bool
     fun bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsItem*, path : QPainterPath*, mode : ItemSelectionMode) : Bool
     fun bg_QGraphicsItem_collidingItems_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsItem*, mode : ItemSelectionMode) : Void*
     fun bg_QGraphicsItem_isObscured_(_self_ : Binding::QGraphicsItem*) : Bool
-    fun bg_QGraphicsItem_isObscured_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : Bool
+    fun bg_QGraphicsItem_isObscured_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Bool
     fun bg_QGraphicsItem_isObscured_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Bool
     fun bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsItem_opaqueArea_(_self_ : Binding::QGraphicsItem*) : QPainterPath*
@@ -4455,58 +4677,58 @@ module Qt
     fun bg_QGraphicsItem_setBoundingRegionGranularity_qreal(_self_ : Binding::QGraphicsItem*, granularity : Float64) : Void
     fun bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsItem_update_(_self_ : Binding::QGraphicsItem*) : Void
-    fun bg_QGraphicsItem_update_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : Void
+    fun bg_QGraphicsItem_update_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Void
     fun bg_QGraphicsItem_update_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, width : Float64, height : Float64) : Void
     fun bg_QGraphicsItem_scroll_qreal_qreal(_self_ : Binding::QGraphicsItem*, dx : Float64, dy : Float64) : Void
-    fun bg_QGraphicsItem_scroll_qreal_qreal_const_QRectF_R(_self_ : Binding::QGraphicsItem*, dx : Float64, dy : Float64, rect : QRectF*) : Void
-    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPointF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapToParent_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapToScene_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapToParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapToScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : QRectF*) : QRectF*
-    fun bg_QGraphicsItem_mapRectToParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QRectF*
-    fun bg_QGraphicsItem_mapRectToScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QRectF*
+    fun bg_QGraphicsItem_scroll_qreal_qreal_const_QRectF_R(_self_ : Binding::QGraphicsItem*, dx : Float64, dy : Float64, rect : RectF*) : Void
+    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPointF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapToParent_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapToScene_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapToParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapToScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : RectF*) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectToParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectToScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Binding::RectF
     fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapToParent_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapToScene_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, path : QPainterPath*) : QPainterPath*
     fun bg_QGraphicsItem_mapToParent_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, path : QPainterPath*) : QPainterPath*
     fun bg_QGraphicsItem_mapToScene_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, path : QPainterPath*) : QPainterPath*
-    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPointF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapFromParent_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapFromScene_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF*) : QPointF*
-    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapFromParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapFromScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QPolygonF*
-    fun bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : QRectF*) : QRectF*
-    fun bg_QGraphicsItem_mapRectFromParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QRectF*
-    fun bg_QGraphicsItem_mapRectFromScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : QRectF*) : QRectF*
+    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPointF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapFromParent_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapFromScene_const_QPointF_R(_self_ : Binding::QGraphicsItem*, point : QPointF) : Binding::QPointF
+    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapFromParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapFromScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : QPolygonF*
+    fun bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_const_QRectF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, rect : RectF*) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectFromParent_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectFromScene_const_QRectF_R(_self_ : Binding::QGraphicsItem*, rect : RectF*) : Binding::RectF
     fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapFromParent_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapFromScene_const_QPolygonF_R(_self_ : Binding::QGraphicsItem*, polygon : QPolygonF*) : QPolygonF*
     fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, path : QPainterPath*) : QPainterPath*
     fun bg_QGraphicsItem_mapFromParent_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, path : QPainterPath*) : QPainterPath*
     fun bg_QGraphicsItem_mapFromScene_const_QPainterPath_R(_self_ : Binding::QGraphicsItem*, path : QPainterPath*) : QPainterPath*
-    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64) : QPointF*
-    fun bg_QGraphicsItem_mapToParent_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : QPointF*
-    fun bg_QGraphicsItem_mapToScene_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : QPointF*
+    fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
+    fun bg_QGraphicsItem_mapToParent_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
+    fun bg_QGraphicsItem_mapToScene_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
     fun bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
     fun bg_QGraphicsItem_mapToParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
     fun bg_QGraphicsItem_mapToScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
-    fun bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-    fun bg_QGraphicsItem_mapRectToParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-    fun bg_QGraphicsItem_mapRectToScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64) : QPointF*
-    fun bg_QGraphicsItem_mapFromParent_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : QPointF*
-    fun bg_QGraphicsItem_mapFromScene_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : QPointF*
+    fun bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectToParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectToScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
+    fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
+    fun bg_QGraphicsItem_mapFromParent_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
+    fun bg_QGraphicsItem_mapFromScene_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64) : Binding::QPointF
     fun bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
     fun bg_QGraphicsItem_mapFromParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
     fun bg_QGraphicsItem_mapFromScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
-    fun bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-    fun bg_QGraphicsItem_mapRectFromParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-    fun bg_QGraphicsItem_mapRectFromScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
+    fun bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, item : QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectFromParent_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
+    fun bg_QGraphicsItem_mapRectFromScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Binding::RectF
     fun bg_QGraphicsItem_isAncestorOf_const_QGraphicsItem_X(_self_ : Binding::QGraphicsItem*, child : QGraphicsItem*) : Bool
     fun bg_QGraphicsItem_commonAncestorItem_const_QGraphicsItem_X(_self_ : Binding::QGraphicsItem*, other : QGraphicsItem*) : Binding::QGraphicsItem*
     fun bg_QGraphicsItem_isUnderMouse_(_self_ : Binding::QGraphicsItem*) : Bool
@@ -4547,35 +4769,35 @@ module Qt
     fun bg_QGraphicsScene_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
     fun bg_QGraphicsScene_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
     fun bg_QGraphicsScene_CONSTRUCT_QObject_X(parent : QObject*) : Binding::QGraphicsScene*
-    fun bg_QGraphicsScene_CONSTRUCT_const_QRectF_R_QObject_X(scene_rect : QRectF*, parent : QObject*) : Binding::QGraphicsScene*
+    fun bg_QGraphicsScene_CONSTRUCT_const_QRectF_R_QObject_X(scene_rect : RectF*, parent : QObject*) : Binding::QGraphicsScene*
     fun bg_QGraphicsScene_CONSTRUCT_qreal_qreal_qreal_qreal_QObject_X(x : Float64, y : Float64, width : Float64, height : Float64, parent : QObject*) : Binding::QGraphicsScene*
-    fun bg_QGraphicsScene_sceneRect_(_self_ : Binding::QGraphicsScene*) : QRectF*
+    fun bg_QGraphicsScene_sceneRect_(_self_ : Binding::QGraphicsScene*) : Binding::RectF
     fun bg_QGraphicsScene_width_(_self_ : Binding::QGraphicsScene*) : Float64
     fun bg_QGraphicsScene_height_(_self_ : Binding::QGraphicsScene*) : Float64
-    fun bg_QGraphicsScene_setSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Void
+    fun bg_QGraphicsScene_setSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Void
     fun bg_QGraphicsScene_setSceneRect_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsScene*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
     fun bg_QGraphicsScene_render_QPainter_X(_self_ : Binding::QGraphicsScene*, painter : QPainter*) : Void
-    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : QRectF*) : Void
-    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : QRectF*, source : QRectF*) : Void
-    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : QRectF*, source : QRectF*, aspect_ratio_mode : AspectRatioMode) : Void
+    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : RectF*) : Void
+    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : RectF*, source : RectF*) : Void
+    fun bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsScene*, painter : QPainter*, target : RectF*, source : RectF*, aspect_ratio_mode : AspectRatioMode) : Void
     fun bg_QGraphicsScene_itemIndexMethod_(_self_ : Binding::QGraphicsScene*) : GraphicsScene::ItemIndexMethod
     fun bg_QGraphicsScene_setItemIndexMethod_QGraphicsScene__ItemIndexMethod(_self_ : Binding::QGraphicsScene*, method : GraphicsScene::ItemIndexMethod) : Void
     fun bg_QGraphicsScene_isSortCacheEnabled_(_self_ : Binding::QGraphicsScene*) : Bool
     fun bg_QGraphicsScene_setSortCacheEnabled_bool(_self_ : Binding::QGraphicsScene*, enabled : Bool) : Void
     fun bg_QGraphicsScene_bspTreeDepth_(_self_ : Binding::QGraphicsScene*) : Int32
     fun bg_QGraphicsScene_setBspTreeDepth_int(_self_ : Binding::QGraphicsScene*, depth : Int32) : Void
-    fun bg_QGraphicsScene_itemsBoundingRect_(_self_ : Binding::QGraphicsScene*) : QRectF*
+    fun bg_QGraphicsScene_itemsBoundingRect_(_self_ : Binding::QGraphicsScene*) : Binding::RectF
     fun bg_QGraphicsScene_items_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, order : SortOrder) : Void*
-    fun bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, pos : QPointF*, mode : ItemSelectionMode, order : SortOrder) : Void*
-    fun bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, pos : QPointF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
-    fun bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, rect : QRectF*, mode : ItemSelectionMode, order : SortOrder) : Void*
-    fun bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
+    fun bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, pos : QPointF, mode : ItemSelectionMode, order : SortOrder) : Void*
+    fun bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, pos : QPointF, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
+    fun bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, rect : RectF*, mode : ItemSelectionMode, order : SortOrder) : Void*
+    fun bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, rect : RectF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
     fun bg_QGraphicsScene_items_const_QPolygonF_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, polygon : QPolygonF*, mode : ItemSelectionMode, order : SortOrder) : Void*
     fun bg_QGraphicsScene_items_const_QPolygonF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, polygon : QPolygonF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
     fun bg_QGraphicsScene_items_const_QPainterPath_R_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, path : QPainterPath*, mode : ItemSelectionMode, order : SortOrder) : Void*
     fun bg_QGraphicsScene_items_const_QPainterPath_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, path : QPainterPath*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
     fun bg_QGraphicsScene_collidingItems_const_QGraphicsItem_X_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsScene*, item : QGraphicsItem*, mode : ItemSelectionMode) : Void*
-    fun bg_QGraphicsScene_itemAt_const_QPointF_R_const_QTransform_R(_self_ : Binding::QGraphicsScene*, pos : QPointF*, device_transform : QTransform*) : Binding::QGraphicsItem*
+    fun bg_QGraphicsScene_itemAt_const_QPointF_R_const_QTransform_R(_self_ : Binding::QGraphicsScene*, pos : QPointF, device_transform : QTransform*) : Binding::QGraphicsItem*
     fun bg_QGraphicsScene_items_qreal_qreal_qreal_qreal_Qt__ItemSelectionMode_Qt__SortOrder(_self_ : Binding::QGraphicsScene*, x : Float64, y : Float64, w : Float64, h : Float64, mode : ItemSelectionMode, order : SortOrder) : Void*
     fun bg_QGraphicsScene_items_qreal_qreal_qreal_qreal_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(_self_ : Binding::QGraphicsScene*, x : Float64, y : Float64, w : Float64, h : Float64, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Void*
     fun bg_QGraphicsScene_itemAt_qreal_qreal_const_QTransform_R(_self_ : Binding::QGraphicsScene*, x : Float64, y : Float64, device_transform : QTransform*) : Binding::QGraphicsItem*
@@ -4589,9 +4811,9 @@ module Qt
     fun bg_QGraphicsScene_createItemGroup_const_QList_QGraphicsItem_X__R(_self_ : Binding::QGraphicsScene*, items : Void*) : QGraphicsItemGroup*
     fun bg_QGraphicsScene_destroyItemGroup_QGraphicsItemGroup_X(_self_ : Binding::QGraphicsScene*, group : QGraphicsItemGroup*) : Void
     fun bg_QGraphicsScene_addItem_QGraphicsItem_X(_self_ : Binding::QGraphicsScene*, item : QGraphicsItem*) : Void
-    fun bg_QGraphicsScene_addEllipse_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Binding::QGraphicsEllipseItem*
-    fun bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*, pen : QPen*) : Binding::QGraphicsEllipseItem*
-    fun bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R_const_QBrush_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*, pen : QPen*, brush : QBrush*) : Binding::QGraphicsEllipseItem*
+    fun bg_QGraphicsScene_addEllipse_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Binding::QGraphicsEllipseItem*
+    fun bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, rect : RectF*, pen : QPen*) : Binding::QGraphicsEllipseItem*
+    fun bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R_const_QBrush_R(_self_ : Binding::QGraphicsScene*, rect : RectF*, pen : QPen*, brush : QBrush*) : Binding::QGraphicsEllipseItem*
     fun bg_QGraphicsScene_addLine_const_QLineF_R(_self_ : Binding::QGraphicsScene*, line : QLineF*) : QGraphicsLineItem*
     fun bg_QGraphicsScene_addLine_const_QLineF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, line : QLineF*, pen : QPen*) : QGraphicsLineItem*
     fun bg_QGraphicsScene_addPath_const_QPainterPath_R(_self_ : Binding::QGraphicsScene*, path : QPainterPath*) : Binding::QGraphicsPathItem*
@@ -4601,9 +4823,9 @@ module Qt
     fun bg_QGraphicsScene_addPolygon_const_QPolygonF_R(_self_ : Binding::QGraphicsScene*, polygon : QPolygonF*) : Binding::QGraphicsPolygonItem*
     fun bg_QGraphicsScene_addPolygon_const_QPolygonF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, polygon : QPolygonF*, pen : QPen*) : Binding::QGraphicsPolygonItem*
     fun bg_QGraphicsScene_addPolygon_const_QPolygonF_R_const_QPen_R_const_QBrush_R(_self_ : Binding::QGraphicsScene*, polygon : QPolygonF*, pen : QPen*, brush : QBrush*) : Binding::QGraphicsPolygonItem*
-    fun bg_QGraphicsScene_addRect_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Binding::QGraphicsRectItem*
-    fun bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*, pen : QPen*) : Binding::QGraphicsRectItem*
-    fun bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R_const_QBrush_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*, pen : QPen*, brush : QBrush*) : Binding::QGraphicsRectItem*
+    fun bg_QGraphicsScene_addRect_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Binding::QGraphicsRectItem*
+    fun bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R(_self_ : Binding::QGraphicsScene*, rect : RectF*, pen : QPen*) : Binding::QGraphicsRectItem*
+    fun bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R_const_QBrush_R(_self_ : Binding::QGraphicsScene*, rect : RectF*, pen : QPen*, brush : QBrush*) : Binding::QGraphicsRectItem*
     fun bg_QGraphicsScene_addText_const_QString_R(_self_ : Binding::QGraphicsScene*, text : CrystalString) : Binding::QGraphicsTextItem*
     fun bg_QGraphicsScene_addText_const_QString_R_const_QFont_R(_self_ : Binding::QGraphicsScene*, text : CrystalString, font : QFont*) : Binding::QGraphicsTextItem*
     fun bg_QGraphicsScene_addSimpleText_const_QString_R(_self_ : Binding::QGraphicsScene*, text : CrystalString) : Binding::QGraphicsSimpleTextItem*
@@ -4650,10 +4872,10 @@ module Qt
     fun bg_QGraphicsScene_minimumRenderSize_(_self_ : Binding::QGraphicsScene*) : Float64
     fun bg_QGraphicsScene_setMinimumRenderSize_qreal(_self_ : Binding::QGraphicsScene*, min_size : Float64) : Void
     fun bg_QGraphicsScene_update_(_self_ : Binding::QGraphicsScene*) : Void
-    fun bg_QGraphicsScene_update_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Void
+    fun bg_QGraphicsScene_update_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Void
     fun bg_QGraphicsScene_invalidate_(_self_ : Binding::QGraphicsScene*) : Void
-    fun bg_QGraphicsScene_invalidate_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Void
-    fun bg_QGraphicsScene_invalidate_const_QRectF_R_QGraphicsScene__SceneLayers(_self_ : Binding::QGraphicsScene*, rect : QRectF*, layers : GraphicsScene::SceneLayers) : Void
+    fun bg_QGraphicsScene_invalidate_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Void
+    fun bg_QGraphicsScene_invalidate_const_QRectF_R_QGraphicsScene__SceneLayers(_self_ : Binding::QGraphicsScene*, rect : RectF*, layers : GraphicsScene::SceneLayers) : Void
     fun bg_QGraphicsScene_advance_(_self_ : Binding::QGraphicsScene*) : Void
     fun bg_QGraphicsScene_clearSelection_(_self_ : Binding::QGraphicsScene*) : Void
     fun bg_QGraphicsScene_clear_(_self_ : Binding::QGraphicsScene*) : Void
@@ -4675,11 +4897,11 @@ module Qt
     fun bg_QGraphicsScene_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X(_self_ : Binding::QGraphicsScene*, event : QGraphicsSceneMouseEvent*) : Void
     fun bg_QGraphicsScene_wheelEvent_QGraphicsSceneWheelEvent_X(_self_ : Binding::QGraphicsScene*, event : QGraphicsSceneWheelEvent*) : Void
     fun bg_QGraphicsScene_inputMethodEvent_QInputMethodEvent_X(_self_ : Binding::QGraphicsScene*, event : QInputMethodEvent*) : Void
-    fun bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, rect : QRectF*) : Void
-    fun bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, rect : QRectF*) : Void
+    fun bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, rect : RectF*) : Void
+    fun bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsScene*, painter : QPainter*, rect : RectF*) : Void
     fun bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsScene*, painter : QPainter*, num_items : Int32, items : QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsScene_focusNextPrevChild_bool(_self_ : Binding::QGraphicsScene*, next_ : Bool) : Bool
-    fun bg_QGraphicsScene_sceneRectChanged_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : QRectF*) : Void
+    fun bg_QGraphicsScene_sceneRectChanged_const_QRectF_R(_self_ : Binding::QGraphicsScene*, rect : RectF*) : Void
     fun bg_QGraphicsScene_sceneRectChanged_CONNECT_CrystalProc_void__const_QRectFR_(_self_ : Binding::QGraphicsScene*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
     fun bg_QGraphicsScene_selectionChanged_(_self_ : Binding::QGraphicsScene*) : Void
     fun bg_QGraphicsScene_selectionChanged_CONNECT_CrystalProc_void_(_self_ : Binding::QGraphicsScene*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
@@ -4693,9 +4915,9 @@ module Qt
     fun bg_QGraphicsView_CONSTRUCT_QWidget_X(parent : QWidget*) : Binding::QGraphicsView*
     fun bg_QGraphicsView_CONSTRUCT_QGraphicsScene_X_QWidget_X(scene : QGraphicsScene*, parent : QWidget*) : Binding::QGraphicsView*
     fun bg_QGraphicsView_sizeHint_(_self_ : Binding::QGraphicsView*) : QSize*
-    fun bg_QGraphicsView_renderHints_(_self_ : Binding::QGraphicsView*) : PainterRenderHints
-    fun bg_QGraphicsView_setRenderHint_QPainter__RenderHint_bool(_self_ : Binding::QGraphicsView*, hint : PainterRenderHint, enabled : Bool) : Void
-    fun bg_QGraphicsView_setRenderHints_QPainter__RenderHints(_self_ : Binding::QGraphicsView*, hints : PainterRenderHints) : Void
+    fun bg_QGraphicsView_renderHints_(_self_ : Binding::QGraphicsView*) : Painter::RenderHints
+    fun bg_QGraphicsView_setRenderHint_QPainter__RenderHint_bool(_self_ : Binding::QGraphicsView*, hint : Painter::RenderHint, enabled : Bool) : Void
+    fun bg_QGraphicsView_setRenderHints_QPainter__RenderHints(_self_ : Binding::QGraphicsView*, hints : Painter::RenderHints) : Void
     fun bg_QGraphicsView_alignment_(_self_ : Binding::QGraphicsView*) : Alignment
     fun bg_QGraphicsView_setAlignment_Qt__Alignment(_self_ : Binding::QGraphicsView*, alignment : Alignment) : Void
     fun bg_QGraphicsView_transformationAnchor_(_self_ : Binding::QGraphicsView*) : GraphicsView::ViewportAnchor
@@ -4711,7 +4933,7 @@ module Qt
     fun bg_QGraphicsView_setDragMode_QGraphicsView__DragMode(_self_ : Binding::QGraphicsView*, mode : GraphicsView::DragMode) : Void
     fun bg_QGraphicsView_rubberBandSelectionMode_(_self_ : Binding::QGraphicsView*) : ItemSelectionMode
     fun bg_QGraphicsView_setRubberBandSelectionMode_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, mode : ItemSelectionMode) : Void
-    fun bg_QGraphicsView_rubberBandRect_(_self_ : Binding::QGraphicsView*) : QRect*
+    fun bg_QGraphicsView_rubberBandRect_(_self_ : Binding::QGraphicsView*) : Binding::Rect
     fun bg_QGraphicsView_cacheMode_(_self_ : Binding::QGraphicsView*) : GraphicsView::CacheMode
     fun bg_QGraphicsView_setCacheMode_QGraphicsView__CacheMode(_self_ : Binding::QGraphicsView*, mode : GraphicsView::CacheMode) : Void
     fun bg_QGraphicsView_resetCachedContent_(_self_ : Binding::QGraphicsView*) : Void
@@ -4719,8 +4941,8 @@ module Qt
     fun bg_QGraphicsView_setInteractive_bool(_self_ : Binding::QGraphicsView*, allowed : Bool) : Void
     fun bg_QGraphicsView_scene_(_self_ : Binding::QGraphicsView*) : Binding::QGraphicsScene*
     fun bg_QGraphicsView_setScene_QGraphicsScene_X(_self_ : Binding::QGraphicsView*, scene : QGraphicsScene*) : Void
-    fun bg_QGraphicsView_sceneRect_(_self_ : Binding::QGraphicsView*) : QRectF*
-    fun bg_QGraphicsView_setSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : QRectF*) : Void
+    fun bg_QGraphicsView_sceneRect_(_self_ : Binding::QGraphicsView*) : Binding::RectF
+    fun bg_QGraphicsView_setSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : RectF*) : Void
     fun bg_QGraphicsView_setSceneRect_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
     fun bg_QGraphicsView_matrix_(_self_ : Binding::QGraphicsView*) : QMatrix*
     fun bg_QGraphicsView_setMatrix_const_QMatrix_R_bool(_self_ : Binding::QGraphicsView*, matrix : QMatrix*, combine : Bool) : Void
@@ -4734,37 +4956,37 @@ module Qt
     fun bg_QGraphicsView_scale_qreal_qreal(_self_ : Binding::QGraphicsView*, sx : Float64, sy : Float64) : Void
     fun bg_QGraphicsView_shear_qreal_qreal(_self_ : Binding::QGraphicsView*, sh : Float64, sv : Float64) : Void
     fun bg_QGraphicsView_translate_qreal_qreal(_self_ : Binding::QGraphicsView*, dx : Float64, dy : Float64) : Void
-    fun bg_QGraphicsView_centerOn_const_QPointF_R(_self_ : Binding::QGraphicsView*, pos : QPointF*) : Void
+    fun bg_QGraphicsView_centerOn_const_QPointF_R(_self_ : Binding::QGraphicsView*, pos : QPointF) : Void
     fun bg_QGraphicsView_centerOn_qreal_qreal(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64) : Void
     fun bg_QGraphicsView_centerOn_const_QGraphicsItem_X(_self_ : Binding::QGraphicsView*, item : QGraphicsItem*) : Void
-    fun bg_QGraphicsView_ensureVisible_const_QRectF_R_int_int(_self_ : Binding::QGraphicsView*, rect : QRectF*, xmargin : Int32, ymargin : Int32) : Void
+    fun bg_QGraphicsView_ensureVisible_const_QRectF_R_int_int(_self_ : Binding::QGraphicsView*, rect : RectF*, xmargin : Int32, ymargin : Int32) : Void
     fun bg_QGraphicsView_ensureVisible_qreal_qreal_qreal_qreal_int_int(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64, w : Float64, h : Float64, xmargin : Int32, ymargin : Int32) : Void
     fun bg_QGraphicsView_ensureVisible_const_QGraphicsItem_X_int_int(_self_ : Binding::QGraphicsView*, item : QGraphicsItem*, xmargin : Int32, ymargin : Int32) : Void
-    fun bg_QGraphicsView_fitInView_const_QRectF_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, rect : QRectF*, aspect_radio_mode : AspectRatioMode) : Void
+    fun bg_QGraphicsView_fitInView_const_QRectF_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, rect : RectF*, aspect_radio_mode : AspectRatioMode) : Void
     fun bg_QGraphicsView_fitInView_qreal_qreal_qreal_qreal_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64, w : Float64, h : Float64, aspect_radio_mode : AspectRatioMode) : Void
     fun bg_QGraphicsView_fitInView_const_QGraphicsItem_X_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, item : QGraphicsItem*, aspect_radio_mode : AspectRatioMode) : Void
     fun bg_QGraphicsView_render_QPainter_X(_self_ : Binding::QGraphicsView*, painter : QPainter*) : Void
-    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : QRectF*) : Void
-    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : QRectF*, source : QRect*) : Void
-    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : QRectF*, source : QRect*, aspect_ratio_mode : AspectRatioMode) : Void
+    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : RectF*) : Void
+    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : RectF*, source : Rect*) : Void
+    fun bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R_Qt__AspectRatioMode(_self_ : Binding::QGraphicsView*, painter : QPainter*, target : RectF*, source : Rect*, aspect_ratio_mode : AspectRatioMode) : Void
     fun bg_QGraphicsView_items_(_self_ : Binding::QGraphicsView*) : Void*
     fun bg_QGraphicsView_items_const_QPoint_R(_self_ : Binding::QGraphicsView*, pos : QPoint) : Void*
     fun bg_QGraphicsView_items_int_int(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32) : Void*
-    fun bg_QGraphicsView_items_const_QRect_R_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, rect : QRect*, mode : ItemSelectionMode) : Void*
+    fun bg_QGraphicsView_items_const_QRect_R_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, rect : Rect*, mode : ItemSelectionMode) : Void*
     fun bg_QGraphicsView_items_int_int_int_int_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32, w : Int32, h : Int32, mode : ItemSelectionMode) : Void*
     fun bg_QGraphicsView_items_const_QPolygon_R_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, polygon : QPolygon*, mode : ItemSelectionMode) : Void*
     fun bg_QGraphicsView_items_const_QPainterPath_R_Qt__ItemSelectionMode(_self_ : Binding::QGraphicsView*, path : QPainterPath*, mode : ItemSelectionMode) : Void*
     fun bg_QGraphicsView_itemAt_const_QPoint_R(_self_ : Binding::QGraphicsView*, pos : QPoint) : Binding::QGraphicsItem*
     fun bg_QGraphicsView_itemAt_int_int(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32) : Binding::QGraphicsItem*
-    fun bg_QGraphicsView_mapToScene_const_QPoint_R(_self_ : Binding::QGraphicsView*, point : QPoint) : QPointF*
-    fun bg_QGraphicsView_mapToScene_const_QRect_R(_self_ : Binding::QGraphicsView*, rect : QRect*) : QPolygonF*
+    fun bg_QGraphicsView_mapToScene_const_QPoint_R(_self_ : Binding::QGraphicsView*, point : QPoint) : Binding::QPointF
+    fun bg_QGraphicsView_mapToScene_const_QRect_R(_self_ : Binding::QGraphicsView*, rect : Rect*) : QPolygonF*
     fun bg_QGraphicsView_mapToScene_const_QPolygon_R(_self_ : Binding::QGraphicsView*, polygon : QPolygon*) : QPolygonF*
     fun bg_QGraphicsView_mapToScene_const_QPainterPath_R(_self_ : Binding::QGraphicsView*, path : QPainterPath*) : QPainterPath*
-    fun bg_QGraphicsView_mapFromScene_const_QPointF_R(_self_ : Binding::QGraphicsView*, point : QPointF*) : Binding::QPoint
-    fun bg_QGraphicsView_mapFromScene_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : QRectF*) : QPolygon*
+    fun bg_QGraphicsView_mapFromScene_const_QPointF_R(_self_ : Binding::QGraphicsView*, point : QPointF) : Binding::QPoint
+    fun bg_QGraphicsView_mapFromScene_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : RectF*) : QPolygon*
     fun bg_QGraphicsView_mapFromScene_const_QPolygonF_R(_self_ : Binding::QGraphicsView*, polygon : QPolygonF*) : QPolygon*
     fun bg_QGraphicsView_mapFromScene_const_QPainterPath_R(_self_ : Binding::QGraphicsView*, path : QPainterPath*) : QPainterPath*
-    fun bg_QGraphicsView_mapToScene_int_int(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32) : QPointF*
+    fun bg_QGraphicsView_mapToScene_int_int(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32) : Binding::QPointF
     fun bg_QGraphicsView_mapToScene_int_int_int_int(_self_ : Binding::QGraphicsView*, x : Int32, y : Int32, w : Int32, h : Int32) : QPolygonF*
     fun bg_QGraphicsView_mapFromScene_qreal_qreal(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64) : Binding::QPoint
     fun bg_QGraphicsView_mapFromScene_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsView*, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygon*
@@ -4773,11 +4995,11 @@ module Qt
     fun bg_QGraphicsView_foregroundBrush_(_self_ : Binding::QGraphicsView*) : Binding::QBrush*
     fun bg_QGraphicsView_setForegroundBrush_const_QBrush_R(_self_ : Binding::QGraphicsView*, brush : QBrush*) : Void
     fun bg_QGraphicsView_invalidateScene_(_self_ : Binding::QGraphicsView*) : Void
-    fun bg_QGraphicsView_invalidateScene_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : QRectF*) : Void
-    fun bg_QGraphicsView_invalidateScene_const_QRectF_R_QGraphicsScene__SceneLayers(_self_ : Binding::QGraphicsView*, rect : QRectF*, layers : GraphicsScene::SceneLayers) : Void
-    fun bg_QGraphicsView_updateSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : QRectF*) : Void
-    fun bg_QGraphicsView_rubberBandChanged_QRect_QPointF_QPointF(_self_ : Binding::QGraphicsView*, viewport_rect : QRect*, from_scene_point : QPointF*, to_scene_point : QPointF*) : Void
-    fun bg_QGraphicsView_rubberBandChanged_CONNECT_CrystalProc_void__QRectR__QPointFR__QPointFR_(_self_ : Binding::QGraphicsView*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
+    fun bg_QGraphicsView_invalidateScene_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : RectF*) : Void
+    fun bg_QGraphicsView_invalidateScene_const_QRectF_R_QGraphicsScene__SceneLayers(_self_ : Binding::QGraphicsView*, rect : RectF*, layers : GraphicsScene::SceneLayers) : Void
+    fun bg_QGraphicsView_updateSceneRect_const_QRectF_R(_self_ : Binding::QGraphicsView*, rect : RectF*) : Void
+    fun bg_QGraphicsView_rubberBandChanged_QRect_QPointF_QPointF(_self_ : Binding::QGraphicsView*, viewport_rect : Rect, from_scene_point : QPointF, to_scene_point : QPointF) : Void
+    fun bg_QGraphicsView_rubberBandChanged_CONNECT_CrystalProc_void__QRect__QPointF__QPointF_(_self_ : Binding::QGraphicsView*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
     fun bg_QGraphicsView_setupViewport_QWidget_X(_self_ : Binding::QGraphicsView*, widget : QWidget*) : Void
     fun bg_QGraphicsView_CONSTRUCT_QGraphicsViewPrivate_R_QWidget_X(unnamed_arg_0 : QGraphicsViewPrivate*, parent : QWidget*) : Binding::QGraphicsView*
     fun bg_QGraphicsView_event_QEvent_X(_self_ : Binding::QGraphicsView*, event : QEvent*) : Bool
@@ -4802,8 +5024,8 @@ module Qt
     fun bg_QGraphicsView_scrollContentsBy_int_int(_self_ : Binding::QGraphicsView*, dx : Int32, dy : Int32) : Void
     fun bg_QGraphicsView_showEvent_QShowEvent_X(_self_ : Binding::QGraphicsView*, event : QShowEvent*) : Void
     fun bg_QGraphicsView_inputMethodEvent_QInputMethodEvent_X(_self_ : Binding::QGraphicsView*, event : QInputMethodEvent*) : Void
-    fun bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, rect : QRectF*) : Void
-    fun bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, rect : QRectF*) : Void
+    fun bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, rect : RectF*) : Void
+    fun bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R(_self_ : Binding::QGraphicsView*, painter : QPainter*, rect : RectF*) : Void
     fun bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X(_self_ : Binding::QGraphicsView*, painter : QPainter*, num_items : Int32, items : QGraphicsItem**, options : QStyleOptionGraphicsItem*) : Void
     fun bg_QGraphicsView_DESTROY_(_self_ : Binding::QGraphicsView*) : Void
     fun bg_QGraphicsObject_metaObject_(_self_ : Binding::QGraphicsObject*) : QMetaObject*
@@ -4842,7 +5064,7 @@ module Qt
     fun bg_QGraphicsObject_CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd : QGraphicsItemPrivate*, parent : QGraphicsItem*) : Binding::QGraphicsObject*
     fun bg_QGraphicsObject_event_QEvent_X(_self_ : Binding::QGraphicsObject*, ev : QEvent*) : Bool
     fun bg_QGraphicsObject_DESTROY_(_self_ : Binding::QGraphicsObject*) : Void
-    fun bg_QGraphicsObject_bg_QGraphicsObject_AS_QGraphicsItem_(_self_ : Binding::QGraphicsObject*) : Binding::QGraphicsItem*
+    fun bg_QGraphicsObject_AS_QGraphicsItem_(_self_ : Binding::QGraphicsObject*) : Binding::QGraphicsItem*
     fun bg_QGraphicsWidget_metaObject_(_self_ : Binding::QGraphicsWidget*) : QMetaObject*
     fun bg_QGraphicsWidget_qt_metacast_const_char_X(_self_ : Binding::QGraphicsWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
@@ -4866,16 +5088,16 @@ module Qt
     fun bg_QGraphicsWidget_resize_const_QSizeF_R(_self_ : Binding::QGraphicsWidget*, size : QSizeF*) : Void
     fun bg_QGraphicsWidget_resize_qreal_qreal(_self_ : Binding::QGraphicsWidget*, w : Float64, h : Float64) : Void
     fun bg_QGraphicsWidget_size_(_self_ : Binding::QGraphicsWidget*) : QSizeF*
-    fun bg_QGraphicsWidget_setGeometry_const_QRectF_R(_self_ : Binding::QGraphicsWidget*, rect : QRectF*) : Void
+    fun bg_QGraphicsWidget_setGeometry_const_QRectF_R(_self_ : Binding::QGraphicsWidget*, rect : RectF*) : Void
     fun bg_QGraphicsWidget_setGeometry_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsWidget*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
-    fun bg_QGraphicsWidget_rect_(_self_ : Binding::QGraphicsWidget*) : QRectF*
+    fun bg_QGraphicsWidget_rect_(_self_ : Binding::QGraphicsWidget*) : Binding::RectF
     fun bg_QGraphicsWidget_setContentsMargins_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsWidget*, left : Float64, top : Float64, right : Float64, bottom : Float64) : Void
     fun bg_QGraphicsWidget_getContentsMargins_qreal_X_qreal_X_qreal_X_qreal_X(_self_ : Binding::QGraphicsWidget*, left : Float64*, top : Float64*, right : Float64*, bottom : Float64*) : Void
     fun bg_QGraphicsWidget_setWindowFrameMargins_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsWidget*, left : Float64, top : Float64, right : Float64, bottom : Float64) : Void
     fun bg_QGraphicsWidget_getWindowFrameMargins_qreal_X_qreal_X_qreal_X_qreal_X(_self_ : Binding::QGraphicsWidget*, left : Float64*, top : Float64*, right : Float64*, bottom : Float64*) : Void
     fun bg_QGraphicsWidget_unsetWindowFrameMargins_(_self_ : Binding::QGraphicsWidget*) : Void
-    fun bg_QGraphicsWidget_windowFrameGeometry_(_self_ : Binding::QGraphicsWidget*) : QRectF*
-    fun bg_QGraphicsWidget_windowFrameRect_(_self_ : Binding::QGraphicsWidget*) : QRectF*
+    fun bg_QGraphicsWidget_windowFrameGeometry_(_self_ : Binding::QGraphicsWidget*) : Binding::RectF
+    fun bg_QGraphicsWidget_windowFrameRect_(_self_ : Binding::QGraphicsWidget*) : Binding::RectF
     fun bg_QGraphicsWidget_windowFlags_(_self_ : Binding::QGraphicsWidget*) : WindowFlags
     fun bg_QGraphicsWidget_windowType_(_self_ : Binding::QGraphicsWidget*) : WindowType
     fun bg_QGraphicsWidget_setWindowFlags_Qt__WindowFlags(_self_ : Binding::QGraphicsWidget*, w_flags : WindowFlags) : Void
@@ -4901,7 +5123,7 @@ module Qt
     fun bg_QGraphicsWidget_type_(_self_ : Binding::QGraphicsWidget*) : Int32
     fun bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsWidget*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsWidget*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
-    fun bg_QGraphicsWidget_boundingRect_(_self_ : Binding::QGraphicsWidget*) : QRectF*
+    fun bg_QGraphicsWidget_boundingRect_(_self_ : Binding::QGraphicsWidget*) : Binding::RectF
     fun bg_QGraphicsWidget_shape_(_self_ : Binding::QGraphicsWidget*) : QPainterPath*
     fun bg_QGraphicsWidget_geometryChanged_(_self_ : Binding::QGraphicsWidget*) : Void
     fun bg_QGraphicsWidget_geometryChanged_CONNECT_CrystalProc_void_(_self_ : Binding::QGraphicsWidget*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
@@ -4914,7 +5136,7 @@ module Qt
     fun bg_QGraphicsWidget_updateGeometry_(_self_ : Binding::QGraphicsWidget*) : Void
     fun bg_QGraphicsWidget_sceneEvent_QEvent_X(_self_ : Binding::QGraphicsWidget*, event : QEvent*) : Bool
     fun bg_QGraphicsWidget_windowFrameEvent_QEvent_X(_self_ : Binding::QGraphicsWidget*, e : QEvent*) : Bool
-    fun bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R(_self_ : Binding::QGraphicsWidget*, pos : QPointF*) : WindowFrameSection
+    fun bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R(_self_ : Binding::QGraphicsWidget*, pos : QPointF) : WindowFrameSection
     fun bg_QGraphicsWidget_event_QEvent_X(_self_ : Binding::QGraphicsWidget*, event : QEvent*) : Bool
     fun bg_QGraphicsWidget_changeEvent_QEvent_X(_self_ : Binding::QGraphicsWidget*, event : QEvent*) : Void
     fun bg_QGraphicsWidget_closeEvent_QCloseEvent_X(_self_ : Binding::QGraphicsWidget*, event : QCloseEvent*) : Void
@@ -4949,9 +5171,9 @@ module Qt
     fun bg_QGraphicsTextItem_setFont_const_QFont_R(_self_ : Binding::QGraphicsTextItem*, font : QFont*) : Void
     fun bg_QGraphicsTextItem_setDefaultTextColor_const_QColor_R(_self_ : Binding::QGraphicsTextItem*, c : QColor*) : Void
     fun bg_QGraphicsTextItem_defaultTextColor_(_self_ : Binding::QGraphicsTextItem*) : Binding::QColor*
-    fun bg_QGraphicsTextItem_boundingRect_(_self_ : Binding::QGraphicsTextItem*) : QRectF*
+    fun bg_QGraphicsTextItem_boundingRect_(_self_ : Binding::QGraphicsTextItem*) : Binding::RectF
     fun bg_QGraphicsTextItem_shape_(_self_ : Binding::QGraphicsTextItem*) : QPainterPath*
-    fun bg_QGraphicsTextItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsTextItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsTextItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsTextItem*, point : QPointF) : Bool
     fun bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsTextItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsTextItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsTextItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsTextItem_opaqueArea_(_self_ : Binding::QGraphicsTextItem*) : QPainterPath*
@@ -5012,18 +5234,18 @@ module Qt
     fun bg_QAbstractGraphicsShapeItem_CONSTRUCT_QAbstractGraphicsShapeItemPrivate_R_QGraphicsItem_X(dd : QAbstractGraphicsShapeItemPrivate*, parent : QGraphicsItem*) : Binding::QAbstractGraphicsShapeItem*
     fun bg_QAbstractGraphicsShapeItem_DESTROY_(_self_ : Binding::QAbstractGraphicsShapeItem*) : Void
     fun bg_QGraphicsEllipseItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : Binding::QGraphicsEllipseItem*
-    fun bg_QGraphicsEllipseItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : Binding::QGraphicsEllipseItem*
+    fun bg_QGraphicsEllipseItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : RectF*, parent : QGraphicsItem*) : Binding::QGraphicsEllipseItem*
     fun bg_QGraphicsEllipseItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : Binding::QGraphicsEllipseItem*
-    fun bg_QGraphicsEllipseItem_rect_(_self_ : Binding::QGraphicsEllipseItem*) : QRectF*
-    fun bg_QGraphicsEllipseItem_setRect_const_QRectF_R(_self_ : Binding::QGraphicsEllipseItem*, rect : QRectF*) : Void
+    fun bg_QGraphicsEllipseItem_rect_(_self_ : Binding::QGraphicsEllipseItem*) : Binding::RectF
+    fun bg_QGraphicsEllipseItem_setRect_const_QRectF_R(_self_ : Binding::QGraphicsEllipseItem*, rect : RectF*) : Void
     fun bg_QGraphicsEllipseItem_setRect_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsEllipseItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
     fun bg_QGraphicsEllipseItem_startAngle_(_self_ : Binding::QGraphicsEllipseItem*) : Int32
     fun bg_QGraphicsEllipseItem_setStartAngle_int(_self_ : Binding::QGraphicsEllipseItem*, angle : Int32) : Void
     fun bg_QGraphicsEllipseItem_spanAngle_(_self_ : Binding::QGraphicsEllipseItem*) : Int32
     fun bg_QGraphicsEllipseItem_setSpanAngle_int(_self_ : Binding::QGraphicsEllipseItem*, angle : Int32) : Void
-    fun bg_QGraphicsEllipseItem_boundingRect_(_self_ : Binding::QGraphicsEllipseItem*) : QRectF*
+    fun bg_QGraphicsEllipseItem_boundingRect_(_self_ : Binding::QGraphicsEllipseItem*) : Binding::RectF
     fun bg_QGraphicsEllipseItem_shape_(_self_ : Binding::QGraphicsEllipseItem*) : QPainterPath*
-    fun bg_QGraphicsEllipseItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsEllipseItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsEllipseItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsEllipseItem*, point : QPointF) : Bool
     fun bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsEllipseItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsEllipseItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsEllipseItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsEllipseItem_opaqueArea_(_self_ : Binding::QGraphicsEllipseItem*) : QPainterPath*
@@ -5034,9 +5256,9 @@ module Qt
     fun bg_QGraphicsPathItem_CONSTRUCT_const_QPainterPath_R_QGraphicsItem_X(path : QPainterPath*, parent : QGraphicsItem*) : Binding::QGraphicsPathItem*
     fun bg_QGraphicsPathItem_path_(_self_ : Binding::QGraphicsPathItem*) : QPainterPath*
     fun bg_QGraphicsPathItem_setPath_const_QPainterPath_R(_self_ : Binding::QGraphicsPathItem*, path : QPainterPath*) : Void
-    fun bg_QGraphicsPathItem_boundingRect_(_self_ : Binding::QGraphicsPathItem*) : QRectF*
+    fun bg_QGraphicsPathItem_boundingRect_(_self_ : Binding::QGraphicsPathItem*) : Binding::RectF
     fun bg_QGraphicsPathItem_shape_(_self_ : Binding::QGraphicsPathItem*) : QPainterPath*
-    fun bg_QGraphicsPathItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPathItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsPathItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPathItem*, point : QPointF) : Bool
     fun bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsPathItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsPathItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsPathItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsPathItem_opaqueArea_(_self_ : Binding::QGraphicsPathItem*) : QPainterPath*
@@ -5049,9 +5271,9 @@ module Qt
     fun bg_QGraphicsPolygonItem_setPolygon_const_QPolygonF_R(_self_ : Binding::QGraphicsPolygonItem*, polygon : QPolygonF*) : Void
     fun bg_QGraphicsPolygonItem_fillRule_(_self_ : Binding::QGraphicsPolygonItem*) : FillRule
     fun bg_QGraphicsPolygonItem_setFillRule_Qt__FillRule(_self_ : Binding::QGraphicsPolygonItem*, rule : FillRule) : Void
-    fun bg_QGraphicsPolygonItem_boundingRect_(_self_ : Binding::QGraphicsPolygonItem*) : QRectF*
+    fun bg_QGraphicsPolygonItem_boundingRect_(_self_ : Binding::QGraphicsPolygonItem*) : Binding::RectF
     fun bg_QGraphicsPolygonItem_shape_(_self_ : Binding::QGraphicsPolygonItem*) : QPainterPath*
-    fun bg_QGraphicsPolygonItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPolygonItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsPolygonItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPolygonItem*, point : QPointF) : Bool
     fun bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsPolygonItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsPolygonItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsPolygonItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsPolygonItem_opaqueArea_(_self_ : Binding::QGraphicsPolygonItem*) : QPainterPath*
@@ -5059,14 +5281,14 @@ module Qt
     fun bg_QGraphicsPolygonItem_supportsExtension_QGraphicsItem__Extension(_self_ : Binding::QGraphicsPolygonItem*, extension : GraphicsItem::Extension) : Bool
     fun bg_QGraphicsPolygonItem_DESTROY_(_self_ : Binding::QGraphicsPolygonItem*) : Void
     fun bg_QGraphicsRectItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : Binding::QGraphicsRectItem*
-    fun bg_QGraphicsRectItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : Binding::QGraphicsRectItem*
+    fun bg_QGraphicsRectItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : RectF*, parent : QGraphicsItem*) : Binding::QGraphicsRectItem*
     fun bg_QGraphicsRectItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : Binding::QGraphicsRectItem*
-    fun bg_QGraphicsRectItem_rect_(_self_ : Binding::QGraphicsRectItem*) : QRectF*
-    fun bg_QGraphicsRectItem_setRect_const_QRectF_R(_self_ : Binding::QGraphicsRectItem*, rect : QRectF*) : Void
+    fun bg_QGraphicsRectItem_rect_(_self_ : Binding::QGraphicsRectItem*) : Binding::RectF
+    fun bg_QGraphicsRectItem_setRect_const_QRectF_R(_self_ : Binding::QGraphicsRectItem*, rect : RectF*) : Void
     fun bg_QGraphicsRectItem_setRect_qreal_qreal_qreal_qreal(_self_ : Binding::QGraphicsRectItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
-    fun bg_QGraphicsRectItem_boundingRect_(_self_ : Binding::QGraphicsRectItem*) : QRectF*
+    fun bg_QGraphicsRectItem_boundingRect_(_self_ : Binding::QGraphicsRectItem*) : Binding::RectF
     fun bg_QGraphicsRectItem_shape_(_self_ : Binding::QGraphicsRectItem*) : QPainterPath*
-    fun bg_QGraphicsRectItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsRectItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsRectItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsRectItem*, point : QPointF) : Bool
     fun bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsRectItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsRectItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsRectItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsRectItem_opaqueArea_(_self_ : Binding::QGraphicsRectItem*) : QPainterPath*
@@ -5079,9 +5301,9 @@ module Qt
     fun bg_QGraphicsSimpleTextItem_text_(_self_ : Binding::QGraphicsSimpleTextItem*) : Binding::CrystalString
     fun bg_QGraphicsSimpleTextItem_setFont_const_QFont_R(_self_ : Binding::QGraphicsSimpleTextItem*, font : QFont*) : Void
     fun bg_QGraphicsSimpleTextItem_font_(_self_ : Binding::QGraphicsSimpleTextItem*) : QFont*
-    fun bg_QGraphicsSimpleTextItem_boundingRect_(_self_ : Binding::QGraphicsSimpleTextItem*) : QRectF*
+    fun bg_QGraphicsSimpleTextItem_boundingRect_(_self_ : Binding::QGraphicsSimpleTextItem*) : Binding::RectF
     fun bg_QGraphicsSimpleTextItem_shape_(_self_ : Binding::QGraphicsSimpleTextItem*) : QPainterPath*
-    fun bg_QGraphicsSimpleTextItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsSimpleTextItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsSimpleTextItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsSimpleTextItem*, point : QPointF) : Bool
     fun bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsSimpleTextItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsSimpleTextItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsSimpleTextItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsSimpleTextItem_opaqueArea_(_self_ : Binding::QGraphicsSimpleTextItem*) : QPainterPath*
@@ -5094,12 +5316,12 @@ module Qt
     fun bg_QGraphicsPixmapItem_setPixmap_const_QPixmap_R(_self_ : Binding::QGraphicsPixmapItem*, pixmap : QPixmap*) : Void
     fun bg_QGraphicsPixmapItem_transformationMode_(_self_ : Binding::QGraphicsPixmapItem*) : TransformationMode
     fun bg_QGraphicsPixmapItem_setTransformationMode_Qt__TransformationMode(_self_ : Binding::QGraphicsPixmapItem*, mode : TransformationMode) : Void
-    fun bg_QGraphicsPixmapItem_offset_(_self_ : Binding::QGraphicsPixmapItem*) : QPointF*
-    fun bg_QGraphicsPixmapItem_setOffset_const_QPointF_R(_self_ : Binding::QGraphicsPixmapItem*, offset : QPointF*) : Void
+    fun bg_QGraphicsPixmapItem_offset_(_self_ : Binding::QGraphicsPixmapItem*) : Binding::QPointF
+    fun bg_QGraphicsPixmapItem_setOffset_const_QPointF_R(_self_ : Binding::QGraphicsPixmapItem*, offset : QPointF) : Void
     fun bg_QGraphicsPixmapItem_setOffset_qreal_qreal(_self_ : Binding::QGraphicsPixmapItem*, x : Float64, y : Float64) : Void
-    fun bg_QGraphicsPixmapItem_boundingRect_(_self_ : Binding::QGraphicsPixmapItem*) : QRectF*
+    fun bg_QGraphicsPixmapItem_boundingRect_(_self_ : Binding::QGraphicsPixmapItem*) : Binding::RectF
     fun bg_QGraphicsPixmapItem_shape_(_self_ : Binding::QGraphicsPixmapItem*) : QPainterPath*
-    fun bg_QGraphicsPixmapItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPixmapItem*, point : QPointF*) : Bool
+    fun bg_QGraphicsPixmapItem_contains_const_QPointF_R(_self_ : Binding::QGraphicsPixmapItem*, point : QPointF) : Bool
     fun bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(_self_ : Binding::QGraphicsPixmapItem*, painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : QWidget*) : Void
     fun bg_QGraphicsPixmapItem_isObscuredBy_const_QGraphicsItem_X(_self_ : Binding::QGraphicsPixmapItem*, item : QGraphicsItem*) : Bool
     fun bg_QGraphicsPixmapItem_opaqueArea_(_self_ : Binding::QGraphicsPixmapItem*) : QPainterPath*
@@ -5255,35 +5477,35 @@ module Qt
     fun bg_QInputEvent_timestamp_(_self_ : Binding::QInputEvent*) : UInt32
     fun bg_QInputEvent_setTimestamp_ulong(_self_ : Binding::QInputEvent*, atimestamp : UInt32) : Void
     fun bg_QInputEvent_DESTROY_(_self_ : Binding::QInputEvent*) : Void
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type : Event::Type, local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource) : Binding::QMouseEvent*
+    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
+    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
+    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : Binding::QMouseEvent*
+    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource) : Binding::QMouseEvent*
     fun bg_QMouseEvent_pos_(_self_ : Binding::QMouseEvent*) : Binding::QPoint
     fun bg_QMouseEvent_globalPos_(_self_ : Binding::QMouseEvent*) : Binding::QPoint
     fun bg_QMouseEvent_x_(_self_ : Binding::QMouseEvent*) : Int32
     fun bg_QMouseEvent_y_(_self_ : Binding::QMouseEvent*) : Int32
     fun bg_QMouseEvent_globalX_(_self_ : Binding::QMouseEvent*) : Int32
     fun bg_QMouseEvent_globalY_(_self_ : Binding::QMouseEvent*) : Int32
-    fun bg_QMouseEvent_localPos_(_self_ : Binding::QMouseEvent*) : QPointF*
-    fun bg_QMouseEvent_windowPos_(_self_ : Binding::QMouseEvent*) : QPointF*
-    fun bg_QMouseEvent_screenPos_(_self_ : Binding::QMouseEvent*) : QPointF*
+    fun bg_QMouseEvent_localPos_(_self_ : Binding::QMouseEvent*) : Binding::QPointF
+    fun bg_QMouseEvent_windowPos_(_self_ : Binding::QMouseEvent*) : Binding::QPointF
+    fun bg_QMouseEvent_screenPos_(_self_ : Binding::QMouseEvent*) : Binding::QPointF
     fun bg_QMouseEvent_button_(_self_ : Binding::QMouseEvent*) : MouseButton
     fun bg_QMouseEvent_buttons_(_self_ : Binding::QMouseEvent*) : MouseButtons
-    fun bg_QMouseEvent_setLocalPos_const_QPointF_R(_self_ : Binding::QMouseEvent*, local_position : QPointF*) : Void
+    fun bg_QMouseEvent_setLocalPos_const_QPointF_R(_self_ : Binding::QMouseEvent*, local_position : QPointF) : Void
     fun bg_QMouseEvent_source_(_self_ : Binding::QMouseEvent*) : MouseEventSource
     fun bg_QMouseEvent_flags_(_self_ : Binding::QMouseEvent*) : MouseEventFlags
     fun bg_QMouseEvent_DESTROY_(_self_ : Binding::QMouseEvent*) : Void
-    fun bg_QEnterEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*) : Binding::QEnterEvent*
+    fun bg_QEnterEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF) : Binding::QEnterEvent*
     fun bg_QEnterEvent_pos_(_self_ : Binding::QEnterEvent*) : Binding::QPoint
     fun bg_QEnterEvent_globalPos_(_self_ : Binding::QEnterEvent*) : Binding::QPoint
     fun bg_QEnterEvent_x_(_self_ : Binding::QEnterEvent*) : Int32
     fun bg_QEnterEvent_y_(_self_ : Binding::QEnterEvent*) : Int32
     fun bg_QEnterEvent_globalX_(_self_ : Binding::QEnterEvent*) : Int32
     fun bg_QEnterEvent_globalY_(_self_ : Binding::QEnterEvent*) : Int32
-    fun bg_QEnterEvent_localPos_(_self_ : Binding::QEnterEvent*) : QPointF*
-    fun bg_QEnterEvent_windowPos_(_self_ : Binding::QEnterEvent*) : QPointF*
-    fun bg_QEnterEvent_screenPos_(_self_ : Binding::QEnterEvent*) : QPointF*
+    fun bg_QEnterEvent_localPos_(_self_ : Binding::QEnterEvent*) : Binding::QPointF
+    fun bg_QEnterEvent_windowPos_(_self_ : Binding::QEnterEvent*) : Binding::QPointF
+    fun bg_QEnterEvent_screenPos_(_self_ : Binding::QEnterEvent*) : Binding::QPointF
     fun bg_QEnterEvent_DESTROY_(_self_ : Binding::QEnterEvent*) : Void
     fun bg_QFocusEvent_CONSTRUCT_QEvent__Type_Qt__FocusReason(type : Event::Type, reason : FocusReason) : Binding::QFocusEvent*
     fun bg_QFocusEvent_gotFocus_(_self_ : Binding::QFocusEvent*) : Bool
@@ -5291,8 +5513,8 @@ module Qt
     fun bg_QFocusEvent_reason_(_self_ : Binding::QFocusEvent*) : FocusReason
     fun bg_QFocusEvent_DESTROY_(_self_ : Binding::QFocusEvent*) : Void
     fun bg_QPaintEvent_CONSTRUCT_const_QRegion_R(paint_region : QRegion*) : Binding::QPaintEvent*
-    fun bg_QPaintEvent_CONSTRUCT_const_QRect_R(paint_rect : QRect*) : Binding::QPaintEvent*
-    fun bg_QPaintEvent_rect_(_self_ : Binding::QPaintEvent*) : QRect*
+    fun bg_QPaintEvent_CONSTRUCT_const_QRect_R(paint_rect : Rect*) : Binding::QPaintEvent*
+    fun bg_QPaintEvent_rect_(_self_ : Binding::QPaintEvent*) : Binding::Rect*
     fun bg_QPaintEvent_region_(_self_ : Binding::QPaintEvent*) : QRegion*
     fun bg_QPaintEvent_DESTROY_(_self_ : Binding::QPaintEvent*) : Void
     fun bg_QMoveEvent_CONSTRUCT_const_QPoint_R_const_QPoint_R(pos : QPoint, old_pos : QPoint) : Binding::QMoveEvent*
@@ -5327,9 +5549,9 @@ module Qt
     fun bg_QInputMethodQueryEvent_CONSTRUCT_Qt__InputMethodQueries(queries : InputMethodQueries) : Binding::QInputMethodQueryEvent*
     fun bg_QInputMethodQueryEvent_queries_(_self_ : Binding::QInputMethodQueryEvent*) : InputMethodQueries
     fun bg_QInputMethodQueryEvent_DESTROY_(_self_ : Binding::QInputMethodQueryEvent*) : Void
-    fun bg_QDropEvent_CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPointF*, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : Binding::QDropEvent*
+    fun bg_QDropEvent_CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPointF, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : Binding::QDropEvent*
     fun bg_QDropEvent_pos_(_self_ : Binding::QDropEvent*) : Binding::QPoint
-    fun bg_QDropEvent_posF_(_self_ : Binding::QDropEvent*) : QPointF*
+    fun bg_QDropEvent_posF_(_self_ : Binding::QDropEvent*) : Binding::QPointF
     fun bg_QDropEvent_mouseButtons_(_self_ : Binding::QDropEvent*) : MouseButtons
     fun bg_QDropEvent_keyboardModifiers_(_self_ : Binding::QDropEvent*) : KeyboardModifiers
     fun bg_QDropEvent_possibleActions_(_self_ : Binding::QDropEvent*) : DropActions
@@ -5374,18 +5596,18 @@ module Qt
     fun bg_QShortcutEvent_shortcutId_(_self_ : Binding::QShortcutEvent*) : Int32
     fun bg_QShortcutEvent_isAmbiguous_(_self_ : Binding::QShortcutEvent*) : Bool
     fun bg_QShortcutEvent_DESTROY_(_self_ : Binding::QShortcutEvent*) : Void
-    fun bg_QScrollPrepareEvent_CONSTRUCT_const_QPointF_R(start_pos : QPointF*) : Binding::QScrollPrepareEvent*
-    fun bg_QScrollPrepareEvent_startPos_(_self_ : Binding::QScrollPrepareEvent*) : QPointF*
+    fun bg_QScrollPrepareEvent_CONSTRUCT_const_QPointF_R(start_pos : QPointF) : Binding::QScrollPrepareEvent*
+    fun bg_QScrollPrepareEvent_startPos_(_self_ : Binding::QScrollPrepareEvent*) : Binding::QPointF
     fun bg_QScrollPrepareEvent_viewportSize_(_self_ : Binding::QScrollPrepareEvent*) : QSizeF*
-    fun bg_QScrollPrepareEvent_contentPosRange_(_self_ : Binding::QScrollPrepareEvent*) : QRectF*
-    fun bg_QScrollPrepareEvent_contentPos_(_self_ : Binding::QScrollPrepareEvent*) : QPointF*
+    fun bg_QScrollPrepareEvent_contentPosRange_(_self_ : Binding::QScrollPrepareEvent*) : Binding::RectF
+    fun bg_QScrollPrepareEvent_contentPos_(_self_ : Binding::QScrollPrepareEvent*) : Binding::QPointF
     fun bg_QScrollPrepareEvent_setViewportSize_const_QSizeF_R(_self_ : Binding::QScrollPrepareEvent*, size : QSizeF*) : Void
-    fun bg_QScrollPrepareEvent_setContentPosRange_const_QRectF_R(_self_ : Binding::QScrollPrepareEvent*, rect : QRectF*) : Void
-    fun bg_QScrollPrepareEvent_setContentPos_const_QPointF_R(_self_ : Binding::QScrollPrepareEvent*, pos : QPointF*) : Void
+    fun bg_QScrollPrepareEvent_setContentPosRange_const_QRectF_R(_self_ : Binding::QScrollPrepareEvent*, rect : RectF*) : Void
+    fun bg_QScrollPrepareEvent_setContentPos_const_QPointF_R(_self_ : Binding::QScrollPrepareEvent*, pos : QPointF) : Void
     fun bg_QScrollPrepareEvent_DESTROY_(_self_ : Binding::QScrollPrepareEvent*) : Void
-    fun bg_QScrollEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos : QPointF*, overshoot : QPointF*, scroll_state : ScrollEvent::ScrollState) : Binding::QScrollEvent*
-    fun bg_QScrollEvent_contentPos_(_self_ : Binding::QScrollEvent*) : QPointF*
-    fun bg_QScrollEvent_overshootDistance_(_self_ : Binding::QScrollEvent*) : QPointF*
+    fun bg_QScrollEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos : QPointF, overshoot : QPointF, scroll_state : ScrollEvent::ScrollState) : Binding::QScrollEvent*
+    fun bg_QScrollEvent_contentPos_(_self_ : Binding::QScrollEvent*) : Binding::QPointF
+    fun bg_QScrollEvent_overshootDistance_(_self_ : Binding::QScrollEvent*) : Binding::QPointF
     fun bg_QScrollEvent_scrollState_(_self_ : Binding::QScrollEvent*) : ScrollEvent::ScrollState
     fun bg_QScrollEvent_DESTROY_(_self_ : Binding::QScrollEvent*) : Void
     fun bg_QScreenOrientationChangeEvent_CONSTRUCT_QScreen_X_Qt__ScreenOrientation(screen : QScreen*, orientation : ScreenOrientation) : Binding::QScreenOrientationChangeEvent*
@@ -5410,7 +5632,7 @@ module Qt
     fun bg_QGestureEvent_isAccepted_Qt__GestureType(_self_ : Binding::QGestureEvent*, unnamed_arg_0 : GestureType) : Bool
     fun bg_QGestureEvent_setWidget_QWidget_X(_self_ : Binding::QGestureEvent*, widget : QWidget*) : Void
     fun bg_QGestureEvent_widget_(_self_ : Binding::QGestureEvent*) : Binding::QWidget*
-    fun bg_QGestureEvent_mapToGraphicsScene_const_QPointF_R(_self_ : Binding::QGestureEvent*, gesture_point : QPointF*) : QPointF*
+    fun bg_QGestureEvent_mapToGraphicsScene_const_QPointF_R(_self_ : Binding::QGestureEvent*, gesture_point : QPointF) : Binding::QPointF
     fun bg_QGestureEvent_DESTROY_(_self_ : Binding::QGestureEvent*) : Void
     fun bg_QGraphicsSceneEvent_CONSTRUCT_QEvent__Type(type : Event::Type) : Binding::QGraphicsSceneEvent*
     fun bg_QGraphicsSceneEvent_widget_(_self_ : Binding::QGraphicsSceneEvent*) : Binding::QWidget*
@@ -5493,14 +5715,278 @@ module Qt
     fun bg_QGesture_CONSTRUCT_QObject_X(parent : QObject*) : Binding::QGesture*
     fun bg_QGesture_gestureType_(_self_ : Binding::QGesture*) : GestureType
     fun bg_QGesture_state_(_self_ : Binding::QGesture*) : GestureState
-    fun bg_QGesture_hotSpot_(_self_ : Binding::QGesture*) : QPointF*
-    fun bg_QGesture_setHotSpot_const_QPointF_R(_self_ : Binding::QGesture*, value : QPointF*) : Void
+    fun bg_QGesture_hotSpot_(_self_ : Binding::QGesture*) : Binding::QPointF
+    fun bg_QGesture_setHotSpot_const_QPointF_R(_self_ : Binding::QGesture*, value : QPointF) : Void
     fun bg_QGesture_hasHotSpot_(_self_ : Binding::QGesture*) : Bool
     fun bg_QGesture_unsetHotSpot_(_self_ : Binding::QGesture*) : Void
     fun bg_QGesture_setGestureCancelPolicy_QGesture__GestureCancelPolicy(_self_ : Binding::QGesture*, policy : Gesture::GestureCancelPolicy) : Void
     fun bg_QGesture_gestureCancelPolicy_(_self_ : Binding::QGesture*) : Gesture::GestureCancelPolicy
     fun bg_QGesture_CONSTRUCT_QGesturePrivate_R_QObject_X(dd : QGesturePrivate*, parent : QObject*) : Binding::QGesture*
     fun bg_QGesture_DESTROY_(_self_ : Binding::QGesture*) : Void
+    fun bg_QPainter_CONSTRUCT_() : Binding::QPainter*
+    fun bg_QPainter_CONSTRUCT_QPaintDevice_X(unnamed_arg_0 : QPaintDevice*) : Binding::QPainter*
+    fun bg_QPainter_device_(_self_ : Binding::QPainter*) : Binding::QPaintDevice*
+    fun bg_QPainter_begin_QPaintDevice_X(_self_ : Binding::QPainter*, unnamed_arg_0 : QPaintDevice*) : Bool
+    fun bg_QPainter_end_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_isActive_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_initFrom_const_QPaintDevice_X(_self_ : Binding::QPainter*, device : QPaintDevice*) : Void
+    fun bg_QPainter_setCompositionMode_QPainter__CompositionMode(_self_ : Binding::QPainter*, mode : Painter::CompositionMode) : Void
+    fun bg_QPainter_compositionMode_(_self_ : Binding::QPainter*) : Painter::CompositionMode
+    fun bg_QPainter_font_(_self_ : Binding::QPainter*) : QFont*
+    fun bg_QPainter_setFont_const_QFont_R(_self_ : Binding::QPainter*, f : QFont*) : Void
+    fun bg_QPainter_fontMetrics_(_self_ : Binding::QPainter*) : QFontMetrics*
+    fun bg_QPainter_fontInfo_(_self_ : Binding::QPainter*) : QFontInfo*
+    fun bg_QPainter_setPen_const_QColor_R(_self_ : Binding::QPainter*, color : QColor*) : Void
+    fun bg_QPainter_setPen_const_QPen_R(_self_ : Binding::QPainter*, pen : QPen*) : Void
+    fun bg_QPainter_setPen_Qt__PenStyle(_self_ : Binding::QPainter*, style : PenStyle) : Void
+    fun bg_QPainter_pen_(_self_ : Binding::QPainter*) : QPen*
+    fun bg_QPainter_setBrush_const_QBrush_R(_self_ : Binding::QPainter*, brush : QBrush*) : Void
+    fun bg_QPainter_setBrush_Qt__BrushStyle(_self_ : Binding::QPainter*, style : BrushStyle) : Void
+    fun bg_QPainter_brush_(_self_ : Binding::QPainter*) : Binding::QBrush*
+    fun bg_QPainter_setBackgroundMode_Qt__BGMode(_self_ : Binding::QPainter*, mode : BgMode) : Void
+    fun bg_QPainter_backgroundMode_(_self_ : Binding::QPainter*) : BgMode
+    fun bg_QPainter_brushOrigin_(_self_ : Binding::QPainter*) : Binding::QPoint
+    fun bg_QPainter_setBrushOrigin_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32) : Void
+    fun bg_QPainter_setBrushOrigin_const_QPoint_R(_self_ : Binding::QPainter*, unnamed_arg_0 : QPoint) : Void
+    fun bg_QPainter_setBrushOrigin_const_QPointF_R(_self_ : Binding::QPainter*, unnamed_arg_0 : QPointF) : Void
+    fun bg_QPainter_setBackground_const_QBrush_R(_self_ : Binding::QPainter*, bg : QBrush*) : Void
+    fun bg_QPainter_background_(_self_ : Binding::QPainter*) : Binding::QBrush*
+    fun bg_QPainter_opacity_(_self_ : Binding::QPainter*) : Float64
+    fun bg_QPainter_setOpacity_qreal(_self_ : Binding::QPainter*, opacity : Float64) : Void
+    fun bg_QPainter_clipRegion_(_self_ : Binding::QPainter*) : QRegion*
+    fun bg_QPainter_clipPath_(_self_ : Binding::QPainter*) : QPainterPath*
+    fun bg_QPainter_setClipRect_const_QRectF_R_Qt__ClipOperation(_self_ : Binding::QPainter*, unnamed_arg_0 : RectF*, op : ClipOperation) : Void
+    fun bg_QPainter_setClipRect_const_QRect_R_Qt__ClipOperation(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, op : ClipOperation) : Void
+    fun bg_QPainter_setClipRect_int_int_int_int_Qt__ClipOperation(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, op : ClipOperation) : Void
+    fun bg_QPainter_setClipRegion_const_QRegion_R_Qt__ClipOperation(_self_ : Binding::QPainter*, unnamed_arg_0 : QRegion*, op : ClipOperation) : Void
+    fun bg_QPainter_setClipPath_const_QPainterPath_R_Qt__ClipOperation(_self_ : Binding::QPainter*, path : QPainterPath*, op : ClipOperation) : Void
+    fun bg_QPainter_setClipping_bool(_self_ : Binding::QPainter*, enable : Bool) : Void
+    fun bg_QPainter_hasClipping_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_clipBoundingRect_(_self_ : Binding::QPainter*) : Binding::RectF
+    fun bg_QPainter_save_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_restore_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_setMatrix_const_QMatrix_R_bool(_self_ : Binding::QPainter*, matrix : QMatrix*, combine : Bool) : Void
+    fun bg_QPainter_matrix_(_self_ : Binding::QPainter*) : QMatrix*
+    fun bg_QPainter_deviceMatrix_(_self_ : Binding::QPainter*) : QMatrix*
+    fun bg_QPainter_resetMatrix_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_setTransform_const_QTransform_R_bool(_self_ : Binding::QPainter*, transform : QTransform*, combine : Bool) : Void
+    fun bg_QPainter_transform_(_self_ : Binding::QPainter*) : QTransform*
+    fun bg_QPainter_deviceTransform_(_self_ : Binding::QPainter*) : QTransform*
+    fun bg_QPainter_resetTransform_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_setWorldMatrix_const_QMatrix_R_bool(_self_ : Binding::QPainter*, matrix : QMatrix*, combine : Bool) : Void
+    fun bg_QPainter_worldMatrix_(_self_ : Binding::QPainter*) : QMatrix*
+    fun bg_QPainter_setWorldTransform_const_QTransform_R_bool(_self_ : Binding::QPainter*, matrix : QTransform*, combine : Bool) : Void
+    fun bg_QPainter_worldTransform_(_self_ : Binding::QPainter*) : QTransform*
+    fun bg_QPainter_combinedMatrix_(_self_ : Binding::QPainter*) : QMatrix*
+    fun bg_QPainter_combinedTransform_(_self_ : Binding::QPainter*) : QTransform*
+    fun bg_QPainter_setMatrixEnabled_bool(_self_ : Binding::QPainter*, enabled : Bool) : Void
+    fun bg_QPainter_matrixEnabled_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_setWorldMatrixEnabled_bool(_self_ : Binding::QPainter*, enabled : Bool) : Void
+    fun bg_QPainter_worldMatrixEnabled_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_scale_qreal_qreal(_self_ : Binding::QPainter*, sx : Float64, sy : Float64) : Void
+    fun bg_QPainter_shear_qreal_qreal(_self_ : Binding::QPainter*, sh : Float64, sv : Float64) : Void
+    fun bg_QPainter_rotate_qreal(_self_ : Binding::QPainter*, a : Float64) : Void
+    fun bg_QPainter_translate_const_QPointF_R(_self_ : Binding::QPainter*, offset : QPointF) : Void
+    fun bg_QPainter_translate_const_QPoint_R(_self_ : Binding::QPainter*, offset : QPoint) : Void
+    fun bg_QPainter_translate_qreal_qreal(_self_ : Binding::QPainter*, dx : Float64, dy : Float64) : Void
+    fun bg_QPainter_window_(_self_ : Binding::QPainter*) : Binding::Rect
+    fun bg_QPainter_setWindow_const_QRect_R(_self_ : Binding::QPainter*, window : Rect*) : Void
+    fun bg_QPainter_setWindow_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
+    fun bg_QPainter_viewport_(_self_ : Binding::QPainter*) : Binding::Rect
+    fun bg_QPainter_setViewport_const_QRect_R(_self_ : Binding::QPainter*, viewport : Rect*) : Void
+    fun bg_QPainter_setViewport_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
+    fun bg_QPainter_setViewTransformEnabled_bool(_self_ : Binding::QPainter*, enable : Bool) : Void
+    fun bg_QPainter_viewTransformEnabled_(_self_ : Binding::QPainter*) : Bool
+    fun bg_QPainter_strokePath_const_QPainterPath_R_const_QPen_R(_self_ : Binding::QPainter*, path : QPainterPath*, pen : QPen*) : Void
+    fun bg_QPainter_fillPath_const_QPainterPath_R_const_QBrush_R(_self_ : Binding::QPainter*, path : QPainterPath*, brush : QBrush*) : Void
+    fun bg_QPainter_drawPath_const_QPainterPath_R(_self_ : Binding::QPainter*, path : QPainterPath*) : Void
+    fun bg_QPainter_drawPoint_const_QPointF_R(_self_ : Binding::QPainter*, pt : QPointF) : Void
+    fun bg_QPainter_drawPoint_const_QPoint_R(_self_ : Binding::QPainter*, p : QPoint) : Void
+    fun bg_QPainter_drawPoint_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32) : Void
+    fun bg_QPainter_drawPoints_const_QPolygonF_R(_self_ : Binding::QPainter*, points : QPolygonF*) : Void
+    fun bg_QPainter_drawPoints_const_QPolygon_R(_self_ : Binding::QPainter*, points : QPolygon*) : Void
+    fun bg_QPainter_drawLine_const_QLineF_R(_self_ : Binding::QPainter*, line : QLineF*) : Void
+    fun bg_QPainter_drawLine_const_QLine_R(_self_ : Binding::QPainter*, line : QLine*) : Void
+    fun bg_QPainter_drawLine_int_int_int_int(_self_ : Binding::QPainter*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+    fun bg_QPainter_drawLine_const_QPoint_R_const_QPoint_R(_self_ : Binding::QPainter*, p1 : QPoint, p2 : QPoint) : Void
+    fun bg_QPainter_drawLine_const_QPointF_R_const_QPointF_R(_self_ : Binding::QPainter*, p1 : QPointF, p2 : QPointF) : Void
+    fun bg_QPainter_drawLines_const_QLineF_X_int(_self_ : Binding::QPainter*, lines : QLineF*, line_count : Int32) : Void
+    fun bg_QPainter_drawLines_const_QVector_QLineF__R(_self_ : Binding::QPainter*, lines : Void*) : Void
+    fun bg_QPainter_drawLines_const_QVector_QPointF__R(_self_ : Binding::QPainter*, point_pairs : Void*) : Void
+    fun bg_QPainter_drawLines_const_QLine_X_int(_self_ : Binding::QPainter*, lines : QLine*, line_count : Int32) : Void
+    fun bg_QPainter_drawLines_const_QVector_QLine__R(_self_ : Binding::QPainter*, lines : Void*) : Void
+    fun bg_QPainter_drawLines_const_QVector_QPoint__R(_self_ : Binding::QPainter*, point_pairs : Void*) : Void
+    fun bg_QPainter_drawRect_const_QRectF_R(_self_ : Binding::QPainter*, rect : RectF*) : Void
+    fun bg_QPainter_drawRect_int_int_int_int(_self_ : Binding::QPainter*, x1 : Int32, y1 : Int32, w : Int32, h : Int32) : Void
+    fun bg_QPainter_drawRect_const_QRect_R(_self_ : Binding::QPainter*, rect : Rect*) : Void
+    fun bg_QPainter_drawRects_const_QRectF_X_int(_self_ : Binding::QPainter*, rects : RectF*, rect_count : Int32) : Void
+    fun bg_QPainter_drawRects_const_QVector_QRectF__R(_self_ : Binding::QPainter*, rectangles : Void*) : Void
+    fun bg_QPainter_drawRects_const_QRect_X_int(_self_ : Binding::QPainter*, rects : Rect*, rect_count : Int32) : Void
+    fun bg_QPainter_drawRects_const_QVector_QRect__R(_self_ : Binding::QPainter*, rectangles : Void*) : Void
+    fun bg_QPainter_drawEllipse_const_QRectF_R(_self_ : Binding::QPainter*, r : RectF*) : Void
+    fun bg_QPainter_drawEllipse_const_QRect_R(_self_ : Binding::QPainter*, r : Rect*) : Void
+    fun bg_QPainter_drawEllipse_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
+    fun bg_QPainter_drawEllipse_const_QPointF_R_qreal_qreal(_self_ : Binding::QPainter*, center : QPointF, rx : Float64, ry : Float64) : Void
+    fun bg_QPainter_drawEllipse_const_QPoint_R_int_int(_self_ : Binding::QPainter*, center : QPoint, rx : Int32, ry : Int32) : Void
+    fun bg_QPainter_drawPolyline_const_QPolygonF_R(_self_ : Binding::QPainter*, polyline : QPolygonF*) : Void
+    fun bg_QPainter_drawPolyline_const_QPolygon_R(_self_ : Binding::QPainter*, polygon : QPolygon*) : Void
+    fun bg_QPainter_drawPolygon_const_QPolygonF_R_Qt__FillRule(_self_ : Binding::QPainter*, polygon : QPolygonF*, fill_rule : FillRule) : Void
+    fun bg_QPainter_drawPolygon_const_QPolygon_R_Qt__FillRule(_self_ : Binding::QPainter*, polygon : QPolygon*, fill_rule : FillRule) : Void
+    fun bg_QPainter_drawConvexPolygon_const_QPolygonF_R(_self_ : Binding::QPainter*, polygon : QPolygonF*) : Void
+    fun bg_QPainter_drawConvexPolygon_const_QPolygon_R(_self_ : Binding::QPainter*, polygon : QPolygon*) : Void
+    fun bg_QPainter_drawArc_const_QRectF_R_int_int(_self_ : Binding::QPainter*, rect : RectF*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawArc_const_QRect_R_int_int(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawArc_int_int_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawPie_const_QRectF_R_int_int(_self_ : Binding::QPainter*, rect : RectF*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawPie_int_int_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawPie_const_QRect_R_int_int(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawChord_const_QRectF_R_int_int(_self_ : Binding::QPainter*, rect : RectF*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawChord_int_int_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawChord_const_QRect_R_int_int(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, a : Int32, alen : Int32) : Void
+    fun bg_QPainter_drawRoundedRect_const_QRectF_R_qreal_qreal_Qt__SizeMode(_self_ : Binding::QPainter*, rect : RectF*, x_radius : Float64, y_radius : Float64, mode : SizeMode) : Void
+    fun bg_QPainter_drawRoundedRect_int_int_int_int_qreal_qreal_Qt__SizeMode(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, x_radius : Float64, y_radius : Float64, mode : SizeMode) : Void
+    fun bg_QPainter_drawRoundedRect_const_QRect_R_qreal_qreal_Qt__SizeMode(_self_ : Binding::QPainter*, rect : Rect*, x_radius : Float64, y_radius : Float64, mode : SizeMode) : Void
+    fun bg_QPainter_drawRoundRect_const_QRectF_R_int_int(_self_ : Binding::QPainter*, r : RectF*, xround : Int32, yround : Int32) : Void
+    fun bg_QPainter_drawRoundRect_int_int_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : Int32, unnamed_arg_5 : Int32) : Void
+    fun bg_QPainter_drawRoundRect_const_QRect_R_int_int(_self_ : Binding::QPainter*, r : Rect*, xround : Int32, yround : Int32) : Void
+    fun bg_QPainter_drawTiledPixmap_const_QRectF_R_const_QPixmap_R(_self_ : Binding::QPainter*, rect : RectF*, pm : QPixmap*) : Void
+    fun bg_QPainter_drawTiledPixmap_const_QRectF_R_const_QPixmap_R_const_QPointF_R(_self_ : Binding::QPainter*, rect : RectF*, pm : QPixmap*, offset : QPointF) : Void
+    fun bg_QPainter_drawTiledPixmap_int_int_int_int_const_QPixmap_R_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : QPixmap*, sx : Int32, sy : Int32) : Void
+    fun bg_QPainter_drawTiledPixmap_const_QRect_R_const_QPixmap_R(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, unnamed_arg_1 : QPixmap*) : Void
+    fun bg_QPainter_drawTiledPixmap_const_QRect_R_const_QPixmap_R_const_QPoint_R(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, unnamed_arg_1 : QPixmap*, unnamed_arg_2 : QPoint) : Void
+    fun bg_QPainter_drawPicture_const_QPointF_R_const_QPicture_R(_self_ : Binding::QPainter*, p : QPointF, picture : QPicture*) : Void
+    fun bg_QPainter_drawPicture_int_int_const_QPicture_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, picture : QPicture*) : Void
+    fun bg_QPainter_drawPicture_const_QPoint_R_const_QPicture_R(_self_ : Binding::QPainter*, p : QPoint, picture : QPicture*) : Void
+    fun bg_QPainter_drawPixmap_const_QRectF_R_const_QPixmap_R_const_QRectF_R(_self_ : Binding::QPainter*, target_rect : RectF*, pixmap : QPixmap*, source_rect : RectF*) : Void
+    fun bg_QPainter_drawPixmap_const_QRect_R_const_QPixmap_R_const_QRect_R(_self_ : Binding::QPainter*, target_rect : Rect*, pixmap : QPixmap*, source_rect : Rect*) : Void
+    fun bg_QPainter_drawPixmap_int_int_int_int_const_QPixmap_R_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, pm : QPixmap*, sx : Int32, sy : Int32, sw : Int32, sh : Int32) : Void
+    fun bg_QPainter_drawPixmap_int_int_const_QPixmap_R_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, pm : QPixmap*, sx : Int32, sy : Int32, sw : Int32, sh : Int32) : Void
+    fun bg_QPainter_drawPixmap_const_QPointF_R_const_QPixmap_R_const_QRectF_R(_self_ : Binding::QPainter*, p : QPointF, pm : QPixmap*, sr : RectF*) : Void
+    fun bg_QPainter_drawPixmap_const_QPoint_R_const_QPixmap_R_const_QRect_R(_self_ : Binding::QPainter*, p : QPoint, pm : QPixmap*, sr : Rect*) : Void
+    fun bg_QPainter_drawPixmap_const_QPointF_R_const_QPixmap_R(_self_ : Binding::QPainter*, p : QPointF, pm : QPixmap*) : Void
+    fun bg_QPainter_drawPixmap_const_QPoint_R_const_QPixmap_R(_self_ : Binding::QPainter*, p : QPoint, pm : QPixmap*) : Void
+    fun bg_QPainter_drawPixmap_int_int_const_QPixmap_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, pm : QPixmap*) : Void
+    fun bg_QPainter_drawPixmap_const_QRect_R_const_QPixmap_R(_self_ : Binding::QPainter*, r : Rect*, pm : QPixmap*) : Void
+    fun bg_QPainter_drawPixmap_int_int_int_int_const_QPixmap_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, pm : QPixmap*) : Void
+    fun bg_QPainter_drawImage_const_QRectF_R_const_QImage_R_const_QRectF_R(_self_ : Binding::QPainter*, target_rect : RectF*, image : QImage*, source_rect : RectF*) : Void
+    fun bg_QPainter_drawImage_const_QRectF_R_const_QImage_R_const_QRectF_R_Qt__ImageConversionFlags(_self_ : Binding::QPainter*, target_rect : RectF*, image : QImage*, source_rect : RectF*, flags : ImageConversionFlags) : Void
+    fun bg_QPainter_drawImage_const_QRect_R_const_QImage_R_const_QRect_R(_self_ : Binding::QPainter*, target_rect : Rect*, image : QImage*, source_rect : Rect*) : Void
+    fun bg_QPainter_drawImage_const_QRect_R_const_QImage_R_const_QRect_R_Qt__ImageConversionFlags(_self_ : Binding::QPainter*, target_rect : Rect*, image : QImage*, source_rect : Rect*, flags : ImageConversionFlags) : Void
+    fun bg_QPainter_drawImage_const_QPointF_R_const_QImage_R_const_QRectF_R(_self_ : Binding::QPainter*, p : QPointF, image : QImage*, sr : RectF*) : Void
+    fun bg_QPainter_drawImage_const_QPointF_R_const_QImage_R_const_QRectF_R_Qt__ImageConversionFlags(_self_ : Binding::QPainter*, p : QPointF, image : QImage*, sr : RectF*, flags : ImageConversionFlags) : Void
+    fun bg_QPainter_drawImage_const_QPoint_R_const_QImage_R_const_QRect_R(_self_ : Binding::QPainter*, p : QPoint, image : QImage*, sr : Rect*) : Void
+    fun bg_QPainter_drawImage_const_QPoint_R_const_QImage_R_const_QRect_R_Qt__ImageConversionFlags(_self_ : Binding::QPainter*, p : QPoint, image : QImage*, sr : Rect*, flags : ImageConversionFlags) : Void
+    fun bg_QPainter_drawImage_const_QRectF_R_const_QImage_R(_self_ : Binding::QPainter*, r : RectF*, image : QImage*) : Void
+    fun bg_QPainter_drawImage_const_QRect_R_const_QImage_R(_self_ : Binding::QPainter*, r : Rect*, image : QImage*) : Void
+    fun bg_QPainter_drawImage_const_QPointF_R_const_QImage_R(_self_ : Binding::QPainter*, p : QPointF, image : QImage*) : Void
+    fun bg_QPainter_drawImage_const_QPoint_R_const_QImage_R(_self_ : Binding::QPainter*, p : QPoint, image : QImage*) : Void
+    fun bg_QPainter_drawImage_int_int_const_QImage_R_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, image : QImage*, sx : Int32, sy : Int32, sw : Int32, sh : Int32) : Void
+    fun bg_QPainter_drawImage_int_int_const_QImage_R_int_int_int_int_Qt__ImageConversionFlags(_self_ : Binding::QPainter*, x : Int32, y : Int32, image : QImage*, sx : Int32, sy : Int32, sw : Int32, sh : Int32, flags : ImageConversionFlags) : Void
+    fun bg_QPainter_setLayoutDirection_Qt__LayoutDirection(_self_ : Binding::QPainter*, direction : LayoutDirection) : Void
+    fun bg_QPainter_layoutDirection_(_self_ : Binding::QPainter*) : LayoutDirection
+    fun bg_QPainter_drawGlyphRun_const_QPointF_R_const_QGlyphRun_R(_self_ : Binding::QPainter*, position : QPointF, glyph_run : QGlyphRun*) : Void
+    fun bg_QPainter_drawStaticText_const_QPointF_R_const_QStaticText_R(_self_ : Binding::QPainter*, top_left_position : QPointF, static_text : QStaticText*) : Void
+    fun bg_QPainter_drawStaticText_const_QPoint_R_const_QStaticText_R(_self_ : Binding::QPainter*, top_left_position : QPoint, static_text : QStaticText*) : Void
+    fun bg_QPainter_drawStaticText_int_int_const_QStaticText_R(_self_ : Binding::QPainter*, left : Int32, top : Int32, static_text : QStaticText*) : Void
+    fun bg_QPainter_drawText_const_QPointF_R_const_QString_R(_self_ : Binding::QPainter*, p : QPointF, s : CrystalString) : Void
+    fun bg_QPainter_drawText_const_QPoint_R_const_QString_R(_self_ : Binding::QPainter*, p : QPoint, s : CrystalString) : Void
+    fun bg_QPainter_drawText_int_int_const_QString_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, s : CrystalString) : Void
+    fun bg_QPainter_drawText_const_QPointF_R_const_QString_R_int_int(_self_ : Binding::QPainter*, p : QPointF, str : CrystalString, tf : Int32, justification_padding : Int32) : Void
+    fun bg_QPainter_drawText_const_QRectF_R_int_const_QString_R_QRectF_X(_self_ : Binding::QPainter*, r : RectF*, flags : Int32, text : CrystalString, br : RectF*) : Void
+    fun bg_QPainter_drawText_const_QRect_R_int_const_QString_R_QRect_X(_self_ : Binding::QPainter*, r : Rect*, flags : Int32, text : CrystalString, br : Rect*) : Void
+    fun bg_QPainter_drawText_int_int_int_int_int_const_QString_R_QRect_X(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, flags : Int32, text : CrystalString, br : Rect*) : Void
+    fun bg_QPainter_drawText_const_QRectF_R_const_QString_R(_self_ : Binding::QPainter*, r : RectF*, text : CrystalString) : Void
+    fun bg_QPainter_drawText_const_QRectF_R_const_QString_R_const_QTextOption_R(_self_ : Binding::QPainter*, r : RectF*, text : CrystalString, o : QTextOption*) : Void
+    fun bg_QPainter_boundingRect_const_QRectF_R_int_const_QString_R(_self_ : Binding::QPainter*, rect : RectF*, flags : Int32, text : CrystalString) : Binding::RectF
+    fun bg_QPainter_boundingRect_const_QRect_R_int_const_QString_R(_self_ : Binding::QPainter*, rect : Rect*, flags : Int32, text : CrystalString) : Binding::Rect
+    fun bg_QPainter_boundingRect_int_int_int_int_int_const_QString_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, flags : Int32, text : CrystalString) : Binding::Rect
+    fun bg_QPainter_boundingRect_const_QRectF_R_const_QString_R(_self_ : Binding::QPainter*, rect : RectF*, text : CrystalString) : Binding::RectF
+    fun bg_QPainter_boundingRect_const_QRectF_R_const_QString_R_const_QTextOption_R(_self_ : Binding::QPainter*, rect : RectF*, text : CrystalString, o : QTextOption*) : Binding::RectF
+    fun bg_QPainter_drawTextItem_const_QPointF_R_const_QTextItem_R(_self_ : Binding::QPainter*, p : QPointF, ti : QTextItem*) : Void
+    fun bg_QPainter_drawTextItem_int_int_const_QTextItem_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, ti : QTextItem*) : Void
+    fun bg_QPainter_drawTextItem_const_QPoint_R_const_QTextItem_R(_self_ : Binding::QPainter*, p : QPoint, ti : QTextItem*) : Void
+    fun bg_QPainter_fillRect_const_QRectF_R_const_QBrush_R(_self_ : Binding::QPainter*, unnamed_arg_0 : RectF*, unnamed_arg_1 : QBrush*) : Void
+    fun bg_QPainter_fillRect_int_int_int_int_const_QBrush_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : QBrush*) : Void
+    fun bg_QPainter_fillRect_const_QRect_R_const_QBrush_R(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, unnamed_arg_1 : QBrush*) : Void
+    fun bg_QPainter_fillRect_const_QRectF_R_const_QColor_R(_self_ : Binding::QPainter*, unnamed_arg_0 : RectF*, color : QColor*) : Void
+    fun bg_QPainter_fillRect_int_int_int_int_const_QColor_R(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, color : QColor*) : Void
+    fun bg_QPainter_fillRect_const_QRect_R_const_QColor_R(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*, color : QColor*) : Void
+    fun bg_QPainter_fillRect_int_int_int_int_Qt__GlobalColor(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, c : GlobalColor) : Void
+    fun bg_QPainter_fillRect_const_QRect_R_Qt__GlobalColor(_self_ : Binding::QPainter*, r : Rect*, c : GlobalColor) : Void
+    fun bg_QPainter_fillRect_const_QRectF_R_Qt__GlobalColor(_self_ : Binding::QPainter*, r : RectF*, c : GlobalColor) : Void
+    fun bg_QPainter_fillRect_int_int_int_int_Qt__BrushStyle(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32, style : BrushStyle) : Void
+    fun bg_QPainter_fillRect_const_QRect_R_Qt__BrushStyle(_self_ : Binding::QPainter*, r : Rect*, style : BrushStyle) : Void
+    fun bg_QPainter_fillRect_const_QRectF_R_Qt__BrushStyle(_self_ : Binding::QPainter*, r : RectF*, style : BrushStyle) : Void
+    fun bg_QPainter_eraseRect_const_QRectF_R(_self_ : Binding::QPainter*, unnamed_arg_0 : RectF*) : Void
+    fun bg_QPainter_eraseRect_int_int_int_int(_self_ : Binding::QPainter*, x : Int32, y : Int32, w : Int32, h : Int32) : Void
+    fun bg_QPainter_eraseRect_const_QRect_R(_self_ : Binding::QPainter*, unnamed_arg_0 : Rect*) : Void
+    fun bg_QPainter_setRenderHint_QPainter__RenderHint_bool(_self_ : Binding::QPainter*, hint : Painter::RenderHint, on : Bool) : Void
+    fun bg_QPainter_setRenderHints_QPainter__RenderHints_bool(_self_ : Binding::QPainter*, hints : Painter::RenderHints, on : Bool) : Void
+    fun bg_QPainter_renderHints_(_self_ : Binding::QPainter*) : Painter::RenderHints
+    fun bg_QPainter_testRenderHint_QPainter__RenderHint(_self_ : Binding::QPainter*, hint : Painter::RenderHint) : Bool
+    fun bg_QPainter_paintEngine_(_self_ : Binding::QPainter*) : QPaintEngine*
+    fun bg_QPainter_setRedirected_STATIC_const_QPaintDevice_X_QPaintDevice_X(device : QPaintDevice*, replacement : QPaintDevice*) : Void
+    fun bg_QPainter_setRedirected_STATIC_const_QPaintDevice_X_QPaintDevice_X_const_QPoint_R(device : QPaintDevice*, replacement : QPaintDevice*, offset : QPoint) : Void
+    fun bg_QPainter_restoreRedirected_STATIC_const_QPaintDevice_X(device : QPaintDevice*) : Void
+    fun bg_QPainter_beginNativePainting_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_endNativePainting_(_self_ : Binding::QPainter*) : Void
+    fun bg_QPainter_DESTROY_(_self_ : Binding::QPainter*) : Void
+    fun bg_QLine_CONSTRUCT_() : Binding::QLine*
+    fun bg_QLine_CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1 : QPoint, pt2 : QPoint) : Binding::QLine*
+    fun bg_QLine_CONSTRUCT_int_int_int_int(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Binding::QLine*
+    fun bg_QLine_isNull_(_self_ : Binding::QLine*) : Bool
+    fun bg_QLine_p1_(_self_ : Binding::QLine*) : Binding::QPoint
+    fun bg_QLine_p2_(_self_ : Binding::QLine*) : Binding::QPoint
+    fun bg_QLine_x1_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_y1_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_x2_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_y2_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_dx_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_dy_(_self_ : Binding::QLine*) : Int32
+    fun bg_QLine_translate_const_QPoint_R(_self_ : Binding::QLine*, p : QPoint) : Void
+    fun bg_QLine_translate_int_int(_self_ : Binding::QLine*, dx : Int32, dy : Int32) : Void
+    fun bg_QLine_translated_const_QPoint_R(_self_ : Binding::QLine*, p : QPoint) : Binding::QLine*
+    fun bg_QLine_translated_int_int(_self_ : Binding::QLine*, dx : Int32, dy : Int32) : Binding::QLine*
+    fun bg_QLine_center_(_self_ : Binding::QLine*) : Binding::QPoint
+    fun bg_QLine_setP1_const_QPoint_R(_self_ : Binding::QLine*, p1 : QPoint) : Void
+    fun bg_QLine_setP2_const_QPoint_R(_self_ : Binding::QLine*, p2 : QPoint) : Void
+    fun bg_QLine_setPoints_const_QPoint_R_const_QPoint_R(_self_ : Binding::QLine*, p1 : QPoint, p2 : QPoint) : Void
+    fun bg_QLine_setLine_int_int_int_int(_self_ : Binding::QLine*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+    fun bg_QLine_DESTROY_(_self_ : Binding::QLine*) : Void
+    fun bg_QLineF_CONSTRUCT_() : Binding::QLineF*
+    fun bg_QLineF_CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1 : QPointF, pt2 : QPointF) : Binding::QLineF*
+    fun bg_QLineF_CONSTRUCT_qreal_qreal_qreal_qreal(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Binding::QLineF*
+    fun bg_QLineF_CONSTRUCT_const_QLine_R(line : QLine*) : Binding::QLineF*
+    fun bg_QLineF_fromPolar_STATIC_qreal_qreal(length : Float64, angle : Float64) : Binding::QLineF*
+    fun bg_QLineF_isNull_(_self_ : Binding::QLineF*) : Bool
+    fun bg_QLineF_p1_(_self_ : Binding::QLineF*) : Binding::QPointF
+    fun bg_QLineF_p2_(_self_ : Binding::QLineF*) : Binding::QPointF
+    fun bg_QLineF_x1_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_y1_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_x2_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_y2_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_dx_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_dy_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_length_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_setLength_qreal(_self_ : Binding::QLineF*, len : Float64) : Void
+    fun bg_QLineF_angle_(_self_ : Binding::QLineF*) : Float64
+    fun bg_QLineF_setAngle_qreal(_self_ : Binding::QLineF*, angle : Float64) : Void
+    fun bg_QLineF_angleTo_const_QLineF_R(_self_ : Binding::QLineF*, l : QLineF*) : Float64
+    fun bg_QLineF_unitVector_(_self_ : Binding::QLineF*) : Binding::QLineF*
+    fun bg_QLineF_normalVector_(_self_ : Binding::QLineF*) : Binding::QLineF*
+    fun bg_QLineF_angle_const_QLineF_R(_self_ : Binding::QLineF*, l : QLineF*) : Float64
+    fun bg_QLineF_pointAt_qreal(_self_ : Binding::QLineF*, t : Float64) : Binding::QPointF
+    fun bg_QLineF_translate_const_QPointF_R(_self_ : Binding::QLineF*, p : QPointF) : Void
+    fun bg_QLineF_translate_qreal_qreal(_self_ : Binding::QLineF*, dx : Float64, dy : Float64) : Void
+    fun bg_QLineF_translated_const_QPointF_R(_self_ : Binding::QLineF*, p : QPointF) : Binding::QLineF*
+    fun bg_QLineF_translated_qreal_qreal(_self_ : Binding::QLineF*, dx : Float64, dy : Float64) : Binding::QLineF*
+    fun bg_QLineF_center_(_self_ : Binding::QLineF*) : Binding::QPointF
+    fun bg_QLineF_setP1_const_QPointF_R(_self_ : Binding::QLineF*, p1 : QPointF) : Void
+    fun bg_QLineF_setP2_const_QPointF_R(_self_ : Binding::QLineF*, p2 : QPointF) : Void
+    fun bg_QLineF_setPoints_const_QPointF_R_const_QPointF_R(_self_ : Binding::QLineF*, p1 : QPointF, p2 : QPointF) : Void
+    fun bg_QLineF_setLine_qreal_qreal_qreal_qreal(_self_ : Binding::QLineF*, x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+    fun bg_QLineF_toLine_(_self_ : Binding::QLineF*) : Binding::QLine*
+    fun bg_QLineF_DESTROY_(_self_ : Binding::QLineF*) : Void
   end
   enum CheckState : UInt32
     Unchecked = 0
@@ -5907,6 +6393,29 @@ module Qt
     OddEvenFill = 0
     WindingFill = 1
   end
+  enum BgMode : UInt32
+    TransparentMode = 0
+    OpaqueMode = 1
+  end
+  enum SizeMode : UInt32
+    AbsoluteSize = 0
+    RelativeSize = 1
+  end
+  enum ClipOperation : UInt32
+    NoClip = 0
+    ReplaceClip = 1
+    IntersectClip = 2
+  end
+  enum PenStyle : UInt32
+    NoPen = 0
+    SolidLine = 1
+    DashLine = 2
+    DotLine = 3
+    DashDotLine = 4
+    DashDotDotLine = 5
+    CustomDashLine = 6
+    MPenStyle = 15
+  end
   enum WidgetAttribute : UInt32
     WADisabled = 0
     WAUnderMouse = 1
@@ -6178,23 +6687,6 @@ module Qt
     PdmPhysicalDpiY = 10
     PdmDevicePixelRatio = 11
     PdmDevicePixelRatioScaled = 12
-  end
-  @[Flags]
-  enum PainterRenderHints : UInt32
-    Antialiasing = 1
-    TextAntialiasing = 2
-    SmoothPixmapTransform = 4
-    HighQualityAntialiasing = 8
-    NonCosmeticDefaultPen = 16
-    Qt4CompatiblePainting = 32
-  end
-  enum PainterRenderHint : UInt32
-    Antialiasing = 1
-    TextAntialiasing = 2
-    SmoothPixmapTransform = 4
-    HighQualityAntialiasing = 8
-    NonCosmeticDefaultPen = 16
-    Qt4CompatiblePainting = 32
   end
   @[Flags]
   enum TextOptionFlags : UInt32
@@ -6772,6 +7264,97 @@ module Qt
       Binding.bg_QAbstractEventDispatcher_flush_(self)
     end
   end
+  abstract class PaintDevice 
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def dev_type() : Int32
+      Binding.bg_QPaintDevice_devType_(self)
+    end
+    def painting_active() : Bool
+      Binding.bg_QPaintDevice_paintingActive_(self)
+    end
+    abstract def paint_engine() : QPaintEngine*
+    def width() : Int32
+      Binding.bg_QPaintDevice_width_(self)
+    end
+    def height() : Int32
+      Binding.bg_QPaintDevice_height_(self)
+    end
+    def width_mm() : Int32
+      Binding.bg_QPaintDevice_widthMM_(self)
+    end
+    def height_mm() : Int32
+      Binding.bg_QPaintDevice_heightMM_(self)
+    end
+    def logical_dpi_x() : Int32
+      Binding.bg_QPaintDevice_logicalDpiX_(self)
+    end
+    def logical_dpi_y() : Int32
+      Binding.bg_QPaintDevice_logicalDpiY_(self)
+    end
+    def physical_dpi_x() : Int32
+      Binding.bg_QPaintDevice_physicalDpiX_(self)
+    end
+    def physical_dpi_y() : Int32
+      Binding.bg_QPaintDevice_physicalDpiY_(self)
+    end
+    def device_pixel_ratio() : Int32
+      Binding.bg_QPaintDevice_devicePixelRatio_(self)
+    end
+    def device_pixel_ratio_f() : Float64
+      Binding.bg_QPaintDevice_devicePixelRatioF_(self)
+    end
+    def color_count() : Int32
+      Binding.bg_QPaintDevice_colorCount_(self)
+    end
+    def depth() : Int32
+      Binding.bg_QPaintDevice_depth_(self)
+    end
+    def self.device_pixel_ratio_f_scale() : Float64
+      Binding.bg_QPaintDevice_devicePixelRatioFScale_STATIC_()
+    end
+    protected def initialize()
+      unwrap = Binding.bg_QPaintDevice_CONSTRUCT_()
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(PaintDevice)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ dev_type paint_engine metric init_painter shared_painter ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQPaintDevice.new(
+      bg_QPaintDevice_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} ->(){ self.dev_type() } {% else %} nil {% end %}),
+      bg_QPaintDevice_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} ->(){ self.paint_engine() } {% else %} nil {% end %}),
+      bg_QPaintDevice_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(metric : PaintDeviceMetric){ self.metric(metric) } {% else %} nil {% end %}),
+      bg_QPaintDevice_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QPaintDevice_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
+    )
+    Binding.bg_QPaintDevice_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    protected def metric(metric : PaintDeviceMetric) : Int32
+      Binding.bg_QPaintDevice_metric_QPaintDevice__PaintDeviceMetric(self, metric)
+    end
+    protected def init_painter(painter : Painter) : Void
+      Binding.bg_QPaintDevice_initPainter_QPainter_X(self, painter)
+    end
+    protected def shared_painter() : Painter
+      Painter.new(unwrap: Binding.bg_QPaintDevice_sharedPainter_(self))
+    end
+  end
+  class PaintDeviceImpl < PaintDevice
+    macro inherited
+      {{ raise "You can't sub-class PaintDeviceImpl, inherit from PaintDevice instead" }}
+    end
+    def paint_engine() : QPaintEngine*
+      Binding.bg_QPaintDevice_paintEngine_(self)
+    end
+  end
   class Widget < Object
     @[Flags]
     enum RenderFlags : UInt32
@@ -6780,6 +7363,9 @@ module Qt
       IgnoreMask = 4
     end
     def initialize(@unwrap : Void*)
+    end
+    def as_paint_device() : PaintDeviceImpl
+      PaintDeviceImpl.new(unwrap: Binding.bg_QWidget_AS_QPaintDevice_(self))
     end
     def meta_object() : QMetaObject*
       Binding.bg_QWidget_metaObject_(self)
@@ -6840,8 +7426,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -6902,8 +7488,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -6962,14 +7548,14 @@ module Qt
     def window_modified=(unnamed_arg_0 : Bool) : Void
       Binding.bg_QWidget_setWindowModified_bool(self, unnamed_arg_0)
     end
-    def frame_geometry() : QRect*
-      Binding.bg_QWidget_frameGeometry_(self)
+    def frame_geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_frameGeometry_(self))
     end
-    def geometry() : QRect*
-      Binding.bg_QWidget_geometry_(self)
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_geometry_(self))
     end
-    def normal_geometry() : QRect*
-      Binding.bg_QWidget_normalGeometry_(self)
+    def normal_geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_normalGeometry_(self))
     end
     def x() : Int32
       Binding.bg_QWidget_x_(self)
@@ -6992,11 +7578,11 @@ module Qt
     def height() : Int32
       Binding.bg_QWidget_height_(self)
     end
-    def rect() : QRect*
-      Binding.bg_QWidget_rect_(self)
+    def rect() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_rect_(self))
     end
-    def children_rect() : QRect*
-      Binding.bg_QWidget_childrenRect_(self)
+    def children_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_childrenRect_(self))
     end
     def children_region() : QRegion*
       Binding.bg_QWidget_childrenRegion_(self)
@@ -7166,34 +7752,34 @@ module Qt
     def clear_mask() : Void
       Binding.bg_QWidget_clearMask_(self)
     end
-    def render(target : QPaintDevice*) : Void
+    def render(target : PaintDevice) : Void
       Binding.bg_QWidget_render_QPaintDevice_X(self, target)
     end
-    def render(target : QPaintDevice*, target_offset : Point) : Void
+    def render(target : PaintDevice, target_offset : Point) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R(self, target, target_offset)
     end
-    def render(target : QPaintDevice*, target_offset : Point, source_region : QRegion*) : Void
+    def render(target : PaintDevice, target_offset : Point, source_region : QRegion*) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R(self, target, target_offset, source_region)
     end
-    def render(target : QPaintDevice*, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    def render(target : PaintDevice, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
       Binding.bg_QWidget_render_QPaintDevice_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(self, target, target_offset, source_region, render_flags)
     end
-    def render(painter : QPainter*) : Void
+    def render(painter : Painter) : Void
       Binding.bg_QWidget_render_QPainter_X(self, painter)
     end
-    def render(painter : QPainter*, target_offset : Point) : Void
+    def render(painter : Painter, target_offset : Point) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R(self, painter, target_offset)
     end
-    def render(painter : QPainter*, target_offset : Point, source_region : QRegion*) : Void
+    def render(painter : Painter, target_offset : Point, source_region : QRegion*) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R(self, painter, target_offset, source_region)
     end
-    def render(painter : QPainter*, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
+    def render(painter : Painter, target_offset : Point, source_region : QRegion*, render_flags : Widget::RenderFlags) : Void
       Binding.bg_QWidget_render_QPainter_X_const_QPoint_R_const_QRegion_R_QWidget__RenderFlags(self, painter, target_offset, source_region, render_flags)
     end
     def grab() : Pixmap
       Pixmap.new(unwrap: Binding.bg_QWidget_grab_(self))
     end
-    def grab(rectangle : QRect*) : Pixmap
+    def grab(rectangle : Rect) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QWidget_grab_const_QRect_R(self, rectangle))
     end
     def graphics_effect() : QGraphicsEffect*
@@ -7406,7 +7992,7 @@ module Qt
     def update(x : Int32, y : Int32, w : Int32, h : Int32) : Void
       Binding.bg_QWidget_update_int_int_int_int(self, x, y, w, h)
     end
-    def update(unnamed_arg_0 : QRect*) : Void
+    def update(unnamed_arg_0 : Rect) : Void
       Binding.bg_QWidget_update_const_QRect_R(self, unnamed_arg_0)
     end
     def update(unnamed_arg_0 : QRegion*) : Void
@@ -7415,7 +8001,7 @@ module Qt
     def repaint(x : Int32, y : Int32, w : Int32, h : Int32) : Void
       Binding.bg_QWidget_repaint_int_int_int_int(self, x, y, w, h)
     end
-    def repaint(unnamed_arg_0 : QRect*) : Void
+    def repaint(unnamed_arg_0 : Rect) : Void
       Binding.bg_QWidget_repaint_const_QRect_R(self, unnamed_arg_0)
     end
     def repaint(unnamed_arg_0 : QRegion*) : Void
@@ -7472,7 +8058,7 @@ module Qt
     def set_geometry(x : Int32, y : Int32, w : Int32, h : Int32) : Void
       Binding.bg_QWidget_setGeometry_int_int_int_int(self, x, y, w, h)
     end
-    def geometry=(unnamed_arg_0 : QRect*) : Void
+    def geometry=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QWidget_setGeometry_const_QRect_R(self, unnamed_arg_0)
     end
     def save_geometry() : QByteArray*
@@ -7538,8 +8124,8 @@ module Qt
     def contents_margins() : QMargins*
       Binding.bg_QWidget_contentsMargins_(self)
     end
-    def contents_rect() : QRect*
-      Binding.bg_QWidget_contentsRect_(self)
+    def contents_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QWidget_contentsRect_(self))
     end
     def layout() : Layout
       Layout.new(unwrap: Binding.bg_QWidget_layout_(self))
@@ -7559,7 +8145,7 @@ module Qt
     def scroll(dx : Int32, dy : Int32) : Void
       Binding.bg_QWidget_scroll_int_int(self, dx, dy)
     end
-    def scroll(dx : Int32, dy : Int32, unnamed_arg_2 : QRect*) : Void
+    def scroll(dx : Int32, dy : Int32, unnamed_arg_2 : Rect) : Void
       Binding.bg_QWidget_scroll_int_int_const_QRect_R(self, dx, dy, unnamed_arg_2)
     end
     def focus_widget() : Widget
@@ -7760,11 +8346,11 @@ module Qt
     protected def metric(unnamed_arg_0 : PaintDeviceMetric) : Int32
       Binding.bg_QWidget_metric_QPaintDevice__PaintDeviceMetric(self, unnamed_arg_0)
     end
-    protected def init_painter(painter : QPainter*) : Void
+    protected def init_painter(painter : Painter) : Void
       Binding.bg_QWidget_initPainter_QPainter_X(self, painter)
     end
-    protected def shared_painter() : QPainter*
-      Binding.bg_QWidget_sharedPainter_(self)
+    protected def shared_painter() : Painter
+      Painter.new(unwrap: Binding.bg_QWidget_sharedPainter_(self))
     end
     protected def input_method_event(unnamed_arg_0 : InputMethodEvent) : Void
       Binding.bg_QWidget_inputMethodEvent_QInputMethodEvent_X(self, unnamed_arg_0)
@@ -7837,8 +8423,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -7919,8 +8505,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8128,8 +8714,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8149,6 +8735,9 @@ module Qt
     end
     protected def paint_event(e : PaintEvent) : Void
       Binding.bg_QAbstractButton_paintEvent_QPaintEvent_X(self, e)
+    end
+    def paint_engine() : QPaintEngine*
+      Binding.bg_QPaintDevice_paintEngine_(self)
     end
   end
   class Frame < Widget
@@ -8227,8 +8816,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8289,8 +8878,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8340,10 +8929,10 @@ module Qt
     def mid_line_width=(unnamed_arg_0 : Int32) : Void
       Binding.bg_QFrame_setMidLineWidth_int(self, unnamed_arg_0)
     end
-    def frame_rect() : QRect*
-      Binding.bg_QFrame_frameRect_(self)
+    def frame_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QFrame_frameRect_(self))
     end
-    def frame_rect=(unnamed_arg_0 : QRect*) : Void
+    def frame_rect=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QFrame_setFrameRect_const_QRect_R(self, unnamed_arg_0)
     end
     protected def event(e : Event) : Bool
@@ -8355,7 +8944,7 @@ module Qt
     protected def change_event(unnamed_arg_0 : Event) : Void
       Binding.bg_QFrame_changeEvent_QEvent_X(self, unnamed_arg_0)
     end
-    protected def draw_frame(unnamed_arg_0 : QPainter*) : Void
+    protected def draw_frame(unnamed_arg_0 : Painter) : Void
       Binding.bg_QFrame_drawFrame_QPainter_X(self, unnamed_arg_0)
     end
     protected def initialize(dd : QFramePrivate*, parent : Widget? = nil)
@@ -8405,8 +8994,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8467,8 +9056,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8558,8 +9147,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8684,8 +9273,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -8830,8 +9419,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -8929,8 +9518,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -9022,8 +9611,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -9083,8 +9672,8 @@ module Qt
     def height_for_width(unnamed_arg_0 : Int32) : Int32
       Binding.bg_QMenuBar_heightForWidth_int(self, unnamed_arg_0)
     end
-    def action_geometry(unnamed_arg_0 : Action) : QRect*
-      Binding.bg_QMenuBar_actionGeometry_QAction_X(self, unnamed_arg_0)
+    def action_geometry(unnamed_arg_0 : Action) : Rect
+      Rect.new(unwrap: Binding.bg_QMenuBar_actionGeometry_QAction_X(self, unnamed_arg_0))
     end
     def action_at(unnamed_arg_0 : Point) : Action
       Action.new(unwrap: Binding.bg_QMenuBar_actionAt_const_QPoint_R(self, unnamed_arg_0))
@@ -9229,8 +9818,8 @@ module Qt
       bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -9291,8 +9880,8 @@ module Qt
       bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -9403,8 +9992,8 @@ module Qt
     def size_hint() : QSize*
       Binding.bg_QMenu_sizeHint_(self)
     end
-    def action_geometry(unnamed_arg_0 : Action) : QRect*
-      Binding.bg_QMenu_actionGeometry_QAction_X(self, unnamed_arg_0)
+    def action_geometry(unnamed_arg_0 : Action) : Rect
+      Rect.new(unwrap: Binding.bg_QMenu_actionGeometry_QAction_X(self, unnamed_arg_0))
     end
     def action_at(unnamed_arg_0 : Point) : Action
       Action.new(unwrap: Binding.bg_QMenu_actionAt_const_QPoint_R(self, unnamed_arg_0))
@@ -9566,8 +10155,8 @@ module Qt
       bg_QWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
@@ -9956,8 +10545,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10019,8 +10608,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10281,8 +10870,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10348,8 +10937,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10487,8 +11076,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10554,8 +11143,8 @@ module Qt
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(unnamed_arg_0 : Binding::QEvent*){ self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10653,8 +11242,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10715,8 +11304,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10777,8 +11366,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10839,8 +11428,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11080,8 +11669,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11142,8 +11731,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11296,8 +11885,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11361,8 +11950,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11426,8 +12015,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11542,8 +12131,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11623,8 +12212,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11688,8 +12277,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -12490,7 +13079,7 @@ module Qt
       Binding.bg_QApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X(self, unnamed_arg_0, receiver, unnamed_arg_2)
     end
   end
-  class Image 
+  class Image < PaintDevice
     enum Format : UInt32
       FormatInvalid = 0
       FormatMono = 1
@@ -12522,10 +13111,6 @@ module Qt
     enum InvertMode : UInt32
       InvertRgb = 0
       InvertRgba = 1
-    end
-    @unwrap : Void*
-    def to_unsafe
-      @unwrap
     end
     def initialize(@unwrap : Void*)
     end
@@ -12572,7 +13157,7 @@ module Qt
     def copy() : Image
       Image.new(unwrap: Binding.bg_QImage_copy_(self))
     end
-    def copy(rect : QRect*) : Image
+    def copy(rect : Rect) : Image
       Image.new(unwrap: Binding.bg_QImage_copy_const_QRect_R(self, rect))
     end
     def copy(x : Int32, y : Int32, w : Int32, h : Int32) : Image
@@ -12599,8 +13184,8 @@ module Qt
     def size() : QSize*
       Binding.bg_QImage_size_(self)
     end
-    def rect() : QRect*
-      Binding.bg_QImage_rect_(self)
+    def rect() : Rect
+      Rect.new(unwrap: Binding.bg_QImage_rect_(self))
     end
     def depth() : Int32
       Binding.bg_QImage_depth_(self)
@@ -12819,11 +13404,7 @@ module Qt
       Image.new(unwrap: Binding.bg_QImage_smoothScaled_int_int(self, w, h))
     end
   end
-  class Pixmap 
-    @unwrap : Void*
-    def to_unsafe
-      @unwrap
-    end
+  class Pixmap < PaintDevice
     def initialize(@unwrap : Void*)
     end
     def initialize()
@@ -12879,8 +13460,8 @@ module Qt
     def size() : QSize*
       Binding.bg_QPixmap_size_(self)
     end
-    def rect() : QRect*
-      Binding.bg_QPixmap_rect_(self)
+    def rect() : Rect
+      Rect.new(unwrap: Binding.bg_QPixmap_rect_(self))
     end
     def depth() : Int32
       Binding.bg_QPixmap_depth_(self)
@@ -12894,10 +13475,10 @@ module Qt
     def fill(fill_color : Color) : Void
       Binding.bg_QPixmap_fill_const_QColor_R(self, fill_color)
     end
-    def fill(device : QPaintDevice*, ofs : Point) : Void
+    def fill(device : PaintDevice, ofs : Point) : Void
       Binding.bg_QPixmap_fill_const_QPaintDevice_X_const_QPoint_R(self, device, ofs)
     end
-    def fill(device : QPaintDevice*, xofs : Int32, yofs : Int32) : Void
+    def fill(device : PaintDevice, xofs : Int32, yofs : Int32) : Void
       Binding.bg_QPixmap_fill_const_QPaintDevice_X_int_int(self, device, xofs, yofs)
     end
     def mask() : QBitmap*
@@ -12924,7 +13505,7 @@ module Qt
     def create_mask_from_color(mask_color : Color, mode : MaskMode = MaskMode::MaskInColor) : QBitmap*
       Binding.bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(self, mask_color, mode)
     end
-    def self.grab_widget(widget : Object, rect : QRect*) : Pixmap
+    def self.grab_widget(widget : Object, rect : Rect) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget, rect))
     end
     def self.grab_widget(widget : Object, x : Int32 = 0, y : Int32 = 0, w : Int32 = -1, h : Int32 = -1) : Pixmap
@@ -13005,13 +13586,13 @@ module Qt
     def copy() : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_copy_(self))
     end
-    def copy(rect : QRect*) : Pixmap
+    def copy(rect : Rect) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_copy_const_QRect_R(self, rect))
     end
     def scroll(dx : Int32, dy : Int32, x : Int32, y : Int32, width : Int32, height : Int32, exposed : QRegion*? = nil) : Void
       Binding.bg_QPixmap_scroll_int_int_int_int_int_int_QRegion_X(self, dx, dy, x, y, width, height, exposed)
     end
-    def scroll(dx : Int32, dy : Int32, rect : QRect*, exposed : QRegion*? = nil) : Void
+    def scroll(dx : Int32, dy : Int32, rect : Rect, exposed : QRegion*? = nil) : Void
       Binding.bg_QPixmap_scroll_int_int_const_QRect_R_QRegion_X(self, dx, dy, rect, exposed)
     end
     def cache_key() : Int64
@@ -13196,8 +13777,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13431,8 +14012,8 @@ module Qt
       bg_QLayoutItem_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
       bg_QLayoutItem_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
       bg_QLayoutItem_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions() } {% else %} nil {% end %}),
-      bg_QLayoutItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayoutItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QLayoutItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayoutItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayoutItem_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayoutItem_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
@@ -13460,8 +14041,8 @@ module Qt
       bg_QLayoutItem_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
       bg_QLayoutItem_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
       bg_QLayoutItem_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions() } {% else %} nil {% end %}),
-      bg_QLayoutItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayoutItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QLayoutItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayoutItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayoutItem_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayoutItem_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
@@ -13479,8 +14060,8 @@ module Qt
     abstract def minimum_size() : QSize*
     abstract def maximum_size() : QSize*
     abstract def expanding_directions() : Orientations
-    abstract def geometry=(unnamed_arg_0 : QRect*) : Void
-    abstract def geometry() : QRect*
+    abstract def geometry=(unnamed_arg_0 : Rect) : Void
+    abstract def geometry() : Rect
     abstract def empty?() : Bool
     def has_height_for_width?() : Bool
       Binding.bg_QLayoutItem_hasHeightForWidth_(self)
@@ -13526,11 +14107,11 @@ module Qt
     def expanding_directions() : Orientations
       Binding.bg_QLayoutItem_expandingDirections_(self)
     end
-    def geometry=(unnamed_arg_0 : QRect*) : Void
+    def geometry=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QLayoutItem_setGeometry_const_QRect_R(self, unnamed_arg_0)
     end
-    def geometry() : QRect*
-      Binding.bg_QLayoutItem_geometry_(self)
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QLayoutItem_geometry_(self))
     end
     def empty?() : Bool
       Binding.bg_QLayoutItem_isEmpty_(self)
@@ -13547,8 +14128,8 @@ module Qt
     end
     def initialize(@unwrap : Void*)
     end
-    def as_layout_item() : LayoutItem
-      LayoutItem.new(unwrap: Binding.bg_QLayout_bg_QLayout_AS_QLayoutItem_(self))
+    def as_layout_item() : LayoutItemImpl
+      LayoutItemImpl.new(unwrap: Binding.bg_QLayout_AS_QLayoutItem_(self))
     end
     def meta_object() : QMetaObject*
       Binding.bg_QLayout_metaObject_(self)
@@ -13575,12 +14156,12 @@ module Qt
       bg_QLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions() } {% else %} nil {% end %}),
       bg_QLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
       bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
-      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.item_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.take_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -13618,12 +14199,12 @@ module Qt
       bg_QLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions() } {% else %} nil {% end %}),
       bg_QLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
       bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
-      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.item_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.take_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -13672,8 +14253,8 @@ module Qt
     def contents_margins() : QMargins*
       Binding.bg_QLayout_contentsMargins_(self)
     end
-    def contents_rect() : QRect*
-      Binding.bg_QLayout_contentsRect_(self)
+    def contents_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QLayout_contentsRect_(self))
     end
     def set_alignment(w : Widget, alignment : Alignment) : Bool
       Binding.bg_QLayout_setAlignment_QWidget_X_Qt__Alignment(self, w, alignment)
@@ -13699,8 +14280,8 @@ module Qt
     def invalidate() : Void
       Binding.bg_QLayout_invalidate_(self)
     end
-    def geometry() : QRect*
-      Binding.bg_QLayout_geometry_(self)
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QLayout_geometry_(self))
     end
     def activate() : Bool
       Binding.bg_QLayout_activate_(self)
@@ -13727,7 +14308,7 @@ module Qt
     def maximum_size() : QSize*
       Binding.bg_QLayout_maximumSize_(self)
     end
-    def geometry=(unnamed_arg_0 : QRect*) : Void
+    def geometry=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QLayout_setGeometry_const_QRect_R(self, unnamed_arg_0)
     end
     abstract def item_at(index : Int32) : LayoutItem
@@ -13784,8 +14365,8 @@ module Qt
     protected def adopt_layout(layout : Layout) : Bool
       Binding.bg_QLayout_adoptLayout_QLayout_X(self, layout)
     end
-    protected def alignment_rect(unnamed_arg_0 : QRect*) : QRect*
-      Binding.bg_QLayout_alignmentRect_const_QRect_R(self, unnamed_arg_0)
+    protected def alignment_rect(unnamed_arg_0 : Rect) : Rect
+      Rect.new(unwrap: Binding.bg_QLayout_alignmentRect_const_QRect_R(self, unnamed_arg_0))
     end
     protected def initialize(d : QLayoutPrivate*, unnamed_arg_1 : Layout, unnamed_arg_2 : Widget)
       unwrap = Binding.bg_QLayout_CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d, unnamed_arg_1, unnamed_arg_2)
@@ -13800,12 +14381,12 @@ module Qt
       bg_QLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions() } {% else %} nil {% end %}),
       bg_QLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
       bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
-      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.item_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.take_at(index)) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -13859,11 +14440,11 @@ module Qt
     def expanding_directions() : Orientations
       Binding.bg_QLayoutItem_expandingDirections_(self)
     end
-    def geometry=(unnamed_arg_0 : QRect*) : Void
+    def geometry=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QLayoutItem_setGeometry_const_QRect_R(self, unnamed_arg_0)
     end
-    def geometry() : QRect*
-      Binding.bg_QLayoutItem_geometry_(self)
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QLayoutItem_geometry_(self))
     end
     def empty?() : Bool
       Binding.bg_QLayoutItem_isEmpty_(self)
@@ -13916,8 +14497,8 @@ module Qt
       bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
@@ -14037,7 +14618,7 @@ module Qt
     def count() : Int32
       Binding.bg_QBoxLayout_count_(self)
     end
-    def geometry=(unnamed_arg_0 : QRect*) : Void
+    def geometry=(unnamed_arg_0 : Rect) : Void
       Binding.bg_QBoxLayout_setGeometry_const_QRect_R(self, unnamed_arg_0)
     end
   end
@@ -14080,8 +14661,8 @@ module Qt
       bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
@@ -14123,8 +14704,8 @@ module Qt
       bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
@@ -14182,8 +14763,8 @@ module Qt
       bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
@@ -14225,8 +14806,8 @@ module Qt
       bg_QBoxLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
-      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : QRect*){ self.geometry=(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ self.geometry() } {% else %} nil {% end %}),
+      bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::Rect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()) } {% else %} nil {% end %}),
       bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()) } {% else %} nil {% end %}),
@@ -14243,6 +14824,442 @@ module Qt
     Binding.bg_QVBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
     
+    end
+  end
+  class Rect 
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QRect_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def initialize(topleft : Point, bottomright : Point)
+      unwrap = Binding.bg_QRect_CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft, bottomright)
+    @unwrap = unwrap
+    
+    end
+    def initialize(topleft : Point, size : QSize*)
+      unwrap = Binding.bg_QRect_CONSTRUCT_const_QPoint_R_const_QSize_R(topleft, size)
+    @unwrap = unwrap
+    
+    end
+    def initialize(left : Int32, top : Int32, width : Int32, height : Int32)
+      unwrap = Binding.bg_QRect_CONSTRUCT_int_int_int_int(left, top, width, height)
+    @unwrap = unwrap
+    
+    end
+    def null?() : Bool
+      Binding.bg_QRect_isNull_(self)
+    end
+    def empty?() : Bool
+      Binding.bg_QRect_isEmpty_(self)
+    end
+    def valid?() : Bool
+      Binding.bg_QRect_isValid_(self)
+    end
+    def left() : Int32
+      Binding.bg_QRect_left_(self)
+    end
+    def top() : Int32
+      Binding.bg_QRect_top_(self)
+    end
+    def right() : Int32
+      Binding.bg_QRect_right_(self)
+    end
+    def bottom() : Int32
+      Binding.bg_QRect_bottom_(self)
+    end
+    def normalized() : Rect
+      Rect.new(unwrap: Binding.bg_QRect_normalized_(self))
+    end
+    def x() : Int32
+      Binding.bg_QRect_x_(self)
+    end
+    def y() : Int32
+      Binding.bg_QRect_y_(self)
+    end
+    def left=(pos : Int32) : Void
+      Binding.bg_QRect_setLeft_int(self, pos)
+    end
+    def top=(pos : Int32) : Void
+      Binding.bg_QRect_setTop_int(self, pos)
+    end
+    def right=(pos : Int32) : Void
+      Binding.bg_QRect_setRight_int(self, pos)
+    end
+    def bottom=(pos : Int32) : Void
+      Binding.bg_QRect_setBottom_int(self, pos)
+    end
+    def x=(x : Int32) : Void
+      Binding.bg_QRect_setX_int(self, x)
+    end
+    def y=(y : Int32) : Void
+      Binding.bg_QRect_setY_int(self, y)
+    end
+    def top_left=(p : Point) : Void
+      Binding.bg_QRect_setTopLeft_const_QPoint_R(self, p)
+    end
+    def bottom_right=(p : Point) : Void
+      Binding.bg_QRect_setBottomRight_const_QPoint_R(self, p)
+    end
+    def top_right=(p : Point) : Void
+      Binding.bg_QRect_setTopRight_const_QPoint_R(self, p)
+    end
+    def bottom_left=(p : Point) : Void
+      Binding.bg_QRect_setBottomLeft_const_QPoint_R(self, p)
+    end
+    def top_left() : Point
+      Point.new(unwrap: Binding.bg_QRect_topLeft_(self))
+    end
+    def bottom_right() : Point
+      Point.new(unwrap: Binding.bg_QRect_bottomRight_(self))
+    end
+    def top_right() : Point
+      Point.new(unwrap: Binding.bg_QRect_topRight_(self))
+    end
+    def bottom_left() : Point
+      Point.new(unwrap: Binding.bg_QRect_bottomLeft_(self))
+    end
+    def center() : Point
+      Point.new(unwrap: Binding.bg_QRect_center_(self))
+    end
+    def move_left(pos : Int32) : Void
+      Binding.bg_QRect_moveLeft_int(self, pos)
+    end
+    def move_top(pos : Int32) : Void
+      Binding.bg_QRect_moveTop_int(self, pos)
+    end
+    def move_right(pos : Int32) : Void
+      Binding.bg_QRect_moveRight_int(self, pos)
+    end
+    def move_bottom(pos : Int32) : Void
+      Binding.bg_QRect_moveBottom_int(self, pos)
+    end
+    def move_top_left(p : Point) : Void
+      Binding.bg_QRect_moveTopLeft_const_QPoint_R(self, p)
+    end
+    def move_bottom_right(p : Point) : Void
+      Binding.bg_QRect_moveBottomRight_const_QPoint_R(self, p)
+    end
+    def move_top_right(p : Point) : Void
+      Binding.bg_QRect_moveTopRight_const_QPoint_R(self, p)
+    end
+    def move_bottom_left(p : Point) : Void
+      Binding.bg_QRect_moveBottomLeft_const_QPoint_R(self, p)
+    end
+    def move_center(p : Point) : Void
+      Binding.bg_QRect_moveCenter_const_QPoint_R(self, p)
+    end
+    def translate(dx : Int32, dy : Int32) : Void
+      Binding.bg_QRect_translate_int_int(self, dx, dy)
+    end
+    def translate(p : Point) : Void
+      Binding.bg_QRect_translate_const_QPoint_R(self, p)
+    end
+    def translated(dx : Int32, dy : Int32) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_translated_int_int(self, dx, dy))
+    end
+    def translated(p : Point) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_translated_const_QPoint_R(self, p))
+    end
+    def transposed() : Rect
+      Rect.new(unwrap: Binding.bg_QRect_transposed_(self))
+    end
+    def move_to(x : Int32, t : Int32) : Void
+      Binding.bg_QRect_moveTo_int_int(self, x, t)
+    end
+    def move_to(p : Point) : Void
+      Binding.bg_QRect_moveTo_const_QPoint_R(self, p)
+    end
+    def set_rect(x : Int32, y : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QRect_setRect_int_int_int_int(self, x, y, w, h)
+    end
+    def get_rect(x : Int32*, y : Int32*, w : Int32*, h : Int32*) : Void
+      Binding.bg_QRect_getRect_int_X_int_X_int_X_int_X(self, x, y, w, h)
+    end
+    def set_coords(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+      Binding.bg_QRect_setCoords_int_int_int_int(self, x1, y1, x2, y2)
+    end
+    def get_coords(x1 : Int32*, y1 : Int32*, x2 : Int32*, y2 : Int32*) : Void
+      Binding.bg_QRect_getCoords_int_X_int_X_int_X_int_X(self, x1, y1, x2, y2)
+    end
+    def adjust(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+      Binding.bg_QRect_adjust_int_int_int_int(self, x1, y1, x2, y2)
+    end
+    def adjusted(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_adjusted_int_int_int_int(self, x1, y1, x2, y2))
+    end
+    def size() : QSize*
+      Binding.bg_QRect_size_(self)
+    end
+    def width() : Int32
+      Binding.bg_QRect_width_(self)
+    end
+    def height() : Int32
+      Binding.bg_QRect_height_(self)
+    end
+    def width=(w : Int32) : Void
+      Binding.bg_QRect_setWidth_int(self, w)
+    end
+    def height=(h : Int32) : Void
+      Binding.bg_QRect_setHeight_int(self, h)
+    end
+    def size=(s : QSize*) : Void
+      Binding.bg_QRect_setSize_const_QSize_R(self, s)
+    end
+    def contains(r : Rect, proper : Bool) : Bool
+      Binding.bg_QRect_contains_const_QRect_R_bool(self, r, proper)
+    end
+    def contains(p : Point, proper : Bool) : Bool
+      Binding.bg_QRect_contains_const_QPoint_R_bool(self, p, proper)
+    end
+    def contains(x : Int32, y : Int32) : Bool
+      Binding.bg_QRect_contains_int_int(self, x, y)
+    end
+    def contains(x : Int32, y : Int32, proper : Bool) : Bool
+      Binding.bg_QRect_contains_int_int_bool(self, x, y, proper)
+    end
+    def united(other : Rect) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_united_const_QRect_R(self, other))
+    end
+    def intersected(other : Rect) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_intersected_const_QRect_R(self, other))
+    end
+    def intersects(r : Rect) : Bool
+      Binding.bg_QRect_intersects_const_QRect_R(self, r)
+    end
+    def margins_added(margins : QMargins*) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_marginsAdded_const_QMargins_R(self, margins))
+    end
+    def margins_removed(margins : QMargins*) : Rect
+      Rect.new(unwrap: Binding.bg_QRect_marginsRemoved_const_QMargins_R(self, margins))
+    end
+  end
+  class RectF 
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QRectF_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def initialize(topleft : PointF, size : QSizeF*)
+      unwrap = Binding.bg_QRectF_CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft, size)
+    @unwrap = unwrap
+    
+    end
+    def initialize(topleft : PointF, bottom_right : PointF)
+      unwrap = Binding.bg_QRectF_CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft, bottom_right)
+    @unwrap = unwrap
+    
+    end
+    def initialize(left : Float64, top : Float64, width : Float64, height : Float64)
+      unwrap = Binding.bg_QRectF_CONSTRUCT_qreal_qreal_qreal_qreal(left, top, width, height)
+    @unwrap = unwrap
+    
+    end
+    def initialize(rect : Rect)
+      unwrap = Binding.bg_QRectF_CONSTRUCT_const_QRect_R(rect)
+    @unwrap = unwrap
+    
+    end
+    def null?() : Bool
+      Binding.bg_QRectF_isNull_(self)
+    end
+    def empty?() : Bool
+      Binding.bg_QRectF_isEmpty_(self)
+    end
+    def valid?() : Bool
+      Binding.bg_QRectF_isValid_(self)
+    end
+    def normalized() : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_normalized_(self))
+    end
+    def left() : Float64
+      Binding.bg_QRectF_left_(self)
+    end
+    def top() : Float64
+      Binding.bg_QRectF_top_(self)
+    end
+    def right() : Float64
+      Binding.bg_QRectF_right_(self)
+    end
+    def bottom() : Float64
+      Binding.bg_QRectF_bottom_(self)
+    end
+    def x() : Float64
+      Binding.bg_QRectF_x_(self)
+    end
+    def y() : Float64
+      Binding.bg_QRectF_y_(self)
+    end
+    def left=(pos : Float64) : Void
+      Binding.bg_QRectF_setLeft_qreal(self, pos)
+    end
+    def top=(pos : Float64) : Void
+      Binding.bg_QRectF_setTop_qreal(self, pos)
+    end
+    def right=(pos : Float64) : Void
+      Binding.bg_QRectF_setRight_qreal(self, pos)
+    end
+    def bottom=(pos : Float64) : Void
+      Binding.bg_QRectF_setBottom_qreal(self, pos)
+    end
+    def x=(pos : Float64) : Void
+      Binding.bg_QRectF_setX_qreal(self, pos)
+    end
+    def y=(pos : Float64) : Void
+      Binding.bg_QRectF_setY_qreal(self, pos)
+    end
+    def top_left() : PointF
+      PointF.new(unwrap: Binding.bg_QRectF_topLeft_(self))
+    end
+    def bottom_right() : PointF
+      PointF.new(unwrap: Binding.bg_QRectF_bottomRight_(self))
+    end
+    def top_right() : PointF
+      PointF.new(unwrap: Binding.bg_QRectF_topRight_(self))
+    end
+    def bottom_left() : PointF
+      PointF.new(unwrap: Binding.bg_QRectF_bottomLeft_(self))
+    end
+    def center() : PointF
+      PointF.new(unwrap: Binding.bg_QRectF_center_(self))
+    end
+    def top_left=(p : PointF) : Void
+      Binding.bg_QRectF_setTopLeft_const_QPointF_R(self, p)
+    end
+    def bottom_right=(p : PointF) : Void
+      Binding.bg_QRectF_setBottomRight_const_QPointF_R(self, p)
+    end
+    def top_right=(p : PointF) : Void
+      Binding.bg_QRectF_setTopRight_const_QPointF_R(self, p)
+    end
+    def bottom_left=(p : PointF) : Void
+      Binding.bg_QRectF_setBottomLeft_const_QPointF_R(self, p)
+    end
+    def move_left(pos : Float64) : Void
+      Binding.bg_QRectF_moveLeft_qreal(self, pos)
+    end
+    def move_top(pos : Float64) : Void
+      Binding.bg_QRectF_moveTop_qreal(self, pos)
+    end
+    def move_right(pos : Float64) : Void
+      Binding.bg_QRectF_moveRight_qreal(self, pos)
+    end
+    def move_bottom(pos : Float64) : Void
+      Binding.bg_QRectF_moveBottom_qreal(self, pos)
+    end
+    def move_top_left(p : PointF) : Void
+      Binding.bg_QRectF_moveTopLeft_const_QPointF_R(self, p)
+    end
+    def move_bottom_right(p : PointF) : Void
+      Binding.bg_QRectF_moveBottomRight_const_QPointF_R(self, p)
+    end
+    def move_top_right(p : PointF) : Void
+      Binding.bg_QRectF_moveTopRight_const_QPointF_R(self, p)
+    end
+    def move_bottom_left(p : PointF) : Void
+      Binding.bg_QRectF_moveBottomLeft_const_QPointF_R(self, p)
+    end
+    def move_center(p : PointF) : Void
+      Binding.bg_QRectF_moveCenter_const_QPointF_R(self, p)
+    end
+    def translate(dx : Float64, dy : Float64) : Void
+      Binding.bg_QRectF_translate_qreal_qreal(self, dx, dy)
+    end
+    def translate(p : PointF) : Void
+      Binding.bg_QRectF_translate_const_QPointF_R(self, p)
+    end
+    def translated(dx : Float64, dy : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_translated_qreal_qreal(self, dx, dy))
+    end
+    def translated(p : PointF) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_translated_const_QPointF_R(self, p))
+    end
+    def transposed() : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_transposed_(self))
+    end
+    def move_to(x : Float64, y : Float64) : Void
+      Binding.bg_QRectF_moveTo_qreal_qreal(self, x, y)
+    end
+    def move_to(p : PointF) : Void
+      Binding.bg_QRectF_moveTo_const_QPointF_R(self, p)
+    end
+    def set_rect(x : Float64, y : Float64, w : Float64, h : Float64) : Void
+      Binding.bg_QRectF_setRect_qreal_qreal_qreal_qreal(self, x, y, w, h)
+    end
+    def get_rect(x : Float64*, y : Float64*, w : Float64*, h : Float64*) : Void
+      Binding.bg_QRectF_getRect_qreal_X_qreal_X_qreal_X_qreal_X(self, x, y, w, h)
+    end
+    def set_coords(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+      Binding.bg_QRectF_setCoords_qreal_qreal_qreal_qreal(self, x1, y1, x2, y2)
+    end
+    def get_coords(x1 : Float64*, y1 : Float64*, x2 : Float64*, y2 : Float64*) : Void
+      Binding.bg_QRectF_getCoords_qreal_X_qreal_X_qreal_X_qreal_X(self, x1, y1, x2, y2)
+    end
+    def adjust(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+      Binding.bg_QRectF_adjust_qreal_qreal_qreal_qreal(self, x1, y1, x2, y2)
+    end
+    def adjusted(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_adjusted_qreal_qreal_qreal_qreal(self, x1, y1, x2, y2))
+    end
+    def size() : QSizeF*
+      Binding.bg_QRectF_size_(self)
+    end
+    def width() : Float64
+      Binding.bg_QRectF_width_(self)
+    end
+    def height() : Float64
+      Binding.bg_QRectF_height_(self)
+    end
+    def width=(w : Float64) : Void
+      Binding.bg_QRectF_setWidth_qreal(self, w)
+    end
+    def height=(h : Float64) : Void
+      Binding.bg_QRectF_setHeight_qreal(self, h)
+    end
+    def size=(s : QSizeF*) : Void
+      Binding.bg_QRectF_setSize_const_QSizeF_R(self, s)
+    end
+    def contains(r : RectF) : Bool
+      Binding.bg_QRectF_contains_const_QRectF_R(self, r)
+    end
+    def contains(p : PointF) : Bool
+      Binding.bg_QRectF_contains_const_QPointF_R(self, p)
+    end
+    def contains(x : Float64, y : Float64) : Bool
+      Binding.bg_QRectF_contains_qreal_qreal(self, x, y)
+    end
+    def united(other : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_united_const_QRectF_R(self, other))
+    end
+    def intersected(other : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_intersected_const_QRectF_R(self, other))
+    end
+    def intersects(r : RectF) : Bool
+      Binding.bg_QRectF_intersects_const_QRectF_R(self, r)
+    end
+    def margins_added(margins : QMarginsF*) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_marginsAdded_const_QMarginsF_R(self, margins))
+    end
+    def margins_removed(margins : QMarginsF*) : RectF
+      RectF.new(unwrap: Binding.bg_QRectF_marginsRemoved_const_QMarginsF_R(self, margins))
+    end
+    def to_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QRectF_toRect_(self))
+    end
+    def to_aligned_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QRectF_toAlignedRect_(self))
     end
   end
   class KeySequence 
@@ -14452,8 +15469,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -14514,8 +15531,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -14810,8 +15827,8 @@ module Qt
     def event(unnamed_arg_0 : Event) : Bool
       Binding.bg_QLineEdit_event_QEvent_X(self, unnamed_arg_0)
     end
-    protected def cursor_rect() : QRect*
-      Binding.bg_QLineEdit_cursorRect_(self)
+    protected def cursor_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QLineEdit_cursorRect_(self))
     end
   end
   class TextEdit < AbstractScrollArea
@@ -14905,8 +15922,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
@@ -14975,8 +15992,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
@@ -15124,11 +16141,11 @@ module Qt
     def cursor_for_position(pos : Point) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextEdit_cursorForPosition_const_QPoint_R(self, pos))
     end
-    def cursor_rect(cursor : TextCursor) : QRect*
-      Binding.bg_QTextEdit_cursorRect_const_QTextCursor_R(self, cursor)
+    def cursor_rect(cursor : TextCursor) : Rect
+      Rect.new(unwrap: Binding.bg_QTextEdit_cursorRect_const_QTextCursor_R(self, cursor))
     end
-    def cursor_rect() : QRect*
-      Binding.bg_QTextEdit_cursorRect_(self)
+    def cursor_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QTextEdit_cursorRect_(self))
     end
     def anchor_at(pos : Point) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_anchorAt_const_QPoint_R(self, pos))
@@ -15417,8 +16434,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
@@ -15549,8 +16566,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15616,8 +16633,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15683,8 +16700,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15750,8 +16767,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15817,8 +16834,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16211,8 +17228,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(unnamed_arg_0 : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} ->(next_ : Bool){ self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16518,10 +17535,10 @@ module Qt
     def use_design_metrics() : Bool
       Binding.bg_QTextDocument_useDesignMetrics_(self)
     end
-    def draw_contents(painter : QPainter*) : Void
+    def draw_contents(painter : Painter) : Void
       Binding.bg_QTextDocument_drawContents_QPainter_X(self, painter)
     end
-    def draw_contents(painter : QPainter*, rect : QRectF*) : Void
+    def draw_contents(painter : Painter, rect : RectF) : Void
       Binding.bg_QTextDocument_drawContents_QPainter_X_const_QRectF_R(self, painter, rect)
     end
     def text_width=(width : Float64) : Void
@@ -17311,14 +18328,14 @@ module Qt
     %}
     jump_table = Binding::BgTableQGraphicsItem.new(
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -17556,8 +18573,8 @@ module Qt
     def ungrab_keyboard() : Void
       Binding.bg_QGraphicsItem_ungrabKeyboard_(self)
     end
-    def pos() : QPointF*
-      Binding.bg_QGraphicsItem_pos_(self)
+    def pos() : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_pos_(self))
     end
     def x() : Float64
       Binding.bg_QGraphicsItem_x_(self)
@@ -17571,10 +18588,10 @@ module Qt
     def y=(y : Float64) : Void
       Binding.bg_QGraphicsItem_setY_qreal(self, y)
     end
-    def scene_pos() : QPointF*
-      Binding.bg_QGraphicsItem_scenePos_(self)
+    def scene_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_scenePos_(self))
     end
-    def pos=(pos : QPointF*) : Void
+    def pos=(pos : PointF) : Void
       Binding.bg_QGraphicsItem_setPos_const_QPointF_R(self, pos)
     end
     def set_pos(x : Float64, y : Float64) : Void
@@ -17586,13 +18603,13 @@ module Qt
     def ensure_visible() : Void
       Binding.bg_QGraphicsItem_ensureVisible_(self)
     end
-    def ensure_visible(rect : QRectF*) : Void
+    def ensure_visible(rect : RectF) : Void
       Binding.bg_QGraphicsItem_ensureVisible_const_QRectF_R(self, rect)
     end
-    def ensure_visible(rect : QRectF*, xmargin : Int32 = 50) : Void
+    def ensure_visible(rect : RectF, xmargin : Int32 = 50) : Void
       Binding.bg_QGraphicsItem_ensureVisible_const_QRectF_R_int(self, rect, xmargin)
     end
-    def ensure_visible(rect : QRectF*, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
+    def ensure_visible(rect : RectF, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
       Binding.bg_QGraphicsItem_ensureVisible_const_QRectF_R_int_int(self, rect, xmargin, ymargin)
     end
     def ensure_visible(x : Float64, y : Float64, w : Float64, h : Float64, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
@@ -17646,10 +18663,10 @@ module Qt
     def transformations=(transformations : Enumerable(GraphicsTransform)) : Void
       Binding.bg_QGraphicsItem_setTransformations_const_QList_QGraphicsTransform_X__R(self, BindgenHelper.wrap_container(QList_QGraphicsTransform_X, transformations))
     end
-    def transform_origin_point() : QPointF*
-      Binding.bg_QGraphicsItem_transformOriginPoint_(self)
+    def transform_origin_point() : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_transformOriginPoint_(self))
     end
-    def transform_origin_point=(origin : QPointF*) : Void
+    def transform_origin_point=(origin : PointF) : Void
       Binding.bg_QGraphicsItem_setTransformOriginPoint_const_QPointF_R(self, origin)
     end
     def set_transform_origin_point(ax : Float64, ay : Float64) : Void
@@ -17667,12 +18684,12 @@ module Qt
     def stack_before(sibling : GraphicsItem) : Void
       Binding.bg_QGraphicsItem_stackBefore_const_QGraphicsItem_X(self, sibling)
     end
-    abstract def bounding_rect() : QRectF*
-    def children_bounding_rect() : QRectF*
-      Binding.bg_QGraphicsItem_childrenBoundingRect_(self)
+    abstract def bounding_rect() : RectF
+    def children_bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_childrenBoundingRect_(self))
     end
-    def scene_bounding_rect() : QRectF*
-      Binding.bg_QGraphicsItem_sceneBoundingRect_(self)
+    def scene_bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_sceneBoundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsItem_shape_(self)
@@ -17683,7 +18700,7 @@ module Qt
     def clip_path() : QPainterPath*
       Binding.bg_QGraphicsItem_clipPath_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsItem_contains_const_QPointF_R(self, point)
     end
     def collides_with_item(other : GraphicsItem, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape) : Bool
@@ -17698,7 +18715,7 @@ module Qt
     def obscured?() : Bool
       Binding.bg_QGraphicsItem_isObscured_(self)
     end
-    def is_obscured(rect : QRectF*) : Bool
+    def is_obscured(rect : RectF) : Bool
       Binding.bg_QGraphicsItem_isObscured_const_QRectF_R(self, rect)
     end
     def is_obscured(x : Float64, y : Float64, w : Float64, h : Float64) : Bool
@@ -17719,11 +18736,11 @@ module Qt
     def bounding_region_granularity=(granularity : Float64) : Void
       Binding.bg_QGraphicsItem_setBoundingRegionGranularity_qreal(self, granularity)
     end
-    abstract def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget?) : Void
+    abstract def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget?) : Void
     def update() : Void
       Binding.bg_QGraphicsItem_update_(self)
     end
-    def update(rect : QRectF*) : Void
+    def update(rect : RectF) : Void
       Binding.bg_QGraphicsItem_update_const_QRectF_R(self, rect)
     end
     def update(x : Float64, y : Float64, width : Float64, height : Float64) : Void
@@ -17732,35 +18749,35 @@ module Qt
     def scroll(dx : Float64, dy : Float64) : Void
       Binding.bg_QGraphicsItem_scroll_qreal_qreal(self, dx, dy)
     end
-    def scroll(dx : Float64, dy : Float64, rect : QRectF*) : Void
+    def scroll(dx : Float64, dy : Float64, rect : RectF) : Void
       Binding.bg_QGraphicsItem_scroll_qreal_qreal_const_QRectF_R(self, dx, dy, rect)
     end
-    def map_to_item(item : GraphicsItem, point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPointF_R(self, item, point)
+    def map_to_item(item : GraphicsItem, point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPointF_R(self, item, point))
     end
-    def map_to_parent(point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapToParent_const_QPointF_R(self, point)
+    def map_to_parent(point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToParent_const_QPointF_R(self, point))
     end
-    def map_to_scene(point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapToScene_const_QPointF_R(self, point)
+    def map_to_scene(point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToScene_const_QPointF_R(self, point))
     end
-    def map_to_item(item : GraphicsItem, rect : QRectF*) : QPolygonF*
+    def map_to_item(item : GraphicsItem, rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect)
     end
-    def map_to_parent(rect : QRectF*) : QPolygonF*
+    def map_to_parent(rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToParent_const_QRectF_R(self, rect)
     end
-    def map_to_scene(rect : QRectF*) : QPolygonF*
+    def map_to_scene(rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToScene_const_QRectF_R(self, rect)
     end
-    def map_rect_to_item(item : GraphicsItem, rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect)
+    def map_rect_to_item(item : GraphicsItem, rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect))
     end
-    def map_rect_to_parent(rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToParent_const_QRectF_R(self, rect)
+    def map_rect_to_parent(rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToParent_const_QRectF_R(self, rect))
     end
-    def map_rect_to_scene(rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToScene_const_QRectF_R(self, rect)
+    def map_rect_to_scene(rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToScene_const_QRectF_R(self, rect))
     end
     def map_to_item(item : GraphicsItem, polygon : QPolygonF*) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_const_QPolygonF_R(self, item, polygon)
@@ -17780,32 +18797,32 @@ module Qt
     def map_to_scene(path : QPainterPath*) : QPainterPath*
       Binding.bg_QGraphicsItem_mapToScene_const_QPainterPath_R(self, path)
     end
-    def map_from_item(item : GraphicsItem, point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPointF_R(self, item, point)
+    def map_from_item(item : GraphicsItem, point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPointF_R(self, item, point))
     end
-    def map_from_parent(point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromParent_const_QPointF_R(self, point)
+    def map_from_parent(point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromParent_const_QPointF_R(self, point))
     end
-    def map_from_scene(point : QPointF*) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromScene_const_QPointF_R(self, point)
+    def map_from_scene(point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromScene_const_QPointF_R(self, point))
     end
-    def map_from_item(item : GraphicsItem, rect : QRectF*) : QPolygonF*
+    def map_from_item(item : GraphicsItem, rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect)
     end
-    def map_from_parent(rect : QRectF*) : QPolygonF*
+    def map_from_parent(rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromParent_const_QRectF_R(self, rect)
     end
-    def map_from_scene(rect : QRectF*) : QPolygonF*
+    def map_from_scene(rect : RectF) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromScene_const_QRectF_R(self, rect)
     end
-    def map_rect_from_item(item : GraphicsItem, rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect)
+    def map_rect_from_item(item : GraphicsItem, rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_const_QRectF_R(self, item, rect))
     end
-    def map_rect_from_parent(rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromParent_const_QRectF_R(self, rect)
+    def map_rect_from_parent(rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromParent_const_QRectF_R(self, rect))
     end
-    def map_rect_from_scene(rect : QRectF*) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromScene_const_QRectF_R(self, rect)
+    def map_rect_from_scene(rect : RectF) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromScene_const_QRectF_R(self, rect))
     end
     def map_from_item(item : GraphicsItem, polygon : QPolygonF*) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_const_QPolygonF_R(self, item, polygon)
@@ -17825,14 +18842,14 @@ module Qt
     def map_from_scene(path : QPainterPath*) : QPainterPath*
       Binding.bg_QGraphicsItem_mapFromScene_const_QPainterPath_R(self, path)
     end
-    def map_to_item(item : GraphicsItem, x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal(self, item, x, y)
+    def map_to_item(item : GraphicsItem, x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal(self, item, x, y))
     end
-    def map_to_parent(x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapToParent_qreal_qreal(self, x, y)
+    def map_to_parent(x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToParent_qreal_qreal(self, x, y))
     end
-    def map_to_scene(x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapToScene_qreal_qreal(self, x, y)
+    def map_to_scene(x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapToScene_qreal_qreal(self, x, y))
     end
     def map_to_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h)
@@ -17843,23 +18860,23 @@ module Qt
     def map_to_scene(x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
       Binding.bg_QGraphicsItem_mapToScene_qreal_qreal_qreal_qreal(self, x, y, w, h)
     end
-    def map_rect_to_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h)
+    def map_rect_to_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h))
     end
-    def map_rect_to_parent(x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToParent_qreal_qreal_qreal_qreal(self, x, y, w, h)
+    def map_rect_to_parent(x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToParent_qreal_qreal_qreal_qreal(self, x, y, w, h))
     end
-    def map_rect_to_scene(x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectToScene_qreal_qreal_qreal_qreal(self, x, y, w, h)
+    def map_rect_to_scene(x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectToScene_qreal_qreal_qreal_qreal(self, x, y, w, h))
     end
-    def map_from_item(item : GraphicsItem, x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal(self, item, x, y)
+    def map_from_item(item : GraphicsItem, x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal(self, item, x, y))
     end
-    def map_from_parent(x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromParent_qreal_qreal(self, x, y)
+    def map_from_parent(x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromParent_qreal_qreal(self, x, y))
     end
-    def map_from_scene(x : Float64, y : Float64) : QPointF*
-      Binding.bg_QGraphicsItem_mapFromScene_qreal_qreal(self, x, y)
+    def map_from_scene(x : Float64, y : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsItem_mapFromScene_qreal_qreal(self, x, y))
     end
     def map_from_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h)
@@ -17870,14 +18887,14 @@ module Qt
     def map_from_scene(x : Float64, y : Float64, w : Float64, h : Float64) : QPolygonF*
       Binding.bg_QGraphicsItem_mapFromScene_qreal_qreal_qreal_qreal(self, x, y, w, h)
     end
-    def map_rect_from_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h)
+    def map_rect_from_item(item : GraphicsItem, x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromItem_const_QGraphicsItem_X_qreal_qreal_qreal_qreal(self, item, x, y, w, h))
     end
-    def map_rect_from_parent(x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromParent_qreal_qreal_qreal_qreal(self, x, y, w, h)
+    def map_rect_from_parent(x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromParent_qreal_qreal_qreal_qreal(self, x, y, w, h))
     end
-    def map_rect_from_scene(x : Float64, y : Float64, w : Float64, h : Float64) : QRectF*
-      Binding.bg_QGraphicsItem_mapRectFromScene_qreal_qreal_qreal_qreal(self, x, y, w, h)
+    def map_rect_from_scene(x : Float64, y : Float64, w : Float64, h : Float64) : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_mapRectFromScene_qreal_qreal_qreal_qreal(self, x, y, w, h))
     end
     def is_ancestor_of(child : GraphicsItem) : Bool
       Binding.bg_QGraphicsItem_isAncestorOf_const_QGraphicsItem_X(self, child)
@@ -17980,14 +18997,14 @@ module Qt
     %}
     jump_table = Binding::BgTableQGraphicsItem.new(
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18029,10 +19046,10 @@ module Qt
     macro inherited
       {{ raise "You can't sub-class GraphicsItemImpl, inherit from GraphicsItem instead" }}
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_boundingRect_(self))
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
   end
@@ -18098,9 +19115,9 @@ module Qt
       bg_QGraphicsScene_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QGraphicsSceneMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_wheelEvent_QGraphicsSceneWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QGraphicsSceneWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18111,7 +19128,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(scene_rect : QRectF*, parent : Object? = nil)
+    def initialize(scene_rect : RectF, parent : Object? = nil)
       unwrap = Binding.bg_QGraphicsScene_CONSTRUCT_const_QRectF_R_QObject_X(scene_rect, parent)
     @unwrap = unwrap
     {% begin %}
@@ -18141,9 +19158,9 @@ module Qt
       bg_QGraphicsScene_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QGraphicsSceneMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_wheelEvent_QGraphicsSceneWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QGraphicsSceneWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18184,9 +19201,9 @@ module Qt
       bg_QGraphicsScene_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} ->(event : QGraphicsSceneMouseEvent*){ self.mouse_double_click_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_wheelEvent_QGraphicsSceneWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} ->(event : QGraphicsSceneWheelEvent*){ self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18197,8 +19214,8 @@ module Qt
     {% end %}
     
     end
-    def scene_rect() : QRectF*
-      Binding.bg_QGraphicsScene_sceneRect_(self)
+    def scene_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsScene_sceneRect_(self))
     end
     def width() : Float64
       Binding.bg_QGraphicsScene_width_(self)
@@ -18206,22 +19223,22 @@ module Qt
     def height() : Float64
       Binding.bg_QGraphicsScene_height_(self)
     end
-    def scene_rect=(rect : QRectF*) : Void
+    def scene_rect=(rect : RectF) : Void
       Binding.bg_QGraphicsScene_setSceneRect_const_QRectF_R(self, rect)
     end
     def set_scene_rect(x : Float64, y : Float64, w : Float64, h : Float64) : Void
       Binding.bg_QGraphicsScene_setSceneRect_qreal_qreal_qreal_qreal(self, x, y, w, h)
     end
-    def render(painter : QPainter*) : Void
+    def render(painter : Painter) : Void
       Binding.bg_QGraphicsScene_render_QPainter_X(self, painter)
     end
-    def render(painter : QPainter*, target : QRectF*) : Void
+    def render(painter : Painter, target : RectF) : Void
       Binding.bg_QGraphicsScene_render_QPainter_X_const_QRectF_R(self, painter, target)
     end
-    def render(painter : QPainter*, target : QRectF*, source : QRectF*) : Void
+    def render(painter : Painter, target : RectF, source : RectF) : Void
       Binding.bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R(self, painter, target, source)
     end
-    def render(painter : QPainter*, target : QRectF*, source : QRectF*, aspect_ratio_mode : AspectRatioMode = AspectRatioMode::KeepAspectRatio) : Void
+    def render(painter : Painter, target : RectF, source : RectF, aspect_ratio_mode : AspectRatioMode = AspectRatioMode::KeepAspectRatio) : Void
       Binding.bg_QGraphicsScene_render_QPainter_X_const_QRectF_R_const_QRectF_R_Qt__AspectRatioMode(self, painter, target, source, aspect_ratio_mode)
     end
     def item_index_method() : GraphicsScene::ItemIndexMethod
@@ -18242,22 +19259,22 @@ module Qt
     def bsp_tree_depth=(depth : Int32) : Void
       Binding.bg_QGraphicsScene_setBspTreeDepth_int(self, depth)
     end
-    def items_bounding_rect() : QRectF*
-      Binding.bg_QGraphicsScene_itemsBoundingRect_(self)
+    def items_bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsScene_itemsBoundingRect_(self))
     end
     def items(order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_items_Qt__SortOrder(self, order))
     end
-    def items(pos : QPointF*, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape, order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
+    def items(pos : PointF, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape, order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder(self, pos, mode, order))
     end
-    def items(pos : QPointF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Enumerable(GraphicsItem)
+    def items(pos : PointF, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_items_const_QPointF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(self, pos, mode, order, device_transform))
     end
-    def items(rect : QRectF*, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape, order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
+    def items(rect : RectF, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape, order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder(self, rect, mode, order))
     end
-    def items(rect : QRectF*, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Enumerable(GraphicsItem)
+    def items(rect : RectF, mode : ItemSelectionMode, order : SortOrder, device_transform : QTransform*) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_items_const_QRectF_R_Qt__ItemSelectionMode_Qt__SortOrder_const_QTransform_R(self, rect, mode, order, device_transform))
     end
     def items(polygon : QPolygonF*, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape, order : SortOrder = SortOrder::DescendingOrder) : Enumerable(GraphicsItem)
@@ -18275,7 +19292,7 @@ module Qt
     def colliding_items(item : GraphicsItem, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsScene_collidingItems_const_QGraphicsItem_X_Qt__ItemSelectionMode(self, item, mode))
     end
-    def item_at(pos : QPointF*, device_transform : QTransform*) : GraphicsItem
+    def item_at(pos : PointF, device_transform : QTransform*) : GraphicsItem
       GraphicsItem.new(unwrap: Binding.bg_QGraphicsScene_itemAt_const_QPointF_R_const_QTransform_R(self, pos, device_transform))
     end
     def items(x : Float64, y : Float64, w : Float64, h : Float64, mode : ItemSelectionMode, order : SortOrder) : Enumerable(GraphicsItem)
@@ -18317,19 +19334,19 @@ module Qt
     def add_item(item : GraphicsItem) : Void
       Binding.bg_QGraphicsScene_addItem_QGraphicsItem_X(self, item)
     end
-    def add_ellipse(rect : QRectF*) : GraphicsEllipseItem
+    def add_ellipse(rect : RectF) : GraphicsEllipseItem
       GraphicsEllipseItem.new(unwrap: Binding.bg_QGraphicsScene_addEllipse_const_QRectF_R(self, rect))
     end
-    def add_ellipse(rect : QRectF*, pen : QPen*) : GraphicsEllipseItem
+    def add_ellipse(rect : RectF, pen : QPen*) : GraphicsEllipseItem
       GraphicsEllipseItem.new(unwrap: Binding.bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R(self, rect, pen))
     end
-    def add_ellipse(rect : QRectF*, pen : QPen*, brush : Brush) : GraphicsEllipseItem
+    def add_ellipse(rect : RectF, pen : QPen*, brush : Brush) : GraphicsEllipseItem
       GraphicsEllipseItem.new(unwrap: Binding.bg_QGraphicsScene_addEllipse_const_QRectF_R_const_QPen_R_const_QBrush_R(self, rect, pen, brush))
     end
-    def add_line(line : QLineF*) : QGraphicsLineItem*
+    def add_line(line : QLineF) : QGraphicsLineItem*
       Binding.bg_QGraphicsScene_addLine_const_QLineF_R(self, line)
     end
-    def add_line(line : QLineF*, pen : QPen*) : QGraphicsLineItem*
+    def add_line(line : QLineF, pen : QPen*) : QGraphicsLineItem*
       Binding.bg_QGraphicsScene_addLine_const_QLineF_R_const_QPen_R(self, line, pen)
     end
     def add_path(path : QPainterPath*) : GraphicsPathItem
@@ -18353,13 +19370,13 @@ module Qt
     def add_polygon(polygon : QPolygonF*, pen : QPen*, brush : Brush) : GraphicsPolygonItem
       GraphicsPolygonItem.new(unwrap: Binding.bg_QGraphicsScene_addPolygon_const_QPolygonF_R_const_QPen_R_const_QBrush_R(self, polygon, pen, brush))
     end
-    def add_rect(rect : QRectF*) : GraphicsRectItem
+    def add_rect(rect : RectF) : GraphicsRectItem
       GraphicsRectItem.new(unwrap: Binding.bg_QGraphicsScene_addRect_const_QRectF_R(self, rect))
     end
-    def add_rect(rect : QRectF*, pen : QPen*) : GraphicsRectItem
+    def add_rect(rect : RectF, pen : QPen*) : GraphicsRectItem
       GraphicsRectItem.new(unwrap: Binding.bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R(self, rect, pen))
     end
-    def add_rect(rect : QRectF*, pen : QPen*, brush : Brush) : GraphicsRectItem
+    def add_rect(rect : RectF, pen : QPen*, brush : Brush) : GraphicsRectItem
       GraphicsRectItem.new(unwrap: Binding.bg_QGraphicsScene_addRect_const_QRectF_R_const_QPen_R_const_QBrush_R(self, rect, pen, brush))
     end
     def add_text(text : String) : GraphicsTextItem
@@ -18500,16 +19517,16 @@ module Qt
     def update() : Void
       Binding.bg_QGraphicsScene_update_(self)
     end
-    def update(rect : QRectF*) : Void
+    def update(rect : RectF) : Void
       Binding.bg_QGraphicsScene_update_const_QRectF_R(self, rect)
     end
     def invalidate() : Void
       Binding.bg_QGraphicsScene_invalidate_(self)
     end
-    def invalidate(rect : QRectF*) : Void
+    def invalidate(rect : RectF) : Void
       Binding.bg_QGraphicsScene_invalidate_const_QRectF_R(self, rect)
     end
-    def invalidate(rect : QRectF*, layers : GraphicsScene::SceneLayers) : Void
+    def invalidate(rect : RectF, layers : GraphicsScene::SceneLayers) : Void
       Binding.bg_QGraphicsScene_invalidate_const_QRectF_R_QGraphicsScene__SceneLayers(self, rect, layers)
     end
     def advance() : Void
@@ -18575,23 +19592,23 @@ module Qt
     protected def input_method_event(event : InputMethodEvent) : Void
       Binding.bg_QGraphicsScene_inputMethodEvent_QInputMethodEvent_X(self, event)
     end
-    protected def draw_background(painter : QPainter*, rect : QRectF*) : Void
+    protected def draw_background(painter : Painter, rect : RectF) : Void
       Binding.bg_QGraphicsScene_drawBackground_QPainter_X_const_QRectF_R(self, painter, rect)
     end
-    protected def draw_foreground(painter : QPainter*, rect : QRectF*) : Void
+    protected def draw_foreground(painter : Painter, rect : RectF) : Void
       Binding.bg_QGraphicsScene_drawForeground_QPainter_X_const_QRectF_R(self, painter, rect)
     end
-    protected def draw_items(painter : QPainter*, num_items : Int32, items : GraphicsItem*, options : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    protected def draw_items(painter : Painter, num_items : Int32, items : GraphicsItem*, options : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsScene_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, num_items, items, options, widget)
     end
     protected def focus_next_prev_child(next_ : Bool) : Bool
       Binding.bg_QGraphicsScene_focusNextPrevChild_bool(self, next_)
     end
-    def scene_rect_changed(rect : QRectF*) : Void
+    def scene_rect_changed(rect : RectF) : Void
       Binding.bg_QGraphicsScene_sceneRectChanged_const_QRectF_R(self, rect)
     end
-    def on_scene_rect_changed(&block : Proc(QRectF*, Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QGraphicsScene_sceneRectChanged_CONNECT_CrystalProc_void__const_QRectFR_(self, BindgenHelper.wrap_proc(->(rect : QRectF*){ block.call(rect) })))
+    def on_scene_rect_changed(&block : Proc(RectF, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QGraphicsScene_sceneRectChanged_CONNECT_CrystalProc_void__const_QRectFR_(self, BindgenHelper.wrap_proc(->(rect : Binding::RectF*){ block.call(RectF.new(unwrap: rect)) })))
     end
     def selection_changed() : Void
       Binding.bg_QGraphicsScene_selectionChanged_(self)
@@ -18692,9 +19709,9 @@ module Qt
       bg_QGraphicsView_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
       bg_QGraphicsView_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : Binding::QObject*, unnamed_arg_1 : Binding::QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
@@ -18713,8 +19730,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18761,9 +19778,9 @@ module Qt
       bg_QGraphicsView_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
       bg_QGraphicsView_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : Binding::QObject*, unnamed_arg_1 : Binding::QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
@@ -18782,8 +19799,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18797,13 +19814,13 @@ module Qt
     def size_hint() : QSize*
       Binding.bg_QGraphicsView_sizeHint_(self)
     end
-    def render_hints() : PainterRenderHints
+    def render_hints() : Painter::RenderHints
       Binding.bg_QGraphicsView_renderHints_(self)
     end
-    def set_render_hint(hint : PainterRenderHint, enabled : Bool = true) : Void
+    def set_render_hint(hint : Painter::RenderHint, enabled : Bool = true) : Void
       Binding.bg_QGraphicsView_setRenderHint_QPainter__RenderHint_bool(self, hint, enabled)
     end
-    def render_hints=(hints : PainterRenderHints) : Void
+    def render_hints=(hints : Painter::RenderHints) : Void
       Binding.bg_QGraphicsView_setRenderHints_QPainter__RenderHints(self, hints)
     end
     def alignment() : Alignment
@@ -18851,8 +19868,8 @@ module Qt
     def rubber_band_selection_mode=(mode : ItemSelectionMode) : Void
       Binding.bg_QGraphicsView_setRubberBandSelectionMode_Qt__ItemSelectionMode(self, mode)
     end
-    def rubber_band_rect() : QRect*
-      Binding.bg_QGraphicsView_rubberBandRect_(self)
+    def rubber_band_rect() : Rect
+      Rect.new(unwrap: Binding.bg_QGraphicsView_rubberBandRect_(self))
     end
     def cache_mode() : GraphicsView::CacheMode
       Binding.bg_QGraphicsView_cacheMode_(self)
@@ -18875,10 +19892,10 @@ module Qt
     def scene=(scene : GraphicsScene) : Void
       Binding.bg_QGraphicsView_setScene_QGraphicsScene_X(self, scene)
     end
-    def scene_rect() : QRectF*
-      Binding.bg_QGraphicsView_sceneRect_(self)
+    def scene_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsView_sceneRect_(self))
     end
-    def scene_rect=(rect : QRectF*) : Void
+    def scene_rect=(rect : RectF) : Void
       Binding.bg_QGraphicsView_setSceneRect_const_QRectF_R(self, rect)
     end
     def set_scene_rect(x : Float64, y : Float64, w : Float64, h : Float64) : Void
@@ -18920,7 +19937,7 @@ module Qt
     def translate(dx : Float64, dy : Float64) : Void
       Binding.bg_QGraphicsView_translate_qreal_qreal(self, dx, dy)
     end
-    def center_on(pos : QPointF*) : Void
+    def center_on(pos : PointF) : Void
       Binding.bg_QGraphicsView_centerOn_const_QPointF_R(self, pos)
     end
     def center_on(x : Float64, y : Float64) : Void
@@ -18929,7 +19946,7 @@ module Qt
     def center_on(item : GraphicsItem) : Void
       Binding.bg_QGraphicsView_centerOn_const_QGraphicsItem_X(self, item)
     end
-    def ensure_visible(rect : QRectF*, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
+    def ensure_visible(rect : RectF, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
       Binding.bg_QGraphicsView_ensureVisible_const_QRectF_R_int_int(self, rect, xmargin, ymargin)
     end
     def ensure_visible(x : Float64, y : Float64, w : Float64, h : Float64, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
@@ -18938,7 +19955,7 @@ module Qt
     def ensure_visible(item : GraphicsItem, xmargin : Int32 = 50, ymargin : Int32 = 50) : Void
       Binding.bg_QGraphicsView_ensureVisible_const_QGraphicsItem_X_int_int(self, item, xmargin, ymargin)
     end
-    def fit_in_view(rect : QRectF*, aspect_radio_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio) : Void
+    def fit_in_view(rect : RectF, aspect_radio_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio) : Void
       Binding.bg_QGraphicsView_fitInView_const_QRectF_R_Qt__AspectRatioMode(self, rect, aspect_radio_mode)
     end
     def fit_in_view(x : Float64, y : Float64, w : Float64, h : Float64, aspect_radio_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio) : Void
@@ -18947,16 +19964,16 @@ module Qt
     def fit_in_view(item : GraphicsItem, aspect_radio_mode : AspectRatioMode = AspectRatioMode::IgnoreAspectRatio) : Void
       Binding.bg_QGraphicsView_fitInView_const_QGraphicsItem_X_Qt__AspectRatioMode(self, item, aspect_radio_mode)
     end
-    def render(painter : QPainter*) : Void
+    def render(painter : Painter) : Void
       Binding.bg_QGraphicsView_render_QPainter_X(self, painter)
     end
-    def render(painter : QPainter*, target : QRectF*) : Void
+    def render(painter : Painter, target : RectF) : Void
       Binding.bg_QGraphicsView_render_QPainter_X_const_QRectF_R(self, painter, target)
     end
-    def render(painter : QPainter*, target : QRectF*, source : QRect*) : Void
+    def render(painter : Painter, target : RectF, source : Rect) : Void
       Binding.bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R(self, painter, target, source)
     end
-    def render(painter : QPainter*, target : QRectF*, source : QRect*, aspect_ratio_mode : AspectRatioMode = AspectRatioMode::KeepAspectRatio) : Void
+    def render(painter : Painter, target : RectF, source : Rect, aspect_ratio_mode : AspectRatioMode = AspectRatioMode::KeepAspectRatio) : Void
       Binding.bg_QGraphicsView_render_QPainter_X_const_QRectF_R_const_QRect_R_Qt__AspectRatioMode(self, painter, target, source, aspect_ratio_mode)
     end
     def items() : Enumerable(GraphicsItem)
@@ -18968,7 +19985,7 @@ module Qt
     def items(x : Int32, y : Int32) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsView_items_int_int(self, x, y))
     end
-    def items(rect : QRect*, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape) : Enumerable(GraphicsItem)
+    def items(rect : Rect, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape) : Enumerable(GraphicsItem)
       QList_QGraphicsItem_X.new(unwrap: Binding.bg_QGraphicsView_items_const_QRect_R_Qt__ItemSelectionMode(self, rect, mode))
     end
     def items(x : Int32, y : Int32, w : Int32, h : Int32, mode : ItemSelectionMode = ItemSelectionMode::IntersectsItemShape) : Enumerable(GraphicsItem)
@@ -18986,10 +20003,10 @@ module Qt
     def item_at(x : Int32, y : Int32) : GraphicsItem
       GraphicsItem.new(unwrap: Binding.bg_QGraphicsView_itemAt_int_int(self, x, y))
     end
-    def map_to_scene(point : Point) : QPointF*
-      Binding.bg_QGraphicsView_mapToScene_const_QPoint_R(self, point)
+    def map_to_scene(point : Point) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsView_mapToScene_const_QPoint_R(self, point))
     end
-    def map_to_scene(rect : QRect*) : QPolygonF*
+    def map_to_scene(rect : Rect) : QPolygonF*
       Binding.bg_QGraphicsView_mapToScene_const_QRect_R(self, rect)
     end
     def map_to_scene(polygon : QPolygon*) : QPolygonF*
@@ -18998,10 +20015,10 @@ module Qt
     def map_to_scene(path : QPainterPath*) : QPainterPath*
       Binding.bg_QGraphicsView_mapToScene_const_QPainterPath_R(self, path)
     end
-    def map_from_scene(point : QPointF*) : Point
+    def map_from_scene(point : PointF) : Point
       Point.new(unwrap: Binding.bg_QGraphicsView_mapFromScene_const_QPointF_R(self, point))
     end
-    def map_from_scene(rect : QRectF*) : QPolygon*
+    def map_from_scene(rect : RectF) : QPolygon*
       Binding.bg_QGraphicsView_mapFromScene_const_QRectF_R(self, rect)
     end
     def map_from_scene(polygon : QPolygonF*) : QPolygon*
@@ -19010,8 +20027,8 @@ module Qt
     def map_from_scene(path : QPainterPath*) : QPainterPath*
       Binding.bg_QGraphicsView_mapFromScene_const_QPainterPath_R(self, path)
     end
-    def map_to_scene(x : Int32, y : Int32) : QPointF*
-      Binding.bg_QGraphicsView_mapToScene_int_int(self, x, y)
+    def map_to_scene(x : Int32, y : Int32) : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsView_mapToScene_int_int(self, x, y))
     end
     def map_to_scene(x : Int32, y : Int32, w : Int32, h : Int32) : QPolygonF*
       Binding.bg_QGraphicsView_mapToScene_int_int_int_int(self, x, y, w, h)
@@ -19037,20 +20054,20 @@ module Qt
     def invalidate_scene() : Void
       Binding.bg_QGraphicsView_invalidateScene_(self)
     end
-    def invalidate_scene(rect : QRectF*) : Void
+    def invalidate_scene(rect : RectF) : Void
       Binding.bg_QGraphicsView_invalidateScene_const_QRectF_R(self, rect)
     end
-    def invalidate_scene(rect : QRectF*, layers : GraphicsScene::SceneLayers) : Void
+    def invalidate_scene(rect : RectF, layers : GraphicsScene::SceneLayers) : Void
       Binding.bg_QGraphicsView_invalidateScene_const_QRectF_R_QGraphicsScene__SceneLayers(self, rect, layers)
     end
-    def update_scene_rect(rect : QRectF*) : Void
+    def update_scene_rect(rect : RectF) : Void
       Binding.bg_QGraphicsView_updateSceneRect_const_QRectF_R(self, rect)
     end
-    def rubber_band_changed(viewport_rect : QRect*, from_scene_point : QPointF*, to_scene_point : QPointF*) : Void
+    def rubber_band_changed(viewport_rect : Rect, from_scene_point : PointF, to_scene_point : PointF) : Void
       Binding.bg_QGraphicsView_rubberBandChanged_QRect_QPointF_QPointF(self, viewport_rect, from_scene_point, to_scene_point)
     end
-    def on_rubber_band_changed(&block : Proc(QRect*, QPointF*, QPointF*, Void)) : SignalConnection
-      SignalConnection.new(unwrap: Binding.bg_QGraphicsView_rubberBandChanged_CONNECT_CrystalProc_void__QRectR__QPointFR__QPointFR_(self, BindgenHelper.wrap_proc(->(viewport_rect : QRect*, from_scene_point : QPointF*, to_scene_point : QPointF*){ block.call(viewport_rect, from_scene_point, to_scene_point) })))
+    def on_rubber_band_changed(&block : Proc(Rect, PointF, PointF, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QGraphicsView_rubberBandChanged_CONNECT_CrystalProc_void__QRect__QPointF__QPointF_(self, BindgenHelper.wrap_proc(->(viewport_rect : Binding::Rect, from_scene_point : Binding::QPointF, to_scene_point : Binding::QPointF){ block.call(Rect.new(unwrap: viewport_rect), PointF.new(unwrap: from_scene_point), PointF.new(unwrap: to_scene_point)) })))
     end
     protected def setup_viewport(widget : Widget) : Void
       Binding.bg_QGraphicsView_setupViewport_QWidget_X(self, widget)
@@ -19091,9 +20108,9 @@ module Qt
       bg_QGraphicsView_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} ->(dx : Int32, dy : Int32){ self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
       bg_QGraphicsView_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} ->(event : Binding::QShowEvent*){ self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} ->(event : Binding::QInputMethodEvent*){ self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_background(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : QPainter*, rect : QRectF*){ self.draw_foreground(painter, rect) } {% else %} nil {% end %}),
-      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(painter, num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_background") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_background(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_foreground") %} ->(painter : Binding::QPainter*, rect : Binding::RectF*){ self.draw_foreground(Painter.new(unwrap: painter), RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("draw_items") %} ->(painter : Binding::QPainter*, num_items : Int32, items : Binding::QGraphicsItem**, options : QStyleOptionGraphicsItem*){ self.draw_items(Painter.new(unwrap: painter), num_items, GraphicsItem.new(unwrap: items), options) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} ->(){ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(unnamed_arg_0 : Binding::QObject*, unnamed_arg_1 : Binding::QEvent*){ self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} ->(){ self.viewport_size_hint() } {% else %} nil {% end %}),
@@ -19112,8 +20129,8 @@ module Qt
       bg_QWidget_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} ->(event : Binding::QHideEvent*){ self.hide_event(HideEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_nativeEvent_const_QByteArray_R_void_X_long_X: BindgenHelper.wrap_proc({% if forwarded.includes?("native_event") %} ->(event_type : QByteArray*, message : Void*, result : Int32*){ self.native_event(event_type, message, result) } {% else %} nil {% end %}),
       bg_QWidget_metric_QPaintDevice__PaintDeviceMetric: BindgenHelper.wrap_proc({% if forwarded.includes?("metric") %} ->(unnamed_arg_0 : PaintDeviceMetric){ self.metric(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : QPainter*){ self.init_painter(painter) } {% else %} nil {% end %}),
-      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ self.shared_painter() } {% else %} nil {% end %}),
+      bg_QWidget_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} ->(painter : Binding::QPainter*){ self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
+      bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} ->(){ Painter.new(unwrap: self.shared_painter()) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(event : QChildEvent*){ self.child_event(event) } {% else %} nil {% end %}),
       bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19190,21 +20207,21 @@ module Qt
     protected def input_method_event(event : InputMethodEvent) : Void
       Binding.bg_QGraphicsView_inputMethodEvent_QInputMethodEvent_X(self, event)
     end
-    protected def draw_background(painter : QPainter*, rect : QRectF*) : Void
+    protected def draw_background(painter : Painter, rect : RectF) : Void
       Binding.bg_QGraphicsView_drawBackground_QPainter_X_const_QRectF_R(self, painter, rect)
     end
-    protected def draw_foreground(painter : QPainter*, rect : QRectF*) : Void
+    protected def draw_foreground(painter : Painter, rect : RectF) : Void
       Binding.bg_QGraphicsView_drawForeground_QPainter_X_const_QRectF_R(self, painter, rect)
     end
-    protected def draw_items(painter : QPainter*, num_items : Int32, items : GraphicsItem*, options : QStyleOptionGraphicsItem*) : Void
+    protected def draw_items(painter : Painter, num_items : Int32, items : GraphicsItem*, options : QStyleOptionGraphicsItem*) : Void
       Binding.bg_QGraphicsView_drawItems_QPainter_X_int_QGraphicsItem_XX_const_QStyleOptionGraphicsItem_X(self, painter, num_items, items, options)
     end
   end
   abstract class GraphicsObject < Object
     def initialize(@unwrap : Void*)
     end
-    def as_graphics_item() : GraphicsItem
-      GraphicsItem.new(unwrap: Binding.bg_QGraphicsObject_bg_QGraphicsObject_AS_QGraphicsItem_(self))
+    def as_graphics_item() : GraphicsItemImpl
+      GraphicsItemImpl.new(unwrap: Binding.bg_QGraphicsObject_AS_QGraphicsItem_(self))
     end
     def meta_object() : QMetaObject*
       Binding.bg_QGraphicsObject_metaObject_(self)
@@ -19238,14 +20255,14 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19377,14 +20394,14 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19420,10 +20437,10 @@ module Qt
     macro inherited
       {{ raise "You can't sub-class GraphicsObjectImpl, inherit from GraphicsObject instead" }}
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_boundingRect_(self))
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
   end
@@ -19454,19 +20471,19 @@ module Qt
     jump_table = Binding::BgTableQGraphicsWidget.new(
       bg_QGraphicsWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : QRectF*){ self.geometry=(rect) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::RectF*){ self.geometry=(RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_getContentsMargins_qreal_X_qreal_X_qreal_X_qreal_X: BindgenHelper.wrap_proc({% if forwarded.includes?("get_contents_margins") %} ->(left : Float64*, top : Float64*, right : Float64*, bottom : Float64*){ self.get_contents_margins(left, top, right, bottom) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_initStyleOption_QStyleOption_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_style_option") %} ->(option : QStyleOption*){ self.init_style_option(option) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sizeHint_Qt__SizeHint_const_QSizeF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(which : SizeHint, constraint : QSizeF*){ self.size_hint(which, constraint) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_updateGeometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("update_geometry") %} ->(){ self.update_geometry() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_windowFrameEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_event") %} ->(e : Binding::QEvent*){ self.window_frame_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : QPointF*){ self.window_frame_section_at(pos) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : Binding::QPointF){ self.window_frame_section_at(PointF.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(event : Binding::QEvent*){ self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : Binding::QCloseEvent*){ self.close_event(CloseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19491,7 +20508,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
@@ -19529,19 +20546,19 @@ module Qt
     jump_table = Binding::BgTableQGraphicsWidget.new(
       bg_QGraphicsWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : QRectF*){ self.geometry=(rect) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::RectF*){ self.geometry=(RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_getContentsMargins_qreal_X_qreal_X_qreal_X_qreal_X: BindgenHelper.wrap_proc({% if forwarded.includes?("get_contents_margins") %} ->(left : Float64*, top : Float64*, right : Float64*, bottom : Float64*){ self.get_contents_margins(left, top, right, bottom) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_initStyleOption_QStyleOption_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_style_option") %} ->(option : QStyleOption*){ self.init_style_option(option) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sizeHint_Qt__SizeHint_const_QSizeF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(which : SizeHint, constraint : QSizeF*){ self.size_hint(which, constraint) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_updateGeometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("update_geometry") %} ->(){ self.update_geometry() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_windowFrameEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_event") %} ->(e : Binding::QEvent*){ self.window_frame_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : QPointF*){ self.window_frame_section_at(pos) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : Binding::QPointF){ self.window_frame_section_at(PointF.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(event : Binding::QEvent*){ self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : Binding::QCloseEvent*){ self.close_event(CloseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19566,7 +20583,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
@@ -19643,14 +20660,14 @@ module Qt
     def size() : QSizeF*
       Binding.bg_QGraphicsWidget_size_(self)
     end
-    def geometry=(rect : QRectF*) : Void
+    def geometry=(rect : RectF) : Void
       Binding.bg_QGraphicsWidget_setGeometry_const_QRectF_R(self, rect)
     end
     def set_geometry(x : Float64, y : Float64, w : Float64, h : Float64) : Void
       Binding.bg_QGraphicsWidget_setGeometry_qreal_qreal_qreal_qreal(self, x, y, w, h)
     end
-    def rect() : QRectF*
-      Binding.bg_QGraphicsWidget_rect_(self)
+    def rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsWidget_rect_(self))
     end
     def set_contents_margins(left : Float64, top : Float64, right : Float64, bottom : Float64) : Void
       Binding.bg_QGraphicsWidget_setContentsMargins_qreal_qreal_qreal_qreal(self, left, top, right, bottom)
@@ -19667,11 +20684,11 @@ module Qt
     def unset_window_frame_margins() : Void
       Binding.bg_QGraphicsWidget_unsetWindowFrameMargins_(self)
     end
-    def window_frame_geometry() : QRectF*
-      Binding.bg_QGraphicsWidget_windowFrameGeometry_(self)
+    def window_frame_geometry() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsWidget_windowFrameGeometry_(self))
     end
-    def window_frame_rect() : QRectF*
-      Binding.bg_QGraphicsWidget_windowFrameRect_(self)
+    def window_frame_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsWidget_windowFrameRect_(self))
     end
     def window_flags() : WindowFlags
       Binding.bg_QGraphicsWidget_windowFlags_(self)
@@ -19742,14 +20759,14 @@ module Qt
     def type() : Int32
       Binding.bg_QGraphicsWidget_type_(self)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
-    def paint_window_frame(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint_window_frame(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsWidget_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsWidget_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsWidget_shape_(self)
@@ -19787,7 +20804,7 @@ module Qt
     protected def window_frame_event(e : Event) : Bool
       Binding.bg_QGraphicsWidget_windowFrameEvent_QEvent_X(self, e)
     end
-    protected def window_frame_section_at(pos : QPointF*) : WindowFrameSection
+    protected def window_frame_section_at(pos : PointF) : WindowFrameSection
       Binding.bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R(self, pos)
     end
     protected def event(event : Event) : Bool
@@ -19853,19 +20870,19 @@ module Qt
     jump_table = Binding::BgTableQGraphicsWidget.new(
       bg_QGraphicsWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : QRectF*){ self.geometry=(rect) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::RectF*){ self.geometry=(RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_getContentsMargins_qreal_X_qreal_X_qreal_X_qreal_X: BindgenHelper.wrap_proc({% if forwarded.includes?("get_contents_margins") %} ->(left : Float64*, top : Float64*, right : Float64*, bottom : Float64*){ self.get_contents_margins(left, top, right, bottom) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_initStyleOption_QStyleOption_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_style_option") %} ->(option : QStyleOption*){ self.init_style_option(option) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sizeHint_Qt__SizeHint_const_QSizeF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(which : SizeHint, constraint : QSizeF*){ self.size_hint(which, constraint) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_updateGeometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("update_geometry") %} ->(){ self.update_geometry() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_windowFrameEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_event") %} ->(e : Binding::QEvent*){ self.window_frame_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : QPointF*){ self.window_frame_section_at(pos) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : Binding::QPointF){ self.window_frame_section_at(PointF.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(event : Binding::QEvent*){ self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : Binding::QCloseEvent*){ self.close_event(CloseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19890,7 +20907,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
@@ -19928,19 +20945,19 @@ module Qt
     jump_table = Binding::BgTableQGraphicsWidget.new(
       bg_QGraphicsWidget_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : QRectF*){ self.geometry=(rect) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_setGeometry_const_QRectF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::RectF*){ self.geometry=(RectF.new(unwrap: rect)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_getContentsMargins_qreal_X_qreal_X_qreal_X_qreal_X: BindgenHelper.wrap_proc({% if forwarded.includes?("get_contents_margins") %} ->(left : Float64*, top : Float64*, right : Float64*, bottom : Float64*){ self.get_contents_margins(left, top, right, bottom) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_paintWindowFrame_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_window_frame") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint_window_frame(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_initStyleOption_QStyleOption_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_style_option") %} ->(option : QStyleOption*){ self.init_style_option(option) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sizeHint_Qt__SizeHint_const_QSizeF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(which : SizeHint, constraint : QSizeF*){ self.size_hint(which, constraint) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_updateGeometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("update_geometry") %} ->(){ self.update_geometry() } {% else %} nil {% end %}),
       bg_QGraphicsWidget_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_windowFrameEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_event") %} ->(e : Binding::QEvent*){ self.window_frame_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : QPointF*){ self.window_frame_section_at(pos) } {% else %} nil {% end %}),
+      bg_QGraphicsWidget_windowFrameSectionAt_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("window_frame_section_at") %} ->(pos : Binding::QPointF){ self.window_frame_section_at(PointF.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} ->(event : Binding::QEvent*){ self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} ->(event : Binding::QCloseEvent*){ self.close_event(CloseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19965,7 +20982,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
@@ -20019,10 +21036,10 @@ module Qt
     jump_table = Binding::BgTableQGraphicsTextItem.new(
       bg_QGraphicsTextItem_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20074,10 +21091,10 @@ module Qt
     jump_table = Binding::BgTableQGraphicsTextItem.new(
       bg_QGraphicsTextItem_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20141,16 +21158,16 @@ module Qt
     def default_text_color() : Color
       Color.new(unwrap: Binding.bg_QGraphicsTextItem_defaultTextColor_(self))
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsTextItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsTextItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsTextItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsTextItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -20365,12 +21382,12 @@ module Qt
       bg_QAbstractGraphicsShapeItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QAbstractGraphicsShapeItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -20429,12 +21446,12 @@ module Qt
       bg_QAbstractGraphicsShapeItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QAbstractGraphicsShapeItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsItem_advance_int: BindgenHelper.wrap_proc({% if forwarded.includes?("advance") %} ->(phase : Int32){ self.advance(phase) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithItem_const_QGraphicsItem_X_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_item") %} ->(other : Binding::QGraphicsItem*, mode : ItemSelectionMode){ self.collides_with_item(GraphicsItem.new(unwrap: other), mode) } {% else %} nil {% end %}),
       bg_QGraphicsItem_collidesWithPath_const_QPainterPath_R_Qt__ItemSelectionMode: BindgenHelper.wrap_proc({% if forwarded.includes?("collides_with_path") %} ->(path : QPainterPath*, mode : ItemSelectionMode){ self.collides_with_path(path, mode) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEventFilter_QGraphicsItem_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event_filter") %} ->(watched : Binding::QGraphicsItem*, event : Binding::QEvent*){ self.scene_event_filter(GraphicsItem.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_sceneEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("scene_event") %} ->(event : Binding::QEvent*){ self.scene_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -20467,10 +21484,10 @@ module Qt
     macro inherited
       {{ raise "You can't sub-class AbstractGraphicsShapeItemImpl, inherit from AbstractGraphicsShapeItem instead" }}
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsItem_boundingRect_(self))
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
   end
@@ -20487,10 +21504,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsEllipseItem.new(
-      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20523,7 +21540,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(rect : QRectF*, parent : GraphicsItem? = nil)
+    def initialize(rect : RectF, parent : GraphicsItem? = nil)
       unwrap = Binding.bg_QGraphicsEllipseItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
     @unwrap = unwrap
     {% begin %}
@@ -20533,10 +21550,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsEllipseItem.new(
-      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20579,10 +21596,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsEllipseItem.new(
-      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20615,10 +21632,10 @@ module Qt
     {% end %}
     
     end
-    def rect() : QRectF*
-      Binding.bg_QGraphicsEllipseItem_rect_(self)
+    def rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsEllipseItem_rect_(self))
     end
-    def rect=(rect : QRectF*) : Void
+    def rect=(rect : RectF) : Void
       Binding.bg_QGraphicsEllipseItem_setRect_const_QRectF_R(self, rect)
     end
     def set_rect(x : Float64, y : Float64, w : Float64, h : Float64) : Void
@@ -20636,16 +21653,16 @@ module Qt
     def span_angle=(angle : Int32) : Void
       Binding.bg_QGraphicsEllipseItem_setSpanAngle_int(self, angle)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsEllipseItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsEllipseItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsEllipseItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsEllipseItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsEllipseItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -20674,10 +21691,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPathItem.new(
-      bg_QGraphicsPathItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPathItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20720,10 +21737,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPathItem.new(
-      bg_QGraphicsPathItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPathItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20762,16 +21779,16 @@ module Qt
     def path=(path : QPainterPath*) : Void
       Binding.bg_QGraphicsPathItem_setPath_const_QPainterPath_R(self, path)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsPathItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsPathItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsPathItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsPathItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsPathItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -20800,10 +21817,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPolygonItem.new(
-      bg_QGraphicsPolygonItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPolygonItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20846,10 +21863,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPolygonItem.new(
-      bg_QGraphicsPolygonItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPolygonItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20894,16 +21911,16 @@ module Qt
     def fill_rule=(rule : FillRule) : Void
       Binding.bg_QGraphicsPolygonItem_setFillRule_Qt__FillRule(self, rule)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsPolygonItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsPolygonItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsPolygonItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsPolygonItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsPolygonItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -20932,10 +21949,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsRectItem.new(
-      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -20968,7 +21985,7 @@ module Qt
     {% end %}
     
     end
-    def initialize(rect : QRectF*, parent : GraphicsItem? = nil)
+    def initialize(rect : RectF, parent : GraphicsItem? = nil)
       unwrap = Binding.bg_QGraphicsRectItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
     @unwrap = unwrap
     {% begin %}
@@ -20978,10 +21995,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsRectItem.new(
-      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21024,10 +22041,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsRectItem.new(
-      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21060,25 +22077,25 @@ module Qt
     {% end %}
     
     end
-    def rect() : QRectF*
-      Binding.bg_QGraphicsRectItem_rect_(self)
+    def rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsRectItem_rect_(self))
     end
-    def rect=(rect : QRectF*) : Void
+    def rect=(rect : RectF) : Void
       Binding.bg_QGraphicsRectItem_setRect_const_QRectF_R(self, rect)
     end
     def set_rect(x : Float64, y : Float64, w : Float64, h : Float64) : Void
       Binding.bg_QGraphicsRectItem_setRect_qreal_qreal_qreal_qreal(self, x, y, w, h)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsRectItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsRectItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsRectItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsRectItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsRectItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -21107,10 +22124,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsSimpleTextItem.new(
-      bg_QGraphicsSimpleTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsSimpleTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21153,10 +22170,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsSimpleTextItem.new(
-      bg_QGraphicsSimpleTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsSimpleTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21201,16 +22218,16 @@ module Qt
     def font() : QFont*
       Binding.bg_QGraphicsSimpleTextItem_font_(self)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsSimpleTextItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsSimpleTextItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsSimpleTextItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsSimpleTextItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsSimpleTextItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -21244,10 +22261,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPixmapItem.new(
-      bg_QGraphicsPixmapItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPixmapItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21290,10 +22307,10 @@ module Qt
       forwarded = methods.map(&.name.stringify).select{|m| %w[ bounding_rect shape contains paint is_obscured_by opaque_area type supports_extension advance collides_with_item collides_with_path scene_event_filter scene_event context_menu_event drag_enter_event drag_leave_event drag_move_event drop_event focus_in_event focus_out_event hover_enter_event hover_move_event hover_leave_event key_press_event key_release_event mouse_press_event mouse_move_event mouse_release_event mouse_double_click_event wheel_event input_method_event ].includes?(m) }.uniq
     %}
     jump_table = Binding::BgTableQGraphicsPixmapItem.new(
-      bg_QGraphicsPixmapItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ self.bounding_rect() } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_boundingRect_: BindgenHelper.wrap_proc({% if forwarded.includes?("bounding_rect") %} ->(){ RectF.new(unwrap: self.bounding_rect()) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_shape_: BindgenHelper.wrap_proc({% if forwarded.includes?("shape") %} ->(){ self.shape() } {% else %} nil {% end %}),
-      bg_QGraphicsPixmapItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : QPointF*){ self.contains(point) } {% else %} nil {% end %}),
-      bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(painter, option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_contains_const_QPointF_R: BindgenHelper.wrap_proc({% if forwarded.includes?("contains") %} ->(point : Binding::QPointF){ self.contains(PointF.new(unwrap: point)) } {% else %} nil {% end %}),
+      bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint") %} ->(painter : Binding::QPainter*, option : QStyleOptionGraphicsItem*, widget : Binding::QWidget*){ self.paint(Painter.new(unwrap: painter), option, Widget.new(unwrap: widget)) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_isObscuredBy_const_QGraphicsItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("is_obscured_by") %} ->(item : Binding::QGraphicsItem*){ self.is_obscured_by(GraphicsItem.new(unwrap: item)) } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_opaqueArea_: BindgenHelper.wrap_proc({% if forwarded.includes?("opaque_area") %} ->(){ self.opaque_area() } {% else %} nil {% end %}),
       bg_QGraphicsPixmapItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} ->(){ self.type() } {% else %} nil {% end %}),
@@ -21338,25 +22355,25 @@ module Qt
     def transformation_mode=(mode : TransformationMode) : Void
       Binding.bg_QGraphicsPixmapItem_setTransformationMode_Qt__TransformationMode(self, mode)
     end
-    def offset() : QPointF*
-      Binding.bg_QGraphicsPixmapItem_offset_(self)
+    def offset() : PointF
+      PointF.new(unwrap: Binding.bg_QGraphicsPixmapItem_offset_(self))
     end
-    def offset=(offset : QPointF*) : Void
+    def offset=(offset : PointF) : Void
       Binding.bg_QGraphicsPixmapItem_setOffset_const_QPointF_R(self, offset)
     end
     def set_offset(x : Float64, y : Float64) : Void
       Binding.bg_QGraphicsPixmapItem_setOffset_qreal_qreal(self, x, y)
     end
-    def bounding_rect() : QRectF*
-      Binding.bg_QGraphicsPixmapItem_boundingRect_(self)
+    def bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QGraphicsPixmapItem_boundingRect_(self))
     end
     def shape() : QPainterPath*
       Binding.bg_QGraphicsPixmapItem_shape_(self)
     end
-    def contains(point : QPointF*) : Bool
+    def contains(point : PointF) : Bool
       Binding.bg_QGraphicsPixmapItem_contains_const_QPointF_R(self, point)
     end
-    def paint(painter : QPainter*, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
+    def paint(painter : Painter, option : QStyleOptionGraphicsItem*, widget : Widget? = nil) : Void
       Binding.bg_QGraphicsPixmapItem_paint_QPainter_X_const_QStyleOptionGraphicsItem_X_QWidget_X(self, painter, option, widget)
     end
     def is_obscured_by(item : GraphicsItem) : Bool
@@ -22072,22 +23089,22 @@ module Qt
   class MouseEvent < InputEvent
     def initialize(@unwrap : Void*)
     end
-    def initialize(type : Event::Type, local_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
+    def initialize(type : Event::Type, local_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
       unwrap = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, button, buttons, modifiers)
     @unwrap = unwrap
     
     end
-    def initialize(type : Event::Type, local_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
+    def initialize(type : Event::Type, local_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
       unwrap = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, screen_pos, button, buttons, modifiers)
     @unwrap = unwrap
     
     end
-    def initialize(type : Event::Type, local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
+    def initialize(type : Event::Type, local_pos : PointF, window_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
       unwrap = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, window_pos, screen_pos, button, buttons, modifiers)
     @unwrap = unwrap
     
     end
-    def initialize(type : Event::Type, local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource)
+    def initialize(type : Event::Type, local_pos : PointF, window_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource)
       unwrap = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type, local_pos, window_pos, screen_pos, button, buttons, modifiers, source)
     @unwrap = unwrap
     
@@ -22110,14 +23127,14 @@ module Qt
     def global_y() : Int32
       Binding.bg_QMouseEvent_globalY_(self)
     end
-    def local_pos() : QPointF*
-      Binding.bg_QMouseEvent_localPos_(self)
+    def local_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QMouseEvent_localPos_(self))
     end
-    def window_pos() : QPointF*
-      Binding.bg_QMouseEvent_windowPos_(self)
+    def window_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QMouseEvent_windowPos_(self))
     end
-    def screen_pos() : QPointF*
-      Binding.bg_QMouseEvent_screenPos_(self)
+    def screen_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QMouseEvent_screenPos_(self))
     end
     def button() : MouseButton
       Binding.bg_QMouseEvent_button_(self)
@@ -22125,7 +23142,7 @@ module Qt
     def buttons() : MouseButtons
       Binding.bg_QMouseEvent_buttons_(self)
     end
-    def local_pos=(local_position : QPointF*) : Void
+    def local_pos=(local_position : PointF) : Void
       Binding.bg_QMouseEvent_setLocalPos_const_QPointF_R(self, local_position)
     end
     def source() : MouseEventSource
@@ -22138,7 +23155,7 @@ module Qt
   class EnterEvent < Event
     def initialize(@unwrap : Void*)
     end
-    def initialize(local_pos : QPointF*, window_pos : QPointF*, screen_pos : QPointF*)
+    def initialize(local_pos : PointF, window_pos : PointF, screen_pos : PointF)
       unwrap = Binding.bg_QEnterEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos, window_pos, screen_pos)
     @unwrap = unwrap
     
@@ -22161,14 +23178,14 @@ module Qt
     def global_y() : Int32
       Binding.bg_QEnterEvent_globalY_(self)
     end
-    def local_pos() : QPointF*
-      Binding.bg_QEnterEvent_localPos_(self)
+    def local_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QEnterEvent_localPos_(self))
     end
-    def window_pos() : QPointF*
-      Binding.bg_QEnterEvent_windowPos_(self)
+    def window_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QEnterEvent_windowPos_(self))
     end
-    def screen_pos() : QPointF*
-      Binding.bg_QEnterEvent_screenPos_(self)
+    def screen_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QEnterEvent_screenPos_(self))
     end
   end
   class FocusEvent < Event
@@ -22197,13 +23214,13 @@ module Qt
     @unwrap = unwrap
     
     end
-    def initialize(paint_rect : QRect*)
+    def initialize(paint_rect : Rect)
       unwrap = Binding.bg_QPaintEvent_CONSTRUCT_const_QRect_R(paint_rect)
     @unwrap = unwrap
     
     end
-    def rect() : QRect*
-      Binding.bg_QPaintEvent_rect_(self)
+    def rect() : Rect
+      Rect.new(unwrap: Binding.bg_QPaintEvent_rect_(self))
     end
     def region() : QRegion*
       Binding.bg_QPaintEvent_region_(self)
@@ -22349,7 +23366,7 @@ module Qt
   class DropEvent < Event
     def initialize(@unwrap : Void*)
     end
-    def initialize(pos : QPointF*, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type = Event::Type::Drop)
+    def initialize(pos : PointF, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type = Event::Type::Drop)
       unwrap = Binding.bg_QDropEvent_CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos, actions, data, buttons, modifiers, type)
     @unwrap = unwrap
     
@@ -22357,8 +23374,8 @@ module Qt
     def pos() : Point
       Point.new(unwrap: Binding.bg_QDropEvent_pos_(self))
     end
-    def pos_f() : QPointF*
-      Binding.bg_QDropEvent_posF_(self)
+    def pos_f() : PointF
+      PointF.new(unwrap: Binding.bg_QDropEvent_posF_(self))
     end
     def mouse_buttons() : MouseButtons
       Binding.bg_QDropEvent_mouseButtons_(self)
@@ -22519,30 +23536,30 @@ module Qt
   class ScrollPrepareEvent < Event
     def initialize(@unwrap : Void*)
     end
-    def initialize(start_pos : QPointF*)
+    def initialize(start_pos : PointF)
       unwrap = Binding.bg_QScrollPrepareEvent_CONSTRUCT_const_QPointF_R(start_pos)
     @unwrap = unwrap
     
     end
-    def start_pos() : QPointF*
-      Binding.bg_QScrollPrepareEvent_startPos_(self)
+    def start_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QScrollPrepareEvent_startPos_(self))
     end
     def viewport_size() : QSizeF*
       Binding.bg_QScrollPrepareEvent_viewportSize_(self)
     end
-    def content_pos_range() : QRectF*
-      Binding.bg_QScrollPrepareEvent_contentPosRange_(self)
+    def content_pos_range() : RectF
+      RectF.new(unwrap: Binding.bg_QScrollPrepareEvent_contentPosRange_(self))
     end
-    def content_pos() : QPointF*
-      Binding.bg_QScrollPrepareEvent_contentPos_(self)
+    def content_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QScrollPrepareEvent_contentPos_(self))
     end
     def viewport_size=(size : QSizeF*) : Void
       Binding.bg_QScrollPrepareEvent_setViewportSize_const_QSizeF_R(self, size)
     end
-    def content_pos_range=(rect : QRectF*) : Void
+    def content_pos_range=(rect : RectF) : Void
       Binding.bg_QScrollPrepareEvent_setContentPosRange_const_QRectF_R(self, rect)
     end
-    def content_pos=(pos : QPointF*) : Void
+    def content_pos=(pos : PointF) : Void
       Binding.bg_QScrollPrepareEvent_setContentPos_const_QPointF_R(self, pos)
     end
   end
@@ -22554,16 +23571,16 @@ module Qt
     end
     def initialize(@unwrap : Void*)
     end
-    def initialize(content_pos : QPointF*, overshoot : QPointF*, scroll_state : ScrollEvent::ScrollState)
+    def initialize(content_pos : PointF, overshoot : PointF, scroll_state : ScrollEvent::ScrollState)
       unwrap = Binding.bg_QScrollEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos, overshoot, scroll_state)
     @unwrap = unwrap
     
     end
-    def content_pos() : QPointF*
-      Binding.bg_QScrollEvent_contentPos_(self)
+    def content_pos() : PointF
+      PointF.new(unwrap: Binding.bg_QScrollEvent_contentPos_(self))
     end
-    def overshoot_distance() : QPointF*
-      Binding.bg_QScrollEvent_overshootDistance_(self)
+    def overshoot_distance() : PointF
+      PointF.new(unwrap: Binding.bg_QScrollEvent_overshootDistance_(self))
     end
     def scroll_state() : ScrollEvent::ScrollState
       Binding.bg_QScrollEvent_scrollState_(self)
@@ -22646,8 +23663,8 @@ module Qt
     def widget() : Widget
       Widget.new(unwrap: Binding.bg_QGestureEvent_widget_(self))
     end
-    def map_to_graphics_scene(gesture_point : QPointF*) : QPointF*
-      Binding.bg_QGestureEvent_mapToGraphicsScene_const_QPointF_R(self, gesture_point)
+    def map_to_graphics_scene(gesture_point : PointF) : PointF
+      PointF.new(unwrap: Binding.bg_QGestureEvent_mapToGraphicsScene_const_QPointF_R(self, gesture_point))
     end
   end
   class GraphicsSceneEvent < Event
@@ -23056,10 +24073,10 @@ module Qt
     def state() : GestureState
       Binding.bg_QGesture_state_(self)
     end
-    def hot_spot() : QPointF*
-      Binding.bg_QGesture_hotSpot_(self)
+    def hot_spot() : PointF
+      PointF.new(unwrap: Binding.bg_QGesture_hotSpot_(self))
     end
-    def hot_spot=(value : QPointF*) : Void
+    def hot_spot=(value : PointF) : Void
       Binding.bg_QGesture_setHotSpot_const_QPointF_R(self, value)
     end
     def has_hot_spot?() : Bool
@@ -23097,6 +24114,895 @@ module Qt
     Binding.bg_QGesture_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
     
+    end
+  end
+  class Painter 
+    @[Flags]
+    enum RenderHints : UInt32
+      Antialiasing = 1
+      TextAntialiasing = 2
+      SmoothPixmapTransform = 4
+      HighQualityAntialiasing = 8
+      NonCosmeticDefaultPen = 16
+      Qt4CompatiblePainting = 32
+    end
+    enum RenderHint : UInt32
+      Antialiasing = 1
+      TextAntialiasing = 2
+      SmoothPixmapTransform = 4
+      HighQualityAntialiasing = 8
+      NonCosmeticDefaultPen = 16
+      Qt4CompatiblePainting = 32
+    end
+    enum CompositionMode : UInt32
+      CompositionModeSourceOver = 0
+      CompositionModeDestinationOver = 1
+      CompositionModeClear = 2
+      CompositionModeSource = 3
+      CompositionModeDestination = 4
+      CompositionModeSourceIn = 5
+      CompositionModeDestinationIn = 6
+      CompositionModeSourceOut = 7
+      CompositionModeDestinationOut = 8
+      CompositionModeSourceAtop = 9
+      CompositionModeDestinationAtop = 10
+      CompositionModeXor = 11
+      CompositionModePlus = 12
+      CompositionModeMultiply = 13
+      CompositionModeScreen = 14
+      CompositionModeOverlay = 15
+      CompositionModeDarken = 16
+      CompositionModeLighten = 17
+      CompositionModeColorDodge = 18
+      CompositionModeColorBurn = 19
+      CompositionModeHardLight = 20
+      CompositionModeSoftLight = 21
+      CompositionModeDifference = 22
+      CompositionModeExclusion = 23
+      RasterOpSourceOrDestination = 24
+      RasterOpSourceAndDestination = 25
+      RasterOpSourceXorDestination = 26
+      RasterOpNotSourceAndNotDestination = 27
+      RasterOpNotSourceOrNotDestination = 28
+      RasterOpNotSourceXorDestination = 29
+      RasterOpNotSource = 30
+      RasterOpNotSourceAndDestination = 31
+      RasterOpSourceAndNotDestination = 32
+      RasterOpNotSourceOrDestination = 33
+      RasterOpSourceOrNotDestination = 34
+      RasterOpClearDestination = 35
+      RasterOpSetDestination = 36
+      RasterOpNotDestination = 37
+    end
+    enum PixmapFragmentHint : UInt32
+      OpaqueHint = 1
+    end
+    @[Flags]
+    enum PixmapFragmentHints : UInt32
+      OpaqueHint = 1
+    end
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QPainter_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def initialize(unnamed_arg_0 : PaintDevice)
+      unwrap = Binding.bg_QPainter_CONSTRUCT_QPaintDevice_X(unnamed_arg_0)
+    @unwrap = unwrap
+    
+    end
+    def device() : PaintDevice
+      PaintDevice.new(unwrap: Binding.bg_QPainter_device_(self))
+    end
+    def begin(unnamed_arg_0 : PaintDevice) : Bool
+      Binding.bg_QPainter_begin_QPaintDevice_X(self, unnamed_arg_0)
+    end
+    def end() : Bool
+      Binding.bg_QPainter_end_(self)
+    end
+    def active?() : Bool
+      Binding.bg_QPainter_isActive_(self)
+    end
+    def init_from(device : PaintDevice) : Void
+      Binding.bg_QPainter_initFrom_const_QPaintDevice_X(self, device)
+    end
+    def composition_mode=(mode : Painter::CompositionMode) : Void
+      Binding.bg_QPainter_setCompositionMode_QPainter__CompositionMode(self, mode)
+    end
+    def composition_mode() : Painter::CompositionMode
+      Binding.bg_QPainter_compositionMode_(self)
+    end
+    def font() : QFont*
+      Binding.bg_QPainter_font_(self)
+    end
+    def font=(f : QFont*) : Void
+      Binding.bg_QPainter_setFont_const_QFont_R(self, f)
+    end
+    def font_metrics() : QFontMetrics*
+      Binding.bg_QPainter_fontMetrics_(self)
+    end
+    def font_info() : QFontInfo*
+      Binding.bg_QPainter_fontInfo_(self)
+    end
+    def pen=(color : Color) : Void
+      Binding.bg_QPainter_setPen_const_QColor_R(self, color)
+    end
+    def pen=(pen : QPen*) : Void
+      Binding.bg_QPainter_setPen_const_QPen_R(self, pen)
+    end
+    def pen=(style : PenStyle) : Void
+      Binding.bg_QPainter_setPen_Qt__PenStyle(self, style)
+    end
+    def pen() : QPen*
+      Binding.bg_QPainter_pen_(self)
+    end
+    def brush=(brush : Brush) : Void
+      Binding.bg_QPainter_setBrush_const_QBrush_R(self, brush)
+    end
+    def brush=(style : BrushStyle) : Void
+      Binding.bg_QPainter_setBrush_Qt__BrushStyle(self, style)
+    end
+    def brush() : Brush
+      Brush.new(unwrap: Binding.bg_QPainter_brush_(self))
+    end
+    def background_mode=(mode : BgMode) : Void
+      Binding.bg_QPainter_setBackgroundMode_Qt__BGMode(self, mode)
+    end
+    def background_mode() : BgMode
+      Binding.bg_QPainter_backgroundMode_(self)
+    end
+    def brush_origin() : Point
+      Point.new(unwrap: Binding.bg_QPainter_brushOrigin_(self))
+    end
+    def set_brush_origin(x : Int32, y : Int32) : Void
+      Binding.bg_QPainter_setBrushOrigin_int_int(self, x, y)
+    end
+    def brush_origin=(unnamed_arg_0 : Point) : Void
+      Binding.bg_QPainter_setBrushOrigin_const_QPoint_R(self, unnamed_arg_0)
+    end
+    def brush_origin=(unnamed_arg_0 : PointF) : Void
+      Binding.bg_QPainter_setBrushOrigin_const_QPointF_R(self, unnamed_arg_0)
+    end
+    def background=(bg : Brush) : Void
+      Binding.bg_QPainter_setBackground_const_QBrush_R(self, bg)
+    end
+    def background() : Brush
+      Brush.new(unwrap: Binding.bg_QPainter_background_(self))
+    end
+    def opacity() : Float64
+      Binding.bg_QPainter_opacity_(self)
+    end
+    def opacity=(opacity : Float64) : Void
+      Binding.bg_QPainter_setOpacity_qreal(self, opacity)
+    end
+    def clip_region() : QRegion*
+      Binding.bg_QPainter_clipRegion_(self)
+    end
+    def clip_path() : QPainterPath*
+      Binding.bg_QPainter_clipPath_(self)
+    end
+    def set_clip_rect(unnamed_arg_0 : RectF, op : ClipOperation = ClipOperation::ReplaceClip) : Void
+      Binding.bg_QPainter_setClipRect_const_QRectF_R_Qt__ClipOperation(self, unnamed_arg_0, op)
+    end
+    def set_clip_rect(unnamed_arg_0 : Rect, op : ClipOperation = ClipOperation::ReplaceClip) : Void
+      Binding.bg_QPainter_setClipRect_const_QRect_R_Qt__ClipOperation(self, unnamed_arg_0, op)
+    end
+    def set_clip_rect(x : Int32, y : Int32, w : Int32, h : Int32, op : ClipOperation = ClipOperation::ReplaceClip) : Void
+      Binding.bg_QPainter_setClipRect_int_int_int_int_Qt__ClipOperation(self, x, y, w, h, op)
+    end
+    def set_clip_region(unnamed_arg_0 : QRegion*, op : ClipOperation = ClipOperation::ReplaceClip) : Void
+      Binding.bg_QPainter_setClipRegion_const_QRegion_R_Qt__ClipOperation(self, unnamed_arg_0, op)
+    end
+    def set_clip_path(path : QPainterPath*, op : ClipOperation = ClipOperation::ReplaceClip) : Void
+      Binding.bg_QPainter_setClipPath_const_QPainterPath_R_Qt__ClipOperation(self, path, op)
+    end
+    def clipping=(enable : Bool) : Void
+      Binding.bg_QPainter_setClipping_bool(self, enable)
+    end
+    def has_clipping?() : Bool
+      Binding.bg_QPainter_hasClipping_(self)
+    end
+    def clip_bounding_rect() : RectF
+      RectF.new(unwrap: Binding.bg_QPainter_clipBoundingRect_(self))
+    end
+    def save() : Void
+      Binding.bg_QPainter_save_(self)
+    end
+    def restore() : Void
+      Binding.bg_QPainter_restore_(self)
+    end
+    def set_matrix(matrix : QMatrix*, combine : Bool) : Void
+      Binding.bg_QPainter_setMatrix_const_QMatrix_R_bool(self, matrix, combine)
+    end
+    def matrix() : QMatrix*
+      Binding.bg_QPainter_matrix_(self)
+    end
+    def device_matrix() : QMatrix*
+      Binding.bg_QPainter_deviceMatrix_(self)
+    end
+    def reset_matrix() : Void
+      Binding.bg_QPainter_resetMatrix_(self)
+    end
+    def set_transform(transform : QTransform*, combine : Bool) : Void
+      Binding.bg_QPainter_setTransform_const_QTransform_R_bool(self, transform, combine)
+    end
+    def transform() : QTransform*
+      Binding.bg_QPainter_transform_(self)
+    end
+    def device_transform() : QTransform*
+      Binding.bg_QPainter_deviceTransform_(self)
+    end
+    def reset_transform() : Void
+      Binding.bg_QPainter_resetTransform_(self)
+    end
+    def set_world_matrix(matrix : QMatrix*, combine : Bool) : Void
+      Binding.bg_QPainter_setWorldMatrix_const_QMatrix_R_bool(self, matrix, combine)
+    end
+    def world_matrix() : QMatrix*
+      Binding.bg_QPainter_worldMatrix_(self)
+    end
+    def set_world_transform(matrix : QTransform*, combine : Bool) : Void
+      Binding.bg_QPainter_setWorldTransform_const_QTransform_R_bool(self, matrix, combine)
+    end
+    def world_transform() : QTransform*
+      Binding.bg_QPainter_worldTransform_(self)
+    end
+    def combined_matrix() : QMatrix*
+      Binding.bg_QPainter_combinedMatrix_(self)
+    end
+    def combined_transform() : QTransform*
+      Binding.bg_QPainter_combinedTransform_(self)
+    end
+    def matrix_enabled=(enabled : Bool) : Void
+      Binding.bg_QPainter_setMatrixEnabled_bool(self, enabled)
+    end
+    def matrix_enabled() : Bool
+      Binding.bg_QPainter_matrixEnabled_(self)
+    end
+    def world_matrix_enabled=(enabled : Bool) : Void
+      Binding.bg_QPainter_setWorldMatrixEnabled_bool(self, enabled)
+    end
+    def world_matrix_enabled() : Bool
+      Binding.bg_QPainter_worldMatrixEnabled_(self)
+    end
+    def scale(sx : Float64, sy : Float64) : Void
+      Binding.bg_QPainter_scale_qreal_qreal(self, sx, sy)
+    end
+    def shear(sh : Float64, sv : Float64) : Void
+      Binding.bg_QPainter_shear_qreal_qreal(self, sh, sv)
+    end
+    def rotate(a : Float64) : Void
+      Binding.bg_QPainter_rotate_qreal(self, a)
+    end
+    def translate(offset : PointF) : Void
+      Binding.bg_QPainter_translate_const_QPointF_R(self, offset)
+    end
+    def translate(offset : Point) : Void
+      Binding.bg_QPainter_translate_const_QPoint_R(self, offset)
+    end
+    def translate(dx : Float64, dy : Float64) : Void
+      Binding.bg_QPainter_translate_qreal_qreal(self, dx, dy)
+    end
+    def window() : Rect
+      Rect.new(unwrap: Binding.bg_QPainter_window_(self))
+    end
+    def window=(window : Rect) : Void
+      Binding.bg_QPainter_setWindow_const_QRect_R(self, window)
+    end
+    def set_window(x : Int32, y : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QPainter_setWindow_int_int_int_int(self, x, y, w, h)
+    end
+    def viewport() : Rect
+      Rect.new(unwrap: Binding.bg_QPainter_viewport_(self))
+    end
+    def viewport=(viewport : Rect) : Void
+      Binding.bg_QPainter_setViewport_const_QRect_R(self, viewport)
+    end
+    def set_viewport(x : Int32, y : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QPainter_setViewport_int_int_int_int(self, x, y, w, h)
+    end
+    def view_transform_enabled=(enable : Bool) : Void
+      Binding.bg_QPainter_setViewTransformEnabled_bool(self, enable)
+    end
+    def view_transform_enabled() : Bool
+      Binding.bg_QPainter_viewTransformEnabled_(self)
+    end
+    def stroke_path(path : QPainterPath*, pen : QPen*) : Void
+      Binding.bg_QPainter_strokePath_const_QPainterPath_R_const_QPen_R(self, path, pen)
+    end
+    def fill_path(path : QPainterPath*, brush : Brush) : Void
+      Binding.bg_QPainter_fillPath_const_QPainterPath_R_const_QBrush_R(self, path, brush)
+    end
+    def draw_path(path : QPainterPath*) : Void
+      Binding.bg_QPainter_drawPath_const_QPainterPath_R(self, path)
+    end
+    def draw_point(pt : PointF) : Void
+      Binding.bg_QPainter_drawPoint_const_QPointF_R(self, pt)
+    end
+    def draw_point(p : Point) : Void
+      Binding.bg_QPainter_drawPoint_const_QPoint_R(self, p)
+    end
+    def draw_point(x : Int32, y : Int32) : Void
+      Binding.bg_QPainter_drawPoint_int_int(self, x, y)
+    end
+    def draw_points(points : QPolygonF*) : Void
+      Binding.bg_QPainter_drawPoints_const_QPolygonF_R(self, points)
+    end
+    def draw_points(points : QPolygon*) : Void
+      Binding.bg_QPainter_drawPoints_const_QPolygon_R(self, points)
+    end
+    def draw_line(line : QLineF) : Void
+      Binding.bg_QPainter_drawLine_const_QLineF_R(self, line)
+    end
+    def draw_line(line : QLine) : Void
+      Binding.bg_QPainter_drawLine_const_QLine_R(self, line)
+    end
+    def draw_line(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+      Binding.bg_QPainter_drawLine_int_int_int_int(self, x1, y1, x2, y2)
+    end
+    def draw_line(p1 : Point, p2 : Point) : Void
+      Binding.bg_QPainter_drawLine_const_QPoint_R_const_QPoint_R(self, p1, p2)
+    end
+    def draw_line(p1 : PointF, p2 : PointF) : Void
+      Binding.bg_QPainter_drawLine_const_QPointF_R_const_QPointF_R(self, p1, p2)
+    end
+    def draw_lines(lines : QLineF, line_count : Int32) : Void
+      Binding.bg_QPainter_drawLines_const_QLineF_X_int(self, lines, line_count)
+    end
+    def draw_lines(lines : Enumerable(QLineF)) : Void
+      Binding.bg_QPainter_drawLines_const_QVector_QLineF__R(self, BindgenHelper.wrap_container(QVector_QLineF, lines))
+    end
+    def draw_lines(point_pairs : Enumerable(PointF)) : Void
+      Binding.bg_QPainter_drawLines_const_QVector_QPointF__R(self, BindgenHelper.wrap_container(QVector_QPointF, point_pairs))
+    end
+    def draw_lines(lines : QLine, line_count : Int32) : Void
+      Binding.bg_QPainter_drawLines_const_QLine_X_int(self, lines, line_count)
+    end
+    def draw_lines(lines : Enumerable(QLine)) : Void
+      Binding.bg_QPainter_drawLines_const_QVector_QLine__R(self, BindgenHelper.wrap_container(QVector_QLine, lines))
+    end
+    def draw_lines(point_pairs : Enumerable(Point)) : Void
+      Binding.bg_QPainter_drawLines_const_QVector_QPoint__R(self, BindgenHelper.wrap_container(QVector_QPoint, point_pairs))
+    end
+    def draw_rect(rect : RectF) : Void
+      Binding.bg_QPainter_drawRect_const_QRectF_R(self, rect)
+    end
+    def draw_rect(x1 : Int32, y1 : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QPainter_drawRect_int_int_int_int(self, x1, y1, w, h)
+    end
+    def draw_rect(rect : Rect) : Void
+      Binding.bg_QPainter_drawRect_const_QRect_R(self, rect)
+    end
+    def draw_rects(rects : RectF, rect_count : Int32) : Void
+      Binding.bg_QPainter_drawRects_const_QRectF_X_int(self, rects, rect_count)
+    end
+    def draw_rects(rectangles : Enumerable(RectF)) : Void
+      Binding.bg_QPainter_drawRects_const_QVector_QRectF__R(self, BindgenHelper.wrap_container(QVector_QRectF, rectangles))
+    end
+    def draw_rects(rects : Rect, rect_count : Int32) : Void
+      Binding.bg_QPainter_drawRects_const_QRect_X_int(self, rects, rect_count)
+    end
+    def draw_rects(rectangles : Enumerable(Rect)) : Void
+      Binding.bg_QPainter_drawRects_const_QVector_QRect__R(self, BindgenHelper.wrap_container(QVector_QRect, rectangles))
+    end
+    def draw_ellipse(r : RectF) : Void
+      Binding.bg_QPainter_drawEllipse_const_QRectF_R(self, r)
+    end
+    def draw_ellipse(r : Rect) : Void
+      Binding.bg_QPainter_drawEllipse_const_QRect_R(self, r)
+    end
+    def draw_ellipse(x : Int32, y : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QPainter_drawEllipse_int_int_int_int(self, x, y, w, h)
+    end
+    def draw_ellipse(center : PointF, rx : Float64, ry : Float64) : Void
+      Binding.bg_QPainter_drawEllipse_const_QPointF_R_qreal_qreal(self, center, rx, ry)
+    end
+    def draw_ellipse(center : Point, rx : Int32, ry : Int32) : Void
+      Binding.bg_QPainter_drawEllipse_const_QPoint_R_int_int(self, center, rx, ry)
+    end
+    def draw_polyline(polyline : QPolygonF*) : Void
+      Binding.bg_QPainter_drawPolyline_const_QPolygonF_R(self, polyline)
+    end
+    def draw_polyline(polygon : QPolygon*) : Void
+      Binding.bg_QPainter_drawPolyline_const_QPolygon_R(self, polygon)
+    end
+    def draw_polygon(polygon : QPolygonF*, fill_rule : FillRule = FillRule::OddEvenFill) : Void
+      Binding.bg_QPainter_drawPolygon_const_QPolygonF_R_Qt__FillRule(self, polygon, fill_rule)
+    end
+    def draw_polygon(polygon : QPolygon*, fill_rule : FillRule = FillRule::OddEvenFill) : Void
+      Binding.bg_QPainter_drawPolygon_const_QPolygon_R_Qt__FillRule(self, polygon, fill_rule)
+    end
+    def draw_convex_polygon(polygon : QPolygonF*) : Void
+      Binding.bg_QPainter_drawConvexPolygon_const_QPolygonF_R(self, polygon)
+    end
+    def draw_convex_polygon(polygon : QPolygon*) : Void
+      Binding.bg_QPainter_drawConvexPolygon_const_QPolygon_R(self, polygon)
+    end
+    def draw_arc(rect : RectF, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawArc_const_QRectF_R_int_int(self, rect, a, alen)
+    end
+    def draw_arc(unnamed_arg_0 : Rect, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawArc_const_QRect_R_int_int(self, unnamed_arg_0, a, alen)
+    end
+    def draw_arc(x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawArc_int_int_int_int_int_int(self, x, y, w, h, a, alen)
+    end
+    def draw_pie(rect : RectF, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawPie_const_QRectF_R_int_int(self, rect, a, alen)
+    end
+    def draw_pie(x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawPie_int_int_int_int_int_int(self, x, y, w, h, a, alen)
+    end
+    def draw_pie(unnamed_arg_0 : Rect, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawPie_const_QRect_R_int_int(self, unnamed_arg_0, a, alen)
+    end
+    def draw_chord(rect : RectF, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawChord_const_QRectF_R_int_int(self, rect, a, alen)
+    end
+    def draw_chord(x : Int32, y : Int32, w : Int32, h : Int32, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawChord_int_int_int_int_int_int(self, x, y, w, h, a, alen)
+    end
+    def draw_chord(unnamed_arg_0 : Rect, a : Int32, alen : Int32) : Void
+      Binding.bg_QPainter_drawChord_const_QRect_R_int_int(self, unnamed_arg_0, a, alen)
+    end
+    def draw_rounded_rect(rect : RectF, x_radius : Float64, y_radius : Float64, mode : SizeMode = SizeMode::AbsoluteSize) : Void
+      Binding.bg_QPainter_drawRoundedRect_const_QRectF_R_qreal_qreal_Qt__SizeMode(self, rect, x_radius, y_radius, mode)
+    end
+    def draw_rounded_rect(x : Int32, y : Int32, w : Int32, h : Int32, x_radius : Float64, y_radius : Float64, mode : SizeMode = SizeMode::AbsoluteSize) : Void
+      Binding.bg_QPainter_drawRoundedRect_int_int_int_int_qreal_qreal_Qt__SizeMode(self, x, y, w, h, x_radius, y_radius, mode)
+    end
+    def draw_rounded_rect(rect : Rect, x_radius : Float64, y_radius : Float64, mode : SizeMode = SizeMode::AbsoluteSize) : Void
+      Binding.bg_QPainter_drawRoundedRect_const_QRect_R_qreal_qreal_Qt__SizeMode(self, rect, x_radius, y_radius, mode)
+    end
+    def draw_round_rect(r : RectF, xround : Int32 = 25, yround : Int32 = 25) : Void
+      Binding.bg_QPainter_drawRoundRect_const_QRectF_R_int_int(self, r, xround, yround)
+    end
+    def draw_round_rect(x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : Int32 = 25, unnamed_arg_5 : Int32 = 25) : Void
+      Binding.bg_QPainter_drawRoundRect_int_int_int_int_int_int(self, x, y, w, h, unnamed_arg_4, unnamed_arg_5)
+    end
+    def draw_round_rect(r : Rect, xround : Int32 = 25, yround : Int32 = 25) : Void
+      Binding.bg_QPainter_drawRoundRect_const_QRect_R_int_int(self, r, xround, yround)
+    end
+    def draw_tiled_pixmap(rect : RectF, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawTiledPixmap_const_QRectF_R_const_QPixmap_R(self, rect, pm)
+    end
+    def draw_tiled_pixmap(rect : RectF, pm : Pixmap, offset : PointF) : Void
+      Binding.bg_QPainter_drawTiledPixmap_const_QRectF_R_const_QPixmap_R_const_QPointF_R(self, rect, pm, offset)
+    end
+    def draw_tiled_pixmap(x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : Pixmap, sx : Int32 = 0, sy : Int32 = 0) : Void
+      Binding.bg_QPainter_drawTiledPixmap_int_int_int_int_const_QPixmap_R_int_int(self, x, y, w, h, unnamed_arg_4, sx, sy)
+    end
+    def draw_tiled_pixmap(unnamed_arg_0 : Rect, unnamed_arg_1 : Pixmap) : Void
+      Binding.bg_QPainter_drawTiledPixmap_const_QRect_R_const_QPixmap_R(self, unnamed_arg_0, unnamed_arg_1)
+    end
+    def draw_tiled_pixmap(unnamed_arg_0 : Rect, unnamed_arg_1 : Pixmap, unnamed_arg_2 : Point) : Void
+      Binding.bg_QPainter_drawTiledPixmap_const_QRect_R_const_QPixmap_R_const_QPoint_R(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
+    end
+    def draw_picture(p : PointF, picture : QPicture*) : Void
+      Binding.bg_QPainter_drawPicture_const_QPointF_R_const_QPicture_R(self, p, picture)
+    end
+    def draw_picture(x : Int32, y : Int32, picture : QPicture*) : Void
+      Binding.bg_QPainter_drawPicture_int_int_const_QPicture_R(self, x, y, picture)
+    end
+    def draw_picture(p : Point, picture : QPicture*) : Void
+      Binding.bg_QPainter_drawPicture_const_QPoint_R_const_QPicture_R(self, p, picture)
+    end
+    def draw_pixmap(target_rect : RectF, pixmap : Pixmap, source_rect : RectF) : Void
+      Binding.bg_QPainter_drawPixmap_const_QRectF_R_const_QPixmap_R_const_QRectF_R(self, target_rect, pixmap, source_rect)
+    end
+    def draw_pixmap(target_rect : Rect, pixmap : Pixmap, source_rect : Rect) : Void
+      Binding.bg_QPainter_drawPixmap_const_QRect_R_const_QPixmap_R_const_QRect_R(self, target_rect, pixmap, source_rect)
+    end
+    def draw_pixmap(x : Int32, y : Int32, w : Int32, h : Int32, pm : Pixmap, sx : Int32, sy : Int32, sw : Int32, sh : Int32) : Void
+      Binding.bg_QPainter_drawPixmap_int_int_int_int_const_QPixmap_R_int_int_int_int(self, x, y, w, h, pm, sx, sy, sw, sh)
+    end
+    def draw_pixmap(x : Int32, y : Int32, pm : Pixmap, sx : Int32, sy : Int32, sw : Int32, sh : Int32) : Void
+      Binding.bg_QPainter_drawPixmap_int_int_const_QPixmap_R_int_int_int_int(self, x, y, pm, sx, sy, sw, sh)
+    end
+    def draw_pixmap(p : PointF, pm : Pixmap, sr : RectF) : Void
+      Binding.bg_QPainter_drawPixmap_const_QPointF_R_const_QPixmap_R_const_QRectF_R(self, p, pm, sr)
+    end
+    def draw_pixmap(p : Point, pm : Pixmap, sr : Rect) : Void
+      Binding.bg_QPainter_drawPixmap_const_QPoint_R_const_QPixmap_R_const_QRect_R(self, p, pm, sr)
+    end
+    def draw_pixmap(p : PointF, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawPixmap_const_QPointF_R_const_QPixmap_R(self, p, pm)
+    end
+    def draw_pixmap(p : Point, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawPixmap_const_QPoint_R_const_QPixmap_R(self, p, pm)
+    end
+    def draw_pixmap(x : Int32, y : Int32, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawPixmap_int_int_const_QPixmap_R(self, x, y, pm)
+    end
+    def draw_pixmap(r : Rect, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawPixmap_const_QRect_R_const_QPixmap_R(self, r, pm)
+    end
+    def draw_pixmap(x : Int32, y : Int32, w : Int32, h : Int32, pm : Pixmap) : Void
+      Binding.bg_QPainter_drawPixmap_int_int_int_int_const_QPixmap_R(self, x, y, w, h, pm)
+    end
+    def draw_image(target_rect : RectF, image : Image, source_rect : RectF) : Void
+      Binding.bg_QPainter_drawImage_const_QRectF_R_const_QImage_R_const_QRectF_R(self, target_rect, image, source_rect)
+    end
+    def draw_image(target_rect : RectF, image : Image, source_rect : RectF, flags : ImageConversionFlags) : Void
+      Binding.bg_QPainter_drawImage_const_QRectF_R_const_QImage_R_const_QRectF_R_Qt__ImageConversionFlags(self, target_rect, image, source_rect, flags)
+    end
+    def draw_image(target_rect : Rect, image : Image, source_rect : Rect) : Void
+      Binding.bg_QPainter_drawImage_const_QRect_R_const_QImage_R_const_QRect_R(self, target_rect, image, source_rect)
+    end
+    def draw_image(target_rect : Rect, image : Image, source_rect : Rect, flags : ImageConversionFlags) : Void
+      Binding.bg_QPainter_drawImage_const_QRect_R_const_QImage_R_const_QRect_R_Qt__ImageConversionFlags(self, target_rect, image, source_rect, flags)
+    end
+    def draw_image(p : PointF, image : Image, sr : RectF) : Void
+      Binding.bg_QPainter_drawImage_const_QPointF_R_const_QImage_R_const_QRectF_R(self, p, image, sr)
+    end
+    def draw_image(p : PointF, image : Image, sr : RectF, flags : ImageConversionFlags) : Void
+      Binding.bg_QPainter_drawImage_const_QPointF_R_const_QImage_R_const_QRectF_R_Qt__ImageConversionFlags(self, p, image, sr, flags)
+    end
+    def draw_image(p : Point, image : Image, sr : Rect) : Void
+      Binding.bg_QPainter_drawImage_const_QPoint_R_const_QImage_R_const_QRect_R(self, p, image, sr)
+    end
+    def draw_image(p : Point, image : Image, sr : Rect, flags : ImageConversionFlags) : Void
+      Binding.bg_QPainter_drawImage_const_QPoint_R_const_QImage_R_const_QRect_R_Qt__ImageConversionFlags(self, p, image, sr, flags)
+    end
+    def draw_image(r : RectF, image : Image) : Void
+      Binding.bg_QPainter_drawImage_const_QRectF_R_const_QImage_R(self, r, image)
+    end
+    def draw_image(r : Rect, image : Image) : Void
+      Binding.bg_QPainter_drawImage_const_QRect_R_const_QImage_R(self, r, image)
+    end
+    def draw_image(p : PointF, image : Image) : Void
+      Binding.bg_QPainter_drawImage_const_QPointF_R_const_QImage_R(self, p, image)
+    end
+    def draw_image(p : Point, image : Image) : Void
+      Binding.bg_QPainter_drawImage_const_QPoint_R_const_QImage_R(self, p, image)
+    end
+    def draw_image(x : Int32, y : Int32, image : Image, sx : Int32 = 0, sy : Int32 = 0, sw : Int32 = -1, sh : Int32 = -1) : Void
+      Binding.bg_QPainter_drawImage_int_int_const_QImage_R_int_int_int_int(self, x, y, image, sx, sy, sw, sh)
+    end
+    def draw_image(x : Int32, y : Int32, image : Image, sx : Int32, sy : Int32, sw : Int32, sh : Int32, flags : ImageConversionFlags) : Void
+      Binding.bg_QPainter_drawImage_int_int_const_QImage_R_int_int_int_int_Qt__ImageConversionFlags(self, x, y, image, sx, sy, sw, sh, flags)
+    end
+    def layout_direction=(direction : LayoutDirection) : Void
+      Binding.bg_QPainter_setLayoutDirection_Qt__LayoutDirection(self, direction)
+    end
+    def layout_direction() : LayoutDirection
+      Binding.bg_QPainter_layoutDirection_(self)
+    end
+    def draw_glyph_run(position : PointF, glyph_run : QGlyphRun*) : Void
+      Binding.bg_QPainter_drawGlyphRun_const_QPointF_R_const_QGlyphRun_R(self, position, glyph_run)
+    end
+    def draw_static_text(top_left_position : PointF, static_text : QStaticText*) : Void
+      Binding.bg_QPainter_drawStaticText_const_QPointF_R_const_QStaticText_R(self, top_left_position, static_text)
+    end
+    def draw_static_text(top_left_position : Point, static_text : QStaticText*) : Void
+      Binding.bg_QPainter_drawStaticText_const_QPoint_R_const_QStaticText_R(self, top_left_position, static_text)
+    end
+    def draw_static_text(left : Int32, top : Int32, static_text : QStaticText*) : Void
+      Binding.bg_QPainter_drawStaticText_int_int_const_QStaticText_R(self, left, top, static_text)
+    end
+    def draw_text(p : PointF, s : String) : Void
+      Binding.bg_QPainter_drawText_const_QPointF_R_const_QString_R(self, p, Qt::Converter::QString.wrap(s))
+    end
+    def draw_text(p : Point, s : String) : Void
+      Binding.bg_QPainter_drawText_const_QPoint_R_const_QString_R(self, p, Qt::Converter::QString.wrap(s))
+    end
+    def draw_text(x : Int32, y : Int32, s : String) : Void
+      Binding.bg_QPainter_drawText_int_int_const_QString_R(self, x, y, Qt::Converter::QString.wrap(s))
+    end
+    def draw_text(p : PointF, str : String, tf : Int32, justification_padding : Int32) : Void
+      Binding.bg_QPainter_drawText_const_QPointF_R_const_QString_R_int_int(self, p, Qt::Converter::QString.wrap(str), tf, justification_padding)
+    end
+    def draw_text(r : RectF, flags : Int32, text : String, br : RectF? = nil) : Void
+      Binding.bg_QPainter_drawText_const_QRectF_R_int_const_QString_R_QRectF_X(self, r, flags, Qt::Converter::QString.wrap(text), br)
+    end
+    def draw_text(r : Rect, flags : Int32, text : String, br : Rect? = nil) : Void
+      Binding.bg_QPainter_drawText_const_QRect_R_int_const_QString_R_QRect_X(self, r, flags, Qt::Converter::QString.wrap(text), br)
+    end
+    def draw_text(x : Int32, y : Int32, w : Int32, h : Int32, flags : Int32, text : String, br : Rect? = nil) : Void
+      Binding.bg_QPainter_drawText_int_int_int_int_int_const_QString_R_QRect_X(self, x, y, w, h, flags, Qt::Converter::QString.wrap(text), br)
+    end
+    def draw_text(r : RectF, text : String) : Void
+      Binding.bg_QPainter_drawText_const_QRectF_R_const_QString_R(self, r, Qt::Converter::QString.wrap(text))
+    end
+    def draw_text(r : RectF, text : String, o : TextOption) : Void
+      Binding.bg_QPainter_drawText_const_QRectF_R_const_QString_R_const_QTextOption_R(self, r, Qt::Converter::QString.wrap(text), o)
+    end
+    def bounding_rect(rect : RectF, flags : Int32, text : String) : RectF
+      RectF.new(unwrap: Binding.bg_QPainter_boundingRect_const_QRectF_R_int_const_QString_R(self, rect, flags, Qt::Converter::QString.wrap(text)))
+    end
+    def bounding_rect(rect : Rect, flags : Int32, text : String) : Rect
+      Rect.new(unwrap: Binding.bg_QPainter_boundingRect_const_QRect_R_int_const_QString_R(self, rect, flags, Qt::Converter::QString.wrap(text)))
+    end
+    def bounding_rect(x : Int32, y : Int32, w : Int32, h : Int32, flags : Int32, text : String) : Rect
+      Rect.new(unwrap: Binding.bg_QPainter_boundingRect_int_int_int_int_int_const_QString_R(self, x, y, w, h, flags, Qt::Converter::QString.wrap(text)))
+    end
+    def bounding_rect(rect : RectF, text : String) : RectF
+      RectF.new(unwrap: Binding.bg_QPainter_boundingRect_const_QRectF_R_const_QString_R(self, rect, Qt::Converter::QString.wrap(text)))
+    end
+    def bounding_rect(rect : RectF, text : String, o : TextOption) : RectF
+      RectF.new(unwrap: Binding.bg_QPainter_boundingRect_const_QRectF_R_const_QString_R_const_QTextOption_R(self, rect, Qt::Converter::QString.wrap(text), o))
+    end
+    def draw_text_item(p : PointF, ti : QTextItem*) : Void
+      Binding.bg_QPainter_drawTextItem_const_QPointF_R_const_QTextItem_R(self, p, ti)
+    end
+    def draw_text_item(x : Int32, y : Int32, ti : QTextItem*) : Void
+      Binding.bg_QPainter_drawTextItem_int_int_const_QTextItem_R(self, x, y, ti)
+    end
+    def draw_text_item(p : Point, ti : QTextItem*) : Void
+      Binding.bg_QPainter_drawTextItem_const_QPoint_R_const_QTextItem_R(self, p, ti)
+    end
+    def fill_rect(unnamed_arg_0 : RectF, unnamed_arg_1 : Brush) : Void
+      Binding.bg_QPainter_fillRect_const_QRectF_R_const_QBrush_R(self, unnamed_arg_0, unnamed_arg_1)
+    end
+    def fill_rect(x : Int32, y : Int32, w : Int32, h : Int32, unnamed_arg_4 : Brush) : Void
+      Binding.bg_QPainter_fillRect_int_int_int_int_const_QBrush_R(self, x, y, w, h, unnamed_arg_4)
+    end
+    def fill_rect(unnamed_arg_0 : Rect, unnamed_arg_1 : Brush) : Void
+      Binding.bg_QPainter_fillRect_const_QRect_R_const_QBrush_R(self, unnamed_arg_0, unnamed_arg_1)
+    end
+    def fill_rect(unnamed_arg_0 : RectF, color : Color) : Void
+      Binding.bg_QPainter_fillRect_const_QRectF_R_const_QColor_R(self, unnamed_arg_0, color)
+    end
+    def fill_rect(x : Int32, y : Int32, w : Int32, h : Int32, color : Color) : Void
+      Binding.bg_QPainter_fillRect_int_int_int_int_const_QColor_R(self, x, y, w, h, color)
+    end
+    def fill_rect(unnamed_arg_0 : Rect, color : Color) : Void
+      Binding.bg_QPainter_fillRect_const_QRect_R_const_QColor_R(self, unnamed_arg_0, color)
+    end
+    def fill_rect(x : Int32, y : Int32, w : Int32, h : Int32, c : GlobalColor) : Void
+      Binding.bg_QPainter_fillRect_int_int_int_int_Qt__GlobalColor(self, x, y, w, h, c)
+    end
+    def fill_rect(r : Rect, c : GlobalColor) : Void
+      Binding.bg_QPainter_fillRect_const_QRect_R_Qt__GlobalColor(self, r, c)
+    end
+    def fill_rect(r : RectF, c : GlobalColor) : Void
+      Binding.bg_QPainter_fillRect_const_QRectF_R_Qt__GlobalColor(self, r, c)
+    end
+    def fill_rect(x : Int32, y : Int32, w : Int32, h : Int32, style : BrushStyle) : Void
+      Binding.bg_QPainter_fillRect_int_int_int_int_Qt__BrushStyle(self, x, y, w, h, style)
+    end
+    def fill_rect(r : Rect, style : BrushStyle) : Void
+      Binding.bg_QPainter_fillRect_const_QRect_R_Qt__BrushStyle(self, r, style)
+    end
+    def fill_rect(r : RectF, style : BrushStyle) : Void
+      Binding.bg_QPainter_fillRect_const_QRectF_R_Qt__BrushStyle(self, r, style)
+    end
+    def erase_rect(unnamed_arg_0 : RectF) : Void
+      Binding.bg_QPainter_eraseRect_const_QRectF_R(self, unnamed_arg_0)
+    end
+    def erase_rect(x : Int32, y : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QPainter_eraseRect_int_int_int_int(self, x, y, w, h)
+    end
+    def erase_rect(unnamed_arg_0 : Rect) : Void
+      Binding.bg_QPainter_eraseRect_const_QRect_R(self, unnamed_arg_0)
+    end
+    def set_render_hint(hint : Painter::RenderHint, on : Bool = true) : Void
+      Binding.bg_QPainter_setRenderHint_QPainter__RenderHint_bool(self, hint, on)
+    end
+    def set_render_hints(hints : Painter::RenderHints, on : Bool = true) : Void
+      Binding.bg_QPainter_setRenderHints_QPainter__RenderHints_bool(self, hints, on)
+    end
+    def render_hints() : Painter::RenderHints
+      Binding.bg_QPainter_renderHints_(self)
+    end
+    def test_render_hint(hint : Painter::RenderHint) : Bool
+      Binding.bg_QPainter_testRenderHint_QPainter__RenderHint(self, hint)
+    end
+    def paint_engine() : QPaintEngine*
+      Binding.bg_QPainter_paintEngine_(self)
+    end
+    def self.set_redirected(device : PaintDevice, replacement : PaintDevice) : Void
+      Binding.bg_QPainter_setRedirected_STATIC_const_QPaintDevice_X_QPaintDevice_X(device, replacement)
+    end
+    def self.set_redirected(device : PaintDevice, replacement : PaintDevice, offset : Point) : Void
+      Binding.bg_QPainter_setRedirected_STATIC_const_QPaintDevice_X_QPaintDevice_X_const_QPoint_R(device, replacement, offset)
+    end
+    def self.restore_redirected(device : PaintDevice) : Void
+      Binding.bg_QPainter_restoreRedirected_STATIC_const_QPaintDevice_X(device)
+    end
+    def begin_native_painting() : Void
+      Binding.bg_QPainter_beginNativePainting_(self)
+    end
+    def end_native_painting() : Void
+      Binding.bg_QPainter_endNativePainting_(self)
+    end
+  end
+  class QLine 
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QLine_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def initialize(pt1 : Point, pt2 : Point)
+      unwrap = Binding.bg_QLine_CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1, pt2)
+    @unwrap = unwrap
+    
+    end
+    def initialize(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32)
+      unwrap = Binding.bg_QLine_CONSTRUCT_int_int_int_int(x1, y1, x2, y2)
+    @unwrap = unwrap
+    
+    end
+    def null?() : Bool
+      Binding.bg_QLine_isNull_(self)
+    end
+    def p1() : Point
+      Point.new(unwrap: Binding.bg_QLine_p1_(self))
+    end
+    def p2() : Point
+      Point.new(unwrap: Binding.bg_QLine_p2_(self))
+    end
+    def x1() : Int32
+      Binding.bg_QLine_x1_(self)
+    end
+    def y1() : Int32
+      Binding.bg_QLine_y1_(self)
+    end
+    def x2() : Int32
+      Binding.bg_QLine_x2_(self)
+    end
+    def y2() : Int32
+      Binding.bg_QLine_y2_(self)
+    end
+    def dx() : Int32
+      Binding.bg_QLine_dx_(self)
+    end
+    def dy() : Int32
+      Binding.bg_QLine_dy_(self)
+    end
+    def translate(p : Point) : Void
+      Binding.bg_QLine_translate_const_QPoint_R(self, p)
+    end
+    def translate(dx : Int32, dy : Int32) : Void
+      Binding.bg_QLine_translate_int_int(self, dx, dy)
+    end
+    def translated(p : Point) : QLine
+      QLine.new(unwrap: Binding.bg_QLine_translated_const_QPoint_R(self, p))
+    end
+    def translated(dx : Int32, dy : Int32) : QLine
+      QLine.new(unwrap: Binding.bg_QLine_translated_int_int(self, dx, dy))
+    end
+    def center() : Point
+      Point.new(unwrap: Binding.bg_QLine_center_(self))
+    end
+    def p1=(p1 : Point) : Void
+      Binding.bg_QLine_setP1_const_QPoint_R(self, p1)
+    end
+    def p2=(p2 : Point) : Void
+      Binding.bg_QLine_setP2_const_QPoint_R(self, p2)
+    end
+    def set_points(p1 : Point, p2 : Point) : Void
+      Binding.bg_QLine_setPoints_const_QPoint_R_const_QPoint_R(self, p1, p2)
+    end
+    def set_line(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
+      Binding.bg_QLine_setLine_int_int_int_int(self, x1, y1, x2, y2)
+    end
+  end
+  class QLineF 
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QLineF_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def initialize(pt1 : PointF, pt2 : PointF)
+      unwrap = Binding.bg_QLineF_CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1, pt2)
+    @unwrap = unwrap
+    
+    end
+    def initialize(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64)
+      unwrap = Binding.bg_QLineF_CONSTRUCT_qreal_qreal_qreal_qreal(x1, y1, x2, y2)
+    @unwrap = unwrap
+    
+    end
+    def initialize(line : QLine)
+      unwrap = Binding.bg_QLineF_CONSTRUCT_const_QLine_R(line)
+    @unwrap = unwrap
+    
+    end
+    def self.from_polar(length : Float64, angle : Float64) : QLineF
+      QLineF.new(unwrap: Binding.bg_QLineF_fromPolar_STATIC_qreal_qreal(length, angle))
+    end
+    def null?() : Bool
+      Binding.bg_QLineF_isNull_(self)
+    end
+    def p1() : PointF
+      PointF.new(unwrap: Binding.bg_QLineF_p1_(self))
+    end
+    def p2() : PointF
+      PointF.new(unwrap: Binding.bg_QLineF_p2_(self))
+    end
+    def x1() : Float64
+      Binding.bg_QLineF_x1_(self)
+    end
+    def y1() : Float64
+      Binding.bg_QLineF_y1_(self)
+    end
+    def x2() : Float64
+      Binding.bg_QLineF_x2_(self)
+    end
+    def y2() : Float64
+      Binding.bg_QLineF_y2_(self)
+    end
+    def dx() : Float64
+      Binding.bg_QLineF_dx_(self)
+    end
+    def dy() : Float64
+      Binding.bg_QLineF_dy_(self)
+    end
+    def length() : Float64
+      Binding.bg_QLineF_length_(self)
+    end
+    def length=(len : Float64) : Void
+      Binding.bg_QLineF_setLength_qreal(self, len)
+    end
+    def angle() : Float64
+      Binding.bg_QLineF_angle_(self)
+    end
+    def angle=(angle : Float64) : Void
+      Binding.bg_QLineF_setAngle_qreal(self, angle)
+    end
+    def angle_to(l : QLineF) : Float64
+      Binding.bg_QLineF_angleTo_const_QLineF_R(self, l)
+    end
+    def unit_vector() : QLineF
+      QLineF.new(unwrap: Binding.bg_QLineF_unitVector_(self))
+    end
+    def normal_vector() : QLineF
+      QLineF.new(unwrap: Binding.bg_QLineF_normalVector_(self))
+    end
+    def angle(l : QLineF) : Float64
+      Binding.bg_QLineF_angle_const_QLineF_R(self, l)
+    end
+    def point_at(t : Float64) : PointF
+      PointF.new(unwrap: Binding.bg_QLineF_pointAt_qreal(self, t))
+    end
+    def translate(p : PointF) : Void
+      Binding.bg_QLineF_translate_const_QPointF_R(self, p)
+    end
+    def translate(dx : Float64, dy : Float64) : Void
+      Binding.bg_QLineF_translate_qreal_qreal(self, dx, dy)
+    end
+    def translated(p : PointF) : QLineF
+      QLineF.new(unwrap: Binding.bg_QLineF_translated_const_QPointF_R(self, p))
+    end
+    def translated(dx : Float64, dy : Float64) : QLineF
+      QLineF.new(unwrap: Binding.bg_QLineF_translated_qreal_qreal(self, dx, dy))
+    end
+    def center() : PointF
+      PointF.new(unwrap: Binding.bg_QLineF_center_(self))
+    end
+    def p1=(p1 : PointF) : Void
+      Binding.bg_QLineF_setP1_const_QPointF_R(self, p1)
+    end
+    def p2=(p2 : PointF) : Void
+      Binding.bg_QLineF_setP2_const_QPointF_R(self, p2)
+    end
+    def set_points(p1 : PointF, p2 : PointF) : Void
+      Binding.bg_QLineF_setPoints_const_QPointF_R_const_QPointF_R(self, p1, p2)
+    end
+    def set_line(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : Void
+      Binding.bg_QLineF_setLine_qreal_qreal_qreal_qreal(self, x1, y1, x2, y2)
+    end
+    def to_line() : QLine
+      QLine.new(unwrap: Binding.bg_QLineF_toLine_(self))
     end
   end
   class QList_QString < BindgenHelper::SequentialContainer(String)
@@ -23339,6 +25245,138 @@ module Qt
     end
     def size() : Int32
       Binding.bg_QList_QAbstractEventDispatcher__TimerInfo_size_(self)
+    end
+  end
+  class QVector_QLine < BindgenHelper::SequentialContainer(QLine)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QLine_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : QLine
+      QLine.new(unwrap: Binding.bg_QVector_QLine_at_int(self, index))
+    end
+    def push(value : QLine) : Void
+      Binding.bg_QVector_QLine_push_back_QLine(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QLine_size_(self)
+    end
+  end
+  class QVector_QLineF < BindgenHelper::SequentialContainer(QLineF)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QLineF_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : QLineF
+      QLineF.new(unwrap: Binding.bg_QVector_QLineF_at_int(self, index))
+    end
+    def push(value : QLineF) : Void
+      Binding.bg_QVector_QLineF_push_back_QLineF(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QLineF_size_(self)
+    end
+  end
+  class QVector_QPoint < BindgenHelper::SequentialContainer(Point)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QPoint_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : Point
+      Point.new(unwrap: Binding.bg_QVector_QPoint_at_int(self, index))
+    end
+    def push(value : Point) : Void
+      Binding.bg_QVector_QPoint_push_back_QPoint(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QPoint_size_(self)
+    end
+  end
+  class QVector_QPointF < BindgenHelper::SequentialContainer(PointF)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QPointF_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : PointF
+      PointF.new(unwrap: Binding.bg_QVector_QPointF_at_int(self, index))
+    end
+    def push(value : PointF) : Void
+      Binding.bg_QVector_QPointF_push_back_QPointF(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QPointF_size_(self)
+    end
+  end
+  class QVector_QRect < BindgenHelper::SequentialContainer(Rect)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QRect_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : Rect
+      Rect.new(unwrap: Binding.bg_QVector_QRect_at_int(self, index))
+    end
+    def push(value : Rect) : Void
+      Binding.bg_QVector_QRect_push_back_QRect(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QRect_size_(self)
+    end
+  end
+  class QVector_QRectF < BindgenHelper::SequentialContainer(RectF)
+    @unwrap : Void*
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def initialize()
+      unwrap = Binding.bg_QVector_QRectF_CONSTRUCT_()
+    @unwrap = unwrap
+    
+    end
+    def unsafe_at(index : Int32) : RectF
+      RectF.new(unwrap: Binding.bg_QVector_QRectF_at_int(self, index))
+    end
+    def push(value : RectF) : Void
+      Binding.bg_QVector_QRectF_push_back_QRectF(self, value)
+    end
+    def size() : Int32
+      Binding.bg_QVector_QRectF_size_(self)
     end
   end
 end
