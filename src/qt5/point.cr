@@ -93,8 +93,8 @@ module Qt
   end
 
   # A 2D point with integer (`Int32`) accuracy.
-  alias Point = PointBase(Binding::QPoint, Int32)
+  alias Point = PointBase(Int32, Binding::QPoint)
 
   # A 2D point with floating-point (`Float64`) accuracy.
-  alias PointF = PointBase(Binding::QPointF, Float64)
+  alias PointF = PointBase(Float64, Binding::QPointF)
 end
