@@ -37,6 +37,7 @@ classes:
   QApplication: Application
   QImage: Image
   QPixmap: Pixmap
+  QIcon: Icon
   QEventLoop: EventLoop
   QTabWidget: TabWidget
   QLayoutItem: LayoutItem
@@ -115,6 +116,10 @@ classes:
   # "QPainter::PixmapFragment": PainterPixmapFragment
   QLine: QLine
   QLineF: QLineF
+  QSystemTrayIcon: SystemTrayIcon
+  QDesktopServices: DesktopServices
+  QDesktopWidget: DesktopWidget
+  QStandardPaths: StandardPaths
   QMimeData: MimeData
   QUrl: Url
 
@@ -260,6 +265,13 @@ enums:
   "Qt::MouseButton": MouseButton
   "Qt::MouseEventSource": MouseEventSource
   "Qt::MouseEventFlags": MouseEventFlags
+  "QIcon::Mode": Icon::Mode
+  "QIcon::State": Icon::State
+  "QSystemTrayIcon::ActivationReason": SystemTrayIcon::ActivationReason
+  "QSystemTrayIcon::MessageIcon": SystemTrayIcon::MessageIcon
+  "QStandardPaths::LocateOption": StandardPaths::LocateOption
+  "QStandardPaths::LocateOptions": StandardPaths::LocateOptions
+  "QStandardPaths::StandardLocation": StandardPaths::StandardLocation
 
 types: # Type rewrite rules
   QString: # Convert QString instances using that:
@@ -282,11 +294,16 @@ types: # Type rewrite rules
   QEvent:
     ignore_methods:
       - qt_check_for_QGADGET_macro
+  QStandardPaths:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
   QKeySequencePrivate: { ignore: true }
   QUrlPrivate: { ignore: true }
   QImageData: { ignore: true }
+  QIconPrivate: { ignore: true }
   QImage: { sub_class: false }
   QPixmap: { sub_class: false }
+  QIcon: { sub_class: false }
   QPoint: # Manual implementation with a structure copy.
     copy_structure: true
     binding_type: QPoint
@@ -399,6 +416,7 @@ containers:
       - [ "QGraphicsTransform *" ]
       - [ "QGraphicsView *" ]
       - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
+      - [ "QSize" ]
   - class: QVector
     type: Sequential
     instantiations:
