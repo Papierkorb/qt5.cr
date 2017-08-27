@@ -78,7 +78,7 @@ label.show
 Qt::Application.exec # And run it!
 ```
 
-![hello-qt](http://i.imgur.com/C0MpnR4.png)
+![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
 
 ## Name rewriting rules
 
