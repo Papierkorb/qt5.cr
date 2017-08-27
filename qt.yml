@@ -303,10 +303,6 @@ types: # Type rewrite rules
     generate_wrapper: false
     crystal_type: PointF
     pass_by: Value
-  QRect:
-    copy_structure: true
-  QRectF:
-    copy_structure: true
   QPainter:
     ignore_methods:
       - qt_check_for_QGADGET_macro
