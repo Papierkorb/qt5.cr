@@ -12,4 +12,7 @@ dependencies:
     github: Papierkorb/bindgen
     branch: master
 
+scripts:
+  postinstall: crystal deps build && ext/try_build.sh
+
 license: MPL-2
