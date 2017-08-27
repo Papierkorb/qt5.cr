@@ -78,6 +78,8 @@ label.show
 Qt::Application.exec # And run it!
 ```
 
+![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
+
 ## Name rewriting rules
 
 * Everything resides in the `Qt` module (As configured)
