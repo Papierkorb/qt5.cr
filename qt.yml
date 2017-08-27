@@ -91,7 +91,10 @@ classes:
   QHideEvent: HideEvent
   QInputMethodEvent: InputMethodEvent
   QInputMethodQueryEvent: InputMethodQueryEvent
+  QDrag: Drag
   QDropEvent: DropEvent
+  QDragMoveEvent: DragMoveEvent
+  QDragEnterEvent: DragEnterEvent
   QDragLeaveEvent: DragLeaveEvent
   QHelpEvent: HelpEvent
   QStatusTipEvent: StatusTipEvent
@@ -112,6 +115,8 @@ classes:
   # "QPainter::PixmapFragment": PainterPixmapFragment
   QLine: QLine
   QLineF: QLineF
+  QMimeData: MimeData
+  QUrl: Url
 
 enums:
   "Qt::CheckState": CheckState
@@ -223,7 +228,6 @@ enums:
   "QFileDialog::ViewMode": FileDialog::ViewMode
   "QUrl::ComponentFormattingOption": Url::ComponentFormattingOption
   "QUrl::ComponentFormattingOptions": Url::ComponentFormattingOptions
-  "QUrl::FormattingOptions": Url::FormattingOptions
   "QUrl::ParsingMode": Url::ParsingMode
   "QUrl::UrlFormattingOption": Url::UrlFormattingOption
   "QUrl::UserInputResolutionOption": Url::UserInputResolutionOption
@@ -347,14 +351,16 @@ types: # Type rewrite rules
   "QSizePolicy::Policy": { ignore: true }
   "QSizePolicy::ControlTypes": { ignore: true }
 
+  "QUrl::FormattingOptions": { ignore: true }
+
   # Rewrite `QList<T>` typedefs
   QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
   QStringList: { alias_for: "QList<QString>" }
   QWidgetList: { alias_for: "QList<QWidget *>" }
   QObjectList: { alias_for: "QList<QObject *>" }
+
   "QList<QObject *>": { ignore: true } # One remaining bug .. I guess
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
-
   "QList<QGraphicsWidget *>": { ignore: true }
   "QList<QKeySequence>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
