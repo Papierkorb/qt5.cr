@@ -12,6 +12,7 @@ class DrawArea < Qt::Widget
     @brush = Qt::Brush.new(Qt::GlobalColor::Black)
     @last_pos = Qt::Point.new
 
+    self.accept_drops = true
     resize(500, 500) # Resize the widget to the @image size.
   end
 
@@ -47,6 +48,23 @@ class DrawArea < Qt::Widget
     update
   end
 
+  # We also allow the user to Drag&Drop a image file onto the draw area to load
+  # it!  For this to work, you have to accept the proposal in the
+  # `#drag_enter_event`...
+  def drag_enter_event(evt)
+    # We only care about files, not plain image data.
+    evt.accept_proposed_action if evt.mime_data.has_urls?
+  end
+
+  # This event is *only* called if you accepted the proposal!  The user let go
+  # and thus, we'll open the file.
+  def drop_event(evt)
+    list = evt.mime_data.urls # Might be many, but we only care about the first
+    return if list.empty? # Sanity check: We did get any URLs, right?
+    # Qt transmits URLs, but we want a local file path instead.
+    load list.first.to_local_file
+  end
+
   # Loads an image at *path* and replaces the current image with it.
   def load(path)
     @image.load(path)
@@ -64,6 +82,7 @@ end
 app = Qt::Application.new
 window = Qt::MainWindow.new
 draw_area = DrawArea.new
+window.window_title = "Draw Something!"
 window.central_widget = draw_area
 
 # Add a File menu with a Open, Save and Quit action.
