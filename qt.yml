@@ -21,12 +21,23 @@ classes:
   QPaintDevice: PaintDevice
   QWidget: Widget
   QAbstractButton: AbstractButton
+  QToolButton: ToolButton
+  QToolBar: ToolBar
   QFrame: Frame
+  QProgressBar: ProgressBar
+  QAbstractSlider: AbstractSlider
+  QDial: Dial
+  QScrollBar: ScrollBar
+  QSlider: Slider
   QAbstractScrollArea: AbstractScrollArea
   QScrollArea: ScrollArea
+  QAbstractSpinBox: AbstractSpinBox
+  QSpinBox: SpinBox
+  QDoubleSpinBox: DoubleSpinBox
   QMenuBar: MenuBar
   QMenu: Menu
   QAction: Action
+  QStatusBar: StatusBar
   QMainWindow: MainWindow
   QDockWidget: DockWidget
   QDialog: Dialog
@@ -34,6 +45,9 @@ classes:
   QLCDNumber: LcdNumber
   QPushButton: PushButton
   QCheckBox: CheckBox
+  QRadioButton: RadioButton
+  QButtonGroup: ButtonGroup
+  QGroupBox: GroupBox
   QCoreApplication: CoreApplication
   QGuiApplication: GuiApplication
   QApplication: Application
@@ -41,12 +55,14 @@ classes:
   QPixmap: Pixmap
   QIcon: Icon
   QEventLoop: EventLoop
+  QTabBar: TabBar
   QTabWidget: TabWidget
   QLayoutItem: LayoutItem
   QLayout: Layout
   QBoxLayout: BoxLayout
   QHBoxLayout: HBoxLayout
   QVBoxLayout: VBoxLayout
+  QPalette: Palette
   QPoint: Point
   QPointF: PointF
   QRect: Rect
@@ -56,7 +72,6 @@ classes:
   QTextEdit: TextEdit
   QFileDialog: FileDialog
   QTextOption: TextOption
-  "QTextOption::Tab": TextOptionTab
   QTextDocument: TextDocument
   QTextCursor: TextCursor
   QDir: Dir
@@ -177,14 +192,18 @@ enums:
   "Qt::ClipOperation": ClipOperation
   "Qt::PenStyle": PenStyle
   "Qt::ScreenOrientations": ScreenOrientations
+  "Qt::ArrowType": ArrowType
   "QSocketNotifier::Type": SocketNotifier::Type
   "QSizePolicy::ControlType": SizePolicy::ControlType
   "QSizePolicy::ControlTypes": SizePolicy::ControlTypes
   "QSizePolicy::Policy": SizePolicy::Policy
   "QSizePolicy::PolicyFlag": SizePolicy::PolicyFlag
   "Qt::WidgetAttribute": WidgetAttribute
-  "QPalette::ColorRole": PaletteColorRole #Palette::ColorRole
+  "QPalette::ColorGroup": Palette::ColorGroup
+  "QPalette::ColorRole": Palette::ColorRole
   "QWidget::RenderFlags": Widget::RenderFlags
+  "QProgressBar::Direction": ProgressBar::Direction
+  "QToolButton::ToolButtonPopupMode": ToolButton::ToolButtonPopupMode
   "QFrame::Shape": Frame::Shape
   "QFrame::Shadow": Frame::Shadow
   "QImage::Format": Image::Format
@@ -198,17 +217,22 @@ enums:
   "QLCDNumber::SegmentStyle": LcdNumber::SegmentStyle
   "QTabWidget::TabShape": TabWidget::TabShape
   "QTabWidget::TabPosition": TabWidget::TabPosition
+  "QTabBar::ButtonPosition": TabBar::ButtonPosition
+  "QTabBar::SelectionBehavior": TabBar::SelectionBehavior
+  "QTabBar::Shape": TabBar::Shape
   "Qt::Corner": Corner
   "Qt::TextElideMode": TextElideMode
   "Qt::ToolButtonStyle": ToolButtonStyle
+  "Qt::ToolBarArea": ToolBarArea
+  "Qt::ToolBarAreas": ToolBarAreas
+  "Qt::DockWidgetArea": DockWidgetArea
+  "Qt::DockWidgetAreas": DockWidgetAreas
+  "Qt::Orientation": Orientation
+  "Qt::Orientations": Orientations
+  "Qt::TimeSpec": TimeSpec
   "QMainWindow::DockOptions": MainWindow::DockOptions
   "QDockWidget::DockWidgetFeature": DockWidget::Feature
   "QDockWidget::DockWidgetFeatures": DockWidget::Features
-  "Qt::DockWidgetArea": DockWidgetArea
-  "Qt::DockWidgetAreas": DockWidgetAreas
-  "Qt::ToolBarArea": ToolBarArea
-  "Qt::Orientation": Orientation
-  "Qt::Orientations": Orientations
   "QLayout::SizeConstraint": Layout::SizeConstraint
   "QBoxLayout::Direction": BoxLayout::Direction
   "Qt::FindChildOptions": FindChildOptions
@@ -239,7 +263,14 @@ enums:
   "QGraphicsScene::SceneLayer": GraphicsScene::SceneLayer
   "QGraphicsScene::SceneLayers": GraphicsScene::SceneLayers
   "QGraphicsPixmapItem::ShapeMode": GraphicsPixmapItem::ShapeMode
+  "QAbstractSlider::SliderAction": AbstractSlider::SliderAction
+  "QAbstractSlider::SliderChange": AbstractSlider::SliderChange
+  "QSlider::TickPosition": Slider::TickPosition
   "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
+  "QAbstractSpinBox::ButtonSymbols": AbstractSpinBox::ButtonSymbols
+  "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
+  "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
+  "QAbstractSpinBox::StepEnabledFlag": AbstractSpinBox::StepEnabledFlag
   "QLineEdit::ActionPosition": LineEdit::ActionPosition
   "QLineEdit::EchoMode": LineEdit::EchoMode
   "QTextEdit::AutoFormatting": TextEdit::AutoFormatting
@@ -262,6 +293,7 @@ enums:
   "QDir::Filters": Dir::Filters
   "QTextOption::Flags": TextOption::Flags
   "QTextOption::WrapMode": TextOption::WrapMode
+  "QTextOption::TabType": TextOption::TabType
   "QTextDocument::MetaInformation": TextDocument::MetaInformation
   "QTextDocument::Stacks": TextDocument::Stacks
   "QTextDocument::FindFlags": TextDocument::FindFlags
@@ -355,9 +387,6 @@ types: # Type rewrite rules
     generate_wrapper: false
     crystal_type: PointF
     pass_by: Value
-  QPainter:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
   "QPainter::PixmapFragment":
     ignore: true
     # copy_structure: true
@@ -412,6 +441,12 @@ types: # Type rewrite rules
   QSizePolicy:
     ignore_methods:
       - qt_check_for_QGADGET_macro
+  QPainter:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QPalette:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
 
   # TODO: Some kind of platform-matching.  That'll be fun.
   WId: { ignore: true }
@@ -430,6 +465,7 @@ types: # Type rewrite rules
 
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
+  "QTextOption::Tab": { ignore: true }
 
   # No support for associative containers yet
   "QMap<int, QVariant>": { ignore: true }
@@ -448,7 +484,9 @@ types: # Type rewrite rules
   "QCoreApplication::QPrivateSignal": { ignore: true }
   "QSocketNotifier::QPrivateSignal": { ignore: true }
 
+  # Waiting for a reasonable pass-through implementation of QByteArray
   "QList<QByteArray>": { ignore: true }
+  "QSet<QByteArray>": { ignore: true }
 
   # Ignore pure template types
   "QList<T>": { ignore: true }
@@ -470,6 +508,7 @@ containers:
       - [ "QDockWidget *" ]
       - [ "QAction *" ]
       - [ "QGesture *" ]
+      - [ "QAbstractButton *" ]
       - [ "QUrl" ]
       - [ "QGraphicsItem *" ]
       - [ "QGraphicsWidget *" ]
