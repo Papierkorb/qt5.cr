@@ -99,19 +99,20 @@ end
 
 # On "Open", ask the user to choose an image file to load.
 open_action.on_triggered do
-  file_path = Qt::FileDialog.get_open_file_name
+  # file_path = Qt::FileDialog.get_open_file_name
+  file_url = Qt::FileDialog.get_open_file_url
 
-  unless file_path.empty?
-    draw_area.load file_path
+  unless file_url.empty?
+    draw_area.load file_url.to_local_file
   end
 end
 
 # On "Save", ask the user to choose a destination.
 save_action.on_triggered do
-  file_path = Qt::FileDialog.get_save_file_name
+  file_url = Qt::FileDialog.get_save_file_url
 
-  unless file_path.empty?
-    draw_area.save file_path
+  unless file_url.empty?
+    draw_area.save file_url.to_local_file
   end
 end
 

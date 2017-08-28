@@ -35,11 +35,11 @@ end
 # Clicking on "Open" ...
 open_action.on_triggered do
   # Show a "Open file..." dialog
-  file_path = Qt::FileDialog.get_open_file_name
+  file_url = Qt::FileDialog.get_open_file_url
 
-  unless file_path.empty? # Did the user choose something?
+  unless file_url.empty? # Did the user choose something?
     pixmap = Qt::Pixmap.new
-    if pixmap.load file_path # Try to load it
+    if pixmap.load file_url.to_local_file # Try to load it
       image_label.pixmap = pixmap # And on success, display it.
     end
   end
