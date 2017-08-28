@@ -17,33 +17,52 @@ classes:
   "QMetaObject::Connection": SignalConnection
   QAbstractEventDispatcher: AbstractEventDispatcher
   QAbstractEventDispatcher::TimerInfo: EventDispatcherTimerInfo
+  QSocketNotifier: SocketNotifier
   QPaintDevice: PaintDevice
   QWidget: Widget
   QAbstractButton: AbstractButton
+  QToolButton: ToolButton
+  QToolBar: ToolBar
   QFrame: Frame
+  QProgressBar: ProgressBar
+  QAbstractSlider: AbstractSlider
+  QDial: Dial
+  QScrollBar: ScrollBar
+  QSlider: Slider
   QAbstractScrollArea: AbstractScrollArea
   QScrollArea: ScrollArea
+  QAbstractSpinBox: AbstractSpinBox
+  QSpinBox: SpinBox
+  QDoubleSpinBox: DoubleSpinBox
   QMenuBar: MenuBar
   QMenu: Menu
   QAction: Action
+  QStatusBar: StatusBar
   QMainWindow: MainWindow
+  QDockWidget: DockWidget
   QDialog: Dialog
   QLabel: Label
   QLCDNumber: LcdNumber
   QPushButton: PushButton
   QCheckBox: CheckBox
+  QRadioButton: RadioButton
+  QButtonGroup: ButtonGroup
+  QGroupBox: GroupBox
   QCoreApplication: CoreApplication
   QGuiApplication: GuiApplication
   QApplication: Application
   QImage: Image
   QPixmap: Pixmap
+  QIcon: Icon
   QEventLoop: EventLoop
+  QTabBar: TabBar
   QTabWidget: TabWidget
   QLayoutItem: LayoutItem
   QLayout: Layout
   QBoxLayout: BoxLayout
   QHBoxLayout: HBoxLayout
   QVBoxLayout: VBoxLayout
+  QPalette: Palette
   QPoint: Point
   QPointF: PointF
   QRect: Rect
@@ -90,8 +109,12 @@ classes:
   QShowEvent: ShowEvent
   QHideEvent: HideEvent
   QInputMethodEvent: InputMethodEvent
+  # "QInputMethodEvent::Attribute": InputMethodEventAttribute # Bare struct, contains QVariant
   QInputMethodQueryEvent: InputMethodQueryEvent
+  QDrag: Drag
   QDropEvent: DropEvent
+  QDragMoveEvent: DragMoveEvent
+  QDragEnterEvent: DragEnterEvent
   QDragLeaveEvent: DragLeaveEvent
   QHelpEvent: HelpEvent
   QStatusTipEvent: StatusTipEvent
@@ -112,6 +135,22 @@ classes:
   # "QPainter::PixmapFragment": PainterPixmapFragment
   QLine: QLine
   QLineF: QLineF
+  QSystemTrayIcon: SystemTrayIcon
+  QDesktopServices: DesktopServices
+  QDesktopWidget: DesktopWidget
+  QStandardPaths: StandardPaths
+  QMimeData: MimeData
+  QSizePolicy: SizePolicy
+  QUrl: Url
+  QScreen: Screen
+  QPixelFormat: PixelFormat
+  QTextFormat: TextFormat
+  QTextBlockFormat: TextBlockFormat
+  QTextCharFormat: TextCharFormat
+  QTextFrameFormat: TextFrameFormat
+  QTextListFormat: TextListFormat
+  QTextLength: TextLength
+  QFont: Font
 
 enums:
   "Qt::CheckState": CheckState
@@ -131,7 +170,7 @@ enums:
   "Qt::WindowType": WindowType
   "Qt::InputMethodQuery": InputMethodQuery
   "Qt::InputMethodHints": InputMethodHints
-  "Qt::TextFormat": TextFormat
+  "Qt::TextFormat": TextFormatEnum # This collides with class `QTextFormat` -> `TextFormat`...
   "Qt::Alignment": Alignment
   "Qt::TextInteractionFlags": TextInteractionFlags
   "Qt::UIEffect": UIEffect
@@ -152,10 +191,19 @@ enums:
   "Qt::SizeMode": SizeMode
   "Qt::ClipOperation": ClipOperation
   "Qt::PenStyle": PenStyle
+  "Qt::ScreenOrientations": ScreenOrientations
+  "Qt::ArrowType": ArrowType
+  "QSocketNotifier::Type": SocketNotifier::Type
+  "QSizePolicy::ControlType": SizePolicy::ControlType
+  "QSizePolicy::ControlTypes": SizePolicy::ControlTypes
   "QSizePolicy::Policy": SizePolicy::Policy
+  "QSizePolicy::PolicyFlag": SizePolicy::PolicyFlag
   "Qt::WidgetAttribute": WidgetAttribute
-  "QPalette::ColorRole": PaletteColorRole #Palette::ColorRole
+  "QPalette::ColorGroup": Palette::ColorGroup
+  "QPalette::ColorRole": Palette::ColorRole
   "QWidget::RenderFlags": Widget::RenderFlags
+  "QProgressBar::Direction": ProgressBar::Direction
+  "QToolButton::ToolButtonPopupMode": ToolButton::ToolButtonPopupMode
   "QFrame::Shape": Frame::Shape
   "QFrame::Shadow": Frame::Shadow
   "QImage::Format": Image::Format
@@ -169,19 +217,26 @@ enums:
   "QLCDNumber::SegmentStyle": LcdNumber::SegmentStyle
   "QTabWidget::TabShape": TabWidget::TabShape
   "QTabWidget::TabPosition": TabWidget::TabPosition
+  "QTabBar::ButtonPosition": TabBar::ButtonPosition
+  "QTabBar::SelectionBehavior": TabBar::SelectionBehavior
+  "QTabBar::Shape": TabBar::Shape
   "Qt::Corner": Corner
   "Qt::TextElideMode": TextElideMode
   "Qt::ToolButtonStyle": ToolButtonStyle
-  "QMainWindow::DockOptions": MainWindow::DockOptions
+  "Qt::ToolBarArea": ToolBarArea
+  "Qt::ToolBarAreas": ToolBarAreas
   "Qt::DockWidgetArea": DockWidgetArea
   "Qt::DockWidgetAreas": DockWidgetAreas
-  "Qt::ToolBarArea": ToolBarArea
   "Qt::Orientation": Orientation
   "Qt::Orientations": Orientations
+  "Qt::TimeSpec": TimeSpec
+  "QMainWindow::DockOptions": MainWindow::DockOptions
+  "QDockWidget::DockWidgetFeature": DockWidget::Feature
+  "QDockWidget::DockWidgetFeatures": DockWidget::Features
   "QLayout::SizeConstraint": Layout::SizeConstraint
   "QBoxLayout::Direction": BoxLayout::Direction
   "Qt::FindChildOptions": FindChildOptions
-  "QPaintDevice::PaintDeviceMetric": PaintDeviceMetric # PaintDevice::PaintDeviceMetric
+  "QPaintDevice::PaintDeviceMetric": PaintDevice::PaintDeviceMetric
   "QAction::ActionEvent": Action::Event
   "QAction::MenuRole": Action::MenuRole
   "QAction::Priority": Action::Priority
@@ -208,7 +263,14 @@ enums:
   "QGraphicsScene::SceneLayer": GraphicsScene::SceneLayer
   "QGraphicsScene::SceneLayers": GraphicsScene::SceneLayers
   "QGraphicsPixmapItem::ShapeMode": GraphicsPixmapItem::ShapeMode
+  "QAbstractSlider::SliderAction": AbstractSlider::SliderAction
+  "QAbstractSlider::SliderChange": AbstractSlider::SliderChange
+  "QSlider::TickPosition": Slider::TickPosition
   "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
+  "QAbstractSpinBox::ButtonSymbols": AbstractSpinBox::ButtonSymbols
+  "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
+  "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
+  "QAbstractSpinBox::StepEnabledFlag": AbstractSpinBox::StepEnabledFlag
   "QLineEdit::ActionPosition": LineEdit::ActionPosition
   "QLineEdit::EchoMode": LineEdit::EchoMode
   "QTextEdit::AutoFormatting": TextEdit::AutoFormatting
@@ -223,22 +285,33 @@ enums:
   "QFileDialog::ViewMode": FileDialog::ViewMode
   "QUrl::ComponentFormattingOption": Url::ComponentFormattingOption
   "QUrl::ComponentFormattingOptions": Url::ComponentFormattingOptions
-  "QUrl::FormattingOptions": Url::FormattingOptions
   "QUrl::ParsingMode": Url::ParsingMode
   "QUrl::UrlFormattingOption": Url::UrlFormattingOption
+  # "QUrl::FormattingOptions": This one is actually a `QUrlTwoFlags`.  Manually implemented.
   "QUrl::UserInputResolutionOption": Url::UserInputResolutionOption
   "QUrl::UserInputResolutionOptions": Url::UserInputResolutionOptions
   "QDir::Filters": Dir::Filters
-  "QTextOption::Flags": TextOptionFlags # TextOption::Flags
-  "QTextDocument::MetaInformation": TextDocumentMetaInformation # TextDocument::MetaInformation
-  "QTextDocument::Stacks": TextDocumentStacks # TextDocument::Stacks
-  "QTextOption::WrapMode": TextOptionWrapMode # TextOption::WrapMode
-  "QTextDocument::FindFlags": TextDocumentFindFlags # TextDocument::FindFlags
-  "QTextCursor::MoveOperation": TextCursorMoveOperation # TextCursor::MoveOperation
-  "QTextCursor::MoveMode": TextCursorMoveMode # TextCursor::MoveMode
-  "QTextCursor::SelectionType": TextCursorSelectionType # TextCursor::SelectionType
-  "QTextListFormat::Style": TextListFormatStyle # TextListFormat::Style
-  "QTextFrameFormat::Position": TextFrameFormatPosition # TextFrameFormat::Position
+  "QTextOption::Flags": TextOption::Flags
+  "QTextOption::WrapMode": TextOption::WrapMode
+  "QTextOption::TabType": TextOption::TabType
+  "QTextDocument::MetaInformation": TextDocument::MetaInformation
+  "QTextDocument::Stacks": TextDocument::Stacks
+  "QTextDocument::FindFlags": TextDocument::FindFlags
+  "QTextCursor::MoveOperation": TextCursor::MoveOperation
+  "QTextCursor::MoveMode": TextCursor::MoveMode
+  "QTextCursor::SelectionType": TextCursor::SelectionType
+  "QTextListFormat::Style": TextListFormat::Style
+  "QTextFrameFormat::Position": TextFrameFormat::Position
+  "QTextFormat::FormatType": TextFormat::FormatType
+  "QTextFormat::ObjectTypes": TextFormat::ObjectTypes
+  "QTextFormat::PageBreakFlag": TextFormat::PageBreakFlag
+  "QTextFormat::PageBreakFlags": TextFormat::PageBreakFlags
+  "QTextFormat::Property": TextFormat::Property
+  "QTextCharFormat::FontPropertiesInheritanceBehavior": TextCharFormat::FontPropertiesInheritanceBehavior
+  "QTextCharFormat::UnderlineStyle": TextCharFormat::UnderlineStyle
+  "QTextCharFormat::VerticalAlignment": TextCharFormat::VerticalAlignment
+  "QTextFrameFormat::BorderStyle": TextFrameFormat::BorderStyle
+  "QTextLength::Type": TextLength::Type
   "QDir::SortFlags": Dir::SortFlags
   "QColor::NameFormat": Color::NameFormat
   "QColor::Spec": Color::Spec
@@ -256,6 +329,29 @@ enums:
   "Qt::MouseButton": MouseButton
   "Qt::MouseEventSource": MouseEventSource
   "Qt::MouseEventFlags": MouseEventFlags
+  "QIcon::Mode": Icon::Mode
+  "QIcon::State": Icon::State
+  "QSystemTrayIcon::ActivationReason": SystemTrayIcon::ActivationReason
+  "QSystemTrayIcon::MessageIcon": SystemTrayIcon::MessageIcon
+  "QStandardPaths::LocateOption": StandardPaths::LocateOption
+  "QStandardPaths::LocateOptions": StandardPaths::LocateOptions
+  "QStandardPaths::StandardLocation": StandardPaths::StandardLocation
+  "QMetaObject::Call": MetaObjectCall
+  "QPixelFormat::ByteOrder": PixelFormat::ByteOrder
+  "QPixelFormat::ColorModel": PixelFormat::ColorModel
+  "QPixelFormat::AlphaUsage": PixelFormat::AlphaUsage
+  "QPixelFormat::AlphaPosition": PixelFormat::AlphaPosition
+  "QPixelFormat::AlphaPremultiplied": PixelFormat::AlphaPremultiplied
+  "QPixelFormat::TypeInterpretation": PixelFormat::TypeInterpretation
+  "QPixelFormat::YUVLayout": PixelFormat::YUVLayout
+  "QFont::Capitalization": Font::Capitalization
+  "QFont::HintingPreference": Font::HintingPreference
+  "QFont::SpacingType": Font::SpacingType
+  "QFont::Stretch": Font::Stretch
+  "QFont::Style": Font::Style
+  "QFont::StyleHint": Font::StyleHint
+  "QFont::StyleStrategy": Font::StyleStrategy
+  "QFont::Weight": Font::Weight
 
 types: # Type rewrite rules
   QString: # Convert QString instances using that:
@@ -275,14 +371,6 @@ types: # Type rewrite rules
   QSessionManager:
     pass_by: Reference
     from_cpp: "(%)"
-  QEvent:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QKeySequencePrivate: { ignore: true }
-  QUrlPrivate: { ignore: true }
-  QImageData: { ignore: true }
-  QImage: { sub_class: false }
-  QPixmap: { sub_class: false }
   QPoint: # Manual implementation with a structure copy.
     copy_structure: true
     binding_type: QPoint
@@ -299,13 +387,6 @@ types: # Type rewrite rules
     generate_wrapper: false
     crystal_type: PointF
     pass_by: Value
-  QRect:
-    copy_structure: true
-  QRectF:
-    copy_structure: true
-  QPainter:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
   "QPainter::PixmapFragment":
     ignore: true
     # copy_structure: true
@@ -314,9 +395,6 @@ types: # Type rewrite rules
     # generate_wrapper: false
     # crystal_type: PainterPixmapFragment
     # pass_by: Pointer
-  QKeySequence:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
   "QAbstractEventDispatcher::TimerInfo":
     binding_type: EventDispatcherTimerInfo
     generate_binding: false
@@ -334,42 +412,84 @@ types: # Type rewrite rules
     to_cpp: "std::chrono::milliseconds(%)"
     from_cpp: "(%.count())"
     converter: Qt::Converter::TimeSpan
+  "QUrl::FormattingOptions":
+    crystal_type: Url::FormattingOptions
+    binding_type: Url::FormattingOptions
+    kind: Enum
+
+  # Don't sub-class these
+  QImage: { sub_class: false }
+  QPixmap: { sub_class: false }
+  QIcon: { sub_class: false }
+
+  # `Q_GADGET`s add fake methods we can't wrap.
+  QKeySequence:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QFont:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QTextFormat:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QEvent:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QStandardPaths:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QSizePolicy:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QPainter:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
+  QPalette:
+    ignore_methods:
+      - qt_check_for_QGADGET_macro
 
   # TODO: Some kind of platform-matching.  That'll be fun.
   WId: { ignore: true }
   QVariant: { ignore: true }
-  "QPixmap::DataPtr": { ignore: true }
-  "QBrush::DataPtr": { ignore: true }
-  QRgb: { ignore: true, crystal_type: UInt32 }
-  QPixelFormat: { ignore: true }
 
-  "QSizePolicy": { ignore: true }
-  "QSizePolicy::Policy": { ignore: true }
-  "QSizePolicy::ControlTypes": { ignore: true }
+  # Bare structure with QVariant: Ignore for now.
+  "QInputMethodEvent::Attribute": { ignore: true }
+  "QList<QInputMethodEvent::Attribute>": { ignore: true }
 
-  # Rewrite `QList<T>` typedefs
+  # Typedefs
+  QRgb: { alias_for: "unsigned int" }
   QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
   QStringList: { alias_for: "QList<QString>" }
   QWidgetList: { alias_for: "QList<QWidget *>" }
   QObjectList: { alias_for: "QList<QObject *>" }
-  "QList<QObject *>": { ignore: true } # One remaining bug .. I guess
+
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
-
-  "QList<QGraphicsWidget *>": { ignore: true }
-  "QList<QKeySequence>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
-  "QVector<QTextFormat>": { ignore: true }
+  "QTextOption::Tab": { ignore: true }
 
-  # ignore types:
+  # No support for associative containers yet
+  "QMap<int, QVariant>": { ignore: true }
+
+  # Ignore private data structures
+  QKeySequencePrivate: { ignore: true }
+  QUrlPrivate: { ignore: true }
+  QImageData: { ignore: true }
+  QIconPrivate: { ignore: true }
+  "QPixmap::DataPtr": { ignore: true }
+  "QBrush::DataPtr": { ignore: true }
+
+  # Private signals - TODO: Support these somehow.
   "QtPrivateSignal": { ignore: true }
   "QObject::QPrivateSignal": { ignore: true }
   "QCoreApplication::QPrivateSignal": { ignore: true }
-  "QMetaObject::Call": { ignore: true }
-  "QList<T>": { ignore: true }
-  "QList<QScreen *>": { ignore: true }
+  "QSocketNotifier::QPrivateSignal": { ignore: true }
+
+  # Waiting for a reasonable pass-through implementation of QByteArray
   "QList<QByteArray>": { ignore: true }
-  "QList<QDockWidget *>": { ignore: true }
-  "QVector<QRgb>": { ignore: true }
+  "QSet<QByteArray>": { ignore: true }
+
+  # Ignore pure template types
+  "QList<T>": { ignore: true }
   "Func1": { ignore: true } # Fake types used in QObject::connect().
   "Func2": { ignore: true }
   "QtPrivate::FunctionPointer<Func1>::Object": { ignore: true }
@@ -377,10 +497,6 @@ types: # Type rewrite rules
   "T": { ignore: true }
   "void ()": { ignore: true }
   "void (void *)": { ignore: true }
-  "QList<QRectF>": { ignore: true }
-  "QList<qreal>": { ignore: true }
-  "QList<QInputMethodEvent::Attribute>": { ignore: true }
-  "QInputMethodEvent::Attribute": { ignore: true }
 
 containers:
   - class: QList
@@ -389,14 +505,22 @@ containers:
       - [ "QString" ] # `QStringList`
       - [ "QObject *" ] # `QObjectList`
       - [ "QWidget *" ] # `QWidgetList`
+      - [ "QDockWidget *" ]
       - [ "QAction *" ]
       - [ "QGesture *" ]
+      - [ "QAbstractButton *" ]
       - [ "QUrl" ]
       - [ "QGraphicsItem *" ]
       - [ "QGraphicsWidget *" ]
       - [ "QGraphicsTransform *" ]
       - [ "QGraphicsView *" ]
       - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
+      - [ "QSize" ]
+      - [ "QKeySequence" ]
+      - [ "QRectF" ]
+      - [ "QScreen *" ]
+      - [ "qreal" ]
+      - [ "int" ]
   - class: QVector
     type: Sequential
     instantiations:
@@ -406,6 +530,9 @@ containers:
       - [ "QPointF" ]
       - [ "QRect" ]
       - [ "QRectF" ]
+      - [ "QRgb" ]
+      - [ "QTextLength" ]
+      - [ "QTextFormat" ]
 
 output:
   cpp: ext/qt_binding.cpp
