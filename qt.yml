@@ -58,10 +58,14 @@ classes:
   QTabBar: TabBar
   QTabWidget: TabWidget
   QLayoutItem: LayoutItem
+  QSpacerItem: SpacerItem
+  QWidgetItem: WidgetItem
   QLayout: Layout
   QBoxLayout: BoxLayout
   QHBoxLayout: HBoxLayout
   QVBoxLayout: VBoxLayout
+  QGridLayout: GridLayout
+  QStackedLayout: StackedLayout
   QPalette: Palette
   QPoint: Point
   QPointF: PointF
@@ -364,6 +368,17 @@ types: # Type rewrite rules
     kind: Struct
     pass_by: Value
     wrapper_pass_by: Value
+  QChar: # Map as Crystal Char
+    cpp_type: int32_t
+    binding_type: Int32
+    builtin: true
+    crystal_type: Char
+    to_cpp: "QChar(%)"
+    from_cpp: "static_cast<int32_t>(%.unicode())"
+    to_crystal: "(%.chr)"
+    from_crystal: "(%.ord)"
+    kind: Struct
+    pass_by: Value
   "QMetaObject::Connection":
     crystal_type: SignalConnection
     cpp_type: "QMetaObject::Connection"
