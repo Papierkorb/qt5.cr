@@ -234,11 +234,13 @@ enums:
   "Qt::Orientation": Orientation
   "Qt::Orientations": Orientations
   "Qt::TimeSpec": TimeSpec
+  "Qt::WindowState": WindowState
   "QMainWindow::DockOptions": MainWindow::DockOptions
   "QDockWidget::DockWidgetFeature": DockWidget::Feature
   "QDockWidget::DockWidgetFeatures": DockWidget::Features
   "QLayout::SizeConstraint": Layout::SizeConstraint
   "QBoxLayout::Direction": BoxLayout::Direction
+  "QStackedLayout::StackingMode": StackedLayout::StackingMode
   "Qt::FindChildOptions": FindChildOptions
   "QPaintDevice::PaintDeviceMetric": PaintDevice::PaintDeviceMetric
   "QAction::ActionEvent": Action::Event
