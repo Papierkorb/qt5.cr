@@ -272,10 +272,13 @@ module Qt
     alias QStyleOptionTabWidgetFrame = Void
     alias QLayoutItem = Void
     alias QSpacerItem = Void
+    alias QWidgetItem = Void
     alias QLayoutPrivate = Void
     alias QBoxLayout = Void
     alias QHBoxLayout = Void
     alias QVBoxLayout = Void
+    alias QGridLayout = Void
+    alias QStackedLayout = Void
     alias QBrush = Void
     alias QSizeF = Void
     alias QMarginsF = Void
@@ -297,7 +300,6 @@ module Qt
     alias QFileDialogArgs = Void
     alias QTextOption = Void
     alias QAbstractTextDocumentLayout = Void
-    alias QChar = Void
     alias QRegularExpression = Void
     alias QTextFrame = Void
     alias QTextObject = Void
@@ -2095,6 +2097,42 @@ module Qt
       bg_QLayoutItem_controlTypes_ : CrystalProc
     end
     fun bg_QLayoutItem_JUMPTABLE(self : QLayoutItem*, table : BgTableQLayoutItem*) : Void
+    struct BgTableQSpacerItem
+      bg_QSpacerItem_sizeHint_ : CrystalProc
+      bg_QSpacerItem_minimumSize_ : CrystalProc
+      bg_QSpacerItem_maximumSize_ : CrystalProc
+      bg_QSpacerItem_expandingDirections_ : CrystalProc
+      bg_QSpacerItem_isEmpty_ : CrystalProc
+      bg_QSpacerItem_setGeometry_const_QRect_R : CrystalProc
+      bg_QSpacerItem_geometry_ : CrystalProc
+      bg_QSpacerItem_spacerItem_ : CrystalProc
+      bg_QLayoutItem_hasHeightForWidth_ : CrystalProc
+      bg_QLayoutItem_heightForWidth_int : CrystalProc
+      bg_QLayoutItem_minimumHeightForWidth_int : CrystalProc
+      bg_QLayoutItem_invalidate_ : CrystalProc
+      bg_QLayoutItem_widget_ : CrystalProc
+      bg_QLayoutItem_layout_ : CrystalProc
+      bg_QLayoutItem_controlTypes_ : CrystalProc
+    end
+    fun bg_QSpacerItem_JUMPTABLE(self : QSpacerItem*, table : BgTableQSpacerItem*) : Void
+    struct BgTableQWidgetItem
+      bg_QWidgetItem_sizeHint_ : CrystalProc
+      bg_QWidgetItem_minimumSize_ : CrystalProc
+      bg_QWidgetItem_maximumSize_ : CrystalProc
+      bg_QWidgetItem_expandingDirections_ : CrystalProc
+      bg_QWidgetItem_isEmpty_ : CrystalProc
+      bg_QWidgetItem_setGeometry_const_QRect_R : CrystalProc
+      bg_QWidgetItem_geometry_ : CrystalProc
+      bg_QWidgetItem_widget_ : CrystalProc
+      bg_QWidgetItem_hasHeightForWidth_ : CrystalProc
+      bg_QWidgetItem_heightForWidth_int : CrystalProc
+      bg_QWidgetItem_controlTypes_ : CrystalProc
+      bg_QLayoutItem_minimumHeightForWidth_int : CrystalProc
+      bg_QLayoutItem_invalidate_ : CrystalProc
+      bg_QLayoutItem_layout_ : CrystalProc
+      bg_QLayoutItem_spacerItem_ : CrystalProc
+    end
+    fun bg_QWidgetItem_JUMPTABLE(self : QWidgetItem*, table : BgTableQWidgetItem*) : Void
     struct BgTableQLayout
       bg_QLayout_metaObject_ : CrystalProc
       bg_QLayout_qt_metacast_const_char_X : CrystalProc
@@ -2227,6 +2265,72 @@ module Qt
       bg_QLayoutItem_spacerItem_ : CrystalProc
     end
     fun bg_QVBoxLayout_JUMPTABLE(self : QVBoxLayout*, table : BgTableQVBoxLayout*) : Void
+    struct BgTableQGridLayout
+      bg_QGridLayout_metaObject_ : CrystalProc
+      bg_QGridLayout_qt_metacast_const_char_X : CrystalProc
+      bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX : CrystalProc
+      bg_QGridLayout_sizeHint_ : CrystalProc
+      bg_QGridLayout_minimumSize_ : CrystalProc
+      bg_QGridLayout_maximumSize_ : CrystalProc
+      bg_QGridLayout_hasHeightForWidth_ : CrystalProc
+      bg_QGridLayout_heightForWidth_int : CrystalProc
+      bg_QGridLayout_minimumHeightForWidth_int : CrystalProc
+      bg_QGridLayout_expandingDirections_ : CrystalProc
+      bg_QGridLayout_invalidate_ : CrystalProc
+      bg_QGridLayout_itemAt_int : CrystalProc
+      bg_QGridLayout_takeAt_int : CrystalProc
+      bg_QGridLayout_count_ : CrystalProc
+      bg_QGridLayout_setGeometry_const_QRect_R : CrystalProc
+      bg_QGridLayout_addItem_QLayoutItem_X : CrystalProc
+      bg_QLayout_geometry_ : CrystalProc
+      bg_QLayout_indexOf_QWidget_X : CrystalProc
+      bg_QLayout_isEmpty_ : CrystalProc
+      bg_QLayout_controlTypes_ : CrystalProc
+      bg_QLayout_layout_ : CrystalProc
+      bg_QLayout_childEvent_QChildEvent_X : CrystalProc
+      bg_QObject_event_QEvent_X : CrystalProc
+      bg_QObject_eventFilter_QObject_X_QEvent_X : CrystalProc
+      bg_QObject_timerEvent_QTimerEvent_X : CrystalProc
+      bg_QObject_customEvent_QEvent_X : CrystalProc
+      bg_QObject_connectNotify_const_QMetaMethod_R : CrystalProc
+      bg_QObject_disconnectNotify_const_QMetaMethod_R : CrystalProc
+      bg_QLayoutItem_widget_ : CrystalProc
+      bg_QLayoutItem_spacerItem_ : CrystalProc
+    end
+    fun bg_QGridLayout_JUMPTABLE(self : QGridLayout*, table : BgTableQGridLayout*) : Void
+    struct BgTableQStackedLayout
+      bg_QStackedLayout_metaObject_ : CrystalProc
+      bg_QStackedLayout_qt_metacast_const_char_X : CrystalProc
+      bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX : CrystalProc
+      bg_QStackedLayout_count_ : CrystalProc
+      bg_QStackedLayout_addItem_QLayoutItem_X : CrystalProc
+      bg_QStackedLayout_sizeHint_ : CrystalProc
+      bg_QStackedLayout_minimumSize_ : CrystalProc
+      bg_QStackedLayout_itemAt_int : CrystalProc
+      bg_QStackedLayout_takeAt_int : CrystalProc
+      bg_QStackedLayout_setGeometry_const_QRect_R : CrystalProc
+      bg_QStackedLayout_hasHeightForWidth_ : CrystalProc
+      bg_QStackedLayout_heightForWidth_int : CrystalProc
+      bg_QLayout_invalidate_ : CrystalProc
+      bg_QLayout_geometry_ : CrystalProc
+      bg_QLayout_expandingDirections_ : CrystalProc
+      bg_QLayout_maximumSize_ : CrystalProc
+      bg_QLayout_indexOf_QWidget_X : CrystalProc
+      bg_QLayout_isEmpty_ : CrystalProc
+      bg_QLayout_controlTypes_ : CrystalProc
+      bg_QLayout_layout_ : CrystalProc
+      bg_QLayout_childEvent_QChildEvent_X : CrystalProc
+      bg_QObject_event_QEvent_X : CrystalProc
+      bg_QObject_eventFilter_QObject_X_QEvent_X : CrystalProc
+      bg_QObject_timerEvent_QTimerEvent_X : CrystalProc
+      bg_QObject_customEvent_QEvent_X : CrystalProc
+      bg_QObject_connectNotify_const_QMetaMethod_R : CrystalProc
+      bg_QObject_disconnectNotify_const_QMetaMethod_R : CrystalProc
+      bg_QLayoutItem_minimumHeightForWidth_int : CrystalProc
+      bg_QLayoutItem_widget_ : CrystalProc
+      bg_QLayoutItem_spacerItem_ : CrystalProc
+    end
+    fun bg_QStackedLayout_JUMPTABLE(self : QStackedLayout*, table : BgTableQStackedLayout*) : Void
     struct BgTableQLineEdit
       bg_QLineEdit_metaObject_ : CrystalProc
       bg_QLineEdit_qt_metacast_const_char_X : CrystalProc
@@ -5382,11 +5486,36 @@ module Qt
     fun bg_QLayoutItem_invalidate_(_self_ : Binding::QLayoutItem*) : Void
     fun bg_QLayoutItem_widget_(_self_ : Binding::QLayoutItem*) : Binding::QWidget*
     fun bg_QLayoutItem_layout_(_self_ : Binding::QLayoutItem*) : Binding::QLayout*
-    fun bg_QLayoutItem_spacerItem_(_self_ : Binding::QLayoutItem*) : QSpacerItem*
+    fun bg_QLayoutItem_spacerItem_(_self_ : Binding::QLayoutItem*) : Binding::QSpacerItem*
     fun bg_QLayoutItem_alignment_(_self_ : Binding::QLayoutItem*) : Alignment
     fun bg_QLayoutItem_setAlignment_Qt__Alignment(_self_ : Binding::QLayoutItem*, a : Alignment) : Void
     fun bg_QLayoutItem_controlTypes_(_self_ : Binding::QLayoutItem*) : SizePolicy::ControlTypes
     fun bg_QLayoutItem_DESTROY_(_self_ : Binding::QLayoutItem*) : Void
+    fun bg_QSpacerItem_CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w : Int32, h : Int32, h_data : SizePolicy::Policy, v_data : SizePolicy::Policy) : Binding::QSpacerItem*
+    fun bg_QSpacerItem_changeSize_int_int_QSizePolicy__Policy_QSizePolicy__Policy(_self_ : Binding::QSpacerItem*, w : Int32, h : Int32, h_data : SizePolicy::Policy, v_data : SizePolicy::Policy) : Void
+    fun bg_QSpacerItem_sizeHint_(_self_ : Binding::QSpacerItem*) : QSize*
+    fun bg_QSpacerItem_minimumSize_(_self_ : Binding::QSpacerItem*) : QSize*
+    fun bg_QSpacerItem_maximumSize_(_self_ : Binding::QSpacerItem*) : QSize*
+    fun bg_QSpacerItem_expandingDirections_(_self_ : Binding::QSpacerItem*) : Orientations
+    fun bg_QSpacerItem_isEmpty_(_self_ : Binding::QSpacerItem*) : Bool
+    fun bg_QSpacerItem_setGeometry_const_QRect_R(_self_ : Binding::QSpacerItem*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QSpacerItem_geometry_(_self_ : Binding::QSpacerItem*) : Binding::QRect*
+    fun bg_QSpacerItem_spacerItem_(_self_ : Binding::QSpacerItem*) : Binding::QSpacerItem*
+    fun bg_QSpacerItem_sizePolicy_(_self_ : Binding::QSpacerItem*) : Binding::QSizePolicy*
+    fun bg_QSpacerItem_DESTROY_(_self_ : Binding::QSpacerItem*) : Void
+    fun bg_QWidgetItem_CONSTRUCT_QWidget_X(w : QWidget*) : Binding::QWidgetItem*
+    fun bg_QWidgetItem_sizeHint_(_self_ : Binding::QWidgetItem*) : QSize*
+    fun bg_QWidgetItem_minimumSize_(_self_ : Binding::QWidgetItem*) : QSize*
+    fun bg_QWidgetItem_maximumSize_(_self_ : Binding::QWidgetItem*) : QSize*
+    fun bg_QWidgetItem_expandingDirections_(_self_ : Binding::QWidgetItem*) : Orientations
+    fun bg_QWidgetItem_isEmpty_(_self_ : Binding::QWidgetItem*) : Bool
+    fun bg_QWidgetItem_setGeometry_const_QRect_R(_self_ : Binding::QWidgetItem*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QWidgetItem_geometry_(_self_ : Binding::QWidgetItem*) : Binding::QRect*
+    fun bg_QWidgetItem_widget_(_self_ : Binding::QWidgetItem*) : Binding::QWidget*
+    fun bg_QWidgetItem_hasHeightForWidth_(_self_ : Binding::QWidgetItem*) : Bool
+    fun bg_QWidgetItem_heightForWidth_int(_self_ : Binding::QWidgetItem*, unnamed_arg_0 : Int32) : Int32
+    fun bg_QWidgetItem_controlTypes_(_self_ : Binding::QWidgetItem*) : SizePolicy::ControlTypes
+    fun bg_QWidgetItem_DESTROY_(_self_ : Binding::QWidgetItem*) : Void
     fun bg_QLayout_metaObject_(_self_ : Binding::QLayout*) : QMetaObject*
     fun bg_QLayout_qt_metacast_const_char_X(_self_ : Binding::QLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : Binding::QLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
@@ -5505,6 +5634,91 @@ module Qt
     fun bg_QVBoxLayout_CONSTRUCT_() : Binding::QVBoxLayout*
     fun bg_QVBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : Binding::QVBoxLayout*
     fun bg_QVBoxLayout_DESTROY_(_self_ : Binding::QVBoxLayout*) : Void
+    fun bg_QGridLayout_metaObject_(_self_ : Binding::QGridLayout*) : QMetaObject*
+    fun bg_QGridLayout_qt_metacast_const_char_X(_self_ : Binding::QGridLayout*, unnamed_arg_0 : UInt8*) : Void*
+    fun bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : Binding::QGridLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGridLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
+    fun bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
+    fun bg_QGridLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : Binding::QGridLayout*
+    fun bg_QGridLayout_CONSTRUCT_() : Binding::QGridLayout*
+    fun bg_QGridLayout_sizeHint_(_self_ : Binding::QGridLayout*) : QSize*
+    fun bg_QGridLayout_minimumSize_(_self_ : Binding::QGridLayout*) : QSize*
+    fun bg_QGridLayout_maximumSize_(_self_ : Binding::QGridLayout*) : QSize*
+    fun bg_QGridLayout_setHorizontalSpacing_int(_self_ : Binding::QGridLayout*, spacing : Int32) : Void
+    fun bg_QGridLayout_horizontalSpacing_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_setVerticalSpacing_int(_self_ : Binding::QGridLayout*, spacing : Int32) : Void
+    fun bg_QGridLayout_verticalSpacing_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_setSpacing_int(_self_ : Binding::QGridLayout*, spacing : Int32) : Void
+    fun bg_QGridLayout_spacing_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_setRowStretch_int_int(_self_ : Binding::QGridLayout*, row : Int32, stretch : Int32) : Void
+    fun bg_QGridLayout_setColumnStretch_int_int(_self_ : Binding::QGridLayout*, column : Int32, stretch : Int32) : Void
+    fun bg_QGridLayout_rowStretch_int(_self_ : Binding::QGridLayout*, row : Int32) : Int32
+    fun bg_QGridLayout_columnStretch_int(_self_ : Binding::QGridLayout*, column : Int32) : Int32
+    fun bg_QGridLayout_setRowMinimumHeight_int_int(_self_ : Binding::QGridLayout*, row : Int32, min_size : Int32) : Void
+    fun bg_QGridLayout_setColumnMinimumWidth_int_int(_self_ : Binding::QGridLayout*, column : Int32, min_size : Int32) : Void
+    fun bg_QGridLayout_rowMinimumHeight_int(_self_ : Binding::QGridLayout*, row : Int32) : Int32
+    fun bg_QGridLayout_columnMinimumWidth_int(_self_ : Binding::QGridLayout*, column : Int32) : Int32
+    fun bg_QGridLayout_columnCount_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_rowCount_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_cellRect_int_int(_self_ : Binding::QGridLayout*, row : Int32, column : Int32) : Binding::QRect*
+    fun bg_QGridLayout_hasHeightForWidth_(_self_ : Binding::QGridLayout*) : Bool
+    fun bg_QGridLayout_heightForWidth_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : Int32) : Int32
+    fun bg_QGridLayout_minimumHeightForWidth_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : Int32) : Int32
+    fun bg_QGridLayout_expandingDirections_(_self_ : Binding::QGridLayout*) : Orientations
+    fun bg_QGridLayout_invalidate_(_self_ : Binding::QGridLayout*) : Void
+    fun bg_QGridLayout_addWidget_QWidget_X(_self_ : Binding::QGridLayout*, w : QWidget*) : Void
+    fun bg_QGridLayout_addWidget_QWidget_X_int_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QWidget*, row : Int32, column : Int32) : Void
+    fun bg_QGridLayout_addWidget_QWidget_X_int_int_Qt__Alignment(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QWidget*, row : Int32, column : Int32, unnamed_arg_3 : Alignment) : Void
+    fun bg_QGridLayout_addWidget_QWidget_X_int_int_int_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QWidget*, row : Int32, column : Int32, row_span : Int32, column_span : Int32) : Void
+    fun bg_QGridLayout_addWidget_QWidget_X_int_int_int_int_Qt__Alignment(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QWidget*, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+    fun bg_QGridLayout_addLayout_QLayout_X_int_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QLayout*, row : Int32, column : Int32) : Void
+    fun bg_QGridLayout_addLayout_QLayout_X_int_int_Qt__Alignment(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QLayout*, row : Int32, column : Int32, unnamed_arg_3 : Alignment) : Void
+    fun bg_QGridLayout_addLayout_QLayout_X_int_int_int_int(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QLayout*, row : Int32, column : Int32, row_span : Int32, column_span : Int32) : Void
+    fun bg_QGridLayout_addLayout_QLayout_X_int_int_int_int_Qt__Alignment(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QLayout*, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+    fun bg_QGridLayout_setOriginCorner_Qt__Corner(_self_ : Binding::QGridLayout*, unnamed_arg_0 : Corner) : Void
+    fun bg_QGridLayout_originCorner_(_self_ : Binding::QGridLayout*) : Corner
+    fun bg_QGridLayout_itemAt_int(_self_ : Binding::QGridLayout*, index : Int32) : Binding::QLayoutItem*
+    fun bg_QGridLayout_itemAtPosition_int_int(_self_ : Binding::QGridLayout*, row : Int32, column : Int32) : Binding::QLayoutItem*
+    fun bg_QGridLayout_takeAt_int(_self_ : Binding::QGridLayout*, index : Int32) : Binding::QLayoutItem*
+    fun bg_QGridLayout_count_(_self_ : Binding::QGridLayout*) : Int32
+    fun bg_QGridLayout_setGeometry_const_QRect_R(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QRect*) : Void
+    fun bg_QGridLayout_addItem_QLayoutItem_X_int_int_int_int(_self_ : Binding::QGridLayout*, item : QLayoutItem*, row : Int32, column : Int32, row_span : Int32, column_span : Int32) : Void
+    fun bg_QGridLayout_addItem_QLayoutItem_X_int_int_int_int_Qt__Alignment(_self_ : Binding::QGridLayout*, item : QLayoutItem*, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+    fun bg_QGridLayout_setDefaultPositioning_int_Qt__Orientation(_self_ : Binding::QGridLayout*, n : Int32, orient : Orientation) : Void
+    fun bg_QGridLayout_getItemPosition_int_int_X_int_X_int_X_int_X(_self_ : Binding::QGridLayout*, idx : Int32, row : Int32*, column : Int32*, row_span : Int32*, column_span : Int32*) : Void
+    fun bg_QGridLayout_addItem_QLayoutItem_X(_self_ : Binding::QGridLayout*, unnamed_arg_0 : QLayoutItem*) : Void
+    fun bg_QGridLayout_DESTROY_(_self_ : Binding::QGridLayout*) : Void
+    fun bg_QStackedLayout_metaObject_(_self_ : Binding::QStackedLayout*) : QMetaObject*
+    fun bg_QStackedLayout_qt_metacast_const_char_X(_self_ : Binding::QStackedLayout*, unnamed_arg_0 : UInt8*) : Void*
+    fun bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : Binding::QStackedLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
+    fun bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : Binding::CrystalString
+    fun bg_QStackedLayout_CONSTRUCT_() : Binding::QStackedLayout*
+    fun bg_QStackedLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : Binding::QStackedLayout*
+    fun bg_QStackedLayout_CONSTRUCT_QLayout_X(parent_layout : QLayout*) : Binding::QStackedLayout*
+    fun bg_QStackedLayout_addWidget_QWidget_X(_self_ : Binding::QStackedLayout*, w : QWidget*) : Int32
+    fun bg_QStackedLayout_insertWidget_int_QWidget_X(_self_ : Binding::QStackedLayout*, index : Int32, w : QWidget*) : Int32
+    fun bg_QStackedLayout_currentWidget_(_self_ : Binding::QStackedLayout*) : Binding::QWidget*
+    fun bg_QStackedLayout_currentIndex_(_self_ : Binding::QStackedLayout*) : Int32
+    fun bg_QStackedLayout_widget_int(_self_ : Binding::QStackedLayout*, unnamed_arg_0 : Int32) : Binding::QWidget*
+    fun bg_QStackedLayout_count_(_self_ : Binding::QStackedLayout*) : Int32
+    fun bg_QStackedLayout_stackingMode_(_self_ : Binding::QStackedLayout*) : StackedLayout::StackingMode
+    fun bg_QStackedLayout_setStackingMode_QStackedLayout__StackingMode(_self_ : Binding::QStackedLayout*, stacking_mode : StackedLayout::StackingMode) : Void
+    fun bg_QStackedLayout_addItem_QLayoutItem_X(_self_ : Binding::QStackedLayout*, item : QLayoutItem*) : Void
+    fun bg_QStackedLayout_sizeHint_(_self_ : Binding::QStackedLayout*) : QSize*
+    fun bg_QStackedLayout_minimumSize_(_self_ : Binding::QStackedLayout*) : QSize*
+    fun bg_QStackedLayout_itemAt_int(_self_ : Binding::QStackedLayout*, unnamed_arg_0 : Int32) : Binding::QLayoutItem*
+    fun bg_QStackedLayout_takeAt_int(_self_ : Binding::QStackedLayout*, unnamed_arg_0 : Int32) : Binding::QLayoutItem*
+    fun bg_QStackedLayout_setGeometry_const_QRect_R(_self_ : Binding::QStackedLayout*, rect : QRect*) : Void
+    fun bg_QStackedLayout_hasHeightForWidth_(_self_ : Binding::QStackedLayout*) : Bool
+    fun bg_QStackedLayout_heightForWidth_int(_self_ : Binding::QStackedLayout*, width : Int32) : Int32
+    fun bg_QStackedLayout_widgetRemoved_int(_self_ : Binding::QStackedLayout*, index : Int32) : Void
+    fun bg_QStackedLayout_widgetRemoved_CONNECT_CrystalProc_void__int_(_self_ : Binding::QStackedLayout*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
+    fun bg_QStackedLayout_currentChanged_int(_self_ : Binding::QStackedLayout*, index : Int32) : Void
+    fun bg_QStackedLayout_currentChanged_CONNECT_CrystalProc_void__int_(_self_ : Binding::QStackedLayout*, _proc_ : CrystalProc) : Binding::QMetaObjectConnection*
+    fun bg_QStackedLayout_setCurrentIndex_int(_self_ : Binding::QStackedLayout*, index : Int32) : Void
+    fun bg_QStackedLayout_setCurrentWidget_QWidget_X(_self_ : Binding::QStackedLayout*, w : QWidget*) : Void
+    fun bg_QStackedLayout_DESTROY_(_self_ : Binding::QStackedLayout*) : Void
     fun bg_QPalette_CONSTRUCT_() : Binding::QPalette*
     fun bg_QPalette_CONSTRUCT_const_QColor_R(button : QColor*) : Binding::QPalette*
     fun bg_QPalette_CONSTRUCT_Qt__GlobalColor(button : GlobalColor) : Binding::QPalette*
@@ -6090,7 +6304,7 @@ module Qt
     fun bg_QTextDocument_toRawText_(_self_ : Binding::QTextDocument*) : Binding::CrystalString
     fun bg_QTextDocument_toPlainText_(_self_ : Binding::QTextDocument*) : Binding::CrystalString
     fun bg_QTextDocument_setPlainText_const_QString_R(_self_ : Binding::QTextDocument*, text : CrystalString) : Void
-    fun bg_QTextDocument_characterAt_int(_self_ : Binding::QTextDocument*, pos : Int32) : QChar*
+    fun bg_QTextDocument_characterAt_int(_self_ : Binding::QTextDocument*, pos : Int32) : Int32
     fun bg_QTextDocument_find_const_QString_R_int(_self_ : Binding::QTextDocument*, sub_string : CrystalString, from : Int32) : Binding::QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_int_QTextDocument__FindFlags(_self_ : Binding::QTextDocument*, sub_string : CrystalString, from : Int32, options : TextDocument::FindFlags) : Binding::QTextCursor*
     fun bg_QTextDocument_find_const_QString_R_const_QTextCursor_R(_self_ : Binding::QTextDocument*, sub_string : CrystalString, cursor : QTextCursor*) : Binding::QTextCursor*
@@ -6314,8 +6528,8 @@ module Qt
     fun bg_QDir_rename_const_QString_R_const_QString_R(_self_ : Binding::QDir*, old_name : CrystalString, new_name : CrystalString) : Bool
     fun bg_QDir_exists_const_QString_R(_self_ : Binding::QDir*, name : CrystalString) : Bool
     fun bg_QDir_drives_STATIC_() : QFileInfoList*
-    fun bg_QDir_listSeparator_STATIC_() : QChar*
-    fun bg_QDir_separator_STATIC_() : QChar*
+    fun bg_QDir_listSeparator_STATIC_() : Int32
+    fun bg_QDir_separator_STATIC_() : Int32
     fun bg_QDir_setCurrent_STATIC_const_QString_R(path : CrystalString) : Bool
     fun bg_QDir_current_STATIC_() : Binding::QDir*
     fun bg_QDir_currentPath_STATIC_() : Binding::CrystalString
@@ -9049,6 +9263,13 @@ module Qt
     UTC = 1
     OffsetFromUTC = 2
     TimeZone = 3
+  end
+  enum WindowState : UInt32
+    WindowNoState = 0
+    WindowMinimized = 1
+    WindowMaximized = 2
+    WindowFullScreen = 4
+    WindowActive = 8
   end
   @[Flags]
   enum FindChildOptions : UInt32
@@ -20170,7 +20391,7 @@ module Qt
       bg_QLayoutItem_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QLayoutItem_JUMPTABLE unwrap, pointerof(jump_table)
@@ -20200,7 +20421,7 @@ module Qt
       bg_QLayoutItem_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QLayoutItem_JUMPTABLE unwrap, pointerof(jump_table)
@@ -20232,8 +20453,8 @@ module Qt
     def layout() : Layout
       Layout.new(unwrap: Binding.bg_QLayoutItem_layout_(self))
     end
-    def spacer_item() : QSpacerItem*
-      Binding.bg_QLayoutItem_spacerItem_(self)
+    def spacer_item() : SpacerItem
+      SpacerItem.new(unwrap: Binding.bg_QLayoutItem_spacerItem_(self))
     end
     def alignment() : Alignment
       Binding.bg_QLayoutItem_alignment_(self)
@@ -20269,6 +20490,137 @@ module Qt
     end
     def empty?() : Bool
       Binding.bg_QLayoutItem_isEmpty_(self)
+    end
+  end
+  class SpacerItem < LayoutItem
+    def initialize(@unwrap : Void*)
+    end
+    def initialize(w : Int32, h : Int32, h_data : SizePolicy::Policy = SizePolicy::Policy::Minimum, v_data : SizePolicy::Policy = SizePolicy::Policy::Minimum)
+      unwrap = Binding.bg_QSpacerItem_CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w, h, h_data, v_data)
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(SpacerItem)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ size_hint minimum_size maximum_size expanding_directions empty? geometry= geometry spacer_item has_height_for_width? height_for_width minimum_height_for_width invalidate widget layout control_types ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQSpacerItem.new(
+      bg_QSpacerItem_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QSpacerItem_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QSpacerItem_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QSpacerItem_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QSpacerItem_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QSpacerItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::QRect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QSpacerItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QSpacerItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QSpacerItem_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def change_size(w : Int32, h : Int32, h_data : SizePolicy::Policy = SizePolicy::Policy::Minimum, v_data : SizePolicy::Policy = SizePolicy::Policy::Minimum) : Void
+      Binding.bg_QSpacerItem_changeSize_int_int_QSizePolicy__Policy_QSizePolicy__Policy(self, w, h, h_data, v_data)
+    end
+    def size_hint() : QSize*
+      Binding.bg_QSpacerItem_sizeHint_(self)
+    end
+    def minimum_size() : QSize*
+      Binding.bg_QSpacerItem_minimumSize_(self)
+    end
+    def maximum_size() : QSize*
+      Binding.bg_QSpacerItem_maximumSize_(self)
+    end
+    def expanding_directions() : Orientations
+      Binding.bg_QSpacerItem_expandingDirections_(self)
+    end
+    def empty?() : Bool
+      Binding.bg_QSpacerItem_isEmpty_(self)
+    end
+    def geometry=(unnamed_arg_0 : Rect) : Void
+      Binding.bg_QSpacerItem_setGeometry_const_QRect_R(self, unnamed_arg_0)
+    end
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QSpacerItem_geometry_(self))
+    end
+    def spacer_item() : SpacerItem
+      SpacerItem.new(unwrap: Binding.bg_QSpacerItem_spacerItem_(self))
+    end
+    def size_policy() : SizePolicy
+      SizePolicy.new(unwrap: Binding.bg_QSpacerItem_sizePolicy_(self))
+    end
+  end
+  class WidgetItem < LayoutItem
+    def initialize(@unwrap : Void*)
+    end
+    def initialize(w : Widget)
+      unwrap = Binding.bg_QWidgetItem_CONSTRUCT_QWidget_X(w)
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(WidgetItem)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ size_hint minimum_size maximum_size expanding_directions empty? geometry= geometry widget has_height_for_width? height_for_width control_types minimum_height_for_width invalidate layout spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQWidgetItem.new(
+      bg_QWidgetItem_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QWidgetItem_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QWidgetItem_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QWidgetItem_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QWidgetItem_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QWidgetItem_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::QRect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QWidgetItem_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QWidgetItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QWidgetItem_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QWidgetItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QWidgetItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QWidgetItem_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def size_hint() : QSize*
+      Binding.bg_QWidgetItem_sizeHint_(self)
+    end
+    def minimum_size() : QSize*
+      Binding.bg_QWidgetItem_minimumSize_(self)
+    end
+    def maximum_size() : QSize*
+      Binding.bg_QWidgetItem_maximumSize_(self)
+    end
+    def expanding_directions() : Orientations
+      Binding.bg_QWidgetItem_expandingDirections_(self)
+    end
+    def empty?() : Bool
+      Binding.bg_QWidgetItem_isEmpty_(self)
+    end
+    def geometry=(unnamed_arg_0 : Rect) : Void
+      Binding.bg_QWidgetItem_setGeometry_const_QRect_R(self, unnamed_arg_0)
+    end
+    def geometry() : Rect
+      Rect.new(unwrap: Binding.bg_QWidgetItem_geometry_(self))
+    end
+    def widget() : Widget
+      Widget.new(unwrap: Binding.bg_QWidgetItem_widget_(self))
+    end
+    def has_height_for_width?() : Bool
+      Binding.bg_QWidgetItem_hasHeightForWidth_(self)
+    end
+    def height_for_width(unnamed_arg_0 : Int32) : Int32
+      Binding.bg_QWidgetItem_heightForWidth_int(self, unnamed_arg_0)
+    end
+    def control_types() : SizePolicy::ControlTypes
+      Binding.bg_QWidgetItem_controlTypes_(self)
     end
   end
   abstract class Layout < Object
@@ -20339,7 +20691,7 @@ module Qt
       bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20384,7 +20736,7 @@ module Qt
       bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20571,7 +20923,7 @@ module Qt
       bg_QLayoutItem_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20681,7 +21033,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20699,7 +21051,7 @@ module Qt
     def add_stretch(stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_addStretch_int(self, stretch)
     end
-    def add_spacer_item(spacer_item : QSpacerItem*) : Void
+    def add_spacer_item(spacer_item : SpacerItem) : Void
       Binding.bg_QBoxLayout_addSpacerItem_QSpacerItem_X(self, spacer_item)
     end
     def add_widget(unnamed_arg_0 : Widget, stretch : Int32 = 0) : Void
@@ -20723,7 +21075,7 @@ module Qt
     def insert_stretch(index : Int32, stretch : Int32 = 0) : Void
       Binding.bg_QBoxLayout_insertStretch_int_int(self, index, stretch)
     end
-    def insert_spacer_item(index : Int32, spacer_item : QSpacerItem*) : Void
+    def insert_spacer_item(index : Int32, spacer_item : SpacerItem) : Void
       Binding.bg_QBoxLayout_insertSpacerItem_int_QSpacerItem_X(self, index, spacer_item)
     end
     def insert_widget(index : Int32, widget : Widget, stretch : Int32 = 0) : Void
@@ -20850,7 +21202,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QHBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20895,7 +21247,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QHBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -20959,7 +21311,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QVBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
@@ -21004,11 +21356,482 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
-      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ self.spacer_item() } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
     )
     Binding.bg_QVBoxLayout_JUMPTABLE unwrap, pointerof(jump_table)
     {% end %}
     
+    end
+  end
+  class GridLayout < Layout
+    def initialize(@unwrap : Void*)
+    end
+    def meta_object() : QMetaObject*
+      Binding.bg_QGridLayout_metaObject_(self)
+    end
+    def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
+      Binding.bg_QGridLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
+    end
+    def qt_metacall(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+      Binding.bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
+    end
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
+    end
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
+    end
+    def initialize(parent : Widget)
+      unwrap = Binding.bg_QGridLayout_CONSTRUCT_QWidget_X(parent)
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(GridLayout)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast qt_metacall size_hint minimum_size maximum_size has_height_for_width? height_for_width minimum_height_for_width expanding_directions invalidate item_at take_at count geometry= add_item geometry index_of empty? control_types layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify widget spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQGridLayout.new(
+      bg_QGridLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
+      bg_QGridLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} ->(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**){ self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
+      bg_QGridLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QGridLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QGridLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QGridLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QGridLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QGridLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.item_at(index)).to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.take_at(index)).to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
+      bg_QGridLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::QRect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QGridLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QLayout_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
+      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
+      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QGridLayout_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def initialize()
+      unwrap = Binding.bg_QGridLayout_CONSTRUCT_()
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(GridLayout)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast qt_metacall size_hint minimum_size maximum_size has_height_for_width? height_for_width minimum_height_for_width expanding_directions invalidate item_at take_at count geometry= add_item geometry index_of empty? control_types layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify widget spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQGridLayout.new(
+      bg_QGridLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
+      bg_QGridLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} ->(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**){ self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
+      bg_QGridLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QGridLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QGridLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QGridLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QGridLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(unnamed_arg_0 : Int32){ self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QGridLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QGridLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.item_at(index)).to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(index : Int32){ LayoutItem.new(unwrap: self.take_at(index)).to_unsafe } {% else %} nil {% end %}),
+      bg_QGridLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
+      bg_QGridLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(unnamed_arg_0 : Binding::QRect*){ self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QGridLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(unnamed_arg_0 : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QLayout_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
+      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
+      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QGridLayout_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def size_hint() : QSize*
+      Binding.bg_QGridLayout_sizeHint_(self)
+    end
+    def minimum_size() : QSize*
+      Binding.bg_QGridLayout_minimumSize_(self)
+    end
+    def maximum_size() : QSize*
+      Binding.bg_QGridLayout_maximumSize_(self)
+    end
+    def horizontal_spacing=(spacing : Int32) : Void
+      Binding.bg_QGridLayout_setHorizontalSpacing_int(self, spacing)
+    end
+    def horizontal_spacing() : Int32
+      Binding.bg_QGridLayout_horizontalSpacing_(self)
+    end
+    def vertical_spacing=(spacing : Int32) : Void
+      Binding.bg_QGridLayout_setVerticalSpacing_int(self, spacing)
+    end
+    def vertical_spacing() : Int32
+      Binding.bg_QGridLayout_verticalSpacing_(self)
+    end
+    def spacing=(spacing : Int32) : Void
+      Binding.bg_QGridLayout_setSpacing_int(self, spacing)
+    end
+    def spacing() : Int32
+      Binding.bg_QGridLayout_spacing_(self)
+    end
+    def set_row_stretch(row : Int32, stretch : Int32) : Void
+      Binding.bg_QGridLayout_setRowStretch_int_int(self, row, stretch)
+    end
+    def set_column_stretch(column : Int32, stretch : Int32) : Void
+      Binding.bg_QGridLayout_setColumnStretch_int_int(self, column, stretch)
+    end
+    def row_stretch(row : Int32) : Int32
+      Binding.bg_QGridLayout_rowStretch_int(self, row)
+    end
+    def column_stretch(column : Int32) : Int32
+      Binding.bg_QGridLayout_columnStretch_int(self, column)
+    end
+    def set_row_minimum_height(row : Int32, min_size : Int32) : Void
+      Binding.bg_QGridLayout_setRowMinimumHeight_int_int(self, row, min_size)
+    end
+    def set_column_minimum_width(column : Int32, min_size : Int32) : Void
+      Binding.bg_QGridLayout_setColumnMinimumWidth_int_int(self, column, min_size)
+    end
+    def row_minimum_height(row : Int32) : Int32
+      Binding.bg_QGridLayout_rowMinimumHeight_int(self, row)
+    end
+    def column_minimum_width(column : Int32) : Int32
+      Binding.bg_QGridLayout_columnMinimumWidth_int(self, column)
+    end
+    def column_count() : Int32
+      Binding.bg_QGridLayout_columnCount_(self)
+    end
+    def row_count() : Int32
+      Binding.bg_QGridLayout_rowCount_(self)
+    end
+    def cell_rect(row : Int32, column : Int32) : Rect
+      Rect.new(unwrap: Binding.bg_QGridLayout_cellRect_int_int(self, row, column))
+    end
+    def has_height_for_width?() : Bool
+      Binding.bg_QGridLayout_hasHeightForWidth_(self)
+    end
+    def height_for_width(unnamed_arg_0 : Int32) : Int32
+      Binding.bg_QGridLayout_heightForWidth_int(self, unnamed_arg_0)
+    end
+    def minimum_height_for_width(unnamed_arg_0 : Int32) : Int32
+      Binding.bg_QGridLayout_minimumHeightForWidth_int(self, unnamed_arg_0)
+    end
+    def expanding_directions() : Orientations
+      Binding.bg_QGridLayout_expandingDirections_(self)
+    end
+    def invalidate() : Void
+      Binding.bg_QGridLayout_invalidate_(self)
+    end
+    def add_widget(w : Widget) : Void
+      Binding.bg_QGridLayout_addWidget_QWidget_X(self, w)
+    end
+    def add_widget(unnamed_arg_0 : Widget, row : Int32, column : Int32) : Void
+      Binding.bg_QGridLayout_addWidget_QWidget_X_int_int(self, unnamed_arg_0, row, column)
+    end
+    def add_widget(unnamed_arg_0 : Widget, row : Int32, column : Int32, unnamed_arg_3 : Alignment) : Void
+      Binding.bg_QGridLayout_addWidget_QWidget_X_int_int_Qt__Alignment(self, unnamed_arg_0, row, column, unnamed_arg_3)
+    end
+    def add_widget(unnamed_arg_0 : Widget, row : Int32, column : Int32, row_span : Int32, column_span : Int32) : Void
+      Binding.bg_QGridLayout_addWidget_QWidget_X_int_int_int_int(self, unnamed_arg_0, row, column, row_span, column_span)
+    end
+    def add_widget(unnamed_arg_0 : Widget, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+      Binding.bg_QGridLayout_addWidget_QWidget_X_int_int_int_int_Qt__Alignment(self, unnamed_arg_0, row, column, row_span, column_span, unnamed_arg_5)
+    end
+    def add_layout(unnamed_arg_0 : Layout, row : Int32, column : Int32) : Void
+      Binding.bg_QGridLayout_addLayout_QLayout_X_int_int(self, unnamed_arg_0, row, column)
+    end
+    def add_layout(unnamed_arg_0 : Layout, row : Int32, column : Int32, unnamed_arg_3 : Alignment) : Void
+      Binding.bg_QGridLayout_addLayout_QLayout_X_int_int_Qt__Alignment(self, unnamed_arg_0, row, column, unnamed_arg_3)
+    end
+    def add_layout(unnamed_arg_0 : Layout, row : Int32, column : Int32, row_span : Int32, column_span : Int32) : Void
+      Binding.bg_QGridLayout_addLayout_QLayout_X_int_int_int_int(self, unnamed_arg_0, row, column, row_span, column_span)
+    end
+    def add_layout(unnamed_arg_0 : Layout, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+      Binding.bg_QGridLayout_addLayout_QLayout_X_int_int_int_int_Qt__Alignment(self, unnamed_arg_0, row, column, row_span, column_span, unnamed_arg_5)
+    end
+    def origin_corner=(unnamed_arg_0 : Corner) : Void
+      Binding.bg_QGridLayout_setOriginCorner_Qt__Corner(self, unnamed_arg_0)
+    end
+    def origin_corner() : Corner
+      Binding.bg_QGridLayout_originCorner_(self)
+    end
+    def item_at(index : Int32) : LayoutItem
+      LayoutItem.new(unwrap: Binding.bg_QGridLayout_itemAt_int(self, index))
+    end
+    def item_at_position(row : Int32, column : Int32) : LayoutItem
+      LayoutItem.new(unwrap: Binding.bg_QGridLayout_itemAtPosition_int_int(self, row, column))
+    end
+    def take_at(index : Int32) : LayoutItem
+      LayoutItem.new(unwrap: Binding.bg_QGridLayout_takeAt_int(self, index))
+    end
+    def count() : Int32
+      Binding.bg_QGridLayout_count_(self)
+    end
+    def geometry=(unnamed_arg_0 : Rect) : Void
+      Binding.bg_QGridLayout_setGeometry_const_QRect_R(self, unnamed_arg_0)
+    end
+    def add_item(item : LayoutItem, row : Int32, column : Int32, row_span : Int32 = 1, column_span : Int32 = 1) : Void
+      Binding.bg_QGridLayout_addItem_QLayoutItem_X_int_int_int_int(self, item, row, column, row_span, column_span)
+    end
+    def add_item(item : LayoutItem, row : Int32, column : Int32, row_span : Int32, column_span : Int32, unnamed_arg_5 : Alignment) : Void
+      Binding.bg_QGridLayout_addItem_QLayoutItem_X_int_int_int_int_Qt__Alignment(self, item, row, column, row_span, column_span, unnamed_arg_5)
+    end
+    def set_default_positioning(n : Int32, orient : Orientation) : Void
+      Binding.bg_QGridLayout_setDefaultPositioning_int_Qt__Orientation(self, n, orient)
+    end
+    def get_item_position(idx : Int32, row : Int32*, column : Int32*, row_span : Int32*, column_span : Int32*) : Void
+      Binding.bg_QGridLayout_getItemPosition_int_int_X_int_X_int_X_int_X(self, idx, row, column, row_span, column_span)
+    end
+    protected def add_item(unnamed_arg_0 : LayoutItem) : Void
+      Binding.bg_QGridLayout_addItem_QLayoutItem_X(self, unnamed_arg_0)
+    end
+  end
+  class StackedLayout < Layout
+    enum StackingMode : UInt32
+      StackOne = 0
+      StackAll = 1
+    end
+    def initialize(@unwrap : Void*)
+    end
+    def meta_object() : QMetaObject*
+      Binding.bg_QStackedLayout_metaObject_(self)
+    end
+    def qt_metacast(unnamed_arg_0 : UInt8*) : Void*
+      Binding.bg_QStackedLayout_qt_metacast_const_char_X(self, unnamed_arg_0)
+    end
+    def qt_metacall(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+      Binding.bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
+    end
+    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
+    end
+    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
+    end
+    def initialize()
+      unwrap = Binding.bg_QStackedLayout_CONSTRUCT_()
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(StackedLayout)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast qt_metacall count add_item size_hint minimum_size item_at take_at geometry= has_height_for_width? height_for_width invalidate geometry expanding_directions maximum_size index_of empty? control_types layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify minimum_height_for_width widget spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQStackedLayout.new(
+      bg_QStackedLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} ->(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**){ self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
+      bg_QStackedLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
+      bg_QStackedLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(item : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: item)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QStackedLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QStackedLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::QRect*){ self.geometry=(Rect.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QStackedLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(width : Int32){ self.height_for_width(width) } {% else %} nil {% end %}),
+      bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QLayout_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
+      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
+      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
+      bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QStackedLayout_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def initialize(parent : Widget)
+      unwrap = Binding.bg_QStackedLayout_CONSTRUCT_QWidget_X(parent)
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(StackedLayout)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast qt_metacall count add_item size_hint minimum_size item_at take_at geometry= has_height_for_width? height_for_width invalidate geometry expanding_directions maximum_size index_of empty? control_types layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify minimum_height_for_width widget spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQStackedLayout.new(
+      bg_QStackedLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} ->(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**){ self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
+      bg_QStackedLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
+      bg_QStackedLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(item : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: item)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QStackedLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QStackedLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::QRect*){ self.geometry=(Rect.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QStackedLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(width : Int32){ self.height_for_width(width) } {% else %} nil {% end %}),
+      bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QLayout_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
+      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
+      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
+      bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QStackedLayout_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def initialize(parent_layout : Layout)
+      unwrap = Binding.bg_QStackedLayout_CONSTRUCT_QLayout_X(parent_layout)
+    @unwrap = unwrap
+    {% begin %}
+    {%
+      methods = [] of Def
+      ([@type] + @type.ancestors).select(&.<(StackedLayout)).map{|x| methods = methods + x.methods}
+      forwarded = methods.map(&.name.stringify).select{|m| %w[ meta_object qt_metacast qt_metacall count add_item size_hint minimum_size item_at take_at geometry= has_height_for_width? height_for_width invalidate geometry expanding_directions maximum_size index_of empty? control_types layout child_event event event_filter timer_event custom_event connect_notify disconnect_notify minimum_height_for_width widget spacer_item ].includes?(m) }.uniq
+    %}
+    jump_table = Binding::BgTableQStackedLayout.new(
+      bg_QStackedLayout_metaObject_: BindgenHelper.wrap_proc({% if forwarded.includes?("meta_object") %} ->(){ self.meta_object() } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} ->(unnamed_arg_0 : UInt8*){ self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} ->(unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**){ self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
+      bg_QStackedLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} ->(){ self.count() } {% else %} nil {% end %}),
+      bg_QStackedLayout_addItem_QLayoutItem_X: BindgenHelper.wrap_proc({% if forwarded.includes?("add_item") %} ->(item : Binding::QLayoutItem*){ self.add_item(LayoutItem.new(unwrap: item)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} ->(){ self.size_hint() } {% else %} nil {% end %}),
+      bg_QStackedLayout_minimumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size") %} ->(){ self.minimum_size() } {% else %} nil {% end %}),
+      bg_QStackedLayout_itemAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("item_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.item_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_takeAt_int: BindgenHelper.wrap_proc({% if forwarded.includes?("take_at") %} ->(unnamed_arg_0 : Int32){ LayoutItem.new(unwrap: self.take_at(unnamed_arg_0)).to_unsafe } {% else %} nil {% end %}),
+      bg_QStackedLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} ->(rect : Binding::QRect*){ self.geometry=(Rect.new(unwrap: rect)) } {% else %} nil {% end %}),
+      bg_QStackedLayout_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} ->(){ self.has_height_for_width?() } {% else %} nil {% end %}),
+      bg_QStackedLayout_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} ->(width : Int32){ self.height_for_width(width) } {% else %} nil {% end %}),
+      bg_QLayout_invalidate_: BindgenHelper.wrap_proc({% if forwarded.includes?("invalidate") %} ->(){ self.invalidate() } {% else %} nil {% end %}),
+      bg_QLayout_geometry_: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry") %} ->(){ Rect.new(unwrap: self.geometry()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_expandingDirections_: BindgenHelper.wrap_proc({% if forwarded.includes?("expanding_directions") %} ->(){ self.expanding_directions().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_maximumSize_: BindgenHelper.wrap_proc({% if forwarded.includes?("maximum_size") %} ->(){ self.maximum_size() } {% else %} nil {% end %}),
+      bg_QLayout_indexOf_QWidget_X: BindgenHelper.wrap_proc({% if forwarded.includes?("index_of") %} ->(unnamed_arg_0 : Binding::QWidget*){ self.index_of(Widget.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QLayout_isEmpty_: BindgenHelper.wrap_proc({% if forwarded.includes?("empty?") %} ->(){ self.empty?() } {% else %} nil {% end %}),
+      bg_QLayout_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} ->(){ self.control_types().to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} ->(){ Layout.new(unwrap: self.layout()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} ->(e : QChildEvent*){ self.child_event(e) } {% else %} nil {% end %}),
+      bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} ->(event : Binding::QEvent*){ self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} ->(watched : Binding::QObject*, event : Binding::QEvent*){ self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} ->(event : Binding::QTimerEvent*){ self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_customEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("custom_event") %} ->(event : Binding::QEvent*){ self.custom_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} ->(signal : QMetaMethod*){ self.connect_notify(signal) } {% else %} nil {% end %}),
+      bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} ->(signal : QMetaMethod*){ self.disconnect_notify(signal) } {% else %} nil {% end %}),
+      bg_QLayoutItem_minimumHeightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_height_for_width") %} ->(unnamed_arg_0 : Int32){ self.minimum_height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} ->(){ Widget.new(unwrap: self.widget()).to_unsafe } {% else %} nil {% end %}),
+      bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} ->(){ SpacerItem.new(unwrap: self.spacer_item()).to_unsafe } {% else %} nil {% end %}),
+    )
+    Binding.bg_QStackedLayout_JUMPTABLE unwrap, pointerof(jump_table)
+    {% end %}
+    
+    end
+    def add_widget(w : Widget) : Int32
+      Binding.bg_QStackedLayout_addWidget_QWidget_X(self, w)
+    end
+    def insert_widget(index : Int32, w : Widget) : Int32
+      Binding.bg_QStackedLayout_insertWidget_int_QWidget_X(self, index, w)
+    end
+    def current_widget() : Widget
+      Widget.new(unwrap: Binding.bg_QStackedLayout_currentWidget_(self))
+    end
+    def current_index() : Int32
+      Binding.bg_QStackedLayout_currentIndex_(self)
+    end
+    def widget(unnamed_arg_0 : Int32) : Widget
+      Widget.new(unwrap: Binding.bg_QStackedLayout_widget_int(self, unnamed_arg_0))
+    end
+    def count() : Int32
+      Binding.bg_QStackedLayout_count_(self)
+    end
+    def stacking_mode() : StackedLayout::StackingMode
+      Binding.bg_QStackedLayout_stackingMode_(self)
+    end
+    def stacking_mode=(stacking_mode : StackedLayout::StackingMode) : Void
+      Binding.bg_QStackedLayout_setStackingMode_QStackedLayout__StackingMode(self, stacking_mode)
+    end
+    def add_item(item : LayoutItem) : Void
+      Binding.bg_QStackedLayout_addItem_QLayoutItem_X(self, item)
+    end
+    def size_hint() : QSize*
+      Binding.bg_QStackedLayout_sizeHint_(self)
+    end
+    def minimum_size() : QSize*
+      Binding.bg_QStackedLayout_minimumSize_(self)
+    end
+    def item_at(unnamed_arg_0 : Int32) : LayoutItem
+      LayoutItem.new(unwrap: Binding.bg_QStackedLayout_itemAt_int(self, unnamed_arg_0))
+    end
+    def take_at(unnamed_arg_0 : Int32) : LayoutItem
+      LayoutItem.new(unwrap: Binding.bg_QStackedLayout_takeAt_int(self, unnamed_arg_0))
+    end
+    def geometry=(rect : Rect) : Void
+      Binding.bg_QStackedLayout_setGeometry_const_QRect_R(self, rect)
+    end
+    def has_height_for_width?() : Bool
+      Binding.bg_QStackedLayout_hasHeightForWidth_(self)
+    end
+    def height_for_width(width : Int32) : Int32
+      Binding.bg_QStackedLayout_heightForWidth_int(self, width)
+    end
+    def widget_removed(index : Int32) : Void
+      Binding.bg_QStackedLayout_widgetRemoved_int(self, index)
+    end
+    def on_widget_removed(&block : Proc(Int32, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QStackedLayout_widgetRemoved_CONNECT_CrystalProc_void__int_(self, BindgenHelper.wrap_proc(->(index : Int32){ block.call(index) })))
+    end
+    def current_changed(index : Int32) : Void
+      Binding.bg_QStackedLayout_currentChanged_int(self, index)
+    end
+    def on_current_changed(&block : Proc(Int32, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QStackedLayout_currentChanged_CONNECT_CrystalProc_void__int_(self, BindgenHelper.wrap_proc(->(index : Int32){ block.call(index) })))
+    end
+    def current_index=(index : Int32) : Void
+      Binding.bg_QStackedLayout_setCurrentIndex_int(self, index)
+    end
+    def current_widget=(w : Widget) : Void
+      Binding.bg_QStackedLayout_setCurrentWidget_QWidget_X(self, w)
     end
   end
   class Palette 
@@ -23629,8 +24452,8 @@ module Qt
     def plain_text=(text : String) : Void
       Binding.bg_QTextDocument_setPlainText_const_QString_R(self, Qt::Converter::QString.wrap(text))
     end
-    def character_at(pos : Int32) : QChar*
-      Binding.bg_QTextDocument_characterAt_int(self, pos)
+    def character_at(pos : Int32) : Char
+      (Binding.bg_QTextDocument_characterAt_int(self, pos).chr)
     end
     def find(sub_string : String, from : Int32 = 0) : TextCursor
       TextCursor.new(unwrap: Binding.bg_QTextDocument_find_const_QString_R_int(self, Qt::Converter::QString.wrap(sub_string), from))
@@ -24430,11 +25253,11 @@ module Qt
     def self.drives() : QFileInfoList*
       Binding.bg_QDir_drives_STATIC_()
     end
-    def self.list_separator() : QChar*
-      Binding.bg_QDir_listSeparator_STATIC_()
+    def self.list_separator() : Char
+      (Binding.bg_QDir_listSeparator_STATIC_().chr)
     end
-    def self.separator() : QChar*
-      Binding.bg_QDir_separator_STATIC_()
+    def self.separator() : Char
+      (Binding.bg_QDir_separator_STATIC_().chr)
     end
     def self.set_current(path : String) : Bool
       Binding.bg_QDir_setCurrent_STATIC_const_QString_R(Qt::Converter::QString.wrap(path))
