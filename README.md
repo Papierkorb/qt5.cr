@@ -4,6 +4,10 @@ Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bin
 
 Please note that this is **not** production-ready – yet!
 
+**Support**: Linux based systems (Especially ArchLinux).  As of yet, no Mac OS
+and no Windows.  I use neither of those two.  If someone wants to work on it,
+and later maintain it, please contact me.
+
 ## Project Goals
 
 * **Just Works™** - Drop the dependency into a project, and use it.
