@@ -39,6 +39,7 @@ generators:
 library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 classes:
   QObject: Object
+  QTimer: Timer
   "QMetaObject::Connection": SignalConnection
   QAbstractEventDispatcher: AbstractEventDispatcher
   QAbstractEventDispatcher::TimerInfo: EventDispatcherTimerInfo
