@@ -18,6 +18,7 @@ processors:
   - default_constructor # Create default constructors where possible
   - copy_structs # Copy structures as marked
   - macros # Support for macro mapping
+  - auto_container_instantiation
   - instantiate_containers # Actually instantiate containers
   - qt # Qt specifics
   # Preliminary generation processors:
@@ -491,9 +492,6 @@ types: # Type rewrite rules
   # Typedefs
   QRgb: { alias_for: "unsigned int" }
   QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
-  QStringList: { alias_for: "QList<QString>" }
-  QWidgetList: { alias_for: "QList<QWidget *>" }
-  QObjectList: { alias_for: "QList<QObject *>" }
 
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
@@ -528,37 +526,11 @@ containers:
   - class: QList
     type: Sequential
     instantiations:
-      - [ "QString" ] # `QStringList`
-      - [ "QObject *" ] # `QObjectList`
-      - [ "QWidget *" ] # `QWidgetList`
-      - [ "QDockWidget *" ]
-      - [ "QAction *" ]
-      - [ "QGesture *" ]
-      - [ "QAbstractButton *" ]
-      - [ "QUrl" ]
-      - [ "QGraphicsItem *" ]
-      - [ "QGraphicsWidget *" ]
-      - [ "QGraphicsTransform *" ]
-      - [ "QGraphicsView *" ]
-      - [ "QAbstractEventDispatcher::TimerInfo" ] # For `QAbstractEventDispatcher#registeredTimers`
-      - [ "QSize" ]
-      - [ "QKeySequence" ]
-      - [ "QRectF" ]
-      - [ "QScreen *" ]
       - [ "qreal" ]
-      - [ "int" ]
   - class: QVector
     type: Sequential
     instantiations:
-      - [ "QLine" ]
-      - [ "QLineF" ]
-      - [ "QPoint" ]
-      - [ "QPointF" ]
-      - [ "QRect" ]
-      - [ "QRectF" ]
       - [ "QRgb" ]
-      - [ "QTextLength" ]
-      - [ "QTextFormat" ]
 
 macros:
   "QT_VERSION_STR":
