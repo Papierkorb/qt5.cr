@@ -510,12 +510,6 @@ types: # Type rewrite rules
   "QPixmap::DataPtr": { ignore: true }
   "QBrush::DataPtr": { ignore: true }
 
-  # Private signals - TODO: Support these somehow.
-  "QtPrivateSignal": { ignore: true }
-  "QObject::QPrivateSignal": { ignore: true }
-  "QCoreApplication::QPrivateSignal": { ignore: true }
-  "QSocketNotifier::QPrivateSignal": { ignore: true }
-
   # Waiting for a reasonable pass-through implementation of QByteArray
   "QList<QByteArray>": { ignore: true }
   "QSet<QByteArray>": { ignore: true }
