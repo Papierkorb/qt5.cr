@@ -1,5 +1,7 @@
 #include <gc/gc.h> // Boehm GC
 #include <cstring>
+#include <QtCore/qbytearray.h>
+#include <QtCore/qstring.h>
 
 #include "bindgen_helper.hpp"
 

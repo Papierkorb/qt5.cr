@@ -37,14 +37,42 @@
  * only then do changes.  Otherwise a bindgen update may override your changes.*
  ******************************************************************************/
 
-#include <gc/gc.h> // Boehm GC
-#include <cstring>
+#ifndef BINDGEN_HELPER_HPP
+#define BINDGEN_HELPER_HPP
 
-// Helper structure to transfer a `String` between C++ and Crystal.
-struct CrystalString {
-  char *ptr;
+#include <gc/gc.h> // Boehm GC
+#include <string.h>
+#include <stdlib.h> // abort()
+#include <stdio.h> // fprintf()
+
+// Helper structure to transfer a `String` between C/C++ and Crystal.
+typedef struct CrystalString { // C compatibility
+  const char *ptr;
   int size;
-};
+} CrystalString;
+
+// Compiler branching hint
+#define bindgen_likely(x) __builtin_expect(!!(x), 1)
+
+static __attribute__((noreturn)) void bindgen_fatal_panic(const char *message) {
+  fprintf(stderr, "Fatal error in bindings: %s\n", message);
+  abort();
+}
+
+#ifdef __cplusplus
+#include <gc/gc_cpp.h>
+#include <string>
+
+// Break C++'s encapsulation to allow easy wrapping of protected methods.
+#define protected public
+
+static CrystalString bindgen_stdstring_to_crystal(const std::string &str) {
+  return CrystalString{ str.data(), static_cast<int>(str.size()) };
+}
+
+static std::string bindgen_crystal_to_stdstring(CrystalString str) {
+  return std::string(str.ptr, str.size);
+}
 
 /* Wrapper for a Crystal `Proc`. */
 template<typename T, typename ... Args>
@@ -75,3 +103,6 @@ struct CrystalProc {
     }
   }
 };
+
+#endif // __cplusplus
+#endif // BINDGEN_HELPER_HPP
