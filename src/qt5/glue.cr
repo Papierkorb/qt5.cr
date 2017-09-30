@@ -1,8 +1,4 @@
 module Qt
-  lib Binding
-    alias QMetaObjectConnection = Void
-  end
-
   # Converters used to turn binding-types into crystal-types.
   module Converter
     module QString

@@ -11,9 +11,35 @@
 
 module: Qt
 
+processors:
+  # Graph-refining processors:
+  - inheritance
+  - filter_methods # Throw out filtered methods
+  - default_constructor # Create default constructors where possible
+  - copy_structs # Copy structures as marked
+  - macros # Support for macro mapping
+  - instantiate_containers # Actually instantiate containers
+  - qt # Qt specifics
+  # Preliminary generation processors:
+  - crystal_wrapper # Create Crystal wrappers
+  - virtual_override # Allow overriding C++ virtual methods
+  - cpp_wrapper # Create C++ <-> C wrappers
+  - crystal_binding # Create `lib` bindings for the C wrapper
+  - sanity_check # Shows issues, if any
+
+generators:
+  cpp:
+    output: ext/qt_binding.cpp
+    preamble: |-
+      #include "converters.hpp"
+    build: make
+  crystal:
+    output: src/qt5/binding.cr
+
 library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 classes:
   QObject: Object
+  QTimer: Timer
   "QMetaObject::Connection": SignalConnection
   QAbstractEventDispatcher: AbstractEventDispatcher
   QAbstractEventDispatcher::TimerInfo: EventDispatcherTimerInfo
@@ -34,6 +60,7 @@ classes:
   QAbstractSpinBox: AbstractSpinBox
   QSpinBox: SpinBox
   QDoubleSpinBox: DoubleSpinBox
+  QDateTimeEdit: DateTimeEdit
   QMenuBar: MenuBar
   QMenu: Menu
   QAction: Action
@@ -76,6 +103,7 @@ classes:
   QTextEdit: TextEdit
   QFileDialog: FileDialog
   QTextOption: TextOption
+  # "QTextOption::Tab": TextOptionTab
   QTextDocument: TextDocument
   QTextCursor: TextCursor
   QDir: Dir
@@ -147,6 +175,8 @@ classes:
   QSizePolicy: SizePolicy
   QUrl: Url
   QScreen: Screen
+  QSurface: Surface
+  QWindow: Window
   QPixelFormat: PixelFormat
   QTextFormat: TextFormat
   QTextBlockFormat: TextBlockFormat
@@ -206,6 +236,8 @@ enums:
   "QPalette::ColorGroup": Palette::ColorGroup
   "QPalette::ColorRole": Palette::ColorRole
   "QWidget::RenderFlags": Widget::RenderFlags
+  "QOpenGLWidget::UpdateBehavior": OpenGLWidget::UpdateBehavior
+  "QOpenGLContext::OpenGLModuleType": OpenGLContext::OpenGLModuleType
   "QProgressBar::Direction": ProgressBar::Direction
   "QToolButton::ToolButtonPopupMode": ToolButton::ToolButtonPopupMode
   "QFrame::Shape": Frame::Shape
@@ -277,6 +309,8 @@ enums:
   "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
   "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
   "QAbstractSpinBox::StepEnabledFlag": AbstractSpinBox::StepEnabledFlag
+  "QDateTimeEdit::Sections": DateTimeEdit::Sections
+  "QDateTimeEdit::Section": DateTimeEdit::Section
   "QLineEdit::ActionPosition": LineEdit::ActionPosition
   "QLineEdit::EchoMode": LineEdit::EchoMode
   "QTextEdit::AutoFormatting": TextEdit::AutoFormatting
@@ -296,6 +330,10 @@ enums:
   # "QUrl::FormattingOptions": This one is actually a `QUrlTwoFlags`.  Manually implemented.
   "QUrl::UserInputResolutionOption": Url::UserInputResolutionOption
   "QUrl::UserInputResolutionOptions": Url::UserInputResolutionOptions
+  "QSurface::SurfaceClass": Surface::SurfaceClass
+  "QSurface::SurfaceType": Surface::SurfaceType
+  "QWindow::AncestorMode": Window::AncestorMode
+  "QWindow::Visibility": Window::Visibility
   "QDir::Filters": Dir::Filters
   "QTextOption::Flags": TextOption::Flags
   "QTextOption::WrapMode": TextOption::WrapMode
@@ -368,6 +406,7 @@ types: # Type rewrite rules
     to_cpp: "QString::fromUtf8(%.ptr, %.size)"
     from_cpp: "qstring_to_crystal(%)"
     kind: Struct
+    builtin: true
     pass_by: Value
     wrapper_pass_by: Value
   QChar: # Map as Crystal Char
@@ -426,6 +465,7 @@ types: # Type rewrite rules
     generate_binding: false
     generate_wrapper: false
     pass_by: Value
+    builtin: true
     to_cpp: "std::chrono::milliseconds(%)"
     from_cpp: "(%.count())"
     converter: Qt::Converter::TimeSpan
@@ -433,37 +473,12 @@ types: # Type rewrite rules
     crystal_type: Url::FormattingOptions
     binding_type: Url::FormattingOptions
     kind: Enum
+    builtin: true # We provide this type
 
   # Don't sub-class these
   QImage: { sub_class: false }
   QPixmap: { sub_class: false }
   QIcon: { sub_class: false }
-
-  # `Q_GADGET`s add fake methods we can't wrap.
-  QKeySequence:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QFont:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QTextFormat:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QEvent:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QStandardPaths:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QSizePolicy:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QPainter:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
-  QPalette:
-    ignore_methods:
-      - qt_check_for_QGADGET_macro
 
   # TODO: Some kind of platform-matching.  That'll be fun.
   WId: { ignore: true }
@@ -551,30 +566,22 @@ containers:
       - [ "QTextLength" ]
       - [ "QTextFormat" ]
 
-output:
-  cpp: ext/qt_binding.cpp
-  crystal: src/qt5/binding.cr
-  cpp_preamble: |-
-    #include <gc/gc_cpp.h>
-    #include "converters.hpp"
-  cpp_build: make
+macros:
+  "QT_VERSION_STR":
+    map_as: Constant
+    destination: "::"
 
 parser: # Clang parser configuration
-  # binary: path/to/clang/bindgen
-  flags:
-    - -x
-    - c++
-    - -std=c++11
+  flags: [ "-x", "c++", "-std=c++11" ]
   files:
     - QtCore/QtCore
     - QtGui/QtGui
     - QtWidgets/QtWidgets
   includes:
-    - /usr/include/qt/
-    - /usr/include/qt/QtCore/
-    - /usr/include/qt/QtGui/
-    - /usr/include/qt/QtWidgets/
-    - /usr/lib/clang/4.0.1/include/
+    - "{QTDIR|/usr/include/qt}/"
+    - "{QTDIR|/usr/include/qt}/QtCore/"
+    - "{QTDIR|/usr/include/qt}/QtGui/"
+    - "{QTDIR|/usr/include/qt}/QtWidgets/"
   defines:
     - __STDC_CONSTANT_MACROS
     - __STDC_LIMIT_MACROS
