@@ -16,6 +16,7 @@ library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 <<: config/classes.yml
 <<: config/enums.yml
 <<: config/macros.yml
+<<: config/functions.yml
 <<: config/containers.yml
 <<: config/types.yml
 
