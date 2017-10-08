@@ -81,18 +81,15 @@ types: # Type rewrite rules
   QPixmap: { sub_class: false }
   QIcon: { sub_class: false }
 
-  # TODO: Some kind of platform-matching.  That'll be fun.
-  WId: { ignore: true }
-  QVariant: { ignore: true }
-
-
   # Typedefs
   QRgb: { alias_for: "unsigned int" }
+  WId: { alias_for: "unsigned int" }
 
   # Structures with QVariant: Ignore for now.
   QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
   "QInputMethodEvent::Attribute": { ignore: true }
   "QList<QInputMethodEvent::Attribute>": { ignore: true }
+  QVariant: { ignore: true }
 
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
