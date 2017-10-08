@@ -1,0 +1,4 @@
+macros:
+  "QT_VERSION(?:.*)":
+    map_as: Constant
+    destination: "::"

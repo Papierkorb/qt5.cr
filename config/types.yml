@@ -1,0 +1,121 @@
+types: # Type rewrite rules
+  QString: # Convert QString instances using that:
+    converter: Qt::Converter::QString
+    crystal_type: String
+    cpp_type: CrystalString
+    binding_type: CrystalString
+    to_cpp: "QString::fromUtf8(%.ptr, %.size)"
+    from_cpp: "qstring_to_crystal(%)"
+    kind: Struct
+    builtin: true
+    pass_by: Value
+    wrapper_pass_by: Value
+  QChar: # Map as Crystal Char
+    cpp_type: int32_t
+    binding_type: Int32
+    builtin: true
+    crystal_type: Char
+    to_cpp: "QChar(%)"
+    from_cpp: "static_cast<int32_t>(%.unicode())"
+    to_crystal: "(%.chr)"
+    from_crystal: "(%.ord)"
+    kind: Struct
+    pass_by: Value
+  "QMetaObject::Connection":
+    crystal_type: SignalConnection
+    cpp_type: "QMetaObject::Connection"
+    binding_type: QMetaObjectConnection
+  QSessionManager:
+    pass_by: Reference
+    from_cpp: "(%)"
+  QPoint: # Manual implementation with a structure copy.
+    copy_structure: true
+    binding_type: QPoint
+    generate_binding: false # Wrap this one manually
+    generate_wrapper: false
+    # As we're not generating a wrapper, it won't set the `crystal_type` by
+    # itself.
+    crystal_type: Point
+    pass_by: Value
+  QPointF:
+    copy_structure: true
+    binding_type: QPointF
+    generate_binding: false
+    generate_wrapper: false
+    crystal_type: PointF
+    pass_by: Value
+  "QPainter::PixmapFragment":
+    ignore: true
+    # copy_structure: true
+    # binding_type: QPainterPixmapFragment
+    # generate_binding: false
+    # generate_wrapper: false
+    # crystal_type: PainterPixmapFragment
+    # pass_by: Pointer
+  "QAbstractEventDispatcher::TimerInfo":
+    binding_type: EventDispatcherTimerInfo
+    generate_binding: false
+    generate_wrapper: false
+    copy_structure: true
+    pass_by: Value
+    kind: Struct
+  "std::chrono::milliseconds":
+    cpp_type: int64_t
+    binding_type: Int64
+    crystal_type: Time::Span
+    generate_binding: false
+    generate_wrapper: false
+    pass_by: Value
+    builtin: true
+    to_cpp: "std::chrono::milliseconds(%)"
+    from_cpp: "(%.count())"
+    converter: Qt::Converter::TimeSpan
+  "QUrl::FormattingOptions":
+    crystal_type: Url::FormattingOptions
+    binding_type: Url::FormattingOptions
+    kind: Enum
+    builtin: true # We provide this type
+
+  # Don't sub-class these
+  QImage: { sub_class: false }
+  QPixmap: { sub_class: false }
+  QIcon: { sub_class: false }
+
+  # Typedefs
+  QRgb: { alias_for: "unsigned int" }
+  WId: { alias_for: "unsigned int" }
+
+  # Structures with QVariant: Ignore for now.
+  QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
+  "QInputMethodEvent::Attribute": { ignore: true }
+  "QList<QInputMethodEvent::Attribute>": { ignore: true }
+  QVariant: { ignore: true }
+
+  "QList<QTextEdit::ExtraSelection>": { ignore: true }
+  "QList<QTextOption::Tab>": { ignore: true }
+  "QTextOption::Tab": { ignore: true }
+
+  # No support for associative containers yet
+  "QMap<int, QVariant>": { ignore: true }
+
+  # Ignore private data structures
+  QKeySequencePrivate: { ignore: true }
+  QUrlPrivate: { ignore: true }
+  QImageData: { ignore: true }
+  QIconPrivate: { ignore: true }
+  "QPixmap::DataPtr": { ignore: true }
+  "QBrush::DataPtr": { ignore: true }
+
+  # Waiting for a reasonable pass-through implementation of QByteArray
+  "QList<QByteArray>": { ignore: true }
+  "QSet<QByteArray>": { ignore: true }
+
+  # Ignore pure template types
+  "QList<T>": { ignore: true }
+  "Func1": { ignore: true } # Fake types used in QObject::connect().
+  "Func2": { ignore: true }
+  "QtPrivate::FunctionPointer<Func1>::Object": { ignore: true }
+  "QtPrivate::FunctionPointer<Func2>::Object": { ignore: true }
+  "T": { ignore: true }
+  "void ()": { ignore: true }
+  "void (void *)": { ignore: true }

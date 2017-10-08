@@ -1,0 +1,9 @@
+containers:
+  - class: QList
+    type: Sequential
+    instantiations:
+      - [ "qreal" ]
+  - class: QVector
+    type: Sequential
+    instantiations:
+      - [ "QRgb" ]
