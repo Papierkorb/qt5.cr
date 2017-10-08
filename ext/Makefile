@@ -1,4 +1,4 @@
-CXXFLAGS := -fPIC -fno-rtti -I/usr/include/qt -I.
+CXXFLAGS := -Wall -Werror -Wno-unused-function -fPIC -fno-rtti -I/usr/include/qt -I.
 CPPFILES := qt_binding.cpp
 OBJFILES := $(CPPFILES:.cpp=.o)
 
