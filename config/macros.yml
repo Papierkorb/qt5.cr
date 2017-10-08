@@ -1,4 +1,4 @@
 macros:
-  "QT_VERSION_(?:STR|MAJOR|MINOR|PATCH)":
+  "QT_VERSION(?:.*)":
     map_as: Constant
     destination: "::"
