@@ -94,6 +94,7 @@ module Qt
     alias QMetaObject = Void
     alias QEvent = Void
     alias QThread = Void
+    alias QObjectList = Void
     alias QMetaObjectConnection = Void
     alias QMetaMethod = Void
     alias QObjectUserData = Void
@@ -171,6 +172,7 @@ module Qt
     alias QScrollBar = Void
     alias QSlider = Void
     alias QAbstractScrollArea = Void
+    alias QWidgetList = Void
     alias QAbstractScrollAreaPrivate = Void
     alias QScrollArea = Void
     alias QScrollAreaPrivate = Void
@@ -210,6 +212,7 @@ module Qt
     alias QGroupBox = Void
     alias QStyleOptionGroupBox = Void
     alias QCoreApplication = Void
+    alias QStringList = Void
     alias QTranslator = Void
     alias QPostEventList = Void
     alias QCoreApplicationPrivate = Void
@@ -373,6 +376,7 @@ module Qt
     alias QWindowPrivate = Void
     alias QTextLength = Void
     alias QTextTableCellFormat = Void
+    alias QFileInfo = Void
     struct QPoint
       xp : Int32
       yp : Int32
@@ -2394,9 +2398,13 @@ module Qt
     fun bg_QObject_metaObject_(_self_ : QObject*) : QMetaObject*
     fun bg_QObject_qt_metacast_const_char_X(_self_ : QObject*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QObject_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QObject*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QObject_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QObject_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QObject_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QObject_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QObject_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QObject_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QObject_CONSTRUCT_QObject_X(parent : QObject*) : QObject*
+    fun bg_QObject__CONSTRUCT_QObject_X(parent : QObject*) : QObject*
     fun bg_QObject_event_QEvent_X(_self_ : QObject*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QObject*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_objectName_(_self_ : QObject*) : CrystalString
@@ -2410,7 +2418,7 @@ module Qt
     fun bg_QObject_startTimer_int_Qt__TimerType(_self_ : QObject*, interval : Int32, timer_type : TimerType) : Int32
     fun bg_QObject_startTimer_std__chrono__milliseconds_Qt__TimerType(_self_ : QObject*, time : Int64, timer_type : TimerType) : Int32
     fun bg_QObject_killTimer_int(_self_ : QObject*, id : Int32) : Void
-    fun bg_QObject_children_(_self_ : QObject*) : Void*
+    fun bg_QObject_children_(_self_ : QObject*) : QObjectList*
     fun bg_QObject_setParent_QObject_X(_self_ : QObject*, parent : QObject*) : Void
     fun bg_QObject_installEventFilter_QObject_X(_self_ : QObject*, filter_obj : QObject*) : Void
     fun bg_QObject_removeEventFilter_QObject_X(_self_ : QObject*, obj : QObject*) : Void
@@ -2419,7 +2427,11 @@ module Qt
     fun bg_QObject_connect_const_QObject_X_const_char_X_const_char_X_Qt__ConnectionType(_self_ : QObject*, sender : QObject*, signal : UInt8*, member : UInt8*, type : ConnectionType) : QMetaObjectConnection*
     fun bg_QObject_disconnect_STATIC_const_QObject_X_const_char_X_const_QObject_X_const_char_X(sender : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*) : Bool
     fun bg_QObject_disconnect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender : QObject*, signal : QMetaMethod*, receiver : QObject*, member : QMetaMethod*) : Bool
+    fun bg_QObject_disconnect_(_self_ : QObject*) : Bool
+    fun bg_QObject_disconnect_const_char_X(_self_ : QObject*, signal : UInt8*) : Bool
+    fun bg_QObject_disconnect_const_char_X_const_QObject_X(_self_ : QObject*, signal : UInt8*, receiver : QObject*) : Bool
     fun bg_QObject_disconnect_const_char_X_const_QObject_X_const_char_X(_self_ : QObject*, signal : UInt8*, receiver : QObject*, member : UInt8*) : Bool
+    fun bg_QObject_disconnect_const_QObject_X(_self_ : QObject*, receiver : QObject*) : Bool
     fun bg_QObject_disconnect_const_QObject_X_const_char_X(_self_ : QObject*, receiver : QObject*, member : UInt8*) : Bool
     fun bg_QObject_disconnect_STATIC_const_QMetaObject__Connection_R(unnamed_arg_0 : QMetaObjectConnection*) : Bool
     fun bg_QObject_dumpObjectTree_(_self_ : QObject*) : Void
@@ -2440,16 +2452,20 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QObject*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QObject*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QObject*, signal : QMetaMethod*) : Void
-    fun bg_QObject_CONSTRUCT_QObjectPrivate_R_QObject_X(dd : QObjectPrivate*, parent : QObject*) : QObject*
+    fun bg_QObject__CONSTRUCT_QObjectPrivate_R_QObject_X(dd : QObjectPrivate*, parent : QObject*) : QObject*
     fun bg_QObject_CONNECT_destroyed_CrystalProc_void_QObject_X(_self_ : QObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QObject_CONNECT_objectNameChanged_CrystalProc_void_const_QString_R(_self_ : QObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object(_self_ : QObject*, table : Binding::BgJumptable_Object*) : Void
+    fun bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object_R(_self_ : QObject*, table : Binding::BgJumptable_Object*) : Void
     fun bg_QTimer_metaObject_(_self_ : QTimer*) : QMetaObject*
     fun bg_QTimer_qt_metacast_const_char_X(_self_ : QTimer*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QTimer_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QTimer*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QTimer_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTimer_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTimer_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QTimer_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTimer_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTimer_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTimer_CONSTRUCT_QObject_X(parent : QObject*) : QTimer*
+    fun bg_QTimer__CONSTRUCT_QObject_X(parent : QObject*) : QTimer*
     fun bg_QTimer_isActive_(_self_ : QTimer*) : Bool
     fun bg_QTimer_timerId_(_self_ : QTimer*) : Int32
     fun bg_QTimer_setInterval_int(_self_ : QTimer*, msec : Int32) : Void
@@ -2478,14 +2494,18 @@ module Qt
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QTimer*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QTimer*, signal : QMetaMethod*) : Void
     fun bg_QTimer_CONNECT_timeout_CrystalProc_void(_self_ : QTimer*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Timer_JUMPTABLE_BgJumptable_Timer(_self_ : QTimer*, table : Binding::BgJumptable_Timer*) : Void
-    fun bg_QMetaObject__Connection_CONSTRUCT_() : QMetaObjectConnection*
+    fun bg_BgInherit_Timer_JUMPTABLE_BgJumptable_Timer_R(_self_ : QTimer*, table : Binding::BgJumptable_Timer*) : Void
+    fun bg_QMetaObject__Connection__CONSTRUCT_() : QMetaObjectConnection*
     fun bg_QAbstractEventDispatcher_metaObject_(_self_ : QAbstractEventDispatcher*) : QMetaObject*
     fun bg_QAbstractEventDispatcher_qt_metacast_const_char_X(_self_ : QAbstractEventDispatcher*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractEventDispatcher_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAbstractEventDispatcher*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractEventDispatcher_CONSTRUCT_QObject_X(parent : QObject*) : QAbstractEventDispatcher*
+    fun bg_QAbstractEventDispatcher__CONSTRUCT_QObject_X(parent : QObject*) : QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_instance_STATIC_QThread_X(thread : QThread*) : QAbstractEventDispatcher*
     fun bg_QAbstractEventDispatcher_processEvents_QEventLoop__ProcessEventsFlags(_self_ : QAbstractEventDispatcher*, flags : EventLoop::ProcessEventsFlags) : Bool
     fun bg_QAbstractEventDispatcher_hasPendingEvents_(_self_ : QAbstractEventDispatcher*) : Bool
@@ -2507,7 +2527,7 @@ module Qt
     fun bg_QAbstractEventDispatcher_filterNativeEvent_const_QByteArray_R_void_X_long_X(_self_ : QAbstractEventDispatcher*, event_type : QByteArray*, message : Void*, result : Int64*) : Bool
     fun bg_QAbstractEventDispatcher_aboutToBlock_(_self_ : QAbstractEventDispatcher*) : Void
     fun bg_QAbstractEventDispatcher_awake_(_self_ : QAbstractEventDispatcher*) : Void
-    fun bg_QAbstractEventDispatcher_CONSTRUCT_QAbstractEventDispatcherPrivate_R_QObject_X(unnamed_arg_0 : QAbstractEventDispatcherPrivate*, parent : QObject*) : QAbstractEventDispatcher*
+    fun bg_QAbstractEventDispatcher__CONSTRUCT_QAbstractEventDispatcherPrivate_R_QObject_X(unnamed_arg_0 : QAbstractEventDispatcherPrivate*, parent : QObject*) : QAbstractEventDispatcher*
     fun bg_QObject_event_QEvent_X(_self_ : QAbstractEventDispatcher*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QAbstractEventDispatcher*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QAbstractEventDispatcher*, event : QTimerEvent*) : Void
@@ -2517,13 +2537,17 @@ module Qt
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QAbstractEventDispatcher*, signal : QMetaMethod*) : Void
     fun bg_QAbstractEventDispatcher_CONNECT_aboutToBlock_CrystalProc_void(_self_ : QAbstractEventDispatcher*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractEventDispatcher_CONNECT_awake_CrystalProc_void(_self_ : QAbstractEventDispatcher*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher(_self_ : QAbstractEventDispatcher*, table : Binding::BgJumptable_AbstractEventDispatcher*) : Void
+    fun bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher_R(_self_ : QAbstractEventDispatcher*, table : Binding::BgJumptable_AbstractEventDispatcher*) : Void
     fun bg_QSocketNotifier_metaObject_(_self_ : QSocketNotifier*) : QMetaObject*
     fun bg_QSocketNotifier_qt_metacast_const_char_X(_self_ : QSocketNotifier*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QSocketNotifier_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QSocketNotifier*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QSocketNotifier_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSocketNotifier_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSocketNotifier_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QSocketNotifier_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSocketNotifier_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSocketNotifier_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QSocketNotifier_CONSTRUCT_qintptr_QSocketNotifier__Type_QObject_X(socket : Int64, unnamed_arg_1 : SocketNotifier::Type, parent : QObject*) : QSocketNotifier*
+    fun bg_QSocketNotifier__CONSTRUCT_qintptr_QSocketNotifier__Type_QObject_X(socket : Int64, unnamed_arg_1 : SocketNotifier::Type, parent : QObject*) : QSocketNotifier*
     fun bg_QSocketNotifier_socket_(_self_ : QSocketNotifier*) : Int64
     fun bg_QSocketNotifier_type_(_self_ : QSocketNotifier*) : SocketNotifier::Type
     fun bg_QSocketNotifier_isEnabled_(_self_ : QSocketNotifier*) : Bool
@@ -2536,7 +2560,7 @@ module Qt
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QSocketNotifier*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QSocketNotifier*, signal : QMetaMethod*) : Void
     fun bg_QSocketNotifier_CONNECT_activated_CrystalProc_void_int(_self_ : QSocketNotifier*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_SocketNotifier_JUMPTABLE_BgJumptable_SocketNotifier(_self_ : QSocketNotifier*, table : Binding::BgJumptable_SocketNotifier*) : Void
+    fun bg_BgInherit_SocketNotifier_JUMPTABLE_BgJumptable_SocketNotifier_R(_self_ : QSocketNotifier*, table : Binding::BgJumptable_SocketNotifier*) : Void
     fun bg_QPaintDevice_devType_(_self_ : QPaintDevice*) : Int32
     fun bg_QPaintDevice_paintingActive_(_self_ : QPaintDevice*) : Bool
     fun bg_QPaintDevice_paintEngine_(_self_ : QPaintDevice*) : QPaintEngine*
@@ -2553,20 +2577,27 @@ module Qt
     fun bg_QPaintDevice_colorCount_(_self_ : QPaintDevice*) : Int32
     fun bg_QPaintDevice_depth_(_self_ : QPaintDevice*) : Int32
     fun bg_QPaintDevice_devicePixelRatioFScale_STATIC_() : Float64
-    fun bg_QPaintDevice_CONSTRUCT_() : QPaintDevice*
+    fun bg_QPaintDevice__CONSTRUCT_() : QPaintDevice*
     fun bg_QPaintDevice_metric_QPaintDevice__PaintDeviceMetric(_self_ : QPaintDevice*, metric : PaintDevice::PaintDeviceMetric) : Int32
     fun bg_QPaintDevice_initPainter_QPainter_X(_self_ : QPaintDevice*, painter : QPainter*) : Void
     fun bg_QPaintDevice_sharedPainter_(_self_ : QPaintDevice*) : QPainter*
-    fun bg_BgInherit_PaintDevice_JUMPTABLE_BgJumptable_PaintDevice(_self_ : QPaintDevice*, table : Binding::BgJumptable_PaintDevice*) : Void
+    fun bg_BgInherit_PaintDevice_JUMPTABLE_BgJumptable_PaintDevice_R(_self_ : QPaintDevice*, table : Binding::BgJumptable_PaintDevice*) : Void
     fun bg_QWidget_metaObject_(_self_ : QWidget*) : QMetaObject*
     fun bg_QWidget_qt_metacast_const_char_X(_self_ : QWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QWidget_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QWidget*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QWidget_CONSTRUCT_QWidget_X(parent : QWidget*) : QWidget*
-    fun bg_QWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QWidget*
+    fun bg_QWidget__CONSTRUCT_QWidget_X(parent : QWidget*) : QWidget*
+    fun bg_QWidget__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QWidget*
     fun bg_QWidget_devType_(_self_ : QWidget*) : Int32
+    fun bg_QWidget_winId_(_self_ : QWidget*) : UInt32
     fun bg_QWidget_createWinId_(_self_ : QWidget*) : Void
+    fun bg_QWidget_internalWinId_(_self_ : QWidget*) : UInt32
+    fun bg_QWidget_effectiveWinId_(_self_ : QWidget*) : UInt32
     fun bg_QWidget_style_(_self_ : QWidget*) : QStyle*
     fun bg_QWidget_setStyle_QStyle_X(_self_ : QWidget*, unnamed_arg_0 : QStyle*) : Void
     fun bg_QWidget_isTopLevel_(_self_ : QWidget*) : Bool
@@ -2800,6 +2831,7 @@ module Qt
     fun bg_QWidget_setWindowFlag_Qt__WindowType_bool(_self_ : QWidget*, unnamed_arg_0 : WindowType, on : Bool) : Void
     fun bg_QWidget_overrideWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowType_(_self_ : QWidget*) : WindowType
+    fun bg_QWidget_find_STATIC_WId(unnamed_arg_0 : UInt32) : QWidget*
     fun bg_QWidget_childAt_int_int(_self_ : QWidget*, x : Int32, y : Int32) : QWidget*
     fun bg_QWidget_childAt_const_QPoint_R(_self_ : QWidget*, p : QPoint) : QWidget*
     fun bg_QWidget_setAttribute_Qt__WidgetAttribute_bool(_self_ : QWidget*, unnamed_arg_0 : WidgetAttribute, on : Bool) : Void
@@ -2851,11 +2883,12 @@ module Qt
     fun bg_QWidget_inputMethodHints_(_self_ : QWidget*) : InputMethodHints
     fun bg_QWidget_setInputMethodHints_Qt__InputMethodHints(_self_ : QWidget*, hints : InputMethodHints) : Void
     fun bg_QWidget_updateMicroFocus_(_self_ : QWidget*) : Void
+    fun bg_QWidget_create_WId_bool_bool(_self_ : QWidget*, unnamed_arg_0 : UInt32, initialize_window : Bool, destroy_old_window : Bool) : Void
     fun bg_QWidget_destroy_bool_bool(_self_ : QWidget*, destroy_window : Bool, destroy_sub_windows : Bool) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QWidget*, next_ : Bool) : Bool
     fun bg_QWidget_focusNextChild_(_self_ : QWidget*) : Bool
     fun bg_QWidget_focusPreviousChild_(_self_ : QWidget*) : Bool
-    fun bg_QWidget_CONSTRUCT_QWidgetPrivate_R_QWidget_X_Qt__WindowFlags(d : QWidgetPrivate*, parent : QWidget*, f : WindowFlags) : QWidget*
+    fun bg_QWidget__CONSTRUCT_QWidgetPrivate_R_QWidget_X_Qt__WindowFlags(d : QWidgetPrivate*, parent : QWidget*, f : WindowFlags) : QWidget*
     fun bg_QWidget_AS_PaintDevice_(_self_ : QWidget*) : QPaintDevice*
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QWidget*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QWidget*, event : QTimerEvent*) : Void
@@ -2867,13 +2900,17 @@ module Qt
     fun bg_QWidget_CONNECT_windowIconChanged_CrystalProc_void_const_QIcon_R(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWidget_CONNECT_windowIconTextChanged_CrystalProc_void_const_QString_R(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWidget_CONNECT_customContextMenuRequested_CrystalProc_void_const_QPoint_R(_self_ : QWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget(_self_ : QWidget*, table : Binding::BgJumptable_Widget*) : Void
+    fun bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget_R(_self_ : QWidget*, table : Binding::BgJumptable_Widget*) : Void
     fun bg_QAbstractButton_metaObject_(_self_ : QAbstractButton*) : QMetaObject*
     fun bg_QAbstractButton_qt_metacast_const_char_X(_self_ : QAbstractButton*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractButton_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAbstractButton*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAbstractButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAbstractButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractButton*
+    fun bg_QAbstractButton__CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractButton*
     fun bg_QAbstractButton_setText_const_QString_R(_self_ : QAbstractButton*, text : CrystalString) : Void
     fun bg_QAbstractButton_text_(_self_ : QAbstractButton*) : CrystalString
     fun bg_QAbstractButton_setIcon_const_QIcon_R(_self_ : QAbstractButton*, icon : QIcon*) : Void
@@ -2918,7 +2955,7 @@ module Qt
     fun bg_QAbstractButton_focusOutEvent_QFocusEvent_X(_self_ : QAbstractButton*, e : QFocusEvent*) : Void
     fun bg_QAbstractButton_changeEvent_QEvent_X(_self_ : QAbstractButton*, e : QEvent*) : Void
     fun bg_QAbstractButton_timerEvent_QTimerEvent_X(_self_ : QAbstractButton*, e : QTimerEvent*) : Void
-    fun bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd : QAbstractButtonPrivate*, parent : QWidget*) : QAbstractButton*
+    fun bg_QAbstractButton__CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd : QAbstractButtonPrivate*, parent : QWidget*) : QAbstractButton*
     fun bg_QWidget_devType_(_self_ : QAbstractButton*) : Int32
     fun bg_QWidget_setVisible_bool(_self_ : QAbstractButton*, visible : Bool) : Void
     fun bg_QWidget_sizeHint_(_self_ : QAbstractButton*) : QSize*
@@ -2952,13 +2989,17 @@ module Qt
     fun bg_QAbstractButton_CONNECT_released_CrystalProc_void(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_CONNECT_clicked_CrystalProc_void_bool(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractButton_CONNECT_toggled_CrystalProc_void_bool(_self_ : QAbstractButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton(_self_ : QAbstractButton*, table : Binding::BgJumptable_AbstractButton*) : Void
+    fun bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton_R(_self_ : QAbstractButton*, table : Binding::BgJumptable_AbstractButton*) : Void
     fun bg_QToolButton_metaObject_(_self_ : QToolButton*) : QMetaObject*
     fun bg_QToolButton_qt_metacast_const_char_X(_self_ : QToolButton*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QToolButton_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QToolButton*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QToolButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QToolButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QToolButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QToolButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QToolButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QToolButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QToolButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QToolButton*
+    fun bg_QToolButton__CONSTRUCT_QWidget_X(parent : QWidget*) : QToolButton*
     fun bg_QToolButton_sizeHint_(_self_ : QToolButton*) : QSize*
     fun bg_QToolButton_minimumSizeHint_(_self_ : QToolButton*) : QSize*
     fun bg_QToolButton_toolButtonStyle_(_self_ : QToolButton*) : ToolButtonStyle
@@ -2994,14 +3035,18 @@ module Qt
     fun bg_QAbstractButton_focusInEvent_QFocusEvent_X(_self_ : QToolButton*, e : QFocusEvent*) : Void
     fun bg_QAbstractButton_focusOutEvent_QFocusEvent_X(_self_ : QToolButton*, e : QFocusEvent*) : Void
     fun bg_QToolButton_CONNECT_triggered_CrystalProc_void_QAction_X(_self_ : QToolButton*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_ToolButton_JUMPTABLE_BgJumptable_ToolButton(_self_ : QToolButton*, table : Binding::BgJumptable_ToolButton*) : Void
+    fun bg_BgInherit_ToolButton_JUMPTABLE_BgJumptable_ToolButton_R(_self_ : QToolButton*, table : Binding::BgJumptable_ToolButton*) : Void
     fun bg_QToolBar_metaObject_(_self_ : QToolBar*) : QMetaObject*
     fun bg_QToolBar_qt_metacast_const_char_X(_self_ : QToolBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QToolBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QToolBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QToolBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QToolBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QToolBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QToolBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QToolBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QToolBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QToolBar_CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QToolBar*
-    fun bg_QToolBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QToolBar*
+    fun bg_QToolBar__CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QToolBar*
+    fun bg_QToolBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QToolBar*
     fun bg_QToolBar_setMovable_bool(_self_ : QToolBar*, movable : Bool) : Void
     fun bg_QToolBar_isMovable_(_self_ : QToolBar*) : Bool
     fun bg_QToolBar_setAllowedAreas_Qt__ToolBarAreas(_self_ : QToolBar*, areas : ToolBarAreas) : Void
@@ -3086,14 +3131,18 @@ module Qt
     fun bg_QToolBar_CONNECT_toolButtonStyleChanged_CrystalProc_void_Qt__ToolButtonStyle(_self_ : QToolBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QToolBar_CONNECT_topLevelChanged_CrystalProc_void_bool(_self_ : QToolBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QToolBar_CONNECT_visibilityChanged_CrystalProc_void_bool(_self_ : QToolBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar(_self_ : QToolBar*, table : Binding::BgJumptable_ToolBar*) : Void
+    fun bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar_R(_self_ : QToolBar*, table : Binding::BgJumptable_ToolBar*) : Void
     fun bg_QFrame_metaObject_(_self_ : QFrame*) : QMetaObject*
     fun bg_QFrame_qt_metacast_const_char_X(_self_ : QFrame*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QFrame_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QFrame*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QFrame_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QFrame_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFrame_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QFrame_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QFrame_CONSTRUCT_QWidget_X(parent : QWidget*) : QFrame*
-    fun bg_QFrame_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFrame*
+    fun bg_QFrame__CONSTRUCT_QWidget_X(parent : QWidget*) : QFrame*
+    fun bg_QFrame__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFrame*
     fun bg_QFrame_frameStyle_(_self_ : QFrame*) : Int32
     fun bg_QFrame_setFrameStyle_int(_self_ : QFrame*, unnamed_arg_0 : Int32) : Void
     fun bg_QFrame_frameWidth_(_self_ : QFrame*) : Int32
@@ -3112,8 +3161,8 @@ module Qt
     fun bg_QFrame_paintEvent_QPaintEvent_X(_self_ : QFrame*, unnamed_arg_0 : QPaintEvent*) : Void
     fun bg_QFrame_changeEvent_QEvent_X(_self_ : QFrame*, unnamed_arg_0 : QEvent*) : Void
     fun bg_QFrame_drawFrame_QPainter_X(_self_ : QFrame*, unnamed_arg_0 : QPainter*) : Void
-    fun bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X(dd : QFramePrivate*, parent : QWidget*) : QFrame*
-    fun bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd : QFramePrivate*, parent : QWidget*, f : WindowFlags) : QFrame*
+    fun bg_QFrame__CONSTRUCT_QFramePrivate_R_QWidget_X(dd : QFramePrivate*, parent : QWidget*) : QFrame*
+    fun bg_QFrame__CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd : QFramePrivate*, parent : QWidget*, f : WindowFlags) : QFrame*
     fun bg_QFrame_initStyleOption_QStyleOptionFrame_X(_self_ : QFrame*, option : QStyleOptionFrame*) : Void
     fun bg_QWidget_devType_(_self_ : QFrame*) : Int32
     fun bg_QWidget_setVisible_bool(_self_ : QFrame*, visible : Bool) : Void
@@ -3150,13 +3199,17 @@ module Qt
     fun bg_QWidget_sharedPainter_(_self_ : QFrame*) : QPainter*
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : QFrame*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QFrame*, next_ : Bool) : Bool
-    fun bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame(_self_ : QFrame*, table : Binding::BgJumptable_Frame*) : Void
+    fun bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame_R(_self_ : QFrame*, table : Binding::BgJumptable_Frame*) : Void
     fun bg_QProgressBar_metaObject_(_self_ : QProgressBar*) : QMetaObject*
     fun bg_QProgressBar_qt_metacast_const_char_X(_self_ : QProgressBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QProgressBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QProgressBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QProgressBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QProgressBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QProgressBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QProgressBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QProgressBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QProgressBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QProgressBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QProgressBar*
+    fun bg_QProgressBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QProgressBar*
     fun bg_QProgressBar_minimum_(_self_ : QProgressBar*) : Int32
     fun bg_QProgressBar_maximum_(_self_ : QProgressBar*) : Int32
     fun bg_QProgressBar_value_(_self_ : QProgressBar*) : Int32
@@ -3221,13 +3274,17 @@ module Qt
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : QProgressBar*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QProgressBar*, next_ : Bool) : Bool
     fun bg_QProgressBar_CONNECT_valueChanged_CrystalProc_void_int(_self_ : QProgressBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_ProgressBar_JUMPTABLE_BgJumptable_ProgressBar(_self_ : QProgressBar*, table : Binding::BgJumptable_ProgressBar*) : Void
+    fun bg_BgInherit_ProgressBar_JUMPTABLE_BgJumptable_ProgressBar_R(_self_ : QProgressBar*, table : Binding::BgJumptable_ProgressBar*) : Void
     fun bg_QAbstractSlider_metaObject_(_self_ : QAbstractSlider*) : QMetaObject*
     fun bg_QAbstractSlider_qt_metacast_const_char_X(_self_ : QAbstractSlider*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractSlider_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAbstractSlider*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAbstractSlider_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractSlider_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractSlider_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAbstractSlider_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractSlider_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractSlider_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractSlider_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractSlider*
+    fun bg_QAbstractSlider__CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractSlider*
     fun bg_QAbstractSlider_orientation_(_self_ : QAbstractSlider*) : Orientation
     fun bg_QAbstractSlider_setMinimum_int(_self_ : QAbstractSlider*, unnamed_arg_0 : Int32) : Void
     fun bg_QAbstractSlider_minimum_(_self_ : QAbstractSlider*) : Int32
@@ -3266,7 +3323,7 @@ module Qt
     fun bg_QAbstractSlider_timerEvent_QTimerEvent_X(_self_ : QAbstractSlider*, unnamed_arg_0 : QTimerEvent*) : Void
     fun bg_QAbstractSlider_wheelEvent_QWheelEvent_X(_self_ : QAbstractSlider*, e : QWheelEvent*) : Void
     fun bg_QAbstractSlider_changeEvent_QEvent_X(_self_ : QAbstractSlider*, e : QEvent*) : Void
-    fun bg_QAbstractSlider_CONSTRUCT_QAbstractSliderPrivate_R_QWidget_X(dd : QAbstractSliderPrivate*, parent : QWidget*) : QAbstractSlider*
+    fun bg_QAbstractSlider__CONSTRUCT_QAbstractSliderPrivate_R_QWidget_X(dd : QAbstractSliderPrivate*, parent : QWidget*) : QAbstractSlider*
     fun bg_QWidget_devType_(_self_ : QAbstractSlider*) : Int32
     fun bg_QWidget_setVisible_bool(_self_ : QAbstractSlider*, visible : Bool) : Void
     fun bg_QWidget_sizeHint_(_self_ : QAbstractSlider*) : QSize*
@@ -3308,13 +3365,17 @@ module Qt
     fun bg_QAbstractSlider_CONNECT_sliderReleased_CrystalProc_void(_self_ : QAbstractSlider*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractSlider_CONNECT_rangeChanged_CrystalProc_void_int_int(_self_ : QAbstractSlider*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAbstractSlider_CONNECT_actionTriggered_CrystalProc_void_int(_self_ : QAbstractSlider*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider(_self_ : QAbstractSlider*, table : Binding::BgJumptable_AbstractSlider*) : Void
+    fun bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider_R(_self_ : QAbstractSlider*, table : Binding::BgJumptable_AbstractSlider*) : Void
     fun bg_QDial_metaObject_(_self_ : QDial*) : QMetaObject*
     fun bg_QDial_qt_metacast_const_char_X(_self_ : QDial*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDial_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDial*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDial_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDial_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDial_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDial_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDial_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDial_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDial_CONSTRUCT_QWidget_X(parent : QWidget*) : QDial*
+    fun bg_QDial__CONSTRUCT_QWidget_X(parent : QWidget*) : QDial*
     fun bg_QDial_wrapping_(_self_ : QDial*) : Bool
     fun bg_QDial_notchSize_(_self_ : QDial*) : Int32
     fun bg_QDial_setNotchTarget_double(_self_ : QDial*, target : Float64) : Void
@@ -3336,14 +3397,18 @@ module Qt
     fun bg_QAbstractSlider_timerEvent_QTimerEvent_X(_self_ : QDial*, unnamed_arg_0 : QTimerEvent*) : Void
     fun bg_QAbstractSlider_wheelEvent_QWheelEvent_X(_self_ : QDial*, e : QWheelEvent*) : Void
     fun bg_QAbstractSlider_changeEvent_QEvent_X(_self_ : QDial*, e : QEvent*) : Void
-    fun bg_BgInherit_Dial_JUMPTABLE_BgJumptable_Dial(_self_ : QDial*, table : Binding::BgJumptable_Dial*) : Void
+    fun bg_BgInherit_Dial_JUMPTABLE_BgJumptable_Dial_R(_self_ : QDial*, table : Binding::BgJumptable_Dial*) : Void
     fun bg_QScrollBar_metaObject_(_self_ : QScrollBar*) : QMetaObject*
     fun bg_QScrollBar_qt_metacast_const_char_X(_self_ : QScrollBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QScrollBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QScrollBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QScrollBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScrollBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QScrollBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScrollBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QScrollBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QScrollBar*
-    fun bg_QScrollBar_CONSTRUCT_Qt__Orientation_QWidget_X(unnamed_arg_0 : Orientation, parent : QWidget*) : QScrollBar*
+    fun bg_QScrollBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QScrollBar*
+    fun bg_QScrollBar__CONSTRUCT_Qt__Orientation_QWidget_X(unnamed_arg_0 : Orientation, parent : QWidget*) : QScrollBar*
     fun bg_QScrollBar_sizeHint_(_self_ : QScrollBar*) : QSize*
     fun bg_QScrollBar_event_QEvent_X(_self_ : QScrollBar*, event : QEvent*) : Bool
     fun bg_QScrollBar_wheelEvent_QWheelEvent_X(_self_ : QScrollBar*, unnamed_arg_0 : QWheelEvent*) : Void
@@ -3358,14 +3423,18 @@ module Qt
     fun bg_QAbstractSlider_keyPressEvent_QKeyEvent_X(_self_ : QScrollBar*, ev : QKeyEvent*) : Void
     fun bg_QAbstractSlider_timerEvent_QTimerEvent_X(_self_ : QScrollBar*, unnamed_arg_0 : QTimerEvent*) : Void
     fun bg_QAbstractSlider_changeEvent_QEvent_X(_self_ : QScrollBar*, e : QEvent*) : Void
-    fun bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar(_self_ : QScrollBar*, table : Binding::BgJumptable_ScrollBar*) : Void
+    fun bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar_R(_self_ : QScrollBar*, table : Binding::BgJumptable_ScrollBar*) : Void
     fun bg_QSlider_metaObject_(_self_ : QSlider*) : QMetaObject*
     fun bg_QSlider_qt_metacast_const_char_X(_self_ : QSlider*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QSlider_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QSlider*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QSlider_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSlider_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSlider_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QSlider_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSlider_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSlider_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QSlider_CONSTRUCT_QWidget_X(parent : QWidget*) : QSlider*
-    fun bg_QSlider_CONSTRUCT_Qt__Orientation_QWidget_X(orientation : Orientation, parent : QWidget*) : QSlider*
+    fun bg_QSlider__CONSTRUCT_QWidget_X(parent : QWidget*) : QSlider*
+    fun bg_QSlider__CONSTRUCT_Qt__Orientation_QWidget_X(orientation : Orientation, parent : QWidget*) : QSlider*
     fun bg_QSlider_sizeHint_(_self_ : QSlider*) : QSize*
     fun bg_QSlider_minimumSizeHint_(_self_ : QSlider*) : QSize*
     fun bg_QSlider_setTickPosition_QSlider__TickPosition(_self_ : QSlider*, position : Slider::TickPosition) : Void
@@ -3383,13 +3452,17 @@ module Qt
     fun bg_QAbstractSlider_timerEvent_QTimerEvent_X(_self_ : QSlider*, unnamed_arg_0 : QTimerEvent*) : Void
     fun bg_QAbstractSlider_wheelEvent_QWheelEvent_X(_self_ : QSlider*, e : QWheelEvent*) : Void
     fun bg_QAbstractSlider_changeEvent_QEvent_X(_self_ : QSlider*, e : QEvent*) : Void
-    fun bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider(_self_ : QSlider*, table : Binding::BgJumptable_Slider*) : Void
+    fun bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider_R(_self_ : QSlider*, table : Binding::BgJumptable_Slider*) : Void
     fun bg_QAbstractScrollArea_metaObject_(_self_ : QAbstractScrollArea*) : QMetaObject*
     fun bg_QAbstractScrollArea_qt_metacast_const_char_X(_self_ : QAbstractScrollArea*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractScrollArea_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAbstractScrollArea*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAbstractScrollArea_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractScrollArea_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractScrollArea*
+    fun bg_QAbstractScrollArea__CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_verticalScrollBarPolicy_(_self_ : QAbstractScrollArea*) : ScrollBarPolicy
     fun bg_QAbstractScrollArea_setVerticalScrollBarPolicy_Qt__ScrollBarPolicy(_self_ : QAbstractScrollArea*, unnamed_arg_0 : ScrollBarPolicy) : Void
     fun bg_QAbstractScrollArea_verticalScrollBar_(_self_ : QAbstractScrollArea*) : QScrollBar*
@@ -3401,7 +3474,7 @@ module Qt
     fun bg_QAbstractScrollArea_cornerWidget_(_self_ : QAbstractScrollArea*) : QWidget*
     fun bg_QAbstractScrollArea_setCornerWidget_QWidget_X(_self_ : QAbstractScrollArea*, widget : QWidget*) : Void
     fun bg_QAbstractScrollArea_addScrollBarWidget_QWidget_X_Qt__Alignment(_self_ : QAbstractScrollArea*, widget : QWidget*, alignment : Alignment) : Void
-    fun bg_QAbstractScrollArea_scrollBarWidgets_Qt__Alignment(_self_ : QAbstractScrollArea*, alignment : Alignment) : Void*
+    fun bg_QAbstractScrollArea_scrollBarWidgets_Qt__Alignment(_self_ : QAbstractScrollArea*, alignment : Alignment) : QWidgetList*
     fun bg_QAbstractScrollArea_viewport_(_self_ : QAbstractScrollArea*) : QWidget*
     fun bg_QAbstractScrollArea_setViewport_QWidget_X(_self_ : QAbstractScrollArea*, widget : QWidget*) : Void
     fun bg_QAbstractScrollArea_maximumViewportSize_(_self_ : QAbstractScrollArea*) : QSize*
@@ -3410,7 +3483,7 @@ module Qt
     fun bg_QAbstractScrollArea_setupViewport_QWidget_X(_self_ : QAbstractScrollArea*, viewport : QWidget*) : Void
     fun bg_QAbstractScrollArea_sizeAdjustPolicy_(_self_ : QAbstractScrollArea*) : AbstractScrollArea::SizeAdjustPolicy
     fun bg_QAbstractScrollArea_setSizeAdjustPolicy_QAbstractScrollArea__SizeAdjustPolicy(_self_ : QAbstractScrollArea*, policy : AbstractScrollArea::SizeAdjustPolicy) : Void
-    fun bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd : QAbstractScrollAreaPrivate*, parent : QWidget*) : QAbstractScrollArea*
+    fun bg_QAbstractScrollArea__CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd : QAbstractScrollAreaPrivate*, parent : QWidget*) : QAbstractScrollArea*
     fun bg_QAbstractScrollArea_setViewportMargins_int_int_int_int(_self_ : QAbstractScrollArea*, left : Int32, top : Int32, right : Int32, bottom : Int32) : Void
     fun bg_QAbstractScrollArea_setViewportMargins_const_QMargins_R(_self_ : QAbstractScrollArea*, margins : QMargins*) : Void
     fun bg_QAbstractScrollArea_viewportMargins_(_self_ : QAbstractScrollArea*) : QMargins*
@@ -3433,13 +3506,17 @@ module Qt
     fun bg_QAbstractScrollArea_scrollContentsBy_int_int(_self_ : QAbstractScrollArea*, dx : Int32, dy : Int32) : Void
     fun bg_QAbstractScrollArea_viewportSizeHint_(_self_ : QAbstractScrollArea*) : QSize*
     fun bg_QFrame_changeEvent_QEvent_X(_self_ : QAbstractScrollArea*, unnamed_arg_0 : QEvent*) : Void
-    fun bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea(_self_ : QAbstractScrollArea*, table : Binding::BgJumptable_AbstractScrollArea*) : Void
+    fun bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea_R(_self_ : QAbstractScrollArea*, table : Binding::BgJumptable_AbstractScrollArea*) : Void
     fun bg_QScrollArea_metaObject_(_self_ : QScrollArea*) : QMetaObject*
     fun bg_QScrollArea_qt_metacast_const_char_X(_self_ : QScrollArea*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QScrollArea_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QScrollArea*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QScrollArea_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScrollArea_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollArea_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QScrollArea_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QScrollArea_CONSTRUCT_QWidget_X(parent : QWidget*) : QScrollArea*
+    fun bg_QScrollArea__CONSTRUCT_QWidget_X(parent : QWidget*) : QScrollArea*
     fun bg_QScrollArea_widget_(_self_ : QScrollArea*) : QWidget*
     fun bg_QScrollArea_setWidget_QWidget_X(_self_ : QScrollArea*, widget : QWidget*) : Void
     fun bg_QScrollArea_takeWidget_(_self_ : QScrollArea*) : QWidget*
@@ -3451,7 +3528,7 @@ module Qt
     fun bg_QScrollArea_setAlignment_Qt__Alignment(_self_ : QScrollArea*, unnamed_arg_0 : Alignment) : Void
     fun bg_QScrollArea_ensureVisible_int_int_int_int(_self_ : QScrollArea*, x : Int32, y : Int32, xmargin : Int32, ymargin : Int32) : Void
     fun bg_QScrollArea_ensureWidgetVisible_QWidget_X_int_int(_self_ : QScrollArea*, child_widget : QWidget*, xmargin : Int32, ymargin : Int32) : Void
-    fun bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd : QScrollAreaPrivate*, parent : QWidget*) : QScrollArea*
+    fun bg_QScrollArea__CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd : QScrollAreaPrivate*, parent : QWidget*) : QScrollArea*
     fun bg_QScrollArea_event_QEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QScrollArea_eventFilter_QObject_X_QEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*) : Bool
     fun bg_QScrollArea_resizeEvent_QResizeEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QResizeEvent*) : Void
@@ -3472,13 +3549,17 @@ module Qt
     fun bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QDragLeaveEvent*) : Void
     fun bg_QAbstractScrollArea_dropEvent_QDropEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QDropEvent*) : Void
     fun bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X(_self_ : QScrollArea*, unnamed_arg_0 : QKeyEvent*) : Void
-    fun bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea(_self_ : QScrollArea*, table : Binding::BgJumptable_ScrollArea*) : Void
+    fun bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea_R(_self_ : QScrollArea*, table : Binding::BgJumptable_ScrollArea*) : Void
     fun bg_QAbstractSpinBox_metaObject_(_self_ : QAbstractSpinBox*) : QMetaObject*
     fun bg_QAbstractSpinBox_qt_metacast_const_char_X(_self_ : QAbstractSpinBox*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAbstractSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAbstractSpinBox*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAbstractSpinBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractSpinBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractSpinBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAbstractSpinBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractSpinBox*
+    fun bg_QAbstractSpinBox__CONSTRUCT_QWidget_X(parent : QWidget*) : QAbstractSpinBox*
     fun bg_QAbstractSpinBox_buttonSymbols_(_self_ : QAbstractSpinBox*) : AbstractSpinBox::ButtonSymbols
     fun bg_QAbstractSpinBox_setButtonSymbols_QAbstractSpinBox__ButtonSymbols(_self_ : QAbstractSpinBox*, bs : AbstractSpinBox::ButtonSymbols) : Void
     fun bg_QAbstractSpinBox_setCorrectionMode_QAbstractSpinBox__CorrectionMode(_self_ : QAbstractSpinBox*, cm : AbstractSpinBox::CorrectionMode) : Void
@@ -3531,7 +3612,7 @@ module Qt
     fun bg_QAbstractSpinBox_setLineEdit_QLineEdit_X(_self_ : QAbstractSpinBox*, edit : QLineEdit*) : Void
     fun bg_QAbstractSpinBox_stepEnabled_(_self_ : QAbstractSpinBox*) : AbstractSpinBox::StepEnabled
     fun bg_QAbstractSpinBox_editingFinished_(_self_ : QAbstractSpinBox*) : Void
-    fun bg_QAbstractSpinBox_CONSTRUCT_QAbstractSpinBoxPrivate_R_QWidget_X(dd : QAbstractSpinBoxPrivate*, parent : QWidget*) : QAbstractSpinBox*
+    fun bg_QAbstractSpinBox__CONSTRUCT_QAbstractSpinBoxPrivate_R_QWidget_X(dd : QAbstractSpinBoxPrivate*, parent : QWidget*) : QAbstractSpinBox*
     fun bg_QWidget_devType_(_self_ : QAbstractSpinBox*) : Int32
     fun bg_QWidget_setVisible_bool(_self_ : QAbstractSpinBox*, visible : Bool) : Void
     fun bg_QWidget_heightForWidth_int(_self_ : QAbstractSpinBox*, unnamed_arg_0 : Int32) : Int32
@@ -3554,13 +3635,17 @@ module Qt
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : QAbstractSpinBox*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QAbstractSpinBox*, next_ : Bool) : Bool
     fun bg_QAbstractSpinBox_CONNECT_editingFinished_CrystalProc_void(_self_ : QAbstractSpinBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox(_self_ : QAbstractSpinBox*, table : Binding::BgJumptable_AbstractSpinBox*) : Void
+    fun bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox_R(_self_ : QAbstractSpinBox*, table : Binding::BgJumptable_AbstractSpinBox*) : Void
     fun bg_QSpinBox_metaObject_(_self_ : QSpinBox*) : QMetaObject*
     fun bg_QSpinBox_qt_metacast_const_char_X(_self_ : QSpinBox*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QSpinBox*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QSpinBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSpinBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSpinBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QSpinBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QSpinBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QSpinBox*
+    fun bg_QSpinBox__CONSTRUCT_QWidget_X(parent : QWidget*) : QSpinBox*
     fun bg_QSpinBox_value_(_self_ : QSpinBox*) : Int32
     fun bg_QSpinBox_prefix_(_self_ : QSpinBox*) : CrystalString
     fun bg_QSpinBox_setPrefix_const_QString_R(_self_ : QSpinBox*, prefix : CrystalString) : Void
@@ -3605,13 +3690,17 @@ module Qt
     fun bg_QAbstractSpinBox_stepEnabled_(_self_ : QSpinBox*) : AbstractSpinBox::StepEnabled
     fun bg_QSpinBox_CONNECT_valueChanged_CrystalProc_void_int(_self_ : QSpinBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QSpinBox_CONNECT_valueChanged_CrystalProc_void_const_QString_R(_self_ : QSpinBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_SpinBox_JUMPTABLE_BgJumptable_SpinBox(_self_ : QSpinBox*, table : Binding::BgJumptable_SpinBox*) : Void
+    fun bg_BgInherit_SpinBox_JUMPTABLE_BgJumptable_SpinBox_R(_self_ : QSpinBox*, table : Binding::BgJumptable_SpinBox*) : Void
     fun bg_QDoubleSpinBox_metaObject_(_self_ : QDoubleSpinBox*) : QMetaObject*
     fun bg_QDoubleSpinBox_qt_metacast_const_char_X(_self_ : QDoubleSpinBox*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDoubleSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDoubleSpinBox*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDoubleSpinBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDoubleSpinBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDoubleSpinBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDoubleSpinBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QDoubleSpinBox*
+    fun bg_QDoubleSpinBox__CONSTRUCT_QWidget_X(parent : QWidget*) : QDoubleSpinBox*
     fun bg_QDoubleSpinBox_value_(_self_ : QDoubleSpinBox*) : Float64
     fun bg_QDoubleSpinBox_prefix_(_self_ : QDoubleSpinBox*) : CrystalString
     fun bg_QDoubleSpinBox_setPrefix_const_QString_R(_self_ : QDoubleSpinBox*, prefix : CrystalString) : Void
@@ -3656,16 +3745,20 @@ module Qt
     fun bg_QAbstractSpinBox_stepEnabled_(_self_ : QDoubleSpinBox*) : AbstractSpinBox::StepEnabled
     fun bg_QDoubleSpinBox_CONNECT_valueChanged_CrystalProc_void_double(_self_ : QDoubleSpinBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDoubleSpinBox_CONNECT_valueChanged_CrystalProc_void_const_QString_R(_self_ : QDoubleSpinBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_DoubleSpinBox_JUMPTABLE_BgJumptable_DoubleSpinBox(_self_ : QDoubleSpinBox*, table : Binding::BgJumptable_DoubleSpinBox*) : Void
+    fun bg_BgInherit_DoubleSpinBox_JUMPTABLE_BgJumptable_DoubleSpinBox_R(_self_ : QDoubleSpinBox*, table : Binding::BgJumptable_DoubleSpinBox*) : Void
     fun bg_QDateTimeEdit_metaObject_(_self_ : QDateTimeEdit*) : QMetaObject*
     fun bg_QDateTimeEdit_qt_metacast_const_char_X(_self_ : QDateTimeEdit*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDateTimeEdit_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDateTimeEdit*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDateTimeEdit_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDateTimeEdit_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDateTimeEdit_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDateTimeEdit_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDateTimeEdit_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDateTimeEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDateTimeEdit_CONSTRUCT_QWidget_X(parent : QWidget*) : QDateTimeEdit*
-    fun bg_QDateTimeEdit_CONSTRUCT_const_QDateTime_R_QWidget_X(dt : QDateTime*, parent : QWidget*) : QDateTimeEdit*
-    fun bg_QDateTimeEdit_CONSTRUCT_const_QDate_R_QWidget_X(d : QDate*, parent : QWidget*) : QDateTimeEdit*
-    fun bg_QDateTimeEdit_CONSTRUCT_const_QTime_R_QWidget_X(t : QTime*, parent : QWidget*) : QDateTimeEdit*
+    fun bg_QDateTimeEdit__CONSTRUCT_QWidget_X(parent : QWidget*) : QDateTimeEdit*
+    fun bg_QDateTimeEdit__CONSTRUCT_const_QDateTime_R_QWidget_X(dt : QDateTime*, parent : QWidget*) : QDateTimeEdit*
+    fun bg_QDateTimeEdit__CONSTRUCT_const_QDate_R_QWidget_X(d : QDate*, parent : QWidget*) : QDateTimeEdit*
+    fun bg_QDateTimeEdit__CONSTRUCT_const_QTime_R_QWidget_X(t : QTime*, parent : QWidget*) : QDateTimeEdit*
     fun bg_QDateTimeEdit_dateTime_(_self_ : QDateTimeEdit*) : QDateTime*
     fun bg_QDateTimeEdit_date_(_self_ : QDateTimeEdit*) : QDate*
     fun bg_QDateTimeEdit_time_(_self_ : QDateTimeEdit*) : QTime*
@@ -3742,13 +3835,17 @@ module Qt
     fun bg_QDateTimeEdit_CONNECT_dateTimeChanged_CrystalProc_void_const_QDateTime_R(_self_ : QDateTimeEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDateTimeEdit_CONNECT_timeChanged_CrystalProc_void_const_QTime_R(_self_ : QDateTimeEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDateTimeEdit_CONNECT_dateChanged_CrystalProc_void_const_QDate_R(_self_ : QDateTimeEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit(_self_ : QDateTimeEdit*, table : Binding::BgJumptable_DateTimeEdit*) : Void
+    fun bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit_R(_self_ : QDateTimeEdit*, table : Binding::BgJumptable_DateTimeEdit*) : Void
     fun bg_QMenuBar_metaObject_(_self_ : QMenuBar*) : QMetaObject*
     fun bg_QMenuBar_qt_metacast_const_char_X(_self_ : QMenuBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QMenuBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QMenuBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QMenuBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMenuBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenuBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QMenuBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenuBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QMenuBar*
+    fun bg_QMenuBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QMenuBar*
     fun bg_QMenuBar_addAction_const_QString_R(_self_ : QMenuBar*, text : CrystalString) : QAction*
     fun bg_QMenuBar_addAction_const_QString_R_const_QObject_X_const_char_X(_self_ : QMenuBar*, text : CrystalString, receiver : QObject*, member : UInt8*) : QAction*
     fun bg_QMenuBar_addMenu_QMenu_X(_self_ : QMenuBar*, menu : QMenu*) : QAction*
@@ -3815,14 +3912,18 @@ module Qt
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QMenuBar*, next_ : Bool) : Bool
     fun bg_QMenuBar_CONNECT_triggered_CrystalProc_void_QAction_X(_self_ : QMenuBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMenuBar_CONNECT_hovered_CrystalProc_void_QAction_X(_self_ : QMenuBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_MenuBar_JUMPTABLE_BgJumptable_MenuBar(_self_ : QMenuBar*, table : Binding::BgJumptable_MenuBar*) : Void
+    fun bg_BgInherit_MenuBar_JUMPTABLE_BgJumptable_MenuBar_R(_self_ : QMenuBar*, table : Binding::BgJumptable_MenuBar*) : Void
     fun bg_QMenu_metaObject_(_self_ : QMenu*) : QMetaObject*
     fun bg_QMenu_qt_metacast_const_char_X(_self_ : QMenu*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QMenu_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QMenu*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QMenu_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMenu_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenu_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QMenu_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMenu_CONSTRUCT_QWidget_X(parent : QWidget*) : QMenu*
-    fun bg_QMenu_CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QMenu*
+    fun bg_QMenu__CONSTRUCT_QWidget_X(parent : QWidget*) : QMenu*
+    fun bg_QMenu__CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QMenu*
     fun bg_QMenu_addAction_const_QString_R(_self_ : QMenu*, text : CrystalString) : QAction*
     fun bg_QMenu_addAction_const_QIcon_R_const_QString_R(_self_ : QMenu*, icon : QIcon*, text : CrystalString) : QAction*
     fun bg_QMenu_addAction_const_QString_R_const_QObject_X_const_char_X(_self_ : QMenu*, text : CrystalString, receiver : QObject*, member : UInt8*) : QAction*
@@ -3890,7 +3991,7 @@ module Qt
     fun bg_QMenu_event_QEvent_X(_self_ : QMenu*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QMenu_focusNextPrevChild_bool(_self_ : QMenu*, next_ : Bool) : Bool
     fun bg_QMenu_initStyleOption_QStyleOptionMenuItem_X_const_QAction_X(_self_ : QMenu*, option : QStyleOptionMenuItem*, action : QAction*) : Void
-    fun bg_QMenu_CONSTRUCT_QMenuPrivate_R_QWidget_X(dd : QMenuPrivate*, parent : QWidget*) : QMenu*
+    fun bg_QMenu__CONSTRUCT_QMenuPrivate_R_QWidget_X(dd : QMenuPrivate*, parent : QWidget*) : QMenu*
     fun bg_QWidget_devType_(_self_ : QMenu*) : Int32
     fun bg_QWidget_setVisible_bool(_self_ : QMenu*, visible : Bool) : Void
     fun bg_QWidget_minimumSizeHint_(_self_ : QMenu*) : QSize*
@@ -3920,15 +4021,19 @@ module Qt
     fun bg_QMenu_CONNECT_aboutToHide_CrystalProc_void(_self_ : QMenu*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMenu_CONNECT_triggered_CrystalProc_void_QAction_X(_self_ : QMenu*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMenu_CONNECT_hovered_CrystalProc_void_QAction_X(_self_ : QMenu*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu(_self_ : QMenu*, table : Binding::BgJumptable_Menu*) : Void
+    fun bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu_R(_self_ : QMenu*, table : Binding::BgJumptable_Menu*) : Void
     fun bg_QAction_metaObject_(_self_ : QAction*) : QMetaObject*
     fun bg_QAction_qt_metacast_const_char_X(_self_ : QAction*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QAction_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QAction*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QAction_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAction_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAction_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QAction_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QAction_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QAction_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QAction_CONSTRUCT_QObject_X(parent : QObject*) : QAction*
-    fun bg_QAction_CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QAction*
-    fun bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon : QIcon*, text : CrystalString, parent : QObject*) : QAction*
+    fun bg_QAction__CONSTRUCT_QObject_X(parent : QObject*) : QAction*
+    fun bg_QAction__CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QAction*
+    fun bg_QAction__CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon : QIcon*, text : CrystalString, parent : QObject*) : QAction*
     fun bg_QAction_setActionGroup_QActionGroup_X(_self_ : QAction*, group : QActionGroup*) : Void
     fun bg_QAction_actionGroup_(_self_ : QAction*) : QActionGroup*
     fun bg_QAction_setIcon_const_QIcon_R(_self_ : QAction*, icon : QIcon*) : Void
@@ -3975,7 +4080,7 @@ module Qt
     fun bg_QAction_associatedWidgets_(_self_ : QAction*) : Void*
     fun bg_QAction_associatedGraphicsWidgets_(_self_ : QAction*) : Void*
     fun bg_QAction_event_QEvent_X(_self_ : QAction*, unnamed_arg_0 : QEvent*) : Bool
-    fun bg_QAction_CONSTRUCT_QActionPrivate_R_QObject_X(dd : QActionPrivate*, parent : QObject*) : QAction*
+    fun bg_QAction__CONSTRUCT_QActionPrivate_R_QObject_X(dd : QActionPrivate*, parent : QObject*) : QAction*
     fun bg_QAction_trigger_(_self_ : QAction*) : Void
     fun bg_QAction_hover_(_self_ : QAction*) : Void
     fun bg_QAction_setChecked_bool(_self_ : QAction*, unnamed_arg_0 : Bool) : Void
@@ -3997,13 +4102,17 @@ module Qt
     fun bg_QAction_CONNECT_triggered_CrystalProc_void_bool(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAction_CONNECT_hovered_CrystalProc_void(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QAction_CONNECT_toggled_CrystalProc_void_bool(_self_ : QAction*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action(_self_ : QAction*, table : Binding::BgJumptable_Action*) : Void
+    fun bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action_R(_self_ : QAction*, table : Binding::BgJumptable_Action*) : Void
     fun bg_QStatusBar_metaObject_(_self_ : QStatusBar*) : QMetaObject*
     fun bg_QStatusBar_qt_metacast_const_char_X(_self_ : QStatusBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QStatusBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QStatusBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QStatusBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QStatusBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QStatusBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QStatusBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QStatusBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QStatusBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QStatusBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QStatusBar*
+    fun bg_QStatusBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QStatusBar*
     fun bg_QStatusBar_addWidget_QWidget_X_int(_self_ : QStatusBar*, widget : QWidget*, stretch : Int32) : Void
     fun bg_QStatusBar_insertWidget_int_QWidget_X_int(_self_ : QStatusBar*, index : Int32, widget : QWidget*, stretch : Int32) : Int32
     fun bg_QStatusBar_addPermanentWidget_QWidget_X_int(_self_ : QStatusBar*, widget : QWidget*, stretch : Int32) : Void
@@ -4057,14 +4166,18 @@ module Qt
     fun bg_QWidget_inputMethodEvent_QInputMethodEvent_X(_self_ : QStatusBar*, unnamed_arg_0 : QInputMethodEvent*) : Void
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QStatusBar*, next_ : Bool) : Bool
     fun bg_QStatusBar_CONNECT_messageChanged_CrystalProc_void_const_QString_R(_self_ : QStatusBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_StatusBar_JUMPTABLE_BgJumptable_StatusBar(_self_ : QStatusBar*, table : Binding::BgJumptable_StatusBar*) : Void
+    fun bg_BgInherit_StatusBar_JUMPTABLE_BgJumptable_StatusBar_R(_self_ : QStatusBar*, table : Binding::BgJumptable_StatusBar*) : Void
     fun bg_QMainWindow_metaObject_(_self_ : QMainWindow*) : QMetaObject*
     fun bg_QMainWindow_qt_metacast_const_char_X(_self_ : QMainWindow*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QMainWindow_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QMainWindow*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QMainWindow_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMainWindow_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMainWindow_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QMainWindow_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMainWindow_CONSTRUCT_QWidget_X(parent : QWidget*) : QMainWindow*
-    fun bg_QMainWindow_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, flags : WindowFlags) : QMainWindow*
+    fun bg_QMainWindow__CONSTRUCT_QWidget_X(parent : QWidget*) : QMainWindow*
+    fun bg_QMainWindow__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, flags : WindowFlags) : QMainWindow*
     fun bg_QMainWindow_iconSize_(_self_ : QMainWindow*) : QSize*
     fun bg_QMainWindow_setIconSize_const_QSize_R(_self_ : QMainWindow*, icon_size : QSize*) : Void
     fun bg_QMainWindow_toolButtonStyle_(_self_ : QMainWindow*) : ToolButtonStyle
@@ -4162,16 +4275,20 @@ module Qt
     fun bg_QMainWindow_CONNECT_iconSizeChanged_CrystalProc_void_const_QSize_R(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMainWindow_CONNECT_toolButtonStyleChanged_CrystalProc_void_Qt__ToolButtonStyle(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMainWindow_CONNECT_tabifiedDockWidgetActivated_CrystalProc_void_QDockWidget_X(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow(_self_ : QMainWindow*, table : Binding::BgJumptable_MainWindow*) : Void
+    fun bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow_R(_self_ : QMainWindow*, table : Binding::BgJumptable_MainWindow*) : Void
     fun bg_QDockWidget_metaObject_(_self_ : QDockWidget*) : QMetaObject*
     fun bg_QDockWidget_qt_metacast_const_char_X(_self_ : QDockWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDockWidget_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDockWidget*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDockWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDockWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDockWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDockWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDockWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDockWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDockWidget_CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QDockWidget*
-    fun bg_QDockWidget_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(title : CrystalString, parent : QWidget*, flags : WindowFlags) : QDockWidget*
-    fun bg_QDockWidget_CONSTRUCT_QWidget_X(parent : QWidget*) : QDockWidget*
-    fun bg_QDockWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, flags : WindowFlags) : QDockWidget*
+    fun bg_QDockWidget__CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QDockWidget*
+    fun bg_QDockWidget__CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(title : CrystalString, parent : QWidget*, flags : WindowFlags) : QDockWidget*
+    fun bg_QDockWidget__CONSTRUCT_QWidget_X(parent : QWidget*) : QDockWidget*
+    fun bg_QDockWidget__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, flags : WindowFlags) : QDockWidget*
     fun bg_QDockWidget_widget_(_self_ : QDockWidget*) : QWidget*
     fun bg_QDockWidget_setWidget_QWidget_X(_self_ : QDockWidget*, widget : QWidget*) : Void
     fun bg_QDockWidget_setFeatures_QDockWidget__DockWidgetFeatures(_self_ : QDockWidget*, features : DockWidget::Features) : Void
@@ -4234,14 +4351,18 @@ module Qt
     fun bg_QDockWidget_CONNECT_allowedAreasChanged_CrystalProc_void_Qt__DockWidgetAreas(_self_ : QDockWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDockWidget_CONNECT_visibilityChanged_CrystalProc_void_bool(_self_ : QDockWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDockWidget_CONNECT_dockLocationChanged_CrystalProc_void_Qt__DockWidgetArea(_self_ : QDockWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget(_self_ : QDockWidget*, table : Binding::BgJumptable_DockWidget*) : Void
+    fun bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget_R(_self_ : QDockWidget*, table : Binding::BgJumptable_DockWidget*) : Void
     fun bg_QDialog_metaObject_(_self_ : QDialog*) : QMetaObject*
     fun bg_QDialog_qt_metacast_const_char_X(_self_ : QDialog*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDialog_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDialog*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDialog_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDialog_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDialog_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDialog_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDialog_CONSTRUCT_QWidget_X(parent : QWidget*) : QDialog*
-    fun bg_QDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QDialog*
+    fun bg_QDialog__CONSTRUCT_QWidget_X(parent : QWidget*) : QDialog*
+    fun bg_QDialog__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QDialog*
     fun bg_QDialog_result_(_self_ : QDialog*) : Int32
     fun bg_QDialog_setVisible_bool(_self_ : QDialog*, visible : Bool) : Void
     fun bg_QDialog_setOrientation_Qt__Orientation(_self_ : QDialog*, orientation : Orientation) : Void
@@ -4263,8 +4384,8 @@ module Qt
     fun bg_QDialog_accept_(_self_ : QDialog*) : Void
     fun bg_QDialog_reject_(_self_ : QDialog*) : Void
     fun bg_QDialog_showExtension_bool(_self_ : QDialog*, unnamed_arg_0 : Bool) : Void
-    fun bg_QDialog_CONSTRUCT_QDialogPrivate_R_QWidget_X(unnamed_arg_0 : QDialogPrivate*, parent : QWidget*) : QDialog*
-    fun bg_QDialog_CONSTRUCT_QDialogPrivate_R_QWidget_X_Qt__WindowFlags(unnamed_arg_0 : QDialogPrivate*, parent : QWidget*, f : WindowFlags) : QDialog*
+    fun bg_QDialog__CONSTRUCT_QDialogPrivate_R_QWidget_X(unnamed_arg_0 : QDialogPrivate*, parent : QWidget*) : QDialog*
+    fun bg_QDialog__CONSTRUCT_QDialogPrivate_R_QWidget_X_Qt__WindowFlags(unnamed_arg_0 : QDialogPrivate*, parent : QWidget*, f : WindowFlags) : QDialog*
     fun bg_QDialog_keyPressEvent_QKeyEvent_X(_self_ : QDialog*, unnamed_arg_0 : QKeyEvent*) : Void
     fun bg_QDialog_closeEvent_QCloseEvent_X(_self_ : QDialog*, unnamed_arg_0 : QCloseEvent*) : Void
     fun bg_QDialog_showEvent_QShowEvent_X(_self_ : QDialog*, unnamed_arg_0 : QShowEvent*) : Void
@@ -4306,16 +4427,20 @@ module Qt
     fun bg_QDialog_CONNECT_finished_CrystalProc_void_int(_self_ : QDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDialog_CONNECT_accepted_CrystalProc_void(_self_ : QDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDialog_CONNECT_rejected_CrystalProc_void(_self_ : QDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog(_self_ : QDialog*, table : Binding::BgJumptable_Dialog*) : Void
+    fun bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog_R(_self_ : QDialog*, table : Binding::BgJumptable_Dialog*) : Void
     fun bg_QLabel_metaObject_(_self_ : QLabel*) : QMetaObject*
     fun bg_QLabel_qt_metacast_const_char_X(_self_ : QLabel*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QLabel_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QLabel*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QLabel_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLabel_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLabel_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QLabel_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLabel_CONSTRUCT_QWidget_X(parent : QWidget*) : QLabel*
-    fun bg_QLabel_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QLabel*
-    fun bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QLabel*
-    fun bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(text : CrystalString, parent : QWidget*, f : WindowFlags) : QLabel*
+    fun bg_QLabel__CONSTRUCT_QWidget_X(parent : QWidget*) : QLabel*
+    fun bg_QLabel__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QLabel*
+    fun bg_QLabel__CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QLabel*
+    fun bg_QLabel__CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(text : CrystalString, parent : QWidget*, f : WindowFlags) : QLabel*
     fun bg_QLabel_text_(_self_ : QLabel*) : CrystalString
     fun bg_QLabel_pixmap_(_self_ : QLabel*) : QPixmap*
     fun bg_QLabel_picture_(_self_ : QLabel*) : QPicture*
@@ -4367,14 +4492,18 @@ module Qt
     fun bg_QLabel_focusNextPrevChild_bool(_self_ : QLabel*, next_ : Bool) : Bool
     fun bg_QLabel_CONNECT_linkActivated_CrystalProc_void_const_QString_R(_self_ : QLabel*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QLabel_CONNECT_linkHovered_CrystalProc_void_const_QString_R(_self_ : QLabel*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label(_self_ : QLabel*, table : Binding::BgJumptable_Label*) : Void
+    fun bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label_R(_self_ : QLabel*, table : Binding::BgJumptable_Label*) : Void
     fun bg_QLCDNumber_metaObject_(_self_ : QLCDNumber*) : QMetaObject*
     fun bg_QLCDNumber_qt_metacast_const_char_X(_self_ : QLCDNumber*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QLCDNumber_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QLCDNumber*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QLCDNumber_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QLCDNumber_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLCDNumber_CONSTRUCT_QWidget_X(parent : QWidget*) : QLCDNumber*
-    fun bg_QLCDNumber_CONSTRUCT_uint_QWidget_X(num_digits : UInt32, parent : QWidget*) : QLCDNumber*
+    fun bg_QLCDNumber__CONSTRUCT_QWidget_X(parent : QWidget*) : QLCDNumber*
+    fun bg_QLCDNumber__CONSTRUCT_uint_QWidget_X(num_digits : UInt32, parent : QWidget*) : QLCDNumber*
     fun bg_QLCDNumber_smallDecimalPoint_(_self_ : QLCDNumber*) : Bool
     fun bg_QLCDNumber_digitCount_(_self_ : QLCDNumber*) : Int32
     fun bg_QLCDNumber_setDigitCount_int(_self_ : QLCDNumber*, n_digits : Int32) : Void
@@ -4400,15 +4529,19 @@ module Qt
     fun bg_QLCDNumber_paintEvent_QPaintEvent_X(_self_ : QLCDNumber*, unnamed_arg_0 : QPaintEvent*) : Void
     fun bg_QFrame_changeEvent_QEvent_X(_self_ : QLCDNumber*, unnamed_arg_0 : QEvent*) : Void
     fun bg_QLCDNumber_CONNECT_overflow_CrystalProc_void(_self_ : QLCDNumber*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber(_self_ : QLCDNumber*, table : Binding::BgJumptable_LcdNumber*) : Void
+    fun bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber_R(_self_ : QLCDNumber*, table : Binding::BgJumptable_LcdNumber*) : Void
     fun bg_QPushButton_metaObject_(_self_ : QPushButton*) : QMetaObject*
     fun bg_QPushButton_qt_metacast_const_char_X(_self_ : QPushButton*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QPushButton_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QPushButton*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QPushButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QPushButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QPushButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QPushButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QPushButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QPushButton*
-    fun bg_QPushButton_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QPushButton*
-    fun bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon : QIcon*, text : CrystalString, parent : QWidget*) : QPushButton*
+    fun bg_QPushButton__CONSTRUCT_QWidget_X(parent : QWidget*) : QPushButton*
+    fun bg_QPushButton__CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QPushButton*
+    fun bg_QPushButton__CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon : QIcon*, text : CrystalString, parent : QWidget*) : QPushButton*
     fun bg_QPushButton_sizeHint_(_self_ : QPushButton*) : QSize*
     fun bg_QPushButton_minimumSizeHint_(_self_ : QPushButton*) : QSize*
     fun bg_QPushButton_autoDefault_(_self_ : QPushButton*) : Bool
@@ -4426,7 +4559,7 @@ module Qt
     fun bg_QPushButton_focusInEvent_QFocusEvent_X(_self_ : QPushButton*, unnamed_arg_0 : QFocusEvent*) : Void
     fun bg_QPushButton_focusOutEvent_QFocusEvent_X(_self_ : QPushButton*, unnamed_arg_0 : QFocusEvent*) : Void
     fun bg_QPushButton_initStyleOption_QStyleOptionButton_X(_self_ : QPushButton*, option : QStyleOptionButton*) : Void
-    fun bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd : QPushButtonPrivate*, parent : QWidget*) : QPushButton*
+    fun bg_QPushButton__CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd : QPushButtonPrivate*, parent : QWidget*) : QPushButton*
     fun bg_QAbstractButton_hitButton_const_QPoint_R(_self_ : QPushButton*, pos : QPoint) : Bool
     fun bg_QAbstractButton_checkStateSet_(_self_ : QPushButton*) : Void
     fun bg_QAbstractButton_nextCheckState_(_self_ : QPushButton*) : Void
@@ -4436,14 +4569,18 @@ module Qt
     fun bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X(_self_ : QPushButton*, e : QMouseEvent*) : Void
     fun bg_QAbstractButton_changeEvent_QEvent_X(_self_ : QPushButton*, e : QEvent*) : Void
     fun bg_QAbstractButton_timerEvent_QTimerEvent_X(_self_ : QPushButton*, e : QTimerEvent*) : Void
-    fun bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton(_self_ : QPushButton*, table : Binding::BgJumptable_PushButton*) : Void
+    fun bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton_R(_self_ : QPushButton*, table : Binding::BgJumptable_PushButton*) : Void
     fun bg_QCheckBox_metaObject_(_self_ : QCheckBox*) : QMetaObject*
     fun bg_QCheckBox_qt_metacast_const_char_X(_self_ : QCheckBox*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QCheckBox_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QCheckBox*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QCheckBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QCheckBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCheckBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QCheckBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCheckBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QCheckBox*
-    fun bg_QCheckBox_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QCheckBox*
+    fun bg_QCheckBox__CONSTRUCT_QWidget_X(parent : QWidget*) : QCheckBox*
+    fun bg_QCheckBox__CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QCheckBox*
     fun bg_QCheckBox_sizeHint_(_self_ : QCheckBox*) : QSize*
     fun bg_QCheckBox_minimumSizeHint_(_self_ : QCheckBox*) : QSize*
     fun bg_QCheckBox_setTristate_bool(_self_ : QCheckBox*, y : Bool) : Void
@@ -4467,14 +4604,18 @@ module Qt
     fun bg_QAbstractButton_changeEvent_QEvent_X(_self_ : QCheckBox*, e : QEvent*) : Void
     fun bg_QAbstractButton_timerEvent_QTimerEvent_X(_self_ : QCheckBox*, e : QTimerEvent*) : Void
     fun bg_QCheckBox_CONNECT_stateChanged_CrystalProc_void_int(_self_ : QCheckBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox(_self_ : QCheckBox*, table : Binding::BgJumptable_CheckBox*) : Void
+    fun bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox_R(_self_ : QCheckBox*, table : Binding::BgJumptable_CheckBox*) : Void
     fun bg_QRadioButton_metaObject_(_self_ : QRadioButton*) : QMetaObject*
     fun bg_QRadioButton_qt_metacast_const_char_X(_self_ : QRadioButton*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QRadioButton_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QRadioButton*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QRadioButton_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QRadioButton_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QRadioButton_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QRadioButton_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QRadioButton_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QRadioButton_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QRadioButton_CONSTRUCT_QWidget_X(parent : QWidget*) : QRadioButton*
-    fun bg_QRadioButton_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QRadioButton*
+    fun bg_QRadioButton__CONSTRUCT_QWidget_X(parent : QWidget*) : QRadioButton*
+    fun bg_QRadioButton__CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QRadioButton*
     fun bg_QRadioButton_sizeHint_(_self_ : QRadioButton*) : QSize*
     fun bg_QRadioButton_minimumSizeHint_(_self_ : QRadioButton*) : QSize*
     fun bg_QRadioButton_event_QEvent_X(_self_ : QRadioButton*, e : QEvent*) : Bool
@@ -4492,13 +4633,17 @@ module Qt
     fun bg_QAbstractButton_focusOutEvent_QFocusEvent_X(_self_ : QRadioButton*, e : QFocusEvent*) : Void
     fun bg_QAbstractButton_changeEvent_QEvent_X(_self_ : QRadioButton*, e : QEvent*) : Void
     fun bg_QAbstractButton_timerEvent_QTimerEvent_X(_self_ : QRadioButton*, e : QTimerEvent*) : Void
-    fun bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton(_self_ : QRadioButton*, table : Binding::BgJumptable_RadioButton*) : Void
+    fun bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton_R(_self_ : QRadioButton*, table : Binding::BgJumptable_RadioButton*) : Void
     fun bg_QButtonGroup_metaObject_(_self_ : QButtonGroup*) : QMetaObject*
     fun bg_QButtonGroup_qt_metacast_const_char_X(_self_ : QButtonGroup*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QButtonGroup_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QButtonGroup*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QButtonGroup_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QButtonGroup_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QButtonGroup_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QButtonGroup_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QButtonGroup_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QButtonGroup_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QButtonGroup_CONSTRUCT_QObject_X(parent : QObject*) : QButtonGroup*
+    fun bg_QButtonGroup__CONSTRUCT_QObject_X(parent : QObject*) : QButtonGroup*
     fun bg_QButtonGroup_setExclusive_bool(_self_ : QButtonGroup*, unnamed_arg_0 : Bool) : Void
     fun bg_QButtonGroup_exclusive_(_self_ : QButtonGroup*) : Bool
     fun bg_QButtonGroup_addButton_QAbstractButton_X_int(_self_ : QButtonGroup*, unnamed_arg_0 : QAbstractButton*, id : Int32) : Void
@@ -4532,14 +4677,18 @@ module Qt
     fun bg_QButtonGroup_CONNECT_buttonReleased_CrystalProc_void_int(_self_ : QButtonGroup*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QButtonGroup_CONNECT_buttonToggled_CrystalProc_void_QAbstractButton_X_bool(_self_ : QButtonGroup*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QButtonGroup_CONNECT_buttonToggled_CrystalProc_void_int_bool(_self_ : QButtonGroup*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_ButtonGroup_JUMPTABLE_BgJumptable_ButtonGroup(_self_ : QButtonGroup*, table : Binding::BgJumptable_ButtonGroup*) : Void
+    fun bg_BgInherit_ButtonGroup_JUMPTABLE_BgJumptable_ButtonGroup_R(_self_ : QButtonGroup*, table : Binding::BgJumptable_ButtonGroup*) : Void
     fun bg_QGroupBox_metaObject_(_self_ : QGroupBox*) : QMetaObject*
     fun bg_QGroupBox_qt_metacast_const_char_X(_self_ : QGroupBox*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGroupBox_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGroupBox*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGroupBox_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGroupBox_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGroupBox_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGroupBox_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGroupBox_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGroupBox_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGroupBox_CONSTRUCT_QWidget_X(parent : QWidget*) : QGroupBox*
-    fun bg_QGroupBox_CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QGroupBox*
+    fun bg_QGroupBox__CONSTRUCT_QWidget_X(parent : QWidget*) : QGroupBox*
+    fun bg_QGroupBox__CONSTRUCT_const_QString_R_QWidget_X(title : CrystalString, parent : QWidget*) : QGroupBox*
     fun bg_QGroupBox_title_(_self_ : QGroupBox*) : CrystalString
     fun bg_QGroupBox_setTitle_const_QString_R(_self_ : QGroupBox*, title : CrystalString) : Void
     fun bg_QGroupBox_alignment_(_self_ : QGroupBox*) : Alignment
@@ -4595,14 +4744,18 @@ module Qt
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QGroupBox*, next_ : Bool) : Bool
     fun bg_QGroupBox_CONNECT_clicked_CrystalProc_void_bool(_self_ : QGroupBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGroupBox_CONNECT_toggled_CrystalProc_void_bool(_self_ : QGroupBox*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox(_self_ : QGroupBox*, table : Binding::BgJumptable_GroupBox*) : Void
+    fun bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox_R(_self_ : QGroupBox*, table : Binding::BgJumptable_GroupBox*) : Void
     fun bg_QCoreApplication_metaObject_(_self_ : QCoreApplication*) : QMetaObject*
     fun bg_QCoreApplication_qt_metacast_const_char_X(_self_ : QCoreApplication*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QCoreApplication_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QCoreApplication*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QCoreApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QCoreApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QCoreApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QCoreApplication*
-    fun bg_QCoreApplication_arguments_STATIC_() : Void*
+    fun bg_QCoreApplication__CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QCoreApplication*
+    fun bg_QCoreApplication_arguments_STATIC_() : QStringList*
     fun bg_QCoreApplication_setAttribute_STATIC_Qt__ApplicationAttribute_bool(attribute : ApplicationAttribute, on : Bool) : Void
     fun bg_QCoreApplication_testAttribute_STATIC_Qt__ApplicationAttribute(attribute : ApplicationAttribute) : Bool
     fun bg_QCoreApplication_setOrganizationDomain_STATIC_const_QString_R(org_domain : CrystalString) : Void
@@ -4634,12 +4787,14 @@ module Qt
     fun bg_QCoreApplication_applicationDirPath_STATIC_() : CrystalString
     fun bg_QCoreApplication_applicationFilePath_STATIC_() : CrystalString
     fun bg_QCoreApplication_applicationPid_STATIC_() : Int64
-    fun bg_QCoreApplication_setLibraryPaths_STATIC_const_QStringList_R(unnamed_arg_0 : Void*) : Void
-    fun bg_QCoreApplication_libraryPaths_STATIC_() : Void*
+    fun bg_QCoreApplication_setLibraryPaths_STATIC_const_QStringList_R(unnamed_arg_0 : QStringList*) : Void
+    fun bg_QCoreApplication_libraryPaths_STATIC_() : QStringList*
     fun bg_QCoreApplication_addLibraryPath_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : Void
     fun bg_QCoreApplication_removeLibraryPath_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : Void
     fun bg_QCoreApplication_installTranslator_STATIC_QTranslator_X(message_file : QTranslator*) : Bool
     fun bg_QCoreApplication_removeTranslator_STATIC_QTranslator_X(message_file : QTranslator*) : Bool
+    fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X(context : UInt8*, key : UInt8*) : CrystalString
+    fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X(context : UInt8*, key : UInt8*, disambiguation : UInt8*) : CrystalString
     fun bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X_int(context : UInt8*, key : UInt8*, disambiguation : UInt8*, n : Int32) : CrystalString
     fun bg_QCoreApplication_flush_STATIC_() : Void
     fun bg_QCoreApplication_installNativeEventFilter_QAbstractNativeEventFilter_X(_self_ : QCoreApplication*, filter_obj : QAbstractNativeEventFilter*) : Void
@@ -4653,7 +4808,7 @@ module Qt
     fun bg_QCoreApplication_applicationVersionChanged_(_self_ : QCoreApplication*) : Void
     fun bg_QCoreApplication_event_QEvent_X(_self_ : QCoreApplication*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QCoreApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X(_self_ : QCoreApplication*, unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*) : Bool
-    fun bg_QCoreApplication_CONSTRUCT_QCoreApplicationPrivate_R(p : QCoreApplicationPrivate*) : QCoreApplication*
+    fun bg_QCoreApplication__CONSTRUCT_QCoreApplicationPrivate_R(p : QCoreApplicationPrivate*) : QCoreApplication*
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QCoreApplication*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QCoreApplication*, event : QTimerEvent*) : Void
     fun bg_QObject_childEvent_QChildEvent_X(_self_ : QCoreApplication*, event : QChildEvent*) : Void
@@ -4665,13 +4820,17 @@ module Qt
     fun bg_QCoreApplication_CONNECT_organizationDomainChanged_CrystalProc_void(_self_ : QCoreApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QCoreApplication_CONNECT_applicationNameChanged_CrystalProc_void(_self_ : QCoreApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QCoreApplication_CONNECT_applicationVersionChanged_CrystalProc_void(_self_ : QCoreApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication(_self_ : QCoreApplication*, table : Binding::BgJumptable_CoreApplication*) : Void
+    fun bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication_R(_self_ : QCoreApplication*, table : Binding::BgJumptable_CoreApplication*) : Void
     fun bg_QGuiApplication_metaObject_(_self_ : QGuiApplication*) : QMetaObject*
     fun bg_QGuiApplication_qt_metacast_const_char_X(_self_ : QGuiApplication*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGuiApplication_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGuiApplication*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGuiApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGuiApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGuiApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QGuiApplication*
+    fun bg_QGuiApplication__CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QGuiApplication*
     fun bg_QGuiApplication_setApplicationDisplayName_STATIC_const_QString_R(name : CrystalString) : Void
     fun bg_QGuiApplication_applicationDisplayName_STATIC_() : CrystalString
     fun bg_QGuiApplication_setDesktopFileName_STATIC_const_QString_R(name : CrystalString) : Void
@@ -4736,7 +4895,7 @@ module Qt
     fun bg_QGuiApplication_applicationDisplayNameChanged_(_self_ : QGuiApplication*) : Void
     fun bg_QGuiApplication_event_QEvent_X(_self_ : QGuiApplication*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QGuiApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X(_self_ : QGuiApplication*, unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*) : Bool
-    fun bg_QGuiApplication_CONSTRUCT_QGuiApplicationPrivate_R(p : QGuiApplicationPrivate*) : QGuiApplication*
+    fun bg_QGuiApplication__CONSTRUCT_QGuiApplicationPrivate_R(p : QGuiApplicationPrivate*) : QGuiApplication*
     fun bg_QGuiApplication_CONNECT_fontDatabaseChanged_CrystalProc_void(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_screenAdded_CrystalProc_void_QScreen_X(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_screenRemoved_CrystalProc_void_QScreen_X(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
@@ -4750,13 +4909,17 @@ module Qt
     fun bg_QGuiApplication_CONNECT_saveStateRequest_CrystalProc_void_QSessionManager_R(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_paletteChanged_CrystalProc_void_const_QPalette_R(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_applicationDisplayNameChanged_CrystalProc_void(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication(_self_ : QGuiApplication*, table : Binding::BgJumptable_GuiApplication*) : Void
+    fun bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication_R(_self_ : QGuiApplication*, table : Binding::BgJumptable_GuiApplication*) : Void
     fun bg_QApplication_metaObject_(_self_ : QApplication*) : QMetaObject*
     fun bg_QApplication_qt_metacast_const_char_X(_self_ : QApplication*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QApplication_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QApplication*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QApplication_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QApplication_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QApplication_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QApplication_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QApplication_CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QApplication*
+    fun bg_QApplication__CONSTRUCT_int_R_char_XX_int(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32) : QApplication*
     fun bg_QApplication_style_STATIC_() : QStyle*
     fun bg_QApplication_setStyle_STATIC_QStyle_X(unnamed_arg_0 : QStyle*) : Void
     fun bg_QApplication_setStyle_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : QStyle*
@@ -4764,16 +4927,18 @@ module Qt
     fun bg_QApplication_setColorSpec_STATIC_int(unnamed_arg_0 : Int32) : Void
     fun bg_QApplication_palette_STATIC_const_QWidget_X(unnamed_arg_0 : QWidget*) : QPalette*
     fun bg_QApplication_palette_STATIC_const_char_X(class_name : UInt8*) : QPalette*
+    fun bg_QApplication_setPalette_STATIC_const_QPalette_R(unnamed_arg_0 : QPalette*) : Void
     fun bg_QApplication_setPalette_STATIC_const_QPalette_R_const_char_X(unnamed_arg_0 : QPalette*, class_name : UInt8*) : Void
     fun bg_QApplication_font_STATIC_() : QFont*
     fun bg_QApplication_font_STATIC_const_QWidget_X(unnamed_arg_0 : QWidget*) : QFont*
     fun bg_QApplication_font_STATIC_const_char_X(class_name : UInt8*) : QFont*
+    fun bg_QApplication_setFont_STATIC_const_QFont_R(unnamed_arg_0 : QFont*) : Void
     fun bg_QApplication_setFont_STATIC_const_QFont_R_const_char_X(unnamed_arg_0 : QFont*, class_name : UInt8*) : Void
     fun bg_QApplication_fontMetrics_STATIC_() : QFontMetrics*
     fun bg_QApplication_setWindowIcon_STATIC_const_QIcon_R(icon : QIcon*) : Void
     fun bg_QApplication_windowIcon_STATIC_() : QIcon*
-    fun bg_QApplication_allWidgets_STATIC_() : Void*
-    fun bg_QApplication_topLevelWidgets_STATIC_() : Void*
+    fun bg_QApplication_allWidgets_STATIC_() : QWidgetList*
+    fun bg_QApplication_topLevelWidgets_STATIC_() : QWidgetList*
     fun bg_QApplication_desktop_STATIC_() : QDesktopWidget*
     fun bg_QApplication_activePopupWidget_STATIC_() : QWidget*
     fun bg_QApplication_activeModalWidget_STATIC_() : QWidget*
@@ -4814,12 +4979,13 @@ module Qt
     fun bg_QApplication_event_QEvent_X(_self_ : QApplication*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X(_self_ : QApplication*, unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*) : Bool
     fun bg_QApplication_CONNECT_focusChanged_CrystalProc_void_QWidget_X_QWidget_X(_self_ : QApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Application_JUMPTABLE_BgJumptable_Application(_self_ : QApplication*, table : Binding::BgJumptable_Application*) : Void
-    fun bg_QImage_CONSTRUCT_() : QImage*
-    fun bg_QImage_CONSTRUCT_const_QSize_R_QImage__Format(size : QSize*, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_int_int_QImage__Format(width : Int32, height : Int32, format : Image::Format) : QImage*
-    fun bg_QImage_CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QImage*
-    fun bg_QImage_CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QImage*
+    fun bg_BgInherit_Application_JUMPTABLE_BgJumptable_Application_R(_self_ : QApplication*, table : Binding::BgJumptable_Application*) : Void
+    fun bg_QImage__CONSTRUCT_() : QImage*
+    fun bg_QImage__CONSTRUCT_const_QSize_R_QImage__Format(size : QSize*, format : Image::Format) : QImage*
+    fun bg_QImage__CONSTRUCT_int_int_QImage__Format(width : Int32, height : Int32, format : Image::Format) : QImage*
+    fun bg_QImage__CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QImage*
+    fun bg_QImage__CONSTRUCT_const_QString_R(file_name : CrystalString) : QImage*
+    fun bg_QImage__CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QImage*
     fun bg_QImage_swap_QImage_R(_self_ : QImage*, other : QImage*) : Void
     fun bg_QImage_isNull_(_self_ : QImage*) : Bool
     fun bg_QImage_devType_(_self_ : QImage*) : Int32
@@ -4890,12 +5056,21 @@ module Qt
     fun bg_QImage_rgbSwapped_(_self_ : QImage*) : QImage*
     fun bg_QImage_invertPixels_QImage__InvertMode(_self_ : QImage*, unnamed_arg_0 : Image::InvertMode) : Void
     fun bg_QImage_load_QIODevice_X_const_char_X(_self_ : QImage*, device : QIODevice*, format : UInt8*) : Bool
+    fun bg_QImage_load_const_QString_R(_self_ : QImage*, file_name : CrystalString) : Bool
     fun bg_QImage_load_const_QString_R_const_char_X(_self_ : QImage*, file_name : CrystalString, format : UInt8*) : Bool
+    fun bg_QImage_loadFromData_const_uchar_X_int(_self_ : QImage*, buf : UInt8*, len : Int32) : Bool
     fun bg_QImage_loadFromData_const_uchar_X_int_const_char_X(_self_ : QImage*, buf : UInt8*, len : Int32, format : UInt8*) : Bool
+    fun bg_QImage_loadFromData_const_QByteArray_R(_self_ : QImage*, data : QByteArray*) : Bool
     fun bg_QImage_loadFromData_const_QByteArray_R_const_char_X(_self_ : QImage*, data : QByteArray*, aformat : UInt8*) : Bool
+    fun bg_QImage_save_const_QString_R(_self_ : QImage*, file_name : CrystalString) : Bool
+    fun bg_QImage_save_const_QString_R_const_char_X(_self_ : QImage*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QImage_save_const_QString_R_const_char_X_int(_self_ : QImage*, file_name : CrystalString, format : UInt8*, quality : Int32) : Bool
+    fun bg_QImage_save_QIODevice_X(_self_ : QImage*, device : QIODevice*) : Bool
+    fun bg_QImage_save_QIODevice_X_const_char_X(_self_ : QImage*, device : QIODevice*, format : UInt8*) : Bool
     fun bg_QImage_save_QIODevice_X_const_char_X_int(_self_ : QImage*, device : QIODevice*, format : UInt8*, quality : Int32) : Bool
+    fun bg_QImage_fromData_STATIC_const_uchar_X_int(data : UInt8*, size : Int32) : QImage*
     fun bg_QImage_fromData_STATIC_const_uchar_X_int_const_char_X(data : UInt8*, size : Int32, format : UInt8*) : QImage*
+    fun bg_QImage_fromData_STATIC_const_QByteArray_R(data : QByteArray*) : QImage*
     fun bg_QImage_fromData_STATIC_const_QByteArray_R_const_char_X(data : QByteArray*, format : UInt8*) : QImage*
     fun bg_QImage_cacheKey_(_self_ : QImage*) : Int64
     fun bg_QImage_paintEngine_(_self_ : QImage*) : QPaintEngine*
@@ -4905,7 +5080,7 @@ module Qt
     fun bg_QImage_setDotsPerMeterY_int(_self_ : QImage*, unnamed_arg_0 : Int32) : Void
     fun bg_QImage_offset_(_self_ : QImage*) : QPoint
     fun bg_QImage_setOffset_const_QPoint_R(_self_ : QImage*, unnamed_arg_0 : QPoint) : Void
-    fun bg_QImage_textKeys_(_self_ : QImage*) : Void*
+    fun bg_QImage_textKeys_(_self_ : QImage*) : QStringList*
     fun bg_QImage_text_const_QString_R(_self_ : QImage*, key : CrystalString) : CrystalString
     fun bg_QImage_setText_const_QString_R_const_QString_R(_self_ : QImage*, key : CrystalString, value : CrystalString) : Void
     fun bg_QImage_pixelFormat_(_self_ : QImage*) : QPixelFormat*
@@ -4921,13 +5096,14 @@ module Qt
     fun bg_QImage_smoothScaled_int_int(_self_ : QImage*, w : Int32, h : Int32) : QImage*
     fun bg_QPaintDevice_initPainter_QPainter_X(_self_ : QImage*, painter : QPainter*) : Void
     fun bg_QPaintDevice_sharedPainter_(_self_ : QImage*) : QPainter*
-    fun bg_QPixmap_CONSTRUCT_() : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_QPlatformPixmap_X(data : QPlatformPixmap*) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_int_int(w : Int32, h : Int32) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_const_QSize_R(unnamed_arg_0 : QSize*) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(file_name : CrystalString, format : UInt8*, flags : ImageConversionFlags) : QPixmap*
-    fun bg_QPixmap_CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_() : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_QPlatformPixmap_X(data : QPlatformPixmap*) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_int_int(w : Int32, h : Int32) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_const_QSize_R(unnamed_arg_0 : QSize*) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_const_QString_R(file_name : CrystalString) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_const_QString_R_const_char_X(file_name : CrystalString, format : UInt8*) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(file_name : CrystalString, format : UInt8*, flags : ImageConversionFlags) : QPixmap*
+    fun bg_QPixmap__CONSTRUCT_const_char_Xconst_X(xpm : UInt8**) : QPixmap*
     fun bg_QPixmap_swap_QPixmap_R(_self_ : QPixmap*, other : QPixmap*) : Void
     fun bg_QPixmap_isNull_(_self_ : QPixmap*) : Bool
     fun bg_QPixmap_devType_(_self_ : QPixmap*) : Int32
@@ -4949,6 +5125,7 @@ module Qt
     fun bg_QPixmap_hasAlphaChannel_(_self_ : QPixmap*) : Bool
     fun bg_QPixmap_createHeuristicMask_bool(_self_ : QPixmap*, clip_tight : Bool) : QBitmap*
     fun bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(_self_ : QPixmap*, mask_color : QColor*, mode : MaskMode) : QBitmap*
+    fun bg_QPixmap_grabWindow_STATIC_WId_int_int_int_int(unnamed_arg_0 : UInt32, x : Int32, y : Int32, w : Int32, h : Int32) : QPixmap*
     fun bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget : QObject*, rect : QRect*) : QPixmap*
     fun bg_QPixmap_grabWidget_STATIC_QObject_X_int_int_int_int(widget : QObject*, x : Int32, y : Int32, w : Int32, h : Int32) : QPixmap*
     fun bg_QPixmap_scaled_int_int_Qt__AspectRatioMode_Qt__TransformationMode(_self_ : QPixmap*, w : Int32, h : Int32, aspect_mode : AspectRatioMode, mode : TransformationMode) : QPixmap*
@@ -4964,13 +5141,20 @@ module Qt
     fun bg_QPixmap_fromImage_STATIC_const_QImage_R_Qt__ImageConversionFlags(image : QImage*, flags : ImageConversionFlags) : QPixmap*
     fun bg_QPixmap_fromImageReader_STATIC_QImageReader_X(image_reader : QImageReader*) : QPixmap*
     fun bg_QPixmap_fromImageReader_STATIC_QImageReader_X_Qt__ImageConversionFlags(image_reader : QImageReader*, flags : ImageConversionFlags) : QPixmap*
+    fun bg_QPixmap_load_const_QString_R(_self_ : QPixmap*, file_name : CrystalString) : Bool
     fun bg_QPixmap_load_const_QString_R_const_char_X(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QPixmap_load_const_QString_R_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*, flags : ImageConversionFlags) : Bool
+    fun bg_QPixmap_loadFromData_const_uchar_X_uint(_self_ : QPixmap*, buf : UInt8*, len : UInt32) : Bool
     fun bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X(_self_ : QPixmap*, buf : UInt8*, len : UInt32, format : UInt8*) : Bool
     fun bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, buf : UInt8*, len : UInt32, format : UInt8*, flags : ImageConversionFlags) : Bool
+    fun bg_QPixmap_loadFromData_const_QByteArray_R(_self_ : QPixmap*, data : QByteArray*) : Bool
     fun bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X(_self_ : QPixmap*, data : QByteArray*, format : UInt8*) : Bool
     fun bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X_Qt__ImageConversionFlags(_self_ : QPixmap*, data : QByteArray*, format : UInt8*, flags : ImageConversionFlags) : Bool
+    fun bg_QPixmap_save_const_QString_R(_self_ : QPixmap*, file_name : CrystalString) : Bool
+    fun bg_QPixmap_save_const_QString_R_const_char_X(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*) : Bool
     fun bg_QPixmap_save_const_QString_R_const_char_X_int(_self_ : QPixmap*, file_name : CrystalString, format : UInt8*, quality : Int32) : Bool
+    fun bg_QPixmap_save_QIODevice_X(_self_ : QPixmap*, device : QIODevice*) : Bool
+    fun bg_QPixmap_save_QIODevice_X_const_char_X(_self_ : QPixmap*, device : QIODevice*, format : UInt8*) : Bool
     fun bg_QPixmap_save_QIODevice_X_const_char_X_int(_self_ : QPixmap*, device : QIODevice*, format : UInt8*, quality : Int32) : Bool
     fun bg_QPixmap_convertFromImage_const_QImage_R(_self_ : QPixmap*, img : QImage*) : Bool
     fun bg_QPixmap_convertFromImage_const_QImage_R_Qt__ImageConversionFlags(_self_ : QPixmap*, img : QImage*, flags : ImageConversionFlags) : Bool
@@ -4990,10 +5174,10 @@ module Qt
     fun bg_QPixmap_handle_(_self_ : QPixmap*) : QPlatformPixmap*
     fun bg_QPaintDevice_initPainter_QPainter_X(_self_ : QPixmap*, painter : QPainter*) : Void
     fun bg_QPaintDevice_sharedPainter_(_self_ : QPixmap*) : QPainter*
-    fun bg_QIcon_CONSTRUCT_() : QIcon*
-    fun bg_QIcon_CONSTRUCT_const_QPixmap_R(pixmap : QPixmap*) : QIcon*
-    fun bg_QIcon_CONSTRUCT_const_QString_R(file_name : CrystalString) : QIcon*
-    fun bg_QIcon_CONSTRUCT_QIconEngine_X(engine : QIconEngine*) : QIcon*
+    fun bg_QIcon__CONSTRUCT_() : QIcon*
+    fun bg_QIcon__CONSTRUCT_const_QPixmap_R(pixmap : QPixmap*) : QIcon*
+    fun bg_QIcon__CONSTRUCT_const_QString_R(file_name : CrystalString) : QIcon*
+    fun bg_QIcon__CONSTRUCT_QIconEngine_X(engine : QIconEngine*) : QIcon*
     fun bg_QIcon_swap_QIcon_R(_self_ : QIcon*, other : QIcon*) : Void
     fun bg_QIcon_pixmap_const_QSize_R_QIcon__Mode_QIcon__State(_self_ : QIcon*, size : QSize*, mode : Icon::Mode, state : Icon::State) : QPixmap*
     fun bg_QIcon_pixmap_int_int_QIcon__Mode_QIcon__State(_self_ : QIcon*, w : Int32, h : Int32, mode : Icon::Mode, state : Icon::State) : QPixmap*
@@ -5025,16 +5209,20 @@ module Qt
     fun bg_QIcon_fromTheme_STATIC_const_QString_R(name : CrystalString) : QIcon*
     fun bg_QIcon_fromTheme_STATIC_const_QString_R_const_QIcon_R(name : CrystalString, fallback : QIcon*) : QIcon*
     fun bg_QIcon_hasThemeIcon_STATIC_const_QString_R(name : CrystalString) : Bool
-    fun bg_QIcon_themeSearchPaths_STATIC_() : Void*
-    fun bg_QIcon_setThemeSearchPaths_STATIC_const_QStringList_R(searchpath : Void*) : Void
+    fun bg_QIcon_themeSearchPaths_STATIC_() : QStringList*
+    fun bg_QIcon_setThemeSearchPaths_STATIC_const_QStringList_R(searchpath : QStringList*) : Void
     fun bg_QIcon_themeName_STATIC_() : CrystalString
     fun bg_QIcon_setThemeName_STATIC_const_QString_R(path : CrystalString) : Void
     fun bg_QEventLoop_metaObject_(_self_ : QEventLoop*) : QMetaObject*
     fun bg_QEventLoop_qt_metacast_const_char_X(_self_ : QEventLoop*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QEventLoop_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QEventLoop*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QEventLoop_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QEventLoop_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QEventLoop_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QEventLoop_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QEventLoop_CONSTRUCT_QObject_X(parent : QObject*) : QEventLoop*
+    fun bg_QEventLoop__CONSTRUCT_QObject_X(parent : QObject*) : QEventLoop*
     fun bg_QEventLoop_processEvents_(_self_ : QEventLoop*) : Bool
     fun bg_QEventLoop_processEvents_QEventLoop__ProcessEventsFlags(_self_ : QEventLoop*, flags : EventLoop::ProcessEventsFlags) : Bool
     fun bg_QEventLoop_processEvents_QEventLoop__ProcessEventsFlags_int(_self_ : QEventLoop*, flags : EventLoop::ProcessEventsFlags, maximum_time : Int32) : Void
@@ -5051,13 +5239,17 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QEventLoop*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QEventLoop*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QEventLoop*, signal : QMetaMethod*) : Void
-    fun bg_BgInherit_EventLoop_JUMPTABLE_BgJumptable_EventLoop(_self_ : QEventLoop*, table : Binding::BgJumptable_EventLoop*) : Void
+    fun bg_BgInherit_EventLoop_JUMPTABLE_BgJumptable_EventLoop_R(_self_ : QEventLoop*, table : Binding::BgJumptable_EventLoop*) : Void
     fun bg_QTabBar_metaObject_(_self_ : QTabBar*) : QMetaObject*
     fun bg_QTabBar_qt_metacast_const_char_X(_self_ : QTabBar*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QTabBar_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QTabBar*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QTabBar_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTabBar_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabBar_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QTabBar_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTabBar_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabBar_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTabBar_CONSTRUCT_QWidget_X(parent : QWidget*) : QTabBar*
+    fun bg_QTabBar__CONSTRUCT_QWidget_X(parent : QWidget*) : QTabBar*
     fun bg_QTabBar_shape_(_self_ : QTabBar*) : TabBar::Shape
     fun bg_QTabBar_setShape_QTabBar__Shape(_self_ : QTabBar*, shape : TabBar::Shape) : Void
     fun bg_QTabBar_addTab_const_QString_R(_self_ : QTabBar*, text : CrystalString) : Int32
@@ -5165,13 +5357,17 @@ module Qt
     fun bg_QTabBar_CONNECT_tabMoved_CrystalProc_void_int_int(_self_ : QTabBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTabBar_CONNECT_tabBarClicked_CrystalProc_void_int(_self_ : QTabBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTabBar_CONNECT_tabBarDoubleClicked_CrystalProc_void_int(_self_ : QTabBar*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_TabBar_JUMPTABLE_BgJumptable_TabBar(_self_ : QTabBar*, table : Binding::BgJumptable_TabBar*) : Void
+    fun bg_BgInherit_TabBar_JUMPTABLE_BgJumptable_TabBar_R(_self_ : QTabBar*, table : Binding::BgJumptable_TabBar*) : Void
     fun bg_QTabWidget_metaObject_(_self_ : QTabWidget*) : QMetaObject*
     fun bg_QTabWidget_qt_metacast_const_char_X(_self_ : QTabWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QTabWidget_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QTabWidget*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QTabWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTabWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QTabWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTabWidget_CONSTRUCT_QWidget_X(parent : QWidget*) : QTabWidget*
+    fun bg_QTabWidget__CONSTRUCT_QWidget_X(parent : QWidget*) : QTabWidget*
     fun bg_QTabWidget_addTab_QWidget_X_const_QString_R(_self_ : QTabWidget*, widget : QWidget*, unnamed_arg_1 : CrystalString) : Int32
     fun bg_QTabWidget_addTab_QWidget_X_const_QIcon_R_const_QString_R(_self_ : QTabWidget*, widget : QWidget*, icon : QIcon*, label : CrystalString) : Int32
     fun bg_QTabWidget_insertTab_int_QWidget_X_const_QString_R(_self_ : QTabWidget*, index : Int32, widget : QWidget*, unnamed_arg_2 : CrystalString) : Int32
@@ -5267,9 +5463,9 @@ module Qt
     fun bg_QTabWidget_CONNECT_tabCloseRequested_CrystalProc_void_int(_self_ : QTabWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTabWidget_CONNECT_tabBarClicked_CrystalProc_void_int(_self_ : QTabWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTabWidget_CONNECT_tabBarDoubleClicked_CrystalProc_void_int(_self_ : QTabWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_TabWidget_JUMPTABLE_BgJumptable_TabWidget(_self_ : QTabWidget*, table : Binding::BgJumptable_TabWidget*) : Void
-    fun bg_QLayoutItem_CONSTRUCT_() : QLayoutItem*
-    fun bg_QLayoutItem_CONSTRUCT_Qt__Alignment(alignment : Alignment) : QLayoutItem*
+    fun bg_BgInherit_TabWidget_JUMPTABLE_BgJumptable_TabWidget_R(_self_ : QTabWidget*, table : Binding::BgJumptable_TabWidget*) : Void
+    fun bg_QLayoutItem__CONSTRUCT_() : QLayoutItem*
+    fun bg_QLayoutItem__CONSTRUCT_Qt__Alignment(alignment : Alignment) : QLayoutItem*
     fun bg_QLayoutItem_sizeHint_(_self_ : QLayoutItem*) : QSize*
     fun bg_QLayoutItem_minimumSize_(_self_ : QLayoutItem*) : QSize*
     fun bg_QLayoutItem_maximumSize_(_self_ : QLayoutItem*) : QSize*
@@ -5287,8 +5483,8 @@ module Qt
     fun bg_QLayoutItem_alignment_(_self_ : QLayoutItem*) : Alignment
     fun bg_QLayoutItem_setAlignment_Qt__Alignment(_self_ : QLayoutItem*, a : Alignment) : Void
     fun bg_QLayoutItem_controlTypes_(_self_ : QLayoutItem*) : SizePolicy::ControlTypes
-    fun bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem(_self_ : QLayoutItem*, table : Binding::BgJumptable_LayoutItem*) : Void
-    fun bg_QSpacerItem_CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w : Int32, h : Int32, h_data : SizePolicy::Policy, v_data : SizePolicy::Policy) : QSpacerItem*
+    fun bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem_R(_self_ : QLayoutItem*, table : Binding::BgJumptable_LayoutItem*) : Void
+    fun bg_QSpacerItem__CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w : Int32, h : Int32, h_data : SizePolicy::Policy, v_data : SizePolicy::Policy) : QSpacerItem*
     fun bg_QSpacerItem_changeSize_int_int_QSizePolicy__Policy_QSizePolicy__Policy(_self_ : QSpacerItem*, w : Int32, h : Int32, h_data : SizePolicy::Policy, v_data : SizePolicy::Policy) : Void
     fun bg_QSpacerItem_sizeHint_(_self_ : QSpacerItem*) : QSize*
     fun bg_QSpacerItem_minimumSize_(_self_ : QSpacerItem*) : QSize*
@@ -5306,8 +5502,8 @@ module Qt
     fun bg_QLayoutItem_widget_(_self_ : QSpacerItem*) : QWidget*
     fun bg_QLayoutItem_layout_(_self_ : QSpacerItem*) : QLayout*
     fun bg_QLayoutItem_controlTypes_(_self_ : QSpacerItem*) : SizePolicy::ControlTypes
-    fun bg_BgInherit_SpacerItem_JUMPTABLE_BgJumptable_SpacerItem(_self_ : QSpacerItem*, table : Binding::BgJumptable_SpacerItem*) : Void
-    fun bg_QWidgetItem_CONSTRUCT_QWidget_X(w : QWidget*) : QWidgetItem*
+    fun bg_BgInherit_SpacerItem_JUMPTABLE_BgJumptable_SpacerItem_R(_self_ : QSpacerItem*, table : Binding::BgJumptable_SpacerItem*) : Void
+    fun bg_QWidgetItem__CONSTRUCT_QWidget_X(w : QWidget*) : QWidgetItem*
     fun bg_QWidgetItem_sizeHint_(_self_ : QWidgetItem*) : QSize*
     fun bg_QWidgetItem_minimumSize_(_self_ : QWidgetItem*) : QSize*
     fun bg_QWidgetItem_maximumSize_(_self_ : QWidgetItem*) : QSize*
@@ -5323,14 +5519,18 @@ module Qt
     fun bg_QLayoutItem_invalidate_(_self_ : QWidgetItem*) : Void
     fun bg_QLayoutItem_layout_(_self_ : QWidgetItem*) : QLayout*
     fun bg_QLayoutItem_spacerItem_(_self_ : QWidgetItem*) : QSpacerItem*
-    fun bg_BgInherit_WidgetItem_JUMPTABLE_BgJumptable_WidgetItem(_self_ : QWidgetItem*, table : Binding::BgJumptable_WidgetItem*) : Void
+    fun bg_BgInherit_WidgetItem_JUMPTABLE_BgJumptable_WidgetItem_R(_self_ : QWidgetItem*, table : Binding::BgJumptable_WidgetItem*) : Void
     fun bg_QLayout_metaObject_(_self_ : QLayout*) : QMetaObject*
     fun bg_QLayout_qt_metacast_const_char_X(_self_ : QLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QLayout*
-    fun bg_QLayout_CONSTRUCT_() : QLayout*
+    fun bg_QLayout__CONSTRUCT_QWidget_X(parent : QWidget*) : QLayout*
+    fun bg_QLayout__CONSTRUCT_() : QLayout*
     fun bg_QLayout_margin_(_self_ : QLayout*) : Int32
     fun bg_QLayout_spacing_(_self_ : QLayout*) : Int32
     fun bg_QLayout_setMargin_int(_self_ : QLayout*, unnamed_arg_0 : Int32) : Void
@@ -5381,7 +5581,7 @@ module Qt
     fun bg_QLayout_addChildWidget_QWidget_X(_self_ : QLayout*, w : QWidget*) : Void
     fun bg_QLayout_adoptLayout_QLayout_X(_self_ : QLayout*, layout : QLayout*) : Bool
     fun bg_QLayout_alignmentRect_const_QRect_R(_self_ : QLayout*, unnamed_arg_0 : QRect*) : QRect*
-    fun bg_QLayout_CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d : QLayoutPrivate*, unnamed_arg_1 : QLayout*, unnamed_arg_2 : QWidget*) : QLayout*
+    fun bg_QLayout__CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d : QLayoutPrivate*, unnamed_arg_1 : QLayout*, unnamed_arg_2 : QWidget*) : QLayout*
     fun bg_QLayout_AS_LayoutItem_(_self_ : QLayout*) : QLayoutItem*
     fun bg_QObject_event_QEvent_X(_self_ : QLayout*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QLayout*, watched : QObject*, event : QEvent*) : Bool
@@ -5395,13 +5595,17 @@ module Qt
     fun bg_QLayoutItem_minimumHeightForWidth_int(_self_ : QLayout*, unnamed_arg_0 : Int32) : Int32
     fun bg_QLayoutItem_widget_(_self_ : QLayout*) : QWidget*
     fun bg_QLayoutItem_spacerItem_(_self_ : QLayout*) : QSpacerItem*
-    fun bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout(_self_ : QLayout*, table : Binding::BgJumptable_Layout*) : Void
+    fun bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout_R(_self_ : QLayout*, table : Binding::BgJumptable_Layout*) : Void
     fun bg_QBoxLayout_metaObject_(_self_ : QBoxLayout*) : QMetaObject*
     fun bg_QBoxLayout_qt_metacast_const_char_X(_self_ : QBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QBoxLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0 : BoxLayout::Direction, parent : QWidget*) : QBoxLayout*
+    fun bg_QBoxLayout__CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0 : BoxLayout::Direction, parent : QWidget*) : QBoxLayout*
     fun bg_QBoxLayout_direction_(_self_ : QBoxLayout*) : BoxLayout::Direction
     fun bg_QBoxLayout_setDirection_QBoxLayout__Direction(_self_ : QBoxLayout*, unnamed_arg_0 : BoxLayout::Direction) : Void
     fun bg_QBoxLayout_addSpacing_int(_self_ : QBoxLayout*, size : Int32) : Void
@@ -5443,14 +5647,18 @@ module Qt
     fun bg_QLayout_controlTypes_(_self_ : QBoxLayout*) : SizePolicy::ControlTypes
     fun bg_QLayout_layout_(_self_ : QBoxLayout*) : QLayout*
     fun bg_QLayout_childEvent_QChildEvent_X(_self_ : QBoxLayout*, e : QChildEvent*) : Void
-    fun bg_BgInherit_BoxLayout_JUMPTABLE_BgJumptable_BoxLayout(_self_ : QBoxLayout*, table : Binding::BgJumptable_BoxLayout*) : Void
+    fun bg_BgInherit_BoxLayout_JUMPTABLE_BgJumptable_BoxLayout_R(_self_ : QBoxLayout*, table : Binding::BgJumptable_BoxLayout*) : Void
     fun bg_QHBoxLayout_metaObject_(_self_ : QHBoxLayout*) : QMetaObject*
     fun bg_QHBoxLayout_qt_metacast_const_char_X(_self_ : QHBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QHBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QHBoxLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QHBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QHBoxLayout_CONSTRUCT_() : QHBoxLayout*
-    fun bg_QHBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QHBoxLayout*
+    fun bg_QHBoxLayout__CONSTRUCT_() : QHBoxLayout*
+    fun bg_QHBoxLayout__CONSTRUCT_QWidget_X(parent : QWidget*) : QHBoxLayout*
     fun bg_QBoxLayout_addItem_QLayoutItem_X(_self_ : QHBoxLayout*, unnamed_arg_0 : QLayoutItem*) : Void
     fun bg_QBoxLayout_sizeHint_(_self_ : QHBoxLayout*) : QSize*
     fun bg_QBoxLayout_minimumSize_(_self_ : QHBoxLayout*) : QSize*
@@ -5464,14 +5672,18 @@ module Qt
     fun bg_QBoxLayout_takeAt_int(_self_ : QHBoxLayout*, unnamed_arg_0 : Int32) : QLayoutItem*
     fun bg_QBoxLayout_count_(_self_ : QHBoxLayout*) : Int32
     fun bg_QBoxLayout_setGeometry_const_QRect_R(_self_ : QHBoxLayout*, unnamed_arg_0 : QRect*) : Void
-    fun bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout(_self_ : QHBoxLayout*, table : Binding::BgJumptable_HBoxLayout*) : Void
+    fun bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout_R(_self_ : QHBoxLayout*, table : Binding::BgJumptable_HBoxLayout*) : Void
     fun bg_QVBoxLayout_metaObject_(_self_ : QVBoxLayout*) : QMetaObject*
     fun bg_QVBoxLayout_qt_metacast_const_char_X(_self_ : QVBoxLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QVBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QVBoxLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QVBoxLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QVBoxLayout_CONSTRUCT_() : QVBoxLayout*
-    fun bg_QVBoxLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QVBoxLayout*
+    fun bg_QVBoxLayout__CONSTRUCT_() : QVBoxLayout*
+    fun bg_QVBoxLayout__CONSTRUCT_QWidget_X(parent : QWidget*) : QVBoxLayout*
     fun bg_QBoxLayout_addItem_QLayoutItem_X(_self_ : QVBoxLayout*, unnamed_arg_0 : QLayoutItem*) : Void
     fun bg_QBoxLayout_sizeHint_(_self_ : QVBoxLayout*) : QSize*
     fun bg_QBoxLayout_minimumSize_(_self_ : QVBoxLayout*) : QSize*
@@ -5485,14 +5697,18 @@ module Qt
     fun bg_QBoxLayout_takeAt_int(_self_ : QVBoxLayout*, unnamed_arg_0 : Int32) : QLayoutItem*
     fun bg_QBoxLayout_count_(_self_ : QVBoxLayout*) : Int32
     fun bg_QBoxLayout_setGeometry_const_QRect_R(_self_ : QVBoxLayout*, unnamed_arg_0 : QRect*) : Void
-    fun bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout(_self_ : QVBoxLayout*, table : Binding::BgJumptable_VBoxLayout*) : Void
+    fun bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout_R(_self_ : QVBoxLayout*, table : Binding::BgJumptable_VBoxLayout*) : Void
     fun bg_QGridLayout_metaObject_(_self_ : QGridLayout*) : QMetaObject*
     fun bg_QGridLayout_qt_metacast_const_char_X(_self_ : QGridLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGridLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGridLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGridLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGridLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGridLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGridLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QGridLayout*
-    fun bg_QGridLayout_CONSTRUCT_() : QGridLayout*
+    fun bg_QGridLayout__CONSTRUCT_QWidget_X(parent : QWidget*) : QGridLayout*
+    fun bg_QGridLayout__CONSTRUCT_() : QGridLayout*
     fun bg_QGridLayout_sizeHint_(_self_ : QGridLayout*) : QSize*
     fun bg_QGridLayout_minimumSize_(_self_ : QGridLayout*) : QSize*
     fun bg_QGridLayout_maximumSize_(_self_ : QGridLayout*) : QSize*
@@ -5545,15 +5761,19 @@ module Qt
     fun bg_QLayout_controlTypes_(_self_ : QGridLayout*) : SizePolicy::ControlTypes
     fun bg_QLayout_layout_(_self_ : QGridLayout*) : QLayout*
     fun bg_QLayout_childEvent_QChildEvent_X(_self_ : QGridLayout*, e : QChildEvent*) : Void
-    fun bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout(_self_ : QGridLayout*, table : Binding::BgJumptable_GridLayout*) : Void
+    fun bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout_R(_self_ : QGridLayout*, table : Binding::BgJumptable_GridLayout*) : Void
     fun bg_QStackedLayout_metaObject_(_self_ : QStackedLayout*) : QMetaObject*
     fun bg_QStackedLayout_qt_metacast_const_char_X(_self_ : QStackedLayout*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QStackedLayout*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QStackedLayout_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QStackedLayout_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QStackedLayout_CONSTRUCT_() : QStackedLayout*
-    fun bg_QStackedLayout_CONSTRUCT_QWidget_X(parent : QWidget*) : QStackedLayout*
-    fun bg_QStackedLayout_CONSTRUCT_QLayout_X(parent_layout : QLayout*) : QStackedLayout*
+    fun bg_QStackedLayout__CONSTRUCT_() : QStackedLayout*
+    fun bg_QStackedLayout__CONSTRUCT_QWidget_X(parent : QWidget*) : QStackedLayout*
+    fun bg_QStackedLayout__CONSTRUCT_QLayout_X(parent_layout : QLayout*) : QStackedLayout*
     fun bg_QStackedLayout_addWidget_QWidget_X(_self_ : QStackedLayout*, w : QWidget*) : Int32
     fun bg_QStackedLayout_insertWidget_int_QWidget_X(_self_ : QStackedLayout*, index : Int32, w : QWidget*) : Int32
     fun bg_QStackedLayout_currentWidget_(_self_ : QStackedLayout*) : QWidget*
@@ -5585,13 +5805,13 @@ module Qt
     fun bg_QLayout_childEvent_QChildEvent_X(_self_ : QStackedLayout*, e : QChildEvent*) : Void
     fun bg_QStackedLayout_CONNECT_widgetRemoved_CrystalProc_void_int(_self_ : QStackedLayout*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QStackedLayout_CONNECT_currentChanged_CrystalProc_void_int(_self_ : QStackedLayout*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout(_self_ : QStackedLayout*, table : Binding::BgJumptable_StackedLayout*) : Void
-    fun bg_QPalette_CONSTRUCT_() : QPalette*
-    fun bg_QPalette_CONSTRUCT_const_QColor_R(button : QColor*) : QPalette*
-    fun bg_QPalette_CONSTRUCT_Qt__GlobalColor(button : GlobalColor) : QPalette*
-    fun bg_QPalette_CONSTRUCT_const_QColor_R_const_QColor_R(button : QColor*, window : QColor*) : QPalette*
-    fun bg_QPalette_CONSTRUCT_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R(window_text : QBrush*, button : QBrush*, light : QBrush*, dark : QBrush*, mid : QBrush*, text : QBrush*, bright_text : QBrush*, base : QBrush*, window : QBrush*) : QPalette*
-    fun bg_QPalette_CONSTRUCT_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R(window_text : QColor*, window : QColor*, light : QColor*, dark : QColor*, mid : QColor*, text : QColor*, base : QColor*) : QPalette*
+    fun bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout_R(_self_ : QStackedLayout*, table : Binding::BgJumptable_StackedLayout*) : Void
+    fun bg_QPalette__CONSTRUCT_() : QPalette*
+    fun bg_QPalette__CONSTRUCT_const_QColor_R(button : QColor*) : QPalette*
+    fun bg_QPalette__CONSTRUCT_Qt__GlobalColor(button : GlobalColor) : QPalette*
+    fun bg_QPalette__CONSTRUCT_const_QColor_R_const_QColor_R(button : QColor*, window : QColor*) : QPalette*
+    fun bg_QPalette__CONSTRUCT_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R(window_text : QBrush*, button : QBrush*, light : QBrush*, dark : QBrush*, mid : QBrush*, text : QBrush*, bright_text : QBrush*, base : QBrush*, window : QBrush*) : QPalette*
+    fun bg_QPalette__CONSTRUCT_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R(window_text : QColor*, window : QColor*, light : QColor*, dark : QColor*, mid : QColor*, text : QColor*, base : QColor*) : QPalette*
     fun bg_QPalette_swap_QPalette_R(_self_ : QPalette*, other : QPalette*) : Void
     fun bg_QPalette_currentColorGroup_(_self_ : QPalette*) : Palette::ColorGroup
     fun bg_QPalette_setCurrentColorGroup_QPalette__ColorGroup(_self_ : QPalette*, cg : Palette::ColorGroup) : Void
@@ -5632,10 +5852,10 @@ module Qt
     fun bg_QPalette_resolve_const_QPalette_R(_self_ : QPalette*, unnamed_arg_0 : QPalette*) : QPalette*
     fun bg_QPalette_resolve_(_self_ : QPalette*) : UInt32
     fun bg_QPalette_resolve_uint(_self_ : QPalette*, mask : UInt32) : Void
-    fun bg_QRect_CONSTRUCT_() : QRect*
-    fun bg_QRect_CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft : QPoint, bottomright : QPoint) : QRect*
-    fun bg_QRect_CONSTRUCT_const_QPoint_R_const_QSize_R(topleft : QPoint, size : QSize*) : QRect*
-    fun bg_QRect_CONSTRUCT_int_int_int_int(left : Int32, top : Int32, width : Int32, height : Int32) : QRect*
+    fun bg_QRect__CONSTRUCT_() : QRect*
+    fun bg_QRect__CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft : QPoint, bottomright : QPoint) : QRect*
+    fun bg_QRect__CONSTRUCT_const_QPoint_R_const_QSize_R(topleft : QPoint, size : QSize*) : QRect*
+    fun bg_QRect__CONSTRUCT_int_int_int_int(left : Int32, top : Int32, width : Int32, height : Int32) : QRect*
     fun bg_QRect_isNull_(_self_ : QRect*) : Bool
     fun bg_QRect_isEmpty_(_self_ : QRect*) : Bool
     fun bg_QRect_isValid_(_self_ : QRect*) : Bool
@@ -5698,11 +5918,11 @@ module Qt
     fun bg_QRect_intersects_const_QRect_R(_self_ : QRect*, r : QRect*) : Bool
     fun bg_QRect_marginsAdded_const_QMargins_R(_self_ : QRect*, margins : QMargins*) : QRect*
     fun bg_QRect_marginsRemoved_const_QMargins_R(_self_ : QRect*, margins : QMargins*) : QRect*
-    fun bg_QRectF_CONSTRUCT_() : QRectF*
-    fun bg_QRectF_CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft : QPointF, size : QSizeF*) : QRectF*
-    fun bg_QRectF_CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft : QPointF, bottom_right : QPointF) : QRectF*
-    fun bg_QRectF_CONSTRUCT_qreal_qreal_qreal_qreal(left : Float64, top : Float64, width : Float64, height : Float64) : QRectF*
-    fun bg_QRectF_CONSTRUCT_const_QRect_R(rect : QRect*) : QRectF*
+    fun bg_QRectF__CONSTRUCT_() : QRectF*
+    fun bg_QRectF__CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft : QPointF, size : QSizeF*) : QRectF*
+    fun bg_QRectF__CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft : QPointF, bottom_right : QPointF) : QRectF*
+    fun bg_QRectF__CONSTRUCT_qreal_qreal_qreal_qreal(left : Float64, top : Float64, width : Float64, height : Float64) : QRectF*
+    fun bg_QRectF__CONSTRUCT_const_QRect_R(rect : QRect*) : QRectF*
     fun bg_QRectF_isNull_(_self_ : QRectF*) : Bool
     fun bg_QRectF_isEmpty_(_self_ : QRectF*) : Bool
     fun bg_QRectF_isValid_(_self_ : QRectF*) : Bool
@@ -5766,10 +5986,10 @@ module Qt
     fun bg_QRectF_marginsRemoved_const_QMarginsF_R(_self_ : QRectF*, margins : QMarginsF*) : QRectF*
     fun bg_QRectF_toRect_(_self_ : QRectF*) : QRect*
     fun bg_QRectF_toAlignedRect_(_self_ : QRectF*) : QRect*
-    fun bg_QKeySequence_CONSTRUCT_() : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(key : CrystalString, format : KeySequence::SequenceFormat) : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_int_int_int_int(k1 : Int32, k2 : Int32, k3 : Int32, k4 : Int32) : QKeySequence*
-    fun bg_QKeySequence_CONSTRUCT_QKeySequence__StandardKey(key : KeySequence::StandardKey) : QKeySequence*
+    fun bg_QKeySequence__CONSTRUCT_() : QKeySequence*
+    fun bg_QKeySequence__CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(key : CrystalString, format : KeySequence::SequenceFormat) : QKeySequence*
+    fun bg_QKeySequence__CONSTRUCT_int_int_int_int(k1 : Int32, k2 : Int32, k3 : Int32, k4 : Int32) : QKeySequence*
+    fun bg_QKeySequence__CONSTRUCT_QKeySequence__StandardKey(key : KeySequence::StandardKey) : QKeySequence*
     fun bg_QKeySequence_count_(_self_ : QKeySequence*) : Int32
     fun bg_QKeySequence_isEmpty_(_self_ : QKeySequence*) : Bool
     fun bg_QKeySequence_toString_QKeySequence__SequenceFormat(_self_ : QKeySequence*, format : KeySequence::SequenceFormat) : CrystalString
@@ -5784,10 +6004,14 @@ module Qt
     fun bg_QLineEdit_metaObject_(_self_ : QLineEdit*) : QMetaObject*
     fun bg_QLineEdit_qt_metacast_const_char_X(_self_ : QLineEdit*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QLineEdit_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QLineEdit*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QLineEdit_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLineEdit_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLineEdit_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QLineEdit_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QLineEdit_CONSTRUCT_QWidget_X(parent : QWidget*) : QLineEdit*
-    fun bg_QLineEdit_CONSTRUCT_const_QString_R_QWidget_X(unnamed_arg_0 : CrystalString, parent : QWidget*) : QLineEdit*
+    fun bg_QLineEdit__CONSTRUCT_QWidget_X(parent : QWidget*) : QLineEdit*
+    fun bg_QLineEdit__CONSTRUCT_const_QString_R_QWidget_X(unnamed_arg_0 : CrystalString, parent : QWidget*) : QLineEdit*
     fun bg_QLineEdit_text_(_self_ : QLineEdit*) : CrystalString
     fun bg_QLineEdit_displayText_(_self_ : QLineEdit*) : CrystalString
     fun bg_QLineEdit_placeholderText_(_self_ : QLineEdit*) : CrystalString
@@ -5904,14 +6128,18 @@ module Qt
     fun bg_QLineEdit_CONNECT_returnPressed_CrystalProc_void(_self_ : QLineEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QLineEdit_CONNECT_editingFinished_CrystalProc_void(_self_ : QLineEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QLineEdit_CONNECT_selectionChanged_CrystalProc_void(_self_ : QLineEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit(_self_ : QLineEdit*, table : Binding::BgJumptable_LineEdit*) : Void
+    fun bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit_R(_self_ : QLineEdit*, table : Binding::BgJumptable_LineEdit*) : Void
     fun bg_QTextEdit_metaObject_(_self_ : QTextEdit*) : QMetaObject*
     fun bg_QTextEdit_qt_metacast_const_char_X(_self_ : QTextEdit*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QTextEdit_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QTextEdit*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QTextEdit_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTextEdit_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextEdit_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QTextEdit_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextEdit_CONSTRUCT_QWidget_X(parent : QWidget*) : QTextEdit*
-    fun bg_QTextEdit_CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QTextEdit*
+    fun bg_QTextEdit__CONSTRUCT_QWidget_X(parent : QWidget*) : QTextEdit*
+    fun bg_QTextEdit__CONSTRUCT_const_QString_R_QWidget_X(text : CrystalString, parent : QWidget*) : QTextEdit*
     fun bg_QTextEdit_setDocument_QTextDocument_X(_self_ : QTextEdit*, document : QTextDocument*) : Void
     fun bg_QTextEdit_document_(_self_ : QTextEdit*) : QTextDocument*
     fun bg_QTextEdit_setPlaceholderText_const_QString_R(_self_ : QTextEdit*, placeholder_text : CrystalString) : Void
@@ -6029,7 +6257,7 @@ module Qt
     fun bg_QTextEdit_canInsertFromMimeData_const_QMimeData_X(_self_ : QTextEdit*, source : QMimeData*) : Bool
     fun bg_QTextEdit_insertFromMimeData_const_QMimeData_X(_self_ : QTextEdit*, source : QMimeData*) : Void
     fun bg_QTextEdit_inputMethodEvent_QInputMethodEvent_X(_self_ : QTextEdit*, unnamed_arg_0 : QInputMethodEvent*) : Void
-    fun bg_QTextEdit_CONSTRUCT_QTextEditPrivate_R_QWidget_X(dd : QTextEditPrivate*, parent : QWidget*) : QTextEdit*
+    fun bg_QTextEdit__CONSTRUCT_QTextEditPrivate_R_QWidget_X(dd : QTextEditPrivate*, parent : QWidget*) : QTextEdit*
     fun bg_QTextEdit_scrollContentsBy_int_int(_self_ : QTextEdit*, dx : Int32, dy : Int32) : Void
     fun bg_QTextEdit_doSetTextCursor_const_QTextCursor_R(_self_ : QTextEdit*, cursor : QTextCursor*) : Void
     fun bg_QTextEdit_zoomInF_float(_self_ : QTextEdit*, range : Float32) : Void
@@ -6046,33 +6274,37 @@ module Qt
     fun bg_QTextEdit_CONNECT_copyAvailable_CrystalProc_void_bool(_self_ : QTextEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTextEdit_CONNECT_selectionChanged_CrystalProc_void(_self_ : QTextEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTextEdit_CONNECT_cursorPositionChanged_CrystalProc_void(_self_ : QTextEdit*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit(_self_ : QTextEdit*, table : Binding::BgJumptable_TextEdit*) : Void
+    fun bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit_R(_self_ : QTextEdit*, table : Binding::BgJumptable_TextEdit*) : Void
     fun bg_QFileDialog_metaObject_(_self_ : QFileDialog*) : QMetaObject*
     fun bg_QFileDialog_qt_metacast_const_char_X(_self_ : QFileDialog*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QFileDialog_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QFileDialog*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QFileDialog_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QFileDialog_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFileDialog_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QFileDialog_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QFileDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFileDialog*
-    fun bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, directory : CrystalString, filter : CrystalString) : QFileDialog*
+    fun bg_QFileDialog__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent : QWidget*, f : WindowFlags) : QFileDialog*
+    fun bg_QFileDialog__CONSTRUCT_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent : QWidget*, caption : CrystalString, directory : CrystalString, filter : CrystalString) : QFileDialog*
     fun bg_QFileDialog_setDirectory_const_QString_R(_self_ : QFileDialog*, directory : CrystalString) : Void
     fun bg_QFileDialog_setDirectory_const_QDir_R(_self_ : QFileDialog*, directory : QDir*) : Void
     fun bg_QFileDialog_directory_(_self_ : QFileDialog*) : QDir*
     fun bg_QFileDialog_setDirectoryUrl_const_QUrl_R(_self_ : QFileDialog*, directory : QUrl*) : Void
     fun bg_QFileDialog_directoryUrl_(_self_ : QFileDialog*) : QUrl*
     fun bg_QFileDialog_selectFile_const_QString_R(_self_ : QFileDialog*, filename : CrystalString) : Void
-    fun bg_QFileDialog_selectedFiles_(_self_ : QFileDialog*) : Void*
+    fun bg_QFileDialog_selectedFiles_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_selectUrl_const_QUrl_R(_self_ : QFileDialog*, url : QUrl*) : Void
     fun bg_QFileDialog_selectedUrls_(_self_ : QFileDialog*) : Void*
     fun bg_QFileDialog_setNameFilterDetailsVisible_bool(_self_ : QFileDialog*, enabled : Bool) : Void
     fun bg_QFileDialog_isNameFilterDetailsVisible_(_self_ : QFileDialog*) : Bool
     fun bg_QFileDialog_setNameFilter_const_QString_R(_self_ : QFileDialog*, filter : CrystalString) : Void
-    fun bg_QFileDialog_setNameFilters_const_QStringList_R(_self_ : QFileDialog*, filters : Void*) : Void
-    fun bg_QFileDialog_nameFilters_(_self_ : QFileDialog*) : Void*
+    fun bg_QFileDialog_setNameFilters_const_QStringList_R(_self_ : QFileDialog*, filters : QStringList*) : Void
+    fun bg_QFileDialog_nameFilters_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_selectNameFilter_const_QString_R(_self_ : QFileDialog*, filter : CrystalString) : Void
     fun bg_QFileDialog_selectedMimeTypeFilter_(_self_ : QFileDialog*) : CrystalString
     fun bg_QFileDialog_selectedNameFilter_(_self_ : QFileDialog*) : CrystalString
-    fun bg_QFileDialog_setMimeTypeFilters_const_QStringList_R(_self_ : QFileDialog*, filters : Void*) : Void
-    fun bg_QFileDialog_mimeTypeFilters_(_self_ : QFileDialog*) : Void*
+    fun bg_QFileDialog_setMimeTypeFilters_const_QStringList_R(_self_ : QFileDialog*, filters : QStringList*) : Void
+    fun bg_QFileDialog_mimeTypeFilters_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_selectMimeTypeFilter_const_QString_R(_self_ : QFileDialog*, filter : CrystalString) : Void
     fun bg_QFileDialog_filter_(_self_ : QFileDialog*) : Dir::Filters
     fun bg_QFileDialog_setFilter_QDir__Filters(_self_ : QFileDialog*, filters : Dir::Filters) : Void
@@ -6094,16 +6326,16 @@ module Qt
     fun bg_QFileDialog_confirmOverwrite_(_self_ : QFileDialog*) : Bool
     fun bg_QFileDialog_setDefaultSuffix_const_QString_R(_self_ : QFileDialog*, suffix : CrystalString) : Void
     fun bg_QFileDialog_defaultSuffix_(_self_ : QFileDialog*) : CrystalString
-    fun bg_QFileDialog_setHistory_const_QStringList_R(_self_ : QFileDialog*, paths : Void*) : Void
-    fun bg_QFileDialog_history_(_self_ : QFileDialog*) : Void*
+    fun bg_QFileDialog_setHistory_const_QStringList_R(_self_ : QFileDialog*, paths : QStringList*) : Void
+    fun bg_QFileDialog_history_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_setItemDelegate_QAbstractItemDelegate_X(_self_ : QFileDialog*, delegate : QAbstractItemDelegate*) : Void
     fun bg_QFileDialog_itemDelegate_(_self_ : QFileDialog*) : QAbstractItemDelegate*
     fun bg_QFileDialog_setIconProvider_QFileIconProvider_X(_self_ : QFileDialog*, provider : QFileIconProvider*) : Void
     fun bg_QFileDialog_iconProvider_(_self_ : QFileDialog*) : QFileIconProvider*
     fun bg_QFileDialog_setLabelText_QFileDialog__DialogLabel_const_QString_R(_self_ : QFileDialog*, label : FileDialog::DialogLabel, text : CrystalString) : Void
     fun bg_QFileDialog_labelText_QFileDialog__DialogLabel(_self_ : QFileDialog*, label : FileDialog::DialogLabel) : CrystalString
-    fun bg_QFileDialog_setSupportedSchemes_const_QStringList_R(_self_ : QFileDialog*, schemes : Void*) : Void
-    fun bg_QFileDialog_supportedSchemes_(_self_ : QFileDialog*) : Void*
+    fun bg_QFileDialog_setSupportedSchemes_const_QStringList_R(_self_ : QFileDialog*, schemes : QStringList*) : Void
+    fun bg_QFileDialog_supportedSchemes_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_setProxyModel_QAbstractProxyModel_X(_self_ : QFileDialog*, model : QAbstractProxyModel*) : Void
     fun bg_QFileDialog_proxyModel_(_self_ : QFileDialog*) : QAbstractProxyModel*
     fun bg_QFileDialog_setOption_QFileDialog__Option_bool(_self_ : QFileDialog*, option : FileDialog::Option, on : Bool) : Void
@@ -6113,7 +6345,7 @@ module Qt
     fun bg_QFileDialog_open_QObject_X_const_char_X(_self_ : QFileDialog*, receiver : QObject*, member : UInt8*) : Void
     fun bg_QFileDialog_setVisible_bool(_self_ : QFileDialog*, visible : Bool) : Void
     fun bg_QFileDialog_fileSelected_const_QString_R(_self_ : QFileDialog*, file : CrystalString) : Void
-    fun bg_QFileDialog_filesSelected_const_QStringList_R(_self_ : QFileDialog*, files : Void*) : Void
+    fun bg_QFileDialog_filesSelected_const_QStringList_R(_self_ : QFileDialog*, files : QStringList*) : Void
     fun bg_QFileDialog_currentChanged_const_QString_R(_self_ : QFileDialog*, path : CrystalString) : Void
     fun bg_QFileDialog_directoryEntered_const_QString_R(_self_ : QFileDialog*, directory : CrystalString) : Void
     fun bg_QFileDialog_urlSelected_const_QUrl_R(_self_ : QFileDialog*, url : QUrl*) : Void
@@ -6132,11 +6364,11 @@ module Qt
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : QUrl*
     fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options(parent : QWidget*, caption : CrystalString, dir : QUrl*, options : FileDialog::Options) : QUrl*
-    fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, options : FileDialog::Options, supported_schemes : Void*) : QUrl*
+    fun bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, options : FileDialog::Options, supported_schemes : QStringList*) : QUrl*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R(parent : QWidget*, caption : CrystalString) : Void*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R_const_QUrl_R(parent : QWidget*, caption : CrystalString, dir : QUrl*) : Void*
     fun bg_QFileDialog_getOpenFileUrls_STATIC_QWidget_X_const_QString_R_const_QUrl_R_const_QString_R(parent : QWidget*, caption : CrystalString, dir : QUrl*, filter : CrystalString) : Void*
-    fun bg_QFileDialog_CONSTRUCT_const_QFileDialogArgs_R(args : QFileDialogArgs*) : QFileDialog*
+    fun bg_QFileDialog__CONSTRUCT_const_QFileDialogArgs_R(args : QFileDialogArgs*) : QFileDialog*
     fun bg_QFileDialog_done_int(_self_ : QFileDialog*, result : Int32) : Void
     fun bg_QFileDialog_accept_(_self_ : QFileDialog*) : Void
     fun bg_QFileDialog_changeEvent_QEvent_X(_self_ : QFileDialog*, e : QEvent*) : Void
@@ -6160,9 +6392,9 @@ module Qt
     fun bg_QFileDialog_CONNECT_currentUrlChanged_CrystalProc_void_const_QUrl_R(_self_ : QFileDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QFileDialog_CONNECT_directoryUrlEntered_CrystalProc_void_const_QUrl_R(_self_ : QFileDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QFileDialog_CONNECT_filterSelected_CrystalProc_void_const_QString_R(_self_ : QFileDialog*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog(_self_ : QFileDialog*, table : Binding::BgJumptable_FileDialog*) : Void
-    fun bg_QTextOption_CONSTRUCT_() : QTextOption*
-    fun bg_QTextOption_CONSTRUCT_Qt__Alignment(alignment : Alignment) : QTextOption*
+    fun bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog_R(_self_ : QFileDialog*, table : Binding::BgJumptable_FileDialog*) : Void
+    fun bg_QTextOption__CONSTRUCT_() : QTextOption*
+    fun bg_QTextOption__CONSTRUCT_Qt__Alignment(alignment : Alignment) : QTextOption*
     fun bg_QTextOption_setAlignment_Qt__Alignment(_self_ : QTextOption*, alignment : Alignment) : Void
     fun bg_QTextOption_alignment_(_self_ : QTextOption*) : Alignment
     fun bg_QTextOption_setTextDirection_Qt__LayoutDirection(_self_ : QTextOption*, a_direction : LayoutDirection) : Void
@@ -6180,10 +6412,14 @@ module Qt
     fun bg_QTextDocument_metaObject_(_self_ : QTextDocument*) : QMetaObject*
     fun bg_QTextDocument_qt_metacast_const_char_X(_self_ : QTextDocument*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QTextDocument_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QTextDocument*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QTextDocument_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTextDocument_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextDocument_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QTextDocument_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QTextDocument_CONSTRUCT_QObject_X(parent : QObject*) : QTextDocument*
-    fun bg_QTextDocument_CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QTextDocument*
+    fun bg_QTextDocument__CONSTRUCT_QObject_X(parent : QObject*) : QTextDocument*
+    fun bg_QTextDocument__CONSTRUCT_const_QString_R_QObject_X(text : CrystalString, parent : QObject*) : QTextDocument*
     fun bg_QTextDocument_clone_QObject_X(_self_ : QTextDocument*, parent : QObject*) : QTextDocument*
     fun bg_QTextDocument_isEmpty_(_self_ : QTextDocument*) : Bool
     fun bg_QTextDocument_clear_(_self_ : QTextDocument*) : Void
@@ -6281,7 +6517,7 @@ module Qt
     fun bg_QTextDocument_appendUndoItem_QAbstractUndoItem_X(_self_ : QTextDocument*, unnamed_arg_0 : QAbstractUndoItem*) : Void
     fun bg_QTextDocument_setModified_bool(_self_ : QTextDocument*, m : Bool) : Void
     fun bg_QTextDocument_createObject_const_QTextFormat_R(_self_ : QTextDocument*, f : QTextFormat*) : QTextObject*
-    fun bg_QTextDocument_CONSTRUCT_QTextDocumentPrivate_R_QObject_X(dd : QTextDocumentPrivate*, parent : QObject*) : QTextDocument*
+    fun bg_QTextDocument__CONSTRUCT_QTextDocumentPrivate_R_QObject_X(dd : QTextDocumentPrivate*, parent : QObject*) : QTextDocument*
     fun bg_QTextDocument_docHandle_(_self_ : QTextDocument*) : QTextDocumentPrivate*
     fun bg_QObject_event_QEvent_X(_self_ : QTextDocument*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QTextDocument*, watched : QObject*, event : QEvent*) : Bool
@@ -6300,13 +6536,13 @@ module Qt
     fun bg_QTextDocument_CONNECT_blockCountChanged_CrystalProc_void_int(_self_ : QTextDocument*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTextDocument_CONNECT_baseUrlChanged_CrystalProc_void_const_QUrl_R(_self_ : QTextDocument*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QTextDocument_CONNECT_documentLayoutChanged_CrystalProc_void(_self_ : QTextDocument*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument(_self_ : QTextDocument*, table : Binding::BgJumptable_TextDocument*) : Void
-    fun bg_QTextCursor_CONSTRUCT_() : QTextCursor*
-    fun bg_QTextCursor_CONSTRUCT_QTextDocument_X(document : QTextDocument*) : QTextCursor*
-    fun bg_QTextCursor_CONSTRUCT_QTextDocumentPrivate_X_int(p : QTextDocumentPrivate*, pos : Int32) : QTextCursor*
-    fun bg_QTextCursor_CONSTRUCT_QTextCursorPrivate_X(d : QTextCursorPrivate*) : QTextCursor*
-    fun bg_QTextCursor_CONSTRUCT_QTextFrame_X(frame : QTextFrame*) : QTextCursor*
-    fun bg_QTextCursor_CONSTRUCT_const_QTextBlock_R(block : QTextBlock*) : QTextCursor*
+    fun bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument_R(_self_ : QTextDocument*, table : Binding::BgJumptable_TextDocument*) : Void
+    fun bg_QTextCursor__CONSTRUCT_() : QTextCursor*
+    fun bg_QTextCursor__CONSTRUCT_QTextDocument_X(document : QTextDocument*) : QTextCursor*
+    fun bg_QTextCursor__CONSTRUCT_QTextDocumentPrivate_X_int(p : QTextDocumentPrivate*, pos : Int32) : QTextCursor*
+    fun bg_QTextCursor__CONSTRUCT_QTextCursorPrivate_X(d : QTextCursorPrivate*) : QTextCursor*
+    fun bg_QTextCursor__CONSTRUCT_QTextFrame_X(frame : QTextFrame*) : QTextCursor*
+    fun bg_QTextCursor__CONSTRUCT_const_QTextBlock_R(block : QTextBlock*) : QTextCursor*
     fun bg_QTextCursor_swap_QTextCursor_R(_self_ : QTextCursor*, other : QTextCursor*) : Void
     fun bg_QTextCursor_isNull_(_self_ : QTextCursor*) : Bool
     fun bg_QTextCursor_setPosition_int_QTextCursor__MoveMode(_self_ : QTextCursor*, pos : Int32, mode : TextCursor::MoveMode) : Void
@@ -6374,19 +6610,19 @@ module Qt
     fun bg_QTextCursor_blockNumber_(_self_ : QTextCursor*) : Int32
     fun bg_QTextCursor_columnNumber_(_self_ : QTextCursor*) : Int32
     fun bg_QTextCursor_document_(_self_ : QTextCursor*) : QTextDocument*
-    fun bg_QDir_CONSTRUCT_const_QString_R(path : CrystalString) : QDir*
-    fun bg_QDir_CONSTRUCT_const_QString_R_const_QString_R(path : CrystalString, name_filter : CrystalString) : QDir*
-    fun bg_QDir_CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags(path : CrystalString, name_filter : CrystalString, sort : Dir::SortFlags) : QDir*
-    fun bg_QDir_CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags_QDir__Filters(path : CrystalString, name_filter : CrystalString, sort : Dir::SortFlags, filter : Dir::Filters) : QDir*
+    fun bg_QDir__CONSTRUCT_const_QString_R(path : CrystalString) : QDir*
+    fun bg_QDir__CONSTRUCT_const_QString_R_const_QString_R(path : CrystalString, name_filter : CrystalString) : QDir*
+    fun bg_QDir__CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags(path : CrystalString, name_filter : CrystalString, sort : Dir::SortFlags) : QDir*
+    fun bg_QDir__CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags_QDir__Filters(path : CrystalString, name_filter : CrystalString, sort : Dir::SortFlags, filter : Dir::Filters) : QDir*
     fun bg_QDir_swap_QDir_R(_self_ : QDir*, other : QDir*) : Void
     fun bg_QDir_setPath_const_QString_R(_self_ : QDir*, path : CrystalString) : Void
     fun bg_QDir_path_(_self_ : QDir*) : CrystalString
     fun bg_QDir_absolutePath_(_self_ : QDir*) : CrystalString
     fun bg_QDir_canonicalPath_(_self_ : QDir*) : CrystalString
     fun bg_QDir_addResourceSearchPath_STATIC_const_QString_R(path : CrystalString) : Void
-    fun bg_QDir_setSearchPaths_STATIC_const_QString_R_const_QStringList_R(prefix : CrystalString, search_paths : Void*) : Void
+    fun bg_QDir_setSearchPaths_STATIC_const_QString_R_const_QStringList_R(prefix : CrystalString, search_paths : QStringList*) : Void
     fun bg_QDir_addSearchPath_STATIC_const_QString_R_const_QString_R(prefix : CrystalString, path : CrystalString) : Void
-    fun bg_QDir_searchPaths_STATIC_const_QString_R(prefix : CrystalString) : Void*
+    fun bg_QDir_searchPaths_STATIC_const_QString_R(prefix : CrystalString) : QStringList*
     fun bg_QDir_dirName_(_self_ : QDir*) : CrystalString
     fun bg_QDir_filePath_const_QString_R(_self_ : QDir*, file_name : CrystalString) : CrystalString
     fun bg_QDir_absoluteFilePath_const_QString_R(_self_ : QDir*, file_name : CrystalString) : CrystalString
@@ -6395,8 +6631,8 @@ module Qt
     fun bg_QDir_fromNativeSeparators_STATIC_const_QString_R(path_name : CrystalString) : CrystalString
     fun bg_QDir_cd_const_QString_R(_self_ : QDir*, dir_name : CrystalString) : Bool
     fun bg_QDir_cdUp_(_self_ : QDir*) : Bool
-    fun bg_QDir_nameFilters_(_self_ : QDir*) : Void*
-    fun bg_QDir_setNameFilters_const_QStringList_R(_self_ : QDir*, name_filters : Void*) : Void
+    fun bg_QDir_nameFilters_(_self_ : QDir*) : QStringList*
+    fun bg_QDir_setNameFilters_const_QStringList_R(_self_ : QDir*, name_filters : QStringList*) : Void
     fun bg_QDir_filter_(_self_ : QDir*) : Dir::Filters
     fun bg_QDir_setFilter_QDir__Filters(_self_ : QDir*, filter : Dir::Filters) : Void
     fun bg_QDir_sorting_(_self_ : QDir*) : Dir::SortFlags
@@ -6404,19 +6640,19 @@ module Qt
     fun bg_QDir_count_(_self_ : QDir*) : UInt32
     fun bg_QDir_isEmpty_(_self_ : QDir*) : Bool
     fun bg_QDir_isEmpty_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : Bool
-    fun bg_QDir_nameFiltersFromString_STATIC_const_QString_R(name_filter : CrystalString) : Void*
-    fun bg_QDir_entryList_(_self_ : QDir*) : Void*
-    fun bg_QDir_entryList_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : Void*
-    fun bg_QDir_entryList_QDir__Filters_QDir__SortFlags(_self_ : QDir*, filters : Dir::Filters, sort : Dir::SortFlags) : Void*
-    fun bg_QDir_entryList_const_QStringList_R(_self_ : QDir*, name_filters : Void*) : Void*
-    fun bg_QDir_entryList_const_QStringList_R_QDir__Filters(_self_ : QDir*, name_filters : Void*, filters : Dir::Filters) : Void*
-    fun bg_QDir_entryList_const_QStringList_R_QDir__Filters_QDir__SortFlags(_self_ : QDir*, name_filters : Void*, filters : Dir::Filters, sort : Dir::SortFlags) : Void*
+    fun bg_QDir_nameFiltersFromString_STATIC_const_QString_R(name_filter : CrystalString) : QStringList*
+    fun bg_QDir_entryList_(_self_ : QDir*) : QStringList*
+    fun bg_QDir_entryList_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : QStringList*
+    fun bg_QDir_entryList_QDir__Filters_QDir__SortFlags(_self_ : QDir*, filters : Dir::Filters, sort : Dir::SortFlags) : QStringList*
+    fun bg_QDir_entryList_const_QStringList_R(_self_ : QDir*, name_filters : QStringList*) : QStringList*
+    fun bg_QDir_entryList_const_QStringList_R_QDir__Filters(_self_ : QDir*, name_filters : QStringList*, filters : Dir::Filters) : QStringList*
+    fun bg_QDir_entryList_const_QStringList_R_QDir__Filters_QDir__SortFlags(_self_ : QDir*, name_filters : QStringList*, filters : Dir::Filters, sort : Dir::SortFlags) : QStringList*
     fun bg_QDir_entryInfoList_(_self_ : QDir*) : QFileInfoList*
     fun bg_QDir_entryInfoList_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : QFileInfoList*
     fun bg_QDir_entryInfoList_QDir__Filters_QDir__SortFlags(_self_ : QDir*, filters : Dir::Filters, sort : Dir::SortFlags) : QFileInfoList*
-    fun bg_QDir_entryInfoList_const_QStringList_R(_self_ : QDir*, name_filters : Void*) : QFileInfoList*
-    fun bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters(_self_ : QDir*, name_filters : Void*, filters : Dir::Filters) : QFileInfoList*
-    fun bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters_QDir__SortFlags(_self_ : QDir*, name_filters : Void*, filters : Dir::Filters, sort : Dir::SortFlags) : QFileInfoList*
+    fun bg_QDir_entryInfoList_const_QStringList_R(_self_ : QDir*, name_filters : QStringList*) : QFileInfoList*
+    fun bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters(_self_ : QDir*, name_filters : QStringList*, filters : Dir::Filters) : QFileInfoList*
+    fun bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters_QDir__SortFlags(_self_ : QDir*, name_filters : QStringList*, filters : Dir::Filters, sort : Dir::SortFlags) : QFileInfoList*
     fun bg_QDir_mkdir_const_QString_R(_self_ : QDir*, dir_name : CrystalString) : Bool
     fun bg_QDir_rmdir_const_QString_R(_self_ : QDir*, dir_name : CrystalString) : Bool
     fun bg_QDir_mkpath_const_QString_R(_self_ : QDir*, dir_path : CrystalString) : Bool
@@ -6445,12 +6681,12 @@ module Qt
     fun bg_QDir_rootPath_STATIC_() : CrystalString
     fun bg_QDir_temp_STATIC_() : QDir*
     fun bg_QDir_tempPath_STATIC_() : CrystalString
-    fun bg_QDir_match_STATIC_const_QStringList_R_const_QString_R(filters : Void*, file_name : CrystalString) : Bool
+    fun bg_QDir_match_STATIC_const_QStringList_R_const_QString_R(filters : QStringList*, file_name : CrystalString) : Bool
     fun bg_QDir_match_STATIC_const_QString_R_const_QString_R(filter : CrystalString, file_name : CrystalString) : Bool
     fun bg_QDir_cleanPath_STATIC_const_QString_R(path : CrystalString) : CrystalString
     fun bg_QDir_refresh_(_self_ : QDir*) : Void
-    fun bg_QDir_CONSTRUCT_QDirPrivate_R(d : QDirPrivate*) : QDir*
-    fun bg_QGraphicsItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsItem*
+    fun bg_QDir__CONSTRUCT_QDirPrivate_R(d : QDirPrivate*) : QDir*
+    fun bg_QGraphicsItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsItem*
     fun bg_QGraphicsItem_scene_(_self_ : QGraphicsItem*) : QGraphicsScene*
     fun bg_QGraphicsItem_parentItem_(_self_ : QGraphicsItem*) : QGraphicsItem*
     fun bg_QGraphicsItem_topLevelItem_(_self_ : QGraphicsItem*) : QGraphicsItem*
@@ -6660,19 +6896,23 @@ module Qt
     fun bg_QGraphicsItem_wheelEvent_QGraphicsSceneWheelEvent_X(_self_ : QGraphicsItem*, event : QGraphicsSceneWheelEvent*) : Void
     fun bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X(_self_ : QGraphicsItem*, event : QInputMethodEvent*) : Void
     fun bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_QGraphicsItem_CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd : QGraphicsItemPrivate*, parent : QGraphicsItem*) : QGraphicsItem*
+    fun bg_QGraphicsItem__CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd : QGraphicsItemPrivate*, parent : QGraphicsItem*) : QGraphicsItem*
     fun bg_QGraphicsItem_addToIndex_(_self_ : QGraphicsItem*) : Void
     fun bg_QGraphicsItem_removeFromIndex_(_self_ : QGraphicsItem*) : Void
     fun bg_QGraphicsItem_prepareGeometryChange_(_self_ : QGraphicsItem*) : Void
-    fun bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem(_self_ : QGraphicsItem*, table : Binding::BgJumptable_GraphicsItem*) : Void
+    fun bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem_R(_self_ : QGraphicsItem*, table : Binding::BgJumptable_GraphicsItem*) : Void
     fun bg_QGraphicsScene_metaObject_(_self_ : QGraphicsScene*) : QMetaObject*
     fun bg_QGraphicsScene_qt_metacast_const_char_X(_self_ : QGraphicsScene*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsScene_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsScene*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsScene_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsScene_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsScene_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsScene_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsScene_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsScene_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsScene_CONSTRUCT_QObject_X(parent : QObject*) : QGraphicsScene*
-    fun bg_QGraphicsScene_CONSTRUCT_const_QRectF_R_QObject_X(scene_rect : QRectF*, parent : QObject*) : QGraphicsScene*
-    fun bg_QGraphicsScene_CONSTRUCT_qreal_qreal_qreal_qreal_QObject_X(x : Float64, y : Float64, width : Float64, height : Float64, parent : QObject*) : QGraphicsScene*
+    fun bg_QGraphicsScene__CONSTRUCT_QObject_X(parent : QObject*) : QGraphicsScene*
+    fun bg_QGraphicsScene__CONSTRUCT_const_QRectF_R_QObject_X(scene_rect : QRectF*, parent : QObject*) : QGraphicsScene*
+    fun bg_QGraphicsScene__CONSTRUCT_qreal_qreal_qreal_qreal_QObject_X(x : Float64, y : Float64, width : Float64, height : Float64, parent : QObject*) : QGraphicsScene*
     fun bg_QGraphicsScene_sceneRect_(_self_ : QGraphicsScene*) : QRectF*
     fun bg_QGraphicsScene_width_(_self_ : QGraphicsScene*) : Float64
     fun bg_QGraphicsScene_height_(_self_ : QGraphicsScene*) : Float64
@@ -6816,14 +7056,18 @@ module Qt
     fun bg_QGraphicsScene_CONNECT_sceneRectChanged_CrystalProc_void_const_QRectF_R(_self_ : QGraphicsScene*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsScene_CONNECT_selectionChanged_CrystalProc_void(_self_ : QGraphicsScene*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsScene_CONNECT_focusItemChanged_CrystalProc_void_QGraphicsItem_X_QGraphicsItem_X_Qt__FocusReason(_self_ : QGraphicsScene*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene(_self_ : QGraphicsScene*, table : Binding::BgJumptable_GraphicsScene*) : Void
+    fun bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene_R(_self_ : QGraphicsScene*, table : Binding::BgJumptable_GraphicsScene*) : Void
     fun bg_QGraphicsView_metaObject_(_self_ : QGraphicsView*) : QMetaObject*
     fun bg_QGraphicsView_qt_metacast_const_char_X(_self_ : QGraphicsView*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsView_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsView*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsView_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsView_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsView_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsView_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsView_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsView_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsView_CONSTRUCT_QWidget_X(parent : QWidget*) : QGraphicsView*
-    fun bg_QGraphicsView_CONSTRUCT_QGraphicsScene_X_QWidget_X(scene : QGraphicsScene*, parent : QWidget*) : QGraphicsView*
+    fun bg_QGraphicsView__CONSTRUCT_QWidget_X(parent : QWidget*) : QGraphicsView*
+    fun bg_QGraphicsView__CONSTRUCT_QGraphicsScene_X_QWidget_X(scene : QGraphicsScene*, parent : QWidget*) : QGraphicsView*
     fun bg_QGraphicsView_sizeHint_(_self_ : QGraphicsView*) : QSize*
     fun bg_QGraphicsView_renderHints_(_self_ : QGraphicsView*) : Painter::RenderHints
     fun bg_QGraphicsView_setRenderHint_QPainter__RenderHint_bool(_self_ : QGraphicsView*, hint : Painter::RenderHint, enabled : Bool) : Void
@@ -6911,7 +7155,7 @@ module Qt
     fun bg_QGraphicsView_updateSceneRect_const_QRectF_R(_self_ : QGraphicsView*, rect : QRectF*) : Void
     fun bg_QGraphicsView_rubberBandChanged_QRect_QPointF_QPointF(_self_ : QGraphicsView*, viewport_rect : QRect*, from_scene_point : QPointF, to_scene_point : QPointF) : Void
     fun bg_QGraphicsView_setupViewport_QWidget_X(_self_ : QGraphicsView*, widget : QWidget*) : Void
-    fun bg_QGraphicsView_CONSTRUCT_QGraphicsViewPrivate_R_QWidget_X(unnamed_arg_0 : QGraphicsViewPrivate*, parent : QWidget*) : QGraphicsView*
+    fun bg_QGraphicsView__CONSTRUCT_QGraphicsViewPrivate_R_QWidget_X(unnamed_arg_0 : QGraphicsViewPrivate*, parent : QWidget*) : QGraphicsView*
     fun bg_QGraphicsView_event_QEvent_X(_self_ : QGraphicsView*, event : QEvent*) : Bool
     fun bg_QGraphicsView_viewportEvent_QEvent_X(_self_ : QGraphicsView*, event : QEvent*) : Bool
     fun bg_QGraphicsView_contextMenuEvent_QContextMenuEvent_X(_self_ : QGraphicsView*, event : QContextMenuEvent*) : Void
@@ -6941,13 +7185,17 @@ module Qt
     fun bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X(_self_ : QGraphicsView*, unnamed_arg_0 : QObject*, unnamed_arg_1 : QEvent*) : Bool
     fun bg_QAbstractScrollArea_viewportSizeHint_(_self_ : QGraphicsView*) : QSize*
     fun bg_QGraphicsView_CONNECT_rubberBandChanged_CrystalProc_void_QRect_QPointF_QPointF(_self_ : QGraphicsView*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView(_self_ : QGraphicsView*, table : Binding::BgJumptable_GraphicsView*) : Void
+    fun bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView_R(_self_ : QGraphicsView*, table : Binding::BgJumptable_GraphicsView*) : Void
     fun bg_QGraphicsObject_metaObject_(_self_ : QGraphicsObject*) : QMetaObject*
     fun bg_QGraphicsObject_qt_metacast_const_char_X(_self_ : QGraphicsObject*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsObject_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsObject*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsObject_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsObject_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsObject_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsObject_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsObject_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsObject_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsObject_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsObject*
+    fun bg_QGraphicsObject__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsObject*
     fun bg_QGraphicsObject_grabGesture_Qt__GestureType(_self_ : QGraphicsObject*, type : GestureType) : Void
     fun bg_QGraphicsObject_grabGesture_Qt__GestureType_Qt__GestureFlags(_self_ : QGraphicsObject*, type : GestureType, flags : GestureFlags) : Void
     fun bg_QGraphicsObject_ungrabGesture_Qt__GestureType(_self_ : QGraphicsObject*, type : GestureType) : Void
@@ -6964,7 +7212,7 @@ module Qt
     fun bg_QGraphicsObject_childrenChanged_(_self_ : QGraphicsObject*) : Void
     fun bg_QGraphicsObject_widthChanged_(_self_ : QGraphicsObject*) : Void
     fun bg_QGraphicsObject_heightChanged_(_self_ : QGraphicsObject*) : Void
-    fun bg_QGraphicsObject_CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd : QGraphicsItemPrivate*, parent : QGraphicsItem*) : QGraphicsObject*
+    fun bg_QGraphicsObject__CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd : QGraphicsItemPrivate*, parent : QGraphicsItem*) : QGraphicsObject*
     fun bg_QGraphicsObject_event_QEvent_X(_self_ : QGraphicsObject*, ev : QEvent*) : Bool
     fun bg_QGraphicsObject_AS_GraphicsItem_(_self_ : QGraphicsObject*) : QGraphicsItem*
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QGraphicsObject*, watched : QObject*, event : QEvent*) : Bool
@@ -7016,14 +7264,18 @@ module Qt
     fun bg_QGraphicsObject_CONNECT_childrenChanged_CrystalProc_void(_self_ : QGraphicsObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsObject_CONNECT_widthChanged_CrystalProc_void(_self_ : QGraphicsObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsObject_CONNECT_heightChanged_CrystalProc_void(_self_ : QGraphicsObject*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject(_self_ : QGraphicsObject*, table : Binding::BgJumptable_GraphicsObject*) : Void
+    fun bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject_R(_self_ : QGraphicsObject*, table : Binding::BgJumptable_GraphicsObject*) : Void
     fun bg_QGraphicsWidget_metaObject_(_self_ : QGraphicsWidget*) : QMetaObject*
     fun bg_QGraphicsWidget_qt_metacast_const_char_X(_self_ : QGraphicsWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsWidget_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsWidget*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsWidget_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsWidget*
-    fun bg_QGraphicsWidget_CONSTRUCT_QGraphicsItem_X_Qt__WindowFlags(parent : QGraphicsItem*, w_flags : WindowFlags) : QGraphicsWidget*
+    fun bg_QGraphicsWidget__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsWidget*
+    fun bg_QGraphicsWidget__CONSTRUCT_QGraphicsItem_X_Qt__WindowFlags(parent : QGraphicsItem*, w_flags : WindowFlags) : QGraphicsWidget*
     fun bg_QGraphicsWidget_layout_(_self_ : QGraphicsWidget*) : QGraphicsLayout*
     fun bg_QGraphicsWidget_setLayout_QGraphicsLayout_X(_self_ : QGraphicsWidget*, layout : QGraphicsLayout*) : Void
     fun bg_QGraphicsWidget_adjustSize_(_self_ : QGraphicsWidget*) : Void
@@ -7105,18 +7357,22 @@ module Qt
     fun bg_QGraphicsWidget_ungrabMouseEvent_QEvent_X(_self_ : QGraphicsWidget*, event : QEvent*) : Void
     fun bg_QGraphicsWidget_grabKeyboardEvent_QEvent_X(_self_ : QGraphicsWidget*, event : QEvent*) : Void
     fun bg_QGraphicsWidget_ungrabKeyboardEvent_QEvent_X(_self_ : QGraphicsWidget*, event : QEvent*) : Void
-    fun bg_QGraphicsWidget_CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X(unnamed_arg_0 : QGraphicsWidgetPrivate*, parent : QGraphicsItem*) : QGraphicsWidget*
-    fun bg_QGraphicsWidget_CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X_Qt__WindowFlags(unnamed_arg_0 : QGraphicsWidgetPrivate*, parent : QGraphicsItem*, w_flags : WindowFlags) : QGraphicsWidget*
+    fun bg_QGraphicsWidget__CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X(unnamed_arg_0 : QGraphicsWidgetPrivate*, parent : QGraphicsItem*) : QGraphicsWidget*
+    fun bg_QGraphicsWidget__CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X_Qt__WindowFlags(unnamed_arg_0 : QGraphicsWidgetPrivate*, parent : QGraphicsItem*, w_flags : WindowFlags) : QGraphicsWidget*
     fun bg_QGraphicsWidget_CONNECT_geometryChanged_CrystalProc_void(_self_ : QGraphicsWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsWidget_CONNECT_layoutChanged_CrystalProc_void(_self_ : QGraphicsWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget(_self_ : QGraphicsWidget*, table : Binding::BgJumptable_GraphicsWidget*) : Void
+    fun bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget_R(_self_ : QGraphicsWidget*, table : Binding::BgJumptable_GraphicsWidget*) : Void
     fun bg_QGraphicsTextItem_metaObject_(_self_ : QGraphicsTextItem*) : QMetaObject*
     fun bg_QGraphicsTextItem_qt_metacast_const_char_X(_self_ : QGraphicsTextItem*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsTextItem_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsTextItem*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsTextItem_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsTextItem_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsTextItem_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsTextItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsTextItem*
-    fun bg_QGraphicsTextItem_CONSTRUCT_const_QString_R_QGraphicsItem_X(text : CrystalString, parent : QGraphicsItem*) : QGraphicsTextItem*
+    fun bg_QGraphicsTextItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsTextItem*
+    fun bg_QGraphicsTextItem__CONSTRUCT_const_QString_R_QGraphicsItem_X(text : CrystalString, parent : QGraphicsItem*) : QGraphicsTextItem*
     fun bg_QGraphicsTextItem_toHtml_(_self_ : QGraphicsTextItem*) : CrystalString
     fun bg_QGraphicsTextItem_setHtml_const_QString_R(_self_ : QGraphicsTextItem*, html : CrystalString) : Void
     fun bg_QGraphicsTextItem_toPlainText_(_self_ : QGraphicsTextItem*) : CrystalString
@@ -7169,16 +7425,20 @@ module Qt
     fun bg_QGraphicsObject_event_QEvent_X(_self_ : QGraphicsTextItem*, ev : QEvent*) : Bool
     fun bg_QGraphicsTextItem_CONNECT_linkActivated_CrystalProc_void_const_QString_R(_self_ : QGraphicsTextItem*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGraphicsTextItem_CONNECT_linkHovered_CrystalProc_void_const_QString_R(_self_ : QGraphicsTextItem*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem(_self_ : QGraphicsTextItem*, table : Binding::BgJumptable_GraphicsTextItem*) : Void
+    fun bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem_R(_self_ : QGraphicsTextItem*, table : Binding::BgJumptable_GraphicsTextItem*) : Void
     fun bg_QGraphicsTransform_metaObject_(_self_ : QGraphicsTransform*) : QMetaObject*
     fun bg_QGraphicsTransform_qt_metacast_const_char_X(_self_ : QGraphicsTransform*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGraphicsTransform_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGraphicsTransform*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGraphicsTransform_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsTransform_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsTransform_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGraphicsTransform_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGraphicsTransform_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGraphicsTransform_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGraphicsTransform_CONSTRUCT_QObject_X(parent : QObject*) : QGraphicsTransform*
+    fun bg_QGraphicsTransform__CONSTRUCT_QObject_X(parent : QObject*) : QGraphicsTransform*
     fun bg_QGraphicsTransform_applyTo_QMatrix4x4_X(_self_ : QGraphicsTransform*, matrix : QMatrix4x4*) : Void
     fun bg_QGraphicsTransform_update_(_self_ : QGraphicsTransform*) : Void
-    fun bg_QGraphicsTransform_CONSTRUCT_QGraphicsTransformPrivate_R_QObject_X(p : QGraphicsTransformPrivate*, parent : QObject*) : QGraphicsTransform*
+    fun bg_QGraphicsTransform__CONSTRUCT_QGraphicsTransformPrivate_R_QObject_X(p : QGraphicsTransformPrivate*, parent : QObject*) : QGraphicsTransform*
     fun bg_QObject_event_QEvent_X(_self_ : QGraphicsTransform*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QGraphicsTransform*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QGraphicsTransform*, event : QTimerEvent*) : Void
@@ -7186,15 +7446,15 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QGraphicsTransform*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QGraphicsTransform*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QGraphicsTransform*, signal : QMetaMethod*) : Void
-    fun bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform(_self_ : QGraphicsTransform*, table : Binding::BgJumptable_GraphicsTransform*) : Void
-    fun bg_QAbstractGraphicsShapeItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QAbstractGraphicsShapeItem*
+    fun bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform_R(_self_ : QGraphicsTransform*, table : Binding::BgJumptable_GraphicsTransform*) : Void
+    fun bg_QAbstractGraphicsShapeItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QAbstractGraphicsShapeItem*
     fun bg_QAbstractGraphicsShapeItem_pen_(_self_ : QAbstractGraphicsShapeItem*) : QPen*
     fun bg_QAbstractGraphicsShapeItem_setPen_const_QPen_R(_self_ : QAbstractGraphicsShapeItem*, pen : QPen*) : Void
     fun bg_QAbstractGraphicsShapeItem_brush_(_self_ : QAbstractGraphicsShapeItem*) : QBrush*
     fun bg_QAbstractGraphicsShapeItem_setBrush_const_QBrush_R(_self_ : QAbstractGraphicsShapeItem*, brush : QBrush*) : Void
     fun bg_QAbstractGraphicsShapeItem_isObscuredBy_const_QGraphicsItem_X(_self_ : QAbstractGraphicsShapeItem*, item : QGraphicsItem*) : Bool
     fun bg_QAbstractGraphicsShapeItem_opaqueArea_(_self_ : QAbstractGraphicsShapeItem*) : QPainterPath*
-    fun bg_QAbstractGraphicsShapeItem_CONSTRUCT_QAbstractGraphicsShapeItemPrivate_R_QGraphicsItem_X(dd : QAbstractGraphicsShapeItemPrivate*, parent : QGraphicsItem*) : QAbstractGraphicsShapeItem*
+    fun bg_QAbstractGraphicsShapeItem__CONSTRUCT_QAbstractGraphicsShapeItemPrivate_R_QGraphicsItem_X(dd : QAbstractGraphicsShapeItemPrivate*, parent : QGraphicsItem*) : QAbstractGraphicsShapeItem*
     fun bg_QGraphicsItem_advance_int(_self_ : QAbstractGraphicsShapeItem*, phase : Int32) : Void
     fun bg_QGraphicsItem_boundingRect_(_self_ : QAbstractGraphicsShapeItem*) : QRectF*
     fun bg_QGraphicsItem_shape_(_self_ : QAbstractGraphicsShapeItem*) : QPainterPath*
@@ -7224,10 +7484,10 @@ module Qt
     fun bg_QGraphicsItem_wheelEvent_QGraphicsSceneWheelEvent_X(_self_ : QAbstractGraphicsShapeItem*, event : QGraphicsSceneWheelEvent*) : Void
     fun bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X(_self_ : QAbstractGraphicsShapeItem*, event : QInputMethodEvent*) : Void
     fun bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension(_self_ : QAbstractGraphicsShapeItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem(_self_ : QAbstractGraphicsShapeItem*, table : Binding::BgJumptable_AbstractGraphicsShapeItem*) : Void
-    fun bg_QGraphicsEllipseItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsEllipseItem*
-    fun bg_QGraphicsEllipseItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : QGraphicsEllipseItem*
-    fun bg_QGraphicsEllipseItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : QGraphicsEllipseItem*
+    fun bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem_R(_self_ : QAbstractGraphicsShapeItem*, table : Binding::BgJumptable_AbstractGraphicsShapeItem*) : Void
+    fun bg_QGraphicsEllipseItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsEllipseItem*
+    fun bg_QGraphicsEllipseItem__CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : QGraphicsEllipseItem*
+    fun bg_QGraphicsEllipseItem__CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : QGraphicsEllipseItem*
     fun bg_QGraphicsEllipseItem_rect_(_self_ : QGraphicsEllipseItem*) : QRectF*
     fun bg_QGraphicsEllipseItem_setRect_const_QRectF_R(_self_ : QGraphicsEllipseItem*, rect : QRectF*) : Void
     fun bg_QGraphicsEllipseItem_setRect_qreal_qreal_qreal_qreal(_self_ : QGraphicsEllipseItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
@@ -7243,9 +7503,9 @@ module Qt
     fun bg_QGraphicsEllipseItem_opaqueArea_(_self_ : QGraphicsEllipseItem*) : QPainterPath*
     fun bg_QGraphicsEllipseItem_type_(_self_ : QGraphicsEllipseItem*) : Int32
     fun bg_QGraphicsEllipseItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsEllipseItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem(_self_ : QGraphicsEllipseItem*, table : Binding::BgJumptable_GraphicsEllipseItem*) : Void
-    fun bg_QGraphicsPathItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPathItem*
-    fun bg_QGraphicsPathItem_CONSTRUCT_const_QPainterPath_R_QGraphicsItem_X(path : QPainterPath*, parent : QGraphicsItem*) : QGraphicsPathItem*
+    fun bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem_R(_self_ : QGraphicsEllipseItem*, table : Binding::BgJumptable_GraphicsEllipseItem*) : Void
+    fun bg_QGraphicsPathItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPathItem*
+    fun bg_QGraphicsPathItem__CONSTRUCT_const_QPainterPath_R_QGraphicsItem_X(path : QPainterPath*, parent : QGraphicsItem*) : QGraphicsPathItem*
     fun bg_QGraphicsPathItem_path_(_self_ : QGraphicsPathItem*) : QPainterPath*
     fun bg_QGraphicsPathItem_setPath_const_QPainterPath_R(_self_ : QGraphicsPathItem*, path : QPainterPath*) : Void
     fun bg_QGraphicsPathItem_boundingRect_(_self_ : QGraphicsPathItem*) : QRectF*
@@ -7256,9 +7516,9 @@ module Qt
     fun bg_QGraphicsPathItem_opaqueArea_(_self_ : QGraphicsPathItem*) : QPainterPath*
     fun bg_QGraphicsPathItem_type_(_self_ : QGraphicsPathItem*) : Int32
     fun bg_QGraphicsPathItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsPathItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem(_self_ : QGraphicsPathItem*, table : Binding::BgJumptable_GraphicsPathItem*) : Void
-    fun bg_QGraphicsPolygonItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPolygonItem*
-    fun bg_QGraphicsPolygonItem_CONSTRUCT_const_QPolygonF_R_QGraphicsItem_X(polygon : QPolygonF*, parent : QGraphicsItem*) : QGraphicsPolygonItem*
+    fun bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem_R(_self_ : QGraphicsPathItem*, table : Binding::BgJumptable_GraphicsPathItem*) : Void
+    fun bg_QGraphicsPolygonItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPolygonItem*
+    fun bg_QGraphicsPolygonItem__CONSTRUCT_const_QPolygonF_R_QGraphicsItem_X(polygon : QPolygonF*, parent : QGraphicsItem*) : QGraphicsPolygonItem*
     fun bg_QGraphicsPolygonItem_polygon_(_self_ : QGraphicsPolygonItem*) : QPolygonF*
     fun bg_QGraphicsPolygonItem_setPolygon_const_QPolygonF_R(_self_ : QGraphicsPolygonItem*, polygon : QPolygonF*) : Void
     fun bg_QGraphicsPolygonItem_fillRule_(_self_ : QGraphicsPolygonItem*) : FillRule
@@ -7271,10 +7531,10 @@ module Qt
     fun bg_QGraphicsPolygonItem_opaqueArea_(_self_ : QGraphicsPolygonItem*) : QPainterPath*
     fun bg_QGraphicsPolygonItem_type_(_self_ : QGraphicsPolygonItem*) : Int32
     fun bg_QGraphicsPolygonItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsPolygonItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem(_self_ : QGraphicsPolygonItem*, table : Binding::BgJumptable_GraphicsPolygonItem*) : Void
-    fun bg_QGraphicsRectItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsRectItem*
-    fun bg_QGraphicsRectItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : QGraphicsRectItem*
-    fun bg_QGraphicsRectItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : QGraphicsRectItem*
+    fun bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem_R(_self_ : QGraphicsPolygonItem*, table : Binding::BgJumptable_GraphicsPolygonItem*) : Void
+    fun bg_QGraphicsRectItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsRectItem*
+    fun bg_QGraphicsRectItem__CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect : QRectF*, parent : QGraphicsItem*) : QGraphicsRectItem*
+    fun bg_QGraphicsRectItem__CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x : Float64, y : Float64, w : Float64, h : Float64, parent : QGraphicsItem*) : QGraphicsRectItem*
     fun bg_QGraphicsRectItem_rect_(_self_ : QGraphicsRectItem*) : QRectF*
     fun bg_QGraphicsRectItem_setRect_const_QRectF_R(_self_ : QGraphicsRectItem*, rect : QRectF*) : Void
     fun bg_QGraphicsRectItem_setRect_qreal_qreal_qreal_qreal(_self_ : QGraphicsRectItem*, x : Float64, y : Float64, w : Float64, h : Float64) : Void
@@ -7286,9 +7546,9 @@ module Qt
     fun bg_QGraphicsRectItem_opaqueArea_(_self_ : QGraphicsRectItem*) : QPainterPath*
     fun bg_QGraphicsRectItem_type_(_self_ : QGraphicsRectItem*) : Int32
     fun bg_QGraphicsRectItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsRectItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem(_self_ : QGraphicsRectItem*, table : Binding::BgJumptable_GraphicsRectItem*) : Void
-    fun bg_QGraphicsSimpleTextItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsSimpleTextItem*
-    fun bg_QGraphicsSimpleTextItem_CONSTRUCT_const_QString_R_QGraphicsItem_X(text : CrystalString, parent : QGraphicsItem*) : QGraphicsSimpleTextItem*
+    fun bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem_R(_self_ : QGraphicsRectItem*, table : Binding::BgJumptable_GraphicsRectItem*) : Void
+    fun bg_QGraphicsSimpleTextItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsSimpleTextItem*
+    fun bg_QGraphicsSimpleTextItem__CONSTRUCT_const_QString_R_QGraphicsItem_X(text : CrystalString, parent : QGraphicsItem*) : QGraphicsSimpleTextItem*
     fun bg_QGraphicsSimpleTextItem_setText_const_QString_R(_self_ : QGraphicsSimpleTextItem*, text : CrystalString) : Void
     fun bg_QGraphicsSimpleTextItem_text_(_self_ : QGraphicsSimpleTextItem*) : CrystalString
     fun bg_QGraphicsSimpleTextItem_setFont_const_QFont_R(_self_ : QGraphicsSimpleTextItem*, font : QFont*) : Void
@@ -7301,9 +7561,9 @@ module Qt
     fun bg_QGraphicsSimpleTextItem_opaqueArea_(_self_ : QGraphicsSimpleTextItem*) : QPainterPath*
     fun bg_QGraphicsSimpleTextItem_type_(_self_ : QGraphicsSimpleTextItem*) : Int32
     fun bg_QGraphicsSimpleTextItem_supportsExtension_QGraphicsItem__Extension(_self_ : QGraphicsSimpleTextItem*, extension : GraphicsItem::Extension) : Bool
-    fun bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem(_self_ : QGraphicsSimpleTextItem*, table : Binding::BgJumptable_GraphicsSimpleTextItem*) : Void
-    fun bg_QGraphicsPixmapItem_CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPixmapItem*
-    fun bg_QGraphicsPixmapItem_CONSTRUCT_const_QPixmap_R_QGraphicsItem_X(pixmap : QPixmap*, parent : QGraphicsItem*) : QGraphicsPixmapItem*
+    fun bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem_R(_self_ : QGraphicsSimpleTextItem*, table : Binding::BgJumptable_GraphicsSimpleTextItem*) : Void
+    fun bg_QGraphicsPixmapItem__CONSTRUCT_QGraphicsItem_X(parent : QGraphicsItem*) : QGraphicsPixmapItem*
+    fun bg_QGraphicsPixmapItem__CONSTRUCT_const_QPixmap_R_QGraphicsItem_X(pixmap : QPixmap*, parent : QGraphicsItem*) : QGraphicsPixmapItem*
     fun bg_QGraphicsPixmapItem_pixmap_(_self_ : QGraphicsPixmapItem*) : QPixmap*
     fun bg_QGraphicsPixmapItem_setPixmap_const_QPixmap_R(_self_ : QGraphicsPixmapItem*, pixmap : QPixmap*) : Void
     fun bg_QGraphicsPixmapItem_transformationMode_(_self_ : QGraphicsPixmapItem*) : TransformationMode
@@ -7344,16 +7604,16 @@ module Qt
     fun bg_QGraphicsItem_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X(_self_ : QGraphicsPixmapItem*, event : QGraphicsSceneMouseEvent*) : Void
     fun bg_QGraphicsItem_wheelEvent_QGraphicsSceneWheelEvent_X(_self_ : QGraphicsPixmapItem*, event : QGraphicsSceneWheelEvent*) : Void
     fun bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X(_self_ : QGraphicsPixmapItem*, event : QInputMethodEvent*) : Void
-    fun bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem(_self_ : QGraphicsPixmapItem*, table : Binding::BgJumptable_GraphicsPixmapItem*) : Void
-    fun bg_QBrush_CONSTRUCT_() : QBrush*
-    fun bg_QBrush_CONSTRUCT_Qt__BrushStyle(bs : BrushStyle) : QBrush*
-    fun bg_QBrush_CONSTRUCT_const_QColor_R_Qt__BrushStyle(color : QColor*, bs : BrushStyle) : QBrush*
-    fun bg_QBrush_CONSTRUCT_Qt__GlobalColor_Qt__BrushStyle(color : GlobalColor, bs : BrushStyle) : QBrush*
-    fun bg_QBrush_CONSTRUCT_const_QColor_R_const_QPixmap_R(color : QColor*, pixmap : QPixmap*) : QBrush*
-    fun bg_QBrush_CONSTRUCT_Qt__GlobalColor_const_QPixmap_R(color : GlobalColor, pixmap : QPixmap*) : QBrush*
-    fun bg_QBrush_CONSTRUCT_const_QPixmap_R(pixmap : QPixmap*) : QBrush*
-    fun bg_QBrush_CONSTRUCT_const_QImage_R(image : QImage*) : QBrush*
-    fun bg_QBrush_CONSTRUCT_const_QGradient_R(gradient : QGradient*) : QBrush*
+    fun bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem_R(_self_ : QGraphicsPixmapItem*, table : Binding::BgJumptable_GraphicsPixmapItem*) : Void
+    fun bg_QBrush__CONSTRUCT_() : QBrush*
+    fun bg_QBrush__CONSTRUCT_Qt__BrushStyle(bs : BrushStyle) : QBrush*
+    fun bg_QBrush__CONSTRUCT_const_QColor_R_Qt__BrushStyle(color : QColor*, bs : BrushStyle) : QBrush*
+    fun bg_QBrush__CONSTRUCT_Qt__GlobalColor_Qt__BrushStyle(color : GlobalColor, bs : BrushStyle) : QBrush*
+    fun bg_QBrush__CONSTRUCT_const_QColor_R_const_QPixmap_R(color : QColor*, pixmap : QPixmap*) : QBrush*
+    fun bg_QBrush__CONSTRUCT_Qt__GlobalColor_const_QPixmap_R(color : GlobalColor, pixmap : QPixmap*) : QBrush*
+    fun bg_QBrush__CONSTRUCT_const_QPixmap_R(pixmap : QPixmap*) : QBrush*
+    fun bg_QBrush__CONSTRUCT_const_QImage_R(image : QImage*) : QBrush*
+    fun bg_QBrush__CONSTRUCT_const_QGradient_R(gradient : QGradient*) : QBrush*
     fun bg_QBrush_swap_QBrush_R(_self_ : QBrush*, other : QBrush*) : Void
     fun bg_QBrush_style_(_self_ : QBrush*) : BrushStyle
     fun bg_QBrush_setStyle_Qt__BrushStyle(_self_ : QBrush*, unnamed_arg_0 : BrushStyle) : Void
@@ -7371,21 +7631,21 @@ module Qt
     fun bg_QBrush_gradient_(_self_ : QBrush*) : QGradient*
     fun bg_QBrush_isOpaque_(_self_ : QBrush*) : Bool
     fun bg_QBrush_isDetached_(_self_ : QBrush*) : Bool
-    fun bg_QColor_CONSTRUCT_() : QColor*
-    fun bg_QColor_CONSTRUCT_Qt__GlobalColor(color : GlobalColor) : QColor*
-    fun bg_QColor_CONSTRUCT_int_int_int_int(r : Int32, g : Int32, b : Int32, a : Int32) : QColor*
-    fun bg_QColor_CONSTRUCT_QRgb(rgb : UInt32) : QColor*
-    fun bg_QColor_CONSTRUCT_QRgba64(rgba64 : QRgba64*) : QColor*
-    fun bg_QColor_CONSTRUCT_const_QString_R(name : CrystalString) : QColor*
-    fun bg_QColor_CONSTRUCT_const_char_X(aname : UInt8*) : QColor*
-    fun bg_QColor_CONSTRUCT_QLatin1String(name : QLatin1String*) : QColor*
-    fun bg_QColor_CONSTRUCT_QColor__Spec(spec : Color::Spec) : QColor*
+    fun bg_QColor__CONSTRUCT_() : QColor*
+    fun bg_QColor__CONSTRUCT_Qt__GlobalColor(color : GlobalColor) : QColor*
+    fun bg_QColor__CONSTRUCT_int_int_int_int(r : Int32, g : Int32, b : Int32, a : Int32) : QColor*
+    fun bg_QColor__CONSTRUCT_QRgb(rgb : UInt32) : QColor*
+    fun bg_QColor__CONSTRUCT_QRgba64(rgba64 : QRgba64*) : QColor*
+    fun bg_QColor__CONSTRUCT_const_QString_R(name : CrystalString) : QColor*
+    fun bg_QColor__CONSTRUCT_const_char_X(aname : UInt8*) : QColor*
+    fun bg_QColor__CONSTRUCT_QLatin1String(name : QLatin1String*) : QColor*
+    fun bg_QColor__CONSTRUCT_QColor__Spec(spec : Color::Spec) : QColor*
     fun bg_QColor_isValid_(_self_ : QColor*) : Bool
     fun bg_QColor_name_(_self_ : QColor*) : CrystalString
     fun bg_QColor_name_QColor__NameFormat(_self_ : QColor*, format : Color::NameFormat) : CrystalString
     fun bg_QColor_setNamedColor_const_QString_R(_self_ : QColor*, name : CrystalString) : Void
     fun bg_QColor_setNamedColor_QLatin1String(_self_ : QColor*, name : QLatin1String*) : Void
-    fun bg_QColor_colorNames_STATIC_() : Void*
+    fun bg_QColor_colorNames_STATIC_() : QStringList*
     fun bg_QColor_spec_(_self_ : QColor*) : Color::Spec
     fun bg_QColor_alpha_(_self_ : QColor*) : Int32
     fun bg_QColor_setAlpha_int(_self_ : QColor*, alpha : Int32) : Void
@@ -7472,7 +7732,7 @@ module Qt
     fun bg_QColor_darker_int(_self_ : QColor*, f : Int32) : QColor*
     fun bg_QColor_isValidColor_STATIC_const_QString_R(name : CrystalString) : Bool
     fun bg_QColor_isValidColor_STATIC_QLatin1String(unnamed_arg_0 : QLatin1String*) : Bool
-    fun bg_QEvent_CONSTRUCT_QEvent__Type(type : Event::Type) : QEvent*
+    fun bg_QEvent__CONSTRUCT_QEvent__Type(type : Event::Type) : QEvent*
     fun bg_QEvent_type_(_self_ : QEvent*) : Event::Type
     fun bg_QEvent_spontaneous_(_self_ : QEvent*) : Bool
     fun bg_QEvent_setAccepted_bool(_self_ : QEvent*, accepted : Bool) : Void
@@ -7480,22 +7740,22 @@ module Qt
     fun bg_QEvent_accept_(_self_ : QEvent*) : Void
     fun bg_QEvent_ignore_(_self_ : QEvent*) : Void
     fun bg_QEvent_registerEventType_STATIC_int(hint : Int32) : Int32
-    fun bg_QTimerEvent_CONSTRUCT_int(timer_id : Int32) : QTimerEvent*
+    fun bg_QTimerEvent__CONSTRUCT_int(timer_id : Int32) : QTimerEvent*
     fun bg_QTimerEvent_timerId_(_self_ : QTimerEvent*) : Int32
-    fun bg_QDynamicPropertyChangeEvent_CONSTRUCT_const_QByteArray_R(name : QByteArray*) : QDynamicPropertyChangeEvent*
+    fun bg_QDynamicPropertyChangeEvent__CONSTRUCT_const_QByteArray_R(name : QByteArray*) : QDynamicPropertyChangeEvent*
     fun bg_QDynamicPropertyChangeEvent_propertyName_(_self_ : QDynamicPropertyChangeEvent*) : QByteArray*
-    fun bg_QDeferredDeleteEvent_CONSTRUCT_() : QDeferredDeleteEvent*
+    fun bg_QDeferredDeleteEvent__CONSTRUCT_() : QDeferredDeleteEvent*
     fun bg_QDeferredDeleteEvent_loopLevel_(_self_ : QDeferredDeleteEvent*) : Int32
-    fun bg_QInputEvent_CONSTRUCT_QEvent__Type(type : Event::Type) : QInputEvent*
-    fun bg_QInputEvent_CONSTRUCT_QEvent__Type_Qt__KeyboardModifiers(type : Event::Type, modifiers : KeyboardModifiers) : QInputEvent*
+    fun bg_QInputEvent__CONSTRUCT_QEvent__Type(type : Event::Type) : QInputEvent*
+    fun bg_QInputEvent__CONSTRUCT_QEvent__Type_Qt__KeyboardModifiers(type : Event::Type, modifiers : KeyboardModifiers) : QInputEvent*
     fun bg_QInputEvent_modifiers_(_self_ : QInputEvent*) : KeyboardModifiers
     fun bg_QInputEvent_setModifiers_Qt__KeyboardModifiers(_self_ : QInputEvent*, amodifiers : KeyboardModifiers) : Void
     fun bg_QInputEvent_timestamp_(_self_ : QInputEvent*) : UInt64
     fun bg_QInputEvent_setTimestamp_ulong(_self_ : QInputEvent*, atimestamp : UInt64) : Void
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
-    fun bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource) : QMouseEvent*
+    fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
+    fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
+    fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
+    fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource) : QMouseEvent*
     fun bg_QMouseEvent_pos_(_self_ : QMouseEvent*) : QPoint
     fun bg_QMouseEvent_globalPos_(_self_ : QMouseEvent*) : QPoint
     fun bg_QMouseEvent_x_(_self_ : QMouseEvent*) : Int32
@@ -7510,7 +7770,7 @@ module Qt
     fun bg_QMouseEvent_setLocalPos_const_QPointF_R(_self_ : QMouseEvent*, local_position : QPointF) : Void
     fun bg_QMouseEvent_source_(_self_ : QMouseEvent*) : MouseEventSource
     fun bg_QMouseEvent_flags_(_self_ : QMouseEvent*) : MouseEventFlags
-    fun bg_QEnterEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF) : QEnterEvent*
+    fun bg_QEnterEvent__CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF) : QEnterEvent*
     fun bg_QEnterEvent_pos_(_self_ : QEnterEvent*) : QPoint
     fun bg_QEnterEvent_globalPos_(_self_ : QEnterEvent*) : QPoint
     fun bg_QEnterEvent_x_(_self_ : QEnterEvent*) : Int32
@@ -7520,42 +7780,46 @@ module Qt
     fun bg_QEnterEvent_localPos_(_self_ : QEnterEvent*) : QPointF
     fun bg_QEnterEvent_windowPos_(_self_ : QEnterEvent*) : QPointF
     fun bg_QEnterEvent_screenPos_(_self_ : QEnterEvent*) : QPointF
-    fun bg_QFocusEvent_CONSTRUCT_QEvent__Type_Qt__FocusReason(type : Event::Type, reason : FocusReason) : QFocusEvent*
+    fun bg_QFocusEvent__CONSTRUCT_QEvent__Type_Qt__FocusReason(type : Event::Type, reason : FocusReason) : QFocusEvent*
     fun bg_QFocusEvent_gotFocus_(_self_ : QFocusEvent*) : Bool
     fun bg_QFocusEvent_lostFocus_(_self_ : QFocusEvent*) : Bool
     fun bg_QFocusEvent_reason_(_self_ : QFocusEvent*) : FocusReason
-    fun bg_QPaintEvent_CONSTRUCT_const_QRegion_R(paint_region : QRegion*) : QPaintEvent*
-    fun bg_QPaintEvent_CONSTRUCT_const_QRect_R(paint_rect : QRect*) : QPaintEvent*
+    fun bg_QPaintEvent__CONSTRUCT_const_QRegion_R(paint_region : QRegion*) : QPaintEvent*
+    fun bg_QPaintEvent__CONSTRUCT_const_QRect_R(paint_rect : QRect*) : QPaintEvent*
     fun bg_QPaintEvent_rect_(_self_ : QPaintEvent*) : QRect*
     fun bg_QPaintEvent_region_(_self_ : QPaintEvent*) : QRegion*
-    fun bg_QMoveEvent_CONSTRUCT_const_QPoint_R_const_QPoint_R(pos : QPoint, old_pos : QPoint) : QMoveEvent*
+    fun bg_QMoveEvent__CONSTRUCT_const_QPoint_R_const_QPoint_R(pos : QPoint, old_pos : QPoint) : QMoveEvent*
     fun bg_QMoveEvent_pos_(_self_ : QMoveEvent*) : QPoint
     fun bg_QMoveEvent_oldPos_(_self_ : QMoveEvent*) : QPoint
-    fun bg_QExposeEvent_CONSTRUCT_const_QRegion_R(rgn : QRegion*) : QExposeEvent*
+    fun bg_QExposeEvent__CONSTRUCT_const_QRegion_R(rgn : QRegion*) : QExposeEvent*
     fun bg_QExposeEvent_region_(_self_ : QExposeEvent*) : QRegion*
-    fun bg_QPlatformSurfaceEvent_CONSTRUCT_QPlatformSurfaceEvent__SurfaceEventType(surface_event_type : PlatformSurfaceEvent::SurfaceEventType) : QPlatformSurfaceEvent*
+    fun bg_QPlatformSurfaceEvent__CONSTRUCT_QPlatformSurfaceEvent__SurfaceEventType(surface_event_type : PlatformSurfaceEvent::SurfaceEventType) : QPlatformSurfaceEvent*
     fun bg_QPlatformSurfaceEvent_surfaceEventType_(_self_ : QPlatformSurfaceEvent*) : PlatformSurfaceEvent::SurfaceEventType
-    fun bg_QResizeEvent_CONSTRUCT_const_QSize_R_const_QSize_R(size : QSize*, old_size : QSize*) : QResizeEvent*
+    fun bg_QResizeEvent__CONSTRUCT_const_QSize_R_const_QSize_R(size : QSize*, old_size : QSize*) : QResizeEvent*
     fun bg_QResizeEvent_size_(_self_ : QResizeEvent*) : QSize*
     fun bg_QResizeEvent_oldSize_(_self_ : QResizeEvent*) : QSize*
-    fun bg_QCloseEvent_CONSTRUCT_() : QCloseEvent*
-    fun bg_QIconDragEvent_CONSTRUCT_() : QIconDragEvent*
-    fun bg_QShowEvent_CONSTRUCT_() : QShowEvent*
-    fun bg_QHideEvent_CONSTRUCT_() : QHideEvent*
-    fun bg_QInputMethodEvent_CONSTRUCT_() : QInputMethodEvent*
+    fun bg_QCloseEvent__CONSTRUCT_() : QCloseEvent*
+    fun bg_QIconDragEvent__CONSTRUCT_() : QIconDragEvent*
+    fun bg_QShowEvent__CONSTRUCT_() : QShowEvent*
+    fun bg_QHideEvent__CONSTRUCT_() : QHideEvent*
+    fun bg_QInputMethodEvent__CONSTRUCT_() : QInputMethodEvent*
     fun bg_QInputMethodEvent_setCommitString_const_QString_R_int_int(_self_ : QInputMethodEvent*, commit_string : CrystalString, replace_from : Int32, replace_length : Int32) : Void
     fun bg_QInputMethodEvent_preeditString_(_self_ : QInputMethodEvent*) : CrystalString
     fun bg_QInputMethodEvent_commitString_(_self_ : QInputMethodEvent*) : CrystalString
     fun bg_QInputMethodEvent_replacementStart_(_self_ : QInputMethodEvent*) : Int32
     fun bg_QInputMethodEvent_replacementLength_(_self_ : QInputMethodEvent*) : Int32
-    fun bg_QInputMethodQueryEvent_CONSTRUCT_Qt__InputMethodQueries(queries : InputMethodQueries) : QInputMethodQueryEvent*
+    fun bg_QInputMethodQueryEvent__CONSTRUCT_Qt__InputMethodQueries(queries : InputMethodQueries) : QInputMethodQueryEvent*
     fun bg_QInputMethodQueryEvent_queries_(_self_ : QInputMethodQueryEvent*) : InputMethodQueries
     fun bg_QDrag_metaObject_(_self_ : QDrag*) : QMetaObject*
     fun bg_QDrag_qt_metacast_const_char_X(_self_ : QDrag*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDrag_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDrag*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDrag_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDrag_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDrag_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDrag_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDrag_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDrag_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDrag_CONSTRUCT_QObject_X(drag_source : QObject*) : QDrag*
+    fun bg_QDrag__CONSTRUCT_QObject_X(drag_source : QObject*) : QDrag*
     fun bg_QDrag_setMimeData_QMimeData_X(_self_ : QDrag*, data : QMimeData*) : Void
     fun bg_QDrag_mimeData_(_self_ : QDrag*) : QMimeData*
     fun bg_QDrag_setPixmap_const_QPixmap_R(_self_ : QDrag*, unnamed_arg_0 : QPixmap*) : Void
@@ -7585,8 +7849,8 @@ module Qt
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QDrag*, signal : QMetaMethod*) : Void
     fun bg_QDrag_CONNECT_actionChanged_CrystalProc_void_Qt__DropAction(_self_ : QDrag*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDrag_CONNECT_targetChanged_CrystalProc_void_QObject_X(_self_ : QDrag*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Drag_JUMPTABLE_BgJumptable_Drag(_self_ : QDrag*, table : Binding::BgJumptable_Drag*) : Void
-    fun bg_QDropEvent_CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPointF, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : QDropEvent*
+    fun bg_BgInherit_Drag_JUMPTABLE_BgJumptable_Drag_R(_self_ : QDrag*, table : Binding::BgJumptable_Drag*) : Void
+    fun bg_QDropEvent__CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPointF, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : QDropEvent*
     fun bg_QDropEvent_pos_(_self_ : QDropEvent*) : QPoint
     fun bg_QDropEvent_posF_(_self_ : QDropEvent*) : QPointF
     fun bg_QDropEvent_mouseButtons_(_self_ : QDropEvent*) : MouseButtons
@@ -7598,40 +7862,40 @@ module Qt
     fun bg_QDropEvent_setDropAction_Qt__DropAction(_self_ : QDropEvent*, action : DropAction) : Void
     fun bg_QDropEvent_source_(_self_ : QDropEvent*) : QObject*
     fun bg_QDropEvent_mimeData_(_self_ : QDropEvent*) : QMimeData*
-    fun bg_QDragMoveEvent_CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPoint, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : QDragMoveEvent*
+    fun bg_QDragMoveEvent__CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos : QPoint, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type) : QDragMoveEvent*
     fun bg_QDragMoveEvent_answerRect_(_self_ : QDragMoveEvent*) : QRect*
     fun bg_QDragMoveEvent_accept_(_self_ : QDragMoveEvent*) : Void
     fun bg_QDragMoveEvent_ignore_(_self_ : QDragMoveEvent*) : Void
     fun bg_QDragMoveEvent_accept_const_QRect_R(_self_ : QDragMoveEvent*, r : QRect*) : Void
     fun bg_QDragMoveEvent_ignore_const_QRect_R(_self_ : QDragMoveEvent*, r : QRect*) : Void
-    fun bg_QDragEnterEvent_CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers(pos : QPoint, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers) : QDragEnterEvent*
-    fun bg_QDragLeaveEvent_CONSTRUCT_() : QDragLeaveEvent*
-    fun bg_QHelpEvent_CONSTRUCT_QEvent__Type_const_QPoint_R_const_QPoint_R(type : Event::Type, pos : QPoint, global_pos : QPoint) : QHelpEvent*
+    fun bg_QDragEnterEvent__CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers(pos : QPoint, actions : DropActions, data : QMimeData*, buttons : MouseButtons, modifiers : KeyboardModifiers) : QDragEnterEvent*
+    fun bg_QDragLeaveEvent__CONSTRUCT_() : QDragLeaveEvent*
+    fun bg_QHelpEvent__CONSTRUCT_QEvent__Type_const_QPoint_R_const_QPoint_R(type : Event::Type, pos : QPoint, global_pos : QPoint) : QHelpEvent*
     fun bg_QHelpEvent_x_(_self_ : QHelpEvent*) : Int32
     fun bg_QHelpEvent_y_(_self_ : QHelpEvent*) : Int32
     fun bg_QHelpEvent_globalX_(_self_ : QHelpEvent*) : Int32
     fun bg_QHelpEvent_globalY_(_self_ : QHelpEvent*) : Int32
     fun bg_QHelpEvent_pos_(_self_ : QHelpEvent*) : QPoint
     fun bg_QHelpEvent_globalPos_(_self_ : QHelpEvent*) : QPoint
-    fun bg_QStatusTipEvent_CONSTRUCT_const_QString_R(tip : CrystalString) : QStatusTipEvent*
+    fun bg_QStatusTipEvent__CONSTRUCT_const_QString_R(tip : CrystalString) : QStatusTipEvent*
     fun bg_QStatusTipEvent_tip_(_self_ : QStatusTipEvent*) : CrystalString
-    fun bg_QWhatsThisClickedEvent_CONSTRUCT_const_QString_R(href : CrystalString) : QWhatsThisClickedEvent*
+    fun bg_QWhatsThisClickedEvent__CONSTRUCT_const_QString_R(href : CrystalString) : QWhatsThisClickedEvent*
     fun bg_QWhatsThisClickedEvent_href_(_self_ : QWhatsThisClickedEvent*) : CrystalString
-    fun bg_QActionEvent_CONSTRUCT_int_QAction_X_QAction_X(type : Int32, action : QAction*, before : QAction*) : QActionEvent*
+    fun bg_QActionEvent__CONSTRUCT_int_QAction_X_QAction_X(type : Int32, action : QAction*, before : QAction*) : QActionEvent*
     fun bg_QActionEvent_action_(_self_ : QActionEvent*) : QAction*
     fun bg_QActionEvent_before_(_self_ : QActionEvent*) : QAction*
-    fun bg_QFileOpenEvent_CONSTRUCT_const_QString_R(file : CrystalString) : QFileOpenEvent*
-    fun bg_QFileOpenEvent_CONSTRUCT_const_QUrl_R(url : QUrl*) : QFileOpenEvent*
+    fun bg_QFileOpenEvent__CONSTRUCT_const_QString_R(file : CrystalString) : QFileOpenEvent*
+    fun bg_QFileOpenEvent__CONSTRUCT_const_QUrl_R(url : QUrl*) : QFileOpenEvent*
     fun bg_QFileOpenEvent_file_(_self_ : QFileOpenEvent*) : CrystalString
     fun bg_QFileOpenEvent_url_(_self_ : QFileOpenEvent*) : QUrl*
     fun bg_QFileOpenEvent_openFile_QFile_R_QIODevice__OpenMode(_self_ : QFileOpenEvent*, file : QFile*, flags : IODevice::OpenMode) : Bool
-    fun bg_QToolBarChangeEvent_CONSTRUCT_bool(t : Bool) : QToolBarChangeEvent*
+    fun bg_QToolBarChangeEvent__CONSTRUCT_bool(t : Bool) : QToolBarChangeEvent*
     fun bg_QToolBarChangeEvent_toggle_(_self_ : QToolBarChangeEvent*) : Bool
-    fun bg_QShortcutEvent_CONSTRUCT_const_QKeySequence_R_int_bool(key : QKeySequence*, id : Int32, ambiguous : Bool) : QShortcutEvent*
+    fun bg_QShortcutEvent__CONSTRUCT_const_QKeySequence_R_int_bool(key : QKeySequence*, id : Int32, ambiguous : Bool) : QShortcutEvent*
     fun bg_QShortcutEvent_key_(_self_ : QShortcutEvent*) : QKeySequence*
     fun bg_QShortcutEvent_shortcutId_(_self_ : QShortcutEvent*) : Int32
     fun bg_QShortcutEvent_isAmbiguous_(_self_ : QShortcutEvent*) : Bool
-    fun bg_QScrollPrepareEvent_CONSTRUCT_const_QPointF_R(start_pos : QPointF) : QScrollPrepareEvent*
+    fun bg_QScrollPrepareEvent__CONSTRUCT_const_QPointF_R(start_pos : QPointF) : QScrollPrepareEvent*
     fun bg_QScrollPrepareEvent_startPos_(_self_ : QScrollPrepareEvent*) : QPointF
     fun bg_QScrollPrepareEvent_viewportSize_(_self_ : QScrollPrepareEvent*) : QSizeF*
     fun bg_QScrollPrepareEvent_contentPosRange_(_self_ : QScrollPrepareEvent*) : QRectF*
@@ -7639,16 +7903,16 @@ module Qt
     fun bg_QScrollPrepareEvent_setViewportSize_const_QSizeF_R(_self_ : QScrollPrepareEvent*, size : QSizeF*) : Void
     fun bg_QScrollPrepareEvent_setContentPosRange_const_QRectF_R(_self_ : QScrollPrepareEvent*, rect : QRectF*) : Void
     fun bg_QScrollPrepareEvent_setContentPos_const_QPointF_R(_self_ : QScrollPrepareEvent*, pos : QPointF) : Void
-    fun bg_QScrollEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos : QPointF, overshoot : QPointF, scroll_state : ScrollEvent::ScrollState) : QScrollEvent*
+    fun bg_QScrollEvent__CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos : QPointF, overshoot : QPointF, scroll_state : ScrollEvent::ScrollState) : QScrollEvent*
     fun bg_QScrollEvent_contentPos_(_self_ : QScrollEvent*) : QPointF
     fun bg_QScrollEvent_overshootDistance_(_self_ : QScrollEvent*) : QPointF
     fun bg_QScrollEvent_scrollState_(_self_ : QScrollEvent*) : ScrollEvent::ScrollState
-    fun bg_QScreenOrientationChangeEvent_CONSTRUCT_QScreen_X_Qt__ScreenOrientation(screen : QScreen*, orientation : ScreenOrientation) : QScreenOrientationChangeEvent*
+    fun bg_QScreenOrientationChangeEvent__CONSTRUCT_QScreen_X_Qt__ScreenOrientation(screen : QScreen*, orientation : ScreenOrientation) : QScreenOrientationChangeEvent*
     fun bg_QScreenOrientationChangeEvent_screen_(_self_ : QScreenOrientationChangeEvent*) : QScreen*
     fun bg_QScreenOrientationChangeEvent_orientation_(_self_ : QScreenOrientationChangeEvent*) : ScreenOrientation
-    fun bg_QApplicationStateChangeEvent_CONSTRUCT_Qt__ApplicationState(state : ApplicationState) : QApplicationStateChangeEvent*
+    fun bg_QApplicationStateChangeEvent__CONSTRUCT_Qt__ApplicationState(state : ApplicationState) : QApplicationStateChangeEvent*
     fun bg_QApplicationStateChangeEvent_applicationState_(_self_ : QApplicationStateChangeEvent*) : ApplicationState
-    fun bg_QGestureEvent_CONSTRUCT_const_QList_QGesture_X__R(gestures : Void*) : QGestureEvent*
+    fun bg_QGestureEvent__CONSTRUCT_const_QList_QGesture_X__R(gestures : Void*) : QGestureEvent*
     fun bg_QGestureEvent_gestures_(_self_ : QGestureEvent*) : Void*
     fun bg_QGestureEvent_gesture_Qt__GestureType(_self_ : QGestureEvent*, type : GestureType) : QGesture*
     fun bg_QGestureEvent_activeGestures_(_self_ : QGestureEvent*) : Void*
@@ -7664,18 +7928,22 @@ module Qt
     fun bg_QGestureEvent_setWidget_QWidget_X(_self_ : QGestureEvent*, widget : QWidget*) : Void
     fun bg_QGestureEvent_widget_(_self_ : QGestureEvent*) : QWidget*
     fun bg_QGestureEvent_mapToGraphicsScene_const_QPointF_R(_self_ : QGestureEvent*, gesture_point : QPointF) : QPointF
-    fun bg_QGraphicsSceneEvent_CONSTRUCT_QEvent__Type(type : Event::Type) : QGraphicsSceneEvent*
+    fun bg_QGraphicsSceneEvent__CONSTRUCT_QEvent__Type(type : Event::Type) : QGraphicsSceneEvent*
     fun bg_QGraphicsSceneEvent_widget_(_self_ : QGraphicsSceneEvent*) : QWidget*
     fun bg_QGraphicsSceneEvent_setWidget_QWidget_X(_self_ : QGraphicsSceneEvent*, widget : QWidget*) : Void
-    fun bg_QGraphicsSceneEvent_CONSTRUCT_QGraphicsSceneEventPrivate_R_QEvent__Type(dd : QGraphicsSceneEventPrivate*, type : Event::Type) : QGraphicsSceneEvent*
+    fun bg_QGraphicsSceneEvent__CONSTRUCT_QGraphicsSceneEventPrivate_R_QEvent__Type(dd : QGraphicsSceneEventPrivate*, type : Event::Type) : QGraphicsSceneEvent*
     fun bg_QGraphicsSceneEvent_d_func_(_self_ : QGraphicsSceneEvent*) : QGraphicsSceneEventPrivate*
     fun bg_QIODevice_metaObject_(_self_ : QIODevice*) : QMetaObject*
     fun bg_QIODevice_qt_metacast_const_char_X(_self_ : QIODevice*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QIODevice_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QIODevice*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QIODevice_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QIODevice_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QIODevice_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QIODevice_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QIODevice_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QIODevice_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QIODevice_CONSTRUCT_() : QIODevice*
-    fun bg_QIODevice_CONSTRUCT_QObject_X(parent : QObject*) : QIODevice*
+    fun bg_QIODevice__CONSTRUCT_() : QIODevice*
+    fun bg_QIODevice__CONSTRUCT_QObject_X(parent : QObject*) : QIODevice*
     fun bg_QIODevice_openMode_(_self_ : QIODevice*) : IODevice::OpenMode
     fun bg_QIODevice_setTextModeEnabled_bool(_self_ : QIODevice*, enabled : Bool) : Void
     fun bg_QIODevice_isTextModeEnabled_(_self_ : QIODevice*) : Bool
@@ -7725,7 +7993,7 @@ module Qt
     fun bg_QIODevice_channelBytesWritten_int_qint64(_self_ : QIODevice*, channel : Int32, bytes : Int64) : Void
     fun bg_QIODevice_aboutToClose_(_self_ : QIODevice*) : Void
     fun bg_QIODevice_readChannelFinished_(_self_ : QIODevice*) : Void
-    fun bg_QIODevice_CONSTRUCT_QIODevicePrivate_R_QObject_X(dd : QIODevicePrivate*, parent : QObject*) : QIODevice*
+    fun bg_QIODevice__CONSTRUCT_QIODevicePrivate_R_QObject_X(dd : QIODevicePrivate*, parent : QObject*) : QIODevice*
     fun bg_QIODevice_readData_char_X_qint64(_self_ : QIODevice*, data : UInt8*, maxlen : Int64) : Int64
     fun bg_QIODevice_readLineData_char_X_qint64(_self_ : QIODevice*, data : UInt8*, maxlen : Int64) : Int64
     fun bg_QIODevice_writeData_const_char_X_qint64(_self_ : QIODevice*, data : UInt8*, len : Int64) : Int64
@@ -7744,13 +8012,17 @@ module Qt
     fun bg_QIODevice_CONNECT_channelBytesWritten_CrystalProc_void_int_qint64(_self_ : QIODevice*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QIODevice_CONNECT_aboutToClose_CrystalProc_void(_self_ : QIODevice*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QIODevice_CONNECT_readChannelFinished_CrystalProc_void(_self_ : QIODevice*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice(_self_ : QIODevice*, table : Binding::BgJumptable_IODevice*) : Void
+    fun bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice_R(_self_ : QIODevice*, table : Binding::BgJumptable_IODevice*) : Void
     fun bg_QGesture_metaObject_(_self_ : QGesture*) : QMetaObject*
     fun bg_QGesture_qt_metacast_const_char_X(_self_ : QGesture*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QGesture_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QGesture*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QGesture_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGesture_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGesture_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QGesture_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QGesture_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QGesture_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QGesture_CONSTRUCT_QObject_X(parent : QObject*) : QGesture*
+    fun bg_QGesture__CONSTRUCT_QObject_X(parent : QObject*) : QGesture*
     fun bg_QGesture_gestureType_(_self_ : QGesture*) : GestureType
     fun bg_QGesture_state_(_self_ : QGesture*) : GestureState
     fun bg_QGesture_hotSpot_(_self_ : QGesture*) : QPointF
@@ -7759,7 +8031,7 @@ module Qt
     fun bg_QGesture_unsetHotSpot_(_self_ : QGesture*) : Void
     fun bg_QGesture_setGestureCancelPolicy_QGesture__GestureCancelPolicy(_self_ : QGesture*, policy : Gesture::GestureCancelPolicy) : Void
     fun bg_QGesture_gestureCancelPolicy_(_self_ : QGesture*) : Gesture::GestureCancelPolicy
-    fun bg_QGesture_CONSTRUCT_QGesturePrivate_R_QObject_X(dd : QGesturePrivate*, parent : QObject*) : QGesture*
+    fun bg_QGesture__CONSTRUCT_QGesturePrivate_R_QObject_X(dd : QGesturePrivate*, parent : QObject*) : QGesture*
     fun bg_QObject_event_QEvent_X(_self_ : QGesture*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QGesture*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QGesture*, event : QTimerEvent*) : Void
@@ -7767,9 +8039,9 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QGesture*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QGesture*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QGesture*, signal : QMetaMethod*) : Void
-    fun bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture(_self_ : QGesture*, table : Binding::BgJumptable_Gesture*) : Void
-    fun bg_QPainter_CONSTRUCT_() : QPainter*
-    fun bg_QPainter_CONSTRUCT_QPaintDevice_X(unnamed_arg_0 : QPaintDevice*) : QPainter*
+    fun bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture_R(_self_ : QGesture*, table : Binding::BgJumptable_Gesture*) : Void
+    fun bg_QPainter__CONSTRUCT_() : QPainter*
+    fun bg_QPainter__CONSTRUCT_QPaintDevice_X(unnamed_arg_0 : QPaintDevice*) : QPainter*
     fun bg_QPainter_device_(_self_ : QPainter*) : QPaintDevice*
     fun bg_QPainter_begin_QPaintDevice_X(_self_ : QPainter*, unnamed_arg_0 : QPaintDevice*) : Bool
     fun bg_QPainter_end_(_self_ : QPainter*) : Bool
@@ -7975,9 +8247,9 @@ module Qt
     fun bg_QPainter_restoreRedirected_STATIC_const_QPaintDevice_X(device : QPaintDevice*) : Void
     fun bg_QPainter_beginNativePainting_(_self_ : QPainter*) : Void
     fun bg_QPainter_endNativePainting_(_self_ : QPainter*) : Void
-    fun bg_QLine_CONSTRUCT_() : QLine*
-    fun bg_QLine_CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1 : QPoint, pt2 : QPoint) : QLine*
-    fun bg_QLine_CONSTRUCT_int_int_int_int(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : QLine*
+    fun bg_QLine__CONSTRUCT_() : QLine*
+    fun bg_QLine__CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1 : QPoint, pt2 : QPoint) : QLine*
+    fun bg_QLine__CONSTRUCT_int_int_int_int(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : QLine*
     fun bg_QLine_isNull_(_self_ : QLine*) : Bool
     fun bg_QLine_p1_(_self_ : QLine*) : QPoint
     fun bg_QLine_p2_(_self_ : QLine*) : QPoint
@@ -7996,10 +8268,10 @@ module Qt
     fun bg_QLine_setP2_const_QPoint_R(_self_ : QLine*, p2 : QPoint) : Void
     fun bg_QLine_setPoints_const_QPoint_R_const_QPoint_R(_self_ : QLine*, p1 : QPoint, p2 : QPoint) : Void
     fun bg_QLine_setLine_int_int_int_int(_self_ : QLine*, x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32) : Void
-    fun bg_QLineF_CONSTRUCT_() : QLineF*
-    fun bg_QLineF_CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1 : QPointF, pt2 : QPointF) : QLineF*
-    fun bg_QLineF_CONSTRUCT_qreal_qreal_qreal_qreal(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : QLineF*
-    fun bg_QLineF_CONSTRUCT_const_QLine_R(line : QLine*) : QLineF*
+    fun bg_QLineF__CONSTRUCT_() : QLineF*
+    fun bg_QLineF__CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1 : QPointF, pt2 : QPointF) : QLineF*
+    fun bg_QLineF__CONSTRUCT_qreal_qreal_qreal_qreal(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64) : QLineF*
+    fun bg_QLineF__CONSTRUCT_const_QLine_R(line : QLine*) : QLineF*
     fun bg_QLineF_fromPolar_STATIC_qreal_qreal(length : Float64, angle : Float64) : QLineF*
     fun bg_QLineF_isNull_(_self_ : QLineF*) : Bool
     fun bg_QLineF_p1_(_self_ : QLineF*) : QPointF
@@ -8032,10 +8304,14 @@ module Qt
     fun bg_QSystemTrayIcon_metaObject_(_self_ : QSystemTrayIcon*) : QMetaObject*
     fun bg_QSystemTrayIcon_qt_metacast_const_char_X(_self_ : QSystemTrayIcon*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QSystemTrayIcon_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QSystemTrayIcon*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QSystemTrayIcon_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSystemTrayIcon_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSystemTrayIcon_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QSystemTrayIcon_CONSTRUCT_QObject_X(parent : QObject*) : QSystemTrayIcon*
-    fun bg_QSystemTrayIcon_CONSTRUCT_const_QIcon_R_QObject_X(icon : QIcon*, parent : QObject*) : QSystemTrayIcon*
+    fun bg_QSystemTrayIcon__CONSTRUCT_QObject_X(parent : QObject*) : QSystemTrayIcon*
+    fun bg_QSystemTrayIcon__CONSTRUCT_const_QIcon_R_QObject_X(icon : QIcon*, parent : QObject*) : QSystemTrayIcon*
     fun bg_QSystemTrayIcon_setContextMenu_QMenu_X(_self_ : QSystemTrayIcon*, menu : QMenu*) : Void
     fun bg_QSystemTrayIcon_contextMenu_(_self_ : QSystemTrayIcon*) : QMenu*
     fun bg_QSystemTrayIcon_icon_(_self_ : QSystemTrayIcon*) : QIcon*
@@ -8062,17 +8338,21 @@ module Qt
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QSystemTrayIcon*, signal : QMetaMethod*) : Void
     fun bg_QSystemTrayIcon_CONNECT_activated_CrystalProc_void_QSystemTrayIcon__ActivationReason(_self_ : QSystemTrayIcon*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QSystemTrayIcon_CONNECT_messageClicked_CrystalProc_void(_self_ : QSystemTrayIcon*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon(_self_ : QSystemTrayIcon*, table : Binding::BgJumptable_SystemTrayIcon*) : Void
+    fun bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon_R(_self_ : QSystemTrayIcon*, table : Binding::BgJumptable_SystemTrayIcon*) : Void
     fun bg_QDesktopServices_openUrl_STATIC_const_QUrl_R(url : QUrl*) : Bool
     fun bg_QDesktopServices_setUrlHandler_STATIC_const_QString_R_QObject_X_const_char_X(scheme : CrystalString, receiver : QObject*, method : UInt8*) : Void
     fun bg_QDesktopServices_unsetUrlHandler_STATIC_const_QString_R(scheme : CrystalString) : Void
-    fun bg_QDesktopServices_CONSTRUCT_() : QDesktopServices*
+    fun bg_QDesktopServices__CONSTRUCT_() : QDesktopServices*
     fun bg_QDesktopWidget_metaObject_(_self_ : QDesktopWidget*) : QMetaObject*
     fun bg_QDesktopWidget_qt_metacast_const_char_X(_self_ : QDesktopWidget*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QDesktopWidget_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QDesktopWidget*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QDesktopWidget_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDesktopWidget_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDesktopWidget_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QDesktopWidget_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QDesktopWidget_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QDesktopWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QDesktopWidget_CONSTRUCT_() : QDesktopWidget*
+    fun bg_QDesktopWidget__CONSTRUCT_() : QDesktopWidget*
     fun bg_QDesktopWidget_isVirtualDesktop_(_self_ : QDesktopWidget*) : Bool
     fun bg_QDesktopWidget_numScreens_(_self_ : QDesktopWidget*) : Int32
     fun bg_QDesktopWidget_screenCount_(_self_ : QDesktopWidget*) : Int32
@@ -8133,25 +8413,29 @@ module Qt
     fun bg_QDesktopWidget_CONNECT_workAreaResized_CrystalProc_void_int(_self_ : QDesktopWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDesktopWidget_CONNECT_screenCountChanged_CrystalProc_void_int(_self_ : QDesktopWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QDesktopWidget_CONNECT_primaryScreenChanged_CrystalProc_void(_self_ : QDesktopWidget*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_DesktopWidget_JUMPTABLE_BgJumptable_DesktopWidget(_self_ : QDesktopWidget*, table : Binding::BgJumptable_DesktopWidget*) : Void
+    fun bg_BgInherit_DesktopWidget_JUMPTABLE_BgJumptable_DesktopWidget_R(_self_ : QDesktopWidget*, table : Binding::BgJumptable_DesktopWidget*) : Void
     fun bg_QStandardPaths_writableLocation_STATIC_QStandardPaths__StandardLocation(type : StandardPaths::StandardLocation) : CrystalString
-    fun bg_QStandardPaths_standardLocations_STATIC_QStandardPaths__StandardLocation(type : StandardPaths::StandardLocation) : Void*
+    fun bg_QStandardPaths_standardLocations_STATIC_QStandardPaths__StandardLocation(type : StandardPaths::StandardLocation) : QStringList*
     fun bg_QStandardPaths_locate_STATIC_QStandardPaths__StandardLocation_const_QString_R(type : StandardPaths::StandardLocation, file_name : CrystalString) : CrystalString
     fun bg_QStandardPaths_locate_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type : StandardPaths::StandardLocation, file_name : CrystalString, options : StandardPaths::LocateOptions) : CrystalString
-    fun bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R(type : StandardPaths::StandardLocation, file_name : CrystalString) : Void*
-    fun bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type : StandardPaths::StandardLocation, file_name : CrystalString, options : StandardPaths::LocateOptions) : Void*
+    fun bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R(type : StandardPaths::StandardLocation, file_name : CrystalString) : QStringList*
+    fun bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type : StandardPaths::StandardLocation, file_name : CrystalString, options : StandardPaths::LocateOptions) : QStringList*
     fun bg_QStandardPaths_displayName_STATIC_QStandardPaths__StandardLocation(type : StandardPaths::StandardLocation) : CrystalString
     fun bg_QStandardPaths_findExecutable_STATIC_const_QString_R(executable_name : CrystalString) : CrystalString
-    fun bg_QStandardPaths_findExecutable_STATIC_const_QString_R_const_QStringList_R(executable_name : CrystalString, paths : Void*) : CrystalString
+    fun bg_QStandardPaths_findExecutable_STATIC_const_QString_R_const_QStringList_R(executable_name : CrystalString, paths : QStringList*) : CrystalString
     fun bg_QStandardPaths_enableTestMode_STATIC_bool(test_mode : Bool) : Void
     fun bg_QStandardPaths_setTestModeEnabled_STATIC_bool(test_mode : Bool) : Void
     fun bg_QStandardPaths_isTestModeEnabled_STATIC_() : Bool
     fun bg_QMimeData_metaObject_(_self_ : QMimeData*) : QMetaObject*
     fun bg_QMimeData_qt_metacast_const_char_X(_self_ : QMimeData*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QMimeData_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QMimeData*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QMimeData_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMimeData_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMimeData_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QMimeData_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QMimeData_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QMimeData_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QMimeData_CONSTRUCT_() : QMimeData*
+    fun bg_QMimeData__CONSTRUCT_() : QMimeData*
     fun bg_QMimeData_urls_(_self_ : QMimeData*) : Void*
     fun bg_QMimeData_setUrls_const_QList_QUrl__R(_self_ : QMimeData*, urls : Void*) : Void
     fun bg_QMimeData_hasUrls_(_self_ : QMimeData*) : Bool
@@ -8167,7 +8451,7 @@ module Qt
     fun bg_QMimeData_setData_const_QString_R_const_QByteArray_R(_self_ : QMimeData*, mimetype : CrystalString, data : QByteArray*) : Void
     fun bg_QMimeData_removeFormat_const_QString_R(_self_ : QMimeData*, mimetype : CrystalString) : Void
     fun bg_QMimeData_hasFormat_const_QString_R(_self_ : QMimeData*, mimetype : CrystalString) : Bool
-    fun bg_QMimeData_formats_(_self_ : QMimeData*) : Void*
+    fun bg_QMimeData_formats_(_self_ : QMimeData*) : QStringList*
     fun bg_QMimeData_clear_(_self_ : QMimeData*) : Void
     fun bg_QObject_event_QEvent_X(_self_ : QMimeData*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QMimeData*, watched : QObject*, event : QEvent*) : Bool
@@ -8176,9 +8460,9 @@ module Qt
     fun bg_QObject_customEvent_QEvent_X(_self_ : QMimeData*, event : QEvent*) : Void
     fun bg_QObject_connectNotify_const_QMetaMethod_R(_self_ : QMimeData*, signal : QMetaMethod*) : Void
     fun bg_QObject_disconnectNotify_const_QMetaMethod_R(_self_ : QMimeData*, signal : QMetaMethod*) : Void
-    fun bg_BgInherit_MimeData_JUMPTABLE_BgJumptable_MimeData(_self_ : QMimeData*, table : Binding::BgJumptable_MimeData*) : Void
-    fun bg_QSizePolicy_CONSTRUCT_() : QSizePolicy*
-    fun bg_QSizePolicy_CONSTRUCT_QSizePolicy__Policy_QSizePolicy__Policy_QSizePolicy__ControlType(horizontal : SizePolicy::Policy, vertical : SizePolicy::Policy, type : SizePolicy::ControlType) : QSizePolicy*
+    fun bg_BgInherit_MimeData_JUMPTABLE_BgJumptable_MimeData_R(_self_ : QMimeData*, table : Binding::BgJumptable_MimeData*) : Void
+    fun bg_QSizePolicy__CONSTRUCT_() : QSizePolicy*
+    fun bg_QSizePolicy__CONSTRUCT_QSizePolicy__Policy_QSizePolicy__Policy_QSizePolicy__ControlType(horizontal : SizePolicy::Policy, vertical : SizePolicy::Policy, type : SizePolicy::ControlType) : QSizePolicy*
     fun bg_QSizePolicy_horizontalPolicy_(_self_ : QSizePolicy*) : SizePolicy::Policy
     fun bg_QSizePolicy_verticalPolicy_(_self_ : QSizePolicy*) : SizePolicy::Policy
     fun bg_QSizePolicy_controlType_(_self_ : QSizePolicy*) : SizePolicy::ControlType
@@ -8198,8 +8482,8 @@ module Qt
     fun bg_QSizePolicy_setRetainSizeWhenHidden_bool(_self_ : QSizePolicy*, retain_size : Bool) : Void
     fun bg_QSizePolicy_transpose_(_self_ : QSizePolicy*) : Void
     fun bg_QSizePolicy_transposed_(_self_ : QSizePolicy*) : QSizePolicy*
-    fun bg_QUrl_CONSTRUCT_() : QUrl*
-    fun bg_QUrl_CONSTRUCT_const_QString_R_QUrl__ParsingMode(url : CrystalString, mode : Url::ParsingMode) : QUrl*
+    fun bg_QUrl__CONSTRUCT_() : QUrl*
+    fun bg_QUrl__CONSTRUCT_const_QString_R_QUrl__ParsingMode(url : CrystalString, mode : Url::ParsingMode) : QUrl*
     fun bg_QUrl_swap_QUrl_R(_self_ : QUrl*, other : QUrl*) : Void
     fun bg_QUrl_setUrl_const_QString_R_QUrl__ParsingMode(_self_ : QUrl*, url : CrystalString, mode : Url::ParsingMode) : Void
     fun bg_QUrl_url_(_self_ : QUrl*) : CrystalString
@@ -8269,15 +8553,19 @@ module Qt
     fun bg_QUrl_toPercentEncoding_STATIC_const_QString_R_const_QByteArray_R_const_QByteArray_R(unnamed_arg_0 : CrystalString, exclude : QByteArray*, include_ : QByteArray*) : QByteArray*
     fun bg_QUrl_fromAce_STATIC_const_QByteArray_R(unnamed_arg_0 : QByteArray*) : CrystalString
     fun bg_QUrl_toAce_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : QByteArray*
-    fun bg_QUrl_idnWhitelist_STATIC_() : Void*
-    fun bg_QUrl_toStringList_STATIC_const_QList_QUrl__R(uris : Void*) : Void*
-    fun bg_QUrl_toStringList_STATIC_const_QList_QUrl__R_QUrl__FormattingOptions(uris : Void*, options : Url::FormattingOptions) : Void*
-    fun bg_QUrl_fromStringList_STATIC_const_QStringList_R_QUrl__ParsingMode(uris : Void*, mode : Url::ParsingMode) : Void*
-    fun bg_QUrl_setIdnWhitelist_STATIC_const_QStringList_R(unnamed_arg_0 : Void*) : Void
+    fun bg_QUrl_idnWhitelist_STATIC_() : QStringList*
+    fun bg_QUrl_toStringList_STATIC_const_QList_QUrl__R(uris : Void*) : QStringList*
+    fun bg_QUrl_toStringList_STATIC_const_QList_QUrl__R_QUrl__FormattingOptions(uris : Void*, options : Url::FormattingOptions) : QStringList*
+    fun bg_QUrl_fromStringList_STATIC_const_QStringList_R_QUrl__ParsingMode(uris : QStringList*, mode : Url::ParsingMode) : Void*
+    fun bg_QUrl_setIdnWhitelist_STATIC_const_QStringList_R(unnamed_arg_0 : QStringList*) : Void
     fun bg_QScreen_metaObject_(_self_ : QScreen*) : QMetaObject*
     fun bg_QScreen_qt_metacast_const_char_X(_self_ : QScreen*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QScreen_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QScreen*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QScreen_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScreen_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScreen_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QScreen_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QScreen_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QScreen_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QScreen_handle_(_self_ : QScreen*) : QPlatformScreen*
     fun bg_QScreen_name_(_self_ : QScreen*) : CrystalString
@@ -8312,6 +8600,7 @@ module Qt
     fun bg_QScreen_mapBetween_Qt__ScreenOrientation_Qt__ScreenOrientation_const_QRect_R(_self_ : QScreen*, a : ScreenOrientation, b : ScreenOrientation, rect : QRect*) : QRect*
     fun bg_QScreen_isPortrait_Qt__ScreenOrientation(_self_ : QScreen*, orientation : ScreenOrientation) : Bool
     fun bg_QScreen_isLandscape_Qt__ScreenOrientation(_self_ : QScreen*, orientation : ScreenOrientation) : Bool
+    fun bg_QScreen_grabWindow_WId_int_int_int_int(_self_ : QScreen*, window : UInt32, x : Int32, y : Int32, w : Int32, h : Int32) : QPixmap*
     fun bg_QScreen_refreshRate_(_self_ : QScreen*) : Float64
     fun bg_QScreen_geometryChanged_const_QRect_R(_self_ : QScreen*, geometry : QRect*) : Void
     fun bg_QScreen_availableGeometryChanged_const_QRect_R(_self_ : QScreen*, geometry : QRect*) : Void
@@ -8338,28 +8627,33 @@ module Qt
     fun bg_QScreen_CONNECT_primaryOrientationChanged_CrystalProc_void_Qt__ScreenOrientation(_self_ : QScreen*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QScreen_CONNECT_orientationChanged_CrystalProc_void_Qt__ScreenOrientation(_self_ : QScreen*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QScreen_CONNECT_refreshRateChanged_CrystalProc_void_qreal(_self_ : QScreen*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Screen_JUMPTABLE_BgJumptable_Screen(_self_ : QScreen*, table : Binding::BgJumptable_Screen*) : Void
+    fun bg_BgInherit_Screen_JUMPTABLE_BgJumptable_Screen_R(_self_ : QScreen*, table : Binding::BgJumptable_Screen*) : Void
     fun bg_QSurface_surfaceClass_(_self_ : QSurface*) : Surface::SurfaceClass
     fun bg_QSurface_format_(_self_ : QSurface*) : QSurfaceFormat*
     fun bg_QSurface_surfaceHandle_(_self_ : QSurface*) : QPlatformSurface*
     fun bg_QSurface_surfaceType_(_self_ : QSurface*) : Surface::SurfaceType
     fun bg_QSurface_supportsOpenGL_(_self_ : QSurface*) : Bool
     fun bg_QSurface_size_(_self_ : QSurface*) : QSize*
-    fun bg_QSurface_CONSTRUCT_QSurface__SurfaceClass(type : Surface::SurfaceClass) : QSurface*
-    fun bg_BgInherit_Surface_JUMPTABLE_BgJumptable_Surface(_self_ : QSurface*, table : Binding::BgJumptable_Surface*) : Void
+    fun bg_QSurface__CONSTRUCT_QSurface__SurfaceClass(type : Surface::SurfaceClass) : QSurface*
+    fun bg_BgInherit_Surface_JUMPTABLE_BgJumptable_Surface_R(_self_ : QSurface*, table : Binding::BgJumptable_Surface*) : Void
     fun bg_QWindow_metaObject_(_self_ : QWindow*) : QMetaObject*
     fun bg_QWindow_qt_metacast_const_char_X(_self_ : QWindow*, unnamed_arg_0 : UInt8*) : Void*
     fun bg_QWindow_qt_metacall_QMetaObject__Call_int_void_XX(_self_ : QWindow*, unnamed_arg_0 : MetaObjectCall, unnamed_arg_1 : Int32, unnamed_arg_2 : Void**) : Int32
+    fun bg_QWindow_tr_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QWindow_tr_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWindow_tr_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
+    fun bg_QWindow_trUtf8_STATIC_const_char_X(s : UInt8*) : CrystalString
+    fun bg_QWindow_trUtf8_STATIC_const_char_X_const_char_X(s : UInt8*, c : UInt8*) : CrystalString
     fun bg_QWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
-    fun bg_QWindow_CONSTRUCT_QScreen_X(screen : QScreen*) : QWindow*
-    fun bg_QWindow_CONSTRUCT_QWindow_X(parent : QWindow*) : QWindow*
+    fun bg_QWindow__CONSTRUCT_QScreen_X(screen : QScreen*) : QWindow*
+    fun bg_QWindow__CONSTRUCT_QWindow_X(parent : QWindow*) : QWindow*
     fun bg_QWindow_setSurfaceType_QSurface__SurfaceType(_self_ : QWindow*, surface_type : Surface::SurfaceType) : Void
     fun bg_QWindow_surfaceType_(_self_ : QWindow*) : Surface::SurfaceType
     fun bg_QWindow_isVisible_(_self_ : QWindow*) : Bool
     fun bg_QWindow_visibility_(_self_ : QWindow*) : Window::Visibility
     fun bg_QWindow_setVisibility_QWindow__Visibility(_self_ : QWindow*, v : Window::Visibility) : Void
     fun bg_QWindow_create_(_self_ : QWindow*) : Void
+    fun bg_QWindow_winId_(_self_ : QWindow*) : UInt32
     fun bg_QWindow_parent_QWindow__AncestorMode(_self_ : QWindow*, mode : Window::AncestorMode) : QWindow*
     fun bg_QWindow_parent_(_self_ : QWindow*) : QWindow*
     fun bg_QWindow_setParent_QWindow_X(_self_ : QWindow*, parent : QWindow*) : Void
@@ -8435,6 +8729,7 @@ module Qt
     fun bg_QWindow_cursor_(_self_ : QWindow*) : QCursor*
     fun bg_QWindow_setCursor_const_QCursor_R(_self_ : QWindow*, unnamed_arg_0 : QCursor*) : Void
     fun bg_QWindow_unsetCursor_(_self_ : QWindow*) : Void
+    fun bg_QWindow_fromWinId_STATIC_WId(id : UInt32) : QWindow*
     fun bg_QWindow_requestActivate_(_self_ : QWindow*) : Void
     fun bg_QWindow_setVisible_bool(_self_ : QWindow*, visible : Bool) : Void
     fun bg_QWindow_show_(_self_ : QWindow*) : Void
@@ -8493,7 +8788,7 @@ module Qt
     fun bg_QWindow_touchEvent_QTouchEvent_X(_self_ : QWindow*, unnamed_arg_0 : QTouchEvent*) : Void
     fun bg_QWindow_tabletEvent_QTabletEvent_X(_self_ : QWindow*, unnamed_arg_0 : QTabletEvent*) : Void
     fun bg_QWindow_nativeEvent_const_QByteArray_R_void_X_long_X(_self_ : QWindow*, event_type : QByteArray*, message : Void*, result : Int64*) : Bool
-    fun bg_QWindow_CONSTRUCT_QWindowPrivate_R_QWindow_X(dd : QWindowPrivate*, parent : QWindow*) : QWindow*
+    fun bg_QWindow__CONSTRUCT_QWindowPrivate_R_QWindow_X(dd : QWindowPrivate*, parent : QWindow*) : QWindow*
     fun bg_QWindow_AS_Surface_(_self_ : QWindow*) : QSurface*
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QWindow*, watched : QObject*, event : QEvent*) : Bool
     fun bg_QObject_timerEvent_QTimerEvent_X(_self_ : QWindow*, event : QTimerEvent*) : Void
@@ -8520,9 +8815,9 @@ module Qt
     fun bg_QWindow_CONNECT_contentOrientationChanged_CrystalProc_void_Qt__ScreenOrientation(_self_ : QWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWindow_CONNECT_focusObjectChanged_CrystalProc_void_QObject_X(_self_ : QWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QWindow_CONNECT_opacityChanged_CrystalProc_void_qreal(_self_ : QWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
-    fun bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window(_self_ : QWindow*, table : Binding::BgJumptable_Window*) : Void
-    fun bg_QPixelFormat_CONSTRUCT_() : QPixelFormat*
-    fun bg_QPixelFormat_CONSTRUCT_QPixelFormat__ColorModel_uchar_uchar_uchar_uchar_uchar_uchar_QPixelFormat__AlphaUsage_QPixelFormat__AlphaPosition_QPixelFormat__AlphaPremultiplied_QPixelFormat__TypeInterpretation_QPixelFormat__ByteOrder_uchar(color_model : PixelFormat::ColorModel, first_size : UInt8, second_size : UInt8, third_size : UInt8, fourth_size : UInt8, fifth_size : UInt8, alpha_size : UInt8, alpha_usage : PixelFormat::AlphaUsage, alpha_position : PixelFormat::AlphaPosition, premultiplied : PixelFormat::AlphaPremultiplied, type_interpretation : PixelFormat::TypeInterpretation, byte_order : PixelFormat::ByteOrder, sub_enum : UInt8) : QPixelFormat*
+    fun bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window_R(_self_ : QWindow*, table : Binding::BgJumptable_Window*) : Void
+    fun bg_QPixelFormat__CONSTRUCT_() : QPixelFormat*
+    fun bg_QPixelFormat__CONSTRUCT_QPixelFormat__ColorModel_uchar_uchar_uchar_uchar_uchar_uchar_QPixelFormat__AlphaUsage_QPixelFormat__AlphaPosition_QPixelFormat__AlphaPremultiplied_QPixelFormat__TypeInterpretation_QPixelFormat__ByteOrder_uchar(color_model : PixelFormat::ColorModel, first_size : UInt8, second_size : UInt8, third_size : UInt8, fourth_size : UInt8, fifth_size : UInt8, alpha_size : UInt8, alpha_usage : PixelFormat::AlphaUsage, alpha_position : PixelFormat::AlphaPosition, premultiplied : PixelFormat::AlphaPremultiplied, type_interpretation : PixelFormat::TypeInterpretation, byte_order : PixelFormat::ByteOrder, sub_enum : UInt8) : QPixelFormat*
     fun bg_QPixelFormat_colorModel_(_self_ : QPixelFormat*) : PixelFormat::ColorModel
     fun bg_QPixelFormat_channelCount_(_self_ : QPixelFormat*) : UInt8
     fun bg_QPixelFormat_redSize_(_self_ : QPixelFormat*) : UInt8
@@ -8545,8 +8840,8 @@ module Qt
     fun bg_QPixelFormat_byteOrder_(_self_ : QPixelFormat*) : PixelFormat::ByteOrder
     fun bg_QPixelFormat_yuvLayout_(_self_ : QPixelFormat*) : PixelFormat::YUVLayout
     fun bg_QPixelFormat_subEnum_(_self_ : QPixelFormat*) : UInt8
-    fun bg_QTextFormat_CONSTRUCT_() : QTextFormat*
-    fun bg_QTextFormat_CONSTRUCT_int(type : Int32) : QTextFormat*
+    fun bg_QTextFormat__CONSTRUCT_() : QTextFormat*
+    fun bg_QTextFormat__CONSTRUCT_int(type : Int32) : QTextFormat*
     fun bg_QTextFormat_swap_QTextFormat_R(_self_ : QTextFormat*, other : QTextFormat*) : Void
     fun bg_QTextFormat_merge_const_QTextFormat_R(_self_ : QTextFormat*, other : QTextFormat*) : Void
     fun bg_QTextFormat_isValid_(_self_ : QTextFormat*) : Bool
@@ -8591,7 +8886,7 @@ module Qt
     fun bg_QTextFormat_setForeground_const_QBrush_R(_self_ : QTextFormat*, brush : QBrush*) : Void
     fun bg_QTextFormat_foreground_(_self_ : QTextFormat*) : QBrush*
     fun bg_QTextFormat_clearForeground_(_self_ : QTextFormat*) : Void
-    fun bg_QTextBlockFormat_CONSTRUCT_() : QTextBlockFormat*
+    fun bg_QTextBlockFormat__CONSTRUCT_() : QTextBlockFormat*
     fun bg_QTextBlockFormat_isValid_(_self_ : QTextBlockFormat*) : Bool
     fun bg_QTextBlockFormat_setAlignment_Qt__Alignment(_self_ : QTextBlockFormat*, alignment : Alignment) : Void
     fun bg_QTextBlockFormat_alignment_(_self_ : QTextBlockFormat*) : Alignment
@@ -8615,8 +8910,8 @@ module Qt
     fun bg_QTextBlockFormat_nonBreakableLines_(_self_ : QTextBlockFormat*) : Bool
     fun bg_QTextBlockFormat_setPageBreakPolicy_QTextFormat__PageBreakFlags(_self_ : QTextBlockFormat*, flags : TextFormat::PageBreakFlags) : Void
     fun bg_QTextBlockFormat_pageBreakPolicy_(_self_ : QTextBlockFormat*) : TextFormat::PageBreakFlags
-    fun bg_QTextBlockFormat_CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextBlockFormat*
-    fun bg_QTextCharFormat_CONSTRUCT_() : QTextCharFormat*
+    fun bg_QTextBlockFormat__CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextBlockFormat*
+    fun bg_QTextCharFormat__CONSTRUCT_() : QTextCharFormat*
     fun bg_QTextCharFormat_isValid_(_self_ : QTextCharFormat*) : Bool
     fun bg_QTextCharFormat_setFont_const_QFont_R_QTextCharFormat__FontPropertiesInheritanceBehavior(_self_ : QTextCharFormat*, font : QFont*, behavior : TextCharFormat::FontPropertiesInheritanceBehavior) : Void
     fun bg_QTextCharFormat_setFont_const_QFont_R(_self_ : QTextCharFormat*, font : QFont*) : Void
@@ -8671,14 +8966,14 @@ module Qt
     fun bg_QTextCharFormat_anchorHref_(_self_ : QTextCharFormat*) : CrystalString
     fun bg_QTextCharFormat_setAnchorName_const_QString_R(_self_ : QTextCharFormat*, name : CrystalString) : Void
     fun bg_QTextCharFormat_anchorName_(_self_ : QTextCharFormat*) : CrystalString
-    fun bg_QTextCharFormat_setAnchorNames_const_QStringList_R(_self_ : QTextCharFormat*, names : Void*) : Void
-    fun bg_QTextCharFormat_anchorNames_(_self_ : QTextCharFormat*) : Void*
+    fun bg_QTextCharFormat_setAnchorNames_const_QStringList_R(_self_ : QTextCharFormat*, names : QStringList*) : Void
+    fun bg_QTextCharFormat_anchorNames_(_self_ : QTextCharFormat*) : QStringList*
     fun bg_QTextCharFormat_setTableCellRowSpan_int(_self_ : QTextCharFormat*, table_cell_row_span : Int32) : Void
     fun bg_QTextCharFormat_tableCellRowSpan_(_self_ : QTextCharFormat*) : Int32
     fun bg_QTextCharFormat_setTableCellColumnSpan_int(_self_ : QTextCharFormat*, table_cell_column_span : Int32) : Void
     fun bg_QTextCharFormat_tableCellColumnSpan_(_self_ : QTextCharFormat*) : Int32
-    fun bg_QTextCharFormat_CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextCharFormat*
-    fun bg_QTextFrameFormat_CONSTRUCT_() : QTextFrameFormat*
+    fun bg_QTextCharFormat__CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextCharFormat*
+    fun bg_QTextFrameFormat__CONSTRUCT_() : QTextFrameFormat*
     fun bg_QTextFrameFormat_isValid_(_self_ : QTextFrameFormat*) : Bool
     fun bg_QTextFrameFormat_setPosition_QTextFrameFormat__Position(_self_ : QTextFrameFormat*, f : TextFrameFormat::Position) : Void
     fun bg_QTextFrameFormat_position_(_self_ : QTextFrameFormat*) : TextFrameFormat::Position
@@ -8708,8 +9003,8 @@ module Qt
     fun bg_QTextFrameFormat_height_(_self_ : QTextFrameFormat*) : QTextLength*
     fun bg_QTextFrameFormat_setPageBreakPolicy_QTextFormat__PageBreakFlags(_self_ : QTextFrameFormat*, flags : TextFormat::PageBreakFlags) : Void
     fun bg_QTextFrameFormat_pageBreakPolicy_(_self_ : QTextFrameFormat*) : TextFormat::PageBreakFlags
-    fun bg_QTextFrameFormat_CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextFrameFormat*
-    fun bg_QTextListFormat_CONSTRUCT_() : QTextListFormat*
+    fun bg_QTextFrameFormat__CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextFrameFormat*
+    fun bg_QTextListFormat__CONSTRUCT_() : QTextListFormat*
     fun bg_QTextListFormat_isValid_(_self_ : QTextListFormat*) : Bool
     fun bg_QTextListFormat_setStyle_QTextListFormat__Style(_self_ : QTextListFormat*, style : TextListFormat::Style) : Void
     fun bg_QTextListFormat_style_(_self_ : QTextListFormat*) : TextListFormat::Style
@@ -8719,15 +9014,15 @@ module Qt
     fun bg_QTextListFormat_numberPrefix_(_self_ : QTextListFormat*) : CrystalString
     fun bg_QTextListFormat_setNumberSuffix_const_QString_R(_self_ : QTextListFormat*, number_suffix : CrystalString) : Void
     fun bg_QTextListFormat_numberSuffix_(_self_ : QTextListFormat*) : CrystalString
-    fun bg_QTextListFormat_CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextListFormat*
-    fun bg_QTextLength_CONSTRUCT_() : QTextLength*
-    fun bg_QTextLength_CONSTRUCT_QTextLength__Type_qreal(type : TextLength::Type, value : Float64) : QTextLength*
+    fun bg_QTextListFormat__CONSTRUCT_const_QTextFormat_R(fmt : QTextFormat*) : QTextListFormat*
+    fun bg_QTextLength__CONSTRUCT_() : QTextLength*
+    fun bg_QTextLength__CONSTRUCT_QTextLength__Type_qreal(type : TextLength::Type, value : Float64) : QTextLength*
     fun bg_QTextLength_type_(_self_ : QTextLength*) : TextLength::Type
     fun bg_QTextLength_value_qreal(_self_ : QTextLength*, maximum_length : Float64) : Float64
     fun bg_QTextLength_rawValue_(_self_ : QTextLength*) : Float64
-    fun bg_QFont_CONSTRUCT_() : QFont*
-    fun bg_QFont_CONSTRUCT_const_QString_R_int_int_bool(family : CrystalString, point_size : Int32, weight : Int32, italic : Bool) : QFont*
-    fun bg_QFont_CONSTRUCT_const_QFont_R_QPaintDevice_X(unnamed_arg_0 : QFont*, pd : QPaintDevice*) : QFont*
+    fun bg_QFont__CONSTRUCT_() : QFont*
+    fun bg_QFont__CONSTRUCT_const_QString_R_int_int_bool(family : CrystalString, point_size : Int32, weight : Int32, italic : Bool) : QFont*
+    fun bg_QFont__CONSTRUCT_const_QFont_R_QPaintDevice_X(unnamed_arg_0 : QFont*, pd : QPaintDevice*) : QFont*
     fun bg_QFont_swap_QFont_R(_self_ : QFont*, other : QFont*) : Void
     fun bg_QFont_family_(_self_ : QFont*) : CrystalString
     fun bg_QFont_setFamily_const_QString_R(_self_ : QFont*, unnamed_arg_0 : CrystalString) : Void
@@ -8782,10 +9077,10 @@ module Qt
     fun bg_QFont_toString_(_self_ : QFont*) : CrystalString
     fun bg_QFont_fromString_const_QString_R(_self_ : QFont*, unnamed_arg_0 : CrystalString) : Bool
     fun bg_QFont_substitute_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : CrystalString
-    fun bg_QFont_substitutes_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : Void*
-    fun bg_QFont_substitutions_STATIC_() : Void*
+    fun bg_QFont_substitutes_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : QStringList*
+    fun bg_QFont_substitutions_STATIC_() : QStringList*
     fun bg_QFont_insertSubstitution_STATIC_const_QString_R_const_QString_R(unnamed_arg_0 : CrystalString, unnamed_arg_1 : CrystalString) : Void
-    fun bg_QFont_insertSubstitutions_STATIC_const_QString_R_const_QStringList_R(unnamed_arg_0 : CrystalString, unnamed_arg_1 : Void*) : Void
+    fun bg_QFont_insertSubstitutions_STATIC_const_QString_R_const_QStringList_R(unnamed_arg_0 : CrystalString, unnamed_arg_1 : QStringList*) : Void
     fun bg_QFont_removeSubstitutions_STATIC_const_QString_R(unnamed_arg_0 : CrystalString) : Void
     fun bg_QFont_initialize_STATIC_() : Void
     fun bg_QFont_cleanup_STATIC_() : Void
@@ -8796,118 +9091,131 @@ module Qt
     fun bg_QFont_resolve_const_QFont_R(_self_ : QFont*, unnamed_arg_0 : QFont*) : QFont*
     fun bg_QFont_resolve_(_self_ : QFont*) : UInt32
     fun bg_QFont_resolve_uint(_self_ : QFont*, mask : UInt32) : Void
-    fun bg_Container_QList_QString_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QString_at_int(_self_ : Void*, index : Int32) : CrystalString
-    fun bg_Container_QList_QString_push_back_QString(_self_ : Void*, value : CrystalString) : Void
-    fun bg_Container_QList_QString_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QObject_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QObject_X_at_int(_self_ : Void*, index : Int32) : QObject*
-    fun bg_Container_QList_QObject_X_push_back_QObject_X(_self_ : Void*, value : QObject*) : Void
-    fun bg_Container_QList_QObject_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QWidget_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QWidget_X_at_int(_self_ : Void*, index : Int32) : QWidget*
-    fun bg_Container_QList_QWidget_X_push_back_QWidget_X(_self_ : Void*, value : QWidget*) : Void
-    fun bg_Container_QList_QWidget_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QDockWidget_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QDockWidget_X_at_int(_self_ : Void*, index : Int32) : QDockWidget*
-    fun bg_Container_QList_QDockWidget_X_push_back_QDockWidget_X(_self_ : Void*, value : QDockWidget*) : Void
-    fun bg_Container_QList_QDockWidget_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QAction_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QAction_X_at_int(_self_ : Void*, index : Int32) : QAction*
-    fun bg_Container_QList_QAction_X_push_back_QAction_X(_self_ : Void*, value : QAction*) : Void
-    fun bg_Container_QList_QAction_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QGesture_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QGesture_X_at_int(_self_ : Void*, index : Int32) : QGesture*
-    fun bg_Container_QList_QGesture_X_push_back_QGesture_X(_self_ : Void*, value : QGesture*) : Void
-    fun bg_Container_QList_QGesture_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QAbstractButton_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QAbstractButton_X_at_int(_self_ : Void*, index : Int32) : QAbstractButton*
-    fun bg_Container_QList_QAbstractButton_X_push_back_QAbstractButton_X(_self_ : Void*, value : QAbstractButton*) : Void
-    fun bg_Container_QList_QAbstractButton_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QUrl_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QUrl_at_int(_self_ : Void*, index : Int32) : QUrl*
-    fun bg_Container_QList_QUrl_push_back_QUrl(_self_ : Void*, value : QUrl*) : Void
-    fun bg_Container_QList_QUrl_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QGraphicsItem_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QGraphicsItem_X_at_int(_self_ : Void*, index : Int32) : QGraphicsItem*
-    fun bg_Container_QList_QGraphicsItem_X_push_back_QGraphicsItem_X(_self_ : Void*, value : QGraphicsItem*) : Void
-    fun bg_Container_QList_QGraphicsItem_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QGraphicsWidget_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QGraphicsWidget_X_at_int(_self_ : Void*, index : Int32) : QGraphicsWidget*
-    fun bg_Container_QList_QGraphicsWidget_X_push_back_QGraphicsWidget_X(_self_ : Void*, value : QGraphicsWidget*) : Void
-    fun bg_Container_QList_QGraphicsWidget_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QGraphicsTransform_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QGraphicsTransform_X_at_int(_self_ : Void*, index : Int32) : QGraphicsTransform*
-    fun bg_Container_QList_QGraphicsTransform_X_push_back_QGraphicsTransform_X(_self_ : Void*, value : QGraphicsTransform*) : Void
-    fun bg_Container_QList_QGraphicsTransform_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QGraphicsView_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QGraphicsView_X_at_int(_self_ : Void*, index : Int32) : QGraphicsView*
-    fun bg_Container_QList_QGraphicsView_X_push_back_QGraphicsView_X(_self_ : Void*, value : QGraphicsView*) : Void
-    fun bg_Container_QList_QGraphicsView_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_at_int(_self_ : Void*, index : Int32) : EventDispatcherTimerInfo
-    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_push_back_QAbstractEventDispatcher__TimerInfo(_self_ : Void*, value : EventDispatcherTimerInfo) : Void
-    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QSize_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QSize_at_int(_self_ : Void*, index : Int32) : QSize*
-    fun bg_Container_QList_QSize_push_back_QSize(_self_ : Void*, value : QSize*) : Void
-    fun bg_Container_QList_QSize_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QKeySequence_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QKeySequence_at_int(_self_ : Void*, index : Int32) : QKeySequence*
-    fun bg_Container_QList_QKeySequence_push_back_QKeySequence(_self_ : Void*, value : QKeySequence*) : Void
-    fun bg_Container_QList_QKeySequence_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QRectF_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QRectF_at_int(_self_ : Void*, index : Int32) : QRectF*
-    fun bg_Container_QList_QRectF_push_back_QRectF(_self_ : Void*, value : QRectF*) : Void
-    fun bg_Container_QList_QRectF_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_QScreen_X_CONSTRUCT_() : Void*
-    fun bg_Container_QList_QScreen_X_at_int(_self_ : Void*, index : Int32) : QScreen*
-    fun bg_Container_QList_QScreen_X_push_back_QScreen_X(_self_ : Void*, value : QScreen*) : Void
-    fun bg_Container_QList_QScreen_X_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_qreal_CONSTRUCT_() : Void*
+    fun bg____qVersion_STATIC_() : UInt8*
+    fun bg_Container_QList_qreal__CONSTRUCT_() : Void*
     fun bg_Container_QList_qreal_at_int(_self_ : Void*, index : Int32) : Float64
     fun bg_Container_QList_qreal_push_back_qreal(_self_ : Void*, value : Float64) : Void
     fun bg_Container_QList_qreal_size_(_self_ : Void*) : Int32
-    fun bg_Container_QList_int_CONSTRUCT_() : Void*
+    fun bg_Container_QList_QObject_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QObject_X_at_int(_self_ : Void*, index : Int32) : QObject*
+    fun bg_Container_QList_QObject_X_push_back_QObject_X(_self_ : Void*, value : QObject*) : Void
+    fun bg_Container_QList_QObject_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_at_int(_self_ : Void*, index : Int32) : EventDispatcherTimerInfo
+    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_push_back_QAbstractEventDispatcher__TimerInfo(_self_ : Void*, value : EventDispatcherTimerInfo) : Void
+    fun bg_Container_QList_QAbstractEventDispatcher__TimerInfo_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QAction_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QAction_X_at_int(_self_ : Void*, index : Int32) : QAction*
+    fun bg_Container_QList_QAction_X_push_back_QAction_X(_self_ : Void*, value : QAction*) : Void
+    fun bg_Container_QList_QAction_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QWidget_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QWidget_X_at_int(_self_ : Void*, index : Int32) : QWidget*
+    fun bg_Container_QList_QWidget_X_push_back_QWidget_X(_self_ : Void*, value : QWidget*) : Void
+    fun bg_Container_QList_QWidget_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QKeySequence__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QKeySequence_at_int(_self_ : Void*, index : Int32) : QKeySequence*
+    fun bg_Container_QList_QKeySequence_push_back_QKeySequence(_self_ : Void*, value : QKeySequence*) : Void
+    fun bg_Container_QList_QKeySequence_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QGraphicsWidget_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QGraphicsWidget_X_at_int(_self_ : Void*, index : Int32) : QGraphicsWidget*
+    fun bg_Container_QList_QGraphicsWidget_X_push_back_QGraphicsWidget_X(_self_ : Void*, value : QGraphicsWidget*) : Void
+    fun bg_Container_QList_QGraphicsWidget_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QDockWidget_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QDockWidget_X_at_int(_self_ : Void*, index : Int32) : QDockWidget*
+    fun bg_Container_QList_QDockWidget_X_push_back_QDockWidget_X(_self_ : Void*, value : QDockWidget*) : Void
+    fun bg_Container_QList_QDockWidget_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_int__CONSTRUCT_() : Void*
     fun bg_Container_QList_int_at_int(_self_ : Void*, index : Int32) : Int32
     fun bg_Container_QList_int_push_back_int(_self_ : Void*, value : Int32) : Void
     fun bg_Container_QList_int_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QLine_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QLine_at_int(_self_ : Void*, index : Int32) : QLine*
-    fun bg_Container_QVector_QLine_push_back_QLine(_self_ : Void*, value : QLine*) : Void
-    fun bg_Container_QVector_QLine_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QLineF_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QLineF_at_int(_self_ : Void*, index : Int32) : QLineF*
-    fun bg_Container_QVector_QLineF_push_back_QLineF(_self_ : Void*, value : QLineF*) : Void
-    fun bg_Container_QVector_QLineF_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QPoint_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QPoint_at_int(_self_ : Void*, index : Int32) : QPoint
-    fun bg_Container_QVector_QPoint_push_back_QPoint(_self_ : Void*, value : QPoint) : Void
-    fun bg_Container_QVector_QPoint_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QPointF_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QPointF_at_int(_self_ : Void*, index : Int32) : QPointF
-    fun bg_Container_QVector_QPointF_push_back_QPointF(_self_ : Void*, value : QPointF) : Void
-    fun bg_Container_QVector_QPointF_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QRect_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QRect_at_int(_self_ : Void*, index : Int32) : QRect*
-    fun bg_Container_QVector_QRect_push_back_QRect(_self_ : Void*, value : QRect*) : Void
-    fun bg_Container_QVector_QRect_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QRectF_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QRectF_at_int(_self_ : Void*, index : Int32) : QRectF*
-    fun bg_Container_QVector_QRectF_push_back_QRectF(_self_ : Void*, value : QRectF*) : Void
-    fun bg_Container_QVector_QRectF_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QRgb_CONSTRUCT_() : Void*
+    fun bg_Container_QList_QAbstractButton_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QAbstractButton_X_at_int(_self_ : Void*, index : Int32) : QAbstractButton*
+    fun bg_Container_QList_QAbstractButton_X_push_back_QAbstractButton_X(_self_ : Void*, value : QAbstractButton*) : Void
+    fun bg_Container_QList_QAbstractButton_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QWindow_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QWindow_X_at_int(_self_ : Void*, index : Int32) : QWindow*
+    fun bg_Container_QList_QWindow_X_push_back_QWindow_X(_self_ : Void*, value : QWindow*) : Void
+    fun bg_Container_QList_QWindow_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QScreen_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QScreen_X_at_int(_self_ : Void*, index : Int32) : QScreen*
+    fun bg_Container_QList_QScreen_X_push_back_QScreen_X(_self_ : Void*, value : QScreen*) : Void
+    fun bg_Container_QList_QScreen_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QSize__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QSize_at_int(_self_ : Void*, index : Int32) : QSize*
+    fun bg_Container_QList_QSize_push_back_QSize(_self_ : Void*, value : QSize*) : Void
+    fun bg_Container_QList_QSize_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QUrl__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QUrl_at_int(_self_ : Void*, index : Int32) : QUrl*
+    fun bg_Container_QList_QUrl_push_back_QUrl(_self_ : Void*, value : QUrl*) : Void
+    fun bg_Container_QList_QUrl_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_double__CONSTRUCT_() : Void*
+    fun bg_Container_QList_double_at_int(_self_ : Void*, index : Int32) : Float64
+    fun bg_Container_QList_double_push_back_double(_self_ : Void*, value : Float64) : Void
+    fun bg_Container_QList_double_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QFileInfo__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QFileInfo_at_int(_self_ : Void*, index : Int32) : QFileInfo*
+    fun bg_Container_QList_QFileInfo_push_back_QFileInfo(_self_ : Void*, value : QFileInfo*) : Void
+    fun bg_Container_QList_QFileInfo_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QGraphicsItem_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QGraphicsItem_X_at_int(_self_ : Void*, index : Int32) : QGraphicsItem*
+    fun bg_Container_QList_QGraphicsItem_X_push_back_QGraphicsItem_X(_self_ : Void*, value : QGraphicsItem*) : Void
+    fun bg_Container_QList_QGraphicsItem_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QGraphicsTransform_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QGraphicsTransform_X_at_int(_self_ : Void*, index : Int32) : QGraphicsTransform*
+    fun bg_Container_QList_QGraphicsTransform_X_push_back_QGraphicsTransform_X(_self_ : Void*, value : QGraphicsTransform*) : Void
+    fun bg_Container_QList_QGraphicsTransform_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QGraphicsView_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QGraphicsView_X_at_int(_self_ : Void*, index : Int32) : QGraphicsView*
+    fun bg_Container_QList_QGraphicsView_X_push_back_QGraphicsView_X(_self_ : Void*, value : QGraphicsView*) : Void
+    fun bg_Container_QList_QGraphicsView_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QRectF__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QRectF_at_int(_self_ : Void*, index : Int32) : QRectF*
+    fun bg_Container_QList_QRectF_push_back_QRectF(_self_ : Void*, value : QRectF*) : Void
+    fun bg_Container_QList_QRectF_size_(_self_ : Void*) : Int32
+    fun bg_Container_QList_QGesture_X__CONSTRUCT_() : Void*
+    fun bg_Container_QList_QGesture_X_at_int(_self_ : Void*, index : Int32) : QGesture*
+    fun bg_Container_QList_QGesture_X_push_back_QGesture_X(_self_ : Void*, value : QGesture*) : Void
+    fun bg_Container_QList_QGesture_X_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QRgb__CONSTRUCT_() : Void*
     fun bg_Container_QVector_QRgb_at_int(_self_ : Void*, index : Int32) : UInt32
     fun bg_Container_QVector_QRgb_push_back_QRgb(_self_ : Void*, value : UInt32) : Void
     fun bg_Container_QVector_QRgb_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QTextLength_CONSTRUCT_() : Void*
-    fun bg_Container_QVector_QTextLength_at_int(_self_ : Void*, index : Int32) : QTextLength*
-    fun bg_Container_QVector_QTextLength_push_back_QTextLength(_self_ : Void*, value : QTextLength*) : Void
-    fun bg_Container_QVector_QTextLength_size_(_self_ : Void*) : Int32
-    fun bg_Container_QVector_QTextFormat_CONSTRUCT_() : Void*
+    fun bg_Container_QVector_unsigned_int__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_unsigned_int_at_int(_self_ : Void*, index : Int32) : UInt32
+    fun bg_Container_QVector_unsigned_int_push_back_unsigned_int(_self_ : Void*, value : UInt32) : Void
+    fun bg_Container_QVector_unsigned_int_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QTextFormat__CONSTRUCT_() : Void*
     fun bg_Container_QVector_QTextFormat_at_int(_self_ : Void*, index : Int32) : QTextFormat*
     fun bg_Container_QVector_QTextFormat_push_back_QTextFormat(_self_ : Void*, value : QTextFormat*) : Void
     fun bg_Container_QVector_QTextFormat_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QLineF__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QLineF_at_int(_self_ : Void*, index : Int32) : QLineF*
+    fun bg_Container_QVector_QLineF_push_back_QLineF(_self_ : Void*, value : QLineF*) : Void
+    fun bg_Container_QVector_QLineF_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QPointF__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QPointF_at_int(_self_ : Void*, index : Int32) : QPointF
+    fun bg_Container_QVector_QPointF_push_back_QPointF(_self_ : Void*, value : QPointF) : Void
+    fun bg_Container_QVector_QPointF_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QLine__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QLine_at_int(_self_ : Void*, index : Int32) : QLine*
+    fun bg_Container_QVector_QLine_push_back_QLine(_self_ : Void*, value : QLine*) : Void
+    fun bg_Container_QVector_QLine_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QPoint__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QPoint_at_int(_self_ : Void*, index : Int32) : QPoint
+    fun bg_Container_QVector_QPoint_push_back_QPoint(_self_ : Void*, value : QPoint) : Void
+    fun bg_Container_QVector_QPoint_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QRectF__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QRectF_at_int(_self_ : Void*, index : Int32) : QRectF*
+    fun bg_Container_QVector_QRectF_push_back_QRectF(_self_ : Void*, value : QRectF*) : Void
+    fun bg_Container_QVector_QRectF_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QRect__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QRect_at_int(_self_ : Void*, index : Int32) : QRect*
+    fun bg_Container_QVector_QRect_push_back_QRect(_self_ : Void*, value : QRect*) : Void
+    fun bg_Container_QVector_QRect_size_(_self_ : Void*) : Int32
+    fun bg_Container_QVector_QTextLength__CONSTRUCT_() : Void*
+    fun bg_Container_QVector_QTextLength_at_int(_self_ : Void*, index : Int32) : QTextLength*
+    fun bg_Container_QVector_QTextLength_push_back_QTextLength(_self_ : Void*, value : QTextLength*) : Void
+    fun bg_Container_QVector_QTextLength_size_(_self_ : Void*) : Int32
   end
   class Object
     @unwrap : Binding::QObject*
@@ -8924,16 +9232,32 @@ module Qt
       Binding.bg_QObject_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QObject_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QObject_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QObject_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QObject__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -8953,7 +9277,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9009,8 +9333,8 @@ module Qt
       Binding.bg_QObject_killTimer_int(self, id)
     end
     
-    def children() : Enumerable(Object)
-      Container_QList_QObject_X.new(unwrap: Binding.bg_QObject_children_(self))
+    def children() : Binding::QObjectList*
+      Binding.bg_QObject_children_(self)
     end
     
     def parent=(parent : Object) : Void
@@ -9045,11 +9369,27 @@ module Qt
       Binding.bg_QObject_disconnect_STATIC_const_QObject_X_const_QMetaMethod_R_const_QObject_X_const_QMetaMethod_R(sender, signal, receiver, member)
     end
     
-    def disconnect(signal : UInt8*? = nil, receiver : Object? = nil, member : UInt8*? = nil) : Bool
+    def disconnect() : Bool
+      Binding.bg_QObject_disconnect_(self)
+    end
+    
+    def disconnect(signal : UInt8*) : Bool
+      Binding.bg_QObject_disconnect_const_char_X(self, signal)
+    end
+    
+    def disconnect(signal : UInt8*, receiver : Object? = nil) : Bool
+      Binding.bg_QObject_disconnect_const_char_X_const_QObject_X(self, signal, receiver)
+    end
+    
+    def disconnect(signal : UInt8*, receiver : Object?, member : UInt8*) : Bool
       Binding.bg_QObject_disconnect_const_char_X_const_QObject_X_const_char_X(self, signal, receiver, member)
     end
     
-    def disconnect(receiver : Object, member : UInt8*? = nil) : Bool
+    def disconnect(receiver : Object) : Bool
+      Binding.bg_QObject_disconnect_const_QObject_X(self, receiver)
+    end
+    
+    def disconnect(receiver : Object, member : UInt8*) : Bool
       Binding.bg_QObject_disconnect_const_QObject_X_const_char_X(self, receiver, member)
     end
     
@@ -9130,7 +9470,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QObjectPrivate*, parent : Object? = nil)
-      result = Binding.bg_QObject_CONSTRUCT_QObjectPrivate_R_QObject_X(dd, parent)
+      result = Binding.bg_QObject__CONSTRUCT_QObjectPrivate_R_QObject_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9150,7 +9490,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Object_JUMPTABLE_BgJumptable_Object_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9184,16 +9524,32 @@ module Qt
       Binding.bg_QTimer_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTimer_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTimer_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTimer_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTimer_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTimer_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTimer_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QTimer_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QTimer__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9213,7 +9569,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Timer_JUMPTABLE_BgJumptable_Timer(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Timer_JUMPTABLE_BgJumptable_Timer_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9339,7 +9695,7 @@ module Qt
     @unwrap : Binding::QMetaObjectConnection*
     
     def initialize()
-      result = Binding.bg_QMetaObject__Connection_CONSTRUCT_()
+      result = Binding.bg_QMetaObject__Connection__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -9365,16 +9721,32 @@ module Qt
       Binding.bg_QAbstractEventDispatcher_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractEventDispatcher_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QAbstractEventDispatcher_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QAbstractEventDispatcher__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9408,7 +9780,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9461,7 +9833,7 @@ module Qt
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QAbstractEventDispatcherPrivate*, parent : Object)
-      result = Binding.bg_QAbstractEventDispatcher_CONSTRUCT_QAbstractEventDispatcherPrivate_R_QObject_X(unnamed_arg_0, parent)
+      result = Binding.bg_QAbstractEventDispatcher__CONSTRUCT_QAbstractEventDispatcherPrivate_R_QObject_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9495,7 +9867,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractEventDispatcher_JUMPTABLE_BgJumptable_AbstractEventDispatcher_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9556,16 +9928,32 @@ module Qt
       Binding.bg_QSocketNotifier_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSocketNotifier_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(socket : Int64, unnamed_arg_1 : SocketNotifier::Type, parent : Object? = nil)
-      result = Binding.bg_QSocketNotifier_CONSTRUCT_qintptr_QSocketNotifier__Type_QObject_X(socket, unnamed_arg_1, parent)
+      result = Binding.bg_QSocketNotifier__CONSTRUCT_qintptr_QSocketNotifier__Type_QObject_X(socket, unnamed_arg_1, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9585,7 +9973,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_SocketNotifier_JUMPTABLE_BgJumptable_SocketNotifier(result, pointerof(jump_table))
+    Binding.bg_BgInherit_SocketNotifier_JUMPTABLE_BgJumptable_SocketNotifier_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9713,7 +10101,7 @@ module Qt
     end
     
     protected def initialize()
-      result = Binding.bg_QPaintDevice_CONSTRUCT_()
+      result = Binding.bg_QPaintDevice__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -9728,7 +10116,7 @@ module Qt
       bg_QPaintDevice_initPainter_QPainter_X: BindgenHelper.wrap_proc({% if forwarded.includes?("init_painter") %} Proc(Binding::QPainter*, Void).new{|painter| self.init_painter(Painter.new(unwrap: painter)) } {% else %} nil {% end %}),
       bg_QPaintDevice_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_PaintDevice_JUMPTABLE_BgJumptable_PaintDevice(result, pointerof(jump_table))
+    Binding.bg_BgInherit_PaintDevice_JUMPTABLE_BgJumptable_PaintDevice_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9780,16 +10168,32 @@ module Qt
       Binding.bg_QWidget_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QWidget_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QWidget__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -9847,12 +10251,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
+      result = Binding.bg_QWidget__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -9910,7 +10314,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -9918,8 +10322,20 @@ module Qt
       Binding.bg_QWidget_devType_(self)
     end
     
+    def win_id() : UInt32
+      Binding.bg_QWidget_winId_(self)
+    end
+    
     def create_win_id() : Void
       Binding.bg_QWidget_createWinId_(self)
+    end
+    
+    def internal_win_id() : UInt32
+      Binding.bg_QWidget_internalWinId_(self)
+    end
+    
+    def effective_win_id() : UInt32
+      Binding.bg_QWidget_effectiveWinId_(self)
     end
     
     def style() : Binding::QStyle*
@@ -10854,6 +11270,10 @@ module Qt
       Binding.bg_QWidget_windowType_(self)
     end
     
+    def self.find(unnamed_arg_0 : UInt32) : Widget
+      Widget.new(unwrap: Binding.bg_QWidget_find_STATIC_WId(unnamed_arg_0))
+    end
+    
     def child_at(x : Int32, y : Int32) : Widget
       Widget.new(unwrap: Binding.bg_QWidget_childAt_int_int(self, x, y))
     end
@@ -11058,6 +11478,10 @@ module Qt
       Binding.bg_QWidget_updateMicroFocus_(self)
     end
     
+    protected def create(unnamed_arg_0 : UInt32 = 0u32, initialize_window : Bool = true, destroy_old_window : Bool = true) : Void
+      Binding.bg_QWidget_create_WId_bool_bool(self, unnamed_arg_0, initialize_window, destroy_old_window)
+    end
+    
     protected def destroy(destroy_window : Bool = true, destroy_sub_windows : Bool = true) : Void
       Binding.bg_QWidget_destroy_bool_bool(self, destroy_window, destroy_sub_windows)
     end
@@ -11075,7 +11499,7 @@ module Qt
     end
     
     protected def initialize(d : Binding::QWidgetPrivate*, parent : Widget, f : WindowFlags)
-      result = Binding.bg_QWidget_CONSTRUCT_QWidgetPrivate_R_QWidget_X_Qt__WindowFlags(d, parent, f)
+      result = Binding.bg_QWidget__CONSTRUCT_QWidgetPrivate_R_QWidget_X_Qt__WindowFlags(d, parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -11133,7 +11557,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Widget_JUMPTABLE_BgJumptable_Widget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -11206,16 +11630,32 @@ module Qt
       Binding.bg_QAbstractButton_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QAbstractButton_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QAbstractButton__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -11271,7 +11711,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -11449,7 +11889,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QAbstractButtonPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QAbstractButton_CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QAbstractButton__CONSTRUCT_QAbstractButtonPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -11505,7 +11945,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractButton_JUMPTABLE_BgJumptable_AbstractButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -11660,16 +12100,32 @@ module Qt
       Binding.bg_QToolButton_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolButton_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolButton_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QToolButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolButton_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QToolButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QToolButton_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QToolButton__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -11701,7 +12157,7 @@ module Qt
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_out_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ToolButton_JUMPTABLE_BgJumptable_ToolButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ToolButton_JUMPTABLE_BgJumptable_ToolButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -11869,16 +12325,32 @@ module Qt
       Binding.bg_QToolBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QToolBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QToolBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QToolBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(title : String, parent : Widget? = nil)
-      result = Binding.bg_QToolBar_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
+      result = Binding.bg_QToolBar__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -11930,12 +12402,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QToolBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QToolBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -11987,7 +12459,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ToolBar_JUMPTABLE_BgJumptable_ToolBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -12346,16 +12818,32 @@ module Qt
       Binding.bg_QFrame_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFrame_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFrame_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QFrame_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QFrame__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -12407,12 +12895,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QFrame_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
+      result = Binding.bg_QFrame__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -12464,7 +12952,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -12541,7 +13029,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QFramePrivate*, parent : Widget? = nil)
-      result = Binding.bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QFrame__CONSTRUCT_QFramePrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -12593,12 +13081,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame_R(result, pointerof(jump_table))
     {% end %}
     end
     
     protected def initialize(dd : Binding::QFramePrivate*, parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QFrame_CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd, parent, f)
+      result = Binding.bg_QFrame__CONSTRUCT_QFramePrivate_R_QWidget_X_Qt__WindowFlags(dd, parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -12650,7 +13138,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Frame_JUMPTABLE_BgJumptable_Frame_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -12831,16 +13319,32 @@ module Qt
       Binding.bg_QProgressBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QProgressBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QProgressBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QProgressBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -12893,7 +13397,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ProgressBar_JUMPTABLE_BgJumptable_ProgressBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ProgressBar_JUMPTABLE_BgJumptable_ProgressBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -13176,16 +13680,32 @@ module Qt
       Binding.bg_QAbstractSlider_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractSlider_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QAbstractSlider_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QAbstractSlider__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13239,7 +13759,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -13396,7 +13916,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QAbstractSliderPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QAbstractSlider_CONSTRUCT_QAbstractSliderPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QAbstractSlider__CONSTRUCT_QAbstractSliderPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13450,7 +13970,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractSlider_JUMPTABLE_BgJumptable_AbstractSlider_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -13653,16 +14173,32 @@ module Qt
       Binding.bg_QDial_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDial_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDial_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDial_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDial_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDial_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDial_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QDial_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QDial__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13688,7 +14224,7 @@ module Qt
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Dial_JUMPTABLE_BgJumptable_Dial(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Dial_JUMPTABLE_BgJumptable_Dial_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -13795,16 +14331,32 @@ module Qt
       Binding.bg_QScrollBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QScrollBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QScrollBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13830,12 +14382,12 @@ module Qt
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(unnamed_arg_0 : Orientation, parent : Widget? = nil)
-      result = Binding.bg_QScrollBar_CONSTRUCT_Qt__Orientation_QWidget_X(unnamed_arg_0, parent)
+      result = Binding.bg_QScrollBar__CONSTRUCT_Qt__Orientation_QWidget_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13861,7 +14413,7 @@ module Qt
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ScrollBar_JUMPTABLE_BgJumptable_ScrollBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -13940,16 +14492,32 @@ module Qt
       Binding.bg_QSlider_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSlider_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSlider_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSlider_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSlider_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSlider_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSlider_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QSlider_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QSlider__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -13974,12 +14542,12 @@ module Qt
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(orientation : Orientation, parent : Widget? = nil)
-      result = Binding.bg_QSlider_CONSTRUCT_Qt__Orientation_QWidget_X(orientation, parent)
+      result = Binding.bg_QSlider__CONSTRUCT_Qt__Orientation_QWidget_X(orientation, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14004,7 +14572,7 @@ module Qt
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Slider_JUMPTABLE_BgJumptable_Slider_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14103,16 +14671,32 @@ module Qt
       Binding.bg_QAbstractScrollArea_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QAbstractScrollArea_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QAbstractScrollArea__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14147,7 +14731,7 @@ module Qt
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14195,8 +14779,8 @@ module Qt
       Binding.bg_QAbstractScrollArea_addScrollBarWidget_QWidget_X_Qt__Alignment(self, widget, alignment)
     end
     
-    def scroll_bar_widgets(alignment : Alignment) : Enumerable(Widget)
-      Container_QList_QWidget_X.new(unwrap: Binding.bg_QAbstractScrollArea_scrollBarWidgets_Qt__Alignment(self, alignment))
+    def scroll_bar_widgets(alignment : Alignment) : Binding::QWidgetList*
+      Binding.bg_QAbstractScrollArea_scrollBarWidgets_Qt__Alignment(self, alignment)
     end
     
     def viewport() : Widget
@@ -14232,7 +14816,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QAbstractScrollAreaPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QAbstractScrollArea_CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QAbstractScrollArea__CONSTRUCT_QAbstractScrollAreaPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14267,7 +14851,7 @@ module Qt
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractScrollArea_JUMPTABLE_BgJumptable_AbstractScrollArea_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14383,16 +14967,32 @@ module Qt
       Binding.bg_QScrollArea_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScrollArea_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QScrollArea_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QScrollArea__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14427,7 +15027,7 @@ module Qt
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14476,7 +15076,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QScrollAreaPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QScrollArea_CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QScrollArea__CONSTRUCT_QScrollAreaPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14511,7 +15111,7 @@ module Qt
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14614,16 +15214,32 @@ module Qt
       Binding.bg_QAbstractSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAbstractSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QAbstractSpinBox_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QAbstractSpinBox__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14679,7 +15295,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -14892,7 +15508,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QAbstractSpinBoxPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QAbstractSpinBox_CONSTRUCT_QAbstractSpinBoxPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QAbstractSpinBox__CONSTRUCT_QAbstractSpinBoxPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -14948,7 +15564,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractSpinBox_JUMPTABLE_BgJumptable_AbstractSpinBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -15079,16 +15695,32 @@ module Qt
       Binding.bg_QSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QSpinBox_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QSpinBox__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15125,7 +15757,7 @@ module Qt
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_stepEnabled_: BindgenHelper.wrap_proc({% if forwarded.includes?("step_enabled") %} Proc(AbstractSpinBox::StepEnabled).new{ self.step_enabled().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_SpinBox_JUMPTABLE_BgJumptable_SpinBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_SpinBox_JUMPTABLE_BgJumptable_SpinBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -15324,16 +15956,32 @@ module Qt
       Binding.bg_QDoubleSpinBox_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDoubleSpinBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QDoubleSpinBox_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QDoubleSpinBox__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15370,7 +16018,7 @@ module Qt
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_stepEnabled_: BindgenHelper.wrap_proc({% if forwarded.includes?("step_enabled") %} Proc(AbstractSpinBox::StepEnabled).new{ self.step_enabled().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DoubleSpinBox_JUMPTABLE_BgJumptable_DoubleSpinBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DoubleSpinBox_JUMPTABLE_BgJumptable_DoubleSpinBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -15569,16 +16217,32 @@ module Qt
       Binding.bg_QDateTimeEdit_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDateTimeEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QDateTimeEdit_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QDateTimeEdit__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15616,12 +16280,12 @@ module Qt
       bg_QAbstractSpinBox_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(dt : Binding::QDateTime*, parent : Widget? = nil)
-      result = Binding.bg_QDateTimeEdit_CONSTRUCT_const_QDateTime_R_QWidget_X(dt, parent)
+      result = Binding.bg_QDateTimeEdit__CONSTRUCT_const_QDateTime_R_QWidget_X(dt, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15659,12 +16323,12 @@ module Qt
       bg_QAbstractSpinBox_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(d : Binding::QDate*, parent : Widget? = nil)
-      result = Binding.bg_QDateTimeEdit_CONSTRUCT_const_QDate_R_QWidget_X(d, parent)
+      result = Binding.bg_QDateTimeEdit__CONSTRUCT_const_QDate_R_QWidget_X(d, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15702,12 +16366,12 @@ module Qt
       bg_QAbstractSpinBox_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(t : Binding::QTime*, parent : Widget? = nil)
-      result = Binding.bg_QDateTimeEdit_CONSTRUCT_const_QTime_R_QWidget_X(t, parent)
+      result = Binding.bg_QDateTimeEdit__CONSTRUCT_const_QTime_R_QWidget_X(t, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -15745,7 +16409,7 @@ module Qt
       bg_QAbstractSpinBox_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|event| self.show_event(ShowEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DateTimeEdit_JUMPTABLE_BgJumptable_DateTimeEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -16099,16 +16763,32 @@ module Qt
       Binding.bg_QMenuBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenuBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QMenuBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QMenuBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -16162,7 +16842,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_MenuBar_JUMPTABLE_BgJumptable_MenuBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_MenuBar_JUMPTABLE_BgJumptable_MenuBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -16449,16 +17129,32 @@ module Qt
       Binding.bg_QMenu_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenu_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMenu_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QMenu_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QMenu__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -16511,12 +17207,12 @@ module Qt
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(title : String, parent : Widget? = nil)
-      result = Binding.bg_QMenu_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
+      result = Binding.bg_QMenu__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -16569,7 +17265,7 @@ module Qt
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -16842,7 +17538,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QMenuPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QMenu_CONSTRUCT_QMenuPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QMenu__CONSTRUCT_QMenuPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -16895,7 +17591,7 @@ module Qt
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Menu_JUMPTABLE_BgJumptable_Menu_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -17034,16 +17730,32 @@ module Qt
       Binding.bg_QAction_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAction_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QAction_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QAction_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QAction__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17063,12 +17775,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Object? = nil)
-      result = Binding.bg_QAction_CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QAction__CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17088,12 +17800,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(icon : Icon, text : String, parent : Object? = nil)
-      result = Binding.bg_QAction_CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon, Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QAction__CONSTRUCT_const_QIcon_R_const_QString_R_QObject_X(icon, Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17113,7 +17825,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -17302,7 +18014,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QActionPrivate*, parent : Object)
-      result = Binding.bg_QAction_CONSTRUCT_QActionPrivate_R_QObject_X(dd, parent)
+      result = Binding.bg_QAction__CONSTRUCT_QActionPrivate_R_QObject_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17322,7 +18034,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Action_JUMPTABLE_BgJumptable_Action_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -17447,16 +18159,32 @@ module Qt
       Binding.bg_QStatusBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QStatusBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QStatusBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QStatusBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17508,7 +18236,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_StatusBar_JUMPTABLE_BgJumptable_StatusBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_StatusBar_JUMPTABLE_BgJumptable_StatusBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -17743,16 +18471,32 @@ module Qt
       Binding.bg_QMainWindow_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMainWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QMainWindow_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QMainWindow__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -17805,12 +18549,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow(result, pointerof(jump_table))
+    Binding.bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, flags : WindowFlags)
-      result = Binding.bg_QMainWindow_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, flags)
+      result = Binding.bg_QMainWindow__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, flags)
     @unwrap = result
     {% begin %}
     {%
@@ -17863,7 +18607,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow(result, pointerof(jump_table))
+    Binding.bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -18283,16 +19027,32 @@ module Qt
       Binding.bg_QDockWidget_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDockWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(title : String, parent : Widget? = nil)
-      result = Binding.bg_QDockWidget_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
+      result = Binding.bg_QDockWidget__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -18344,12 +19104,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(title : String, parent : Widget?, flags : WindowFlags)
-      result = Binding.bg_QDockWidget_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(Qt::Converter::QString.wrap(title), parent, flags)
+      result = Binding.bg_QDockWidget__CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(Qt::Converter::QString.wrap(title), parent, flags)
     @unwrap = result
     {% begin %}
     {%
@@ -18401,12 +19161,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QDockWidget_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QDockWidget__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -18458,12 +19218,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, flags : WindowFlags)
-      result = Binding.bg_QDockWidget_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, flags)
+      result = Binding.bg_QDockWidget__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, flags)
     @unwrap = result
     {% begin %}
     {%
@@ -18515,7 +19275,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DockWidget_JUMPTABLE_BgJumptable_DockWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -18807,16 +19567,32 @@ module Qt
       Binding.bg_QDialog_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDialog_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QDialog_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QDialog__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -18874,12 +19650,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
+      result = Binding.bg_QDialog__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -18937,7 +19713,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -19026,7 +19802,7 @@ module Qt
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QDialogPrivate*, parent : Widget)
-      result = Binding.bg_QDialog_CONSTRUCT_QDialogPrivate_R_QWidget_X(unnamed_arg_0, parent)
+      result = Binding.bg_QDialog__CONSTRUCT_QDialogPrivate_R_QWidget_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19084,12 +19860,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QDialogPrivate*, parent : Widget, f : WindowFlags)
-      result = Binding.bg_QDialog_CONSTRUCT_QDialogPrivate_R_QWidget_X_Qt__WindowFlags(unnamed_arg_0, parent, f)
+      result = Binding.bg_QDialog__CONSTRUCT_QDialogPrivate_R_QWidget_X_Qt__WindowFlags(unnamed_arg_0, parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -19147,7 +19923,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Dialog_JUMPTABLE_BgJumptable_Dialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -19338,16 +20114,32 @@ module Qt
       Binding.bg_QLabel_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLabel_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLabel_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QLabel_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QLabel__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19374,12 +20166,12 @@ module Qt
       bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|ev| self.focus_out_event(FocusEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QLabel_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
+      result = Binding.bg_QLabel__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -19406,12 +20198,12 @@ module Qt
       bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|ev| self.focus_out_event(FocusEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget? = nil)
-      result = Binding.bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QLabel__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19438,12 +20230,12 @@ module Qt
       bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|ev| self.focus_out_event(FocusEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget?, f : WindowFlags)
-      result = Binding.bg_QLabel_CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(Qt::Converter::QString.wrap(text), parent, f)
+      result = Binding.bg_QLabel__CONSTRUCT_const_QString_R_QWidget_X_Qt__WindowFlags(Qt::Converter::QString.wrap(text), parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -19470,7 +20262,7 @@ module Qt
       bg_QLabel_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|ev| self.focus_out_event(FocusEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Label_JUMPTABLE_BgJumptable_Label_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -19697,16 +20489,32 @@ module Qt
       Binding.bg_QLCDNumber_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLCDNumber_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QLCDNumber_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QLCDNumber__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19723,12 +20531,12 @@ module Qt
       bg_QLCDNumber_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(num_digits : UInt32, parent : Widget? = nil)
-      result = Binding.bg_QLCDNumber_CONSTRUCT_uint_QWidget_X(num_digits, parent)
+      result = Binding.bg_QLCDNumber__CONSTRUCT_uint_QWidget_X(num_digits, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19745,7 +20553,7 @@ module Qt
       bg_QLCDNumber_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LcdNumber_JUMPTABLE_BgJumptable_LcdNumber_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -19879,16 +20687,32 @@ module Qt
       Binding.bg_QPushButton_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QPushButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QPushButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QPushButton_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QPushButton__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19917,12 +20741,12 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget? = nil)
-      result = Binding.bg_QPushButton_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QPushButton__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19951,12 +20775,12 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(icon : Icon, text : String, parent : Widget? = nil)
-      result = Binding.bg_QPushButton_CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon, Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QPushButton__CONSTRUCT_const_QIcon_R_const_QString_R_QWidget_X(icon, Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -19985,7 +20809,7 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -20058,7 +20882,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QPushButtonPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QPushButton_CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QPushButton__CONSTRUCT_QPushButtonPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20087,7 +20911,7 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_PushButton_JUMPTABLE_BgJumptable_PushButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -20146,16 +20970,32 @@ module Qt
       Binding.bg_QCheckBox_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCheckBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QCheckBox_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QCheckBox__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20184,12 +21024,12 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget? = nil)
-      result = Binding.bg_QCheckBox_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QCheckBox__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20218,7 +21058,7 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_CheckBox_JUMPTABLE_BgJumptable_CheckBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -20333,16 +21173,32 @@ module Qt
       Binding.bg_QRadioButton_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QRadioButton_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QRadioButton_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QRadioButton__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20371,12 +21227,12 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget? = nil)
-      result = Binding.bg_QRadioButton_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QRadioButton__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20405,7 +21261,7 @@ module Qt
       bg_QAbstractButton_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton(result, pointerof(jump_table))
+    Binding.bg_BgInherit_RadioButton_JUMPTABLE_BgJumptable_RadioButton_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -20496,16 +21352,32 @@ module Qt
       Binding.bg_QButtonGroup_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QButtonGroup_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QButtonGroup_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QButtonGroup__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20525,7 +21397,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_ButtonGroup_JUMPTABLE_BgJumptable_ButtonGroup(result, pointerof(jump_table))
+    Binding.bg_BgInherit_ButtonGroup_JUMPTABLE_BgJumptable_ButtonGroup_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -20680,16 +21552,32 @@ module Qt
       Binding.bg_QGroupBox_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGroupBox_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QGroupBox_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QGroupBox__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20742,12 +21630,12 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(title : String, parent : Widget? = nil)
-      result = Binding.bg_QGroupBox_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
+      result = Binding.bg_QGroupBox__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(title), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -20800,7 +21688,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GroupBox_JUMPTABLE_BgJumptable_GroupBox_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -21043,16 +21931,32 @@ module Qt
       Binding.bg_QCoreApplication_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
-      result = Binding.bg_QCoreApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
+      result = Binding.bg_QCoreApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
     {%
@@ -21074,12 +21978,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication(result, pointerof(jump_table))
+    Binding.bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication_R(result, pointerof(jump_table))
     {% end %}
     end
     
-    def self.arguments() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QCoreApplication_arguments_STATIC_())
+    def self.arguments() : Binding::QStringList*
+      Binding.bg_QCoreApplication_arguments_STATIC_()
     end
     
     def self.set_attribute(attribute : ApplicationAttribute, on : Bool = true) : Void
@@ -21206,12 +22110,12 @@ module Qt
       Binding.bg_QCoreApplication_applicationPid_STATIC_()
     end
     
-    def self.library_paths=(unnamed_arg_0 : Enumerable(String)) : Void
-      Binding.bg_QCoreApplication_setLibraryPaths_STATIC_const_QStringList_R(BindgenHelper.wrap_container(Container_QList_QString, unnamed_arg_0).to_unsafe)
+    def self.library_paths=(unnamed_arg_0 : Binding::QStringList*) : Void
+      Binding.bg_QCoreApplication_setLibraryPaths_STATIC_const_QStringList_R(unnamed_arg_0)
     end
     
-    def self.library_paths() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QCoreApplication_libraryPaths_STATIC_())
+    def self.library_paths() : Binding::QStringList*
+      Binding.bg_QCoreApplication_libraryPaths_STATIC_()
     end
     
     def self.add_library_path(unnamed_arg_0 : String) : Void
@@ -21230,7 +22134,15 @@ module Qt
       Binding.bg_QCoreApplication_removeTranslator_STATIC_QTranslator_X(message_file)
     end
     
-    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*? = nil, n : Int32 = -1) : String
+    def self.translate(context : UInt8*, key : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X(context, key))
+    end
+    
+    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X(context, key, disambiguation))
+    end
+    
+    def self.translate(context : UInt8*, key : UInt8*, disambiguation : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_translate_STATIC_const_char_X_const_char_X_const_char_X_int(context, key, disambiguation, n))
     end
     
@@ -21283,7 +22195,7 @@ module Qt
     end
     
     protected def initialize(p : Binding::QCoreApplicationPrivate*)
-      result = Binding.bg_QCoreApplication_CONSTRUCT_QCoreApplicationPrivate_R(p)
+      result = Binding.bg_QCoreApplication__CONSTRUCT_QCoreApplicationPrivate_R(p)
     @unwrap = result
     {% begin %}
     {%
@@ -21305,7 +22217,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication(result, pointerof(jump_table))
+    Binding.bg_BgInherit_CoreApplication_JUMPTABLE_BgJumptable_CoreApplication_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -21372,16 +22284,32 @@ module Qt
       Binding.bg_QGuiApplication_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
-      result = Binding.bg_QGuiApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
+      result = Binding.bg_QGuiApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
     {%
@@ -21397,7 +22325,7 @@ module Qt
       bg_QGuiApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QGuiApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} Proc(Binding::QEvent*, Binding::QObject*, Binding::QPostEventList*, Bool).new{|unnamed_arg_0, receiver, unnamed_arg_2| self.compress_event(Event.new(unwrap: unnamed_arg_0), Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -21658,7 +22586,7 @@ module Qt
     end
     
     protected def initialize(p : Binding::QGuiApplicationPrivate*)
-      result = Binding.bg_QGuiApplication_CONSTRUCT_QGuiApplicationPrivate_R(p)
+      result = Binding.bg_QGuiApplication__CONSTRUCT_QGuiApplicationPrivate_R(p)
     @unwrap = result
     {% begin %}
     {%
@@ -21674,7 +22602,7 @@ module Qt
       bg_QGuiApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QGuiApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} Proc(Binding::QEvent*, Binding::QObject*, Binding::QPostEventList*, Bool).new{|unnamed_arg_0, receiver, unnamed_arg_2| self.compress_event(Event.new(unwrap: unnamed_arg_0), Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -21749,16 +22677,32 @@ module Qt
       Binding.bg_QApplication_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QApplication_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329985)
-      result = Binding.bg_QApplication_CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
+      result = Binding.bg_QApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
     {%
@@ -21774,7 +22718,7 @@ module Qt
       bg_QApplication_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X: BindgenHelper.wrap_proc({% if forwarded.includes?("compress_event") %} Proc(Binding::QEvent*, Binding::QObject*, Binding::QPostEventList*, Bool).new{|unnamed_arg_0, receiver, unnamed_arg_2| self.compress_event(Event.new(unwrap: unnamed_arg_0), Object.new(unwrap: receiver), unnamed_arg_2) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Application_JUMPTABLE_BgJumptable_Application(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Application_JUMPTABLE_BgJumptable_Application_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -21806,7 +22750,11 @@ module Qt
       Palette.new(unwrap: Binding.bg_QApplication_palette_STATIC_const_char_X(class_name))
     end
     
-    def self.set_palette(unnamed_arg_0 : Palette, class_name : UInt8*? = nil) : Void
+    def self.palette=(unnamed_arg_0 : Palette) : Void
+      Binding.bg_QApplication_setPalette_STATIC_const_QPalette_R(unnamed_arg_0)
+    end
+    
+    def self.set_palette(unnamed_arg_0 : Palette, class_name : UInt8*) : Void
       Binding.bg_QApplication_setPalette_STATIC_const_QPalette_R_const_char_X(unnamed_arg_0, class_name)
     end
     
@@ -21822,7 +22770,11 @@ module Qt
       Font.new(unwrap: Binding.bg_QApplication_font_STATIC_const_char_X(class_name))
     end
     
-    def self.set_font(unnamed_arg_0 : Font, class_name : UInt8*? = nil) : Void
+    def self.font=(unnamed_arg_0 : Font) : Void
+      Binding.bg_QApplication_setFont_STATIC_const_QFont_R(unnamed_arg_0)
+    end
+    
+    def self.set_font(unnamed_arg_0 : Font, class_name : UInt8*) : Void
       Binding.bg_QApplication_setFont_STATIC_const_QFont_R_const_char_X(unnamed_arg_0, class_name)
     end
     
@@ -21838,12 +22790,12 @@ module Qt
       Icon.new(unwrap: Binding.bg_QApplication_windowIcon_STATIC_())
     end
     
-    def self.all_widgets() : Enumerable(Widget)
-      Container_QList_QWidget_X.new(unwrap: Binding.bg_QApplication_allWidgets_STATIC_())
+    def self.all_widgets() : Binding::QWidgetList*
+      Binding.bg_QApplication_allWidgets_STATIC_()
     end
     
-    def self.top_level_widgets() : Enumerable(Widget)
-      Container_QList_QWidget_X.new(unwrap: Binding.bg_QApplication_topLevelWidgets_STATIC_())
+    def self.top_level_widgets() : Binding::QWidgetList*
+      Binding.bg_QApplication_topLevelWidgets_STATIC_()
     end
     
     def self.desktop() : DesktopWidget
@@ -22014,27 +22966,32 @@ module Qt
   end
   class Image < PaintDevice
     def initialize()
-      result = Binding.bg_QImage_CONSTRUCT_()
+      result = Binding.bg_QImage__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(size : Binding::QSize*, format : Image::Format)
-      result = Binding.bg_QImage_CONSTRUCT_const_QSize_R_QImage__Format(size, format)
+      result = Binding.bg_QImage__CONSTRUCT_const_QSize_R_QImage__Format(size, format)
     @unwrap = result
     end
     
     def initialize(width : Int32, height : Int32, format : Image::Format)
-      result = Binding.bg_QImage_CONSTRUCT_int_int_QImage__Format(width, height, format)
+      result = Binding.bg_QImage__CONSTRUCT_int_int_QImage__Format(width, height, format)
     @unwrap = result
     end
     
     def initialize(xpm : UInt8**)
-      result = Binding.bg_QImage_CONSTRUCT_const_char_Xconst_X(xpm)
+      result = Binding.bg_QImage__CONSTRUCT_const_char_Xconst_X(xpm)
     @unwrap = result
     end
     
-    def initialize(file_name : String, format : UInt8*? = nil)
-      result = Binding.bg_QImage_CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
+    def initialize(file_name : String)
+      result = Binding.bg_QImage__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
+    @unwrap = result
+    end
+    
+    def initialize(file_name : String, format : UInt8*)
+      result = Binding.bg_QImage__CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
     @unwrap = result
     end
     
@@ -22318,31 +23275,67 @@ module Qt
       Binding.bg_QImage_load_QIODevice_X_const_char_X(self, device, format)
     end
     
-    def load(file_name : String, format : UInt8*? = nil) : Bool
+    def load(file_name : String) : Bool
+      Binding.bg_QImage_load_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
+    end
+    
+    def load(file_name : String, format : UInt8*) : Bool
       Binding.bg_QImage_load_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
     end
     
-    def load_from_data(buf : UInt8*, len : Int32, format : UInt8*? = nil) : Bool
+    def load_from_data(buf : UInt8*, len : Int32) : Bool
+      Binding.bg_QImage_loadFromData_const_uchar_X_int(self, buf, len)
+    end
+    
+    def load_from_data(buf : UInt8*, len : Int32, format : UInt8*) : Bool
       Binding.bg_QImage_loadFromData_const_uchar_X_int_const_char_X(self, buf, len, format)
     end
     
-    def load_from_data(data : Binding::QByteArray*, aformat : UInt8*? = nil) : Bool
+    def load_from_data(data : Binding::QByteArray*) : Bool
+      Binding.bg_QImage_loadFromData_const_QByteArray_R(self, data)
+    end
+    
+    def load_from_data(data : Binding::QByteArray*, aformat : UInt8*) : Bool
       Binding.bg_QImage_loadFromData_const_QByteArray_R_const_char_X(self, data, aformat)
     end
     
-    def save(file_name : String, format : UInt8*? = nil, quality : Int32 = -1) : Bool
+    def save(file_name : String) : Bool
+      Binding.bg_QImage_save_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
+    end
+    
+    def save(file_name : String, format : UInt8*) : Bool
+      Binding.bg_QImage_save_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
+    end
+    
+    def save(file_name : String, format : UInt8*, quality : Int32 = -1) : Bool
       Binding.bg_QImage_save_const_QString_R_const_char_X_int(self, Qt::Converter::QString.wrap(file_name), format, quality)
     end
     
-    def save(device : IODevice, format : UInt8*? = nil, quality : Int32 = -1) : Bool
+    def save(device : IODevice) : Bool
+      Binding.bg_QImage_save_QIODevice_X(self, device)
+    end
+    
+    def save(device : IODevice, format : UInt8*) : Bool
+      Binding.bg_QImage_save_QIODevice_X_const_char_X(self, device, format)
+    end
+    
+    def save(device : IODevice, format : UInt8*, quality : Int32 = -1) : Bool
       Binding.bg_QImage_save_QIODevice_X_const_char_X_int(self, device, format, quality)
     end
     
-    def self.from_data(data : UInt8*, size : Int32, format : UInt8*? = nil) : Image
+    def self.from_data(data : UInt8*, size : Int32) : Image
+      Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_uchar_X_int(data, size))
+    end
+    
+    def self.from_data(data : UInt8*, size : Int32, format : UInt8*) : Image
       Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_uchar_X_int_const_char_X(data, size, format))
     end
     
-    def self.from_data(data : Binding::QByteArray*, format : UInt8*? = nil) : Image
+    def self.from_data(data : Binding::QByteArray*) : Image
+      Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_QByteArray_R(data))
+    end
+    
+    def self.from_data(data : Binding::QByteArray*, format : UInt8*) : Image
       Image.new(unwrap: Binding.bg_QImage_fromData_STATIC_const_QByteArray_R_const_char_X(data, format))
     end
     
@@ -22378,8 +23371,8 @@ module Qt
       Binding.bg_QImage_setOffset_const_QPoint_R(self, unnamed_arg_0)
     end
     
-    def text_keys() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QImage_textKeys_(self))
+    def text_keys() : Binding::QStringList*
+      Binding.bg_QImage_textKeys_(self)
     end
     
     def text(key : String = "") : String
@@ -22482,37 +23475,42 @@ module Qt
   end
   class Pixmap < PaintDevice
     def initialize()
-      result = Binding.bg_QPixmap_CONSTRUCT_()
+      result = Binding.bg_QPixmap__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(data : Binding::QPlatformPixmap*)
-      result = Binding.bg_QPixmap_CONSTRUCT_QPlatformPixmap_X(data)
+      result = Binding.bg_QPixmap__CONSTRUCT_QPlatformPixmap_X(data)
     @unwrap = result
     end
     
     def initialize(w : Int32, h : Int32)
-      result = Binding.bg_QPixmap_CONSTRUCT_int_int(w, h)
+      result = Binding.bg_QPixmap__CONSTRUCT_int_int(w, h)
     @unwrap = result
     end
     
     def initialize(unnamed_arg_0 : Binding::QSize*)
-      result = Binding.bg_QPixmap_CONSTRUCT_const_QSize_R(unnamed_arg_0)
+      result = Binding.bg_QPixmap__CONSTRUCT_const_QSize_R(unnamed_arg_0)
     @unwrap = result
     end
     
-    def initialize(file_name : String, format : UInt8*? = nil)
-      result = Binding.bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
+    def initialize(file_name : String)
+      result = Binding.bg_QPixmap__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
     @unwrap = result
     end
     
-    def initialize(file_name : String, format : UInt8*?, flags : ImageConversionFlags)
-      result = Binding.bg_QPixmap_CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(Qt::Converter::QString.wrap(file_name), format, flags)
+    def initialize(file_name : String, format : UInt8*)
+      result = Binding.bg_QPixmap__CONSTRUCT_const_QString_R_const_char_X(Qt::Converter::QString.wrap(file_name), format)
+    @unwrap = result
+    end
+    
+    def initialize(file_name : String, format : UInt8*, flags : ImageConversionFlags)
+      result = Binding.bg_QPixmap__CONSTRUCT_const_QString_R_const_char_X_Qt__ImageConversionFlags(Qt::Converter::QString.wrap(file_name), format, flags)
     @unwrap = result
     end
     
     def initialize(xpm : UInt8**)
-      result = Binding.bg_QPixmap_CONSTRUCT_const_char_Xconst_X(xpm)
+      result = Binding.bg_QPixmap__CONSTRUCT_const_char_Xconst_X(xpm)
     @unwrap = result
     end
     
@@ -22600,6 +23598,10 @@ module Qt
       Binding.bg_QPixmap_createMaskFromColor_const_QColor_R_Qt__MaskMode(self, mask_color, mode)
     end
     
+    def self.grab_window(unnamed_arg_0 : UInt32, x : Int32 = 0, y : Int32 = 0, w : Int32 = -1, h : Int32 = -1) : Pixmap
+      Pixmap.new(unwrap: Binding.bg_QPixmap_grabWindow_STATIC_WId_int_int_int_int(unnamed_arg_0, x, y, w, h))
+    end
+    
     def self.grab_widget(widget : Object, rect : Rect) : Pixmap
       Pixmap.new(unwrap: Binding.bg_QPixmap_grabWidget_STATIC_QObject_X_const_QRect_R(widget, rect))
     end
@@ -22660,35 +23662,63 @@ module Qt
       Pixmap.new(unwrap: Binding.bg_QPixmap_fromImageReader_STATIC_QImageReader_X_Qt__ImageConversionFlags(image_reader, flags))
     end
     
-    def load(file_name : String, format : UInt8*? = nil) : Bool
+    def load(file_name : String) : Bool
+      Binding.bg_QPixmap_load_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
+    end
+    
+    def load(file_name : String, format : UInt8*) : Bool
       Binding.bg_QPixmap_load_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
     end
     
-    def load(file_name : String, format : UInt8*?, flags : ImageConversionFlags) : Bool
+    def load(file_name : String, format : UInt8*, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_load_const_QString_R_const_char_X_Qt__ImageConversionFlags(self, Qt::Converter::QString.wrap(file_name), format, flags)
     end
     
-    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*? = nil) : Bool
+    def load_from_data(buf : UInt8*, len : UInt32) : Bool
+      Binding.bg_QPixmap_loadFromData_const_uchar_X_uint(self, buf, len)
+    end
+    
+    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*) : Bool
       Binding.bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X(self, buf, len, format)
     end
     
-    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*?, flags : ImageConversionFlags) : Bool
+    def load_from_data(buf : UInt8*, len : UInt32, format : UInt8*, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_loadFromData_const_uchar_X_uint_const_char_X_Qt__ImageConversionFlags(self, buf, len, format, flags)
     end
     
-    def load_from_data(data : Binding::QByteArray*, format : UInt8*? = nil) : Bool
+    def load_from_data(data : Binding::QByteArray*) : Bool
+      Binding.bg_QPixmap_loadFromData_const_QByteArray_R(self, data)
+    end
+    
+    def load_from_data(data : Binding::QByteArray*, format : UInt8*) : Bool
       Binding.bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X(self, data, format)
     end
     
-    def load_from_data(data : Binding::QByteArray*, format : UInt8*?, flags : ImageConversionFlags) : Bool
+    def load_from_data(data : Binding::QByteArray*, format : UInt8*, flags : ImageConversionFlags) : Bool
       Binding.bg_QPixmap_loadFromData_const_QByteArray_R_const_char_X_Qt__ImageConversionFlags(self, data, format, flags)
     end
     
-    def save(file_name : String, format : UInt8*? = nil, quality : Int32 = -1) : Bool
+    def save(file_name : String) : Bool
+      Binding.bg_QPixmap_save_const_QString_R(self, Qt::Converter::QString.wrap(file_name))
+    end
+    
+    def save(file_name : String, format : UInt8*) : Bool
+      Binding.bg_QPixmap_save_const_QString_R_const_char_X(self, Qt::Converter::QString.wrap(file_name), format)
+    end
+    
+    def save(file_name : String, format : UInt8*, quality : Int32 = -1) : Bool
       Binding.bg_QPixmap_save_const_QString_R_const_char_X_int(self, Qt::Converter::QString.wrap(file_name), format, quality)
     end
     
-    def save(device : IODevice, format : UInt8*? = nil, quality : Int32 = -1) : Bool
+    def save(device : IODevice) : Bool
+      Binding.bg_QPixmap_save_QIODevice_X(self, device)
+    end
+    
+    def save(device : IODevice, format : UInt8*) : Bool
+      Binding.bg_QPixmap_save_QIODevice_X_const_char_X(self, device, format)
+    end
+    
+    def save(device : IODevice, format : UInt8*, quality : Int32 = -1) : Bool
       Binding.bg_QPixmap_save_QIODevice_X_const_char_X_int(self, device, format, quality)
     end
     
@@ -22774,22 +23804,22 @@ module Qt
     @unwrap : Binding::QIcon*
     
     def initialize()
-      result = Binding.bg_QIcon_CONSTRUCT_()
+      result = Binding.bg_QIcon__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(pixmap : Pixmap)
-      result = Binding.bg_QIcon_CONSTRUCT_const_QPixmap_R(pixmap)
+      result = Binding.bg_QIcon__CONSTRUCT_const_QPixmap_R(pixmap)
     @unwrap = result
     end
     
     def initialize(file_name : String)
-      result = Binding.bg_QIcon_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
+      result = Binding.bg_QIcon__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file_name))
     @unwrap = result
     end
     
     def initialize(engine : Binding::QIconEngine*)
-      result = Binding.bg_QIcon_CONSTRUCT_QIconEngine_X(engine)
+      result = Binding.bg_QIcon__CONSTRUCT_QIconEngine_X(engine)
     @unwrap = result
     end
     
@@ -22917,12 +23947,12 @@ module Qt
       Binding.bg_QIcon_hasThemeIcon_STATIC_const_QString_R(Qt::Converter::QString.wrap(name))
     end
     
-    def self.theme_search_paths() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QIcon_themeSearchPaths_STATIC_())
+    def self.theme_search_paths() : Binding::QStringList*
+      Binding.bg_QIcon_themeSearchPaths_STATIC_()
     end
     
-    def self.theme_search_paths=(searchpath : Enumerable(String)) : Void
-      Binding.bg_QIcon_setThemeSearchPaths_STATIC_const_QStringList_R(BindgenHelper.wrap_container(Container_QList_QString, searchpath).to_unsafe)
+    def self.theme_search_paths=(searchpath : Binding::QStringList*) : Void
+      Binding.bg_QIcon_setThemeSearchPaths_STATIC_const_QStringList_R(searchpath)
     end
     
     def self.theme_name() : String
@@ -22965,16 +23995,32 @@ module Qt
       Binding.bg_QEventLoop_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QEventLoop_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QEventLoop_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QEventLoop__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -22994,7 +24040,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_EventLoop_JUMPTABLE_BgJumptable_EventLoop(result, pointerof(jump_table))
+    Binding.bg_BgInherit_EventLoop_JUMPTABLE_BgJumptable_EventLoop_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -23091,16 +24137,32 @@ module Qt
       Binding.bg_QTabBar_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabBar_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabBar_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabBar_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabBar_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabBar_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabBar_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QTabBar_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QTabBar__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -23158,7 +24220,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TabBar_JUMPTABLE_BgJumptable_TabBar(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TabBar_JUMPTABLE_BgJumptable_TabBar_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -23628,16 +24690,32 @@ module Qt
       Binding.bg_QTabWidget_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTabWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QTabWidget_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QTabWidget__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -23691,7 +24769,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TabWidget_JUMPTABLE_BgJumptable_TabWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TabWidget_JUMPTABLE_BgJumptable_TabWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24095,7 +25173,7 @@ module Qt
     @unwrap : Binding::QLayoutItem*
     
     def initialize()
-      result = Binding.bg_QLayoutItem_CONSTRUCT_()
+      result = Binding.bg_QLayoutItem__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -24120,12 +25198,12 @@ module Qt
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} Proc(SizePolicy::ControlTypes).new{ self.control_types().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(alignment : Alignment)
-      result = Binding.bg_QLayoutItem_CONSTRUCT_Qt__Alignment(alignment)
+      result = Binding.bg_QLayoutItem__CONSTRUCT_Qt__Alignment(alignment)
     @unwrap = result
     {% begin %}
     {%
@@ -24150,7 +25228,7 @@ module Qt
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} Proc(SizePolicy::ControlTypes).new{ self.control_types().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LayoutItem_JUMPTABLE_BgJumptable_LayoutItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24212,7 +25290,7 @@ module Qt
   end
   class SpacerItem < LayoutItem
     def initialize(w : Int32, h : Int32, h_data : SizePolicy::Policy = SizePolicy::Policy::Minimum, v_data : SizePolicy::Policy = SizePolicy::Policy::Minimum)
-      result = Binding.bg_QSpacerItem_CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w, h, h_data, v_data)
+      result = Binding.bg_QSpacerItem__CONSTRUCT_int_int_QSizePolicy__Policy_QSizePolicy__Policy(w, h, h_data, v_data)
     @unwrap = result
     {% begin %}
     {%
@@ -24237,7 +25315,7 @@ module Qt
       bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_controlTypes_: BindgenHelper.wrap_proc({% if forwarded.includes?("control_types") %} Proc(SizePolicy::ControlTypes).new{ self.control_types().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_SpacerItem_JUMPTABLE_BgJumptable_SpacerItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_SpacerItem_JUMPTABLE_BgJumptable_SpacerItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24317,7 +25395,7 @@ module Qt
   end
   class WidgetItem < LayoutItem
     def initialize(w : Widget)
-      result = Binding.bg_QWidgetItem_CONSTRUCT_QWidget_X(w)
+      result = Binding.bg_QWidgetItem__CONSTRUCT_QWidget_X(w)
     @unwrap = result
     {% begin %}
     {%
@@ -24342,7 +25420,7 @@ module Qt
       bg_QLayoutItem_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_WidgetItem_JUMPTABLE_BgJumptable_WidgetItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_WidgetItem_JUMPTABLE_BgJumptable_WidgetItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24425,16 +25503,32 @@ module Qt
       Binding.bg_QLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget)
-      result = Binding.bg_QLayout_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QLayout__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -24474,12 +25568,12 @@ module Qt
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} Proc(Binding::QWidget*).new{ self.widget().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize()
-      result = Binding.bg_QLayout_CONSTRUCT_()
+      result = Binding.bg_QLayout__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -24519,7 +25613,7 @@ module Qt
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} Proc(Binding::QWidget*).new{ self.widget().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24712,7 +25806,7 @@ module Qt
     end
     
     protected def initialize(d : Binding::QLayoutPrivate*, unnamed_arg_1 : Layout, unnamed_arg_2 : Widget)
-      result = Binding.bg_QLayout_CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d, unnamed_arg_1, unnamed_arg_2)
+      result = Binding.bg_QLayout__CONSTRUCT_QLayoutPrivate_R_QLayout_X_QWidget_X(d, unnamed_arg_1, unnamed_arg_2)
     @unwrap = result
     {% begin %}
     {%
@@ -24752,7 +25846,7 @@ module Qt
       bg_QLayoutItem_widget_: BindgenHelper.wrap_proc({% if forwarded.includes?("widget") %} Proc(Binding::QWidget*).new{ self.widget().to_unsafe } {% else %} nil {% end %}),
       bg_QLayoutItem_spacerItem_: BindgenHelper.wrap_proc({% if forwarded.includes?("spacer_item") %} Proc(Binding::QSpacerItem*).new{ self.spacer_item().to_unsafe } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Layout_JUMPTABLE_BgJumptable_Layout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -24832,16 +25926,32 @@ module Qt
       Binding.bg_QBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(unnamed_arg_0 : BoxLayout::Direction, parent : Widget? = nil)
-      result = Binding.bg_QBoxLayout_CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0, parent)
+      result = Binding.bg_QBoxLayout__CONSTRUCT_QBoxLayout__Direction_QWidget_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -24873,7 +25983,7 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_BoxLayout_JUMPTABLE_BgJumptable_BoxLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_BoxLayout_JUMPTABLE_BgJumptable_BoxLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -25068,16 +26178,32 @@ module Qt
       Binding.bg_QHBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QHBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QHBoxLayout_CONSTRUCT_()
+      result = Binding.bg_QHBoxLayout__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -25103,12 +26229,12 @@ module Qt
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} Proc(Int32).new{ self.count() } {% else %} nil {% end %}),
       bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} Proc(Binding::QRect*, Void).new{|unnamed_arg_0| self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget)
-      result = Binding.bg_QHBoxLayout_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QHBoxLayout__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -25134,7 +26260,7 @@ module Qt
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} Proc(Int32).new{ self.count() } {% else %} nil {% end %}),
       bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} Proc(Binding::QRect*, Void).new{|unnamed_arg_0| self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_HBoxLayout_JUMPTABLE_BgJumptable_HBoxLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -25209,16 +26335,32 @@ module Qt
       Binding.bg_QVBoxLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QVBoxLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QVBoxLayout_CONSTRUCT_()
+      result = Binding.bg_QVBoxLayout__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -25244,12 +26386,12 @@ module Qt
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} Proc(Int32).new{ self.count() } {% else %} nil {% end %}),
       bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} Proc(Binding::QRect*, Void).new{|unnamed_arg_0| self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget)
-      result = Binding.bg_QVBoxLayout_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QVBoxLayout__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -25275,7 +26417,7 @@ module Qt
       bg_QBoxLayout_count_: BindgenHelper.wrap_proc({% if forwarded.includes?("count") %} Proc(Int32).new{ self.count() } {% else %} nil {% end %}),
       bg_QBoxLayout_setGeometry_const_QRect_R: BindgenHelper.wrap_proc({% if forwarded.includes?("geometry=") %} Proc(Binding::QRect*, Void).new{|unnamed_arg_0| self.geometry=(Rect.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_VBoxLayout_JUMPTABLE_BgJumptable_VBoxLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -25350,16 +26492,32 @@ module Qt
       Binding.bg_QGridLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGridLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget)
-      result = Binding.bg_QGridLayout_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QGridLayout__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -25391,12 +26549,12 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize()
-      result = Binding.bg_QGridLayout_CONSTRUCT_()
+      result = Binding.bg_QGridLayout__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -25428,7 +26586,7 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GridLayout_JUMPTABLE_BgJumptable_GridLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -25659,16 +26817,32 @@ module Qt
       Binding.bg_QStackedLayout_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QStackedLayout_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QStackedLayout_CONSTRUCT_()
+      result = Binding.bg_QStackedLayout__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -25699,12 +26873,12 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget)
-      result = Binding.bg_QStackedLayout_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QStackedLayout__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -25735,12 +26909,12 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent_layout : Layout)
-      result = Binding.bg_QStackedLayout_CONSTRUCT_QLayout_X(parent_layout)
+      result = Binding.bg_QStackedLayout__CONSTRUCT_QLayout_X(parent_layout)
     @unwrap = result
     {% begin %}
     {%
@@ -25771,7 +26945,7 @@ module Qt
       bg_QLayout_layout_: BindgenHelper.wrap_proc({% if forwarded.includes?("layout") %} Proc(Binding::QLayout*).new{ self.layout().to_unsafe } {% else %} nil {% end %}),
       bg_QLayout_childEvent_QChildEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("child_event") %} Proc(Binding::QChildEvent*, Void).new{|e| self.child_event(e) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout(result, pointerof(jump_table))
+    Binding.bg_BgInherit_StackedLayout_JUMPTABLE_BgJumptable_StackedLayout_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -25913,32 +27087,32 @@ module Qt
     @unwrap : Binding::QPalette*
     
     def initialize()
-      result = Binding.bg_QPalette_CONSTRUCT_()
+      result = Binding.bg_QPalette__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(button : Color)
-      result = Binding.bg_QPalette_CONSTRUCT_const_QColor_R(button)
+      result = Binding.bg_QPalette__CONSTRUCT_const_QColor_R(button)
     @unwrap = result
     end
     
     def initialize(button : GlobalColor)
-      result = Binding.bg_QPalette_CONSTRUCT_Qt__GlobalColor(button)
+      result = Binding.bg_QPalette__CONSTRUCT_Qt__GlobalColor(button)
     @unwrap = result
     end
     
     def initialize(button : Color, window : Color)
-      result = Binding.bg_QPalette_CONSTRUCT_const_QColor_R_const_QColor_R(button, window)
+      result = Binding.bg_QPalette__CONSTRUCT_const_QColor_R_const_QColor_R(button, window)
     @unwrap = result
     end
     
     def initialize(window_text : Brush, button : Brush, light : Brush, dark : Brush, mid : Brush, text : Brush, bright_text : Brush, base : Brush, window : Brush)
-      result = Binding.bg_QPalette_CONSTRUCT_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R(window_text, button, light, dark, mid, text, bright_text, base, window)
+      result = Binding.bg_QPalette__CONSTRUCT_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R_const_QBrush_R(window_text, button, light, dark, mid, text, bright_text, base, window)
     @unwrap = result
     end
     
     def initialize(window_text : Color, window : Color, light : Color, dark : Color, mid : Color, text : Color, base : Color)
-      result = Binding.bg_QPalette_CONSTRUCT_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R(window_text, window, light, dark, mid, text, base)
+      result = Binding.bg_QPalette__CONSTRUCT_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R_const_QColor_R(window_text, window, light, dark, mid, text, base)
     @unwrap = result
     end
     
@@ -26149,22 +27323,22 @@ module Qt
     @unwrap : Binding::QRect*
     
     def initialize()
-      result = Binding.bg_QRect_CONSTRUCT_()
+      result = Binding.bg_QRect__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(topleft : Point, bottomright : Point)
-      result = Binding.bg_QRect_CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft, bottomright)
+      result = Binding.bg_QRect__CONSTRUCT_const_QPoint_R_const_QPoint_R(topleft, bottomright)
     @unwrap = result
     end
     
     def initialize(topleft : Point, size : Binding::QSize*)
-      result = Binding.bg_QRect_CONSTRUCT_const_QPoint_R_const_QSize_R(topleft, size)
+      result = Binding.bg_QRect__CONSTRUCT_const_QPoint_R_const_QSize_R(topleft, size)
     @unwrap = result
     end
     
     def initialize(left : Int32, top : Int32, width : Int32, height : Int32)
-      result = Binding.bg_QRect_CONSTRUCT_int_int_int_int(left, top, width, height)
+      result = Binding.bg_QRect__CONSTRUCT_int_int_int_int(left, top, width, height)
     @unwrap = result
     end
     
@@ -26429,27 +27603,27 @@ module Qt
     @unwrap : Binding::QRectF*
     
     def initialize()
-      result = Binding.bg_QRectF_CONSTRUCT_()
+      result = Binding.bg_QRectF__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(topleft : PointF, size : Binding::QSizeF*)
-      result = Binding.bg_QRectF_CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft, size)
+      result = Binding.bg_QRectF__CONSTRUCT_const_QPointF_R_const_QSizeF_R(topleft, size)
     @unwrap = result
     end
     
     def initialize(topleft : PointF, bottom_right : PointF)
-      result = Binding.bg_QRectF_CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft, bottom_right)
+      result = Binding.bg_QRectF__CONSTRUCT_const_QPointF_R_const_QPointF_R(topleft, bottom_right)
     @unwrap = result
     end
     
     def initialize(left : Float64, top : Float64, width : Float64, height : Float64)
-      result = Binding.bg_QRectF_CONSTRUCT_qreal_qreal_qreal_qreal(left, top, width, height)
+      result = Binding.bg_QRectF__CONSTRUCT_qreal_qreal_qreal_qreal(left, top, width, height)
     @unwrap = result
     end
     
     def initialize(rect : Rect)
-      result = Binding.bg_QRectF_CONSTRUCT_const_QRect_R(rect)
+      result = Binding.bg_QRectF__CONSTRUCT_const_QRect_R(rect)
     @unwrap = result
     end
     
@@ -26718,22 +27892,22 @@ module Qt
     @unwrap : Binding::QKeySequence*
     
     def initialize()
-      result = Binding.bg_QKeySequence_CONSTRUCT_()
+      result = Binding.bg_QKeySequence__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(key : String, format : KeySequence::SequenceFormat = KeySequence::SequenceFormat::NativeText)
-      result = Binding.bg_QKeySequence_CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(Qt::Converter::QString.wrap(key), format)
+      result = Binding.bg_QKeySequence__CONSTRUCT_const_QString_R_QKeySequence__SequenceFormat(Qt::Converter::QString.wrap(key), format)
     @unwrap = result
     end
     
     def initialize(k1 : Int32, k2 : Int32 = 0, k3 : Int32 = 0, k4 : Int32 = 0)
-      result = Binding.bg_QKeySequence_CONSTRUCT_int_int_int_int(k1, k2, k3, k4)
+      result = Binding.bg_QKeySequence__CONSTRUCT_int_int_int_int(k1, k2, k3, k4)
     @unwrap = result
     end
     
     def initialize(key : KeySequence::StandardKey)
-      result = Binding.bg_QKeySequence_CONSTRUCT_QKeySequence__StandardKey(key)
+      result = Binding.bg_QKeySequence__CONSTRUCT_QKeySequence__StandardKey(key)
     @unwrap = result
     end
     
@@ -26885,16 +28059,32 @@ module Qt
       Binding.bg_QLineEdit_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QLineEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QLineEdit_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QLineEdit__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -26946,12 +28136,12 @@ module Qt
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(unnamed_arg_0 : String, parent : Widget? = nil)
-      result = Binding.bg_QLineEdit_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(unnamed_arg_0), parent)
+      result = Binding.bg_QLineEdit__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(unnamed_arg_0), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -27003,7 +28193,7 @@ module Qt
       bg_QWidget_sharedPainter_: BindgenHelper.wrap_proc({% if forwarded.includes?("shared_painter") %} Proc(Binding::QPainter*).new{ self.shared_painter().to_unsafe } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_LineEdit_JUMPTABLE_BgJumptable_LineEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -27500,16 +28690,32 @@ module Qt
       Binding.bg_QTextEdit_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextEdit_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QTextEdit_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QTextEdit__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -27555,12 +28761,12 @@ module Qt
       bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.viewport_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Widget? = nil)
-      result = Binding.bg_QTextEdit_CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QTextEdit__CONSTRUCT_const_QString_R_QWidget_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -27606,7 +28812,7 @@ module Qt
       bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.viewport_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -28079,7 +29285,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QTextEditPrivate*, parent : Widget)
-      result = Binding.bg_QTextEdit_CONSTRUCT_QTextEditPrivate_R_QWidget_X(dd, parent)
+      result = Binding.bg_QTextEdit__CONSTRUCT_QTextEditPrivate_R_QWidget_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -28125,7 +29331,7 @@ module Qt
       bg_QAbstractScrollArea_viewportEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.viewport_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextEdit_JUMPTABLE_BgJumptable_TextEdit_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -28229,16 +29435,32 @@ module Qt
       Binding.bg_QFileDialog_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget, f : WindowFlags)
-      result = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
+      result = Binding.bg_QFileDialog__CONSTRUCT_QWidget_X_Qt__WindowFlags(parent, f)
     @unwrap = result
     {% begin %}
     {%
@@ -28266,12 +29488,12 @@ module Qt
       bg_QDialog_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|unnamed_arg_0| self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Widget? = nil, caption : String = "", directory : String = "", filter : String = "")
-      result = Binding.bg_QFileDialog_CONSTRUCT_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(directory), Qt::Converter::QString.wrap(filter))
+      result = Binding.bg_QFileDialog__CONSTRUCT_QWidget_X_const_QString_R_const_QString_R_const_QString_R(parent, Qt::Converter::QString.wrap(caption), Qt::Converter::QString.wrap(directory), Qt::Converter::QString.wrap(filter))
     @unwrap = result
     {% begin %}
     {%
@@ -28299,7 +29521,7 @@ module Qt
       bg_QDialog_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|unnamed_arg_0| self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -28327,8 +29549,8 @@ module Qt
       Binding.bg_QFileDialog_selectFile_const_QString_R(self, Qt::Converter::QString.wrap(filename))
     end
     
-    def selected_files() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFileDialog_selectedFiles_(self))
+    def selected_files() : Binding::QStringList*
+      Binding.bg_QFileDialog_selectedFiles_(self)
     end
     
     def select_url(url : Url) : Void
@@ -28351,12 +29573,12 @@ module Qt
       Binding.bg_QFileDialog_setNameFilter_const_QString_R(self, Qt::Converter::QString.wrap(filter))
     end
     
-    def name_filters=(filters : Enumerable(String)) : Void
-      Binding.bg_QFileDialog_setNameFilters_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, filters).to_unsafe)
+    def name_filters=(filters : Binding::QStringList*) : Void
+      Binding.bg_QFileDialog_setNameFilters_const_QStringList_R(self, filters)
     end
     
-    def name_filters() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFileDialog_nameFilters_(self))
+    def name_filters() : Binding::QStringList*
+      Binding.bg_QFileDialog_nameFilters_(self)
     end
     
     def select_name_filter(filter : String) : Void
@@ -28371,12 +29593,12 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_selectedNameFilter_(self))
     end
     
-    def mime_type_filters=(filters : Enumerable(String)) : Void
-      Binding.bg_QFileDialog_setMimeTypeFilters_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, filters).to_unsafe)
+    def mime_type_filters=(filters : Binding::QStringList*) : Void
+      Binding.bg_QFileDialog_setMimeTypeFilters_const_QStringList_R(self, filters)
     end
     
-    def mime_type_filters() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFileDialog_mimeTypeFilters_(self))
+    def mime_type_filters() : Binding::QStringList*
+      Binding.bg_QFileDialog_mimeTypeFilters_(self)
     end
     
     def select_mime_type_filter(filter : String) : Void
@@ -28463,12 +29685,12 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_defaultSuffix_(self))
     end
     
-    def history=(paths : Enumerable(String)) : Void
-      Binding.bg_QFileDialog_setHistory_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, paths).to_unsafe)
+    def history=(paths : Binding::QStringList*) : Void
+      Binding.bg_QFileDialog_setHistory_const_QStringList_R(self, paths)
     end
     
-    def history() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFileDialog_history_(self))
+    def history() : Binding::QStringList*
+      Binding.bg_QFileDialog_history_(self)
     end
     
     def item_delegate=(delegate : Binding::QAbstractItemDelegate*) : Void
@@ -28495,12 +29717,12 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_labelText_QFileDialog__DialogLabel(self, label))
     end
     
-    def supported_schemes=(schemes : Enumerable(String)) : Void
-      Binding.bg_QFileDialog_setSupportedSchemes_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, schemes).to_unsafe)
+    def supported_schemes=(schemes : Binding::QStringList*) : Void
+      Binding.bg_QFileDialog_setSupportedSchemes_const_QStringList_R(self, schemes)
     end
     
-    def supported_schemes() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFileDialog_supportedSchemes_(self))
+    def supported_schemes() : Binding::QStringList*
+      Binding.bg_QFileDialog_supportedSchemes_(self)
     end
     
     def proxy_model=(model : Binding::QAbstractProxyModel*) : Void
@@ -28539,8 +29761,8 @@ module Qt
       Binding.bg_QFileDialog_fileSelected_const_QString_R(self, Qt::Converter::QString.wrap(file))
     end
     
-    def files_selected(files : Enumerable(String)) : Void
-      Binding.bg_QFileDialog_filesSelected_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, files).to_unsafe)
+    def files_selected(files : Binding::QStringList*) : Void
+      Binding.bg_QFileDialog_filesSelected_const_QStringList_R(self, files)
     end
     
     def current_changed(path : String) : Void
@@ -28615,8 +29837,8 @@ module Qt
       Url.new(unwrap: Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options(parent, Qt::Converter::QString.wrap(caption), dir, options))
     end
     
-    def self.get_existing_directory_url(parent : Widget?, caption : String, dir : Url, options : FileDialog::Options, supported_schemes : Enumerable(String)) : Url
-      Url.new(unwrap: Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent, Qt::Converter::QString.wrap(caption), dir, options, BindgenHelper.wrap_container(Container_QList_QString, supported_schemes).to_unsafe))
+    def self.get_existing_directory_url(parent : Widget?, caption : String, dir : Url, options : FileDialog::Options, supported_schemes : Binding::QStringList*) : Url
+      Url.new(unwrap: Binding.bg_QFileDialog_getExistingDirectoryUrl_STATIC_QWidget_X_const_QString_R_const_QUrl_R_QFileDialog__Options_const_QStringList_R(parent, Qt::Converter::QString.wrap(caption), dir, options, supported_schemes))
     end
     
     def self.get_open_file_urls(parent : Widget? = nil, caption : String = "") : Enumerable(Url)
@@ -28632,7 +29854,7 @@ module Qt
     end
     
     protected def initialize(args : Binding::QFileDialogArgs*)
-      result = Binding.bg_QFileDialog_CONSTRUCT_const_QFileDialogArgs_R(args)
+      result = Binding.bg_QFileDialog__CONSTRUCT_const_QFileDialogArgs_R(args)
     @unwrap = result
     {% begin %}
     {%
@@ -28660,7 +29882,7 @@ module Qt
       bg_QDialog_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|unnamed_arg_0| self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog(result, pointerof(jump_table))
+    Binding.bg_BgInherit_FileDialog_JUMPTABLE_BgJumptable_FileDialog_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -28767,7 +29989,7 @@ module Qt
       SignalConnection.new(unwrap: Binding.bg_QFileDialog_CONNECT_fileSelected_CrystalProc_void_const_QString_R(self, BindgenHelper.wrap_proc(_proc_)))
     end
     
-    def on_files_selected(&_proc_ : Proc(Enumerable(String), Void)) : SignalConnection
+    def on_files_selected(&_proc_ : Proc(Binding::QStringList, Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QFileDialog_CONNECT_filesSelected_CrystalProc_void_const_QStringList_R(self, BindgenHelper.wrap_proc(_proc_)))
     end
     
@@ -28809,12 +30031,12 @@ module Qt
     @unwrap : Binding::QTextOption*
     
     def initialize()
-      result = Binding.bg_QTextOption_CONSTRUCT_()
+      result = Binding.bg_QTextOption__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(alignment : Alignment)
-      result = Binding.bg_QTextOption_CONSTRUCT_Qt__Alignment(alignment)
+      result = Binding.bg_QTextOption__CONSTRUCT_Qt__Alignment(alignment)
     @unwrap = result
     end
     
@@ -28918,16 +30140,32 @@ module Qt
       Binding.bg_QTextDocument_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QTextDocument_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QTextDocument__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -28949,12 +30187,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : Object? = nil)
-      result = Binding.bg_QTextDocument_CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QTextDocument__CONSTRUCT_const_QString_R_QObject_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -28976,7 +30214,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -29369,7 +30607,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QTextDocumentPrivate*, parent : Object)
-      result = Binding.bg_QTextDocument_CONSTRUCT_QTextDocumentPrivate_R_QObject_X(dd, parent)
+      result = Binding.bg_QTextDocument__CONSTRUCT_QTextDocumentPrivate_R_QObject_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -29391,7 +30629,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument(result, pointerof(jump_table))
+    Binding.bg_BgInherit_TextDocument_JUMPTABLE_BgJumptable_TextDocument_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -29492,32 +30730,32 @@ module Qt
     @unwrap : Binding::QTextCursor*
     
     def initialize()
-      result = Binding.bg_QTextCursor_CONSTRUCT_()
+      result = Binding.bg_QTextCursor__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(document : TextDocument)
-      result = Binding.bg_QTextCursor_CONSTRUCT_QTextDocument_X(document)
+      result = Binding.bg_QTextCursor__CONSTRUCT_QTextDocument_X(document)
     @unwrap = result
     end
     
     def initialize(p : Binding::QTextDocumentPrivate*, pos : Int32)
-      result = Binding.bg_QTextCursor_CONSTRUCT_QTextDocumentPrivate_X_int(p, pos)
+      result = Binding.bg_QTextCursor__CONSTRUCT_QTextDocumentPrivate_X_int(p, pos)
     @unwrap = result
     end
     
     def initialize(d : Binding::QTextCursorPrivate*)
-      result = Binding.bg_QTextCursor_CONSTRUCT_QTextCursorPrivate_X(d)
+      result = Binding.bg_QTextCursor__CONSTRUCT_QTextCursorPrivate_X(d)
     @unwrap = result
     end
     
     def initialize(frame : Binding::QTextFrame*)
-      result = Binding.bg_QTextCursor_CONSTRUCT_QTextFrame_X(frame)
+      result = Binding.bg_QTextCursor__CONSTRUCT_QTextFrame_X(frame)
     @unwrap = result
     end
     
     def initialize(block : Binding::QTextBlock*)
-      result = Binding.bg_QTextCursor_CONSTRUCT_const_QTextBlock_R(block)
+      result = Binding.bg_QTextCursor__CONSTRUCT_const_QTextBlock_R(block)
     @unwrap = result
     end
     
@@ -29839,22 +31077,22 @@ module Qt
     @unwrap : Binding::QDir*
     
     def initialize(path : String = "")
-      result = Binding.bg_QDir_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(path))
+      result = Binding.bg_QDir__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(path))
     @unwrap = result
     end
     
     def initialize(path : String, name_filter : String)
-      result = Binding.bg_QDir_CONSTRUCT_const_QString_R_const_QString_R(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter))
+      result = Binding.bg_QDir__CONSTRUCT_const_QString_R_const_QString_R(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter))
     @unwrap = result
     end
     
     def initialize(path : String, name_filter : String, sort : Dir::SortFlags)
-      result = Binding.bg_QDir_CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter), sort)
+      result = Binding.bg_QDir__CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter), sort)
     @unwrap = result
     end
     
     def initialize(path : String, name_filter : String, sort : Dir::SortFlags, filter : Dir::Filters)
-      result = Binding.bg_QDir_CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags_QDir__Filters(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter), sort, filter)
+      result = Binding.bg_QDir__CONSTRUCT_const_QString_R_const_QString_R_QDir__SortFlags_QDir__Filters(Qt::Converter::QString.wrap(path), Qt::Converter::QString.wrap(name_filter), sort, filter)
     @unwrap = result
     end
     
@@ -29882,16 +31120,16 @@ module Qt
       Binding.bg_QDir_addResourceSearchPath_STATIC_const_QString_R(Qt::Converter::QString.wrap(path))
     end
     
-    def self.set_search_paths(prefix : String, search_paths : Enumerable(String)) : Void
-      Binding.bg_QDir_setSearchPaths_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(prefix), BindgenHelper.wrap_container(Container_QList_QString, search_paths).to_unsafe)
+    def self.set_search_paths(prefix : String, search_paths : Binding::QStringList*) : Void
+      Binding.bg_QDir_setSearchPaths_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(prefix), search_paths)
     end
     
     def self.add_search_path(prefix : String, path : String) : Void
       Binding.bg_QDir_addSearchPath_STATIC_const_QString_R_const_QString_R(Qt::Converter::QString.wrap(prefix), Qt::Converter::QString.wrap(path))
     end
     
-    def self.search_paths(prefix : String) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_searchPaths_STATIC_const_QString_R(Qt::Converter::QString.wrap(prefix)))
+    def self.search_paths(prefix : String) : Binding::QStringList*
+      Binding.bg_QDir_searchPaths_STATIC_const_QString_R(Qt::Converter::QString.wrap(prefix))
     end
     
     def dir_name() : String
@@ -29926,12 +31164,12 @@ module Qt
       Binding.bg_QDir_cdUp_(self)
     end
     
-    def name_filters() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_nameFilters_(self))
+    def name_filters() : Binding::QStringList*
+      Binding.bg_QDir_nameFilters_(self)
     end
     
-    def name_filters=(name_filters : Enumerable(String)) : Void
-      Binding.bg_QDir_setNameFilters_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe)
+    def name_filters=(name_filters : Binding::QStringList*) : Void
+      Binding.bg_QDir_setNameFilters_const_QStringList_R(self, name_filters)
     end
     
     def filter() : Dir::Filters
@@ -29962,32 +31200,32 @@ module Qt
       Binding.bg_QDir_isEmpty_QDir__Filters(self, filters)
     end
     
-    def self.name_filters_from_string(name_filter : String) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_nameFiltersFromString_STATIC_const_QString_R(Qt::Converter::QString.wrap(name_filter)))
+    def self.name_filters_from_string(name_filter : String) : Binding::QStringList*
+      Binding.bg_QDir_nameFiltersFromString_STATIC_const_QString_R(Qt::Converter::QString.wrap(name_filter))
     end
     
-    def entry_list() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_(self))
+    def entry_list() : Binding::QStringList*
+      Binding.bg_QDir_entryList_(self)
     end
     
-    def entry_list(filters : Dir::Filters) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_QDir__Filters(self, filters))
+    def entry_list(filters : Dir::Filters) : Binding::QStringList*
+      Binding.bg_QDir_entryList_QDir__Filters(self, filters)
     end
     
-    def entry_list(filters : Dir::Filters, sort : Dir::SortFlags) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_QDir__Filters_QDir__SortFlags(self, filters, sort))
+    def entry_list(filters : Dir::Filters, sort : Dir::SortFlags) : Binding::QStringList*
+      Binding.bg_QDir_entryList_QDir__Filters_QDir__SortFlags(self, filters, sort)
     end
     
-    def entry_list(name_filters : Enumerable(String)) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe))
+    def entry_list(name_filters : Binding::QStringList*) : Binding::QStringList*
+      Binding.bg_QDir_entryList_const_QStringList_R(self, name_filters)
     end
     
-    def entry_list(name_filters : Enumerable(String), filters : Dir::Filters) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_const_QStringList_R_QDir__Filters(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe, filters))
+    def entry_list(name_filters : Binding::QStringList*, filters : Dir::Filters) : Binding::QStringList*
+      Binding.bg_QDir_entryList_const_QStringList_R_QDir__Filters(self, name_filters, filters)
     end
     
-    def entry_list(name_filters : Enumerable(String), filters : Dir::Filters, sort : Dir::SortFlags) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QDir_entryList_const_QStringList_R_QDir__Filters_QDir__SortFlags(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe, filters, sort))
+    def entry_list(name_filters : Binding::QStringList*, filters : Dir::Filters, sort : Dir::SortFlags) : Binding::QStringList*
+      Binding.bg_QDir_entryList_const_QStringList_R_QDir__Filters_QDir__SortFlags(self, name_filters, filters, sort)
     end
     
     def entry_info_list() : Binding::QFileInfoList*
@@ -30002,16 +31240,16 @@ module Qt
       Binding.bg_QDir_entryInfoList_QDir__Filters_QDir__SortFlags(self, filters, sort)
     end
     
-    def entry_info_list(name_filters : Enumerable(String)) : Binding::QFileInfoList*
-      Binding.bg_QDir_entryInfoList_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe)
+    def entry_info_list(name_filters : Binding::QStringList*) : Binding::QFileInfoList*
+      Binding.bg_QDir_entryInfoList_const_QStringList_R(self, name_filters)
     end
     
-    def entry_info_list(name_filters : Enumerable(String), filters : Dir::Filters) : Binding::QFileInfoList*
-      Binding.bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe, filters)
+    def entry_info_list(name_filters : Binding::QStringList*, filters : Dir::Filters) : Binding::QFileInfoList*
+      Binding.bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters(self, name_filters, filters)
     end
     
-    def entry_info_list(name_filters : Enumerable(String), filters : Dir::Filters, sort : Dir::SortFlags) : Binding::QFileInfoList*
-      Binding.bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters_QDir__SortFlags(self, BindgenHelper.wrap_container(Container_QList_QString, name_filters).to_unsafe, filters, sort)
+    def entry_info_list(name_filters : Binding::QStringList*, filters : Dir::Filters, sort : Dir::SortFlags) : Binding::QFileInfoList*
+      Binding.bg_QDir_entryInfoList_const_QStringList_R_QDir__Filters_QDir__SortFlags(self, name_filters, filters, sort)
     end
     
     def mkdir(dir_name : String) : Bool
@@ -30126,8 +31364,8 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QDir_tempPath_STATIC_())
     end
     
-    def self.match(filters : Enumerable(String), file_name : String) : Bool
-      Binding.bg_QDir_match_STATIC_const_QStringList_R_const_QString_R(BindgenHelper.wrap_container(Container_QList_QString, filters).to_unsafe, Qt::Converter::QString.wrap(file_name))
+    def self.match(filters : Binding::QStringList*, file_name : String) : Bool
+      Binding.bg_QDir_match_STATIC_const_QStringList_R_const_QString_R(filters, Qt::Converter::QString.wrap(file_name))
     end
     
     def self.match(filter : String, file_name : String) : Bool
@@ -30143,7 +31381,7 @@ module Qt
     end
     
     protected def initialize(d : Binding::QDirPrivate*)
-      result = Binding.bg_QDir_CONSTRUCT_QDirPrivate_R(d)
+      result = Binding.bg_QDir__CONSTRUCT_QDirPrivate_R(d)
     @unwrap = result
     end
     
@@ -30198,7 +31436,7 @@ module Qt
     @unwrap : Binding::QGraphicsItem*
     
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -30239,7 +31477,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -31074,7 +32312,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QGraphicsItemPrivate*, parent : GraphicsItem)
-      result = Binding.bg_QGraphicsItem_CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd, parent)
+      result = Binding.bg_QGraphicsItem__CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -31115,7 +32353,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsItem_JUMPTABLE_BgJumptable_GraphicsItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -31211,16 +32449,32 @@ module Qt
       Binding.bg_QGraphicsScene_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsScene_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QGraphicsScene_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QGraphicsScene__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -31259,12 +32513,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(scene_rect : RectF, parent : Object? = nil)
-      result = Binding.bg_QGraphicsScene_CONSTRUCT_const_QRectF_R_QObject_X(scene_rect, parent)
+      result = Binding.bg_QGraphicsScene__CONSTRUCT_const_QRectF_R_QObject_X(scene_rect, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -31303,12 +32557,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(x : Float64, y : Float64, width : Float64, height : Float64, parent : Object? = nil)
-      result = Binding.bg_QGraphicsScene_CONSTRUCT_qreal_qreal_qreal_qreal_QObject_X(x, y, width, height, parent)
+      result = Binding.bg_QGraphicsScene__CONSTRUCT_qreal_qreal_qreal_qreal_QObject_X(x, y, width, height, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -31347,7 +32601,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsScene_JUMPTABLE_BgJumptable_GraphicsScene_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -31959,16 +33213,32 @@ module Qt
       Binding.bg_QGraphicsView_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsView_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Widget? = nil)
-      result = Binding.bg_QGraphicsView_CONSTRUCT_QWidget_X(parent)
+      result = Binding.bg_QGraphicsView__CONSTRUCT_QWidget_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -32011,12 +33281,12 @@ module Qt
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(scene : GraphicsScene, parent : Widget? = nil)
-      result = Binding.bg_QGraphicsView_CONSTRUCT_QGraphicsScene_X_QWidget_X(scene, parent)
+      result = Binding.bg_QGraphicsView__CONSTRUCT_QGraphicsScene_X_QWidget_X(scene, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -32059,7 +33329,7 @@ module Qt
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -32412,7 +33682,7 @@ module Qt
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QGraphicsViewPrivate*, parent : Widget? = nil)
-      result = Binding.bg_QGraphicsView_CONSTRUCT_QGraphicsViewPrivate_R_QWidget_X(unnamed_arg_0, parent)
+      result = Binding.bg_QGraphicsView__CONSTRUCT_QGraphicsViewPrivate_R_QWidget_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -32455,7 +33725,7 @@ module Qt
       bg_QAbstractScrollArea_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|unnamed_arg_0, unnamed_arg_1| self.event_filter(Object.new(unwrap: unnamed_arg_0), Event.new(unwrap: unnamed_arg_1)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsView_JUMPTABLE_BgJumptable_GraphicsView_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -32629,16 +33899,32 @@ module Qt
       Binding.bg_QGraphicsObject_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsObject_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsObject_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsObject__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -32689,7 +33975,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -32758,7 +34044,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QGraphicsItemPrivate*, parent : GraphicsItem)
-      result = Binding.bg_QGraphicsObject_CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd, parent)
+      result = Binding.bg_QGraphicsObject__CONSTRUCT_QGraphicsItemPrivate_R_QGraphicsItem_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -32809,7 +34095,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsObject_JUMPTABLE_BgJumptable_GraphicsObject_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -33030,16 +34316,32 @@ module Qt
       Binding.bg_QGraphicsWidget_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsWidget_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsWidget__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33083,12 +34385,12 @@ module Qt
       bg_QGraphicsWidget_grabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("grab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.grab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_ungrabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("ungrab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.ungrab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : GraphicsItem?, w_flags : WindowFlags)
-      result = Binding.bg_QGraphicsWidget_CONSTRUCT_QGraphicsItem_X_Qt__WindowFlags(parent, w_flags)
+      result = Binding.bg_QGraphicsWidget__CONSTRUCT_QGraphicsItem_X_Qt__WindowFlags(parent, w_flags)
     @unwrap = result
     {% begin %}
     {%
@@ -33132,7 +34434,7 @@ module Qt
       bg_QGraphicsWidget_grabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("grab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.grab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_ungrabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("ungrab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.ungrab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -33461,7 +34763,7 @@ module Qt
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QGraphicsWidgetPrivate*, parent : GraphicsItem)
-      result = Binding.bg_QGraphicsWidget_CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X(unnamed_arg_0, parent)
+      result = Binding.bg_QGraphicsWidget__CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X(unnamed_arg_0, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33505,12 +34807,12 @@ module Qt
       bg_QGraphicsWidget_grabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("grab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.grab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_ungrabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("ungrab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.ungrab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
     protected def initialize(unnamed_arg_0 : Binding::QGraphicsWidgetPrivate*, parent : GraphicsItem, w_flags : WindowFlags)
-      result = Binding.bg_QGraphicsWidget_CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X_Qt__WindowFlags(unnamed_arg_0, parent, w_flags)
+      result = Binding.bg_QGraphicsWidget__CONSTRUCT_QGraphicsWidgetPrivate_R_QGraphicsItem_X_Qt__WindowFlags(unnamed_arg_0, parent, w_flags)
     @unwrap = result
     {% begin %}
     {%
@@ -33554,7 +34856,7 @@ module Qt
       bg_QGraphicsWidget_grabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("grab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.grab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsWidget_ungrabKeyboardEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("ungrab_keyboard_event") %} Proc(Binding::QEvent*, Void).new{|event| self.ungrab_keyboard_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsWidget_JUMPTABLE_BgJumptable_GraphicsWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -33585,16 +34887,32 @@ module Qt
       Binding.bg_QGraphicsTextItem_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTextItem_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsTextItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsTextItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33634,12 +34952,12 @@ module Qt
       bg_QGraphicsTextItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
       bg_QGraphicsObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|ev| self.event(Event.new(unwrap: ev)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsTextItem_CONSTRUCT_const_QString_R_QGraphicsItem_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QGraphicsTextItem__CONSTRUCT_const_QString_R_QGraphicsItem_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33679,7 +34997,7 @@ module Qt
       bg_QGraphicsTextItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
       bg_QGraphicsObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|ev| self.event(Event.new(unwrap: ev)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsTextItem_JUMPTABLE_BgJumptable_GraphicsTextItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -33910,16 +35228,32 @@ module Qt
       Binding.bg_QGraphicsTransform_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGraphicsTransform_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QGraphicsTransform_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QGraphicsTransform__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33940,7 +35274,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -33950,7 +35284,7 @@ module Qt
     end
     
     protected def initialize(p : Binding::QGraphicsTransformPrivate*, parent : Object)
-      result = Binding.bg_QGraphicsTransform_CONSTRUCT_QGraphicsTransformPrivate_R_QObject_X(p, parent)
+      result = Binding.bg_QGraphicsTransform__CONSTRUCT_QGraphicsTransformPrivate_R_QObject_X(p, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -33971,7 +35305,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsTransform_JUMPTABLE_BgJumptable_GraphicsTransform_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34011,7 +35345,7 @@ module Qt
   end
   abstract class AbstractGraphicsShapeItem < GraphicsItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QAbstractGraphicsShapeItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QAbstractGraphicsShapeItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34052,7 +35386,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34081,7 +35415,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QAbstractGraphicsShapeItemPrivate*, parent : GraphicsItem)
-      result = Binding.bg_QAbstractGraphicsShapeItem_CONSTRUCT_QAbstractGraphicsShapeItemPrivate_R_QGraphicsItem_X(dd, parent)
+      result = Binding.bg_QAbstractGraphicsShapeItem__CONSTRUCT_QAbstractGraphicsShapeItemPrivate_R_QGraphicsItem_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34122,7 +35456,7 @@ module Qt
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_AbstractGraphicsShapeItem_JUMPTABLE_BgJumptable_AbstractGraphicsShapeItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34244,7 +35578,7 @@ module Qt
   end
   class GraphicsEllipseItem < AbstractGraphicsShapeItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsEllipseItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsEllipseItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34262,12 +35596,12 @@ module Qt
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(rect : RectF, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsEllipseItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
+      result = Binding.bg_QGraphicsEllipseItem__CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34285,12 +35619,12 @@ module Qt
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(x : Float64, y : Float64, w : Float64, h : Float64, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsEllipseItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x, y, w, h, parent)
+      result = Binding.bg_QGraphicsEllipseItem__CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x, y, w, h, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34308,7 +35642,7 @@ module Qt
       bg_QGraphicsEllipseItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsEllipseItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsEllipseItem_JUMPTABLE_BgJumptable_GraphicsEllipseItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34380,7 +35714,7 @@ module Qt
   end
   class GraphicsPathItem < AbstractGraphicsShapeItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPathItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsPathItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34398,12 +35732,12 @@ module Qt
       bg_QGraphicsPathItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(path : Binding::QPainterPath*, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPathItem_CONSTRUCT_const_QPainterPath_R_QGraphicsItem_X(path, parent)
+      result = Binding.bg_QGraphicsPathItem__CONSTRUCT_const_QPainterPath_R_QGraphicsItem_X(path, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34421,7 +35755,7 @@ module Qt
       bg_QGraphicsPathItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsPathItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPathItem_JUMPTABLE_BgJumptable_GraphicsPathItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34473,7 +35807,7 @@ module Qt
   end
   class GraphicsPolygonItem < AbstractGraphicsShapeItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPolygonItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsPolygonItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34491,12 +35825,12 @@ module Qt
       bg_QGraphicsPolygonItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(polygon : Binding::QPolygonF*, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPolygonItem_CONSTRUCT_const_QPolygonF_R_QGraphicsItem_X(polygon, parent)
+      result = Binding.bg_QGraphicsPolygonItem__CONSTRUCT_const_QPolygonF_R_QGraphicsItem_X(polygon, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34514,7 +35848,7 @@ module Qt
       bg_QGraphicsPolygonItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsPolygonItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPolygonItem_JUMPTABLE_BgJumptable_GraphicsPolygonItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34574,7 +35908,7 @@ module Qt
   end
   class GraphicsRectItem < AbstractGraphicsShapeItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsRectItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsRectItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34592,12 +35926,12 @@ module Qt
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(rect : RectF, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsRectItem_CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
+      result = Binding.bg_QGraphicsRectItem__CONSTRUCT_const_QRectF_R_QGraphicsItem_X(rect, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34615,12 +35949,12 @@ module Qt
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(x : Float64, y : Float64, w : Float64, h : Float64, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsRectItem_CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x, y, w, h, parent)
+      result = Binding.bg_QGraphicsRectItem__CONSTRUCT_qreal_qreal_qreal_qreal_QGraphicsItem_X(x, y, w, h, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34638,7 +35972,7 @@ module Qt
       bg_QGraphicsRectItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsRectItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsRectItem_JUMPTABLE_BgJumptable_GraphicsRectItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34694,7 +36028,7 @@ module Qt
   end
   class GraphicsSimpleTextItem < AbstractGraphicsShapeItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsSimpleTextItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsSimpleTextItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34712,12 +36046,12 @@ module Qt
       bg_QGraphicsSimpleTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(text : String, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsSimpleTextItem_CONSTRUCT_const_QString_R_QGraphicsItem_X(Qt::Converter::QString.wrap(text), parent)
+      result = Binding.bg_QGraphicsSimpleTextItem__CONSTRUCT_const_QString_R_QGraphicsItem_X(Qt::Converter::QString.wrap(text), parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34735,7 +36069,7 @@ module Qt
       bg_QGraphicsSimpleTextItem_type_: BindgenHelper.wrap_proc({% if forwarded.includes?("type") %} Proc(Int32).new{ self.type() } {% else %} nil {% end %}),
       bg_QGraphicsSimpleTextItem_supportsExtension_QGraphicsItem__Extension: BindgenHelper.wrap_proc({% if forwarded.includes?("supports_extension") %} Proc(GraphicsItem::Extension, Bool).new{|extension| self.supports_extension(extension) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsSimpleTextItem_JUMPTABLE_BgJumptable_GraphicsSimpleTextItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -34795,7 +36129,7 @@ module Qt
   end
   class GraphicsPixmapItem < GraphicsItem
     def initialize(parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPixmapItem_CONSTRUCT_QGraphicsItem_X(parent)
+      result = Binding.bg_QGraphicsPixmapItem__CONSTRUCT_QGraphicsItem_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34836,12 +36170,12 @@ module Qt
       bg_QGraphicsItem_wheelEvent_QGraphicsSceneWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QGraphicsSceneWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(pixmap : Pixmap, parent : GraphicsItem? = nil)
-      result = Binding.bg_QGraphicsPixmapItem_CONSTRUCT_const_QPixmap_R_QGraphicsItem_X(pixmap, parent)
+      result = Binding.bg_QGraphicsPixmapItem__CONSTRUCT_const_QPixmap_R_QGraphicsItem_X(pixmap, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -34882,7 +36216,7 @@ module Qt
       bg_QGraphicsItem_wheelEvent_QGraphicsSceneWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QGraphicsSceneWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|event| self.input_method_event(InputMethodEvent.new(unwrap: event)) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem(result, pointerof(jump_table))
+    Binding.bg_BgInherit_GraphicsPixmapItem_JUMPTABLE_BgJumptable_GraphicsPixmapItem_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -35061,47 +36395,47 @@ module Qt
     @unwrap : Binding::QBrush*
     
     def initialize()
-      result = Binding.bg_QBrush_CONSTRUCT_()
+      result = Binding.bg_QBrush__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(bs : BrushStyle)
-      result = Binding.bg_QBrush_CONSTRUCT_Qt__BrushStyle(bs)
+      result = Binding.bg_QBrush__CONSTRUCT_Qt__BrushStyle(bs)
     @unwrap = result
     end
     
     def initialize(color : Color, bs : BrushStyle = BrushStyle::SolidPattern)
-      result = Binding.bg_QBrush_CONSTRUCT_const_QColor_R_Qt__BrushStyle(color, bs)
+      result = Binding.bg_QBrush__CONSTRUCT_const_QColor_R_Qt__BrushStyle(color, bs)
     @unwrap = result
     end
     
     def initialize(color : GlobalColor, bs : BrushStyle = BrushStyle::SolidPattern)
-      result = Binding.bg_QBrush_CONSTRUCT_Qt__GlobalColor_Qt__BrushStyle(color, bs)
+      result = Binding.bg_QBrush__CONSTRUCT_Qt__GlobalColor_Qt__BrushStyle(color, bs)
     @unwrap = result
     end
     
     def initialize(color : Color, pixmap : Pixmap)
-      result = Binding.bg_QBrush_CONSTRUCT_const_QColor_R_const_QPixmap_R(color, pixmap)
+      result = Binding.bg_QBrush__CONSTRUCT_const_QColor_R_const_QPixmap_R(color, pixmap)
     @unwrap = result
     end
     
     def initialize(color : GlobalColor, pixmap : Pixmap)
-      result = Binding.bg_QBrush_CONSTRUCT_Qt__GlobalColor_const_QPixmap_R(color, pixmap)
+      result = Binding.bg_QBrush__CONSTRUCT_Qt__GlobalColor_const_QPixmap_R(color, pixmap)
     @unwrap = result
     end
     
     def initialize(pixmap : Pixmap)
-      result = Binding.bg_QBrush_CONSTRUCT_const_QPixmap_R(pixmap)
+      result = Binding.bg_QBrush__CONSTRUCT_const_QPixmap_R(pixmap)
     @unwrap = result
     end
     
     def initialize(image : Image)
-      result = Binding.bg_QBrush_CONSTRUCT_const_QImage_R(image)
+      result = Binding.bg_QBrush__CONSTRUCT_const_QImage_R(image)
     @unwrap = result
     end
     
     def initialize(gradient : Binding::QGradient*)
-      result = Binding.bg_QBrush_CONSTRUCT_const_QGradient_R(gradient)
+      result = Binding.bg_QBrush__CONSTRUCT_const_QGradient_R(gradient)
     @unwrap = result
     end
     
@@ -35186,47 +36520,47 @@ module Qt
     @unwrap : Binding::QColor*
     
     def initialize()
-      result = Binding.bg_QColor_CONSTRUCT_()
+      result = Binding.bg_QColor__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(color : GlobalColor)
-      result = Binding.bg_QColor_CONSTRUCT_Qt__GlobalColor(color)
+      result = Binding.bg_QColor__CONSTRUCT_Qt__GlobalColor(color)
     @unwrap = result
     end
     
     def initialize(r : Int32, g : Int32, b : Int32, a : Int32 = 255)
-      result = Binding.bg_QColor_CONSTRUCT_int_int_int_int(r, g, b, a)
+      result = Binding.bg_QColor__CONSTRUCT_int_int_int_int(r, g, b, a)
     @unwrap = result
     end
     
     def initialize(rgb : UInt32)
-      result = Binding.bg_QColor_CONSTRUCT_QRgb(rgb)
+      result = Binding.bg_QColor__CONSTRUCT_QRgb(rgb)
     @unwrap = result
     end
     
     def initialize(rgba64 : Binding::QRgba64*)
-      result = Binding.bg_QColor_CONSTRUCT_QRgba64(rgba64)
+      result = Binding.bg_QColor__CONSTRUCT_QRgba64(rgba64)
     @unwrap = result
     end
     
     def initialize(name : String)
-      result = Binding.bg_QColor_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(name))
+      result = Binding.bg_QColor__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(name))
     @unwrap = result
     end
     
     def initialize(aname : UInt8*)
-      result = Binding.bg_QColor_CONSTRUCT_const_char_X(aname)
+      result = Binding.bg_QColor__CONSTRUCT_const_char_X(aname)
     @unwrap = result
     end
     
     def initialize(name : Binding::QLatin1String*)
-      result = Binding.bg_QColor_CONSTRUCT_QLatin1String(name)
+      result = Binding.bg_QColor__CONSTRUCT_QLatin1String(name)
     @unwrap = result
     end
     
     def initialize(spec : Color::Spec)
-      result = Binding.bg_QColor_CONSTRUCT_QColor__Spec(spec)
+      result = Binding.bg_QColor__CONSTRUCT_QColor__Spec(spec)
     @unwrap = result
     end
     
@@ -35250,8 +36584,8 @@ module Qt
       Binding.bg_QColor_setNamedColor_QLatin1String(self, name)
     end
     
-    def self.color_names() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QColor_colorNames_STATIC_())
+    def self.color_names() : Binding::QStringList*
+      Binding.bg_QColor_colorNames_STATIC_()
     end
     
     def spec() : Color::Spec
@@ -35622,7 +36956,7 @@ module Qt
     @unwrap : Binding::QEvent*
     
     def initialize(type : Event::Type)
-      result = Binding.bg_QEvent_CONSTRUCT_QEvent__Type(type)
+      result = Binding.bg_QEvent__CONSTRUCT_QEvent__Type(type)
     @unwrap = result
     end
     
@@ -35839,7 +37173,7 @@ module Qt
   end
   class TimerEvent < Event
     def initialize(timer_id : Int32)
-      result = Binding.bg_QTimerEvent_CONSTRUCT_int(timer_id)
+      result = Binding.bg_QTimerEvent__CONSTRUCT_int(timer_id)
     @unwrap = result
     end
     
@@ -35855,7 +37189,7 @@ module Qt
   end
   class DynamicPropertyChangeEvent < Event
     def initialize(name : Binding::QByteArray*)
-      result = Binding.bg_QDynamicPropertyChangeEvent_CONSTRUCT_const_QByteArray_R(name)
+      result = Binding.bg_QDynamicPropertyChangeEvent__CONSTRUCT_const_QByteArray_R(name)
     @unwrap = result
     end
     
@@ -35871,7 +37205,7 @@ module Qt
   end
   class DeferredDeleteEvent < Event
     def initialize()
-      result = Binding.bg_QDeferredDeleteEvent_CONSTRUCT_()
+      result = Binding.bg_QDeferredDeleteEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -35887,12 +37221,12 @@ module Qt
   end
   class InputEvent < Event
     def initialize(type : Event::Type)
-      result = Binding.bg_QInputEvent_CONSTRUCT_QEvent__Type(type)
+      result = Binding.bg_QInputEvent__CONSTRUCT_QEvent__Type(type)
     @unwrap = result
     end
     
     def initialize(type : Event::Type, modifiers : KeyboardModifiers)
-      result = Binding.bg_QInputEvent_CONSTRUCT_QEvent__Type_Qt__KeyboardModifiers(type, modifiers)
+      result = Binding.bg_QInputEvent__CONSTRUCT_QEvent__Type_Qt__KeyboardModifiers(type, modifiers)
     @unwrap = result
     end
     
@@ -35920,22 +37254,22 @@ module Qt
   end
   class MouseEvent < InputEvent
     def initialize(type : Event::Type, local_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
-      result = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, button, buttons, modifiers)
+      result = Binding.bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, button, buttons, modifiers)
     @unwrap = result
     end
     
     def initialize(type : Event::Type, local_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
-      result = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, screen_pos, button, buttons, modifiers)
+      result = Binding.bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, screen_pos, button, buttons, modifiers)
     @unwrap = result
     end
     
     def initialize(type : Event::Type, local_pos : PointF, window_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers)
-      result = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, window_pos, screen_pos, button, buttons, modifiers)
+      result = Binding.bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type, local_pos, window_pos, screen_pos, button, buttons, modifiers)
     @unwrap = result
     end
     
     def initialize(type : Event::Type, local_pos : PointF, window_pos : PointF, screen_pos : PointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers, source : MouseEventSource)
-      result = Binding.bg_QMouseEvent_CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type, local_pos, window_pos, screen_pos, button, buttons, modifiers, source)
+      result = Binding.bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers_Qt__MouseEventSource(type, local_pos, window_pos, screen_pos, button, buttons, modifiers, source)
     @unwrap = result
     end
     
@@ -36003,7 +37337,7 @@ module Qt
   end
   class EnterEvent < Event
     def initialize(local_pos : PointF, window_pos : PointF, screen_pos : PointF)
-      result = Binding.bg_QEnterEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos, window_pos, screen_pos)
+      result = Binding.bg_QEnterEvent__CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos, window_pos, screen_pos)
     @unwrap = result
     end
     
@@ -36051,7 +37385,7 @@ module Qt
   end
   class FocusEvent < Event
     def initialize(type : Event::Type, reason : FocusReason = FocusReason::OtherFocusReason)
-      result = Binding.bg_QFocusEvent_CONSTRUCT_QEvent__Type_Qt__FocusReason(type, reason)
+      result = Binding.bg_QFocusEvent__CONSTRUCT_QEvent__Type_Qt__FocusReason(type, reason)
     @unwrap = result
     end
     
@@ -36075,12 +37409,12 @@ module Qt
   end
   class PaintEvent < Event
     def initialize(paint_region : Binding::QRegion*)
-      result = Binding.bg_QPaintEvent_CONSTRUCT_const_QRegion_R(paint_region)
+      result = Binding.bg_QPaintEvent__CONSTRUCT_const_QRegion_R(paint_region)
     @unwrap = result
     end
     
     def initialize(paint_rect : Rect)
-      result = Binding.bg_QPaintEvent_CONSTRUCT_const_QRect_R(paint_rect)
+      result = Binding.bg_QPaintEvent__CONSTRUCT_const_QRect_R(paint_rect)
     @unwrap = result
     end
     
@@ -36100,7 +37434,7 @@ module Qt
   end
   class MoveEvent < Event
     def initialize(pos : Point, old_pos : Point)
-      result = Binding.bg_QMoveEvent_CONSTRUCT_const_QPoint_R_const_QPoint_R(pos, old_pos)
+      result = Binding.bg_QMoveEvent__CONSTRUCT_const_QPoint_R_const_QPoint_R(pos, old_pos)
     @unwrap = result
     end
     
@@ -36120,7 +37454,7 @@ module Qt
   end
   class ExposeEvent < Event
     def initialize(rgn : Binding::QRegion*)
-      result = Binding.bg_QExposeEvent_CONSTRUCT_const_QRegion_R(rgn)
+      result = Binding.bg_QExposeEvent__CONSTRUCT_const_QRegion_R(rgn)
     @unwrap = result
     end
     
@@ -36136,7 +37470,7 @@ module Qt
   end
   class PlatformSurfaceEvent < Event
     def initialize(surface_event_type : PlatformSurfaceEvent::SurfaceEventType)
-      result = Binding.bg_QPlatformSurfaceEvent_CONSTRUCT_QPlatformSurfaceEvent__SurfaceEventType(surface_event_type)
+      result = Binding.bg_QPlatformSurfaceEvent__CONSTRUCT_QPlatformSurfaceEvent__SurfaceEventType(surface_event_type)
     @unwrap = result
     end
     
@@ -36156,7 +37490,7 @@ module Qt
   end
   class ResizeEvent < Event
     def initialize(size : Binding::QSize*, old_size : Binding::QSize*)
-      result = Binding.bg_QResizeEvent_CONSTRUCT_const_QSize_R_const_QSize_R(size, old_size)
+      result = Binding.bg_QResizeEvent__CONSTRUCT_const_QSize_R_const_QSize_R(size, old_size)
     @unwrap = result
     end
     
@@ -36176,7 +37510,7 @@ module Qt
   end
   class CloseEvent < Event
     def initialize()
-      result = Binding.bg_QCloseEvent_CONSTRUCT_()
+      result = Binding.bg_QCloseEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36188,7 +37522,7 @@ module Qt
   end
   class IconDragEvent < Event
     def initialize()
-      result = Binding.bg_QIconDragEvent_CONSTRUCT_()
+      result = Binding.bg_QIconDragEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36200,7 +37534,7 @@ module Qt
   end
   class ShowEvent < Event
     def initialize()
-      result = Binding.bg_QShowEvent_CONSTRUCT_()
+      result = Binding.bg_QShowEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36212,7 +37546,7 @@ module Qt
   end
   class HideEvent < Event
     def initialize()
-      result = Binding.bg_QHideEvent_CONSTRUCT_()
+      result = Binding.bg_QHideEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36224,7 +37558,7 @@ module Qt
   end
   class InputMethodEvent < Event
     def initialize()
-      result = Binding.bg_QInputMethodEvent_CONSTRUCT_()
+      result = Binding.bg_QInputMethodEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36263,7 +37597,7 @@ module Qt
   end
   class InputMethodQueryEvent < Event
     def initialize(queries : InputMethodQueries)
-      result = Binding.bg_QInputMethodQueryEvent_CONSTRUCT_Qt__InputMethodQueries(queries)
+      result = Binding.bg_QInputMethodQueryEvent__CONSTRUCT_Qt__InputMethodQueries(queries)
     @unwrap = result
     end
     
@@ -36290,16 +37624,32 @@ module Qt
       Binding.bg_QDrag_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDrag_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDrag_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDrag_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDrag_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDrag_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDrag_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(drag_source : Object)
-      result = Binding.bg_QDrag_CONSTRUCT_QObject_X(drag_source)
+      result = Binding.bg_QDrag__CONSTRUCT_QObject_X(drag_source)
     @unwrap = result
     {% begin %}
     {%
@@ -36319,7 +37669,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Drag_JUMPTABLE_BgJumptable_Drag(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Drag_JUMPTABLE_BgJumptable_Drag_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -36447,7 +37797,7 @@ module Qt
   end
   class DropEvent < Event
     def initialize(pos : PointF, actions : DropActions, data : MimeData, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type = Event::Type::Drop)
-      result = Binding.bg_QDropEvent_CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos, actions, data, buttons, modifiers, type)
+      result = Binding.bg_QDropEvent__CONSTRUCT_const_QPointF_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos, actions, data, buttons, modifiers, type)
     @unwrap = result
     end
     
@@ -36503,7 +37853,7 @@ module Qt
   end
   class DragMoveEvent < DropEvent
     def initialize(pos : Point, actions : DropActions, data : MimeData, buttons : MouseButtons, modifiers : KeyboardModifiers, type : Event::Type = Event::Type::DragMove)
-      result = Binding.bg_QDragMoveEvent_CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos, actions, data, buttons, modifiers, type)
+      result = Binding.bg_QDragMoveEvent__CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers_QEvent__Type(pos, actions, data, buttons, modifiers, type)
     @unwrap = result
     end
     
@@ -36535,7 +37885,7 @@ module Qt
   end
   class DragEnterEvent < DragMoveEvent
     def initialize(pos : Point, actions : DropActions, data : MimeData, buttons : MouseButtons, modifiers : KeyboardModifiers)
-      result = Binding.bg_QDragEnterEvent_CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers(pos, actions, data, buttons, modifiers)
+      result = Binding.bg_QDragEnterEvent__CONSTRUCT_const_QPoint_R_Qt__DropActions_const_QMimeData_X_Qt__MouseButtons_Qt__KeyboardModifiers(pos, actions, data, buttons, modifiers)
     @unwrap = result
     end
     
@@ -36547,7 +37897,7 @@ module Qt
   end
   class DragLeaveEvent < Event
     def initialize()
-      result = Binding.bg_QDragLeaveEvent_CONSTRUCT_()
+      result = Binding.bg_QDragLeaveEvent__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -36559,7 +37909,7 @@ module Qt
   end
   class HelpEvent < Event
     def initialize(type : Event::Type, pos : Point, global_pos : Point)
-      result = Binding.bg_QHelpEvent_CONSTRUCT_QEvent__Type_const_QPoint_R_const_QPoint_R(type, pos, global_pos)
+      result = Binding.bg_QHelpEvent__CONSTRUCT_QEvent__Type_const_QPoint_R_const_QPoint_R(type, pos, global_pos)
     @unwrap = result
     end
     
@@ -36595,7 +37945,7 @@ module Qt
   end
   class StatusTipEvent < Event
     def initialize(tip : String)
-      result = Binding.bg_QStatusTipEvent_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(tip))
+      result = Binding.bg_QStatusTipEvent__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(tip))
     @unwrap = result
     end
     
@@ -36611,7 +37961,7 @@ module Qt
   end
   class WhatsThisClickedEvent < Event
     def initialize(href : String)
-      result = Binding.bg_QWhatsThisClickedEvent_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(href))
+      result = Binding.bg_QWhatsThisClickedEvent__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(href))
     @unwrap = result
     end
     
@@ -36627,7 +37977,7 @@ module Qt
   end
   class ActionEvent < Event
     def initialize(type : Int32, action : Action, before : Action? = nil)
-      result = Binding.bg_QActionEvent_CONSTRUCT_int_QAction_X_QAction_X(type, action, before)
+      result = Binding.bg_QActionEvent__CONSTRUCT_int_QAction_X_QAction_X(type, action, before)
     @unwrap = result
     end
     
@@ -36647,12 +37997,12 @@ module Qt
   end
   class FileOpenEvent < Event
     def initialize(file : String)
-      result = Binding.bg_QFileOpenEvent_CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file))
+      result = Binding.bg_QFileOpenEvent__CONSTRUCT_const_QString_R(Qt::Converter::QString.wrap(file))
     @unwrap = result
     end
     
     def initialize(url : Url)
-      result = Binding.bg_QFileOpenEvent_CONSTRUCT_const_QUrl_R(url)
+      result = Binding.bg_QFileOpenEvent__CONSTRUCT_const_QUrl_R(url)
     @unwrap = result
     end
     
@@ -36676,7 +38026,7 @@ module Qt
   end
   class ToolBarChangeEvent < Event
     def initialize(t : Bool)
-      result = Binding.bg_QToolBarChangeEvent_CONSTRUCT_bool(t)
+      result = Binding.bg_QToolBarChangeEvent__CONSTRUCT_bool(t)
     @unwrap = result
     end
     
@@ -36692,7 +38042,7 @@ module Qt
   end
   class ShortcutEvent < Event
     def initialize(key : KeySequence, id : Int32, ambiguous : Bool = false)
-      result = Binding.bg_QShortcutEvent_CONSTRUCT_const_QKeySequence_R_int_bool(key, id, ambiguous)
+      result = Binding.bg_QShortcutEvent__CONSTRUCT_const_QKeySequence_R_int_bool(key, id, ambiguous)
     @unwrap = result
     end
     
@@ -36716,7 +38066,7 @@ module Qt
   end
   class ScrollPrepareEvent < Event
     def initialize(start_pos : PointF)
-      result = Binding.bg_QScrollPrepareEvent_CONSTRUCT_const_QPointF_R(start_pos)
+      result = Binding.bg_QScrollPrepareEvent__CONSTRUCT_const_QPointF_R(start_pos)
     @unwrap = result
     end
     
@@ -36756,7 +38106,7 @@ module Qt
   end
   class ScrollEvent < Event
     def initialize(content_pos : PointF, overshoot : PointF, scroll_state : ScrollEvent::ScrollState)
-      result = Binding.bg_QScrollEvent_CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos, overshoot, scroll_state)
+      result = Binding.bg_QScrollEvent__CONSTRUCT_const_QPointF_R_const_QPointF_R_QScrollEvent__ScrollState(content_pos, overshoot, scroll_state)
     @unwrap = result
     end
     
@@ -36785,7 +38135,7 @@ module Qt
   end
   class ScreenOrientationChangeEvent < Event
     def initialize(screen : Screen, orientation : ScreenOrientation)
-      result = Binding.bg_QScreenOrientationChangeEvent_CONSTRUCT_QScreen_X_Qt__ScreenOrientation(screen, orientation)
+      result = Binding.bg_QScreenOrientationChangeEvent__CONSTRUCT_QScreen_X_Qt__ScreenOrientation(screen, orientation)
     @unwrap = result
     end
     
@@ -36805,7 +38155,7 @@ module Qt
   end
   class ApplicationStateChangeEvent < Event
     def initialize(state : ApplicationState)
-      result = Binding.bg_QApplicationStateChangeEvent_CONSTRUCT_Qt__ApplicationState(state)
+      result = Binding.bg_QApplicationStateChangeEvent__CONSTRUCT_Qt__ApplicationState(state)
     @unwrap = result
     end
     
@@ -36821,7 +38171,7 @@ module Qt
   end
   class GestureEvent < Event
     def initialize(gestures : Enumerable(Gesture))
-      result = Binding.bg_QGestureEvent_CONSTRUCT_const_QList_QGesture_X__R(BindgenHelper.wrap_container(Container_QList_QGesture_X, gestures).to_unsafe)
+      result = Binding.bg_QGestureEvent__CONSTRUCT_const_QList_QGesture_X__R(BindgenHelper.wrap_container(Container_QList_QGesture_X, gestures).to_unsafe)
     @unwrap = result
     end
     
@@ -36893,7 +38243,7 @@ module Qt
   end
   class GraphicsSceneEvent < Event
     def initialize(type : Event::Type)
-      result = Binding.bg_QGraphicsSceneEvent_CONSTRUCT_QEvent__Type(type)
+      result = Binding.bg_QGraphicsSceneEvent__CONSTRUCT_QEvent__Type(type)
     @unwrap = result
     end
     
@@ -36906,7 +38256,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QGraphicsSceneEventPrivate*, type : Event::Type = Event::Type::None)
-      result = Binding.bg_QGraphicsSceneEvent_CONSTRUCT_QGraphicsSceneEventPrivate_R_QEvent__Type(dd, type)
+      result = Binding.bg_QGraphicsSceneEvent__CONSTRUCT_QGraphicsSceneEventPrivate_R_QEvent__Type(dd, type)
     @unwrap = result
     end
     
@@ -36933,16 +38283,32 @@ module Qt
       Binding.bg_QIODevice_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QIODevice_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QIODevice_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QIODevice_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QIODevice_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QIODevice_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QIODevice_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QIODevice_CONSTRUCT_()
+      result = Binding.bg_QIODevice__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -36978,12 +38344,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice(result, pointerof(jump_table))
+    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Object)
-      result = Binding.bg_QIODevice_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QIODevice__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -37019,7 +38385,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice(result, pointerof(jump_table))
+    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -37220,7 +38586,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QIODevicePrivate*, parent : Object? = nil)
-      result = Binding.bg_QIODevice_CONSTRUCT_QIODevicePrivate_R_QObject_X(dd, parent)
+      result = Binding.bg_QIODevice__CONSTRUCT_QIODevicePrivate_R_QObject_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -37256,7 +38622,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice(result, pointerof(jump_table))
+    Binding.bg_BgInherit_IODevice_JUMPTABLE_BgJumptable_IODevice_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -37356,16 +38722,32 @@ module Qt
       Binding.bg_QGesture_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGesture_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGesture_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGesture_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGesture_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QGesture_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QGesture_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QGesture_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QGesture__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -37385,7 +38767,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -37422,7 +38804,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QGesturePrivate*, parent : Object)
-      result = Binding.bg_QGesture_CONSTRUCT_QGesturePrivate_R_QObject_X(dd, parent)
+      result = Binding.bg_QGesture__CONSTRUCT_QGesturePrivate_R_QObject_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -37442,7 +38824,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Gesture_JUMPTABLE_BgJumptable_Gesture_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -37488,12 +38870,12 @@ module Qt
     @unwrap : Binding::QPainter*
     
     def initialize()
-      result = Binding.bg_QPainter_CONSTRUCT_()
+      result = Binding.bg_QPainter__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(unnamed_arg_0 : PaintDevice)
-      result = Binding.bg_QPainter_CONSTRUCT_QPaintDevice_X(unnamed_arg_0)
+      result = Binding.bg_QPainter__CONSTRUCT_QPaintDevice_X(unnamed_arg_0)
     @unwrap = result
     end
     
@@ -38394,17 +39776,17 @@ module Qt
     @unwrap : Binding::QLine*
     
     def initialize()
-      result = Binding.bg_QLine_CONSTRUCT_()
+      result = Binding.bg_QLine__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(pt1 : Point, pt2 : Point)
-      result = Binding.bg_QLine_CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1, pt2)
+      result = Binding.bg_QLine__CONSTRUCT_const_QPoint_R_const_QPoint_R(pt1, pt2)
     @unwrap = result
     end
     
     def initialize(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32)
-      result = Binding.bg_QLine_CONSTRUCT_int_int_int_int(x1, y1, x2, y2)
+      result = Binding.bg_QLine__CONSTRUCT_int_int_int_int(x1, y1, x2, y2)
     @unwrap = result
     end
     
@@ -38493,22 +39875,22 @@ module Qt
     @unwrap : Binding::QLineF*
     
     def initialize()
-      result = Binding.bg_QLineF_CONSTRUCT_()
+      result = Binding.bg_QLineF__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(pt1 : PointF, pt2 : PointF)
-      result = Binding.bg_QLineF_CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1, pt2)
+      result = Binding.bg_QLineF__CONSTRUCT_const_QPointF_R_const_QPointF_R(pt1, pt2)
     @unwrap = result
     end
     
     def initialize(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64)
-      result = Binding.bg_QLineF_CONSTRUCT_qreal_qreal_qreal_qreal(x1, y1, x2, y2)
+      result = Binding.bg_QLineF__CONSTRUCT_qreal_qreal_qreal_qreal(x1, y1, x2, y2)
     @unwrap = result
     end
     
     def initialize(line : QLine)
-      result = Binding.bg_QLineF_CONSTRUCT_const_QLine_R(line)
+      result = Binding.bg_QLineF__CONSTRUCT_const_QLine_R(line)
     @unwrap = result
     end
     
@@ -38650,16 +40032,32 @@ module Qt
       Binding.bg_QSystemTrayIcon_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QSystemTrayIcon_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(parent : Object? = nil)
-      result = Binding.bg_QSystemTrayIcon_CONSTRUCT_QObject_X(parent)
+      result = Binding.bg_QSystemTrayIcon__CONSTRUCT_QObject_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -38679,12 +40077,12 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon(result, pointerof(jump_table))
+    Binding.bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(icon : Icon, parent : Object? = nil)
-      result = Binding.bg_QSystemTrayIcon_CONSTRUCT_const_QIcon_R_QObject_X(icon, parent)
+      result = Binding.bg_QSystemTrayIcon__CONSTRUCT_const_QIcon_R_QObject_X(icon, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -38704,7 +40102,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon(result, pointerof(jump_table))
+    Binding.bg_BgInherit_SystemTrayIcon_JUMPTABLE_BgJumptable_SystemTrayIcon_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -38847,7 +40245,7 @@ module Qt
     end
     
     def initialize()
-      result = Binding.bg_QDesktopServices_CONSTRUCT_()
+      result = Binding.bg_QDesktopServices__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -38873,16 +40271,32 @@ module Qt
       Binding.bg_QDesktopWidget_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QDesktopWidget_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QDesktopWidget_CONSTRUCT_()
+      result = Binding.bg_QDesktopWidget__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -38934,7 +40348,7 @@ module Qt
       bg_QWidget_inputMethodEvent_QInputMethodEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("input_method_event") %} Proc(Binding::QInputMethodEvent*, Void).new{|unnamed_arg_0| self.input_method_event(InputMethodEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWidget_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_DesktopWidget_JUMPTABLE_BgJumptable_DesktopWidget(result, pointerof(jump_table))
+    Binding.bg_BgInherit_DesktopWidget_JUMPTABLE_BgJumptable_DesktopWidget_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -39191,8 +40605,8 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QStandardPaths_writableLocation_STATIC_QStandardPaths__StandardLocation(type))
     end
     
-    def self.standard_locations(type : StandardPaths::StandardLocation) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QStandardPaths_standardLocations_STATIC_QStandardPaths__StandardLocation(type))
+    def self.standard_locations(type : StandardPaths::StandardLocation) : Binding::QStringList*
+      Binding.bg_QStandardPaths_standardLocations_STATIC_QStandardPaths__StandardLocation(type)
     end
     
     def self.locate(type : StandardPaths::StandardLocation, file_name : String) : String
@@ -39203,12 +40617,12 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QStandardPaths_locate_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type, Qt::Converter::QString.wrap(file_name), options))
     end
     
-    def self.locate_all(type : StandardPaths::StandardLocation, file_name : String) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R(type, Qt::Converter::QString.wrap(file_name)))
+    def self.locate_all(type : StandardPaths::StandardLocation, file_name : String) : Binding::QStringList*
+      Binding.bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R(type, Qt::Converter::QString.wrap(file_name))
     end
     
-    def self.locate_all(type : StandardPaths::StandardLocation, file_name : String, options : StandardPaths::LocateOptions) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type, Qt::Converter::QString.wrap(file_name), options))
+    def self.locate_all(type : StandardPaths::StandardLocation, file_name : String, options : StandardPaths::LocateOptions) : Binding::QStringList*
+      Binding.bg_QStandardPaths_locateAll_STATIC_QStandardPaths__StandardLocation_const_QString_R_QStandardPaths__LocateOptions(type, Qt::Converter::QString.wrap(file_name), options)
     end
     
     def self.display_name(type : StandardPaths::StandardLocation) : String
@@ -39219,8 +40633,8 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QStandardPaths_findExecutable_STATIC_const_QString_R(Qt::Converter::QString.wrap(executable_name)))
     end
     
-    def self.find_executable(executable_name : String, paths : Enumerable(String)) : String
-      Qt::Converter::QString.unwrap(Binding.bg_QStandardPaths_findExecutable_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(executable_name), BindgenHelper.wrap_container(Container_QList_QString, paths).to_unsafe))
+    def self.find_executable(executable_name : String, paths : Binding::QStringList*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QStandardPaths_findExecutable_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(executable_name), paths))
     end
     
     def self.enable_test_mode(test_mode : Bool) : Void
@@ -39288,16 +40702,32 @@ module Qt
       Binding.bg_QMimeData_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMimeData_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMimeData_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMimeData_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMimeData_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QMimeData_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QMimeData_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize()
-      result = Binding.bg_QMimeData_CONSTRUCT_()
+      result = Binding.bg_QMimeData__CONSTRUCT_()
     @unwrap = result
     {% begin %}
     {%
@@ -39310,7 +40740,7 @@ module Qt
       bg_QMimeData_qt_metacast_const_char_X: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacast") %} Proc(UInt8*, Void*).new{|unnamed_arg_0| self.qt_metacast(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QMimeData_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QMimeData_hasFormat_const_QString_R: BindgenHelper.wrap_proc({% if forwarded.includes?("has_format") %} Proc(CrystalString, Bool).new{|mimetype| self.has_format(Qt::Converter::QString.unwrap(mimetype)) } {% else %} nil {% end %}),
-      bg_QMimeData_formats_: BindgenHelper.wrap_proc({% if forwarded.includes?("formats") %} Proc(Void*).new{ BindgenHelper.wrap_container(Container_QList_QString, self.formats()).to_unsafe } {% else %} nil {% end %}),
+      bg_QMimeData_formats_: BindgenHelper.wrap_proc({% if forwarded.includes?("formats") %} Proc(Binding::QStringList*).new{ self.formats() } {% else %} nil {% end %}),
       bg_QObject_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|event| self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_eventFilter_QObject_X_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event_filter") %} Proc(Binding::QObject*, Binding::QEvent*, Bool).new{|watched, event| self.event_filter(Object.new(unwrap: watched), Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QObject_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -39319,7 +40749,7 @@ module Qt
       bg_QObject_connectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("connect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.connect_notify(signal) } {% else %} nil {% end %}),
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_MimeData_JUMPTABLE_BgJumptable_MimeData(result, pointerof(jump_table))
+    Binding.bg_BgInherit_MimeData_JUMPTABLE_BgJumptable_MimeData_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -39383,8 +40813,8 @@ module Qt
       Binding.bg_QMimeData_hasFormat_const_QString_R(self, Qt::Converter::QString.wrap(mimetype))
     end
     
-    def formats() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QMimeData_formats_(self))
+    def formats() : Binding::QStringList*
+      Binding.bg_QMimeData_formats_(self)
     end
     
     def clear() : Void
@@ -39429,12 +40859,12 @@ module Qt
     @unwrap : Binding::QSizePolicy*
     
     def initialize()
-      result = Binding.bg_QSizePolicy_CONSTRUCT_()
+      result = Binding.bg_QSizePolicy__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(horizontal : SizePolicy::Policy, vertical : SizePolicy::Policy, type : SizePolicy::ControlType = SizePolicy::ControlType::DefaultType)
-      result = Binding.bg_QSizePolicy_CONSTRUCT_QSizePolicy__Policy_QSizePolicy__Policy_QSizePolicy__ControlType(horizontal, vertical, type)
+      result = Binding.bg_QSizePolicy__CONSTRUCT_QSizePolicy__Policy_QSizePolicy__Policy_QSizePolicy__ControlType(horizontal, vertical, type)
     @unwrap = result
     end
     
@@ -39577,12 +41007,12 @@ module Qt
     @unwrap : Binding::QUrl*
     
     def initialize()
-      result = Binding.bg_QUrl_CONSTRUCT_()
+      result = Binding.bg_QUrl__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(url : String, mode : Url::ParsingMode = Url::ParsingMode::TolerantMode)
-      result = Binding.bg_QUrl_CONSTRUCT_const_QString_R_QUrl__ParsingMode(Qt::Converter::QString.wrap(url), mode)
+      result = Binding.bg_QUrl__CONSTRUCT_const_QString_R_QUrl__ParsingMode(Qt::Converter::QString.wrap(url), mode)
     @unwrap = result
     end
     
@@ -39862,24 +41292,24 @@ module Qt
       Binding.bg_QUrl_toAce_STATIC_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0))
     end
     
-    def self.idn_whitelist() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QUrl_idnWhitelist_STATIC_())
+    def self.idn_whitelist() : Binding::QStringList*
+      Binding.bg_QUrl_idnWhitelist_STATIC_()
     end
     
-    def self.to_string_list(uris : Enumerable(Url)) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QUrl_toStringList_STATIC_const_QList_QUrl__R(BindgenHelper.wrap_container(Container_QList_QUrl, uris).to_unsafe))
+    def self.to_string_list(uris : Enumerable(Url)) : Binding::QStringList*
+      Binding.bg_QUrl_toStringList_STATIC_const_QList_QUrl__R(BindgenHelper.wrap_container(Container_QList_QUrl, uris).to_unsafe)
     end
     
-    def self.to_string_list(uris : Enumerable(Url), options : Url::FormattingOptions) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QUrl_toStringList_STATIC_const_QList_QUrl__R_QUrl__FormattingOptions(BindgenHelper.wrap_container(Container_QList_QUrl, uris).to_unsafe, options))
+    def self.to_string_list(uris : Enumerable(Url), options : Url::FormattingOptions) : Binding::QStringList*
+      Binding.bg_QUrl_toStringList_STATIC_const_QList_QUrl__R_QUrl__FormattingOptions(BindgenHelper.wrap_container(Container_QList_QUrl, uris).to_unsafe, options)
     end
     
-    def self.from_string_list(uris : Enumerable(String), mode : Url::ParsingMode = Url::ParsingMode::TolerantMode) : Enumerable(Url)
-      Container_QList_QUrl.new(unwrap: Binding.bg_QUrl_fromStringList_STATIC_const_QStringList_R_QUrl__ParsingMode(BindgenHelper.wrap_container(Container_QList_QString, uris).to_unsafe, mode))
+    def self.from_string_list(uris : Binding::QStringList*, mode : Url::ParsingMode = Url::ParsingMode::TolerantMode) : Enumerable(Url)
+      Container_QList_QUrl.new(unwrap: Binding.bg_QUrl_fromStringList_STATIC_const_QStringList_R_QUrl__ParsingMode(uris, mode))
     end
     
-    def self.idn_whitelist=(unnamed_arg_0 : Enumerable(String)) : Void
-      Binding.bg_QUrl_setIdnWhitelist_STATIC_const_QStringList_R(BindgenHelper.wrap_container(Container_QList_QString, unnamed_arg_0).to_unsafe)
+    def self.idn_whitelist=(unnamed_arg_0 : Binding::QStringList*) : Void
+      Binding.bg_QUrl_setIdnWhitelist_STATIC_const_QStringList_R(unnamed_arg_0)
     end
     
     enum ComponentFormattingOption : UInt32
@@ -39954,11 +41384,27 @@ module Qt
       Binding.bg_QScreen_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScreen_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QScreen_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
@@ -40094,6 +41540,10 @@ module Qt
       Binding.bg_QScreen_isLandscape_Qt__ScreenOrientation(self, orientation)
     end
     
+    def grab_window(window : UInt32, x : Int32 = 0, y : Int32 = 0, w : Int32 = -1, h : Int32 = -1) : Pixmap
+      Pixmap.new(unwrap: Binding.bg_QScreen_grabWindow_WId_int_int_int_int(self, window, x, y, w, h))
+    end
+    
     def refresh_rate() : Float64
       Binding.bg_QScreen_refreshRate_(self)
     end
@@ -40220,7 +41670,7 @@ module Qt
     
     abstract def size() : Binding::QSize*
     protected def initialize(type : Surface::SurfaceClass)
-      result = Binding.bg_QSurface_CONSTRUCT_QSurface__SurfaceClass(type)
+      result = Binding.bg_QSurface__CONSTRUCT_QSurface__SurfaceClass(type)
     @unwrap = result
     {% begin %}
     {%
@@ -40234,7 +41684,7 @@ module Qt
       bg_QSurface_surfaceType_: BindgenHelper.wrap_proc({% if forwarded.includes?("surface_type") %} Proc(Surface::SurfaceType).new{ self.surface_type().to_unsafe } {% else %} nil {% end %}),
       bg_QSurface_size_: BindgenHelper.wrap_proc({% if forwarded.includes?("size") %} Proc(Binding::QSize*).new{ self.size() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Surface_JUMPTABLE_BgJumptable_Surface(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Surface_JUMPTABLE_BgJumptable_Surface_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -40270,16 +41720,32 @@ module Qt
       Binding.bg_QWindow_qt_metacall_QMetaObject__Call_int_void_XX(self, unnamed_arg_0, unnamed_arg_1, unnamed_arg_2)
     end
     
-    def self.tr(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWindow_tr_STATIC_const_char_X(s))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWindow_tr_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWindow_tr_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def self.tr_utf8(s : UInt8*, c : UInt8*? = nil, n : Int32 = -1) : String
+    def self.tr_utf8(s : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWindow_trUtf8_STATIC_const_char_X(s))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QWindow_trUtf8_STATIC_const_char_X_const_char_X(s, c))
+    end
+    
+    def self.tr_utf8(s : UInt8*, c : UInt8*, n : Int32 = -1) : String
       Qt::Converter::QString.unwrap(Binding.bg_QWindow_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
     def initialize(screen : Screen? = nil)
-      result = Binding.bg_QWindow_CONSTRUCT_QScreen_X(screen)
+      result = Binding.bg_QWindow__CONSTRUCT_QScreen_X(screen)
     @unwrap = result
     {% begin %}
     {%
@@ -40322,12 +41788,12 @@ module Qt
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QSurface_surfaceHandle_: BindgenHelper.wrap_proc({% if forwarded.includes?("surface_handle") %} Proc(Binding::QPlatformSurface*).new{ self.surface_handle() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window_R(result, pointerof(jump_table))
     {% end %}
     end
     
     def initialize(parent : Window)
-      result = Binding.bg_QWindow_CONSTRUCT_QWindow_X(parent)
+      result = Binding.bg_QWindow__CONSTRUCT_QWindow_X(parent)
     @unwrap = result
     {% begin %}
     {%
@@ -40370,7 +41836,7 @@ module Qt
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QSurface_surfaceHandle_: BindgenHelper.wrap_proc({% if forwarded.includes?("surface_handle") %} Proc(Binding::QPlatformSurface*).new{ self.surface_handle() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -40396,6 +41862,10 @@ module Qt
     
     def create() : Void
       Binding.bg_QWindow_create_(self)
+    end
+    
+    def win_id() : UInt32
+      Binding.bg_QWindow_winId_(self)
     end
     
     def parent(mode : Window::AncestorMode) : Window
@@ -40698,6 +42168,10 @@ module Qt
       Binding.bg_QWindow_unsetCursor_(self)
     end
     
+    def self.from_win_id(id : UInt32) : Window
+      Window.new(unwrap: Binding.bg_QWindow_fromWinId_STATIC_WId(id))
+    end
+    
     def request_activate() : Void
       Binding.bg_QWindow_requestActivate_(self)
     end
@@ -40931,7 +42405,7 @@ module Qt
     end
     
     protected def initialize(dd : Binding::QWindowPrivate*, parent : Window)
-      result = Binding.bg_QWindow_CONSTRUCT_QWindowPrivate_R_QWindow_X(dd, parent)
+      result = Binding.bg_QWindow__CONSTRUCT_QWindowPrivate_R_QWindow_X(dd, parent)
     @unwrap = result
     {% begin %}
     {%
@@ -40974,7 +42448,7 @@ module Qt
       bg_QObject_disconnectNotify_const_QMetaMethod_R: BindgenHelper.wrap_proc({% if forwarded.includes?("disconnect_notify") %} Proc(Binding::QMetaMethod*, Void).new{|signal| self.disconnect_notify(signal) } {% else %} nil {% end %}),
       bg_QSurface_surfaceHandle_: BindgenHelper.wrap_proc({% if forwarded.includes?("surface_handle") %} Proc(Binding::QPlatformSurface*).new{ self.surface_handle() } {% else %} nil {% end %}),
     )
-    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window(result, pointerof(jump_table))
+    Binding.bg_BgInherit_Window_JUMPTABLE_BgJumptable_Window_R(result, pointerof(jump_table))
     {% end %}
     end
     
@@ -41104,12 +42578,12 @@ module Qt
     @unwrap : Binding::QPixelFormat*
     
     def initialize()
-      result = Binding.bg_QPixelFormat_CONSTRUCT_()
+      result = Binding.bg_QPixelFormat__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(color_model : PixelFormat::ColorModel, first_size : UInt8, second_size : UInt8, third_size : UInt8, fourth_size : UInt8, fifth_size : UInt8, alpha_size : UInt8, alpha_usage : PixelFormat::AlphaUsage, alpha_position : PixelFormat::AlphaPosition, premultiplied : PixelFormat::AlphaPremultiplied, type_interpretation : PixelFormat::TypeInterpretation, byte_order : PixelFormat::ByteOrder = PixelFormat::ByteOrder::CurrentSystemEndian, sub_enum : UInt8 = 0u8)
-      result = Binding.bg_QPixelFormat_CONSTRUCT_QPixelFormat__ColorModel_uchar_uchar_uchar_uchar_uchar_uchar_QPixelFormat__AlphaUsage_QPixelFormat__AlphaPosition_QPixelFormat__AlphaPremultiplied_QPixelFormat__TypeInterpretation_QPixelFormat__ByteOrder_uchar(color_model, first_size, second_size, third_size, fourth_size, fifth_size, alpha_size, alpha_usage, alpha_position, premultiplied, type_interpretation, byte_order, sub_enum)
+      result = Binding.bg_QPixelFormat__CONSTRUCT_QPixelFormat__ColorModel_uchar_uchar_uchar_uchar_uchar_uchar_QPixelFormat__AlphaUsage_QPixelFormat__AlphaPosition_QPixelFormat__AlphaPremultiplied_QPixelFormat__TypeInterpretation_QPixelFormat__ByteOrder_uchar(color_model, first_size, second_size, third_size, fourth_size, fifth_size, alpha_size, alpha_usage, alpha_position, premultiplied, type_interpretation, byte_order, sub_enum)
     @unwrap = result
     end
     
@@ -41266,12 +42740,12 @@ module Qt
     @unwrap : Binding::QTextFormat*
     
     def initialize()
-      result = Binding.bg_QTextFormat_CONSTRUCT_()
+      result = Binding.bg_QTextFormat__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(type : Int32)
-      result = Binding.bg_QTextFormat_CONSTRUCT_int(type)
+      result = Binding.bg_QTextFormat__CONSTRUCT_int(type)
     @unwrap = result
     end
     
@@ -41573,7 +43047,7 @@ module Qt
   end
   class TextBlockFormat < TextFormat
     def initialize()
-      result = Binding.bg_QTextBlockFormat_CONSTRUCT_()
+      result = Binding.bg_QTextBlockFormat__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -41670,7 +43144,7 @@ module Qt
     end
     
     protected def initialize(fmt : TextFormat)
-      result = Binding.bg_QTextBlockFormat_CONSTRUCT_const_QTextFormat_R(fmt)
+      result = Binding.bg_QTextBlockFormat__CONSTRUCT_const_QTextFormat_R(fmt)
     @unwrap = result
     end
     
@@ -41682,7 +43156,7 @@ module Qt
   end
   class TextCharFormat < TextFormat
     def initialize()
-      result = Binding.bg_QTextCharFormat_CONSTRUCT_()
+      result = Binding.bg_QTextCharFormat__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -41902,12 +43376,12 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QTextCharFormat_anchorName_(self))
     end
     
-    def anchor_names=(names : Enumerable(String)) : Void
-      Binding.bg_QTextCharFormat_setAnchorNames_const_QStringList_R(self, BindgenHelper.wrap_container(Container_QList_QString, names).to_unsafe)
+    def anchor_names=(names : Binding::QStringList*) : Void
+      Binding.bg_QTextCharFormat_setAnchorNames_const_QStringList_R(self, names)
     end
     
-    def anchor_names() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QTextCharFormat_anchorNames_(self))
+    def anchor_names() : Binding::QStringList*
+      Binding.bg_QTextCharFormat_anchorNames_(self)
     end
     
     def table_cell_row_span=(table_cell_row_span : Int32) : Void
@@ -41927,7 +43401,7 @@ module Qt
     end
     
     protected def initialize(fmt : TextFormat)
-      result = Binding.bg_QTextCharFormat_CONSTRUCT_const_QTextFormat_R(fmt)
+      result = Binding.bg_QTextCharFormat__CONSTRUCT_const_QTextFormat_R(fmt)
     @unwrap = result
     end
     
@@ -41962,7 +43436,7 @@ module Qt
   end
   class TextFrameFormat < TextFormat
     def initialize()
-      result = Binding.bg_QTextFrameFormat_CONSTRUCT_()
+      result = Binding.bg_QTextFrameFormat__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -42083,7 +43557,7 @@ module Qt
     end
     
     protected def initialize(fmt : TextFormat)
-      result = Binding.bg_QTextFrameFormat_CONSTRUCT_const_QTextFormat_R(fmt)
+      result = Binding.bg_QTextFrameFormat__CONSTRUCT_const_QTextFormat_R(fmt)
     @unwrap = result
     end
     
@@ -42113,7 +43587,7 @@ module Qt
   end
   class TextListFormat < TextFormat
     def initialize()
-      result = Binding.bg_QTextListFormat_CONSTRUCT_()
+      result = Binding.bg_QTextListFormat__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -42154,7 +43628,7 @@ module Qt
     end
     
     protected def initialize(fmt : TextFormat)
-      result = Binding.bg_QTextListFormat_CONSTRUCT_const_QTextFormat_R(fmt)
+      result = Binding.bg_QTextListFormat__CONSTRUCT_const_QTextFormat_R(fmt)
     @unwrap = result
     end
     
@@ -42179,12 +43653,12 @@ module Qt
     @unwrap : Binding::QTextLength*
     
     def initialize()
-      result = Binding.bg_QTextLength_CONSTRUCT_()
+      result = Binding.bg_QTextLength__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(type : TextLength::Type, value : Float64)
-      result = Binding.bg_QTextLength_CONSTRUCT_QTextLength__Type_qreal(type, value)
+      result = Binding.bg_QTextLength__CONSTRUCT_QTextLength__Type_qreal(type, value)
     @unwrap = result
     end
     
@@ -42218,17 +43692,17 @@ module Qt
     @unwrap : Binding::QFont*
     
     def initialize()
-      result = Binding.bg_QFont_CONSTRUCT_()
+      result = Binding.bg_QFont__CONSTRUCT_()
     @unwrap = result
     end
     
     def initialize(family : String, point_size : Int32 = -1, weight : Int32 = -1, italic : Bool = false)
-      result = Binding.bg_QFont_CONSTRUCT_const_QString_R_int_int_bool(Qt::Converter::QString.wrap(family), point_size, weight, italic)
+      result = Binding.bg_QFont__CONSTRUCT_const_QString_R_int_int_bool(Qt::Converter::QString.wrap(family), point_size, weight, italic)
     @unwrap = result
     end
     
     def initialize(unnamed_arg_0 : Font, pd : PaintDevice)
-      result = Binding.bg_QFont_CONSTRUCT_const_QFont_R_QPaintDevice_X(unnamed_arg_0, pd)
+      result = Binding.bg_QFont__CONSTRUCT_const_QFont_R_QPaintDevice_X(unnamed_arg_0, pd)
     @unwrap = result
     end
     
@@ -42448,20 +43922,20 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QFont_substitute_STATIC_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0)))
     end
     
-    def self.substitutes(unnamed_arg_0 : String) : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFont_substitutes_STATIC_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0)))
+    def self.substitutes(unnamed_arg_0 : String) : Binding::QStringList*
+      Binding.bg_QFont_substitutes_STATIC_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0))
     end
     
-    def self.substitutions() : Enumerable(String)
-      Container_QList_QString.new(unwrap: Binding.bg_QFont_substitutions_STATIC_())
+    def self.substitutions() : Binding::QStringList*
+      Binding.bg_QFont_substitutions_STATIC_()
     end
     
     def self.insert_substitution(unnamed_arg_0 : String, unnamed_arg_1 : String) : Void
       Binding.bg_QFont_insertSubstitution_STATIC_const_QString_R_const_QString_R(Qt::Converter::QString.wrap(unnamed_arg_0), Qt::Converter::QString.wrap(unnamed_arg_1))
     end
     
-    def self.insert_substitutions(unnamed_arg_0 : String, unnamed_arg_1 : Enumerable(String)) : Void
-      Binding.bg_QFont_insertSubstitutions_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(unnamed_arg_0), BindgenHelper.wrap_container(Container_QList_QString, unnamed_arg_1).to_unsafe)
+    def self.insert_substitutions(unnamed_arg_0 : String, unnamed_arg_1 : Binding::QStringList*) : Void
+      Binding.bg_QFont_insertSubstitutions_STATIC_const_QString_R_const_QStringList_R(Qt::Converter::QString.wrap(unnamed_arg_0), unnamed_arg_1)
     end
     
     def self.remove_substitutions(unnamed_arg_0 : String) : Void
@@ -43747,25 +45221,33 @@ module Qt
     end
     
   end
+  QT_VERSION = 329985u64
   QT_VERSION_STR = "5.9.1"
-  class Container_QList_QString < BindgenHelper::SequentialContainer(String)
+  QT_VERSION_MAJOR = 5u64
+  QT_VERSION_MINOR = 9u64
+  QT_VERSION_PATCH = 1u64
+  def self.q_version() : UInt8*
+    Binding.bg____qVersion_STATIC_()
+  end
+  
+  class Container_QList_qreal < BindgenHelper::SequentialContainer(Float64)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QString_CONSTRUCT_()
+      result = Binding.bg_Container_QList_qreal__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : String
-      Qt::Converter::QString.unwrap(Binding.bg_Container_QList_QString_at_int(self, index))
+    def unsafe_at(index : Int32) : Float64
+      Binding.bg_Container_QList_qreal_at_int(self, index)
     end
     
-    def push(value : String) : Void
-      Binding.bg_Container_QList_QString_push_back_QString(self, Qt::Converter::QString.wrap(value))
+    def push(value : Float64) : Void
+      Binding.bg_Container_QList_qreal_push_back_qreal(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QList_QString_size_(self)
+      Binding.bg_Container_QList_qreal_size_(self)
     end
     
     def to_unsafe
@@ -43781,7 +45263,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QObject_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QObject_X__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -43806,53 +45288,24 @@ module Qt
     end
     
   end
-  class Container_QList_QWidget_X < BindgenHelper::SequentialContainer(Widget)
+  class Container_QList_QAbstractEventDispatcher__TimerInfo < BindgenHelper::SequentialContainer(Binding::EventDispatcherTimerInfo)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QWidget_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : Widget
-      Widget.new(unwrap: Binding.bg_Container_QList_QWidget_X_at_int(self, index))
+    def unsafe_at(index : Int32) : Binding::EventDispatcherTimerInfo
+      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_at_int(self, index)
     end
     
-    def push(value : Widget) : Void
-      Binding.bg_Container_QList_QWidget_X_push_back_QWidget_X(self, value)
+    def push(value : Binding::EventDispatcherTimerInfo) : Void
+      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_push_back_QAbstractEventDispatcher__TimerInfo(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QList_QWidget_X_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_QDockWidget_X < BindgenHelper::SequentialContainer(DockWidget)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QDockWidget_X_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : DockWidget
-      DockWidget.new(unwrap: Binding.bg_Container_QList_QDockWidget_X_at_int(self, index))
-    end
-    
-    def push(value : DockWidget) : Void
-      Binding.bg_Container_QList_QDockWidget_X_push_back_QDockWidget_X(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QDockWidget_X_size_(self)
+      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_size_(self)
     end
     
     def to_unsafe
@@ -43868,7 +45321,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QAction_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QAction_X__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -43893,24 +45346,24 @@ module Qt
     end
     
   end
-  class Container_QList_QGesture_X < BindgenHelper::SequentialContainer(Gesture)
+  class Container_QList_QWidget_X < BindgenHelper::SequentialContainer(Widget)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QGesture_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QWidget_X__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : Gesture
-      Gesture.new(unwrap: Binding.bg_Container_QList_QGesture_X_at_int(self, index))
+    def unsafe_at(index : Int32) : Widget
+      Widget.new(unwrap: Binding.bg_Container_QList_QWidget_X_at_int(self, index))
     end
     
-    def push(value : Gesture) : Void
-      Binding.bg_Container_QList_QGesture_X_push_back_QGesture_X(self, value)
+    def push(value : Widget) : Void
+      Binding.bg_Container_QList_QWidget_X_push_back_QWidget_X(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QList_QGesture_X_size_(self)
+      Binding.bg_Container_QList_QWidget_X_size_(self)
     end
     
     def to_unsafe
@@ -43922,82 +45375,24 @@ module Qt
     end
     
   end
-  class Container_QList_QAbstractButton_X < BindgenHelper::SequentialContainer(AbstractButton)
+  class Container_QList_QKeySequence < BindgenHelper::SequentialContainer(KeySequence)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QAbstractButton_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QKeySequence__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : AbstractButton
-      AbstractButtonImpl.new(unwrap: Binding.bg_Container_QList_QAbstractButton_X_at_int(self, index))
+    def unsafe_at(index : Int32) : KeySequence
+      KeySequence.new(unwrap: Binding.bg_Container_QList_QKeySequence_at_int(self, index))
     end
     
-    def push(value : AbstractButton) : Void
-      Binding.bg_Container_QList_QAbstractButton_X_push_back_QAbstractButton_X(self, value)
+    def push(value : KeySequence) : Void
+      Binding.bg_Container_QList_QKeySequence_push_back_QKeySequence(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QList_QAbstractButton_X_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_QUrl < BindgenHelper::SequentialContainer(Url)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QUrl_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Url
-      Url.new(unwrap: Binding.bg_Container_QList_QUrl_at_int(self, index))
-    end
-    
-    def push(value : Url) : Void
-      Binding.bg_Container_QList_QUrl_push_back_QUrl(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QUrl_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_QGraphicsItem_X < BindgenHelper::SequentialContainer(GraphicsItem)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QGraphicsItem_X_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : GraphicsItem
-      GraphicsItemImpl.new(unwrap: Binding.bg_Container_QList_QGraphicsItem_X_at_int(self, index))
-    end
-    
-    def push(value : GraphicsItem) : Void
-      Binding.bg_Container_QList_QGraphicsItem_X_push_back_QGraphicsItem_X(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QGraphicsItem_X_size_(self)
+      Binding.bg_Container_QList_QKeySequence_size_(self)
     end
     
     def to_unsafe
@@ -44013,7 +45408,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QGraphicsWidget_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QGraphicsWidget_X__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44038,11 +45433,301 @@ module Qt
     end
     
   end
+  class Container_QList_QDockWidget_X < BindgenHelper::SequentialContainer(DockWidget)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QDockWidget_X__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : DockWidget
+      DockWidget.new(unwrap: Binding.bg_Container_QList_QDockWidget_X_at_int(self, index))
+    end
+    
+    def push(value : DockWidget) : Void
+      Binding.bg_Container_QList_QDockWidget_X_push_back_QDockWidget_X(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QDockWidget_X_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_int < BindgenHelper::SequentialContainer(Int32)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_int__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Int32
+      Binding.bg_Container_QList_int_at_int(self, index)
+    end
+    
+    def push(value : Int32) : Void
+      Binding.bg_Container_QList_int_push_back_int(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_int_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QAbstractButton_X < BindgenHelper::SequentialContainer(AbstractButton)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QAbstractButton_X__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : AbstractButton
+      AbstractButtonImpl.new(unwrap: Binding.bg_Container_QList_QAbstractButton_X_at_int(self, index))
+    end
+    
+    def push(value : AbstractButton) : Void
+      Binding.bg_Container_QList_QAbstractButton_X_push_back_QAbstractButton_X(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QAbstractButton_X_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QWindow_X < BindgenHelper::SequentialContainer(Window)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QWindow_X__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Window
+      Window.new(unwrap: Binding.bg_Container_QList_QWindow_X_at_int(self, index))
+    end
+    
+    def push(value : Window) : Void
+      Binding.bg_Container_QList_QWindow_X_push_back_QWindow_X(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QWindow_X_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QScreen_X < BindgenHelper::SequentialContainer(Screen)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QScreen_X__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Screen
+      Screen.new(unwrap: Binding.bg_Container_QList_QScreen_X_at_int(self, index))
+    end
+    
+    def push(value : Screen) : Void
+      Binding.bg_Container_QList_QScreen_X_push_back_QScreen_X(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QScreen_X_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QSize < BindgenHelper::SequentialContainer(Binding::QSize*)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QSize__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Binding::QSize*
+      Binding.bg_Container_QList_QSize_at_int(self, index)
+    end
+    
+    def push(value : Binding::QSize*) : Void
+      Binding.bg_Container_QList_QSize_push_back_QSize(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QSize_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QUrl < BindgenHelper::SequentialContainer(Url)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QUrl__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Url
+      Url.new(unwrap: Binding.bg_Container_QList_QUrl_at_int(self, index))
+    end
+    
+    def push(value : Url) : Void
+      Binding.bg_Container_QList_QUrl_push_back_QUrl(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QUrl_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_double < BindgenHelper::SequentialContainer(Float64)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_double__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Float64
+      Binding.bg_Container_QList_double_at_int(self, index)
+    end
+    
+    def push(value : Float64) : Void
+      Binding.bg_Container_QList_double_push_back_double(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_double_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QFileInfo < BindgenHelper::SequentialContainer(Binding::QFileInfo*)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QFileInfo__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Binding::QFileInfo*
+      Binding.bg_Container_QList_QFileInfo_at_int(self, index)
+    end
+    
+    def push(value : Binding::QFileInfo*) : Void
+      Binding.bg_Container_QList_QFileInfo_push_back_QFileInfo(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QFileInfo_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QList_QGraphicsItem_X < BindgenHelper::SequentialContainer(GraphicsItem)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QList_QGraphicsItem_X__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : GraphicsItem
+      GraphicsItemImpl.new(unwrap: Binding.bg_Container_QList_QGraphicsItem_X_at_int(self, index))
+    end
+    
+    def push(value : GraphicsItem) : Void
+      Binding.bg_Container_QList_QGraphicsItem_X_push_back_QGraphicsItem_X(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QList_QGraphicsItem_X_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
   class Container_QList_QGraphicsTransform_X < BindgenHelper::SequentialContainer(GraphicsTransform)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QGraphicsTransform_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QGraphicsTransform_X__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44071,7 +45756,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QGraphicsView_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QGraphicsView_X__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44096,98 +45781,11 @@ module Qt
     end
     
   end
-  class Container_QList_QAbstractEventDispatcher__TimerInfo < BindgenHelper::SequentialContainer(Binding::EventDispatcherTimerInfo)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Binding::EventDispatcherTimerInfo
-      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_at_int(self, index)
-    end
-    
-    def push(value : Binding::EventDispatcherTimerInfo) : Void
-      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_push_back_QAbstractEventDispatcher__TimerInfo(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QAbstractEventDispatcher__TimerInfo_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_QSize < BindgenHelper::SequentialContainer(Binding::QSize*)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QSize_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Binding::QSize*
-      Binding.bg_Container_QList_QSize_at_int(self, index)
-    end
-    
-    def push(value : Binding::QSize*) : Void
-      Binding.bg_Container_QList_QSize_push_back_QSize(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QSize_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_QKeySequence < BindgenHelper::SequentialContainer(KeySequence)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_QKeySequence_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : KeySequence
-      KeySequence.new(unwrap: Binding.bg_Container_QList_QKeySequence_at_int(self, index))
-    end
-    
-    def push(value : KeySequence) : Void
-      Binding.bg_Container_QList_QKeySequence_push_back_QKeySequence(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_QKeySequence_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
   class Container_QList_QRectF < BindgenHelper::SequentialContainer(RectF)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QRectF_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QRectF__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44212,256 +45810,24 @@ module Qt
     end
     
   end
-  class Container_QList_QScreen_X < BindgenHelper::SequentialContainer(Screen)
+  class Container_QList_QGesture_X < BindgenHelper::SequentialContainer(Gesture)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QList_QScreen_X_CONSTRUCT_()
+      result = Binding.bg_Container_QList_QGesture_X__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : Screen
-      Screen.new(unwrap: Binding.bg_Container_QList_QScreen_X_at_int(self, index))
+    def unsafe_at(index : Int32) : Gesture
+      Gesture.new(unwrap: Binding.bg_Container_QList_QGesture_X_at_int(self, index))
     end
     
-    def push(value : Screen) : Void
-      Binding.bg_Container_QList_QScreen_X_push_back_QScreen_X(self, value)
+    def push(value : Gesture) : Void
+      Binding.bg_Container_QList_QGesture_X_push_back_QGesture_X(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QList_QScreen_X_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_qreal < BindgenHelper::SequentialContainer(Float64)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_qreal_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Float64
-      Binding.bg_Container_QList_qreal_at_int(self, index)
-    end
-    
-    def push(value : Float64) : Void
-      Binding.bg_Container_QList_qreal_push_back_qreal(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_qreal_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QList_int < BindgenHelper::SequentialContainer(Int32)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QList_int_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Int32
-      Binding.bg_Container_QList_int_at_int(self, index)
-    end
-    
-    def push(value : Int32) : Void
-      Binding.bg_Container_QList_int_push_back_int(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QList_int_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QLine < BindgenHelper::SequentialContainer(QLine)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QLine_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : QLine
-      QLine.new(unwrap: Binding.bg_Container_QVector_QLine_at_int(self, index))
-    end
-    
-    def push(value : QLine) : Void
-      Binding.bg_Container_QVector_QLine_push_back_QLine(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QLine_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QLineF < BindgenHelper::SequentialContainer(QLineF)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QLineF_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : QLineF
-      QLineF.new(unwrap: Binding.bg_Container_QVector_QLineF_at_int(self, index))
-    end
-    
-    def push(value : QLineF) : Void
-      Binding.bg_Container_QVector_QLineF_push_back_QLineF(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QLineF_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QPoint < BindgenHelper::SequentialContainer(Point)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QPoint_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Point
-      Point.new(unwrap: Binding.bg_Container_QVector_QPoint_at_int(self, index))
-    end
-    
-    def push(value : Point) : Void
-      Binding.bg_Container_QVector_QPoint_push_back_QPoint(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QPoint_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QPointF < BindgenHelper::SequentialContainer(PointF)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QPointF_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : PointF
-      PointF.new(unwrap: Binding.bg_Container_QVector_QPointF_at_int(self, index))
-    end
-    
-    def push(value : PointF) : Void
-      Binding.bg_Container_QVector_QPointF_push_back_QPointF(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QPointF_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QRect < BindgenHelper::SequentialContainer(Rect)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QRect_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : Rect
-      Rect.new(unwrap: Binding.bg_Container_QVector_QRect_at_int(self, index))
-    end
-    
-    def push(value : Rect) : Void
-      Binding.bg_Container_QVector_QRect_push_back_QRect(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QRect_size_(self)
-    end
-    
-    def to_unsafe
-      @unwrap
-    end
-    def initialize(unwrap : Void*)
-      result = unwrap
-    @unwrap = result
-    end
-    
-  end
-  class Container_QVector_QRectF < BindgenHelper::SequentialContainer(RectF)
-    @unwrap : Void*
-    
-    def initialize()
-      result = Binding.bg_Container_QVector_QRectF_CONSTRUCT_()
-    @unwrap = result
-    end
-    
-    def unsafe_at(index : Int32) : RectF
-      RectF.new(unwrap: Binding.bg_Container_QVector_QRectF_at_int(self, index))
-    end
-    
-    def push(value : RectF) : Void
-      Binding.bg_Container_QVector_QRectF_push_back_QRectF(self, value)
-    end
-    
-    def size() : Int32
-      Binding.bg_Container_QVector_QRectF_size_(self)
+      Binding.bg_Container_QList_QGesture_X_size_(self)
     end
     
     def to_unsafe
@@ -44477,7 +45843,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QVector_QRgb_CONSTRUCT_()
+      result = Binding.bg_Container_QVector_QRgb__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44502,24 +45868,24 @@ module Qt
     end
     
   end
-  class Container_QVector_QTextLength < BindgenHelper::SequentialContainer(TextLength)
+  class Container_QVector_unsigned_int < BindgenHelper::SequentialContainer(UInt32)
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QVector_QTextLength_CONSTRUCT_()
+      result = Binding.bg_Container_QVector_unsigned_int__CONSTRUCT_()
     @unwrap = result
     end
     
-    def unsafe_at(index : Int32) : TextLength
-      TextLength.new(unwrap: Binding.bg_Container_QVector_QTextLength_at_int(self, index))
+    def unsafe_at(index : Int32) : UInt32
+      Binding.bg_Container_QVector_unsigned_int_at_int(self, index)
     end
     
-    def push(value : TextLength) : Void
-      Binding.bg_Container_QVector_QTextLength_push_back_QTextLength(self, value)
+    def push(value : UInt32) : Void
+      Binding.bg_Container_QVector_unsigned_int_push_back_unsigned_int(self, value)
     end
     
     def size() : Int32
-      Binding.bg_Container_QVector_QTextLength_size_(self)
+      Binding.bg_Container_QVector_unsigned_int_size_(self)
     end
     
     def to_unsafe
@@ -44535,7 +45901,7 @@ module Qt
     @unwrap : Void*
     
     def initialize()
-      result = Binding.bg_Container_QVector_QTextFormat_CONSTRUCT_()
+      result = Binding.bg_Container_QVector_QTextFormat__CONSTRUCT_()
     @unwrap = result
     end
     
@@ -44549,6 +45915,209 @@ module Qt
     
     def size() : Int32
       Binding.bg_Container_QVector_QTextFormat_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QLineF < BindgenHelper::SequentialContainer(QLineF)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QLineF__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : QLineF
+      QLineF.new(unwrap: Binding.bg_Container_QVector_QLineF_at_int(self, index))
+    end
+    
+    def push(value : QLineF) : Void
+      Binding.bg_Container_QVector_QLineF_push_back_QLineF(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QLineF_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QPointF < BindgenHelper::SequentialContainer(PointF)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QPointF__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : PointF
+      PointF.new(unwrap: Binding.bg_Container_QVector_QPointF_at_int(self, index))
+    end
+    
+    def push(value : PointF) : Void
+      Binding.bg_Container_QVector_QPointF_push_back_QPointF(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QPointF_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QLine < BindgenHelper::SequentialContainer(QLine)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QLine__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : QLine
+      QLine.new(unwrap: Binding.bg_Container_QVector_QLine_at_int(self, index))
+    end
+    
+    def push(value : QLine) : Void
+      Binding.bg_Container_QVector_QLine_push_back_QLine(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QLine_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QPoint < BindgenHelper::SequentialContainer(Point)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QPoint__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Point
+      Point.new(unwrap: Binding.bg_Container_QVector_QPoint_at_int(self, index))
+    end
+    
+    def push(value : Point) : Void
+      Binding.bg_Container_QVector_QPoint_push_back_QPoint(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QPoint_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QRectF < BindgenHelper::SequentialContainer(RectF)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QRectF__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : RectF
+      RectF.new(unwrap: Binding.bg_Container_QVector_QRectF_at_int(self, index))
+    end
+    
+    def push(value : RectF) : Void
+      Binding.bg_Container_QVector_QRectF_push_back_QRectF(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QRectF_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QRect < BindgenHelper::SequentialContainer(Rect)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QRect__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : Rect
+      Rect.new(unwrap: Binding.bg_Container_QVector_QRect_at_int(self, index))
+    end
+    
+    def push(value : Rect) : Void
+      Binding.bg_Container_QVector_QRect_push_back_QRect(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QRect_size_(self)
+    end
+    
+    def to_unsafe
+      @unwrap
+    end
+    def initialize(unwrap : Void*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class Container_QVector_QTextLength < BindgenHelper::SequentialContainer(TextLength)
+    @unwrap : Void*
+    
+    def initialize()
+      result = Binding.bg_Container_QVector_QTextLength__CONSTRUCT_()
+    @unwrap = result
+    end
+    
+    def unsafe_at(index : Int32) : TextLength
+      TextLength.new(unwrap: Binding.bg_Container_QVector_QTextLength_at_int(self, index))
+    end
+    
+    def push(value : TextLength) : Void
+      Binding.bg_Container_QVector_QTextLength_push_back_QTextLength(self, value)
+    end
+    
+    def size() : Int32
+      Binding.bg_Container_QVector_QTextLength_size_(self)
     end
     
     def to_unsafe
