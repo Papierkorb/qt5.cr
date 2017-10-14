@@ -13,6 +13,7 @@ module: Qt
 library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 
 <<: config/processors_and_generators.yml
+<<: config/find_paths.yml
 <<: config/classes.yml
 <<: config/enums.yml
 <<: config/macros.yml
@@ -21,12 +22,13 @@ library: "%/ext/binding.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 <<: config/types.yml
 
 parser: # Clang parser configuration
-  flags: [ "-x", "c++", "-std=c++11" ]
+  flags: [ "-x", "c++", "-std=c++11", "-fPIC" ]
   files:
     - QtCore/QtCore
     - QtGui/QtGui
     - QtWidgets/QtWidgets
-  <<: "config/parser_includes_generic.yml"
-  defines:
-    - __STDC_CONSTANT_MACROS
-    - __STDC_LIMIT_MACROS
+  includes:
+    - "{QT_INCLUDE_DIR}/"
+    - "{QT_INCLUDE_DIR}/QtCore/"
+    - "{QT_INCLUDE_DIR}/QtGui/"
+    - "{QT_INCLUDE_DIR}/QtWidgets/"

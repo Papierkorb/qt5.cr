@@ -1,5 +1,0 @@
-includes:
-  - "{QTDIR|/usr/include/qt}/"
-  - "{QTDIR|/usr/include/qt}/QtCore/"
-  - "{QTDIR|/usr/include/qt}/QtGui/"
-  - "{QTDIR|/usr/include/qt}/QtWidgets/"
