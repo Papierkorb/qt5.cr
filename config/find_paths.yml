@@ -8,7 +8,7 @@ find_paths:
     version:
       min: "5.0"
       max: "5.999" # Disallow Qt6
-      command: "% -version"
+      command: "QT_SELECT=5 % -version"
       regex: "Using Qt version ([0-9.]+)"
     error_message: |
       You're missing Qt5 development files, please install these:
