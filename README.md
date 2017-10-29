@@ -1,18 +1,70 @@
-# Crystal Bindings to Qt 5 <sup>Technology Preview</sup>
+# Crystal Bindings to Qt 5 <sup>Beta</sup>
 
 Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bindgen).
 
-Please note that this is **not** production-ready – yet!
+### Platform support
 
-**Support**: Linux based systems (Especially ArchLinux).  As of yet, no Mac OS
-and no Windows.  I use neither of those two.  If someone wants to work on it,
-and later maintain it, please contact me.
+| System            | Status           | Qt version |
+| ----------------- | ---------------- | ---------- |
+| ArchLinux         | **Works always** | *Rolling*  |
+| Ubuntu 17.04      | **Works**        | 5.9        |
+| Ubuntu 16.04      | **Works**        | 5.5        |
+| MacOS             | Help wanted      | ?          |
+| Windows           | Help wanted      | ?          |
+| Other systems     | Help wanted      | ?          |
+
+**Ready-to-use Qt versions:** 5.5 to 5.9
 
 ## Project Goals
 
 * **Just Works™** - Drop the dependency into a project, and use it.
 * Providing an API that feels native to Crystal
 * Focus on the GUI components (That is, `QtCore`, `QtGui`, `QtWidgets`)
+
+## Usage
+
+Add this to your application's `shard.yml`:
+
+```yaml
+dependencies:
+  qt5:
+    github: Papierkorb/qt5.cr
+    branch: master-ready-to-use
+```
+
+### Generating the bindings yourself
+
+Add this to your `shard.yml` instead:
+
+```yaml
+dependencies:
+  qt5:
+    github: Papierkorb/qt5.cr
+    branch: master
+```
+
+Then run `crystal deps` and `lib/bindgen/tool.sh qt.yml` to generate them.
+
+### Sample code
+
+Have a look in [samples/](https://github.com/Papierkorb/qt5.cr/tree/master/samples)!
+
+Though, to make this not look empty, here's the possibly simplest program imaginable:
+
+```crystal
+require "qt5" # Require it!
+
+qApp = Qt::Application.new # Create the application
+
+# Display something on the screen
+label = Qt::Label.new "Hello from Crystal/Qt!"
+label.show
+
+Qt::Application.exec # And run it!
+```
+
+![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
+
 
 ## Preview Checklist
 
@@ -42,48 +94,6 @@ What's **to be done**:
 * Proper bindgen documentation.  It being a complex project is no excuse to *not*
   having proper docs.
 
-## Usage
-
-Add this to your application's `shard.yml`:
-
-```yaml
-dependencies:
-  qt5:
-    github: Papierkorb/qt5.cr
-    branch: master-ready-to-use
-```
-
-If you want to generate the bindings yourself, use:
-
-```yaml
-dependencies:
-  qt5:
-    github: Papierkorb/qt5.cr
-    branch: master
-```
-
-And then run `crystal deps` and `lib/bindgen/tool.sh qt.yml` to generate them.
-
-### Sample code
-
-Have a look in [samples/](https://github.com/Papierkorb/qt5.cr/tree/master/samples)!
-
-Though, to make this not look empty, here's the possibly simplest program imaginable:
-
-```crystal
-require "qt5" # Require it!
-
-qApp = Qt::Application.new # Create the application
-
-# Display something on the screen
-label = Qt::Label.new "Hello from Crystal/Qt!"
-label.show
-
-Qt::Application.exec # And run it!
-```
-
-![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
-
 ## Name rewriting rules
 
 * Everything resides in the `Qt` module (As configured)
@@ -104,7 +114,7 @@ Qt::Application.exec # And run it!
 
 ### Developing with these bindings
 
-* `Qt5` of version Qt 5.9.x, development headers and libraries
+* `Qt5` of version Qt 5.6.x (or higher), development headers and libraries
 * A modern C++ compiler
 
 ### What your user will need
