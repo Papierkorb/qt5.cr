@@ -19,9 +19,9 @@ processors:
 
 generators:
   cpp:
-    output: ext/qt_binding.cpp
+    output: "ext/qt_binding_{BINDING_PLATFORM}.cpp"
     preamble: |-
       #include "converters.hpp"
     build: make
   crystal:
-    output: src/qt5/binding.cr
+    output: "src/qt5/binding/binding_{BINDING_PLATFORM}.cr"
