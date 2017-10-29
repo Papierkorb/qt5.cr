@@ -1,2 +1,4 @@
 *.o
 *.a
+qt_binding*.cpp
+binding*.a

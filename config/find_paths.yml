@@ -1,0 +1,65 @@
+find_paths:
+  QMAKE:
+    kind: Executable
+    optional: true
+    try:
+      - qmake-qt*
+      - qmake
+    version:
+      min: "5.0"
+      max: "5.999" # Disallow Qt6
+      variable: QT_VERSION
+      command: "% -version"
+      regex: "Using Qt version ([0-9.]+)"
+    error_message: |
+      You're missing Qt5 development files, please install these:
+        ArchLinux: pacman -S qt5-base gc
+        Ubuntu: apt install qtbase5-dev libgc-dev
+        Windows: https://www.qt.io/download-open-source/
+        All Other: HELP WANTED!
+
+      If your system uses qtchooser, like on Ubuntu:
+        1) Set the environment variable QT_SELECT=5
+        2) Try again.  If issues persist make sure you installed everything.
+
+      If you have installed Qt5 in a non-standard location:
+        Automatic:
+          1) Add `qmake` or `qmake-qt5` to your $PATH.
+          2) Or make QMAKE point to it
+        Manual: Set these environment variables:
+          QDIR=/installation/prefix
+          QT_INCLUDE_DIR=$QTDIR/include
+          QT_LIBS_DIR=$QTDIR/libs
+  QT_INCLUDE_DIR:
+    try:
+      # Best case: Ask QMake
+      - shell: "{QMAKE} -query QT_INSTALL_HEADERS/get"
+      # Fall back to guessing the path
+      - "{QTDIR}/include"
+      - "/usr/include/qt*"
+      - "/usr/include/*/qt*"
+      - "/usr/include"
+      - "/usr/local/include/qt*"
+      - "/usr/local/include/*/qt*"
+      - "/usr/local/include"
+    checks:
+      # Check module directories
+      - { path: "QtCore",    kind: "Directory" }
+      - { path: "QtGui",     kind: "Directory" }
+      - { path: "QtWidgets", kind: "Directory" }
+  QT_LIBS_DIR:
+    try:
+      - shell: "{QMAKE} -query QT_INSTALL_LIBS"
+      - "{QTDIR}/lib"
+      - "/usr/lib"
+      - "/usr/local/lib"
+    if_os_is_windows:
+      checks:
+        - path: libQt5Core.dll
+        - path: libQt5Gui.dll
+        - path: libQt5Widgets.dll
+    else:
+      checks:
+        - path: libQt5Core.so
+        - path: libQt5Gui.so
+        - path: libQt5Widgets.so
