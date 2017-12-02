@@ -89,6 +89,7 @@ classes:
   QDynamicPropertyChangeEvent: DynamicPropertyChangeEvent
   QDeferredDeleteEvent: DeferredDeleteEvent
   QInputEvent: InputEvent
+  QKeyEvent: KeyEvent
   QMouseEvent: MouseEvent
   QEnterEvent: EnterEvent
   QFocusEvent: FocusEvent
