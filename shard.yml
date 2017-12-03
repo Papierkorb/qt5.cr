@@ -13,6 +13,6 @@ dependencies:
     branch: master
 
 scripts:
-  postinstall: crystal deps build && ext/try_build.sh
+  postinstall: crystal deps build
 
 license: MPL-2
