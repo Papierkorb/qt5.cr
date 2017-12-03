@@ -7727,6 +7727,17 @@ module Qt
     fun bg_QInputEvent_setModifiers_Qt__KeyboardModifiers(_self_ : QInputEvent*, amodifiers : KeyboardModifiers) : Void
     fun bg_QInputEvent_timestamp_(_self_ : QInputEvent*) : UInt64
     fun bg_QInputEvent_setTimestamp_ulong(_self_ : QInputEvent*, atimestamp : UInt64) : Void
+    fun bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_const_QString_R_bool_ushort(type : Event::Type, key : Int32, modifiers : KeyboardModifiers, text : CrystalString, autorep : Bool, count : UInt16) : QKeyEvent*
+    fun bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_quint32_quint32_quint32_const_QString_R_bool_ushort(type : Event::Type, key : Int32, modifiers : KeyboardModifiers, native_scan_code : UInt32, native_virtual_key : UInt32, native_modifiers : UInt32, text : CrystalString, autorep : Bool, count : UInt16) : QKeyEvent*
+    fun bg_QKeyEvent_key_(_self_ : QKeyEvent*) : Int32
+    fun bg_QKeyEvent_matches_QKeySequence__StandardKey(_self_ : QKeyEvent*, key : KeySequence::StandardKey) : Bool
+    fun bg_QKeyEvent_modifiers_(_self_ : QKeyEvent*) : KeyboardModifiers
+    fun bg_QKeyEvent_text_(_self_ : QKeyEvent*) : CrystalString
+    fun bg_QKeyEvent_isAutoRepeat_(_self_ : QKeyEvent*) : Bool
+    fun bg_QKeyEvent_count_(_self_ : QKeyEvent*) : Int32
+    fun bg_QKeyEvent_nativeScanCode_(_self_ : QKeyEvent*) : UInt32
+    fun bg_QKeyEvent_nativeVirtualKey_(_self_ : QKeyEvent*) : UInt32
+    fun bg_QKeyEvent_nativeModifiers_(_self_ : QKeyEvent*) : UInt32
     fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
     fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
     fun bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_const_QPointF_R_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(type : Event::Type, local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF, button : MouseButton, buttons : MouseButtons, modifiers : KeyboardModifiers) : QMouseEvent*
@@ -10155,8 +10166,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -10218,8 +10229,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11291,11 +11302,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -11449,8 +11460,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -11597,8 +11608,8 @@ module Qt
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -11777,11 +11788,11 @@ module Qt
       Binding.bg_QAbstractButton_event_QEvent_X(self, e)
     end
     
-    protected def key_press_event(e : Binding::QKeyEvent*) : Void
+    protected def key_press_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyPressEvent_QKeyEvent_X(self, e)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -11831,8 +11842,8 @@ module Qt
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -12076,8 +12087,8 @@ module Qt
       bg_QToolButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} Proc(Binding::QPoint, Bool).new{|pos| self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QToolButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_out_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -12202,11 +12213,11 @@ module Qt
       Binding.bg_QAbstractButton_checkStateSet_(self)
     end
     
-    protected def key_press_event(e : Binding::QKeyEvent*) : Void
+    protected def key_press_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyPressEvent_QKeyEvent_X(self, e)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -12303,8 +12314,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -12360,8 +12371,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -12600,11 +12611,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -12795,8 +12806,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -12852,8 +12863,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -12981,8 +12992,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13038,8 +13049,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13115,11 +13126,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -13296,8 +13307,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13478,11 +13489,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -13644,7 +13655,7 @@ module Qt
       bg_QAbstractSlider_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QAbstractSlider_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -13659,7 +13670,7 @@ module Qt
       bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_release_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13824,7 +13835,7 @@ module Qt
       Binding.bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange(self, change)
     end
     
-    protected def key_press_event(ev : Binding::QKeyEvent*) : Void
+    protected def key_press_event(ev : KeyEvent) : Void
       Binding.bg_QAbstractSlider_keyPressEvent_QKeyEvent_X(self, ev)
     end
     
@@ -13855,7 +13866,7 @@ module Qt
       bg_QAbstractSlider_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QAbstractSlider_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -13870,7 +13881,7 @@ module Qt
       bg_QWidget_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_release_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -13943,7 +13954,7 @@ module Qt
       Binding.bg_QWidget_mouseMoveEvent_QMouseEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -14144,7 +14155,7 @@ module Qt
       bg_QDial_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|me| self.mouse_release_event(MouseEvent.new(unwrap: me)) } {% else %} nil {% end %}),
       bg_QDial_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|me| self.mouse_move_event(MouseEvent.new(unwrap: me)) } {% else %} nil {% end %}),
       bg_QDial_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -14221,7 +14232,7 @@ module Qt
       Binding.bg_QDial_initStyleOption_QStyleOptionSlider_X(self, option)
     end
     
-    protected def key_press_event(ev : Binding::QKeyEvent*) : Void
+    protected def key_press_event(ev : KeyEvent) : Void
       Binding.bg_QAbstractSlider_keyPressEvent_QKeyEvent_X(self, ev)
     end
     
@@ -14303,7 +14314,7 @@ module Qt
       bg_QScrollBar_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} Proc(Binding::QHideEvent*, Void).new{|unnamed_arg_0| self.hide_event(HideEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QScrollBar_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
       bg_QScrollBar_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|unnamed_arg_0| self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
@@ -14334,7 +14345,7 @@ module Qt
       bg_QScrollBar_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} Proc(Binding::QHideEvent*, Void).new{|unnamed_arg_0| self.hide_event(HideEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QScrollBar_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
       bg_QScrollBar_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|unnamed_arg_0| self.context_menu_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
     )
@@ -14386,7 +14397,7 @@ module Qt
       Binding.bg_QScrollBar_initStyleOption_QStyleOptionSlider_X(self, option)
     end
     
-    protected def key_press_event(ev : Binding::QKeyEvent*) : Void
+    protected def key_press_event(ev : KeyEvent) : Void
       Binding.bg_QAbstractSlider_keyPressEvent_QKeyEvent_X(self, ev)
     end
     
@@ -14462,7 +14473,7 @@ module Qt
       bg_QSlider_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_release_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QSlider_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_move_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -14492,7 +14503,7 @@ module Qt
       bg_QSlider_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_release_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QSlider_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_move_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange: BindgenHelper.wrap_proc({% if forwarded.includes?("slider_change") %} Proc(AbstractSlider::SliderChange, Void).new{|change| self.slider_change(change) } {% else %} nil {% end %}),
-      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QAbstractSlider_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|unnamed_arg_0| self.timer_event(TimerEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractSlider_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|e| self.wheel_event(e) } {% else %} nil {% end %}),
       bg_QAbstractSlider_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|e| self.change_event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -14553,7 +14564,7 @@ module Qt
       Binding.bg_QAbstractSlider_sliderChange_QAbstractSlider__SliderChange(self, change)
     end
     
-    protected def key_press_event(ev : Binding::QKeyEvent*) : Void
+    protected def key_press_event(ev : KeyEvent) : Void
       Binding.bg_QAbstractSlider_keyPressEvent_QKeyEvent_X(self, ev)
     end
     
@@ -14651,7 +14662,7 @@ module Qt
       bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} Proc(Binding::QDragMoveEvent*, Void).new{|unnamed_arg_0| self.drag_move_event(DragMoveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} Proc(Binding::QDragLeaveEvent*, Void).new{|unnamed_arg_0| self.drag_leave_event(DragLeaveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} Proc(Int32, Int32, Void).new{|dx, dy| self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -14771,7 +14782,7 @@ module Qt
       bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} Proc(Binding::QDragMoveEvent*, Void).new{|unnamed_arg_0| self.drag_move_event(DragMoveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} Proc(Binding::QDragLeaveEvent*, Void).new{|unnamed_arg_0| self.drag_leave_event(DragLeaveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_scrollContentsBy_int_int: BindgenHelper.wrap_proc({% if forwarded.includes?("scroll_contents_by") %} Proc(Int32, Int32, Void).new{|dx, dy| self.scroll_contents_by(dx, dy) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_viewportSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("viewport_size_hint") %} Proc(Binding::QSize*).new{ self.viewport_size_hint() } {% else %} nil {% end %}),
       bg_QFrame_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -14852,7 +14863,7 @@ module Qt
       Binding.bg_QAbstractScrollArea_dropEvent_QDropEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -14950,7 +14961,7 @@ module Qt
       bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} Proc(Binding::QDragMoveEvent*, Void).new{|unnamed_arg_0| self.drag_move_event(DragMoveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} Proc(Binding::QDragLeaveEvent*, Void).new{|unnamed_arg_0| self.drag_leave_event(DragLeaveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
     Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea_R(result, pointerof(jump_table))
     {% end %}
@@ -15034,7 +15045,7 @@ module Qt
       bg_QAbstractScrollArea_dragMoveEvent_QDragMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_move_event") %} Proc(Binding::QDragMoveEvent*, Void).new{|unnamed_arg_0| self.drag_move_event(DragMoveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dragLeaveEvent_QDragLeaveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_leave_event") %} Proc(Binding::QDragLeaveEvent*, Void).new{|unnamed_arg_0| self.drag_leave_event(DragLeaveEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractScrollArea_dropEvent_QDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drop_event") %} Proc(Binding::QDropEvent*, Void).new{|unnamed_arg_0| self.drop_event(DropEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
     )
     Binding.bg_BgInherit_ScrollArea_JUMPTABLE_BgJumptable_ScrollArea_R(result, pointerof(jump_table))
     {% end %}
@@ -15116,7 +15127,7 @@ module Qt
       Binding.bg_QAbstractScrollArea_dropEvent_QDropEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QAbstractScrollArea_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -15182,8 +15193,8 @@ module Qt
       bg_QAbstractSpinBox_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15352,11 +15363,11 @@ module Qt
       Binding.bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -15451,8 +15462,8 @@ module Qt
       bg_QAbstractSpinBox_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15665,8 +15676,8 @@ module Qt
       bg_QAbstractSpinBox_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -15790,11 +15801,11 @@ module Qt
       Binding.bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -15926,8 +15937,8 @@ module Qt
       bg_QAbstractSpinBox_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16051,11 +16062,11 @@ module Qt
       Binding.bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -16183,7 +16194,7 @@ module Qt
       bg_QDateTimeEdit_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QDateTimeEdit_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|event| self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
+      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -16194,7 +16205,7 @@ module Qt
       bg_QDateTimeEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|event| self.paint_event(PaintEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|event| self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16226,7 +16237,7 @@ module Qt
       bg_QDateTimeEdit_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QDateTimeEdit_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|event| self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
+      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -16237,7 +16248,7 @@ module Qt
       bg_QDateTimeEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|event| self.paint_event(PaintEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|event| self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16269,7 +16280,7 @@ module Qt
       bg_QDateTimeEdit_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QDateTimeEdit_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|event| self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
+      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -16280,7 +16291,7 @@ module Qt
       bg_QDateTimeEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|event| self.paint_event(PaintEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|event| self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16312,7 +16323,7 @@ module Qt
       bg_QDateTimeEdit_clear_: BindgenHelper.wrap_proc({% if forwarded.includes?("clear") %} Proc(Void).new{ self.clear() } {% else %} nil {% end %}),
       bg_QDateTimeEdit_stepBy_int: BindgenHelper.wrap_proc({% if forwarded.includes?("step_by") %} Proc(Int32, Void).new{|steps| self.step_by(steps) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|event| self.event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
+      bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QDateTimeEdit_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
@@ -16323,7 +16334,7 @@ module Qt
       bg_QDateTimeEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|event| self.paint_event(PaintEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|event| self.resize_event(ResizeEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_contextMenuEvent_QContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
       bg_QAbstractSpinBox_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|event| self.change_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16542,7 +16553,7 @@ module Qt
       Binding.bg_QDateTimeEdit_setTime_const_QTime_R(self, time)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QDateTimeEdit_keyPressEvent_QKeyEvent_X(self, event)
     end
     
@@ -16590,7 +16601,7 @@ module Qt
       Binding.bg_QAbstractSpinBox_resizeEvent_QResizeEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QAbstractSpinBox_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -16730,7 +16741,7 @@ module Qt
       bg_QMenuBar_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} Proc(Int32, Int32).new{|unnamed_arg_0| self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QMenuBar_setVisible_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("visible=") %} Proc(Bool, Void).new{|visible| self.visible=(visible) } {% else %} nil {% end %}),
       bg_QMenuBar_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QMenuBar_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QMenuBar_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenuBar_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenuBar_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenuBar_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -16748,7 +16759,7 @@ module Qt
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|event| self.close_event(CloseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -16879,7 +16890,7 @@ module Qt
       Binding.bg_QMenuBar_changeEvent_QEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QMenuBar_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -16955,7 +16966,7 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -17093,7 +17104,7 @@ module Qt
       bg_QMenu_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} Proc(Binding::QSize*).new{ self.size_hint() } {% else %} nil {% end %}),
       bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -17113,7 +17124,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -17151,7 +17162,7 @@ module Qt
       bg_QMenu_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} Proc(Binding::QSize*).new{ self.size_hint() } {% else %} nil {% end %}),
       bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -17171,7 +17182,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -17406,7 +17417,7 @@ module Qt
       Binding.bg_QMenu_changeEvent_QEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QMenu_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -17477,7 +17488,7 @@ module Qt
       bg_QMenu_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QMenu_sizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("size_hint") %} Proc(Binding::QSize*).new{ self.size_hint() } {% else %} nil {% end %}),
       bg_QMenu_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QMenu_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QMenu_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -17497,7 +17508,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -17548,7 +17559,7 @@ module Qt
       Binding.bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -18137,8 +18148,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18281,11 +18292,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -18448,8 +18459,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18506,8 +18517,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -18808,11 +18819,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -18997,8 +19008,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19054,8 +19065,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19111,8 +19122,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19168,8 +19179,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19332,11 +19343,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -19529,7 +19540,7 @@ module Qt
       bg_QDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} Proc(Int32, Void).new{|unnamed_arg_0| self.done(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} Proc(Void).new{ self.accept() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -19545,7 +19556,7 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19592,7 +19603,7 @@ module Qt
       bg_QDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} Proc(Int32, Void).new{|unnamed_arg_0| self.done(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} Proc(Void).new{ self.accept() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -19608,7 +19619,7 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19739,7 +19750,7 @@ module Qt
       bg_QDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} Proc(Int32, Void).new{|unnamed_arg_0| self.done(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} Proc(Void).new{ self.accept() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -19755,7 +19766,7 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19802,7 +19813,7 @@ module Qt
       bg_QDialog_done_int: BindgenHelper.wrap_proc({% if forwarded.includes?("done") %} Proc(Int32, Void).new{|unnamed_arg_0| self.done(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QDialog_accept_: BindgenHelper.wrap_proc({% if forwarded.includes?("accept") %} Proc(Void).new{ self.accept() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -19818,7 +19829,7 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -19844,7 +19855,7 @@ module Qt
     {% end %}
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QDialog_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -19912,7 +19923,7 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -20072,7 +20083,7 @@ module Qt
       bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} Proc(Int32, Int32).new{|unnamed_arg_0| self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_press_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
@@ -20104,7 +20115,7 @@ module Qt
       bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} Proc(Int32, Int32).new{|unnamed_arg_0| self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_press_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
@@ -20136,7 +20147,7 @@ module Qt
       bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} Proc(Int32, Int32).new{|unnamed_arg_0| self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_press_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
@@ -20168,7 +20179,7 @@ module Qt
       bg_QLabel_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QLabel_heightForWidth_int: BindgenHelper.wrap_proc({% if forwarded.includes?("height_for_width") %} Proc(Int32, Int32).new{|unnamed_arg_0| self.height_for_width(unnamed_arg_0) } {% else %} nil {% end %}),
       bg_QLabel_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(ev) } {% else %} nil {% end %}),
+      bg_QLabel_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|ev| self.key_press_event(KeyEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
       bg_QLabel_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLabel_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|ev| self.mouse_press_event(MouseEvent.new(unwrap: ev)) } {% else %} nil {% end %}),
@@ -20339,7 +20350,7 @@ module Qt
       Binding.bg_QLabel_event_QEvent_X(self, e)
     end
     
-    protected def key_press_event(ev : Binding::QKeyEvent*) : Void
+    protected def key_press_event(ev : KeyEvent) : Void
       Binding.bg_QLabel_keyPressEvent_QKeyEvent_X(self, ev)
     end
     
@@ -20645,13 +20656,13 @@ module Qt
       bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} Proc(Binding::QPoint, Bool).new{|pos| self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -20679,13 +20690,13 @@ module Qt
       bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} Proc(Binding::QPoint, Bool).new{|pos| self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -20713,13 +20724,13 @@ module Qt
       bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} Proc(Binding::QPoint, Bool).new{|pos| self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -20782,7 +20793,7 @@ module Qt
       Binding.bg_QPushButton_paintEvent_QPaintEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QPushButton_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -20815,13 +20826,13 @@ module Qt
       bg_QPushButton_minimumSizeHint_: BindgenHelper.wrap_proc({% if forwarded.includes?("minimum_size_hint") %} Proc(Binding::QSize*).new{ self.minimum_size_hint() } {% else %} nil {% end %}),
       bg_QPushButton_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QPushButton_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QPushButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QPushButton_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_hitButton_const_QPoint_R: BindgenHelper.wrap_proc({% if forwarded.includes?("hit_button") %} Proc(Binding::QPoint, Bool).new{|pos| self.hit_button(Point.new(unwrap: pos)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_move_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -20844,7 +20855,7 @@ module Qt
       Binding.bg_QAbstractButton_nextCheckState_(self)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -20932,8 +20943,8 @@ module Qt
       bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
       bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QCheckBox_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -20966,8 +20977,8 @@ module Qt
       bg_QCheckBox_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
       bg_QCheckBox_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QCheckBox_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -21035,11 +21046,11 @@ module Qt
       Binding.bg_QCheckBox_initStyleOption_QStyleOptionButton_X(self, option)
     end
     
-    protected def key_press_event(e : Binding::QKeyEvent*) : Void
+    protected def key_press_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyPressEvent_QKeyEvent_X(self, e)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -21135,8 +21146,8 @@ module Qt
       bg_QRadioButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -21169,8 +21180,8 @@ module Qt
       bg_QRadioButton_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QAbstractButton_checkStateSet_: BindgenHelper.wrap_proc({% if forwarded.includes?("check_state_set") %} Proc(Void).new{ self.check_state_set() } {% else %} nil {% end %}),
       bg_QAbstractButton_nextCheckState_: BindgenHelper.wrap_proc({% if forwarded.includes?("next_check_state") %} Proc(Void).new{ self.next_check_state() } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_release_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QAbstractButton_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|e| self.focus_in_event(FocusEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -21218,11 +21229,11 @@ module Qt
       Binding.bg_QAbstractButton_nextCheckState_(self)
     end
     
-    protected def key_press_event(e : Binding::QKeyEvent*) : Void
+    protected def key_press_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyPressEvent_QKeyEvent_X(self, e)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QAbstractButton_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -21524,8 +21535,8 @@ module Qt
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} Proc(Binding::QEvent*, Void).new{|event| self.leave_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -21582,8 +21593,8 @@ module Qt
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} Proc(Binding::QEvent*, Void).new{|event| self.leave_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -21733,11 +21744,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -24095,7 +24106,7 @@ module Qt
       bg_QTabBar_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabBar_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabBar_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QTabBar_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QTabBar_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabBar_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabBar_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|event| self.timer_event(TimerEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_devType_: BindgenHelper.wrap_proc({% if forwarded.includes?("dev_type") %} Proc(Int32).new{ self.dev_type() } {% else %} nil {% end %}),
@@ -24104,7 +24115,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -24409,7 +24420,7 @@ module Qt
       Binding.bg_QTabBar_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QTabBar_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -24449,7 +24460,7 @@ module Qt
       Binding.bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -24632,7 +24643,7 @@ module Qt
       bg_QTabWidget_tabRemoved_int: BindgenHelper.wrap_proc({% if forwarded.includes?("tab_removed") %} Proc(Int32, Void).new{|index| self.tab_removed(index) } {% else %} nil {% end %}),
       bg_QTabWidget_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabWidget_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QTabWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QTabWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabWidget_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabWidget_changeEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("change_event") %} Proc(Binding::QEvent*, Void).new{|unnamed_arg_0| self.change_event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QTabWidget_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -24644,7 +24655,7 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -24894,7 +24905,7 @@ module Qt
       Binding.bg_QTabWidget_resizeEvent_QResizeEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QTabWidget_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -24950,7 +24961,7 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -27999,7 +28010,7 @@ module Qt
       bg_QLineEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_double_click_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -28017,7 +28028,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} Proc(Binding::QEvent*, Void).new{|event| self.leave_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -28056,7 +28067,7 @@ module Qt
       bg_QLineEdit_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_move_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_double_click_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QLineEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_in_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|unnamed_arg_0| self.focus_out_event(FocusEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QLineEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|unnamed_arg_0| self.paint_event(PaintEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -28074,7 +28085,7 @@ module Qt
       bg_QWidget_hasHeightForWidth_: BindgenHelper.wrap_proc({% if forwarded.includes?("has_height_for_width?") %} Proc(Bool).new{ self.has_height_for_width?() } {% else %} nil {% end %}),
       bg_QWidget_paintEngine_: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_engine") %} Proc(Binding::QPaintEngine*).new{ self.paint_engine() } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_leaveEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("leave_event") %} Proc(Binding::QEvent*, Void).new{|event| self.leave_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_moveEvent_QMoveEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("move_event") %} Proc(Binding::QMoveEvent*, Void).new{|event| self.move_event(MoveEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -28394,7 +28405,7 @@ module Qt
       Binding.bg_QLineEdit_mouseDoubleClickEvent_QMouseEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QLineEdit_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -28474,7 +28485,7 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -28626,8 +28637,8 @@ module Qt
       bg_QTextEdit_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QTextEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|e| self.resize_event(ResizeEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|e| self.paint_event(PaintEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -28677,8 +28688,8 @@ module Qt
       bg_QTextEdit_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QTextEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|e| self.resize_event(ResizeEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|e| self.paint_event(PaintEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -29089,11 +29100,11 @@ module Qt
       Binding.bg_QTextEdit_timerEvent_QTimerEvent_X(self, e)
     end
     
-    protected def key_press_event(e : Binding::QKeyEvent*) : Void
+    protected def key_press_event(e : KeyEvent) : Void
       Binding.bg_QTextEdit_keyPressEvent_QKeyEvent_X(self, e)
     end
     
-    protected def key_release_event(e : Binding::QKeyEvent*) : Void
+    protected def key_release_event(e : KeyEvent) : Void
       Binding.bg_QTextEdit_keyReleaseEvent_QKeyEvent_X(self, e)
     end
     
@@ -29196,8 +29207,8 @@ module Qt
       bg_QTextEdit_qt_metacall_QMetaObject__Call_int_void_XX: BindgenHelper.wrap_proc({% if forwarded.includes?("qt_metacall") %} Proc(MetaObjectCall, Int32, Void**, Int32).new{|unnamed_arg_0, unnamed_arg_1, unnamed_arg_2| self.qt_metacall(unnamed_arg_0, unnamed_arg_1, unnamed_arg_2) } {% else %} nil {% end %}),
       bg_QTextEdit_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|e| self.event(Event.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_timerEvent_QTimerEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("timer_event") %} Proc(Binding::QTimerEvent*, Void).new{|e| self.timer_event(TimerEvent.new(unwrap: e)) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(e) } {% else %} nil {% end %}),
-      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(e) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_press_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
+      bg_QTextEdit_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|e| self.key_release_event(KeyEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|e| self.resize_event(ResizeEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_paintEvent_QPaintEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("paint_event") %} Proc(Binding::QPaintEvent*, Void).new{|e| self.paint_event(PaintEvent.new(unwrap: e)) } {% else %} nil {% end %}),
       bg_QTextEdit_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|e| self.mouse_press_event(MouseEvent.new(unwrap: e)) } {% else %} nil {% end %}),
@@ -29378,7 +29389,7 @@ module Qt
       bg_QDialog_open_: BindgenHelper.wrap_proc({% if forwarded.includes?("open") %} Proc(Void).new{ self.open() } {% else %} nil {% end %}),
       bg_QDialog_exec_: BindgenHelper.wrap_proc({% if forwarded.includes?("exec") %} Proc(Int32).new{ self.exec() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -29411,7 +29422,7 @@ module Qt
       bg_QDialog_open_: BindgenHelper.wrap_proc({% if forwarded.includes?("open") %} Proc(Void).new{ self.open() } {% else %} nil {% end %}),
       bg_QDialog_exec_: BindgenHelper.wrap_proc({% if forwarded.includes?("exec") %} Proc(Int32).new{ self.exec() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -29768,7 +29779,7 @@ module Qt
       bg_QDialog_open_: BindgenHelper.wrap_proc({% if forwarded.includes?("open") %} Proc(Void).new{ self.open() } {% else %} nil {% end %}),
       bg_QDialog_exec_: BindgenHelper.wrap_proc({% if forwarded.includes?("exec") %} Proc(Int32).new{ self.exec() } {% else %} nil {% end %}),
       bg_QDialog_reject_: BindgenHelper.wrap_proc({% if forwarded.includes?("reject") %} Proc(Void).new{ self.reject() } {% else %} nil {% end %}),
-      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QDialog_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_closeEvent_QCloseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("close_event") %} Proc(Binding::QCloseEvent*, Void).new{|unnamed_arg_0| self.close_event(CloseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QDialog_resizeEvent_QResizeEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("resize_event") %} Proc(Binding::QResizeEvent*, Void).new{|unnamed_arg_0| self.resize_event(ResizeEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -29811,7 +29822,7 @@ module Qt
       Binding.bg_QDialog_reject_(self)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QDialog_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -31348,8 +31359,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -32156,11 +32167,11 @@ module Qt
       Binding.bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -32224,8 +32235,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -32377,8 +32388,8 @@ module Qt
       bg_QGraphicsScene_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_helpEvent_QGraphicsSceneHelpEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("help_event") %} Proc(Binding::QGraphicsSceneHelpEvent*, Void).new{|event| self.help_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -32421,8 +32432,8 @@ module Qt
       bg_QGraphicsScene_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_helpEvent_QGraphicsSceneHelpEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("help_event") %} Proc(Binding::QGraphicsSceneHelpEvent*, Void).new{|event| self.help_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -32465,8 +32476,8 @@ module Qt
       bg_QGraphicsScene_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_helpEvent_QGraphicsSceneHelpEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("help_event") %} Proc(Binding::QGraphicsSceneHelpEvent*, Void).new{|event| self.help_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsScene_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -32958,11 +32969,11 @@ module Qt
       Binding.bg_QGraphicsScene_helpEvent_QGraphicsSceneHelpEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsScene_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsScene_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -33143,8 +33154,8 @@ module Qt
       bg_QGraphicsView_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_press_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -33191,8 +33202,8 @@ module Qt
       bg_QGraphicsView_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_press_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -33587,8 +33598,8 @@ module Qt
       bg_QGraphicsView_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusNextPrevChild_bool: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_next_prev_child") %} Proc(Bool, Bool).new{|next_| self.focus_next_prev_child(next_) } {% else %} nil {% end %}),
       bg_QGraphicsView_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_press_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsView_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -33650,11 +33661,11 @@ module Qt
       Binding.bg_QGraphicsView_focusOutEvent_QFocusEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsView_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsView_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -33846,8 +33857,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -33966,8 +33977,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -34094,11 +34105,11 @@ module Qt
       Binding.bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -34818,8 +34829,8 @@ module Qt
       bg_QGraphicsTextItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_double_click_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_contextMenuEvent_QGraphicsSceneContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QGraphicsSceneContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_dragEnterEvent_QGraphicsSceneDragDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} Proc(Binding::QGraphicsSceneDragDropEvent*, Void).new{|event| self.drag_enter_event(event) } {% else %} nil {% end %}),
@@ -34863,8 +34874,8 @@ module Qt
       bg_QGraphicsTextItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_mouseDoubleClickEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_double_click_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_contextMenuEvent_QGraphicsSceneContextMenuEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("context_menu_event") %} Proc(Binding::QGraphicsSceneContextMenuEvent*, Void).new{|event| self.context_menu_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsTextItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsTextItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsTextItem_dragEnterEvent_QGraphicsSceneDragDropEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("drag_enter_event") %} Proc(Binding::QGraphicsSceneDragDropEvent*, Void).new{|event| self.drag_enter_event(event) } {% else %} nil {% end %}),
@@ -35026,11 +35037,11 @@ module Qt
       Binding.bg_QGraphicsTextItem_contextMenuEvent_QGraphicsSceneContextMenuEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsTextItem_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsTextItem_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -35257,8 +35268,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -35327,8 +35338,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -35415,11 +35426,11 @@ module Qt
       Binding.bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -36042,8 +36053,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -36088,8 +36099,8 @@ module Qt
       bg_QGraphicsItem_hoverEnterEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_enter_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_enter_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverMoveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_move_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hover_leave_event") %} Proc(Binding::QGraphicsSceneHoverEvent*, Void).new{|event| self.hover_leave_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mousePressEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_press_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseMoveEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_move_event(event) } {% else %} nil {% end %}),
       bg_QGraphicsItem_mouseReleaseEvent_QGraphicsSceneMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QGraphicsSceneMouseEvent*, Void).new{|event| self.mouse_release_event(event) } {% else %} nil {% end %}),
@@ -36229,11 +36240,11 @@ module Qt
       Binding.bg_QGraphicsItem_hoverLeaveEvent_QGraphicsSceneHoverEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QGraphicsItem_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -37114,6 +37125,59 @@ module Qt
     end
     
     def initialize(unwrap : Binding::QInputEvent*)
+      result = unwrap
+    @unwrap = result
+    end
+    
+  end
+  class KeyEvent < InputEvent
+    def initialize(type : Event::Type, key : Int32, modifiers : KeyboardModifiers, text : String = "", autorep : Bool = false, count : UInt16 = 1u16)
+      result = Binding.bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_const_QString_R_bool_ushort(type, key, modifiers, Qt::Converter::QString.wrap(text), autorep, count)
+    @unwrap = result
+    end
+    
+    def initialize(type : Event::Type, key : Int32, modifiers : KeyboardModifiers, native_scan_code : UInt32, native_virtual_key : UInt32, native_modifiers : UInt32, text : String = "", autorep : Bool = false, count : UInt16 = 1u16)
+      result = Binding.bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_quint32_quint32_quint32_const_QString_R_bool_ushort(type, key, modifiers, native_scan_code, native_virtual_key, native_modifiers, Qt::Converter::QString.wrap(text), autorep, count)
+    @unwrap = result
+    end
+    
+    def key() : Int32
+      Binding.bg_QKeyEvent_key_(self)
+    end
+    
+    def matches(key : KeySequence::StandardKey) : Bool
+      Binding.bg_QKeyEvent_matches_QKeySequence__StandardKey(self, key)
+    end
+    
+    def modifiers() : KeyboardModifiers
+      Binding.bg_QKeyEvent_modifiers_(self)
+    end
+    
+    def text() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QKeyEvent_text_(self))
+    end
+    
+    def auto_repeat?() : Bool
+      Binding.bg_QKeyEvent_isAutoRepeat_(self)
+    end
+    
+    def count() : Int32
+      Binding.bg_QKeyEvent_count_(self)
+    end
+    
+    def native_scan_code() : UInt32
+      Binding.bg_QKeyEvent_nativeScanCode_(self)
+    end
+    
+    def native_virtual_key() : UInt32
+      Binding.bg_QKeyEvent_nativeVirtualKey_(self)
+    end
+    
+    def native_modifiers() : UInt32
+      Binding.bg_QKeyEvent_nativeModifiers_(self)
+    end
+    
+    def initialize(unwrap : Binding::QKeyEvent*)
       result = unwrap
     @unwrap = result
     end
@@ -40173,8 +40237,8 @@ module Qt
       bg_QWidget_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_double_click_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_mouseMoveEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_move_event") %} Proc(Binding::QMouseEvent*, Void).new{|event| self.mouse_move_event(MouseEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_wheelEvent_QWheelEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("wheel_event") %} Proc(Binding::QWheelEvent*, Void).new{|event| self.wheel_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(event) } {% else %} nil {% end %}),
-      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(event) } {% else %} nil {% end %}),
+      bg_QWidget_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_press_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
+      bg_QWidget_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|event| self.key_release_event(KeyEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusInEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_in_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_in_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_focusOutEvent_QFocusEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("focus_out_event") %} Proc(Binding::QFocusEvent*, Void).new{|event| self.focus_out_event(FocusEvent.new(unwrap: event)) } {% else %} nil {% end %}),
       bg_QWidget_enterEvent_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("enter_event") %} Proc(Binding::QEvent*, Void).new{|event| self.enter_event(Event.new(unwrap: event)) } {% else %} nil {% end %}),
@@ -40327,11 +40391,11 @@ module Qt
       Binding.bg_QWidget_wheelEvent_QWheelEvent_X(self, event)
     end
     
-    protected def key_press_event(event : Binding::QKeyEvent*) : Void
+    protected def key_press_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyPressEvent_QKeyEvent_X(self, event)
     end
     
-    protected def key_release_event(event : Binding::QKeyEvent*) : Void
+    protected def key_release_event(event : KeyEvent) : Void
       Binding.bg_QWidget_keyReleaseEvent_QKeyEvent_X(self, event)
     end
     
@@ -41604,8 +41668,8 @@ module Qt
       bg_QWindow_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} Proc(Binding::QHideEvent*, Void).new{|unnamed_arg_0| self.hide_event(HideEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_double_click_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -41652,8 +41716,8 @@ module Qt
       bg_QWindow_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} Proc(Binding::QHideEvent*, Void).new{|unnamed_arg_0| self.hide_event(HideEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_double_click_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
@@ -42190,11 +42254,11 @@ module Qt
       Binding.bg_QWindow_event_QEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_press_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_press_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QWindow_keyPressEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
-    protected def key_release_event(unnamed_arg_0 : Binding::QKeyEvent*) : Void
+    protected def key_release_event(unnamed_arg_0 : KeyEvent) : Void
       Binding.bg_QWindow_keyReleaseEvent_QKeyEvent_X(self, unnamed_arg_0)
     end
     
@@ -42256,8 +42320,8 @@ module Qt
       bg_QWindow_showEvent_QShowEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("show_event") %} Proc(Binding::QShowEvent*, Void).new{|unnamed_arg_0| self.show_event(ShowEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_hideEvent_QHideEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("hide_event") %} Proc(Binding::QHideEvent*, Void).new{|unnamed_arg_0| self.hide_event(HideEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_event_QEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("event") %} Proc(Binding::QEvent*, Bool).new{|unnamed_arg_0| self.event(Event.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
-      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(unnamed_arg_0) } {% else %} nil {% end %}),
-      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(unnamed_arg_0) } {% else %} nil {% end %}),
+      bg_QWindow_keyPressEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_press_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_press_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
+      bg_QWindow_keyReleaseEvent_QKeyEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("key_release_event") %} Proc(Binding::QKeyEvent*, Void).new{|unnamed_arg_0| self.key_release_event(KeyEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mousePressEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_press_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_press_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseReleaseEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_release_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_release_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),
       bg_QWindow_mouseDoubleClickEvent_QMouseEvent_X: BindgenHelper.wrap_proc({% if forwarded.includes?("mouse_double_click_event") %} Proc(Binding::QMouseEvent*, Void).new{|unnamed_arg_0| self.mouse_double_click_event(MouseEvent.new(unwrap: unnamed_arg_0)) } {% else %} nil {% end %}),

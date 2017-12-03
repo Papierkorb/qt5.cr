@@ -35188,6 +35188,50 @@ extern "C" void bg_QInputEvent_setTimestamp_ulong(QInputEvent * _self_, ulong at
   _self_->setTimestamp(atimestamp);
 }
 
+extern "C" QKeyEvent * bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_const_QString_R_bool_ushort(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const CrystalString text, bool autorep, ushort count) {
+  return new (UseGC) QKeyEvent(type, key, modifiers, QString::fromUtf8(text.ptr, text.size), autorep, count);
+}
+
+extern "C" QKeyEvent * bg_QKeyEvent__CONSTRUCT_QEvent__Type_int_Qt__KeyboardModifiers_quint32_quint32_quint32_const_QString_R_bool_ushort(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey, quint32 nativeModifiers, const CrystalString text, bool autorep, ushort count) {
+  return new (UseGC) QKeyEvent(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, QString::fromUtf8(text.ptr, text.size), autorep, count);
+}
+
+extern "C" int bg_QKeyEvent_key_(QKeyEvent * _self_) {
+  return _self_->key();
+}
+
+extern "C" bool bg_QKeyEvent_matches_QKeySequence__StandardKey(QKeyEvent * _self_, QKeySequence::StandardKey key) {
+  return _self_->matches(key);
+}
+
+extern "C" Qt::KeyboardModifiers bg_QKeyEvent_modifiers_(QKeyEvent * _self_) {
+  return _self_->modifiers();
+}
+
+extern "C" CrystalString bg_QKeyEvent_text_(QKeyEvent * _self_) {
+  return qstring_to_crystal(_self_->text());
+}
+
+extern "C" bool bg_QKeyEvent_isAutoRepeat_(QKeyEvent * _self_) {
+  return _self_->isAutoRepeat();
+}
+
+extern "C" int bg_QKeyEvent_count_(QKeyEvent * _self_) {
+  return _self_->count();
+}
+
+extern "C" quint32 bg_QKeyEvent_nativeScanCode_(QKeyEvent * _self_) {
+  return _self_->nativeScanCode();
+}
+
+extern "C" quint32 bg_QKeyEvent_nativeVirtualKey_(QKeyEvent * _self_) {
+  return _self_->nativeVirtualKey();
+}
+
+extern "C" quint32 bg_QKeyEvent_nativeModifiers_(QKeyEvent * _self_) {
+  return _self_->nativeModifiers();
+}
+
 extern "C" QMouseEvent * bg_QMouseEvent__CONSTRUCT_QEvent__Type_const_QPointF_R_Qt__MouseButton_Qt__MouseButtons_Qt__KeyboardModifiers(QEvent::Type type, const QPointF localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers) {
   return new (UseGC) QMouseEvent(type, localPos, button, buttons, modifiers);
 }
