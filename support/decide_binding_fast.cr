@@ -70,6 +70,11 @@ end
 
 # Build static library on first use.
 unless File.exists?("#{__DIR__}/../ext/binding_#{chosen_binding}.a")
+  chosen_version = chosen_binding[/-qt([0-9.]+)$/, 1]
+
+  STDERR.puts "Couldn't find built version of #{chosen_binding} for Qt#{chosen_version}"
+  STDERR.puts "Building now!"
+
   # Calls out into the slow script again to set up the build environment.
   Process.run(
     "crystal",
@@ -78,6 +83,7 @@ unless File.exists?("#{__DIR__}/../ext/binding_#{chosen_binding}.a")
       "--",
       min_version, "make",
     ],
+    env: { "QT_VERSION" => chosen_version },
     output: STDERR,
     error: STDERR,
   )

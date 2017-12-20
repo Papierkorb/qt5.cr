@@ -24,6 +24,7 @@ unless errors.empty? # Cheap error output.
     STDERR.puts(message) if message
   end
 
+  STDERR.puts "\nFailed to find one or more paths.  See above for details."
   exit 1
 end
 
