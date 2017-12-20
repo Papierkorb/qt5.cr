@@ -79,7 +79,7 @@ unless File.exists?("#{__DIR__}/../ext/binding_#{chosen_binding}.a")
       min_version, "make",
     ],
     output: STDERR,
-    error: true,
+    error: STDERR,
   )
 end
 
