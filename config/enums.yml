@@ -39,6 +39,7 @@ enums:
   "Qt::PenStyle": PenStyle
   "Qt::ScreenOrientations": ScreenOrientations
   "Qt::ArrowType": ArrowType
+  "QVariant::Type": VariantType
   "QSocketNotifier::Type": SocketNotifier::Type
   "QSizePolicy::ControlType": SizePolicy::ControlType
   "QSizePolicy::ControlTypes": SizePolicy::ControlTypes

@@ -39,6 +39,7 @@ classes:
   QCoreApplication: CoreApplication
   QGuiApplication: GuiApplication
   QApplication: Application
+  QVariant: Variant
   QImage: Image
   QPixmap: Pixmap
   QIcon: Icon
