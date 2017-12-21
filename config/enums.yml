@@ -85,6 +85,9 @@ enums:
   "QLayout::SizeConstraint": Layout::SizeConstraint
   "QBoxLayout::Direction": BoxLayout::Direction
   "QStackedLayout::StackingMode": StackedLayout::StackingMode
+  "QFormLayout::FieldGrowthPolicy": FormLayout::FieldGrowthPolicy
+  "QFormLayout::ItemRole": FormLayout::ItemRole
+  "QFormLayout::RowWrapPolicy": FormLayout::RowWrapPolicy
   "Qt::FindChildOptions": FindChildOptions
   "QPaintDevice::PaintDeviceMetric": PaintDevice::PaintDeviceMetric
   "QAction::ActionEvent": Action::Event

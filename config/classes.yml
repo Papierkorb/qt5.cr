@@ -54,6 +54,7 @@ classes:
   QVBoxLayout: VBoxLayout
   QGridLayout: GridLayout
   QStackedLayout: StackedLayout
+  QFormLayout: FormLayout
   QPalette: Palette
   QPoint: Point
   QPointF: PointF

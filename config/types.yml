@@ -94,6 +94,7 @@ types: # Type rewrite rules
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
   "QTextOption::Tab": { ignore: true }
+  "QFormLayout::TakeRowResult": { ignore: true }
 
   # No support for associative containers yet
   "QMap<int, QVariant>": { ignore: true }
