@@ -96,8 +96,9 @@ enums:
   "QKeySequence::StandardKey": KeySequence::StandardKey
   "QKeySequence::SequenceFormat": KeySequence::SequenceFormat
   "QKeySequence::SequenceMatch": KeySequence::SequenceMatch
-  "QGraphicsItem::GraphicsItemFlags": GraphicsItem::GraphicsItemFlags
-  "QGraphicsItem::GraphicsItemFlag": GraphicsItem::GraphicsItemFlag
+  "QGraphicsItem::GraphicsItemFlags": GraphicsItem::Flags
+  "QGraphicsItem::GraphicsItemFlag": GraphicsItem::Flag
+  "QGraphicsItem::GraphicsItemChange": GraphicsItem::Change
   "QGraphicsItem::CacheMode": GraphicsItem::CacheMode
   "QGraphicsItem::PanelModality": GraphicsItem::PanelModality
   "QGraphicsItem::Extension": GraphicsItem::Extension
