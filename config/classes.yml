@@ -11,6 +11,7 @@ classes:
   QToolButton: ToolButton
   QToolBar: ToolBar
   QFrame: Frame
+  QComboBox: ComboBox
   QProgressBar: ProgressBar
   QAbstractSlider: AbstractSlider
   QDial: Dial

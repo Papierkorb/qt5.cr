@@ -39,6 +39,8 @@ enums:
   "Qt::PenStyle": PenStyle
   "Qt::ScreenOrientations": ScreenOrientations
   "Qt::ArrowType": ArrowType
+  "Qt::CaseSensitivity": CaseSensitivity
+  "Qt::MatchFlags": MatchFlags
   "QVariant::Type": VariantType
   "QSocketNotifier::Type": SocketNotifier::Type
   "QSizePolicy::ControlType": SizePolicy::ControlType
@@ -55,6 +57,8 @@ enums:
   "QToolButton::ToolButtonPopupMode": ToolButton::ToolButtonPopupMode
   "QFrame::Shape": Frame::Shape
   "QFrame::Shadow": Frame::Shadow
+  "QComboBox::InsertPolicy": ComboBox::InsertPolicy
+  "QComboBox::SizeAdjustPolicy": ComboBox::SizeAdjustPolicy
   "QImage::Format": Image::Format
   "Qt::ImageConversionFlags": ImageConversionFlags
   "Qt::GlobalColor": GlobalColor
