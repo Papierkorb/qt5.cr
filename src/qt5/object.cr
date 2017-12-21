@@ -1,8 +1,8 @@
 module Qt
   class Object
     # Returns the hash of the underlying QObject pointer.
-    def hash
-      @unwrap.hash
+    def hash(hasher)
+      @unwrap.hash(hasher)
     end
 
     # Compares this to *other* by testing the underlying QObject pointers.
