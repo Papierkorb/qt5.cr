@@ -37,9 +37,10 @@ use_binding = "#{vars["os"]}-#{vars["libc"]}-#{vars["architecture"]}-qt#{detecte
 if RUN_MAKE
   Process.run(
     "make",
-    output: STDERR,
-    error: true,
+    [ ] of String,
     env: { "BINDING_PLATFORM" => use_binding },
+    output: STDERR,
+    error: STDERR,
     chdir: "#{__DIR__}/../ext",
   )
 end
