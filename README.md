@@ -32,24 +32,21 @@ dependencies:
     branch: master-ready-to-use
 ```
 
-### Generating the bindings yourself
+Your users will **require the Qt5 libraries** on their system.
 
-Add this to your `shard.yml` instead:
+### Additional development dependencies
 
-```yaml
-dependencies:
-  qt5:
-    github: Papierkorb/qt5.cr
-    branch: master
-```
+Using your systems package manager:
 
-Then run `crystal deps` and `lib/bindgen/tool.sh qt.yml` to generate them.
+* **ArchLinux** `pacman -S qt5-base`
+* **Debian** `apt-get install qtbase5-dev`
+* **Ubuntu** `apt-get install qtbase5-dev`
 
 ### Sample code
 
 Have a look in [samples/](https://github.com/Papierkorb/qt5.cr/tree/master/samples)!
 
-Though, to make this not look empty, here's the possibly simplest program imaginable:
+A short **Hello World** snippet looks like this:
 
 ```crystal
 require "qt5" # Require it!
@@ -65,24 +62,74 @@ Qt::Application.exec # And run it!
 
 ![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
 
+### A note on Qt's license
 
-## Preview Checklist
+A common misconception is that you have to pay for Qt to use it in closed-source
+applications.
 
-What **works**:
-* Generation of bindings that feel kinda native
-* Sub-classing C++/Qt classes
-  * Overriding virtual C++ methods!
-* Connecting to Qt signals
-* Instantiating pre-specified C++ template containers
-  * `QList`, `std::vector`, and friends
+This project assumes you'll link to Qt dynamically.  In this case, you can use
+**Qt free of charge** including for **closed-source, commercial applications**
+under the terms of the **LGPL**.
 
-What's **to be done**:
+You can build closed-source applications using Crystal, this shard, and Qt
+**for free**.
+
+**Note**: This section is to combat this misconception, the authors of `qt5.cr`
+are in no way responsible to check if the same terms apply **in your jurisdiction**.
+
+## Generating the bindings
+
+If you want to work on `qt5.cr` itself, or have a custom build of Qt you want to
+use, you'll have to generate the bindings yourself.
+
+These steps can be followed from a project using `qt5.cr`, or from within
+`qt5.cr` itself.  For the latter, just check out the `master` branch instead
+of changing a `shard.yml`.
+
+**Important**: For this you'll also have to meet the dependencies of bindgen.
+
+### Naming scheme
+
+As `qt5.cr` supports many different versions of Qt on different platforms,
+generated bindings follow a naming scheme.  The scheme is as follows:
+
+* `KERNEL-LIB_C-ARCH-qtVERSION`, e.g. `linux-gnu-x86_64-qt5.10`
+* `KERNEL` is the OS kernel, e.g. `linux`, `darwin`, `windows`
+* `LIB_C` is the lib C name, e.g. `gnu`, `musl`, `win32`
+* `ARCH` is the architecture, e.g. `i686`, `x86_64`, `arm`
+* `VERSION` is the Qt version, e.g. `5.5`, `5.6`, ...
+
+The naming scheme is not strictly enforced.  However, it should always end with
+`-qtVERSION`!
+
+### Generating all binding versions
+
+The `master-ready-to-use` branch is built using this method:
+
+1. Change into the `qt5.cr` directory
+2. If you want to change which bindings to generate, edit `support/generate_bindings.cr`
+3. Run `crystal support/generate_bindings.cr`
+
+The script will automatically download, unpack, build and generate all
+configured versions of Qt.  It'll store the Qt5 versions in a directory called
+`download_cache/`.  Subsequent invocations of that script will use these cached
+assets.  **The first run may take a long time**.
+
+### Generating a specific binding version
+
+1. Use the `master` branch of `qt5.cr` in your `shard.yml`
+2. Run `crystal deps` to download dependencies
+3. Decide which version of Qt to use, and build the scheme (See above)
+4. Export the binding scheme: `export BINDING_PLATFORM=linux-gnu-x86_64-qt5.10`
+5. If you're not using your systems Qt: `export QMAKE=/path/to/qmake`
+6. Run bindgen: `lib/bindgen/tool.sh qt.yml --stats`
+7. Verify: `crystal spec`
+
+## Future things to do
+
 * Forwarding `qHash()` of wrapped types (to `Object#hash`)
 * Integration with **LibEvent**: Right now, Qt blocks the whole thread.
 * The rest of the billion Qt classes of interest
-
-### Future
-
 * Everything in the **to be done** category
 * Integration for the `Qt Designer` UI designer
 * Integration for `Qt Linguist`
@@ -90,36 +137,7 @@ What's **to be done**:
 * UI test library, with adapter for `spec`
   * Also, actual tests - Let's catch whacko bugs right in the CI!
 * Automated copy (and adaption) of the Qt documentation, for easy Crystal-specific docs
-  * Haven't checked the license of the Qt docs yet though, maybe a legal issue?
-* Proper bindgen documentation.  It being a complex project is no excuse to *not*
-  having proper docs.
-
-## Name rewriting rules
-
-* Everything resides in the `Qt` module (As configured)
-* Classes get their `Q` prefix stripped: `QWidget -> Qt::Widget`
-  * This is the only manual rule.  All other rules are **automatic**.
-* Method names get underscored: `addWidget() -> #add_widget`
-  * Setter methods are rewritten: `setWindowTitle() -> #window_title=`
-  * Getter methods are rewritten: `getWindowTitle() -> #window_title`
-  * Bool getters are rewritten: `getAwesome() -> #awesome?`
-  * `is` getters are rewritten: `isEmpty() -> #empty?`
-  * `has` getters are rewritten: `hasSpace() -> #has_space?`
-* On signal methods:
-  * Keep their name for the `emit` version: `pressed() -> #pressed`
-  * Get an `on_` prefix for the connect version: `#on_pressed do .. end`
-* Enum fields get title-cased if not already: `color0 -> Color0`
-
-## Dependencies
-
-### Developing with these bindings
-
-* `Qt5` of version Qt 5.6.x (or higher), development headers and libraries
-* A modern C++ compiler
-
-### What your user will need
-
-* Only the `Qt5` libraries
+  * The Qt Docs license should allow this if done correctly
 
 ## Contributing
 
