@@ -59,7 +59,7 @@ enums:
   "QFrame::Shadow": Frame::Shadow
   "QComboBox::InsertPolicy": ComboBox::InsertPolicy
   "QComboBox::SizeAdjustPolicy": ComboBox::SizeAdjustPolicy
-  "QImage::Format": Image::Format
+  "QImage::Format": { destination: "Image::Format", prefix: "Format_" }
   "Qt::ImageConversionFlags": ImageConversionFlags
   "Qt::GlobalColor": GlobalColor
   "Qt::MaskMode": MaskMode

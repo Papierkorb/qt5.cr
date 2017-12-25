@@ -6,7 +6,7 @@ class DrawArea < Qt::Widget
     super # Call this first!
 
     # We're using @image as backing store of the picture the user is drawing.
-    @image = Qt::Image.new(500, 500, Qt::Image::Format::FormatARGB32)
+    @image = Qt::Image.new(500, 500, Qt::Image::Format::Argb32)
     @image.fill Qt::GlobalColor::White
 
     @brush = Qt::Brush.new(Qt::GlobalColor::Black)
