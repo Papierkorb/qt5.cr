@@ -88,7 +88,7 @@ module Qt
     end
   end
   
-  @[Link(ldflags: "#{__DIR__}/../../../ext/binding_linux-gnu-x86_64-qt5.7.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets")]
+  @[Link(ldflags: "#{__DIR__}/../../../ext/binding_linux-gnu-x86_64-qt5.10.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets")]
   lib Binding
     alias QObject = Void
     alias QMetaObject = Void
@@ -337,6 +337,8 @@ module Qt
     alias QAbstractGraphicsShapeItemPrivate = Void
     alias QGradient = Void
     alias QRgba64 = Void
+    alias QStringView = Void
+    alias QLatin1String = Void
     alias QDynamicPropertyChangeEvent = Void
     alias QDeferredDeleteEvent = Void
     alias QInputEvent = Void
@@ -2549,6 +2551,7 @@ module Qt
     fun bg_QObject_thread_(_self_ : QObject*) : QThread*
     fun bg_QObject_moveToThread_QThread_X(_self_ : QObject*, thread : QThread*) : Void
     fun bg_QObject_startTimer_int_Qt__TimerType(_self_ : QObject*, interval : Int32, timer_type : TimerType) : Int32
+    fun bg_QObject_startTimer_std__chrono__milliseconds_Qt__TimerType(_self_ : QObject*, time : Int64, timer_type : TimerType) : Int32
     fun bg_QObject_killTimer_int(_self_ : QObject*, id : Int32) : Void
     fun bg_QObject_children_(_self_ : QObject*) : QObjectList*
     fun bg_QObject_setParent_QObject_X(_self_ : QObject*, parent : QObject*) : Void
@@ -2613,6 +2616,12 @@ module Qt
     fun bg_QTimer_start_int(_self_ : QTimer*, msec : Int32) : Void
     fun bg_QTimer_start_(_self_ : QTimer*) : Void
     fun bg_QTimer_stop_(_self_ : QTimer*) : Void
+    fun bg_QTimer_setInterval_std__chrono__milliseconds(_self_ : QTimer*, value : Int64) : Void
+    fun bg_QTimer_intervalAsDuration_(_self_ : QTimer*) : Int64
+    fun bg_QTimer_remainingTimeAsDuration_(_self_ : QTimer*) : Int64
+    fun bg_QTimer_singleShot_STATIC_std__chrono__milliseconds_const_QObject_X_const_char_X(value : Int64, receiver : QObject*, member : UInt8*) : Void
+    fun bg_QTimer_singleShot_STATIC_std__chrono__milliseconds_Qt__TimerType_const_QObject_X_const_char_X(value : Int64, timer_type : TimerType, receiver : QObject*, member : UInt8*) : Void
+    fun bg_QTimer_start_std__chrono__milliseconds(_self_ : QTimer*, value : Int64) : Void
     fun bg_QTimer_timerEvent_QTimerEvent_X(_self_ : QTimer*, unnamed_arg_0 : QTimerEvent*) : Void
     fun bg_QObject_event_QEvent_X(_self_ : QTimer*, event : QEvent*) : Bool
     fun bg_QObject_eventFilter_QObject_X_QEvent_X(_self_ : QTimer*, watched : QObject*, event : QEvent*) : Bool
@@ -2800,6 +2809,8 @@ module Qt
     fun bg_QWidget_setMouseTracking_bool(_self_ : QWidget*, enable : Bool) : Void
     fun bg_QWidget_hasMouseTracking_(_self_ : QWidget*) : Bool
     fun bg_QWidget_underMouse_(_self_ : QWidget*) : Bool
+    fun bg_QWidget_setTabletTracking_bool(_self_ : QWidget*, enable : Bool) : Void
+    fun bg_QWidget_hasTabletTracking_(_self_ : QWidget*) : Bool
     fun bg_QWidget_setMask_const_QBitmap_R(_self_ : QWidget*, unnamed_arg_0 : QBitmap*) : Void
     fun bg_QWidget_setMask_const_QRegion_R(_self_ : QWidget*, unnamed_arg_0 : QRegion*) : Void
     fun bg_QWidget_mask_(_self_ : QWidget*) : QRegion*
@@ -2953,6 +2964,7 @@ module Qt
     fun bg_QWidget_parentWidget_(_self_ : QWidget*) : QWidget*
     fun bg_QWidget_setWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowFlags_(_self_ : QWidget*) : WindowFlags
+    fun bg_QWidget_setWindowFlag_Qt__WindowType_bool(_self_ : QWidget*, unnamed_arg_0 : WindowType, on : Bool) : Void
     fun bg_QWidget_overrideWindowFlags_Qt__WindowFlags(_self_ : QWidget*, type : WindowFlags) : Void
     fun bg_QWidget_windowType_(_self_ : QWidget*) : WindowType
     fun bg_QWidget_find_STATIC_WId(unnamed_arg_0 : UInt32) : QWidget*
@@ -4356,6 +4368,8 @@ module Qt
     fun bg_QAction_menuRole_(_self_ : QAction*) : Action::MenuRole
     fun bg_QAction_setIconVisibleInMenu_bool(_self_ : QAction*, visible : Bool) : Void
     fun bg_QAction_isIconVisibleInMenu_(_self_ : QAction*) : Bool
+    fun bg_QAction_setShortcutVisibleInContextMenu_bool(_self_ : QAction*, show : Bool) : Void
+    fun bg_QAction_isShortcutVisibleInContextMenu_(_self_ : QAction*) : Bool
     fun bg_QAction_parentWidget_(_self_ : QAction*) : QWidget*
     fun bg_QAction_associatedWidgets_(_self_ : QAction*) : Void*
     fun bg_QAction_associatedGraphicsWidgets_(_self_ : QAction*) : Void*
@@ -4513,6 +4527,7 @@ module Qt
     fun bg_QMainWindow_setUnifiedTitleAndToolBarOnMac_bool(_self_ : QMainWindow*, set : Bool) : Void
     fun bg_QMainWindow_iconSizeChanged_const_QSize_R(_self_ : QMainWindow*, icon_size : QSize*) : Void
     fun bg_QMainWindow_toolButtonStyleChanged_Qt__ToolButtonStyle(_self_ : QMainWindow*, tool_button_style : ToolButtonStyle) : Void
+    fun bg_QMainWindow_tabifiedDockWidgetActivated_QDockWidget_X(_self_ : QMainWindow*, dock_widget : QDockWidget*) : Void
     fun bg_QMainWindow_contextMenuEvent_QContextMenuEvent_X(_self_ : QMainWindow*, event : QContextMenuEvent*) : Void
     fun bg_QMainWindow_event_QEvent_X(_self_ : QMainWindow*, event : QEvent*) : Bool
     fun bg_QWidget_devType_(_self_ : QMainWindow*) : Int32
@@ -4555,6 +4570,7 @@ module Qt
     fun bg_QWidget_focusNextPrevChild_bool(_self_ : QMainWindow*, next_ : Bool) : Bool
     fun bg_QMainWindow_CONNECT_iconSizeChanged_CrystalProc_void_const_QSize_R(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QMainWindow_CONNECT_toolButtonStyleChanged_CrystalProc_void_Qt__ToolButtonStyle(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
+    fun bg_QMainWindow_CONNECT_tabifiedDockWidgetActivated_CrystalProc_void_QDockWidget_X(_self_ : QMainWindow*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_BgInherit_MainWindow_JUMPTABLE_BgJumptable_MainWindow_R(_self_ : QMainWindow*, table : Binding::BgJumptable_MainWindow*) : Void
     fun bg_QDockWidget_metaObject_(_self_ : QDockWidget*) : QMetaObject*
     fun bg_QDockWidget_qt_metacast_const_char_X(_self_ : QDockWidget*, unnamed_arg_0 : UInt8*) : Void*
@@ -5129,6 +5145,7 @@ module Qt
     fun bg_QGuiApplication_focusObject_STATIC_() : QObject*
     fun bg_QGuiApplication_primaryScreen_STATIC_() : QScreen*
     fun bg_QGuiApplication_screens_STATIC_() : Void*
+    fun bg_QGuiApplication_screenAt_STATIC_const_QPoint_R(point : QPoint) : QScreen*
     fun bg_QGuiApplication_devicePixelRatio_(_self_ : QGuiApplication*) : Float64
     fun bg_QGuiApplication_overrideCursor_STATIC_() : QCursor*
     fun bg_QGuiApplication_setOverrideCursor_STATIC_const_QCursor_R(unnamed_arg_0 : QCursor*) : Void
@@ -5175,6 +5192,7 @@ module Qt
     fun bg_QGuiApplication_commitDataRequest_QSessionManager_R(_self_ : QGuiApplication*, session_manager : QSessionManager*) : Void
     fun bg_QGuiApplication_saveStateRequest_QSessionManager_R(_self_ : QGuiApplication*, session_manager : QSessionManager*) : Void
     fun bg_QGuiApplication_paletteChanged_const_QPalette_R(_self_ : QGuiApplication*, pal : QPalette*) : Void
+    fun bg_QGuiApplication_applicationDisplayNameChanged_(_self_ : QGuiApplication*) : Void
     fun bg_QGuiApplication_event_QEvent_X(_self_ : QGuiApplication*, unnamed_arg_0 : QEvent*) : Bool
     fun bg_QGuiApplication_compressEvent_QEvent_X_QObject_X_QPostEventList_X(_self_ : QGuiApplication*, unnamed_arg_0 : QEvent*, receiver : QObject*, unnamed_arg_2 : QPostEventList*) : Bool
     fun bg_QGuiApplication__CONSTRUCT_QGuiApplicationPrivate_R(p : QGuiApplicationPrivate*) : QGuiApplication*
@@ -5190,6 +5208,7 @@ module Qt
     fun bg_QGuiApplication_CONNECT_commitDataRequest_CrystalProc_void_QSessionManager_R(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_saveStateRequest_CrystalProc_void_QSessionManager_R(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_QGuiApplication_CONNECT_paletteChanged_CrystalProc_void_const_QPalette_R(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
+    fun bg_QGuiApplication_CONNECT_applicationDisplayNameChanged_CrystalProc_void(_self_ : QGuiApplication*, _proc_ : CrystalProc) : QMetaObjectConnection*
     fun bg_BgInherit_GuiApplication_JUMPTABLE_BgJumptable_GuiApplication_R(_self_ : QGuiApplication*, table : Binding::BgJumptable_GuiApplication*) : Void
     fun bg_QApplication_metaObject_(_self_ : QApplication*) : QMetaObject*
     fun bg_QApplication_qt_metacast_const_char_X(_self_ : QApplication*, unnamed_arg_0 : UInt8*) : Void*
@@ -5280,6 +5299,7 @@ module Qt
     fun bg_QImage_convertToFormat_QImage__Format_Qt__ImageConversionFlags(_self_ : QImage*, f : Image::Format, flags : ImageConversionFlags) : QImage*
     fun bg_QImage_convertToFormat_QImage__Format_const_QVector_QRgb__R(_self_ : QImage*, f : Image::Format, color_table : Void*) : QImage*
     fun bg_QImage_convertToFormat_QImage__Format_const_QVector_QRgb__R_Qt__ImageConversionFlags(_self_ : QImage*, f : Image::Format, color_table : Void*, flags : ImageConversionFlags) : QImage*
+    fun bg_QImage_reinterpretAsFormat_QImage__Format(_self_ : QImage*, f : Image::Format) : Bool
     fun bg_QImage_width_(_self_ : QImage*) : Int32
     fun bg_QImage_height_(_self_ : QImage*) : Int32
     fun bg_QImage_size_(_self_ : QImage*) : QSize*
@@ -5295,6 +5315,7 @@ module Qt
     fun bg_QImage_bits_(_self_ : QImage*) : UInt8*
     fun bg_QImage_constBits_(_self_ : QImage*) : UInt8*
     fun bg_QImage_byteCount_(_self_ : QImage*) : Int32
+    fun bg_QImage_sizeInBytes_(_self_ : QImage*) : LibC::SizeT
     fun bg_QImage_scanLine_int(_self_ : QImage*, unnamed_arg_0 : Int32) : UInt8*
     fun bg_QImage_constScanLine_int(_self_ : QImage*, unnamed_arg_0 : Int32) : UInt8*
     fun bg_QImage_bytesPerLine_(_self_ : QImage*) : Int32
@@ -5582,6 +5603,8 @@ module Qt
     fun bg_QTabBar_setAutoHide_bool(_self_ : QTabBar*, hide : Bool) : Void
     fun bg_QTabBar_changeCurrentOnDrag_(_self_ : QTabBar*) : Bool
     fun bg_QTabBar_setChangeCurrentOnDrag_bool(_self_ : QTabBar*, change : Bool) : Void
+    fun bg_QTabBar_accessibleTabName_int(_self_ : QTabBar*, index : Int32) : CrystalString
+    fun bg_QTabBar_setAccessibleTabName_int_const_QString_R(_self_ : QTabBar*, index : Int32, name : CrystalString) : Void
     fun bg_QTabBar_setCurrentIndex_int(_self_ : QTabBar*, index : Int32) : Void
     fun bg_QTabBar_currentChanged_int(_self_ : QTabBar*, index : Int32) : Void
     fun bg_QTabBar_tabCloseRequested_int(_self_ : QTabBar*, index : Int32) : Void
@@ -6124,6 +6147,9 @@ module Qt
     fun bg_QFormLayout_insertRow_int_const_QString_R_QLayout_X(_self_ : QFormLayout*, row : Int32, label_text : CrystalString, field : QLayout*) : Void
     fun bg_QFormLayout_insertRow_int_QWidget_X(_self_ : QFormLayout*, row : Int32, widget : QWidget*) : Void
     fun bg_QFormLayout_insertRow_int_QLayout_X(_self_ : QFormLayout*, row : Int32, layout : QLayout*) : Void
+    fun bg_QFormLayout_removeRow_int(_self_ : QFormLayout*, row : Int32) : Void
+    fun bg_QFormLayout_removeRow_QWidget_X(_self_ : QFormLayout*, widget : QWidget*) : Void
+    fun bg_QFormLayout_removeRow_QLayout_X(_self_ : QFormLayout*, layout : QLayout*) : Void
     fun bg_QFormLayout_setItem_int_QFormLayout__ItemRole_QLayoutItem_X(_self_ : QFormLayout*, row : Int32, role : FormLayout::ItemRole, item : QLayoutItem*) : Void
     fun bg_QFormLayout_setWidget_int_QFormLayout__ItemRole_QWidget_X(_self_ : QFormLayout*, row : Int32, role : FormLayout::ItemRole, widget : QWidget*) : Void
     fun bg_QFormLayout_setLayout_int_QFormLayout__ItemRole_QLayout_X(_self_ : QFormLayout*, row : Int32, role : FormLayout::ItemRole, layout : QLayout*) : Void
@@ -6398,6 +6424,8 @@ module Qt
     fun bg_QLineEdit_hasSelectedText_(_self_ : QLineEdit*) : Bool
     fun bg_QLineEdit_selectedText_(_self_ : QLineEdit*) : CrystalString
     fun bg_QLineEdit_selectionStart_(_self_ : QLineEdit*) : Int32
+    fun bg_QLineEdit_selectionEnd_(_self_ : QLineEdit*) : Int32
+    fun bg_QLineEdit_selectionLength_(_self_ : QLineEdit*) : Int32
     fun bg_QLineEdit_isUndoAvailable_(_self_ : QLineEdit*) : Bool
     fun bg_QLineEdit_isRedoAvailable_(_self_ : QLineEdit*) : Bool
     fun bg_QLineEdit_setDragEnabled_bool(_self_ : QLineEdit*, b : Bool) : Void
@@ -6543,6 +6571,8 @@ module Qt
     fun bg_QTextEdit_setOverwriteMode_bool(_self_ : QTextEdit*, overwrite : Bool) : Void
     fun bg_QTextEdit_tabStopWidth_(_self_ : QTextEdit*) : Int32
     fun bg_QTextEdit_setTabStopWidth_int(_self_ : QTextEdit*, width : Int32) : Void
+    fun bg_QTextEdit_tabStopDistance_(_self_ : QTextEdit*) : Float64
+    fun bg_QTextEdit_setTabStopDistance_qreal(_self_ : QTextEdit*, distance : Float64) : Void
     fun bg_QTextEdit_cursorWidth_(_self_ : QTextEdit*) : Int32
     fun bg_QTextEdit_setCursorWidth_int(_self_ : QTextEdit*, width : Int32) : Void
     fun bg_QTextEdit_acceptRichText_(_self_ : QTextEdit*) : Bool
@@ -6653,6 +6683,7 @@ module Qt
     fun bg_QFileDialog_setNameFilters_const_QStringList_R(_self_ : QFileDialog*, filters : QStringList*) : Void
     fun bg_QFileDialog_nameFilters_(_self_ : QFileDialog*) : QStringList*
     fun bg_QFileDialog_selectNameFilter_const_QString_R(_self_ : QFileDialog*, filter : CrystalString) : Void
+    fun bg_QFileDialog_selectedMimeTypeFilter_(_self_ : QFileDialog*) : CrystalString
     fun bg_QFileDialog_selectedNameFilter_(_self_ : QFileDialog*) : CrystalString
     fun bg_QFileDialog_setMimeTypeFilters_const_QStringList_R(_self_ : QFileDialog*, filters : QStringList*) : Void
     fun bg_QFileDialog_mimeTypeFilters_(_self_ : QFileDialog*) : QStringList*
@@ -6756,6 +6787,8 @@ module Qt
     fun bg_QTextOption_flags_(_self_ : QTextOption*) : TextOption::Flags
     fun bg_QTextOption_setTabStop_qreal(_self_ : QTextOption*, tab_stop : Float64) : Void
     fun bg_QTextOption_tabStop_(_self_ : QTextOption*) : Float64
+    fun bg_QTextOption_setTabStopDistance_qreal(_self_ : QTextOption*, tab_stop_distance : Float64) : Void
+    fun bg_QTextOption_tabStopDistance_(_self_ : QTextOption*) : Float64
     fun bg_QTextOption_setTabArray_const_QList_qreal__R(_self_ : QTextOption*, tab_stops : Void*) : Void
     fun bg_QTextOption_tabArray_(_self_ : QTextOption*) : Void*
     fun bg_QTextOption_setUseDesignMetrics_bool(_self_ : QTextOption*, b : Bool) : Void
@@ -6788,6 +6821,7 @@ module Qt
     fun bg_QTextDocument_toHtml_(_self_ : QTextDocument*) : CrystalString
     fun bg_QTextDocument_toHtml_const_QByteArray_R(_self_ : QTextDocument*, encoding : QByteArray*) : CrystalString
     fun bg_QTextDocument_setHtml_const_QString_R(_self_ : QTextDocument*, html : CrystalString) : Void
+    fun bg_QTextDocument_toRawText_(_self_ : QTextDocument*) : CrystalString
     fun bg_QTextDocument_toPlainText_(_self_ : QTextDocument*) : CrystalString
     fun bg_QTextDocument_setPlainText_const_QString_R(_self_ : QTextDocument*, text : CrystalString) : Void
     fun bg_QTextDocument_characterAt_int(_self_ : QTextDocument*, pos : Int32) : Int32
@@ -6991,6 +7025,8 @@ module Qt
     fun bg_QDir_sorting_(_self_ : QDir*) : Dir::SortFlags
     fun bg_QDir_setSorting_QDir__SortFlags(_self_ : QDir*, sort : Dir::SortFlags) : Void
     fun bg_QDir_count_(_self_ : QDir*) : UInt32
+    fun bg_QDir_isEmpty_(_self_ : QDir*) : Bool
+    fun bg_QDir_isEmpty_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : Bool
     fun bg_QDir_nameFiltersFromString_STATIC_const_QString_R(name_filter : CrystalString) : QStringList*
     fun bg_QDir_entryList_(_self_ : QDir*) : QStringList*
     fun bg_QDir_entryList_QDir__Filters(_self_ : QDir*, filters : Dir::Filters) : QStringList*
@@ -8023,12 +8059,16 @@ module Qt
     fun bg_QColor__CONSTRUCT_QRgb(rgb : UInt32) : QColor*
     fun bg_QColor__CONSTRUCT_QRgba64(rgba64 : QRgba64*) : QColor*
     fun bg_QColor__CONSTRUCT_const_QString_R(name : CrystalString) : QColor*
-    fun bg_QColor__CONSTRUCT_const_char_X(name : UInt8*) : QColor*
+    fun bg_QColor__CONSTRUCT_QStringView(name : QStringView*) : QColor*
+    fun bg_QColor__CONSTRUCT_const_char_X(aname : UInt8*) : QColor*
+    fun bg_QColor__CONSTRUCT_QLatin1String(name : QLatin1String*) : QColor*
     fun bg_QColor__CONSTRUCT_QColor__Spec(spec : Color::Spec) : QColor*
     fun bg_QColor_isValid_(_self_ : QColor*) : Bool
     fun bg_QColor_name_(_self_ : QColor*) : CrystalString
     fun bg_QColor_name_QColor__NameFormat(_self_ : QColor*, format : Color::NameFormat) : CrystalString
     fun bg_QColor_setNamedColor_const_QString_R(_self_ : QColor*, name : CrystalString) : Void
+    fun bg_QColor_setNamedColor_QStringView(_self_ : QColor*, name : QStringView*) : Void
+    fun bg_QColor_setNamedColor_QLatin1String(_self_ : QColor*, name : QLatin1String*) : Void
     fun bg_QColor_colorNames_STATIC_() : QStringList*
     fun bg_QColor_spec_(_self_ : QColor*) : Color::Spec
     fun bg_QColor_alpha_(_self_ : QColor*) : Int32
@@ -8115,6 +8155,8 @@ module Qt
     fun bg_QColor_dark_int(_self_ : QColor*, f : Int32) : QColor*
     fun bg_QColor_darker_int(_self_ : QColor*, f : Int32) : QColor*
     fun bg_QColor_isValidColor_STATIC_const_QString_R(name : CrystalString) : Bool
+    fun bg_QColor_isValidColor_STATIC_QStringView(unnamed_arg_0 : QStringView*) : Bool
+    fun bg_QColor_isValidColor_STATIC_QLatin1String(unnamed_arg_0 : QLatin1String*) : Bool
     fun bg_QEvent__CONSTRUCT_QEvent__Type(type : Event::Type) : QEvent*
     fun bg_QEvent_type_(_self_ : QEvent*) : Event::Type
     fun bg_QEvent_spontaneous_(_self_ : QEvent*) : Bool
@@ -8161,6 +8203,7 @@ module Qt
     fun bg_QMouseEvent_screenPos_(_self_ : QMouseEvent*) : QPointF
     fun bg_QMouseEvent_button_(_self_ : QMouseEvent*) : MouseButton
     fun bg_QMouseEvent_buttons_(_self_ : QMouseEvent*) : MouseButtons
+    fun bg_QMouseEvent_setLocalPos_const_QPointF_R(_self_ : QMouseEvent*, local_position : QPointF) : Void
     fun bg_QMouseEvent_source_(_self_ : QMouseEvent*) : MouseEventSource
     fun bg_QMouseEvent_flags_(_self_ : QMouseEvent*) : MouseEventFlags
     fun bg_QEnterEvent__CONSTRUCT_const_QPointF_R_const_QPointF_R_const_QPointF_R(local_pos : QPointF, window_pos : QPointF, screen_pos : QPointF) : QEnterEvent*
@@ -8376,6 +8419,7 @@ module Qt
     fun bg_QIODevice_write_const_QByteArray_R(_self_ : QIODevice*, data : QByteArray*) : Int64
     fun bg_QIODevice_peek_char_X_qint64(_self_ : QIODevice*, data : UInt8*, maxlen : Int64) : Int64
     fun bg_QIODevice_peek_qint64(_self_ : QIODevice*, maxlen : Int64) : QByteArray*
+    fun bg_QIODevice_skip_qint64(_self_ : QIODevice*, max_size : Int64) : Int64
     fun bg_QIODevice_waitForReadyRead_int(_self_ : QIODevice*, msecs : Int32) : Bool
     fun bg_QIODevice_waitForBytesWritten_int(_self_ : QIODevice*, msecs : Int32) : Bool
     fun bg_QIODevice_ungetChar_char(_self_ : QIODevice*, c : UInt8) : Void
@@ -8658,6 +8702,7 @@ module Qt
     fun bg_QLine_translate_int_int(_self_ : QLine*, dx : Int32, dy : Int32) : Void
     fun bg_QLine_translated_const_QPoint_R(_self_ : QLine*, p : QPoint) : QLine*
     fun bg_QLine_translated_int_int(_self_ : QLine*, dx : Int32, dy : Int32) : QLine*
+    fun bg_QLine_center_(_self_ : QLine*) : QPoint
     fun bg_QLine_setP1_const_QPoint_R(_self_ : QLine*, p1 : QPoint) : Void
     fun bg_QLine_setP2_const_QPoint_R(_self_ : QLine*, p2 : QPoint) : Void
     fun bg_QLine_setPoints_const_QPoint_R_const_QPoint_R(_self_ : QLine*, p1 : QPoint, p2 : QPoint) : Void
@@ -8689,6 +8734,7 @@ module Qt
     fun bg_QLineF_translate_qreal_qreal(_self_ : QLineF*, dx : Float64, dy : Float64) : Void
     fun bg_QLineF_translated_const_QPointF_R(_self_ : QLineF*, p : QPointF) : QLineF*
     fun bg_QLineF_translated_qreal_qreal(_self_ : QLineF*, dx : Float64, dy : Float64) : QLineF*
+    fun bg_QLineF_center_(_self_ : QLineF*) : QPointF
     fun bg_QLineF_setP1_const_QPointF_R(_self_ : QLineF*, p1 : QPointF) : Void
     fun bg_QLineF_setP2_const_QPointF_R(_self_ : QLineF*, p2 : QPointF) : Void
     fun bg_QLineF_setPoints_const_QPointF_R_const_QPointF_R(_self_ : QLineF*, p1 : QPointF, p2 : QPointF) : Void
@@ -8718,6 +8764,7 @@ module Qt
     fun bg_QSystemTrayIcon_setVisible_bool(_self_ : QSystemTrayIcon*, visible : Bool) : Void
     fun bg_QSystemTrayIcon_show_(_self_ : QSystemTrayIcon*) : Void
     fun bg_QSystemTrayIcon_hide_(_self_ : QSystemTrayIcon*) : Void
+    fun bg_QSystemTrayIcon_showMessage_const_QString_R_const_QString_R_const_QIcon_R_int(_self_ : QSystemTrayIcon*, title : CrystalString, msg : CrystalString, icon : QIcon*, msecs : Int32) : Void
     fun bg_QSystemTrayIcon_showMessage_const_QString_R_const_QString_R_QSystemTrayIcon__MessageIcon_int(_self_ : QSystemTrayIcon*, title : CrystalString, msg : CrystalString, icon : SystemTrayIcon::MessageIcon, msecs : Int32) : Void
     fun bg_QSystemTrayIcon_activated_QSystemTrayIcon__ActivationReason(_self_ : QSystemTrayIcon*, reason : SystemTrayIcon::ActivationReason) : Void
     fun bg_QSystemTrayIcon_messageClicked_(_self_ : QSystemTrayIcon*) : Void
@@ -8879,6 +8926,7 @@ module Qt
     fun bg_QSizePolicy_retainSizeWhenHidden_(_self_ : QSizePolicy*) : Bool
     fun bg_QSizePolicy_setRetainSizeWhenHidden_bool(_self_ : QSizePolicy*, retain_size : Bool) : Void
     fun bg_QSizePolicy_transpose_(_self_ : QSizePolicy*) : Void
+    fun bg_QSizePolicy_transposed_(_self_ : QSizePolicy*) : QSizePolicy*
     fun bg_QUrl__CONSTRUCT_() : QUrl*
     fun bg_QUrl__CONSTRUCT_const_QString_R_QUrl__ParsingMode(url : CrystalString, mode : Url::ParsingMode) : QUrl*
     fun bg_QUrl_swap_QUrl_R(_self_ : QUrl*, other : QUrl*) : Void
@@ -8966,6 +9014,9 @@ module Qt
     fun bg_QScreen_trUtf8_STATIC_const_char_X_const_char_X_int(s : UInt8*, c : UInt8*, n : Int32) : CrystalString
     fun bg_QScreen_handle_(_self_ : QScreen*) : QPlatformScreen*
     fun bg_QScreen_name_(_self_ : QScreen*) : CrystalString
+    fun bg_QScreen_manufacturer_(_self_ : QScreen*) : CrystalString
+    fun bg_QScreen_model_(_self_ : QScreen*) : CrystalString
+    fun bg_QScreen_serialNumber_(_self_ : QScreen*) : CrystalString
     fun bg_QScreen_depth_(_self_ : QScreen*) : Int32
     fun bg_QScreen_size_(_self_ : QScreen*) : QSize*
     fun bg_QScreen_geometry_(_self_ : QScreen*) : QRect*
@@ -9048,6 +9099,7 @@ module Qt
     fun bg_QWindow_setVisibility_QWindow__Visibility(_self_ : QWindow*, v : Window::Visibility) : Void
     fun bg_QWindow_create_(_self_ : QWindow*) : Void
     fun bg_QWindow_winId_(_self_ : QWindow*) : UInt32
+    fun bg_QWindow_parent_QWindow__AncestorMode(_self_ : QWindow*, mode : Window::AncestorMode) : QWindow*
     fun bg_QWindow_parent_(_self_ : QWindow*) : QWindow*
     fun bg_QWindow_setParent_QWindow_X(_self_ : QWindow*, parent : QWindow*) : Void
     fun bg_QWindow_isTopLevel_(_self_ : QWindow*) : Bool
@@ -9059,6 +9111,7 @@ module Qt
     fun bg_QWindow_requestedFormat_(_self_ : QWindow*) : QSurfaceFormat*
     fun bg_QWindow_setFlags_Qt__WindowFlags(_self_ : QWindow*, flags : WindowFlags) : Void
     fun bg_QWindow_flags_(_self_ : QWindow*) : WindowFlags
+    fun bg_QWindow_setFlag_Qt__WindowType_bool(_self_ : QWindow*, unnamed_arg_0 : WindowType, on : Bool) : Void
     fun bg_QWindow_type_(_self_ : QWindow*) : WindowType
     fun bg_QWindow_title_(_self_ : QWindow*) : CrystalString
     fun bg_QWindow_setOpacity_qreal(_self_ : QWindow*, level : Float64) : Void
@@ -9070,7 +9123,9 @@ module Qt
     fun bg_QWindow_contentOrientation_(_self_ : QWindow*) : ScreenOrientation
     fun bg_QWindow_devicePixelRatio_(_self_ : QWindow*) : Float64
     fun bg_QWindow_windowState_(_self_ : QWindow*) : WindowState
+    fun bg_QWindow_windowStates_(_self_ : QWindow*) : WindowStates
     fun bg_QWindow_setWindowState_Qt__WindowState(_self_ : QWindow*, state : WindowState) : Void
+    fun bg_QWindow_setWindowStates_Qt__WindowStates(_self_ : QWindow*, states : WindowStates) : Void
     fun bg_QWindow_setTransientParent_QWindow_X(_self_ : QWindow*, parent : QWindow*) : Void
     fun bg_QWindow_transientParent_(_self_ : QWindow*) : QWindow*
     fun bg_QWindow_isAncestorOf_const_QWindow_X_QWindow__AncestorMode(_self_ : QWindow*, child : QWindow*, mode : Window::AncestorMode) : Bool
@@ -9087,8 +9142,6 @@ module Qt
     fun bg_QWindow_setMaximumSize_const_QSize_R(_self_ : QWindow*, size : QSize*) : Void
     fun bg_QWindow_setBaseSize_const_QSize_R(_self_ : QWindow*, size : QSize*) : Void
     fun bg_QWindow_setSizeIncrement_const_QSize_R(_self_ : QWindow*, size : QSize*) : Void
-    fun bg_QWindow_setGeometry_int_int_int_int(_self_ : QWindow*, posx : Int32, posy : Int32, w : Int32, h : Int32) : Void
-    fun bg_QWindow_setGeometry_const_QRect_R(_self_ : QWindow*, rect : QRect*) : Void
     fun bg_QWindow_geometry_(_self_ : QWindow*) : QRect*
     fun bg_QWindow_frameMargins_(_self_ : QWindow*) : QMargins*
     fun bg_QWindow_frameGeometry_(_self_ : QWindow*) : QRect*
@@ -9138,6 +9191,8 @@ module Qt
     fun bg_QWindow_setY_int(_self_ : QWindow*, arg : Int32) : Void
     fun bg_QWindow_setWidth_int(_self_ : QWindow*, arg : Int32) : Void
     fun bg_QWindow_setHeight_int(_self_ : QWindow*, arg : Int32) : Void
+    fun bg_QWindow_setGeometry_int_int_int_int(_self_ : QWindow*, posx : Int32, posy : Int32, w : Int32, h : Int32) : Void
+    fun bg_QWindow_setGeometry_const_QRect_R(_self_ : QWindow*, rect : QRect*) : Void
     fun bg_QWindow_setMinimumWidth_int(_self_ : QWindow*, w : Int32) : Void
     fun bg_QWindow_setMinimumHeight_int(_self_ : QWindow*, h : Int32) : Void
     fun bg_QWindow_setMaximumWidth_int(_self_ : QWindow*, w : Int32) : Void
@@ -9723,6 +9778,10 @@ module Qt
       Binding.bg_QObject_startTimer_int_Qt__TimerType(self, interval, timer_type)
     end
     
+    def start_timer(time : Time::Span, timer_type : TimerType = TimerType::CoarseTimer) : Int32
+      Binding.bg_QObject_startTimer_std__chrono__milliseconds_Qt__TimerType(self, Qt::Converter::TimeSpan.wrap(time), timer_type)
+    end
+    
     def kill_timer(id : Int32) : Void
       Binding.bg_QObject_killTimer_int(self, id)
     end
@@ -10004,6 +10063,30 @@ module Qt
     
     def stop() : Void
       Binding.bg_QTimer_stop_(self)
+    end
+    
+    def interval=(value : Time::Span) : Void
+      Binding.bg_QTimer_setInterval_std__chrono__milliseconds(self, Qt::Converter::TimeSpan.wrap(value))
+    end
+    
+    def interval_as_duration() : Time::Span
+      Qt::Converter::TimeSpan.unwrap(Binding.bg_QTimer_intervalAsDuration_(self))
+    end
+    
+    def remaining_time_as_duration() : Time::Span
+      Qt::Converter::TimeSpan.unwrap(Binding.bg_QTimer_remainingTimeAsDuration_(self))
+    end
+    
+    def self.single_shot(value : Time::Span, receiver : Object, member : UInt8*) : Void
+      Binding.bg_QTimer_singleShot_STATIC_std__chrono__milliseconds_const_QObject_X_const_char_X(Qt::Converter::TimeSpan.wrap(value), receiver, member)
+    end
+    
+    def self.single_shot(value : Time::Span, timer_type : TimerType, receiver : Object, member : UInt8*) : Void
+      Binding.bg_QTimer_singleShot_STATIC_std__chrono__milliseconds_Qt__TimerType_const_QObject_X_const_char_X(Qt::Converter::TimeSpan.wrap(value), timer_type, receiver, member)
+    end
+    
+    def start(value : Time::Span) : Void
+      Binding.bg_QTimer_start_std__chrono__milliseconds(self, Qt::Converter::TimeSpan.wrap(value))
     end
     
     protected def timer_event(unnamed_arg_0 : TimerEvent) : Void
@@ -10993,6 +11076,14 @@ module Qt
       Binding.bg_QWidget_underMouse_(self)
     end
     
+    def tablet_tracking=(enable : Bool) : Void
+      Binding.bg_QWidget_setTabletTracking_bool(self, enable)
+    end
+    
+    def has_tablet_tracking?() : Bool
+      Binding.bg_QWidget_hasTabletTracking_(self)
+    end
+    
     def mask=(unnamed_arg_0 : Binding::QBitmap*) : Void
       Binding.bg_QWidget_setMask_const_QBitmap_R(self, unnamed_arg_0)
     end
@@ -11603,6 +11694,10 @@ module Qt
     
     def window_flags() : WindowFlags
       Binding.bg_QWidget_windowFlags_(self)
+    end
+    
+    def set_window_flag(unnamed_arg_0 : WindowType, on : Bool = true) : Void
+      Binding.bg_QWidget_setWindowFlag_Qt__WindowType_bool(self, unnamed_arg_0, on)
     end
     
     def override_window_flags(type : WindowFlags) : Void
@@ -19158,6 +19253,14 @@ module Qt
       Binding.bg_QAction_isIconVisibleInMenu_(self)
     end
     
+    def shortcut_visible_in_context_menu=(show : Bool) : Void
+      Binding.bg_QAction_setShortcutVisibleInContextMenu_bool(self, show)
+    end
+    
+    def shortcut_visible_in_context_menu?() : Bool
+      Binding.bg_QAction_isShortcutVisibleInContextMenu_(self)
+    end
+    
     def parent_widget() : Widget
       Widget.new(unwrap: Binding.bg_QAction_parentWidget_(self))
     end
@@ -19995,6 +20098,10 @@ module Qt
       Binding.bg_QMainWindow_toolButtonStyleChanged_Qt__ToolButtonStyle(self, tool_button_style)
     end
     
+    def tabified_dock_widget_activated(dock_widget : DockWidget) : Void
+      Binding.bg_QMainWindow_tabifiedDockWidgetActivated_QDockWidget_X(self, dock_widget)
+    end
+    
     protected def context_menu_event(event : Binding::QContextMenuEvent*) : Void
       Binding.bg_QMainWindow_contextMenuEvent_QContextMenuEvent_X(self, event)
     end
@@ -20170,6 +20277,10 @@ module Qt
     
     def on_tool_button_style_changed(&_proc_ : Proc(ToolButtonStyle, Void)) : SignalConnection
       SignalConnection.new(unwrap: Binding.bg_QMainWindow_CONNECT_toolButtonStyleChanged_CrystalProc_void_Qt__ToolButtonStyle(self, BindgenHelper.wrap_proc(_proc_)))
+    end
+    
+    def on_tabified_dock_widget_activated(&_proc_ : Proc(DockWidget, Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QMainWindow_CONNECT_tabifiedDockWidgetActivated_CrystalProc_void_QDockWidget_X(self, BindgenHelper.wrap_proc(_proc_)))
     end
     
     def initialize(unwrap : Binding::QMainWindow*)
@@ -23141,7 +23252,7 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QCoreApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329472)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 330240)
       result = Binding.bg_QCoreApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
@@ -23494,7 +23605,7 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QGuiApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329472)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 330240)
       result = Binding.bg_QGuiApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
@@ -23573,6 +23684,10 @@ module Qt
     
     def self.screens() : Enumerable(Screen)
       Container_QList_QScreen_X.new(unwrap: Binding.bg_QGuiApplication_screens_STATIC_())
+    end
+    
+    def self.screen_at(point : Point) : Screen
+      Screen.new(unwrap: Binding.bg_QGuiApplication_screenAt_STATIC_const_QPoint_R(point))
     end
     
     def device_pixel_ratio() : Float64
@@ -23759,6 +23874,10 @@ module Qt
       Binding.bg_QGuiApplication_paletteChanged_const_QPalette_R(self, pal)
     end
     
+    def application_display_name_changed() : Void
+      Binding.bg_QGuiApplication_applicationDisplayNameChanged_(self)
+    end
+    
     protected def event(unnamed_arg_0 : Event) : Bool
       Binding.bg_QGuiApplication_event_QEvent_X(self, unnamed_arg_0)
     end
@@ -23836,6 +23955,10 @@ module Qt
       SignalConnection.new(unwrap: Binding.bg_QGuiApplication_CONNECT_paletteChanged_CrystalProc_void_const_QPalette_R(self, BindgenHelper.wrap_proc(_proc_)))
     end
     
+    def on_application_display_name_changed(&_proc_ : Proc(Void)) : SignalConnection
+      SignalConnection.new(unwrap: Binding.bg_QGuiApplication_CONNECT_applicationDisplayNameChanged_CrystalProc_void(self, BindgenHelper.wrap_proc(_proc_)))
+    end
+    
     def initialize(unwrap : Binding::QGuiApplication*)
       result = unwrap
     @unwrap = result
@@ -23879,7 +24002,7 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QApplication_trUtf8_STATIC_const_char_X_const_char_X_int(s, c, n))
     end
     
-    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 329472)
+    def initialize(argc : Int32*, argv : UInt8**, unnamed_arg_2 : Int32 = 330240)
       result = Binding.bg_QApplication__CONSTRUCT_int_R_char_XX_int(argc, argv, unnamed_arg_2)
     @unwrap = result
     {% begin %}
@@ -24225,6 +24348,10 @@ module Qt
       Image.new(unwrap: Binding.bg_QImage_convertToFormat_QImage__Format_const_QVector_QRgb__R_Qt__ImageConversionFlags(self, f, BindgenHelper.wrap_container(Container_QVector_QRgb, color_table).to_unsafe, flags))
     end
     
+    def reinterpret_as_format(f : Image::Format) : Bool
+      Binding.bg_QImage_reinterpretAsFormat_QImage__Format(self, f)
+    end
+    
     def width() : Int32
       Binding.bg_QImage_width_(self)
     end
@@ -24283,6 +24410,10 @@ module Qt
     
     def byte_count() : Int32
       Binding.bg_QImage_byteCount_(self)
+    end
+    
+    def size_in_bytes() : LibC::SizeT
+      Binding.bg_QImage_sizeInBytes_(self)
     end
     
     def scan_line(unnamed_arg_0 : Int32) : UInt8*
@@ -25605,6 +25736,14 @@ module Qt
     
     def change_current_on_drag=(change : Bool) : Void
       Binding.bg_QTabBar_setChangeCurrentOnDrag_bool(self, change)
+    end
+    
+    def accessible_tab_name(index : Int32) : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTabBar_accessibleTabName_int(self, index))
+    end
+    
+    def set_accessible_tab_name(index : Int32, name : String) : Void
+      Binding.bg_QTabBar_setAccessibleTabName_int_const_QString_R(self, index, Qt::Converter::QString.wrap(name))
     end
     
     def current_index=(index : Int32) : Void
@@ -28444,6 +28583,18 @@ module Qt
       Binding.bg_QFormLayout_insertRow_int_QLayout_X(self, row, layout)
     end
     
+    def remove_row(row : Int32) : Void
+      Binding.bg_QFormLayout_removeRow_int(self, row)
+    end
+    
+    def remove_row(widget : Widget) : Void
+      Binding.bg_QFormLayout_removeRow_QWidget_X(self, widget)
+    end
+    
+    def remove_row(layout : Layout) : Void
+      Binding.bg_QFormLayout_removeRow_QLayout_X(self, layout)
+    end
+    
     def set_item(row : Int32, role : FormLayout::ItemRole, item : LayoutItem) : Void
       Binding.bg_QFormLayout_setItem_int_QFormLayout__ItemRole_QLayoutItem_X(self, row, role, item)
     end
@@ -29849,6 +30000,14 @@ module Qt
       Binding.bg_QLineEdit_selectionStart_(self)
     end
     
+    def selection_end() : Int32
+      Binding.bg_QLineEdit_selectionEnd_(self)
+    end
+    
+    def selection_length() : Int32
+      Binding.bg_QLineEdit_selectionLength_(self)
+    end
+    
     def undo_available?() : Bool
       Binding.bg_QLineEdit_isUndoAvailable_(self)
     end
@@ -30540,6 +30699,14 @@ module Qt
       Binding.bg_QTextEdit_setTabStopWidth_int(self, width)
     end
     
+    def tab_stop_distance() : Float64
+      Binding.bg_QTextEdit_tabStopDistance_(self)
+    end
+    
+    def tab_stop_distance=(distance : Float64) : Void
+      Binding.bg_QTextEdit_setTabStopDistance_qreal(self, distance)
+    end
+    
     def cursor_width() : Int32
       Binding.bg_QTextEdit_cursorWidth_(self)
     end
@@ -31107,6 +31274,10 @@ module Qt
       Binding.bg_QFileDialog_selectNameFilter_const_QString_R(self, Qt::Converter::QString.wrap(filter))
     end
     
+    def selected_mime_type_filter() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_selectedMimeTypeFilter_(self))
+    end
+    
     def selected_name_filter() : String
       Qt::Converter::QString.unwrap(Binding.bg_QFileDialog_selectedNameFilter_(self))
     end
@@ -31598,6 +31769,14 @@ module Qt
       Binding.bg_QTextOption_tabStop_(self)
     end
     
+    def tab_stop_distance=(tab_stop_distance : Float64) : Void
+      Binding.bg_QTextOption_setTabStopDistance_qreal(self, tab_stop_distance)
+    end
+    
+    def tab_stop_distance() : Float64
+      Binding.bg_QTextOption_tabStopDistance_(self)
+    end
+    
     def tab_array=(tab_stops : Enumerable(Float64)) : Void
       Binding.bg_QTextOption_setTabArray_const_QList_qreal__R(self, BindgenHelper.wrap_container(Container_QList_qreal, tab_stops).to_unsafe)
     end
@@ -31804,6 +31983,10 @@ module Qt
     
     def html=(html : String) : Void
       Binding.bg_QTextDocument_setHtml_const_QString_R(self, Qt::Converter::QString.wrap(html))
+    end
+    
+    def to_raw_text() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QTextDocument_toRawText_(self))
     end
     
     def to_plain_text() : String
@@ -32719,6 +32902,14 @@ module Qt
     
     def count() : UInt32
       Binding.bg_QDir_count_(self)
+    end
+    
+    def empty?() : Bool
+      Binding.bg_QDir_isEmpty_(self)
+    end
+    
+    def is_empty(filters : Dir::Filters) : Bool
+      Binding.bg_QDir_isEmpty_QDir__Filters(self, filters)
     end
     
     def self.name_filters_from_string(name_filter : String) : Binding::QStringList*
@@ -38322,8 +38513,18 @@ module Qt
     @unwrap = result
     end
     
-    def initialize(name : UInt8*)
-      result = Binding.bg_QColor__CONSTRUCT_const_char_X(name)
+    def initialize(name : Binding::QStringView*)
+      result = Binding.bg_QColor__CONSTRUCT_QStringView(name)
+    @unwrap = result
+    end
+    
+    def initialize(aname : UInt8*)
+      result = Binding.bg_QColor__CONSTRUCT_const_char_X(aname)
+    @unwrap = result
+    end
+    
+    def initialize(name : Binding::QLatin1String*)
+      result = Binding.bg_QColor__CONSTRUCT_QLatin1String(name)
     @unwrap = result
     end
     
@@ -38346,6 +38547,14 @@ module Qt
     
     def named_color=(name : String) : Void
       Binding.bg_QColor_setNamedColor_const_QString_R(self, Qt::Converter::QString.wrap(name))
+    end
+    
+    def named_color=(name : Binding::QStringView*) : Void
+      Binding.bg_QColor_setNamedColor_QStringView(self, name)
+    end
+    
+    def named_color=(name : Binding::QLatin1String*) : Void
+      Binding.bg_QColor_setNamedColor_QLatin1String(self, name)
     end
     
     def self.color_names() : Binding::QStringList*
@@ -38692,6 +38901,14 @@ module Qt
       Binding.bg_QColor_isValidColor_STATIC_const_QString_R(Qt::Converter::QString.wrap(name))
     end
     
+    def self.is_valid_color(unnamed_arg_0 : Binding::QStringView*) : Bool
+      Binding.bg_QColor_isValidColor_STATIC_QStringView(unnamed_arg_0)
+    end
+    
+    def self.is_valid_color(unnamed_arg_0 : Binding::QLatin1String*) : Bool
+      Binding.bg_QColor_isValidColor_STATIC_QLatin1String(unnamed_arg_0)
+    end
+    
     enum NameFormat : UInt32
       HexRgb = 0
       HexArgb = 1
@@ -38918,6 +39135,7 @@ module Qt
       ScreenChangeInternal = 216
       PlatformSurface = 217
       Pointer = 218
+      TabletTrackingChange = 219
       User = 1000
       MaxUser = 65535
     end
@@ -39127,6 +39345,10 @@ module Qt
     
     def buttons() : MouseButtons
       Binding.bg_QMouseEvent_buttons_(self)
+    end
+    
+    def local_pos=(local_position : PointF) : Void
+      Binding.bg_QMouseEvent_setLocalPos_const_QPointF_R(self, local_position)
     end
     
     def source() : MouseEventSource
@@ -40351,6 +40573,10 @@ module Qt
     
     def peek(maxlen : Int64) : Binding::QByteArray*
       Binding.bg_QIODevice_peek_qint64(self, maxlen)
+    end
+    
+    def skip(max_size : Int64) : Int64
+      Binding.bg_QIODevice_skip_qint64(self, max_size)
     end
     
     def wait_for_ready_read(msecs : Int32) : Bool
@@ -41658,6 +41884,10 @@ module Qt
       QLine.new(unwrap: Binding.bg_QLine_translated_int_int(self, dx, dy))
     end
     
+    def center() : Point
+      Point.new(unwrap: Binding.bg_QLine_center_(self))
+    end
+    
     def p1=(p1 : Point) : Void
       Binding.bg_QLine_setP1_const_QPoint_R(self, p1)
     end
@@ -41796,6 +42026,10 @@ module Qt
     
     def translated(dx : Float64, dy : Float64) : QLineF
       QLineF.new(unwrap: Binding.bg_QLineF_translated_qreal_qreal(self, dx, dy))
+    end
+    
+    def center() : PointF
+      PointF.new(unwrap: Binding.bg_QLineF_center_(self))
     end
     
     def p1=(p1 : PointF) : Void
@@ -41964,6 +42198,10 @@ module Qt
     
     def hide() : Void
       Binding.bg_QSystemTrayIcon_hide_(self)
+    end
+    
+    def show_message(title : String, msg : String, icon : Icon, msecs : Int32 = 10000) : Void
+      Binding.bg_QSystemTrayIcon_showMessage_const_QString_R_const_QString_R_const_QIcon_R_int(self, Qt::Converter::QString.wrap(title), Qt::Converter::QString.wrap(msg), icon, msecs)
     end
     
     def show_message(title : String, msg : String, icon : SystemTrayIcon::MessageIcon = SystemTrayIcon::MessageIcon::Information, msecs : Int32 = 10000) : Void
@@ -42770,6 +43008,10 @@ module Qt
       Binding.bg_QSizePolicy_transpose_(self)
     end
     
+    def transposed() : SizePolicy
+      SizePolicy.new(unwrap: Binding.bg_QSizePolicy_transposed_(self))
+    end
+    
     enum ControlType : UInt32
       DefaultType = 1
       ButtonBox = 2
@@ -43242,6 +43484,18 @@ module Qt
       Qt::Converter::QString.unwrap(Binding.bg_QScreen_name_(self))
     end
     
+    def manufacturer() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_manufacturer_(self))
+    end
+    
+    def model() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_model_(self))
+    end
+    
+    def serial_number() : String
+      Qt::Converter::QString.unwrap(Binding.bg_QScreen_serialNumber_(self))
+    end
+    
     def depth() : Int32
       Binding.bg_QScreen_depth_(self)
     end
@@ -43510,6 +43764,8 @@ module Qt
       RasterSurface = 0
       OpenGLSurface = 1
       RasterGLSurface = 2
+      OpenVGSurface = 3
+      VulkanSurface = 4
     end
     def to_unsafe
       @unwrap
@@ -43681,6 +43937,10 @@ module Qt
       Binding.bg_QWindow_winId_(self)
     end
     
+    def parent(mode : Window::AncestorMode) : Window
+      Window.new(unwrap: Binding.bg_QWindow_parent_QWindow__AncestorMode(self, mode))
+    end
+    
     def parent() : Window
       Window.new(unwrap: Binding.bg_QWindow_parent_(self))
     end
@@ -43723,6 +43983,10 @@ module Qt
     
     def flags() : WindowFlags
       Binding.bg_QWindow_flags_(self)
+    end
+    
+    def set_flag(unnamed_arg_0 : WindowType, on : Bool = true) : Void
+      Binding.bg_QWindow_setFlag_Qt__WindowType_bool(self, unnamed_arg_0, on)
     end
     
     def type() : WindowType
@@ -43769,8 +44033,16 @@ module Qt
       Binding.bg_QWindow_windowState_(self)
     end
     
+    def window_states() : WindowStates
+      Binding.bg_QWindow_windowStates_(self)
+    end
+    
     def window_state=(state : WindowState) : Void
       Binding.bg_QWindow_setWindowState_Qt__WindowState(self, state)
+    end
+    
+    def window_states=(states : WindowStates) : Void
+      Binding.bg_QWindow_setWindowStates_Qt__WindowStates(self, states)
     end
     
     def transient_parent=(parent : Window) : Void
@@ -43835,14 +44107,6 @@ module Qt
     
     def size_increment=(size : Binding::QSize*) : Void
       Binding.bg_QWindow_setSizeIncrement_const_QSize_R(self, size)
-    end
-    
-    def set_geometry(posx : Int32, posy : Int32, w : Int32, h : Int32) : Void
-      Binding.bg_QWindow_setGeometry_int_int_int_int(self, posx, posy, w, h)
-    end
-    
-    def geometry=(rect : Rect) : Void
-      Binding.bg_QWindow_setGeometry_const_QRect_R(self, rect)
     end
     
     def geometry() : Rect
@@ -44039,6 +44303,14 @@ module Qt
     
     def height=(arg : Int32) : Void
       Binding.bg_QWindow_setHeight_int(self, arg)
+    end
+    
+    def set_geometry(posx : Int32, posy : Int32, w : Int32, h : Int32) : Void
+      Binding.bg_QWindow_setGeometry_int_int_int_int(self, posx, posy, w, h)
+    end
+    
+    def geometry=(rect : Rect) : Void
+      Binding.bg_QWindow_setGeometry_const_QRect_R(self, rect)
     end
     
     def minimum_width=(w : Int32) : Void
@@ -45809,6 +46081,7 @@ module Qt
       AbsoluteSpacing = 1
     end
     enum Stretch : UInt32
+      AnyStretch = 0
       UltraCondensed = 50
       ExtraCondensed = 62
       Condensed = 75
@@ -45852,6 +46125,7 @@ module Qt
       OpenGLCompatible = 512
       ForceIntegerMetrics = 1024
       NoSubpixelAntialias = 2048
+      PreferNoShaping = 4096
       NoFontMerging = 32768
     end
     enum Weight : UInt32
@@ -46203,11 +46477,11 @@ module Qt
     end
     
   end
-  QT_VERSION = 329472
+  QT_VERSION = 330240
+  QT_VERSION_STR = "5.10.0"
   QT_VERSION_MAJOR = 5
-  QT_VERSION_MINOR = 7
+  QT_VERSION_MINOR = 10
   QT_VERSION_PATCH = 0
-  QT_VERSION_STR = "5.7.0"
   def self.q_version() : UInt8*
     Binding.bg____qVersion_STATIC_()
   end
@@ -47269,8 +47543,6 @@ module Qt
     BypassGraphicsProxyWidget = 536870912
     NoDropShadowWindowHint = 1073741824
     WindowFullscreenButtonHint = 2147483648
-    WindowOkButtonHint = 524288
-    WindowCancelButtonHint = 1048576
   end
   enum WindowModality : UInt32
     NonModal = 0
@@ -47324,8 +47596,6 @@ module Qt
     BypassGraphicsProxyWidget = 536870912
     NoDropShadowWindowHint = 1073741824
     WindowFullscreenButtonHint = 2147483648
-    WindowOkButtonHint = 524288
-    WindowCancelButtonHint = 1048576
   end
   enum InputMethodQuery : UInt32
     ImEnabled = 1
@@ -47442,7 +47712,12 @@ module Qt
     AaDontusenativedialogs = 23
     AaSynthesizemouseforunhandledtabletevents = 24
     AaCompresshighfrequencyevents = 25
-    AaAttributecount = 26
+    AaDontcheckopenglcontextthreadaffinity = 26
+    AaDisableshaderdiskcache = 27
+    AaDontshowshortcutsincontextmenus = 28
+    AaCompresstabletevents = 29
+    AaDisablewindowcontexthelpbutton = 30
+    AaAttributecount = 31
   end
   enum ScrollBarPolicy : UInt32
     ScrollBarAsNeeded = 0
@@ -47637,7 +47912,7 @@ module Qt
     Uuid = 30
     ModelIndex = 42
     PersistentModelIndex = 50
-    LastCoreType = 50
+    LastCoreType = 51
     Font = 64
     Pixmap = 65
     Brush = 66
@@ -47778,7 +48053,8 @@ module Qt
     WaX11donotacceptfocus = 126
     WaMacnoshadow = 127
     WaAlwaysstackontop = 128
-    WaAttributecount = 129
+    WaTablettracking = 129
+    WaAttributecount = 130
   end
   module OpenGLWidget
     enum UpdateBehavior : UInt32

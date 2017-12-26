@@ -226,6 +226,10 @@ extern "C" int bg_QObject_startTimer_int_Qt__TimerType(QObject * _self_, int int
   return _self_->startTimer(interval, timerType);
 }
 
+extern "C" int bg_QObject_startTimer_std__chrono__milliseconds_Qt__TimerType(QObject * _self_, int64_t time, Qt::TimerType timerType) {
+  return _self_->startTimer(std::chrono::milliseconds(time), timerType);
+}
+
 extern "C" void bg_QObject_killTimer_int(QObject * _self_, int id) {
   _self_->killTimer(id);
 }
@@ -2188,6 +2192,14 @@ extern "C" bool bg_QWidget_underMouse_(QWidget * _self_) {
   return _self_->underMouse();
 }
 
+extern "C" void bg_QWidget_setTabletTracking_bool(QWidget * _self_, bool enable) {
+  _self_->setTabletTracking(enable);
+}
+
+extern "C" bool bg_QWidget_hasTabletTracking_(QWidget * _self_) {
+  return _self_->hasTabletTracking();
+}
+
 extern "C" void bg_QWidget_setMask_const_QBitmap_R(QWidget * _self_, const QBitmap & unnamed_arg_0) {
   _self_->setMask(unnamed_arg_0);
 }
@@ -2798,6 +2810,10 @@ extern "C" void bg_QWidget_setWindowFlags_Qt__WindowFlags(QWidget * _self_, Qt::
 
 extern "C" Qt::WindowFlags bg_QWidget_windowFlags_(QWidget * _self_) {
   return _self_->windowFlags();
+}
+
+extern "C" void bg_QWidget_setWindowFlag_Qt__WindowType_bool(QWidget * _self_, Qt::WindowType unnamed_arg_0, bool on) {
+  _self_->setWindowFlag(unnamed_arg_0, on);
 }
 
 extern "C" void bg_QWidget_overrideWindowFlags_Qt__WindowFlags(QWidget * _self_, Qt::WindowFlags type) {
@@ -13236,6 +13252,14 @@ extern "C" bool bg_QAction_isIconVisibleInMenu_(QAction * _self_) {
   return _self_->isIconVisibleInMenu();
 }
 
+extern "C" void bg_QAction_setShortcutVisibleInContextMenu_bool(QAction * _self_, bool show) {
+  _self_->setShortcutVisibleInContextMenu(show);
+}
+
+extern "C" bool bg_QAction_isShortcutVisibleInContextMenu_(QAction * _self_) {
+  return _self_->isShortcutVisibleInContextMenu();
+}
+
 extern "C" QWidget * bg_QAction_parentWidget_(QAction * _self_) {
   return _self_->parentWidget();
 }
@@ -18854,6 +18878,10 @@ extern "C" Container_QList_QScreen_X * bg_QGuiApplication_screens_STATIC_() {
   return new (UseGC) Container_QList_QScreen_X (QGuiApplication::screens());
 }
 
+extern "C" QScreen * bg_QGuiApplication_screenAt_STATIC_const_QPoint_R(const QPoint point) {
+  return QGuiApplication::screenAt(point);
+}
+
 extern "C" qreal bg_QGuiApplication_devicePixelRatio_(QGuiApplication * _self_) {
   return _self_->devicePixelRatio();
 }
@@ -19532,6 +19560,10 @@ extern "C" QImage * bg_QImage_convertToFormat_QImage__Format_const_QVector_QRgb_
   return new (UseGC) QImage (_self_->convertToFormat(f, *(colorTable), flags));
 }
 
+extern "C" bool bg_QImage_reinterpretAsFormat_QImage__Format(QImage * _self_, QImage::Format f) {
+  return _self_->reinterpretAsFormat(f);
+}
+
 extern "C" int bg_QImage_width_(QImage * _self_) {
   return _self_->width();
 }
@@ -19590,6 +19622,10 @@ extern "C" const uchar * bg_QImage_constBits_(QImage * _self_) {
 
 extern "C" int bg_QImage_byteCount_(QImage * _self_) {
   return _self_->byteCount();
+}
+
+extern "C" qsizetype bg_QImage_sizeInBytes_(QImage * _self_) {
+  return _self_->sizeInBytes();
 }
 
 extern "C" uchar * bg_QImage_scanLine_int(QImage * _self_, int unnamed_arg_0) {
@@ -26932,6 +26968,14 @@ extern "C" int bg_QLineEdit_selectionStart_(QLineEdit * _self_) {
   return _self_->selectionStart();
 }
 
+extern "C" int bg_QLineEdit_selectionEnd_(QLineEdit * _self_) {
+  return _self_->selectionEnd();
+}
+
+extern "C" int bg_QLineEdit_selectionLength_(QLineEdit * _self_) {
+  return _self_->selectionLength();
+}
+
 extern "C" bool bg_QLineEdit_isUndoAvailable_(QLineEdit * _self_) {
   return _self_->isUndoAvailable();
 }
@@ -27814,6 +27858,14 @@ extern "C" void bg_QTextEdit_setTabStopWidth_int(QTextEdit * _self_, int width) 
   _self_->setTabStopWidth(width);
 }
 
+extern "C" qreal bg_QTextEdit_tabStopDistance_(QTextEdit * _self_) {
+  return _self_->tabStopDistance();
+}
+
+extern "C" void bg_QTextEdit_setTabStopDistance_qreal(QTextEdit * _self_, qreal distance) {
+  _self_->setTabStopDistance(distance);
+}
+
 extern "C" int bg_QTextEdit_cursorWidth_(QTextEdit * _self_) {
   return _self_->cursorWidth();
 }
@@ -28416,6 +28468,10 @@ extern "C" void bg_QFileDialog_selectNameFilter_const_QString_R(QFileDialog * _s
   _self_->selectNameFilter(QString::fromUtf8(filter.ptr, filter.size));
 }
 
+extern "C" CrystalString bg_QFileDialog_selectedMimeTypeFilter_(QFileDialog * _self_) {
+  return qstring_to_crystal(_self_->selectedMimeTypeFilter());
+}
+
 extern "C" CrystalString bg_QFileDialog_selectedNameFilter_(QFileDialog * _self_) {
   return qstring_to_crystal(_self_->selectedNameFilter());
 }
@@ -28784,6 +28840,14 @@ extern "C" qreal bg_QTextOption_tabStop_(QTextOption * _self_) {
   return _self_->tabStop();
 }
 
+extern "C" void bg_QTextOption_setTabStopDistance_qreal(QTextOption * _self_, qreal tabStopDistance) {
+  _self_->setTabStopDistance(tabStopDistance);
+}
+
+extern "C" qreal bg_QTextOption_tabStopDistance_(QTextOption * _self_) {
+  return _self_->tabStopDistance();
+}
+
 extern "C" void bg_QTextOption_setTabArray_const_QList_qreal__R(QTextOption * _self_, const Container_QList_qreal * tabStops) {
   _self_->setTabArray(*(tabStops));
 }
@@ -29046,6 +29110,10 @@ extern "C" CrystalString bg_QTextDocument_toHtml_const_QByteArray_R(QTextDocumen
 
 extern "C" void bg_QTextDocument_setHtml_const_QString_R(QTextDocument * _self_, const CrystalString html) {
   _self_->setHtml(QString::fromUtf8(html.ptr, html.size));
+}
+
+extern "C" CrystalString bg_QTextDocument_toRawText_(QTextDocument * _self_) {
+  return qstring_to_crystal(_self_->toRawText());
 }
 
 extern "C" CrystalString bg_QTextDocument_toPlainText_(QTextDocument * _self_) {
@@ -29830,6 +29898,14 @@ extern "C" void bg_QDir_setSorting_QDir__SortFlags(QDir * _self_, QDir::SortFlag
 
 extern "C" uint bg_QDir_count_(QDir * _self_) {
   return _self_->count();
+}
+
+extern "C" bool bg_QDir_isEmpty_(QDir * _self_) {
+  return _self_->isEmpty();
+}
+
+extern "C" bool bg_QDir_isEmpty_QDir__Filters(QDir * _self_, QDir::Filters filters) {
+  return _self_->isEmpty(filters);
 }
 
 extern "C" QStringList * bg_QDir_nameFiltersFromString_STATIC_const_QString_R(const CrystalString nameFilter) {
@@ -37015,6 +37091,10 @@ extern "C" QColor * bg_QColor__CONSTRUCT_const_QString_R(const CrystalString nam
   return new (UseGC) QColor(QString::fromUtf8(name.ptr, name.size));
 }
 
+extern "C" QColor * bg_QColor__CONSTRUCT_QStringView(QStringView & name) {
+  return new (UseGC) QColor(name);
+}
+
 extern "C" QColor * bg_QColor__CONSTRUCT_const_char_X(const char * aname) {
   return new (UseGC) QColor(aname);
 }
@@ -37041,6 +37121,10 @@ extern "C" CrystalString bg_QColor_name_QColor__NameFormat(QColor * _self_, QCol
 
 extern "C" void bg_QColor_setNamedColor_const_QString_R(QColor * _self_, const CrystalString name) {
   _self_->setNamedColor(QString::fromUtf8(name.ptr, name.size));
+}
+
+extern "C" void bg_QColor_setNamedColor_QStringView(QColor * _self_, QStringView & name) {
+  _self_->setNamedColor(name);
 }
 
 extern "C" void bg_QColor_setNamedColor_QLatin1String(QColor * _self_, QLatin1String & name) {
@@ -37389,6 +37473,10 @@ extern "C" QColor * bg_QColor_darker_int(QColor * _self_, int f) {
 
 extern "C" bool bg_QColor_isValidColor_STATIC_const_QString_R(const CrystalString name) {
   return QColor::isValidColor(QString::fromUtf8(name.ptr, name.size));
+}
+
+extern "C" bool bg_QColor_isValidColor_STATIC_QStringView(QStringView & unnamed_arg_0) {
+  return QColor::isValidColor(unnamed_arg_0);
 }
 
 extern "C" bool bg_QColor_isValidColor_STATIC_QLatin1String(QLatin1String & unnamed_arg_0) {
@@ -38785,6 +38873,10 @@ extern "C" qint64 bg_QIODevice_peek_char_X_qint64(QIODevice * _self_, char * dat
 
 extern "C" QByteArray * bg_QIODevice_peek_qint64(QIODevice * _self_, qint64 maxlen) {
   return new (UseGC) QByteArray (_self_->peek(maxlen));
+}
+
+extern "C" qint64 bg_QIODevice_skip_qint64(QIODevice * _self_, qint64 maxSize) {
+  return _self_->skip(maxSize);
 }
 
 extern "C" bool bg_QIODevice_waitForReadyRead_int(QIODevice * _self_, int msecs) {
@@ -40319,6 +40411,10 @@ extern "C" void bg_QSystemTrayIcon_hide_(QSystemTrayIcon * _self_) {
   _self_->hide();
 }
 
+extern "C" void bg_QSystemTrayIcon_showMessage_const_QString_R_const_QString_R_const_QIcon_R_int(QSystemTrayIcon * _self_, const CrystalString title, const CrystalString msg, const QIcon & icon, int msecs) {
+  _self_->showMessage(QString::fromUtf8(title.ptr, title.size), QString::fromUtf8(msg.ptr, msg.size), icon, msecs);
+}
+
 extern "C" void bg_QSystemTrayIcon_showMessage_const_QString_R_const_QString_R_QSystemTrayIcon__MessageIcon_int(QSystemTrayIcon * _self_, const CrystalString title, const CrystalString msg, QSystemTrayIcon::MessageIcon icon, int msecs) {
   _self_->showMessage(QString::fromUtf8(title.ptr, title.size), QString::fromUtf8(msg.ptr, msg.size), icon, msecs);
 }
@@ -41327,6 +41423,10 @@ extern "C" void bg_QSizePolicy_transpose_(QSizePolicy * _self_) {
   _self_->transpose();
 }
 
+extern "C" QSizePolicy * bg_QSizePolicy_transposed_(QSizePolicy * _self_) {
+  return new (UseGC) QSizePolicy (_self_->transposed());
+}
+
 extern "C" QUrl * bg_QUrl__CONSTRUCT_() {
   return new (UseGC) QUrl();
 }
@@ -41779,6 +41879,18 @@ extern "C" QPlatformScreen * bg_QScreen_handle_(QScreen * _self_) {
 
 extern "C" CrystalString bg_QScreen_name_(QScreen * _self_) {
   return qstring_to_crystal(_self_->name());
+}
+
+extern "C" CrystalString bg_QScreen_manufacturer_(QScreen * _self_) {
+  return qstring_to_crystal(_self_->manufacturer());
+}
+
+extern "C" CrystalString bg_QScreen_model_(QScreen * _self_) {
+  return qstring_to_crystal(_self_->model());
+}
+
+extern "C" CrystalString bg_QScreen_serialNumber_(QScreen * _self_) {
+  return qstring_to_crystal(_self_->serialNumber());
 }
 
 extern "C" int bg_QScreen_depth_(QScreen * _self_) {
@@ -42454,6 +42566,10 @@ extern "C" WId bg_QWindow_winId_(QWindow * _self_) {
   return _self_->winId();
 }
 
+extern "C" QWindow * bg_QWindow_parent_QWindow__AncestorMode(QWindow * _self_, QWindow::AncestorMode mode) {
+  return _self_->parent(mode);
+}
+
 extern "C" QWindow * bg_QWindow_parent_(QWindow * _self_) {
   return _self_->parent();
 }
@@ -42496,6 +42612,10 @@ extern "C" void bg_QWindow_setFlags_Qt__WindowFlags(QWindow * _self_, Qt::Window
 
 extern "C" Qt::WindowFlags bg_QWindow_flags_(QWindow * _self_) {
   return _self_->flags();
+}
+
+extern "C" void bg_QWindow_setFlag_Qt__WindowType_bool(QWindow * _self_, Qt::WindowType unnamed_arg_0, bool on) {
+  _self_->setFlag(unnamed_arg_0, on);
 }
 
 extern "C" Qt::WindowType bg_QWindow_type_(QWindow * _self_) {
@@ -42542,8 +42662,16 @@ extern "C" Qt::WindowState bg_QWindow_windowState_(QWindow * _self_) {
   return _self_->windowState();
 }
 
+extern "C" Qt::WindowStates bg_QWindow_windowStates_(QWindow * _self_) {
+  return _self_->windowStates();
+}
+
 extern "C" void bg_QWindow_setWindowState_Qt__WindowState(QWindow * _self_, Qt::WindowState state) {
   _self_->setWindowState(state);
+}
+
+extern "C" void bg_QWindow_setWindowStates_Qt__WindowStates(QWindow * _self_, Qt::WindowStates states) {
+  _self_->setWindowStates(states);
 }
 
 extern "C" void bg_QWindow_setTransientParent_QWindow_X(QWindow * _self_, QWindow * parent) {
@@ -42608,14 +42736,6 @@ extern "C" void bg_QWindow_setBaseSize_const_QSize_R(QWindow * _self_, const QSi
 
 extern "C" void bg_QWindow_setSizeIncrement_const_QSize_R(QWindow * _self_, const QSize & size) {
   _self_->setSizeIncrement(size);
-}
-
-extern "C" void bg_QWindow_setGeometry_int_int_int_int(QWindow * _self_, int posx, int posy, int w, int h) {
-  _self_->setGeometry(posx, posy, w, h);
-}
-
-extern "C" void bg_QWindow_setGeometry_const_QRect_R(QWindow * _self_, const QRect & rect) {
-  _self_->setGeometry(rect);
 }
 
 extern "C" QRect * bg_QWindow_geometry_(QWindow * _self_) {
@@ -42812,6 +42932,14 @@ extern "C" void bg_QWindow_setWidth_int(QWindow * _self_, int arg) {
 
 extern "C" void bg_QWindow_setHeight_int(QWindow * _self_, int arg) {
   _self_->setHeight(arg);
+}
+
+extern "C" void bg_QWindow_setGeometry_int_int_int_int(QWindow * _self_, int posx, int posy, int w, int h) {
+  _self_->setGeometry(posx, posy, w, h);
+}
+
+extern "C" void bg_QWindow_setGeometry_const_QRect_R(QWindow * _self_, const QRect & rect) {
+  _self_->setGeometry(rect);
 }
 
 extern "C" void bg_QWindow_setMinimumWidth_int(QWindow * _self_, int w) {
