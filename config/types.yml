@@ -21,6 +21,21 @@ types: # Type rewrite rules
     from_crystal: "(%.ord)"
     kind: Struct
     pass_by: Value
+  QVariant:
+    crystal_type: Variant
+    binding_type: CrystalVariant
+    cpp_type: CrystalVariant
+    from_crystal: "(%.to_unsafe)"
+    to_crystal: "Qt::Variant.new(%)"
+    from_cpp: "qvariant_to_crystal(%)"
+    to_cpp: "crystal_to_qvariant(%)"
+    kind: Struct
+    builtin: true
+    pass_by: Value
+    wrapper_pass_by: Value
+    generate_wrapper: false
+    generate_binding: false
+  QVariant::DataPtr: { ignore: true }
   "QMetaObject::Connection":
     crystal_type: SignalConnection
     cpp_type: "QMetaObject::Connection"
@@ -84,21 +99,22 @@ types: # Type rewrite rules
   # Typedefs
   QRgb: { alias_for: "unsigned int" }
   WId: { alias_for: "unsigned int" }
+  QVariantList: { alias_for: "QList<QVariant>" }
 
   # Structures with QVariant: Ignore for now.
-  QVariantList: { ignore: true, alias_for: "QList<QVariant>" }
   "QInputMethodEvent::Attribute": { ignore: true }
   "QList<QInputMethodEvent::Attribute>": { ignore: true }
-  QVariant: { ignore: true }
 
   "QList<QTextEdit::ExtraSelection>": { ignore: true }
   "QList<QTextOption::Tab>": { ignore: true }
   "QTextOption::Tab": { ignore: true }
+  "QFormLayout::TakeRowResult": { ignore: true }
 
   # No support for associative containers yet
   "QMap<int, QVariant>": { ignore: true }
 
   # Ignore private data structures
+  QObjectPrivate: { ignore: true }
   QKeySequencePrivate: { ignore: true }
   QUrlPrivate: { ignore: true }
   QImageData: { ignore: true }

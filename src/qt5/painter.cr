@@ -20,5 +20,14 @@ module Qt
     ensure
       painter.try(&.end)
     end
+
+    # Saves the current drawing context (rotation, scaling, etc.), yields, and
+    # restores the drawing context afterwards to what it was before.
+    def restore_after
+      save
+      yield
+    ensure
+      restore
+    end
   end
 end

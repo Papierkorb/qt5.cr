@@ -11,11 +11,12 @@ require "ini"
 
 configurations = [
 #      OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
-  { "linux", "gnu", "x86_64", "5.5", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.6", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.7", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.8", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.9", "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.5",  "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.6",  "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.7",  "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.8",  "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.9",  "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
 ]
 
 TEMPDIR = File.real_path("#{__DIR__}/../download_cache")
@@ -28,7 +29,6 @@ struct QtVersion
   end
 
   def download_url
-    # "https://download.qt.io/official_releases/qt/#{@name}/#{@name}.0/single/qt-everywhere-opensource-src-#{@name}.0.tar.xz"
     "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere-opensource-src-#{@name}.0.tar.xz"
   end
 
@@ -224,8 +224,8 @@ platforms.each_with_index do |platform, idx|
     args: args,
     env: env,
     shell: false,
-    output: true,
-    error: true,
+    output: STDOUT,
+    error: STDERR,
   )
 
   unless bindgen.success?

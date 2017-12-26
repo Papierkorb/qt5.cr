@@ -24,6 +24,7 @@ unless errors.empty? # Cheap error output.
     STDERR.puts(message) if message
   end
 
+  STDERR.puts "\nFailed to find one or more paths.  See above for details."
   exit 1
 end
 
@@ -36,9 +37,10 @@ use_binding = "#{vars["os"]}-#{vars["libc"]}-#{vars["architecture"]}-qt#{detecte
 if RUN_MAKE
   Process.run(
     "make",
-    output: STDERR,
-    error: true,
+    [ ] of String,
     env: { "BINDING_PLATFORM" => use_binding },
+    output: STDERR,
+    error: STDERR,
     chdir: "#{__DIR__}/../ext",
   )
 end

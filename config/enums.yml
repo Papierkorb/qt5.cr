@@ -39,6 +39,9 @@ enums:
   "Qt::PenStyle": PenStyle
   "Qt::ScreenOrientations": ScreenOrientations
   "Qt::ArrowType": ArrowType
+  "Qt::CaseSensitivity": CaseSensitivity
+  "Qt::MatchFlags": MatchFlags
+  "QVariant::Type": VariantType
   "QSocketNotifier::Type": SocketNotifier::Type
   "QSizePolicy::ControlType": SizePolicy::ControlType
   "QSizePolicy::ControlTypes": SizePolicy::ControlTypes
@@ -54,7 +57,9 @@ enums:
   "QToolButton::ToolButtonPopupMode": ToolButton::ToolButtonPopupMode
   "QFrame::Shape": Frame::Shape
   "QFrame::Shadow": Frame::Shadow
-  "QImage::Format": Image::Format
+  "QComboBox::InsertPolicy": ComboBox::InsertPolicy
+  "QComboBox::SizeAdjustPolicy": ComboBox::SizeAdjustPolicy
+  "QImage::Format": { destination: "Image::Format", prefix: "Format_" }
   "Qt::ImageConversionFlags": ImageConversionFlags
   "Qt::GlobalColor": GlobalColor
   "Qt::MaskMode": MaskMode
@@ -79,12 +84,16 @@ enums:
   "Qt::Orientations": Orientations
   "Qt::TimeSpec": TimeSpec
   "Qt::WindowState": WindowState
+  "Qt::Key": { destination: "Key", prefix: true }
   "QMainWindow::DockOptions": MainWindow::DockOptions
   "QDockWidget::DockWidgetFeature": DockWidget::Feature
   "QDockWidget::DockWidgetFeatures": DockWidget::Features
   "QLayout::SizeConstraint": Layout::SizeConstraint
   "QBoxLayout::Direction": BoxLayout::Direction
   "QStackedLayout::StackingMode": StackedLayout::StackingMode
+  "QFormLayout::FieldGrowthPolicy": FormLayout::FieldGrowthPolicy
+  "QFormLayout::ItemRole": FormLayout::ItemRole
+  "QFormLayout::RowWrapPolicy": FormLayout::RowWrapPolicy
   "Qt::FindChildOptions": FindChildOptions
   "QPaintDevice::PaintDeviceMetric": PaintDevice::PaintDeviceMetric
   "QAction::ActionEvent": Action::Event
@@ -93,8 +102,9 @@ enums:
   "QKeySequence::StandardKey": KeySequence::StandardKey
   "QKeySequence::SequenceFormat": KeySequence::SequenceFormat
   "QKeySequence::SequenceMatch": KeySequence::SequenceMatch
-  "QGraphicsItem::GraphicsItemFlags": GraphicsItem::GraphicsItemFlags
-  "QGraphicsItem::GraphicsItemFlag": GraphicsItem::GraphicsItemFlag
+  "QGraphicsItem::GraphicsItemFlags": GraphicsItem::Flags
+  "QGraphicsItem::GraphicsItemFlag": GraphicsItem::Flag
+  "QGraphicsItem::GraphicsItemChange": GraphicsItem::Change
   "QGraphicsItem::CacheMode": GraphicsItem::CacheMode
   "QGraphicsItem::PanelModality": GraphicsItem::PanelModality
   "QGraphicsItem::Extension": GraphicsItem::Extension

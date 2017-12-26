@@ -11,6 +11,7 @@ classes:
   QToolButton: ToolButton
   QToolBar: ToolBar
   QFrame: Frame
+  QComboBox: ComboBox
   QProgressBar: ProgressBar
   QAbstractSlider: AbstractSlider
   QDial: Dial
@@ -39,6 +40,7 @@ classes:
   QCoreApplication: CoreApplication
   QGuiApplication: GuiApplication
   QApplication: Application
+  QVariant: Variant
   QImage: Image
   QPixmap: Pixmap
   QIcon: Icon
@@ -54,6 +56,7 @@ classes:
   QVBoxLayout: VBoxLayout
   QGridLayout: GridLayout
   QStackedLayout: StackedLayout
+  QFormLayout: FormLayout
   QPalette: Palette
   QPoint: Point
   QPointF: PointF
