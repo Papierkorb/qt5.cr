@@ -224,8 +224,8 @@ platforms.each_with_index do |platform, idx|
     args: args,
     env: env,
     shell: false,
-    output: true,
-    error: true,
+    output: STDOUT,
+    error: STDERR,
   )
 
   unless bindgen.success?
