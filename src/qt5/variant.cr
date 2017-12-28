@@ -203,7 +203,8 @@ module Qt
     # doesn't do checks.
     macro unpack_type(data, type)
       {% type = type.resolve if type.is_a?(Path) %}
-      {% if type < Reference %}
+      {% kind_type = type.is_a?(Generic) ? type.name.resolve : type %}
+      {% if kind_type < Reference %}
         {{ data }}.data.pointer.as({{ type }})
       {% else %} # Value branch
         if sizeof({{ type }}) > INLINE_SIZE

@@ -236,6 +236,15 @@ describe Qt::Variant do
       data.data.pointer.should eq(string_ptr)
     end
 
+    it "stores a generic Reference type as pointer" do
+      ary = %w[ one two three ]
+      data = Qt.variant(ary).to_unsafe
+      ary_ptr = Pointer(Void).new(ary.object_id)
+
+      data.type_id.should eq(ary.crystal_type_id)
+      data.data.pointer.should eq(ary_ptr)
+    end
+
     it "stores a small value inline" do
       value = SmallStruct.new(123456)
       data = Qt.variant(value).to_unsafe
@@ -243,6 +252,15 @@ describe Qt::Variant do
 
       data.type_id.should eq(value.crystal_type_id)
       data.data.bytes.to_slice[0, sizeof(SmallStruct)].should eq(value_bytes)
+    end
+
+    it "stores a small generic value inline" do
+      value = { 1, 2 }
+      data = Qt.variant(value).to_unsafe
+      value_bytes = pointerof(value).as(UInt8*).to_slice(sizeof({ Int32, Int32 }))
+
+      data.type_id.should eq(value.crystal_type_id)
+      data.data.bytes.to_slice[0, sizeof({ Int32, Int32 })].should eq(value_bytes)
     end
 
     it "stores up to the INLINE_SIZE inline" do
@@ -265,6 +283,16 @@ describe Qt::Variant do
       (data.data.bytes.to_slice + sizeof(Void*)).should eq(null.to_slice)
       data.data.pointer.should_not eq(Pointer(Void).null)
       data.data.pointer.as(BigStruct*).value.should eq(value)
+    end
+
+    it "stores a large generic value on the heap" do
+      value = { "one", "two", "three" }
+      data = Qt.variant(value).to_unsafe
+
+      data.type_id.should eq(value.crystal_type_id)
+
+      data.data.pointer.should_not eq(Pointer(Void).null)
+      data.data.pointer.as({String, String, String}*).value.should eq(value)
     end
   end
 end
