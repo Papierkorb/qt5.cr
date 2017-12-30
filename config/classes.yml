@@ -43,6 +43,7 @@ classes:
   QVariant: Variant
   QImage: Image
   QPixmap: Pixmap
+  QBitmap: Bitmap
   QIcon: Icon
   QEventLoop: EventLoop
   QTabBar: TabBar
@@ -70,6 +71,7 @@ classes:
   # "QTextOption::Tab": TextOptionTab
   QTextDocument: TextDocument
   QTextCursor: TextCursor
+  QCursor : Cursor
   QDir: Dir
   QGraphicsItem: GraphicsItem
   QGraphicsScene: GraphicsScene

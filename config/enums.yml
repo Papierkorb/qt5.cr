@@ -28,6 +28,7 @@ enums:
   "Qt::SizeHint": SizeHint
   "Qt::WindowFrameSection": WindowFrameSection
   "Qt::CursorMoveStyle": CursorMoveStyle
+  "Qt::CursorShape": CursorShape
   "QEventLoop::ProcessEventsFlags": EventLoop::ProcessEventsFlags
   "Qt::KeyboardModifiers": KeyboardModifiers
   "Qt::MouseButtons": MouseButtons
