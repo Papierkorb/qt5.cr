@@ -12,13 +12,14 @@ module Qt
     end
 
     module TimeSpan
+      NANO_PER_MILLI = 1_000_000
+
       def self.unwrap(msec : Int64) : Time::Span
-        ticks = Time::Span::TicksPerMillisecond * msec
-        Time::Span.new(ticks)
+        Time::Span.new(nanoseconds: msec * NANO_PER_MILLI)
       end
 
       def self.wrap(duration : Time::Span) : Int64
-        duration.ticks / Time::Span::TicksPerMillisecond
+        duration.total_milliseconds.to_i64
       end
     end
   end
