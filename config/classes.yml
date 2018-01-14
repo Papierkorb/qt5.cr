@@ -152,3 +152,4 @@ classes:
   QTextListFormat: TextListFormat
   QTextLength: TextLength
   QFont: Font
+  QFontMetrics: FontMetrics
