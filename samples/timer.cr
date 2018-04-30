@@ -20,7 +20,7 @@ end
 
 # We'll go with an interval of a second.  `Time::Span` is mapped, so you should
 # feel right at home with this:
-timer.start(1.seconds)
+timer.start(60)
 
 # And now, start it!
 counter_label.show
