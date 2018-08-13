@@ -5,7 +5,7 @@ description: Qt5 bindings for Crystal
 authors:
   - Stefan Merettig <stefan-merettig@nuriaproject.org>
 
-crystal: 0.23.1
+crystal: 0.25.1
 
 dependencies:
   bindgen:
@@ -13,6 +13,6 @@ dependencies:
     branch: master
 
 scripts:
-  postinstall: crystal deps build
+  postinstall: shards
 
 license: MPL-2
