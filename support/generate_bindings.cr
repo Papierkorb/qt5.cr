@@ -19,7 +19,7 @@ configurations = [
   { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
 ]
 
-TEMPDIR = File.real_path("#{__DIR__}/../download_cache")
+TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
 
 struct QtVersion
   getter name : String
@@ -123,7 +123,7 @@ def get_qt_modules_from_qtpro(version)
   pro_file = "#{version.path}/qt.pro"
 
   if File.exists? pro_file
-    File.each_line(pro_file)
+    File.read_lines(pro_file)
       .grep(/^addModule\(qt/)
       .map{|x| x[/addModule\(qt([^,)]+)/, 1]?}
       .to_a
