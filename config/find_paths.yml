@@ -52,6 +52,7 @@ find_paths:
       - shell: "{QMAKE} -query QT_INSTALL_LIBS"
       - "{QTDIR}/lib"
       - "/usr/lib"
+      - "/usr/lib64"
       - "/usr/local/lib"
     if_os_is_windows:
       checks:
