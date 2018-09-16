@@ -17,6 +17,7 @@ configurations = [
 #  { "linux", "gnu", "x86_64", "5.8",  "x86_64-unknown-linux-gnu", 8, "little" },
   { "linux", "gnu", "x86_64", "5.9",  "x86_64-unknown-linux-gnu", 8, "little" },
 #  { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little" },
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
@@ -29,15 +30,15 @@ struct QtVersion
   end
 
   def download_url
-    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere-opensource-src-#{@name}.0.tar.xz"
+    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere-src-#{@name}.0.tar.xz"
   end
 
   def archive_path
-    "#{TEMPDIR}/qt-everywhere-opensource-src-#{@name}.0.tar.xz"
+    "#{TEMPDIR}/qt-everywhere-src-#{@name}.0.tar.xz"
   end
 
   def path
-    "#{TEMPDIR}/qt-everywhere-opensource-src-#{@name}.0"
+    "#{TEMPDIR}/qt-everywhere-src-#{@name}.0"
   end
 end
 
