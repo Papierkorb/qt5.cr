@@ -85,7 +85,7 @@ enums:
   "Qt::Orientations": Orientations
   "Qt::TimeSpec": TimeSpec
   "Qt::WindowState": WindowState
-  "Qt::Key": { destination: "Key", prefix: true }
+  "Qt::Key": { destination: "Key", prefix: true, camelcase: false }
   "QMainWindow::DockOptions": MainWindow::DockOptions
   "QDockWidget::DockWidgetFeature": DockWidget::Feature
   "QDockWidget::DockWidgetFeatures": DockWidget::Features
