@@ -6,14 +6,14 @@ Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bin
 
 | System            | Status           | Qt version | OOTB?   |
 | ----------------- | ---------------- | ---------- | ------- |
-| ArchLinux         | **Works always** | 5.10       | **YES** |
+| ArchLinux         | **Works always** | 5.12       | **YES** |
 | Ubuntu 17.04      | **Works**        | 5.9        | **YES** |
 | Ubuntu 16.04      | **Works**        | 5.5        | **YES** |
 | MacOS             | Help wanted      | ?          | ?       |
 | Windows           | Help wanted      | ?          | ?       |
 | Other systems     | Help wanted      | ?          | ?       |
 
-**Ready-to-use Qt versions:** 5.5 to 5.10
+**Ready-to-use Qt versions:** 5.5 to 5.12
 
 ## Project Goals
 
