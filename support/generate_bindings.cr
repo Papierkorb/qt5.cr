@@ -21,6 +21,7 @@ configurations = [
 #  { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
 #  { "linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little" },
   { "linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little" },
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
@@ -93,7 +94,7 @@ def download_missing_qts(versions)
 
   arguments = [ "--remote-name-all", "--location" ] + urls
 
-  report_step "Downloading missing Qt sources"
+  report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
   Dir.cd TEMPDIR do
     system("curl", arguments)
   end
