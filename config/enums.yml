@@ -103,6 +103,7 @@ enums:
   "QKeySequence::StandardKey": KeySequence::StandardKey
   "QKeySequence::SequenceFormat": KeySequence::SequenceFormat
   "QKeySequence::SequenceMatch": KeySequence::SequenceMatch
+  "QGradient::Preset": Gradient::Preset
   "QGraphicsItem::GraphicsItemFlags": GraphicsItem::Flags
   "QGraphicsItem::GraphicsItemFlag": GraphicsItem::Flag
   "QGraphicsItem::GraphicsItemChange": GraphicsItem::Change
@@ -132,6 +133,7 @@ enums:
   "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
   "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
   "QAbstractSpinBox::StepEnabledFlag": AbstractSpinBox::StepEnabledFlag
+  "QAbstractSpinBox::StepType": AbstractSpinBox::StepType
   "QDateTimeEdit::Sections": DateTimeEdit::Sections
   "QDateTimeEdit::Section": DateTimeEdit::Section
   "QLineEdit::ActionPosition": LineEdit::ActionPosition

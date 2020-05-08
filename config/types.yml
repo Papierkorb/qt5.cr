@@ -74,6 +74,8 @@ types: # Type rewrite rules
     copy_structure: true
     pass_by: Value
     kind: Struct
+  "std::function<void (const QString &, const QByteArray &)>":
+    ignore: true
   "std::chrono::milliseconds":
     cpp_type: int64_t
     binding_type: Int64
