@@ -6,8 +6,8 @@ find_paths:
       - qmake-qt*
       - qmake
     version:
-      min: "5.0"
-      max: "5.999" # Disallow Qt6
+      min: "5.0.0"
+      max: "5.999.0" # Disallow Qt6
       variable: QT_VERSION
       command: "% -version"
       regex: "Using Qt version ([0-9.]+)"
