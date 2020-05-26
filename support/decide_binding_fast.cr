@@ -62,7 +62,7 @@ if chosen_binding.nil?
     min_version = #{min_version}
 
     ; Don't check-in the following lines into your repository!
-    ; Generated on #{Time.now}
+    ; Generated on #{Time.local}
     binding     = #{chosen_binding}
     EOF
   end
