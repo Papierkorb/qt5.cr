@@ -9,6 +9,8 @@ require "file_utils"
 require "colorize"
 require "ini"
 
+require "../lib/bindgen/src/bindgen/find_path/generic_version"
+
 configurations = [
 #      OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
 #  { "linux", "gnu", "x86_64", "5.5",  "x86_64-unknown-linux-gnu", 8, "little" },
@@ -26,19 +28,25 @@ struct QtVersion
   getter name : String
   delegate to_s, to: @name
 
+  @infix = ""
+
   def initialize(@name)
+    res = Bindgen::FindPath::GenericVersion.parse(@name) <=> Bindgen::FindPath::GenericVersion.parse("5.11")
+    if res == -1
+      @infix = "-opensource"
+    end
   end
 
   def download_url
-    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere-src-#{@name}.0.tar.xz"
+    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere#{@infix}-src-#{@name}.0.tar.xz"
   end
 
   def archive_path
-    "#{TEMPDIR}/qt-everywhere-src-#{@name}.0.tar.xz"
+    "#{TEMPDIR}/qt-everywhere#{@infix}-src-#{@name}.0.tar.xz"
   end
 
   def path
-    "#{TEMPDIR}/qt-everywhere-src-#{@name}.0"
+    "#{TEMPDIR}/qt-everywhere#{@infix}-src-#{@name}.0"
   end
 end
 
