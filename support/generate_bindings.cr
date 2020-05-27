@@ -39,17 +39,22 @@ struct QtVersion
     end
   end
 
-  def download_url
-    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/qt-everywhere#{@infix}-src-#{@name}.0.tar.xz"
+  def base_name
+    "qt-everywhere#{@infix}-src-#{@name}.0"
   end
 
-  def archive_path
-    "#{TEMPDIR}/qt-everywhere#{@infix}-src-#{@name}.0.tar.xz"
+  def download_url
+    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz"
   end
 
   def path
-    "#{TEMPDIR}/qt-everywhere#{@infix}-src-#{@name}.0"
+    "#{TEMPDIR}/#{base_name}"
   end
+
+  def archive_path
+    path + ".tar.xz"
+  end
+
 end
 
 class TargetPlatform
