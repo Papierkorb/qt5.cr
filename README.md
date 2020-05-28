@@ -2,6 +2,8 @@
 
 Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bindgen).
 
+# Table of Contents
+
 <!--ts-->
    * [Project Goals](#project-goals)
    * [Installation](#installation)
@@ -28,13 +30,15 @@ Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bin
 
 * **Just Works™** - Drop the dependency into a project, and use it
 * Providing an API that feels native to Crystal
-* Focus on the GUI components (That is, `QtCore`, `QtGui`, `QtWidgets`)
+* Focus on the GUI components (i.e. `QtCore`, `QtGui`, `QtWidgets`)
 
 # Installation
 
 If you just want to develop a Crystal app which uses Qt5, use the `master-ready-to-use`
 branch. It contains pre-built/pre-generated bindings for certain platform and Qt
 combinations. If that branch contains the pre-generated bindings for your platform,
+which you can verify in the
+[subdirectory `ext/`](https://github.com/Papierkorb/qt5.cr/tree/master-ready-to-use/ext),
 you won't need bindgen at all.
 
 ```yaml
