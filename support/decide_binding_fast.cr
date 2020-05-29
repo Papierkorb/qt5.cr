@@ -62,7 +62,7 @@ if chosen_binding.nil?
     min_version = #{min_version}
 
     ; Don't check-in the following lines into your repository!
-    ; Generated on #{Time.now}
+    ; Generated on #{ {% if compare_versions(::Crystal::VERSION, "0.28.0-0") >= 0 %} Time.local {% else %} Time.now {% end %} }
     binding     = #{chosen_binding}
     EOF
   end
