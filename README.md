@@ -14,7 +14,7 @@ Bindings for the Qt5 Framework using [bindgen](https://github.com/Papierkorb/bin
       * [Generating the bindings](#generating-the-bindings)
       * [Naming scheme](#naming-scheme)
       * [(Re)generating all Qt5 binding versions](#regenerating-all-qt5-binding-versions)
-      * [(Re)fenerating a specific Qt5 binding version](#refenerating-a-specific-qt5-binding-version)
+      * [(Re)generating a specific Qt5 binding version](#regenerating-a-specific-qt5-binding-version)
       * [Future things to do](#future-things-to-do)
    * [Platform Support](#platform-support)
    * [Contributing](#contributing)
@@ -143,7 +143,7 @@ Subsequent invocations of that script will use these cached assets.
 **The first run may take a long time, and each version of Qt5 will take up about
 4GB of disk space**.
 
-## (Re)fenerating a specific Qt5 binding version
+## (Re)generating a specific Qt5 binding version
 
 1. Use the `master` branch of `qt5.cr` in your `shard.yml`
 3. Decide which version of Qt to use, and build the scheme (See above)
