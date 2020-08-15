@@ -8,12 +8,16 @@ class MyLabel < Qt::Label
   #    Then, write the implementation - Like normal
   def mouse_press_event(event : Qt::MouseEvent) : Void
     self.text = "Event: Press\n#{event.buttons}"
+    # 3. Refer to the base class implementation using `#superclass`.
+    #    **DO NOT** use `super` here - it will crash!
+    superclass.mouse_press_event(event)
   end
 
   # You can also rely on Crystals type-deduction, and leave out the argument
-  # types.  Same goes for return type.
-  def mouse_release_event(event)
+  # types.  The return type must still match.
+  def mouse_release_event(event) : Void
     self.text = "Event: Release\n#{event.buttons}"
+    superclass.mouse_release_event(event)
   end
 end
 
