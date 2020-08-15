@@ -5,6 +5,7 @@ processors:
   - copy_structs # Copy structures as marked
   - macros # Support for macro mapping
   - functions # Support C-style functions
+  - instance_properties # Add property methods for public instance members
   - filter_methods # Throw out filtered methods
   - auto_container_instantiation
   - instantiate_containers # Actually instantiate containers
@@ -12,6 +13,7 @@ processors:
   - qt # Qt specifics
   # Preliminary generation processors:
   - crystal_wrapper # Create Crystal wrappers
+  - block_overloads # Add type tags for block overloads
   - virtual_override # Allow overriding C++ virtual methods
   - cpp_wrapper # Create C++ <-> C wrappers
   - crystal_binding # Create `lib` bindings for the C wrapper
