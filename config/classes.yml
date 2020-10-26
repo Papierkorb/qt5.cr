@@ -26,6 +26,7 @@ classes:
   QMenuBar: MenuBar
   QMenu: Menu
   QAction: Action
+  QCompleter: Completer
   QStatusBar: StatusBar
   QMainWindow: MainWindow
   QDockWidget: DockWidget
@@ -48,6 +49,15 @@ classes:
   QEventLoop: EventLoop
   QTabBar: TabBar
   QTabWidget: TabWidget
+  QModelIndex: ModelIndex
+  QAbstractItemView: AbstractItemView
+  QAbstractModelItem: AbstractModelItem
+  QTableView: TableView
+  QTableWidget: TableWidget
+  QTableWidgetItem: TableWidgetItem
+  QAbstractItemDelegate: AbstractItemDelegate
+  QStyledItemDelegate: StyledItemDelegate
+  QItemEditorFactory: ItemEditorFactory
   QLayoutItem: LayoutItem
   QSpacerItem: SpacerItem
   QWidgetItem: WidgetItem
