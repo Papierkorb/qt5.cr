@@ -12,29 +12,30 @@ require "ini"
 require "../lib/bindgen/src/bindgen/find_path/generic_version"
 
 configurations = [
-#      OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
-#  { "linux", "gnu", "x86_64", "5.5",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.6",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.7",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.8",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.9",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little" },
+#      OS       LIBC   ARCH      Qt   Patch   Clang target triplet      Ptr  Endian
+#  { "linux", "gnu", "x86_64", "5.5",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.6",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.7",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.8",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.9",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.10", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+ { "linux", "gnu", "x86_64", "5.11", "2", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.12", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.13", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.14", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.15", "0", "x86_64-unknown-linux-gnu", 8, "little" },
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
 
 struct QtVersion
   getter name : String
+  getter patch : String
   delegate to_s, to: @name
 
   @infix = ""
 
-  def initialize(@name)
+  def initialize(@name, @patch = "0")
     res = Bindgen::FindPath::GenericVersion.parse(@name) <=> Bindgen::FindPath::GenericVersion.parse("5.11")
     if res == -1
       @infix = "-opensource"
@@ -42,12 +43,12 @@ struct QtVersion
   end
 
   def base_name
-    "qt-everywhere#{@infix}-src-#{@name}.0"
+    "qt-everywhere#{@infix}-src-#{@name}.#{@patch}"
   end
 
   def download_urls
-    ["https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz",
-     "https://download.qt.io/new_archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz"]
+    ["https://download.qt.io/archive/qt/#{@name}/#{@name}.#{@patch}/single/#{base_name}.tar.xz",
+     "https://download.qt.io/new_archive/qt/#{@name}/#{@name}.#{@patch}/single/#{base_name}.tar.xz"]
   end
 
   def path
@@ -69,8 +70,8 @@ class TargetPlatform
   getter pointer_size : Int32
   getter endian : String
 
-  def initialize(@os, @libc, @arch, qt, @triple, @pointer_size, @endian)
-    @qt = QtVersion.new(qt)
+  def initialize(@os, @libc, @arch, qt, patch, @triple, @pointer_size, @endian)
+    @qt = QtVersion.new(qt, patch)
   end
 
   def target
