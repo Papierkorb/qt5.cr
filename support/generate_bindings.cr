@@ -45,8 +45,9 @@ struct QtVersion
     "qt-everywhere#{@infix}-src-#{@name}.0"
   end
 
-  def download_url
-    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz"
+  def download_urls
+    ["https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz",
+     "https://download.qt.io/new_archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz"]
   end
 
   def path
@@ -92,18 +93,23 @@ end
 def download_missing_qts(versions)
   urls = versions
     .reject{|v| File.file? v.archive_path}
-    .map{|v| v.download_url}
+    .map{|v| v.download_urls}
 
   if urls.empty?
     report_step "All Qt sources already present"
     return
   end
 
-  arguments = [ "--remote-name-all", "--location" ] + urls
-
   report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
-  Dir.cd TEMPDIR do
-    system("curl", arguments)
+
+  urls.each do |version_urls|
+    version_urls.each do |url|
+      arguments = [ "--fail", "--remote-name-all", "--location", url ]
+
+      break if Dir.cd TEMPDIR do
+        system("curl", arguments)
+      end
+    end
   end
 end
 
