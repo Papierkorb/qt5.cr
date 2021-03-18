@@ -56,7 +56,6 @@ struct QtVersion
   def archive_path
     path + ".tar.xz"
   end
-
 end
 
 class TargetPlatform
@@ -91,17 +90,17 @@ end
 
 def download_missing_qts(versions)
   urls = versions
-    .reject{|v| File.file? v.archive_path}
-    .map{|v| v.download_url}
+    .reject { |v| File.file? v.archive_path }
+    .map { |v| v.download_url }
 
   if urls.empty?
     report_step "All Qt sources already present"
     return
   end
 
-  arguments = [ "--remote-name-all", "--location" ] + urls
+  arguments = ["--remote-name-all", "--location"] + urls
 
-  report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
+  report_step "Downloading missing Qt sources (#{versions.map { |v| v.name }.join(", ")})"
   Dir.cd TEMPDIR do
     system("curl", arguments)
   end
@@ -109,8 +108,8 @@ end
 
 def unpack_qts(versions)
   files = versions
-    .reject{|v| Dir.exists? v.path}
-    .map{|v| v.archive_path}
+    .reject { |v| Dir.exists? v.path }
+    .map { |v| v.archive_path }
 
   if files.empty?
     report_step "All Qt sources already unpacked"
@@ -120,7 +119,7 @@ def unpack_qts(versions)
   report_step "Unpacking Qt sources"
   files.each_with_index do |file, idx|
     report(idx, files.size, "Unpacking #{file}")
-    system("tar", [ "-C", TEMPDIR, "-xf", file ])
+    system("tar", ["-C", TEMPDIR, "-xf", file])
   end
 end
 
@@ -131,8 +130,8 @@ def get_qt_modules_from_gitmodules(version)
   if File.exists? modules_file
     data = INI.parse File.read(modules_file)
     data
-      .reject{|_, v| v["qt"]? == "false"}
-      .map{|k, _| k[/submodule "qt(.*)"/, 1]?}
+      .reject { |_, v| v["qt"]? == "false" }
+      .map { |k, _| k[/submodule "qt(.*)"/, 1]? }
   end
 end
 
@@ -143,7 +142,7 @@ def get_qt_modules_from_qtpro(version)
   if File.exists? pro_file
     File.read_lines(pro_file)
       .select(/^addModule\(qt/)
-      .map{|x| x[/addModule\(qt([^,)]+)/, 1]?}
+      .map { |x| x[/addModule\(qt([^,)]+)/, 1]? }
       .to_a
   end
 end
@@ -155,15 +154,15 @@ def get_qt_modules(version) : Array(String)
   if modules
     modules
       .compact
-      .select{|name| Dir.exists?("#{version.path}/qt#{name}")}
+      .select { |name| Dir.exists?("#{version.path}/qt#{name}") }
   else
     Array(String).new
   end
 end
 
 def configure_qts(versions)
-  keep_modules = { "base" }
-  list = versions.reject{|v| File.executable? "#{v.path}/qtbase/bin/qmake"}
+  keep_modules = {"base"}
+  list = versions.reject { |v| File.executable? "#{v.path}/qtbase/bin/qmake" }
 
   if list.empty?
     report_step "All Qt sources already configured"
@@ -174,13 +173,14 @@ def configure_qts(versions)
   list.each_with_index do |qt, idx|
     report(idx, list.size, "Configuring Qt#{qt}")
 
-    skip_modules = get_qt_modules(qt).reject{|x| keep_modules.includes? x}
-    skip_args = skip_modules.flat_map{|x| [ "-skip", x ]}
+    skip_modules = get_qt_modules(qt).reject { |x| keep_modules.includes? x }
+    skip_args = skip_modules.flat_map { |x| ["-skip", x] }
 
     Dir.cd qt.path do
-      system( # Build QMake of this version
-        "./configure",
+      # Build QMake of this version
+      system(
         [
+          "./configure",
           "-opensource", "-confirm-license",
           "-nomake", "examples",
           "-nomake", "tests",
@@ -196,7 +196,7 @@ def configure_qts(versions)
     end
 
     # Use QMake to generate all missing include files
-    system("make", [ "-C", qt.path, "qmake_all" ])
+    system("make", ["-C", qt.path, "qmake_all"])
 
     unless $?.success?
       STDERR.puts "Failed to generate headers for Qt#{qt} in #{qt.path} - Abort."
@@ -207,7 +207,7 @@ end
 
 # Kick off
 FileUtils.mkdir_p(TEMPDIR)
-platforms = configurations.map{|x| TargetPlatform.new(*x)}
+platforms = configurations.map { |x| TargetPlatform.new(*x) }
 versions = platforms.map(&.qt).uniq
 
 # Download and unpack Qt sources
@@ -222,8 +222,8 @@ platforms.each_with_index do |platform, idx|
     "QTDIR" => platform.qt.path,
     "QMAKE" => "#{platform.qt.path}/qtbase/bin/qmake",
     # "QT_INCLUDE_DIR" => Auto configured,
-    "QT_LIBS_DIR" => "#{platform.qt.path}/qtbase/libs",
-    "TARGET_TRIPLE" => platform.triple,
+    "QT_LIBS_DIR"      => "#{platform.qt.path}/qtbase/libs",
+    "TARGET_TRIPLE"    => platform.triple,
     "BINDING_PLATFORM" => platform.target,
   }
 
@@ -237,7 +237,8 @@ platforms.each_with_index do |platform, idx|
   ]
 
   report(idx, platforms.size, "Generating #{platform.target}")
-  bindgen = Process.run( # Run bindgen
+  # Run bindgen
+  bindgen = Process.run(
     command: "lib/bindgen/tool.sh",
     args: args,
     env: env,

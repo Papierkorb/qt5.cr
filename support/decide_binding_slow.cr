@@ -1,7 +1,7 @@
 require "bindgen/library"
 
 MIN_VERSION = ARGV[0]
-RUN_MAKE = ARGV[1]?
+RUN_MAKE    = ARGV[1]?
 
 struct FindPathsDocument
   YAML.mapping(find_paths: Bindgen::FindPath::Configuration)
@@ -37,8 +37,8 @@ use_binding = "#{vars["os"]}-#{vars["libc"]}-#{vars["architecture"]}-qt#{detecte
 if RUN_MAKE
   Process.run(
     "make",
-    [ ] of String,
-    env: { "BINDING_PLATFORM" => use_binding },
+    [] of String,
+    env: {"BINDING_PLATFORM" => use_binding},
     output: STDERR,
     error: STDERR,
     chdir: "#{__DIR__}/../ext",
