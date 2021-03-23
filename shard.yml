@@ -5,7 +5,7 @@ description: Qt5 bindings for Crystal
 authors:
   - Stefan Merettig <stefan-merettig@nuriaproject.org>
 
-crystal: 1.0.0
+crystal: ">= 0.36.1, < 2.0.0"
 
 dependencies:
   # bindgen:
