@@ -12,18 +12,20 @@ require "ini"
 require "../lib/bindgen/src/bindgen/find_path/generic_version"
 
 configurations = [
-#      OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
-#  { "linux", "gnu", "x86_64", "5.5",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.6",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.7",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.8",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.9",  "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little" },
-  { "linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little" },
-#  { "linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little" },
+  #   OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
+  # {"linux", "gnu", "x86_64", "5.5", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.6", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.7", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.8", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.9", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little"},
+  {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"darwin", "gnu", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
+  # {"darwin", "gnu", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
@@ -179,14 +181,14 @@ def configure_qts(versions)
     Dir.cd qt.path do
       # Build QMake of this version
       system(
+        "./configure",
         [
-          "./configure",
           "-opensource", "-confirm-license",
           "-nomake", "examples",
           "-nomake", "tests",
           "-nomake", "tools",
           "-prefix", "#{qt.path}/qtbase",
-        ] + skip_args,
+        ] + skip_args
       )
 
       unless $?.success?

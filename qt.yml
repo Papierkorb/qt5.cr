@@ -25,7 +25,14 @@ parser: # Clang parser configuration
   if_TARGET_TRIPLE_is_: # TARGET_TRIPLE is empty.
     flags: [ "-x", "c++", "-std=c++11", "-fPIC" ]
   else:
-    flags: [ "-x", "c++", "-std=c++11", "-fPIC", "-target", "{TARGET_TRIPLE}" ]
+    flags:
+      - "-x"
+      - "c++"
+      - "-stdlib=libc++"
+      - "-std=c++14"
+      - "-fPIC"
+      - "-target"
+      - "{TARGET_TRIPLE}"
   files:
     - QtCore/QtCore
     - QtGui/QtGui
@@ -35,3 +42,5 @@ parser: # Clang parser configuration
     - "{QT_INCLUDE_DIR}/QtCore/"
     - "{QT_INCLUDE_DIR}/QtGui/"
     - "{QT_INCLUDE_DIR}/QtWidgets/"
+    - "{LLVM_INCLUDES}"
+

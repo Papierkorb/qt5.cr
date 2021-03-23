@@ -5,15 +5,16 @@ description: Qt5 bindings for Crystal
 authors:
   - Stefan Merettig <stefan-merettig@nuriaproject.org>
 
-crystal: 0.27.0
+crystal: 1.0.0
 
 dependencies:
   # bindgen:
   #   github: Papierkorb/bindgen
-  #   branch: master
+  #   # branch: master
+  #   version: 0.7.0
   bindgen:
     github: kalinon/bindgen
-    branch: crystal-0.36.1
+    branch: crystal-1.0.0
 scripts:
   postinstall: shards
 
