@@ -10,7 +10,10 @@
 # These bindings will, as configured, bind to Qt dynamically.
 
 module: Qt
-library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
+if_os_is_darwin:
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ `pkg-config --libs Qt5Widgets`"
+else:
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 
 <<: config/processors_and_generators.yml
 <<: config/find_paths.yml

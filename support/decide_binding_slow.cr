@@ -1,10 +1,12 @@
 require "bindgen/library"
+require "yaml"
 
 MIN_VERSION = ARGV[0]
 RUN_MAKE    = ARGV[1]?
 
 struct FindPathsDocument
-  YAML.mapping(find_paths: Bindgen::FindPath::Configuration)
+  include YAML::Serializable
+  property find_paths : Bindgen::FindPath::Configuration
 end
 
 # Load path finding configuration
@@ -17,7 +19,6 @@ config = Bindgen::ConfigReader.from_file(
 finder = Bindgen::FindPath.new(Dir.current)
 errors = finder.find_all!(config.find_paths)
 errors.reject!(&.config.optional)
-
 unless errors.empty? # Cheap error output.
   errors.each do |err|
     message = err.config.error_message

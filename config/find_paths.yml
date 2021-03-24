@@ -59,7 +59,7 @@ find_paths:
         - path: libQt5Core.dll
         - path: libQt5Gui.dll
         - path: libQt5Widgets.dll
-    else:
+    if_os_is_linux:
       checks:
         - path: libQt5Core.so
         - path: libQt5Gui.so

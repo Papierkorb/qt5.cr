@@ -11,7 +11,7 @@ module Qt
     # Mirrored from ext/converters.hpp, "struct CrystalVariant"
     @[Packed]
     struct CrystalVariant
-      type_id : Int32 # Crystal type id
+      type_id : Int32           # Crystal type id
       data : CrystalVariantData # Data
     end
   end
@@ -42,7 +42,7 @@ module Qt
   #
   # ## Code sample
   #
-  # ```cr
+  # ```
   # # You can construct a Variant yourself:
   # my_variant = Qt.variant("Hello, Crystal/Qt")
   #
@@ -64,19 +64,19 @@ module Qt
   #
   # The methods `#is?`, `#to` and `#to?` also allow you to use union types:
   #
-  # ```cr
+  # ```
   # # This variant will contain a String or an Int32 at random:
   # my_variant = Qt.variant(rand > 0.5 ? "Hello" : 123)
-  # my_variant.is?(String | Int32) #=> true
-  # my_variant.is?(String) #=> Could be true or false
-  # my_variant.is?(Int32) #=> Could be true or false
+  # my_variant.is?(String | Int32) # => true
+  # my_variant.is?(String)         # => Could be true or false
+  # my_variant.is?(Int32)          # => Could be true or false
   #
   # # But you can use #to just like you would #as
   # pp my_variant.to(String | Int32)
   #
   # # Same goes for #to?
   # pp my_variant.to?(String | Int32) # Union types are fine!
-  # pp my_variant.to?(String) # As are single types of course
+  # pp my_variant.to?(String)         # As are single types of course
   # pp my_variant.to?(Int32)
   # ```
   #
@@ -86,7 +86,7 @@ module Qt
   # special.  Calling `#to` with the `Nil` type will only return `nil` if the
   # variant contains a nil.
   #
-  # ```cr
+  # ```
   # variant = Qt.variant(123) # A variant containing an Int32
   #
   # # Raises TypeCastError: Int32 is neither String nor Nil
@@ -97,9 +97,9 @@ module Qt
   #
   # # Behaviour of a nil-containing variant:
   # nil_variant = Qt.variant(nil)
-  # nil_variant.is_nil? #=> true
-  # nil_variant.to(String | Nil) #=> nil
-  # nil_variant.to?(String | Nil) #=> nil
+  # nil_variant.is_nil?           # => true
+  # nil_variant.to(String | Nil)  # => nil
+  # nil_variant.to?(String | Nil) # => nil
   # ```
   struct Variant
     # Max size of values to be inlined into the wrapper structure.  Values
@@ -114,12 +114,12 @@ module Qt
     def initialize(@data : Binding::CrystalVariant)
     end
 
-    # ditto
+    # :ditto:
     def initialize(variant : Variant)
       @data = variant.to_unsafe
     end
 
-    # ditto
+    # :ditto:
     def initialize(value)
       @data = self.class.pack(value)
     end
@@ -224,7 +224,7 @@ module Qt
       )
     end
 
-    # ditto
+    # :ditto:
     def self.pack(value : Value) : Binding::CrystalVariant
       wrapper = Binding::CrystalVariant.new(type_id: value.crystal_type_id)
 
@@ -245,10 +245,10 @@ module Qt
   # Helper method to quickly build `Qt::Variant` instances from a *value*.  You
   # can pass anything as *value*:
   #
-  # ```cr
-  # Qt.variant("Hello") # A string
-  # Qt.variant(123) # An integer
-  # Qt.variant(MyCustomType.new) # An instance of your type
+  # ```
+  # Qt.variant("Hello")                     # A string
+  # Qt.variant(123)                         # An integer
+  # Qt.variant(MyCustomType.new)            # An instance of your type
   # Qt.variant(rand > 0.5 ? "String" : 123) # Anything you can think of
   # ```
   def self.variant(value) : Variant

@@ -11,8 +11,8 @@ module Qt
       # isn't too bad, as Qt's `None` is zero, same as what Crystal will
       # generate.
 
-      {% for name in UrlFormattingOption.constants.reject{|x| x.stringify == "None"} %}
-        {{ name }} = {{ UrlFormattingOption.constant(name) }}
+      {% for name in FormattingOption.constants.reject { |x| x.stringify == "None" } %}
+        {{ name }} = {{ FormattingOption.constant(name) }}
       {% end %}
 
       {% for name in ComponentFormattingOption.constants %}

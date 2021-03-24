@@ -30,7 +30,7 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 
- /*********************** TAKE CARE WHEN CHANGING THINGS ***********************
+/*********************** TAKE CARE WHEN CHANGING THINGS ***********************
  * This file may be a symlink, pointing at the `bindgen_helper.hpp` inside the *
  * shard installation directory of `bindgen`.  It is *not* a local copy!   If  *
  * you want to make changes, make sure that you have your own copy first, and  *
@@ -39,11 +39,12 @@
 
 #ifndef BINDGEN_HELPER_HPP
 #define BINDGEN_HELPER_HPP
+#define GC_NEW_ABORTS_ON_OOM
 
 #include <gc/gc.h> // Boehm GC
 #include <string.h>
 #include <stdlib.h> // abort()
-#include <stdio.h> // fprintf()
+#include <stdio.h>  // fprintf()
 
 // Helper structure to transfer a `String` between C/C++ and Crystal.
 typedef struct CrystalString { // C compatibility

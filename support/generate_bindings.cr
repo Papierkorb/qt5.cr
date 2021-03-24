@@ -11,6 +11,9 @@ require "ini"
 
 require "../lib/bindgen/src/bindgen/find_path/generic_version"
 
+# require "spoved/logger"
+# spoved_logger :trace, bind: true, clear: true, dispatcher: :sync
+
 configurations = [
   #   OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
   # {"linux", "gnu", "x86_64", "5.5", "x86_64-unknown-linux-gnu", 8, "little"},
@@ -23,9 +26,9 @@ configurations = [
   # {"linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little"},
-  {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"darwin", "gnu", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
-  # {"darwin", "gnu", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
+  {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
@@ -236,6 +239,7 @@ platforms.each_with_index do |platform, idx|
     "--var", "os=#{platform.os}",
     "--var", "pointersize=#{platform.pointer_size}",
     "--var", "endian=#{platform.endian}",
+    "--debug",
   ]
 
   report(idx, platforms.size, "Generating #{platform.target}")

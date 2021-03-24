@@ -163,3 +163,4 @@ classes:
   QTextLength: TextLength
   QFont: Font
   QFontMetrics: FontMetrics
+  QStyleOptionGraphicsItem: StyleOptionGraphicsItem
