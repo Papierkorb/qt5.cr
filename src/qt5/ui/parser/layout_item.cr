@@ -4,13 +4,7 @@ module Qt::Ui
   class Parser
     module LayoutItem
       abstract def logger
-
-      getter layout_items : Hash(String, Qt::LayoutItem) = Hash(String, Qt::LayoutItem).new
-
-      # Return generated `Qt::LayoutItem` item by name, or `nil` if not found
-      def get_layout_item(name : String) : Qt::LayoutItem?
-        self.layout_items[name]?
-      end
+      abstract def data : Qt::Ui::Data
 
       private def spacer_from_orientation(orientation : String) : Qt::SpacerItem?
         case orientation
@@ -34,7 +28,7 @@ module Qt::Ui
           return
         else
           # Append new spacer to our layout items list
-          self.layout_items[name] = spacer
+          self.data.layout_items[name] = spacer
           logger.info &.emit("created spacer",
             crystal_klass: spacer.class.to_s,
             klass: spacer.class.to_s,
@@ -57,6 +51,10 @@ module Qt::Ui
 
       # Parse the property node for the provided `Qt::LayoutItem`
       private def parse_layout_item_property(node : XML::Node, item : Qt::LayoutItem)
+        # orientation property is already taken care of for `Qt::SpacerItem` when created
+        # by `#parse_spacer_node`
+        return if node["name"] == "orientation" && item.is_a?(Qt::SpacerItem)
+
         case node["name"]
         when "sizeHint"
           size = node_to_size(node.xpath_node("size").not_nil!)

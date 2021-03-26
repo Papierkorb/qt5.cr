@@ -2,14 +2,9 @@ module Qt::Ui
   class Parser
     module Widget
       abstract def logger
-      abstract def window : Qt::MainWindow
-
-      getter widgets : Set(Qt::Widget) = Set(Qt::Widget).new
-
-      # Return generated `Qt::Widget` by name, or nil if not found
-      def get_widget(name : String) : Qt::Widget?
-        self.widgets.find &.object_name == name
-      end
+      abstract def parse_layout_node(node : XML::Node, parent : Qt::Widget) : Qt::Layout?
+      abstract def parse_action_node(node : XML::Node, parent : Qt::Widget) : Qt::Action?
+      abstract def data : Qt::Ui::Data
 
       # Convert Qt string to a crystal `Qt::Widget` instance. Will set *parent* for the created node.
       private def widget_from_class(klass : String, parent : Qt::Widget) : Qt::Widget?
@@ -30,7 +25,7 @@ module Qt::Ui
           when "QWidget"
             Qt::Widget.new(parent)
           else
-            logger.warn { "widget #{klass} is not supported" }
+            logger.warn { "widget \"#{klass}\" is not supported" }
             nil
           end
         {% end %}
@@ -45,7 +40,7 @@ module Qt::Ui
           return
         else
           # Append new widget to our list
-          self.widgets << widget
+          self.data.widgets << widget
           logger.info &.emit("created widget",
             crystal_klass: widget.class.to_s,
             klass: node["class"],
@@ -56,28 +51,32 @@ module Qt::Ui
 
         widget.object_name = node["name"] if node["name"]?
 
+        parse_widget_sub_nodes(node, widget)
+
+        widget
+      end
+
+      private def parse_widget_sub_nodes(node, widget)
         node.children.select(&.element?).each do |child|
           case child.name
           when "property"
             parse_widget_property(child, widget)
-          when "addaction"
-            logger.warn { "widget sub node #{child.name} is not supported" }
-          when "action"
-            logger.warn { "widget sub node #{child.name} is not supported" }
           when "layout"
             parse_layout_node(child, widget)
           when "widget"
             parse_widget_node(child, widget)
+          when "action"
+            parse_action_node(child, widget)
+          when "addaction"
+            # Append the action association to be completed later
+            self.data.widget_actions[widget.object_name] = Array(String).new unless self.data.widget_actions[widget.object_name]?
+            self.data.widget_actions[widget.object_name] << child["name"].not_nil!
+
+            logger.notice &.emit "found action association", widget: widget.object_name, action: child["name"]
           else
-            logger.warn { "widget sub node \"#{child.name}\" is not supported" }
+            logger.warn { "widget sub node for \"#{child.name}\" is not currently supported" }
           end
         end
-
-        if widget.object_name == "centralwidget" && parent === self.window
-          window.central_widget = widget
-        end
-
-        widget
       end
 
       # Parse the property node for the provided `Qt::Widget`

@@ -2,13 +2,7 @@ module Qt::Ui
   class Parser
     module Layout
       abstract def logger
-
-      getter layouts : Set(Qt::Layout) = Set(Qt::Layout).new
-
-      # Return generated `Qt::Layout` by name, or nil if not found
-      def get_layout(name : String) : Qt::Layout?
-        self.layouts.find &.object_name == name
-      end
+      abstract def data : Qt::Ui::Data
 
       # Convert Qt class string to a crystal `Qt::Layout` instance. Will set *parent* for the created node.
       private def layout_from_class(klass : String, parent : Qt::Widget) : Qt::Layout?
@@ -32,14 +26,14 @@ module Qt::Ui
       end
 
       # Parse the XML layout node
-      private def parse_layout_node(node : XML::Node, parent : Qt::Widget) : Qt::Layout?
+      protected def parse_layout_node(node : XML::Node, parent : Qt::Widget) : Qt::Layout?
         layout = layout_from_class(node["class"], parent)
         if layout.nil?
           logger.warn &.emit("unable to create layout", klass: node["class"], name: node["name"])
           return
         else
           # Append new layout to our list
-          self.layouts << layout
+          self.data.layouts << layout
           logger.info &.emit("created layout",
             crystal_klass: layout.class.to_s,
             klass: node["class"],

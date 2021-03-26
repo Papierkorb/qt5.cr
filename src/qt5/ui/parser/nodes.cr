@@ -6,7 +6,9 @@ module Qt::Ui
       include Qt::Ui::Parser::LayoutItem
       include Qt::Ui::Parser::Layout
       include Qt::Ui::Parser::Widget
+      include Qt::Ui::Parser::Action
 
+      abstract def data : Qt::Ui::Data
       abstract def logger
 
       # Translate the `XML::Node` to `Qt::Rect`
