@@ -1,7 +1,5 @@
 # Container class to hold all the generated items from `Qt::Parser`
 class Qt::Ui::Data
-  spoved_logger
-
   getter base_widget : Qt::Widget
   getter widgets : Set(Qt::Widget) = Set(Qt::Widget).new
   getter widget_actions : Hash(String, Array(String)) = Hash(String, Array(String)).new

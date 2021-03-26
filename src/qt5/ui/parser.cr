@@ -1,4 +1,7 @@
 require "xml"
+require "spoved/logger"
+
+require "../../qt5"
 require "./data"
 require "./parser/nodes"
 
@@ -11,7 +14,7 @@ module Qt::Ui
     getter data : Qt::Ui::Data
     private getter document : XML::Node
 
-    def initialize(ui_file_path, @window : Qt::MainWindow)
+    def initialize(ui_file_path, @window : Qt::MainWindow = Qt::MainWindow.new)
       @data = Qt::Ui::Data.new(@window)
       @document = XML.parse(File.read(ui_file_path))
     end
@@ -20,7 +23,7 @@ module Qt::Ui
       self.data.base_widget.as(Qt::MainWindow)
     end
 
-    def setup_ui
+    def parse! : Parser
       ui = document.first_element_child
       raise "unable to parse document" if ui.nil?
 
@@ -30,6 +33,8 @@ module Qt::Ui
 
       associate_actions
       update_window
+
+      self
     end
 
     private def parse_xml_node(node : XML::Node, parent : Qt::Widget) : Qt::LayoutItem | Qt::Widget | Nil

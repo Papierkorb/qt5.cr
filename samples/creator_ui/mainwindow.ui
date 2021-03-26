@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>899</width>
+        <height>697</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>MainWindow</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+          <widget class="QWidget" name="searchWidget" native="true">
+            <property name="maximumSize">
+              <size>
+                <width>300</width>
+                <height>16777215</height>
+              </size>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+              <item row="1" column="0">
+                <widget class="QLabel" name="label_2">
+                  <property name="text">
+                    <string>Text</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QLineEdit" name="lineEdit_2"/>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLineEdit" name="lineEdit"/>
+              </item>
+              <item row="2" column="0">
+                <widget class="QLabel" name="label_3">
+                  <property name="text">
+                    <string>Type Line</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                  <property name="text">
+                    <string>Card Name</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="3" column="1">
+                <spacer name="verticalSpacer">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>40</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+              <item row="2" column="1">
+                <widget class="QComboBox" name="comboBox"/>
+              </item>
+            </layout>
+          </widget>
+        </item>
+        <item row="1" column="1">
+          <widget class="QWidget" name="gridWidget" native="true">
+            <layout class="QGridLayout" name="collectionViewLayout"/>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+    <widget class="QMenuBar" name="menubar">
+      <property name="geometry">
+        <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>899</width>
+          <height>22</height>
+        </rect>
+      </property>
+      <widget class="QMenu" name="menuFile">
+        <property name="title">
+          <string>File</string>
+        </property>
+        <addaction name="actionOpen"/>
+        <addaction name="actionSave"/>
+      </widget>
+      <addaction name="menuFile"/>
+    </widget>
+    <widget class="QStatusBar" name="statusbar"/>
+    <action name="actionOpen">
+      <property name="text">
+        <string>Open</string>
+      </property>
+    </action>
+    <action name="actionSave">
+      <property name="text">
+        <string>Save</string>
+      </property>
+    </action>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>
