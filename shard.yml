@@ -8,13 +8,9 @@ authors:
 crystal: ">= 0.36.1, < 2.0.0"
 
 dependencies:
-  # bindgen:
-  #   github: Papierkorb/bindgen
-  #   # branch: master
-  #   version: 0.7.0
   bindgen:
-    github: kalinon/bindgen
-    branch: crystal-1.0.0
+    github: Papierkorb/bindgen
+    branch: master
 scripts:
   postinstall: shards
 
