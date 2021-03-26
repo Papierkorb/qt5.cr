@@ -70,10 +70,74 @@ module Qt::Ui
                 layout.add_item(item, row, column, 1, 1)
               end
             end
+          when "property"
+            parse_grid_layout_property(child, layout)
           else
-            logger.warn { "grid layout sub node #{child.name} is not supported" }
+            logger.warn { "grid layout sub node \"#{child.name}\" is not supported" }
           end
         end
+      end
+
+      private def parse_grid_layout_property(node : XML::Node, layout : Qt::GridLayout)
+        case node["name"]
+        when "leftMargin"
+          margins = layout.contents_margins
+          string = node.first_element_child.try &.content
+          if string
+            layout.contents_margins = Qt::Margins.new(
+              left: string.to_i,
+              top: margins.top,
+              right: margins.right,
+              bottom: margins.bottom,
+            )
+          end
+        when "topMargin"
+          margins = layout.contents_margins
+          string = node.first_element_child.try &.content
+          if string
+            layout.contents_margins = Qt::Margins.new(
+              left: margins.left,
+              top: string.to_i,
+              right: margins.right,
+              bottom: margins.bottom,
+            )
+          end
+        when "rightMargin"
+          margins = layout.contents_margins
+          string = node.first_element_child.try &.content
+          if string
+            layout.contents_margins = Qt::Margins.new(
+              left: margins.left,
+              top: margins.top,
+              right: string.to_i,
+              bottom: margins.bottom,
+            )
+          end
+        when "bottomMargin"
+          margins = layout.contents_margins
+          string = node.first_element_child.try &.content
+          if string
+            layout.contents_margins = Qt::Margins.new(
+              left: margins.left,
+              top: margins.top,
+              right: margins.right,
+              bottom: string.to_i,
+            )
+          end
+
+          # parse_grid_layout_properties(leftMargin, :to_i)
+        else
+          logger.warn { "gridlayout property \"#{node["name"]}\" is not supported for #{layout.class}" }
+        end
+      end
+
+      macro parse_grid_layout_properties(key, convert = :to_s)
+        {% if Qt::GridLayout.has_method?("#{key.id.underscore.id}=") %}
+          string = node.first_element_child.try &.content
+          layout.{{method.id}} = string.{{convert.id}} if string
+        {% else %}
+          logger.warn { "gridlayout property {{key}} is not supported for #{layout.class}" }
+        {% end %}
       end
     end
   end

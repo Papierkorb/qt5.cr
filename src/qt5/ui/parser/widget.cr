@@ -72,7 +72,7 @@ module Qt::Ui
             self.data.widget_actions[widget.object_name] = Array(String).new unless self.data.widget_actions[widget.object_name]?
             self.data.widget_actions[widget.object_name] << child["name"].not_nil!
 
-            logger.notice &.emit "found action association", widget: widget.object_name, action: child["name"]
+            logger.info &.emit "found action association", widget: widget.object_name, action: child["name"]
           else
             logger.warn { "widget sub node for \"#{child.name}\" is not currently supported" }
           end
@@ -85,31 +85,31 @@ module Qt::Ui
         when "geometry"
           rect = node_to_rect(node.xpath_node("rect").not_nil!)
           widget.geometry = rect unless rect.nil?
-        when "windowTitle"
-          set_widget_property("window_title")
-        when "text"
-          set_widget_property("text")
-        when "title"
-          set_widget_property("title")
+        when "windowTitle"        then set_widget_property("window_title")
+        when "text"               then set_widget_property("text")
+        when "title"              then set_widget_property("title")
+        when "placeholderText"    then set_widget_property("placeholder_text")
+        when "clearButtonEnabled" then set_widget_property("clear_button_enabled", "== \"true\"")
+        when "editable"           then set_widget_property("editable", "== \"true\"")
         when "maximumSize"
           size = node_to_size(node.xpath_node("size").not_nil!)
           widget.maximum_size = size unless size.nil?
         else
-          logger.warn { "widget property #{node["name"]} is not supported for #{widget.class}" }
+          logger.warn { "widget property \"#{node["name"]}\" is not supported for #{widget.class}" }
         end
       end
 
-      private macro set_widget_property(method)
+      private macro set_widget_property(method, convert = :to_s)
         case widget
         {% begin %}
         {% for sub_class in Qt::Widget.all_subclasses %}
         {% if !sub_class.abstract? && sub_class.has_method?("#{method.id}=") %}
         when {{sub_class.id}}
           string = node.first_element_child.try &.content
-          widget.{{method.id}} = string if string
+          widget.{{method.id}} = string.{{convert.id}} if string
         {% end %}{% end %}{% end %}
         else
-          logger.warn { "widget property #{node["name"]} is not supported for #{widget.class}" }
+          logger.warn { "widget property \"#{node["name"]}\" is not supported for #{widget.class}" }
         end
       end
     end

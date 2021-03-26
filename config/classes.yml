@@ -172,3 +172,4 @@ classes:
   QListWidgetItem: ListWidgetItem
   # QStringList: QStringList
   # QStringListModel: StringListModel
+  QMargins: Margins
