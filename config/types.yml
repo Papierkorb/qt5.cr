@@ -142,5 +142,10 @@ types: # Type rewrite rules
   CGRect: {ignore: true}
   CFURLRef: {ignore: true}
   NSURL: {ignore: true}
-
+  QSize:
+    ignore_methods:
+      - toCGSize
+  QListWidgetItem:
+    ignore_methods:
+      - "operator<"
   <<: deprecated.yml

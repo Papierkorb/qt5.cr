@@ -6,6 +6,9 @@ results = {
   "QTableWidgetItem" => {
     "ignore_methods" => ["operator<"],
   },
+  "QListWidgetItem" => {
+    "ignore_methods" => ["operator<"],
+  },
   # "QUrl" => {
   #   "ignore_methods" => [
   #     "toCFURL",

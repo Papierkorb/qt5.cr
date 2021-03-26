@@ -251,3 +251,8 @@ enums:
   "QCompleter::CompletionMode": Completer::CompletionMode
   "QCompleter::ModelSorting": Completer::ModelSorting
   "QMetaType::Type": MetaType::Type
+  "QListView::Flow": ListView::Flow
+  "QListView::Movement": ListView::Movement
+  "QListView::ResizeMode": ListView::ResizeMode
+  "QListView::LayoutMode": ListView::LayoutMode
+  "QListView::ViewMode": ListView::ViewMode
