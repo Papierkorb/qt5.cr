@@ -8,17 +8,17 @@ module Qt::Ui
       private def layout_from_class(klass : String, parent : Qt::Widget) : Qt::Layout?
         case klass
         when "QGridLayout"
-          Qt::GridLayout.new(parent)
+          Qt::GridLayout.new
         when "QFormLayout"
-          Qt::FormLayout.new(parent)
+          Qt::FormLayout.new
         when "QBoxLayout"
-          Qt::BoxLayout.new(Qt::BoxLayout::Direction::LeftToRight, parent)
+          Qt::BoxLayout.new(Qt::BoxLayout::Direction::LeftToRight)
         when "QHBoxLayout"
-          Qt::HBoxLayout.new(parent)
+          Qt::HBoxLayout.new
         when "QVBoxLayout"
-          Qt::VBoxLayout.new(parent)
+          Qt::VBoxLayout.new
         when "QStackedLayout"
-          Qt::StackedLayout.new(parent)
+          Qt::StackedLayout.new
         else
           logger.warn { "widget #{klass} is not supported" }
           nil
@@ -41,44 +41,61 @@ module Qt::Ui
             parent: parent.object_name
           )
         end
+
         layout.object_name = node["name"] if node["name"]?
 
-        case layout
-        when Qt::GridLayout
-          parse_grid_layout_node(node, parent, layout)
-        else
-          logger.warn { "Unsupported layout: #{layout.class}" }
+        if parent.layout.is_a?(Qt::LayoutImpl)
+          parent.layout = layout
         end
+
+        parse_layout_node(node, parent, layout)
 
         layout
       end
 
       # Parse the XML node for the provided `Qt::GridLayout` *layout*
-      private def parse_grid_layout_node(node : XML::Node, parent : Qt::Widget, layout : Qt::GridLayout)
+      private def parse_layout_node(node : XML::Node, parent : Qt::Widget, layout : Qt::Layout)
         node.children.select(&.element?).each do |child|
           case child.name
           when "item"
-            row, column = child["row"].to_i, child["column"].to_i
-            child.children.select(&.element?).each do |n|
-              item = parse_xml_node(n, parent)
-              case item
-              when Qt::Widget
-                logger.debug { "Adding widget #{item.object_name} to #{layout.object_name} at #{row} #{column}" }
-                layout.add_widget(item, row, column, 1, 1)
-              when Qt::LayoutItem
-                logger.debug { "Adding item #{item} to #{layout.object_name} at #{row} #{column}" }
-                layout.add_item(item, row, column, 1, 1)
-              end
-            end
+            parse_layout_item(child, parent, layout)
           when "property"
-            parse_grid_layout_property(child, layout)
+            parse_layout_property(child, layout)
           else
             logger.warn { "grid layout sub node \"#{child.name}\" is not supported" }
           end
         end
       end
 
-      private def parse_grid_layout_property(node : XML::Node, layout : Qt::GridLayout)
+      private def parse_layout_item(node : XML::Node, parent : Qt::Widget, layout : Qt::GridLayout)
+        row, column = node["row"].to_i, node["column"].to_i
+        node.children.select(&.element?).each do |child|
+          item = parse_xml_node(child, parent)
+          case item
+          when Qt::Layout, Qt::Widget, Qt::LayoutItem
+            logger.debug { "Adding #{item.is_a?(Qt::Object) ? item.object_name : item} to #{layout.object_name} at #{row} #{column}" }
+            layout[column, row] = item
+          else
+            logger.warn { "unable to add item #{node["class"]} to #{layout.object_name}" }
+          end
+        end
+      end
+
+      private def parse_layout_item(node : XML::Node, parent : Qt::Widget, layout : Qt::Layout)
+        node.children.select(&.element?).each do |child|
+          item = parse_xml_node(child, parent)
+          case item
+          when Qt::Widget
+            logger.debug { "Adding widget #{item.object_name} to #{layout.object_name}" }
+            layout.add_widget(item)
+          when Qt::LayoutItem
+            logger.debug { "Adding item #{item} to #{layout.object_name}" }
+            layout.add_item(item)
+          end
+        end
+      end
+
+      private def parse_layout_property(node : XML::Node, layout : Qt::Layout)
         case node["name"]
         when "leftMargin"
           margins = layout.contents_margins

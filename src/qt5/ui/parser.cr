@@ -39,7 +39,7 @@ module Qt::Ui
       self
     end
 
-    private def parse_xml_node(node : XML::Node, parent : Qt::Widget) : Qt::LayoutItem | Qt::Widget | Nil
+    private def parse_xml_node(node : XML::Node, parent : Qt::Widget) : Qt::LayoutItem | Qt::Layout | Qt::Widget | Nil
       case node.name
       when "class"
         # ignore
@@ -47,6 +47,8 @@ module Qt::Ui
         parse_widget_node(node, parent)
       when "spacer"
         parse_spacer_node(node, parent)
+      when "layout"
+        parse_layout_node(node, parent)
       else
         logger.warn { "qt ui xml node \"#{node.name}\" is not supported" }
         nil

@@ -79,6 +79,45 @@ module Qt::Ui
         end
       end
 
+      # Will convert the provided string into a `Qt::Alignment` flag
+      private def string_to_alignment(string) : Qt::Alignment
+        items = string.split('|').map do |s|
+          case s
+          when "Qt::AlignLeft"
+            Qt::Alignment::AlignLeft
+          when "Qt::AlignLeading"
+            Qt::Alignment::AlignLeading
+          when "Qt::AlignRight"
+            Qt::Alignment::AlignRight
+          when "Qt::AlignTrailing"
+            Qt::Alignment::AlignTrailing
+          when "Qt::AlignHCenter"
+            Qt::Alignment::AlignHCenter
+          when "Qt::AlignJustify"
+            Qt::Alignment::AlignJustify
+          when "Qt::AlignAbsolute"
+            Qt::Alignment::AlignAbsolute
+          when "Qt::AlignHorizontal_Mask"
+            Qt::Alignment::AlignHorizontal_Mask
+          when "Qt::AlignTop"
+            Qt::Alignment::AlignTop
+          when "Qt::AlignBottom"
+            Qt::Alignment::AlignBottom
+          when "Qt::AlignVCenter"
+            Qt::Alignment::AlignVCenter
+          when "Qt::AlignBaseline"
+            Qt::Alignment::AlignBaseline
+          when "Qt::AlignVertical_Mask"
+            Qt::Alignment::AlignVertical_Mask
+          when "Qt::AlignCenter"
+            Qt::Alignment::AlignCenter
+          else
+            raise "unknown alignment #{s}"
+          end
+        end
+        Qt::Alignment.new(items.map(&.value).sum)
+      end
+
       # Parse the property node for the provided `Qt::Widget`
       private def parse_widget_property(node : XML::Node, widget : Qt::Widget)
         case node["name"]
@@ -91,6 +130,17 @@ module Qt::Ui
         when "placeholderText"    then set_widget_property("placeholder_text")
         when "clearButtonEnabled" then set_widget_property("clear_button_enabled", "== \"true\"")
         when "editable"           then set_widget_property("editable", "== \"true\"")
+        when "margin"             then set_widget_property("margin", :to_i)
+        when "alignment"
+          case widget
+          when Qt::Label
+            # convert alignment string into enum flag
+            string = node.first_element_child.try &.content
+            raise "invalid string" if string.nil?
+            widget.alignment = string_to_alignment(string)
+          else
+            logger.warn { "widget property \"#{node["name"]}\" is not supported for #{widget.class}" }
+          end
         when "maximumSize"
           size = node_to_size(node.xpath_node("size").not_nil!)
           widget.maximum_size = size unless size.nil?
@@ -106,7 +156,8 @@ module Qt::Ui
         {% if !sub_class.abstract? && sub_class.has_method?("#{method.id}=") %}
         when {{sub_class.id}}
           string = node.first_element_child.try &.content
-          widget.{{method.id}} = string.{{convert.id}} if string
+          raise "invalid string" if string.nil?
+          widget.{{method.id}} = string.{{convert.id}}
         {% end %}{% end %}{% end %}
         else
           logger.warn { "widget property \"#{node["name"]}\" is not supported for #{widget.class}" }
