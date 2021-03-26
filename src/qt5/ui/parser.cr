@@ -14,6 +14,8 @@ module Qt::Ui
     getter data : Qt::Ui::Data
     private getter document : XML::Node
 
+    delegate get_widget, get_layout, get_layout_item, get_action, to: @data
+
     def initialize(ui_file_path, @window : Qt::MainWindow = Qt::MainWindow.new)
       @data = Qt::Ui::Data.new(@window)
       @document = XML.parse(File.read(ui_file_path))
