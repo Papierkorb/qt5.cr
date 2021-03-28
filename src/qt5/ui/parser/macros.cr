@@ -30,7 +30,7 @@ module Qt::Ui
           method: {{m_name.id.stringify}},
           klass: {{k.stringify}},
         )
-        raise "fucks"
+        raise "incorrect value type"
       end
       {% else %}
       raise "no type restriction for {{m_name}} for {{klass}}"
