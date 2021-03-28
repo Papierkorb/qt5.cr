@@ -3,21 +3,6 @@ require "uuid"
 module Qt::Ui
   class Parser
     module LayoutItem
-      abstract def logger
-      abstract def data : Qt::Ui::Data
-
-      private def spacer_from_orientation(orientation : String) : Qt::SpacerItem?
-        case orientation
-        when "Qt::Vertical"
-          Qt::SpacerItem.vertical
-        when "Qt::Horizontal"
-          Qt::SpacerItem.horizontal
-        else
-          logger.warn { "unable to parse spacer orientation: \"#{orientation}\"" }
-          nil
-        end
-      end
-
       # Parse the XML spacer node
       private def parse_spacer_node(node : XML::Node, parent : Qt::Widget) : Qt::SpacerItem?
         name = node["name"]? || UUID.random.to_s
@@ -66,21 +51,6 @@ module Qt::Ui
         else
           logger.warn { "layout item property #{node["name"]} is not supported for #{item.class}" }
         end
-      end
-
-      private macro set_layout_item_property(method)
-        {% begin %}
-          case item
-          {% for sub_class in Qt::LayoutItem.all_subclasses %}
-          {% if !sub_class.abstract? && sub_class.has_method?("#{method.id}=") %}
-          when {{sub_class.id}}
-            string = node.first_element_child.try &.content
-            item.{{method.id}} = string if string
-          {% end %}{% end %}
-          else
-            logger.warn { "layout item property #{node["name"]} is not supported for #{item.class}" }
-          end
-        {% end %}
       end
     end
   end

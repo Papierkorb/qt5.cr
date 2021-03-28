@@ -1,30 +1,6 @@
 module Qt::Ui
   class Parser
     module Layout
-      abstract def logger
-      abstract def data : Qt::Ui::Data
-
-      # Convert Qt class string to a crystal `Qt::Layout` instance. Will set *parent* for the created node.
-      private def layout_from_class(klass : String, parent : Qt::Widget) : Qt::Layout?
-        case klass
-        when "QGridLayout"
-          Qt::GridLayout.new
-        when "QFormLayout"
-          Qt::FormLayout.new
-        when "QBoxLayout"
-          Qt::BoxLayout.new(Qt::BoxLayout::Direction::LeftToRight)
-        when "QHBoxLayout"
-          Qt::HBoxLayout.new
-        when "QVBoxLayout"
-          Qt::VBoxLayout.new
-        when "QStackedLayout"
-          Qt::StackedLayout.new
-        else
-          logger.warn { "widget #{klass} is not supported" }
-          nil
-        end
-      end
-
       # Parse the XML layout node
       protected def parse_layout_node(node : XML::Node, parent : Qt::Widget) : Qt::Layout?
         layout = layout_from_class(node["class"], parent)
@@ -33,7 +9,7 @@ module Qt::Ui
           return
         else
           # Append new layout to our list
-          self.data.layouts << layout
+          self.data.add(layout)
           logger.info &.emit("created layout",
             crystal_klass: layout.class.to_s,
             klass: node["class"],
@@ -146,15 +122,6 @@ module Qt::Ui
         else
           logger.warn { "gridlayout property \"#{node["name"]}\" is not supported for #{layout.class}" }
         end
-      end
-
-      macro parse_grid_layout_properties(key, convert = :to_s)
-        {% if Qt::GridLayout.has_method?("#{key.id.underscore.id}=") %}
-          string = node.first_element_child.try &.content
-          layout.{{method.id}} = string.{{convert.id}} if string
-        {% else %}
-          logger.warn { "gridlayout property {{key}} is not supported for #{layout.class}" }
-        {% end %}
       end
     end
   end

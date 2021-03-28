@@ -29,6 +29,14 @@ ui_parser.parse!
 
 # Parsed objects are available vi `Qt::Ui::Parser#data`
 
+# `update_window` is a helper method that will associate
+# the central widget and bars with the main window
+ui_parser.data.update_window(
+  central_widget_name: "centralwidget",
+  menu_bar_name: "menubar",
+  status_bar_name: "statusbar",
+)
+
 # Fetch the open action and associate our `open_file` method to it
 open_action = ui_parser.data.get_action("actionOpen").not_nil!
 open_action.status_tip = "Open file"
