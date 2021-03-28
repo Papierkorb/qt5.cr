@@ -16,7 +16,8 @@ module Qt::Ui
     getter data : Qt::Ui::Data
     private getter document : XML::Node
 
-    delegate get_widget, get_layout, get_layout_item, get_action, associate_actions, to: @data
+    delegate get_widget, get_layout, get_layout_item, get_action,
+      associate_actions, associate_attributes, to: @data
 
     def initialize(ui_file_path)
       doc = XML.parse(File.read(ui_file_path))
@@ -57,6 +58,8 @@ module Qt::Ui
       end
 
       associate_actions
+      associate_attributes
+
       logger.trace { "parse end" }
 
       self
@@ -65,7 +68,7 @@ module Qt::Ui
     Qt::Ui.parse_node_props(Qt::Object, [
       "geometry", "windowTitle", "text", "title", "placeholderText", "clearButtonEnabled",
       "editable", "margin", "enabled", "frameShape", "frameShadow", "alignment",
-      "maximumSize", "minimumSize",
+      "maximumSize", "minimumSize", "currentIndex",
     ])
 
     def parse_xml_node(node : XML::Node, parent : Qt::Object? = nil)
@@ -96,6 +99,10 @@ module Qt::Ui
         validate!(parent, Qt::Object)
         logger.info &.emit "found action association", item: parent.object_name, action: node["name"]
         self.data.add_action(parent.object_name, node["name"].not_nil!)
+      when "attribute"
+        validate!(parent, Qt::Object)
+        logger.info &.emit "found attribute", item: parent.object_name, action: node["name"]
+        self.data.add_attribute(parent.object_name, node)
       else
         logger.warn { "qt ui xml node \"#{node.name}\" is not supported" }
         nil

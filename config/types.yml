@@ -126,6 +126,8 @@ types: # Type rewrite rules
   "T": { ignore: true }
   "void ()": { ignore: true }
   "void (void *)": { ignore: true }
+  "std::__1::function<void (const QString &, const QByteArray &)>":
+    ignore: true
   "std::function<void (const QString &, const QByteArray &)>":
     ignore: true
   "std::chrono::milliseconds":

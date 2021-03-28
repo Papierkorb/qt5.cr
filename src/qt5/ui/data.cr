@@ -1,3 +1,5 @@
+require "spoved/logger"
+
 # Container class to hold all the generated items from `Qt::Parser`
 class Qt::Ui::Data
   spoved_logger
@@ -34,6 +36,7 @@ class Qt::Ui::Data
   add_node_container(:layout, Qt::Layout)
   add_node_container(:action, Qt::Action, true)
   add_node_container(:widget_action, Array(String), true)
+  add_node_container(:widget_attribute, Array(XML::Node), true)
   add_node_container(:layout_item, Qt::LayoutItem, true)
 
   def add(item, name : String = "")
@@ -59,6 +62,13 @@ class Qt::Ui::Data
   def add_action(name : String, a_name : String)
     self.widget_actions[name] = Array(String).new unless self.widget_actions[name]?
     self.widget_actions[name] << a_name unless self.widget_actions[name].includes?(a_name)
+  end
+
+  # Will add the attribute to the list for widget with *name*
+  #  for association later via `#associate_attributes`
+  def add_attribute(name : String, assoc : XML::Node)
+    self.widget_attributes[name] = Array(XML::Node).new unless self.widget_attributes[name]?
+    self.widget_attributes[name] << assoc unless self.widget_attributes[name].includes?(assoc)
   end
 
   # Will return a `Qt::Widget` with the defined `#root_name`. or raise an error
@@ -99,6 +109,38 @@ class Qt::Ui::Data
       end
     else
       logger.warn { "unable to find widget with name: #{w_name} to associate actions with" }
+    end
+  end
+
+  def associate_attributes
+    self.widget_attributes.each do |w_name, attr_list|
+      attr_list.each do |node|
+        associate_attribute(w_name, node)
+      end
+    end
+  end
+
+  def associate_attribute(w_name : String, node : XML::Node)
+    widget = self.get_widget!(w_name)
+    parent = self.get_widget!(widget.parent_widget.object_name)
+    case parent
+    when Qt::TabWidget
+      handle_tab_widget_attributes(widget, parent, node)
+    else
+      raise "unsupported attribute: #{node["name"]}"
+    end
+  end
+
+  private def handle_tab_widget_attributes(widget, parent, node)
+    case node["name"]
+    when "title"
+      tab_text = Qt::Ui::Parser::Converter.property_node_to_val(node).as(String)
+      logger.info &.emit("adding tab to widget",
+        widget: parent.object_name, tab: widget.object_name, text: tab_text,
+      )
+      parent.add_tab(widget, tab_text)
+    else
+      raise "unsupported tab attribute: #{node["name"]}"
     end
   end
 

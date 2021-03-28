@@ -48,7 +48,9 @@ enums:
   "QSizePolicy::ControlTypes": SizePolicy::ControlTypes
   "QSizePolicy::Policy": SizePolicy::Policy
   "QSizePolicy::PolicyFlag": SizePolicy::PolicyFlag
-  "Qt::WidgetAttribute": WidgetAttribute
+  "Qt::WidgetAttribute":
+    destination: Widget::Attribute
+    prefix: true
   "QPalette::ColorGroup": Palette::ColorGroup
   "QPalette::ColorRole": Palette::ColorRole
   "QWidget::RenderFlags": Widget::RenderFlags
