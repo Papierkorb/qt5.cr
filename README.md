@@ -68,7 +68,7 @@ on this under License below.)
 Using your system's package manager:
 
 * **ArchLinux** `pacman -S qt5-base`
-* **Debian** `apt-get install qtbase5-dev`
+* **Debian** `brew install qt5`
 * **Ubuntu** `apt-get install qtbase5-dev`
 
 # User perspective

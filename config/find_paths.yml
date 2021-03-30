@@ -27,7 +27,7 @@ find_paths:
           1) Add `qmake` or `qmake-qt5` to your $PATH.
           2) Or make QMAKE point to it
         Manual: Set these environment variables:
-          QDIR=/installation/prefix
+          QTDIR=/installation/prefix
           QT_INCLUDE_DIR=$QTDIR/include
           QT_LIBS_DIR=$QTDIR/libs
   QT_INCLUDE_DIR:

@@ -12,7 +12,7 @@ dependencies:
     github: Papierkorb/bindgen
     branch: master
   spoved:
-    github: kalinon/spoved.cr
+    github: spoved/spoved.cr
 scripts:
   postinstall: shards
 
