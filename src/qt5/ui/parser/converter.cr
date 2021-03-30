@@ -29,6 +29,10 @@ module Qt::Ui
 
       def property_node_to_enum(node : XML::Node)
         case node.content
+        when /QTabWidget/
+          string_to_tab_enum(node.content)
+        when /Qt::Elide/
+          string_to_elide_mode(node.content)
         when /Qt::Alig/
           string_to_alignment(node.content)
         when /QFrame/
@@ -104,6 +108,40 @@ module Qt::Ui
       #########################################
       # Convert strings into values
       #########################################
+
+      def string_to_tab_enum(string : String) : Qt::TabWidget::TabPosition | Qt::TabWidget::TabShape
+        case string
+        when "QTabWidget::North"
+          Qt::TabWidget::TabPosition::North
+        when "QTabWidget::South"
+          Qt::TabWidget::TabPosition::South
+        when "QTabWidget::West"
+          Qt::TabWidget::TabPosition::West
+        when "QTabWidget::East"
+          Qt::TabWidget::TabPosition::East
+        when "QTabWidget::Triangular"
+          Qt::TabWidget::TabShape::Triangular
+        when "QTabWidget::Rounded"
+          Qt::TabWidget::TabShape::Rounded
+        else
+          raise "unable to convert #{string} to Qt::TabWidget::TabPosition or Qt::TabWidget::TabShape"
+        end
+      end
+
+      def string_to_elide_mode(string : String) : Qt::TextElideMode
+        case string
+        when "Qt::ElideLeft"
+          Qt::TextElideMode::Left
+        when "Qt::ElideRight"
+          Qt::TextElideMode::Right
+        when "Qt::ElideMiddle"
+          Qt::TextElideMode::Middle
+        when "Qt::ElideNone"
+          Qt::TextElideMode::None
+        else
+          raise "unable to convert #{string} to Qt::TextElideMode"
+        end
+      end
 
       # Will convert the provided string into a `Qt::Alignment` flag
       def string_to_alignment(string : String) : Qt::Alignment

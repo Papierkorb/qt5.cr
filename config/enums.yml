@@ -77,7 +77,9 @@ enums:
   "QTabBar::SelectionBehavior": TabBar::SelectionBehavior
   "QTabBar::Shape": TabBar::Shape
   "Qt::Corner": Corner
-  "Qt::TextElideMode": TextElideMode
+  "Qt::TextElideMode":
+    destination: TextElideMode
+    prefix: true
   "Qt::ToolButtonStyle": ToolButtonStyle
   "Qt::ToolBarArea": ToolBarArea
   "Qt::ToolBarAreas": ToolBarAreas
