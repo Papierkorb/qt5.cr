@@ -52,6 +52,7 @@ classes:
   QModelIndex: ModelIndex
   QAbstractItemView: AbstractItemView
   QAbstractItemModel: AbstractItemModel
+  QStandardItemModel: StandardItemModel
   QTableView: TableView
   QTableWidget: TableWidget
   QTableWidgetItem: TableWidgetItem
@@ -164,3 +165,8 @@ classes:
   QFont: Font
   QFontMetrics: FontMetrics
   QStyleOptionGraphicsItem: StyleOptionGraphicsItem
+  QListView: ListView
+  QSize: Size
+  QListWidget: ListWidget
+  QListWidgetItem: ListWidgetItem
+  QMargins: Margins

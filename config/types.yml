@@ -126,6 +126,8 @@ types: # Type rewrite rules
   "T": { ignore: true }
   "void ()": { ignore: true }
   "void (void *)": { ignore: true }
+  "std::__1::function<void (const QString &, const QByteArray &)>":
+    ignore: true
   "std::function<void (const QString &, const QByteArray &)>":
     ignore: true
   "std::chrono::milliseconds":
@@ -142,5 +144,10 @@ types: # Type rewrite rules
   CGRect: {ignore: true}
   CFURLRef: {ignore: true}
   NSURL: {ignore: true}
-
+  QSize:
+    ignore_methods:
+      - toCGSize
+  QListWidgetItem:
+    ignore_methods:
+      - "operator<"
   <<: deprecated.yml

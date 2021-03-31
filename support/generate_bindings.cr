@@ -26,9 +26,9 @@ configurations = [
   # {"linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"darwin", "gnu", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
-  {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
+  {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
+  # {"darwin", "unknown", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
+  # {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
