@@ -167,9 +167,6 @@ classes:
   QStyleOptionGraphicsItem: StyleOptionGraphicsItem
   QListView: ListView
   QSize: Size
-  # QAbstractListModel: AbstractListModel
   QListWidget: ListWidget
   QListWidgetItem: ListWidgetItem
-  # QStringList: QStringList
-  # QStringListModel: StringListModel
   QMargins: Margins
