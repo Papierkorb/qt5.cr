@@ -1,3 +1,5 @@
+require "spoved/logger"
+
 module Qt::Ui
   class Parser
     module Converter
@@ -29,6 +31,10 @@ module Qt::Ui
 
       def property_node_to_enum(node : XML::Node)
         case node.content
+        when /QAbstractScrollArea/
+          string_to_scroll_area(node.content)
+        when /Qt::ScrollBar/
+          string_to_scroll_bar_policy(node.content)
         when /QTabWidget/
           string_to_tab_enum(node.content)
         when /Qt::Elide/
@@ -108,6 +114,32 @@ module Qt::Ui
       #########################################
       # Convert strings into values
       #########################################
+
+      def string_to_scroll_area(string : String) : Qt::AbstractScrollArea::SizeAdjust
+        case string
+        when "QAbstractScrollArea::AdjustIgnored"
+          Qt::AbstractScrollArea::SizeAdjust::AdjustIgnored
+        when "QAbstractScrollArea::AdjustToContentsOnFirstShow"
+          Qt::AbstractScrollArea::SizeAdjust::AdjustToContentsOnFirstShow
+        when "QAbstractScrollArea::AdjustToContents"
+          Qt::AbstractScrollArea::SizeAdjust::AdjustToContents
+        else
+          raise "unable to convert #{string} to  Qt::AbstractScrollArea::SizeAdjust"
+        end
+      end
+
+      def string_to_scroll_bar_policy(string : String) : Qt::ScrollBarPolicy
+        case string
+        when "Qt::ScrollBarAsNeeded"
+          Qt::ScrollBarPolicy::AsNeeded
+        when "Qt::ScrollBarAlwaysOff"
+          Qt::ScrollBarPolicy::AlwaysOff
+        when "Qt::ScrollBarAlwaysOn"
+          Qt::ScrollBarPolicy::AlwaysOn
+        else
+          raise "unable to convert #{string} to Qt::ScrollBarPolicy"
+        end
+      end
 
       def string_to_tab_enum(string : String) : Qt::TabWidget::TabPosition | Qt::TabWidget::TabShape
         case string

@@ -7,11 +7,11 @@ module Qt::Ui
         klass: {{k.stringify}},
       )
     {% klass = k.resolve %}
-    {% meth = klass.methods.find { |m| m.name == "#{m_name.id}=" } %}
+    {% meth = klass.methods.find(&.name.==("#{m_name.id}=")) %}
 
     {% if !meth %}{% for sub_class in klass.resolve.all_subclasses %}
-    {% if sub_class.methods.find { |m| m.name == "#{m_name.id}=" } %}
-    {% meth = sub_class.methods.find { |m| m.name == "#{m_name.id}=" } %}
+    {% if sub_class.methods.find(&.name.==("#{m_name.id}=")) %}
+    {% meth = sub_class.methods.find(&.name.==("#{m_name.id}=")) %}
     {% end %}{% end %}{% end %}
 
     {% if meth %}
@@ -20,6 +20,14 @@ module Qt::Ui
       logger.trace &.emit("property_node_to_val", node: {{node}}.to_s, arg: {{arg.restriction.id.stringify}})
       val = property_node_to_val({{node}})
       if val.is_a?({{arg.restriction}})
+        logger.trace &.emit("setting property",
+          node: {{node}}["name"],
+          expected: {{arg.restriction.id.stringify}},
+          real: val.class.to_s,
+          item: {{item}}.class.to_s,
+          method: {{m_name.id.stringify}},
+          klass: {{k.stringify}},
+        )
         {{item}}.{{m_name.id}} = val
       else
         logger.error &.emit("incorrect value type",
@@ -48,14 +56,14 @@ module Qt::Ui
     {% for i in items %}
       {% map[i] = {} of TypeNode => Method %}
       {% method = i.id.underscore %}
-      {% meth = klass.methods.find { |m| m.name == "#{method.id}=" } %}
+      {% meth = klass.methods.find(&.name.==("#{method.id}=")) %}
       {% if meth %}
         {% map[i][klass] = meth %}
       {% end %}
 
       {% for sub_class in klass.resolve.all_subclasses %}
-        {% if sub_class.methods.find { |m| m.name == "#{method.id}=" } %}
-          {% meth = sub_class.methods.find { |m| m.name == "#{method.id}=" } %}
+        {% if sub_class.methods.find(&.name.==("#{method.id}=")) %}
+          {% meth = sub_class.methods.find(&.name.==("#{method.id}=")) %}
           {% map[i][sub_class] = meth %}
         {% end %}
       {% end %}
@@ -73,6 +81,7 @@ module Qt::Ui
     {% end %}
 
     def parse_node_property(node : XML::Node, item : {{klass}})
+      logger.trace { "attempting to parse property #{node["name"]} for {{klass}}" }
       case node["name"]
       {% for i, ks in map %}
       {% method = i.id.underscore %}

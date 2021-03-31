@@ -68,13 +68,20 @@ module Qt::Ui
     Qt::Ui.parse_node_props(Qt::Object, [
       "geometry", "windowTitle", "text", "title", "placeholderText", "clearButtonEnabled",
       "editable", "margin", "enabled", "frameShape", "frameShadow", "alignment",
-      "maximumSize", "minimumSize", "autoFillBackground",
-
+      "maximumSize", "minimumSize", "autoFillBackground", "widgetResizable",
+      "verticalScrollBarPolicy", "iconSize", "currentIndex", "usesScrollButtons",
+      "documentMode", "tabsClosable", "movable", "tabBarAutoHide", "tabsClosable",
+      "elideMode", "tabPosition", "sizeAdjustPolicy",
     ])
 
-    Qt::Ui.parse_node_props(Qt::TabWidget, [
-      "iconSize", "currentIndex", "usesScrollButtons", "documentMode", "tabsClosable", "movable", "tabBarAutoHide", "tabsClosable", "elideMode",
-    ])
+    # Qt::Ui.parse_node_props(Qt::TabWidget, [
+    #   "iconSize", "currentIndex", "usesScrollButtons", "documentMode", "tabsClosable", "movable",
+    #   "tabBarAutoHide", "tabsClosable", "elideMode", "tabPosition",
+    # ])
+
+    # Qt::Ui.parse_node_props(Qt::AbstractScrollArea, [
+    #   "verticalScrollBarPolicy", "maximumSize", "minimumSize",
+    # ])
 
     def parse_xml_node(node : XML::Node, parent : Qt::Object? = nil)
       logger.trace &.emit("parsing xml node",
