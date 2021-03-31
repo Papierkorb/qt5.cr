@@ -21,7 +21,9 @@ enums:
   "Qt::TextInteractionFlags": TextInteractionFlags
   "Qt::UIEffect": UIEffect
   "Qt::ApplicationAttribute": ApplicationAttribute
-  "Qt::ScrollBarPolicy": ScrollBarPolicy
+  "Qt::ScrollBarPolicy":
+    destination: ScrollBarPolicy
+    prefix: ScrollBar
   "Qt::ItemSelectionMode": ItemSelectionMode
   "Qt::SortOrder": SortOrder
   "Qt::ItemSelectionOperation": ItemSelectionOperation
@@ -132,7 +134,9 @@ enums:
   "QAbstractSlider::SliderAction": AbstractSlider::SliderAction
   "QAbstractSlider::SliderChange": AbstractSlider::SliderChange
   "QSlider::TickPosition": Slider::TickPosition
-  "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
+  "QAbstractScrollArea::SizeAdjustPolicy":
+    destination: AbstractScrollArea::SizeAdjust
+    # prefix: SizeAdjust
   "QAbstractSpinBox::ButtonSymbols": AbstractSpinBox::ButtonSymbols
   "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
   "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
