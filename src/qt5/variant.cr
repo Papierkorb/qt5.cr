@@ -57,7 +57,7 @@ module Qt
   #
   # # If you're sure of the type, you can safely cast it using #to:
   # my_string = my_variant.to(String)
-  # Raises TypeCastError if `my_variant` is not a String - Just like #as would
+  # # Raises TypeCastError if `my_variant` is not a String - Just like #as would
   # ```
   #
   # ## Union types

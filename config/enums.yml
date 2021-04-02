@@ -264,3 +264,4 @@ enums:
   "QListView::ResizeMode": ListView::ResizeMode
   "QListView::LayoutMode": ListView::LayoutMode
   "QListView::ViewMode": ListView::ViewMode
+  "Qt::ItemDataRole": ItemDataRole

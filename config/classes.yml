@@ -53,6 +53,7 @@ classes:
   QAbstractItemView: AbstractItemView
   QAbstractItemModel: AbstractItemModel
   QStandardItemModel: StandardItemModel
+  QAbstractListModel: AbstractListModel
   QTableView: TableView
   QTableWidget: TableWidget
   QTableWidgetItem: TableWidgetItem
@@ -170,3 +171,4 @@ classes:
   QListWidget: ListWidget
   QListWidgetItem: ListWidgetItem
   QMargins: Margins
+  QMetaObject: MetaObject

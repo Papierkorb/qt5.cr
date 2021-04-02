@@ -3,6 +3,7 @@
 #include <QtCore/qbytearray.h>
 #include <QtCore/qstring.h>
 #include <QtCore/qvariant.h>
+#include <QtCore/QStringListModel>
 
 #include "bindgen_helper.hpp"
 

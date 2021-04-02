@@ -57,8 +57,8 @@ module Qt::Ui
         {% begin %}
           case klass
           {% for sub_class in Qt::Widget.all_subclasses %}
-          {% if !sub_class.abstract? && !sub_class.name.includes?("Impl") %}
-          when {{sub_class.id.gsub(/Qt::/, "Q").id.stringify}}
+          {% if !sub_class.abstract? && !sub_class.name.includes?("Impl") && sub_class.name =~ /^Qt::/ %}
+          when {{sub_class.name.gsub(/^Qt::/, "Q").id.stringify}}
             {{sub_class.id}}.new
           {% end %}{% end %}
           when "QWidget"

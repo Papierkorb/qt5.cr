@@ -141,9 +141,9 @@ types: # Type rewrite rules
     to_cpp: "std::chrono::milliseconds(%)"
     from_cpp: "(%.count())"
     converter: Qt::Converter::TimeSpan
-  CGRect: {ignore: true}
-  CFURLRef: {ignore: true}
-  NSURL: {ignore: true}
+  CGRect: { ignore: true }
+  CFURLRef: { ignore: true }
+  NSURL: { ignore: true }
   QSize:
     ignore_methods:
       - toCGSize

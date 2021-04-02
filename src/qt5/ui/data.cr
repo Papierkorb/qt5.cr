@@ -39,6 +39,10 @@ class Qt::Ui::Data
   add_node_container(:widget_attribute, Array(XML::Node), true)
   add_node_container(:layout_item, Qt::LayoutItem, true)
 
+  def <<(item : Qt::Widget | Qt::Layout)
+    add(item)
+  end
+
   def add(item, name : String = "")
     case item
     when Qt::LayoutItem
