@@ -16,10 +16,6 @@ require "../lib/bindgen/src/bindgen/find_path/generic_version"
 
 configurations = [
   #   OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
-  # {"linux", "gnu", "x86_64", "5.5", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.6", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.7", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.8", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.9", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little"},
   # {"linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little"},
