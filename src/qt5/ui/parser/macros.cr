@@ -81,7 +81,7 @@ module Qt::Ui
     {% end %}
 
     def parse_node_property(node : XML::Node, item : {{klass}})
-      logger.trace { "attempting to parse property #{node["name"]} for {{klass}}" }
+      logger.debug { "attempting to parse property #{node["name"]} for {{klass}}" }
       case node["name"]
       {% for i, ks in map %}
       {% method = i.id.underscore %}

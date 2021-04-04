@@ -16,7 +16,7 @@ module Qt::Ui
         action = Qt::Action.new(parent)
         name = node["name"].not_nil!
 
-        logger.info &.emit("created action",
+        logger.debug &.emit("created action",
           crystal_klass: action.class.to_s,
           klass: "action",
           name: name,

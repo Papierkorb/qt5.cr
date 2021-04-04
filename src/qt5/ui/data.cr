@@ -98,7 +98,7 @@ class Qt::Ui::Data
     when Qt::MenuBar
       menu = self.get_widget(a_name)
       if menu.is_a?(Qt::Menu)
-        logger.info { "adding menu with name: #{a_name} to widget: #{w_name}" }
+        logger.debug { "adding menu with name: #{a_name} to widget: #{w_name}" }
         widget.add_action(menu.menu_action)
       else
         logger.warn { "unable to find action with name: #{a_name} to associate with widget: #{w_name}" }
@@ -106,7 +106,7 @@ class Qt::Ui::Data
     when Qt::Widget
       action = self.get_action(a_name)
       if action
-        logger.info { "adding action with name: #{a_name} to widget: #{w_name}" }
+        logger.debug { "adding action with name: #{a_name} to widget: #{w_name}" }
         widget.add_action(action)
       else
         logger.warn { "unable to find action with name: #{a_name} to associate with widget: #{w_name}" }
@@ -139,7 +139,7 @@ class Qt::Ui::Data
     case node["name"]
     when "title"
       tab_text = Qt::Ui::Parser::Converter.property_node_to_val(node).as(String)
-      logger.info &.emit("adding tab to widget",
+      logger.debug &.emit("adding tab to widget",
         widget: parent.object_name, tab: widget.object_name, text: tab_text,
       )
       parent.add_tab(widget, tab_text)

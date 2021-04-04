@@ -10,7 +10,7 @@ module Qt::Ui
         else
           # Append new layout to our list
           self.data.add(layout)
-          logger.info &.emit("created layout",
+          logger.trace &.emit("created layout",
             crystal_klass: layout.class.to_s,
             klass: node["class"],
             name: node["name"],

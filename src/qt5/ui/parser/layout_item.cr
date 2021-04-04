@@ -7,14 +7,16 @@ module Qt::Ui
       private def parse_spacer_node(node : XML::Node, parent : Qt::Widget) : Qt::SpacerItem?
         name = node["name"]? || UUID.random.to_s
         orientation = node.xpath_string("string(property[@name='orientation'][1]/enum[1])")
-        spacer = spacer_from_orientation(orientation)
+        size_type = node.xpath_string("string(property[@name='sizeType'][1]/enum[1])")
+
+        spacer = spacer_from_orientation(orientation, size_type)
         if spacer.nil?
           logger.warn &.emit("unable to create spacer", orientation: orientation, name: name)
           return
         else
           # Append new spacer to our layout items list
           self.data.layout_items[name] = spacer
-          logger.info &.emit("created spacer",
+          logger.debug &.emit("created spacer",
             crystal_klass: spacer.class.to_s,
             klass: spacer.class.to_s,
             name: name,
@@ -36,9 +38,10 @@ module Qt::Ui
 
       # Parse the property node for the provided `Qt::LayoutItem`
       private def parse_layout_item_property(node : XML::Node, item : Qt::LayoutItem)
-        # orientation property is already taken care of for `Qt::SpacerItem` when created
+        # orientation and sizeType property is already taken care of for `Qt::SpacerItem` when created
         # by `#parse_spacer_node`
         return if node["name"] == "orientation" && item.is_a?(Qt::SpacerItem)
+        return if node["name"] == "sizeType" && item.is_a?(Qt::SpacerItem)
 
         case node["name"]
         when "sizeHint"
