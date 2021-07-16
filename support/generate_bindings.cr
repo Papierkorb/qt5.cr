@@ -91,8 +91,12 @@ def report_step(message)
 end
 
 def download_missing_qts(versions)
+  # Test a model where URLs are always tried to be downloaded, but if they're complete
+  # the curl call will be a no-op. This might be more user friendly than just using
+  # existence of file to assume that the file has been downloaded in full, which then
+  # causes unclear tar errors if file is invalid or incomplete.
   urls = versions
-    .reject{|v| File.file? v.archive_path}
+    #.reject{|v| File.file? v.archive_path}
     .map{|v| v.download_urls}
 
   if urls.empty?
@@ -100,13 +104,15 @@ def download_missing_qts(versions)
     return
   end
 
-  report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
+  #report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
+  report_step "Verifying and/or downloading Qt sources (#{versions.map{|v|v.name}.join(", ")})"
 
   urls.each do |version_urls|
-    version_urls.each do |url|
-      arguments = [ "--fail", "--remote-name-all", "--location", url ]
+    version_urls.each_with_index do |url, idx|
+      arguments = [ "-C-", "--fail", "--remote-name-all", "--location", url ]
 
       break if Dir.cd TEMPDIR do
+        report(idx, version_urls.size, "Trying: curl #{arguments}")
         system("curl", arguments)
       end
     end
@@ -125,8 +131,9 @@ def unpack_qts(versions)
 
   report_step "Unpacking Qt sources"
   files.each_with_index do |file, idx|
-    report(idx, files.size, "Unpacking #{file}")
-    system("tar", [ "-C", TEMPDIR, "-xf", file ])
+    switches = "-xf"
+    report(idx, files.size, "Unpacking: tar -C #{TEMPDIR} #{switches} #{file}")
+    system("tar", [ "-C", TEMPDIR, switches, file ])
   end
 end
 
