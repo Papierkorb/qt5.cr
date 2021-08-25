@@ -11,6 +11,9 @@ require "ini"
 
 require "../lib/bindgen/src/bindgen/find_path/generic_version"
 
+# require "spoved/logger"
+# spoved_logger :trace, bind: true, clear: true, dispatcher: :sync
+
 configurations = [
 #      OS       LIBC   ARCH      Qt   Patch   Clang target triplet      Ptr  Endian
 #  { "linux", "gnu", "x86_64", "5.5",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
@@ -24,6 +27,8 @@ configurations = [
   { "linux", "gnu", "x86_64", "5.13", "0", "x86_64-unknown-linux-gnu", 8, "little" },
 #  { "linux", "gnu", "x86_64", "5.14", "0", "x86_64-unknown-linux-gnu", 8, "little" },
 #  { "linux", "gnu", "x86_64", "5.15", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  {"darwin", "unknown", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
+#  {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
@@ -58,7 +63,6 @@ struct QtVersion
   def archive_path
     path + ".tar.xz"
   end
-
 end
 
 class TargetPlatform
@@ -105,6 +109,7 @@ def download_missing_qts(versions)
     return
   end
 
+
   #report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
   report_step "Verifying and/or downloading Qt sources (#{versions.map{|v|v.name}.join(", ")})"
 
@@ -122,8 +127,8 @@ end
 
 def unpack_qts(versions)
   files = versions
-    .reject{|v| Dir.exists? v.path}
-    .map{|v| v.archive_path}
+    .reject { |v| Dir.exists? v.path }
+    .map { |v| v.archive_path }
 
   if files.empty?
     report_step "All Qt sources already unpacked"
@@ -145,8 +150,8 @@ def get_qt_modules_from_gitmodules(version)
   if File.exists? modules_file
     data = INI.parse File.read(modules_file)
     data
-      .reject{|_, v| v["qt"]? == "false"}
-      .map{|k, _| k[/submodule "qt(.*)"/, 1]?}
+      .reject { |_, v| v["qt"]? == "false" }
+      .map { |k, _| k[/submodule "qt(.*)"/, 1]? }
   end
 end
 
@@ -157,7 +162,7 @@ def get_qt_modules_from_qtpro(version)
   if File.exists? pro_file
     File.read_lines(pro_file)
       .select(/^addModule\(qt/)
-      .map{|x| x[/addModule\(qt([^,)]+)/, 1]?}
+      .map { |x| x[/addModule\(qt([^,)]+)/, 1]? }
       .to_a
   end
 end
@@ -169,15 +174,15 @@ def get_qt_modules(version) : Array(String)
   if modules
     modules
       .compact
-      .select{|name| Dir.exists?("#{version.path}/qt#{name}")}
+      .select { |name| Dir.exists?("#{version.path}/qt#{name}") }
   else
     Array(String).new
   end
 end
 
 def configure_qts(versions)
-  keep_modules = { "base" }
-  list = versions.reject{|v| File.executable? "#{v.path}/qtbase/bin/qmake"}
+  keep_modules = {"base"}
+  list = versions.reject { |v| File.executable? "#{v.path}/qtbase/bin/qmake" }
 
   if list.empty?
     report_step "All Qt sources already configured"
@@ -188,11 +193,12 @@ def configure_qts(versions)
   list.each_with_index do |qt, idx|
     report(idx, list.size, "Configuring Qt#{qt}")
 
-    skip_modules = get_qt_modules(qt).reject{|x| keep_modules.includes? x}
-    skip_args = skip_modules.flat_map{|x| [ "-skip", x ]}
+    skip_modules = get_qt_modules(qt).reject { |x| keep_modules.includes? x }
+    skip_args = skip_modules.flat_map { |x| ["-skip", x] }
 
     Dir.cd qt.path do
-      system( # Build QMake of this version
+      # Build QMake of this version
+      system(
         "./configure",
         [
           "-opensource", "-confirm-license",
@@ -200,7 +206,7 @@ def configure_qts(versions)
           "-nomake", "tests",
           "-nomake", "tools",
           "-prefix", "#{qt.path}/qtbase",
-        ] + skip_args,
+        ] + skip_args
       )
 
       unless $?.success?
@@ -210,7 +216,7 @@ def configure_qts(versions)
     end
 
     # Use QMake to generate all missing include files
-    system("make", [ "-C", qt.path, "qmake_all" ])
+    system("make", ["-C", qt.path, "qmake_all"])
 
     unless $?.success?
       STDERR.puts "Failed to generate headers for Qt#{qt} in #{qt.path} - Abort."
@@ -221,7 +227,7 @@ end
 
 # Kick off
 FileUtils.mkdir_p(TEMPDIR)
-platforms = configurations.map{|x| TargetPlatform.new(*x)}
+platforms = configurations.map { |x| TargetPlatform.new(*x) }
 versions = platforms.map(&.qt).uniq
 
 # Download and unpack Qt sources
@@ -236,8 +242,8 @@ platforms.each_with_index do |platform, idx|
     "QTDIR" => platform.qt.path,
     "QMAKE" => "#{platform.qt.path}/qtbase/bin/qmake",
     # "QT_INCLUDE_DIR" => Auto configured,
-    "QT_LIBS_DIR" => "#{platform.qt.path}/qtbase/libs",
-    "TARGET_TRIPLE" => platform.triple,
+    "QT_LIBS_DIR"      => "#{platform.qt.path}/qtbase/libs",
+    "TARGET_TRIPLE"    => platform.triple,
     "BINDING_PLATFORM" => platform.target,
   }
 
@@ -248,10 +254,12 @@ platforms.each_with_index do |platform, idx|
     "--var", "os=#{platform.os}",
     "--var", "pointersize=#{platform.pointer_size}",
     "--var", "endian=#{platform.endian}",
+    "--debug",
   ]
 
   report(idx, platforms.size, "Generating #{platform.target}")
-  bindgen = Process.run( # Run bindgen
+  # Run bindgen
+  bindgen = Process.run(
     command: "lib/bindgen/tool.sh",
     args: args,
     env: env,

@@ -21,7 +21,9 @@ enums:
   "Qt::TextInteractionFlags": TextInteractionFlags
   "Qt::UIEffect": UIEffect
   "Qt::ApplicationAttribute": ApplicationAttribute
-  "Qt::ScrollBarPolicy": ScrollBarPolicy
+  "Qt::ScrollBarPolicy":
+    destination: ScrollBarPolicy
+    prefix: ScrollBar
   "Qt::ItemSelectionMode": ItemSelectionMode
   "Qt::SortOrder": SortOrder
   "Qt::ItemSelectionOperation": ItemSelectionOperation
@@ -48,7 +50,9 @@ enums:
   "QSizePolicy::ControlTypes": SizePolicy::ControlTypes
   "QSizePolicy::Policy": SizePolicy::Policy
   "QSizePolicy::PolicyFlag": SizePolicy::PolicyFlag
-  "Qt::WidgetAttribute": WidgetAttribute
+  "Qt::WidgetAttribute":
+    destination: Widget::Attribute
+    prefix: true
   "QPalette::ColorGroup": Palette::ColorGroup
   "QPalette::ColorRole": Palette::ColorRole
   "QWidget::RenderFlags": Widget::RenderFlags
@@ -75,7 +79,9 @@ enums:
   "QTabBar::SelectionBehavior": TabBar::SelectionBehavior
   "QTabBar::Shape": TabBar::Shape
   "Qt::Corner": Corner
-  "Qt::TextElideMode": TextElideMode
+  "Qt::TextElideMode":
+    destination: TextElideMode
+    prefix: true
   "Qt::ToolButtonStyle": ToolButtonStyle
   "Qt::ToolBarArea": ToolBarArea
   "Qt::ToolBarAreas": ToolBarAreas
@@ -128,7 +134,9 @@ enums:
   "QAbstractSlider::SliderAction": AbstractSlider::SliderAction
   "QAbstractSlider::SliderChange": AbstractSlider::SliderChange
   "QSlider::TickPosition": Slider::TickPosition
-  "QAbstractScrollArea::SizeAdjustPolicy": AbstractScrollArea::SizeAdjustPolicy
+  "QAbstractScrollArea::SizeAdjustPolicy":
+    destination: AbstractScrollArea::SizeAdjust
+    # prefix: SizeAdjust
   "QAbstractSpinBox::ButtonSymbols": AbstractSpinBox::ButtonSymbols
   "QAbstractSpinBox::CorrectionMode": AbstractSpinBox::CorrectionMode
   "QAbstractSpinBox::StepEnabled": AbstractSpinBox::StepEnabled
@@ -151,7 +159,9 @@ enums:
   "QUrl::ComponentFormattingOption": Url::ComponentFormattingOption
   "QUrl::ComponentFormattingOptions": Url::ComponentFormattingOptions
   "QUrl::ParsingMode": Url::ParsingMode
-  "QUrl::UrlFormattingOption": Url::UrlFormattingOption
+  "QUrl::UrlFormattingOption": Url::FormattingOption
+  "QUrl::FormattingOptions": Url::FormattingOptions
+  # "QUrl::UrlFormattingOption": Url::UrlFormattingOption
   # "QUrl::FormattingOptions": This one is actually a `QUrlTwoFlags`.  Manually implemented.
   "QUrl::UserInputResolutionOption": Url::UserInputResolutionOption
   "QUrl::UserInputResolutionOptions": Url::UserInputResolutionOptions
@@ -166,6 +176,7 @@ enums:
   "QTextDocument::MetaInformation": TextDocument::MetaInformation
   "QTextDocument::Stacks": TextDocument::Stacks
   "QTextDocument::FindFlags": TextDocument::FindFlags
+  "QTextDocument::MarkdownFeatures": TextDocument::MarkdownFeatures
   "QTextCursor::MoveOperation": TextCursor::MoveOperation
   "QTextCursor::MoveMode": TextCursor::MoveMode
   "QTextCursor::SelectionType": TextCursor::SelectionType
@@ -221,3 +232,35 @@ enums:
   "QFont::StyleHint": Font::StyleHint
   "QFont::StyleStrategy": Font::StyleStrategy
   "QFont::Weight": Font::Weight
+  "Qt::ItemFlags": ItemFlags
+  "Qt::TtemFlag": ItemFlag
+  "QAbstractItemModel::CheckIndexOptions": AbstractItemModel::CheckIndexOptions
+  "QAbstractItemModel::CheckIndexOption": AbstractItemModel::CheckIndexOption
+  "QAbstractItemModel::LayoutChangeHint": AbstractItemModel::LayoutChangeHint
+  "QTextBlockFormat::MarkerType": TextBlockFormat::MarkerType
+  "QTextBlockFormat::LineHeightTypes": TextBlockFormat::LineHeightTypes
+  "Qt::ReturnByValueConstant": ReturnByValueConstant
+  "Qt::Edges": Edges
+  "Qt::Edge": Edge
+  "Qt::HighDpiScaleFactorRoundingPolicy": HighDpiScaleFactorRoundingPolicy
+  "QAbstractItemDelegate::EndEditHint": AbstractItemDelegate::EndEditHint
+  "QAbstractItemView::SelectionMode": AbstractItemDelegate::SelectionMode
+  "QAbstractItemView::SelectionBehavior": AbstractItemDelegate::SelectionBehavior
+  "QAbstractItemView::EditTriggers": AbstractItemDelegate::EditTriggers
+  "QAbstractItemView::EditTrigger": AbstractItemDelegate::EditTrigger
+  "QAbstractItemView::DragDropMode": AbstractItemDelegate::DragDropMode
+  "QAbstractItemView::ScrollHint": AbstractItemDelegate::ScrollHint
+  "QAbstractItemView::CursorAction": AbstractItemDelegate::CursorAction
+  "QAbstractItemView::State": AbstractItemDelegate::State
+  "QAbstractItemView::DropIndicatorPosition": AbstractItemDelegate::DropIndicatorPosition
+  "QAbstractItemView::ScrollMode": AbstractItemDelegate::ScrollMode
+  "QItemSelectionModel::SelectionFlags": ItemSelectionModel::SelectionFlags
+  "QItemSelectionModel::SelectionFlag": ItemSelectionModel::SelectionFlag
+  "QCompleter::CompletionMode": Completer::CompletionMode
+  "QCompleter::ModelSorting": Completer::ModelSorting
+  "QMetaType::Type": MetaType::Type
+  "QListView::Flow": ListView::Flow
+  "QListView::Movement": ListView::Movement
+  "QListView::ResizeMode": ListView::ResizeMode
+  "QListView::LayoutMode": ListView::LayoutMode
+  "QListView::ViewMode": ListView::ViewMode

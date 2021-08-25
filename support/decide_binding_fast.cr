@@ -83,7 +83,7 @@ unless File.exists?("#{__DIR__}/../ext/binding_#{chosen_binding}.a")
       "--",
       min_version, "make",
     ],
-    env: { "QT_VERSION" => chosen_version },
+    env: {"QT_VERSION" => chosen_version},
     output: STDERR,
     error: STDERR,
   )

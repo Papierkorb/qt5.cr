@@ -10,7 +10,10 @@
 # These bindings will, as configured, bind to Qt dynamically.
 
 module: Qt
-library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
+if_os_is_darwin:
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ `pkg-config --libs Qt5Widgets`"
+else:
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
 
 <<: config/processors_and_generators.yml
 <<: config/find_paths.yml
@@ -25,7 +28,14 @@ parser: # Clang parser configuration
   if_TARGET_TRIPLE_is_: # TARGET_TRIPLE is empty.
     flags: [ "-x", "c++", "-std=c++11", "-fPIC" ]
   else:
-    flags: [ "-x", "c++", "-std=c++11", "-fPIC", "-target", "{TARGET_TRIPLE}" ]
+    flags:
+      - "-x"
+      - "c++"
+      - "-stdlib=libc++"
+      - "-std=c++14"
+      - "-fPIC"
+      - "-target"
+      - "{TARGET_TRIPLE}"
   files:
     - QtCore/QtCore
     - QtGui/QtGui
@@ -35,3 +45,5 @@ parser: # Clang parser configuration
     - "{QT_INCLUDE_DIR}/QtCore/"
     - "{QT_INCLUDE_DIR}/QtGui/"
     - "{QT_INCLUDE_DIR}/QtWidgets/"
+    - "{LLVM_INCLUDES}"
+

@@ -13,7 +13,7 @@ module Qt
       end
     end
 
-    # ditto
+    # :ditto:
     def self.draw(target : Qt::PaintDevice)
       painter = new(target)
       yield painter

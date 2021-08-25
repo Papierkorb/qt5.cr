@@ -74,19 +74,7 @@ types: # Type rewrite rules
     copy_structure: true
     pass_by: Value
     kind: Struct
-  "std::function<void (const QString &, const QByteArray &)>":
-    ignore: true
-  "std::chrono::milliseconds":
-    cpp_type: int64_t
-    binding_type: Int64
-    crystal_type: Time::Span
-    generate_binding: false
-    generate_wrapper: false
-    pass_by: Value
-    builtin: true
-    to_cpp: "std::chrono::milliseconds(%)"
-    from_cpp: "(%.count())"
-    converter: Qt::Converter::TimeSpan
+
   "QUrl::FormattingOptions":
     crystal_type: Url::FormattingOptions
     binding_type: Url::FormattingOptions
@@ -114,6 +102,7 @@ types: # Type rewrite rules
 
   # No support for associative containers yet
   "QMap<int, QVariant>": { ignore: true }
+  "QHash<int, QByteArray>": { ignore: true }
 
   # Ignore private data structures
   QObjectPrivate: { ignore: true }
@@ -137,3 +126,28 @@ types: # Type rewrite rules
   "T": { ignore: true }
   "void ()": { ignore: true }
   "void (void *)": { ignore: true }
+  "std::__1::function<void (const QString &, const QByteArray &)>":
+    ignore: true
+  "std::function<void (const QString &, const QByteArray &)>":
+    ignore: true
+  "std::chrono::milliseconds":
+    cpp_type: int64_t
+    binding_type: Int64
+    crystal_type: Time::Span
+    generate_binding: false
+    generate_wrapper: false
+    pass_by: Value
+    builtin: true
+    to_cpp: "std::chrono::milliseconds(%)"
+    from_cpp: "(%.count())"
+    converter: Qt::Converter::TimeSpan
+  CGRect: {ignore: true}
+  CFURLRef: {ignore: true}
+  NSURL: {ignore: true}
+  QSize:
+    ignore_methods:
+      - toCGSize
+  QListWidgetItem:
+    ignore_methods:
+      - "operator<"
+  <<: deprecated.yml

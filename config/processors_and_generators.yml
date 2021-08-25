@@ -5,6 +5,7 @@ processors:
   - copy_structs # Copy structures as marked
   - macros # Support for macro mapping
   - functions # Support C-style functions
+  - operators
   - instance_properties # Add property methods for public instance members
   - filter_methods # Throw out filtered methods
   - auto_container_instantiation

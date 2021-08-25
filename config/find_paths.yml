@@ -27,7 +27,7 @@ find_paths:
           1) Add `qmake` or `qmake-qt5` to your $PATH.
           2) Or make QMAKE point to it
         Manual: Set these environment variables:
-          QDIR=/installation/prefix
+          QTDIR=/installation/prefix
           QT_INCLUDE_DIR=$QTDIR/include
           QT_LIBS_DIR=$QTDIR/libs
   QT_INCLUDE_DIR:
@@ -44,8 +44,8 @@ find_paths:
       - "/usr/local/include"
     checks:
       # Check module directories
-      - { path: "QtCore",    kind: "Directory" }
-      - { path: "QtGui",     kind: "Directory" }
+      - { path: "QtCore", kind: "Directory" }
+      - { path: "QtGui", kind: "Directory" }
       - { path: "QtWidgets", kind: "Directory" }
   QT_LIBS_DIR:
     try:
@@ -59,8 +59,50 @@ find_paths:
         - path: libQt5Core.dll
         - path: libQt5Gui.dll
         - path: libQt5Widgets.dll
-    else:
+    if_os_is_linux:
       checks:
         - path: libQt5Core.so
         - path: libQt5Gui.so
         - path: libQt5Widgets.so
+  LLVM_CONFIG_BINARY:
+    kind: Executable
+    optional: false
+    try:
+      - llvm-config
+    version:
+      min: "4"
+      max: "11"
+      variable: LLVM_VERSION
+      command: "% --version"
+      regex: "^([0-9]+)."
+    error_message: Failed to find llvm version
+  LLVM_DIR:
+    kind: Directory
+    optional: false
+    list: false
+    try:
+      - shell: "{LLVM_CONFIG_BINARY} --ldflags"
+        regex: "-L([^ ]+)/lib"
+        multiple: false
+  LLVM_INCLUDES:
+    kind: Directory
+    optional: false
+    list:
+      separator: " -I"
+      template: "%"
+    try:
+      - "{LLVM_DIR}/include/c++/v1"
+      - "{LLVM_DIR}/lib/clang/*/include"
+  # CLANG_BINARY:
+  #   kind: Executable
+  #   optional: false
+  #   search_paths:
+  #     - "{LLVM_DIR}"
+  #   try:
+  #     - "bin/clang++"
+  #   version:
+  #     min: "4"
+  #     max: "6"
+  #     variable: CLANG_VERSION
+  #     command: "% --version"
+  #     regex: "^clang version ([0-9]+)."

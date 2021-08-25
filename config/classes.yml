@@ -51,7 +51,8 @@ classes:
   QTabWidget: TabWidget
   QModelIndex: ModelIndex
   QAbstractItemView: AbstractItemView
-  QAbstractModelItem: AbstractModelItem
+  QAbstractItemModel: AbstractItemModel
+  QStandardItemModel: StandardItemModel
   QTableView: TableView
   QTableWidget: TableWidget
   QTableWidgetItem: TableWidgetItem
@@ -81,7 +82,7 @@ classes:
   # "QTextOption::Tab": TextOptionTab
   QTextDocument: TextDocument
   QTextCursor: TextCursor
-  QCursor : Cursor
+  QCursor: Cursor
   QDir: Dir
   QGraphicsItem: GraphicsItem
   QGraphicsScene: GraphicsScene
@@ -104,7 +105,7 @@ classes:
   QDynamicPropertyChangeEvent: DynamicPropertyChangeEvent
   QDeferredDeleteEvent: DeferredDeleteEvent
   QInputEvent: InputEvent
-  QKeyEvent : KeyEvent
+  QKeyEvent: KeyEvent
   QMouseEvent: MouseEvent
   QEnterEvent: EnterEvent
   QFocusEvent: FocusEvent
@@ -163,3 +164,9 @@ classes:
   QTextLength: TextLength
   QFont: Font
   QFontMetrics: FontMetrics
+  QStyleOptionGraphicsItem: StyleOptionGraphicsItem
+  QListView: ListView
+  QSize: Size
+  QListWidget: ListWidget
+  QListWidgetItem: ListWidgetItem
+  QMargins: Margins
