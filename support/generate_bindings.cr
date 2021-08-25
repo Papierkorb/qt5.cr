@@ -15,43 +15,45 @@ require "../lib/bindgen/src/bindgen/find_path/generic_version"
 # spoved_logger :trace, bind: true, clear: true, dispatcher: :sync
 
 configurations = [
-  #   OS       LIBC   ARCH      Qt     Clang target triplet      Ptr  Endian
-  # {"linux", "gnu", "x86_64", "5.5", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.6", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.7", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.8", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.9", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.10", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.11", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.12", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.13", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"linux", "gnu", "x86_64", "5.14", "x86_64-unknown-linux-gnu", 8, "little"},
-  {"linux", "gnu", "x86_64", "5.15", "x86_64-unknown-linux-gnu", 8, "little"},
-  # {"darwin", "unknown", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
-  # {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
+#      OS       LIBC   ARCH      Qt   Patch   Clang target triplet      Ptr  Endian
+#  { "linux", "gnu", "x86_64", "5.5",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.6",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.7",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.8",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.9",  "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.10", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.11", "2", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.12", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+  { "linux", "gnu", "x86_64", "5.13", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.14", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  { "linux", "gnu", "x86_64", "5.15", "0", "x86_64-unknown-linux-gnu", 8, "little" },
+#  {"darwin", "unknown", "x86_64", "5.13", "x86_64-apple-darwin19.6.0", 8, "little"},
+#  {"darwin", "unknown", "x86_64", "5.15", "x86_64-apple-darwin19.6.0", 8, "little"},
 ]
 
 TEMPDIR = File.expand_path("#{__DIR__}/../download_cache")
 
 struct QtVersion
   getter name : String
+  getter patch : String
   delegate to_s, to: @name
 
   @infix = ""
 
-  def initialize(@name)
-    res = Bindgen::FindPath::GenericVersion.parse(@name) <=> Bindgen::FindPath::GenericVersion.parse("5.11")
+  def initialize(@name, @patch = "0")
+    res = Bindgen::FindPath::GenericVersion.parse(@name) <=> Bindgen::FindPath::GenericVersion.parse("5.10")
     if res == -1
       @infix = "-opensource"
     end
   end
 
   def base_name
-    "qt-everywhere#{@infix}-src-#{@name}.0"
+    "qt-everywhere#{@infix}-src-#{@name}.#{@patch}"
   end
 
-  def download_url
-    "https://download.qt.io/archive/qt/#{@name}/#{@name}.0/single/#{base_name}.tar.xz"
+  def download_urls
+    ["https://download.qt.io/archive/qt/#{@name}/#{@name}.#{@patch}/single/#{base_name}.tar.xz",
+     "https://download.qt.io/new_archive/qt/#{@name}/#{@name}.#{@patch}/single/#{base_name}.tar.xz"]
   end
 
   def path
@@ -72,8 +74,8 @@ class TargetPlatform
   getter pointer_size : Int32
   getter endian : String
 
-  def initialize(@os, @libc, @arch, qt, @triple, @pointer_size, @endian)
-    @qt = QtVersion.new(qt)
+  def initialize(@os, @libc, @arch, qt, patch, @triple, @pointer_size, @endian)
+    @qt = QtVersion.new(qt, patch)
   end
 
   def target
@@ -94,20 +96,32 @@ def report_step(message)
 end
 
 def download_missing_qts(versions)
+  # Test a model where URLs are always tried to be downloaded, but if they're complete
+  # the curl call will be a no-op. This might be more user friendly than just using
+  # existence of file to assume that the file has been downloaded in full, which then
+  # causes unclear tar errors if file is invalid or incomplete.
   urls = versions
-    .reject { |v| File.file? v.archive_path }
-    .map { |v| v.download_url }
+    #.reject{|v| File.file? v.archive_path}
+    .map{|v| v.download_urls}
 
   if urls.empty?
     report_step "All Qt sources already present"
     return
   end
 
-  arguments = ["--remote-name-all", "--location"] + urls
 
-  report_step "Downloading missing Qt sources (#{versions.map { |v| v.name }.join(", ")})"
-  Dir.cd TEMPDIR do
-    system("curl", arguments)
+  #report_step "Downloading missing Qt sources (#{versions.map{|v|v.name}.join(", ")})"
+  report_step "Verifying and/or downloading Qt sources (#{versions.map{|v|v.name}.join(", ")})"
+
+  urls.each do |version_urls|
+    version_urls.each_with_index do |url, idx|
+      arguments = [ "-C-", "--fail", "--remote-name-all", "--location", url ]
+
+      break if Dir.cd TEMPDIR do
+        report(idx, version_urls.size, "Trying: curl #{arguments}")
+        system("curl", arguments)
+      end
+    end
   end
 end
 
@@ -123,8 +137,9 @@ def unpack_qts(versions)
 
   report_step "Unpacking Qt sources"
   files.each_with_index do |file, idx|
-    report(idx, files.size, "Unpacking #{file}")
-    system("tar", ["-C", TEMPDIR, "-xf", file])
+    switches = "-xf"
+    report(idx, files.size, "Unpacking: tar -C #{TEMPDIR} #{switches} #{file}")
+    system("tar", [ "-C", TEMPDIR, switches, file ])
   end
 end
 
