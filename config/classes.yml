@@ -98,6 +98,7 @@ classes:
   QGraphicsRectItem: GraphicsRectItem
   QGraphicsSimpleTextItem: GraphicsSimpleTextItem
   QGraphicsPixmapItem: GraphicsPixmapItem
+  QPen: Pen
   QBrush: Brush
   QColor: Color
   QEvent: Event

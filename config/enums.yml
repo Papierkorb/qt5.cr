@@ -40,6 +40,8 @@ enums:
   "Qt::SizeMode": SizeMode
   "Qt::ClipOperation": ClipOperation
   "Qt::PenStyle": PenStyle
+  "Qt::PenCapStyle": PenCapStyle
+  "Qt::PenJoinStyle": PenJoinStyle
   "Qt::ScreenOrientations": ScreenOrientations
   "Qt::ArrowType": ArrowType
   "Qt::CaseSensitivity": CaseSensitivity
