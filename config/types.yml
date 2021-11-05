@@ -112,6 +112,7 @@ types: # Type rewrite rules
   QIconPrivate: { ignore: true }
   "QPixmap::DataPtr": { ignore: true }
   "QBrush::DataPtr": { ignore: true }
+  QPenPrivate: { ignore: true }
 
   # Waiting for a reasonable pass-through implementation of QByteArray
   "QList<QByteArray>": { ignore: true }
