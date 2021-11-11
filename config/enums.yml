@@ -1,4 +1,5 @@
 enums:
+  "Qt::DayOfWeek": DayOfWeek
   "Qt::CheckState": CheckState
   "Qt::ConnectionType": ConnectionType
   "Qt::TimerType": TimerType
