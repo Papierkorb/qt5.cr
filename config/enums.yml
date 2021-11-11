@@ -267,3 +267,15 @@ enums:
   "QListView::ResizeMode": ListView::ResizeMode
   "QListView::LayoutMode": ListView::LayoutMode
   "QListView::ViewMode": ListView::ViewMode
+  "QLocale::Country": Locale::Country
+  "QLocale::CurrencySymbolFormat": Locale::CurrencySymbolFormat
+  "QLocale::DataSizeFormat": Locale::DataSizeFormat
+  "QLocale::DataSizeFormats": Locale::DataSizeFormats
+  "QLocale::FloatingPointPrecisionOption": Locale::FloatingPointPrecisionOption
+  "QLocale::FormatType": Locale::FormatType
+  "QLocale::Language": Locale::Language
+  "QLocale::MeasurementSystem": Locale::MeasurementSystem
+  "QLocale::NumberOption": Locale::NumberOption
+  "QLocale::NumberOptions": Locale::NumberOptions
+  "QLocale::QuotationStyle": Locale::QuotationStyle
+  "QLocale::Script": Locale::Script

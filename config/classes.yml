@@ -171,3 +171,4 @@ classes:
   QListWidget: ListWidget
   QListWidgetItem: ListWidgetItem
   QMargins: Margins
+  QLocale: Locale
