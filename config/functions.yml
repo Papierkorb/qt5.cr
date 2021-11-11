@@ -1,3 +1,5 @@
 functions:
   "^qVersion$":
     destination: "::"
+  "^qt5cr_reset_numeric_locale":
+    destination: "::"
