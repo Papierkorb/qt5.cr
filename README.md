@@ -92,6 +92,18 @@ Qt::Application.exec
 
 ![hello-qt](https://raw.githubusercontent.com/Papierkorb/qt5.cr/master/images/hello-qt.png)
 
+## Locale
+
+By default Qt sets the locale to the system locale when an application
+class (like `Qt::Application`) is instantiated. However, this causes
+stdlib Crystal functions like `to_f` to behave unexpectedly, e.g.,
+using a different character as decimal separator (also see the discussion
+of this [PR](https://github.com/Papierkorb/qt5.cr/pull/51)).
+Therefore, in contrast to the behaviour of the C++ classes of Qt,
+`qt5.cr` resets the numeric locale to "C" after creating an
+application class instance (this follows an [advice from Qt
+itself](https://doc.qt.io/qt-5/qcoreapplication.html#locale-settings)).
+
 # Developer perspective
 
 ## Generating the bindings

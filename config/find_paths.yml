@@ -106,3 +106,11 @@ find_paths:
   #     variable: CLANG_VERSION
   #     command: "% --version"
   #     regex: "^clang version ([0-9]+)."
+  EXT_INCLUDES:
+    kind: Directory
+    optional: false
+    list:
+      separator: " -I"
+      template: "%"
+    try:
+      - "%/ext"
