@@ -144,8 +144,8 @@ classes:
   QGesture: Gesture
   QPainter: Painter
   # "QPainter::PixmapFragment": PainterPixmapFragment
-  QLine: QLine
-  QLineF: QLineF
+  QLine: Line
+  QLineF: LineF
   QSystemTrayIcon: SystemTrayIcon
   QDesktopServices: DesktopServices
   QDesktopWidget: DesktopWidget
