@@ -11,9 +11,9 @@
 
 module: Qt
 if_os_is_darwin:
-  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ `pkg-config --libs Qt5Widgets`"
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ `pkg-config --libs Qt5Widgets` -lgccpp"
 else:
-  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets"
+  library: "%/ext/binding_{BINDING_PLATFORM}.a -lstdc++ -lQt5Core -lQt5Gui -lQt5Widgets -lgccpp"
 
 <<: config/processors_and_generators.yml
 <<: config/find_paths.yml
