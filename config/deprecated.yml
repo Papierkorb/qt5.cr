@@ -131,6 +131,10 @@ QPainter:
   - drawRoundRect
   - setRedirected
   - restoreRedirected
+QPolygon:
+  ignore_methods:
+  - putPoints
+  - setPoints
 QScreen:
   ignore_methods:
   - trUtf8

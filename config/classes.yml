@@ -146,6 +146,8 @@ classes:
   # "QPainter::PixmapFragment": PainterPixmapFragment
   QLine: Line
   QLineF: LineF
+  QPolygon: Polygon
+  QPolygonF: PolygonF
   QSystemTrayIcon: SystemTrayIcon
   QDesktopServices: DesktopServices
   QDesktopWidget: DesktopWidget
