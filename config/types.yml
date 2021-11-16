@@ -43,22 +43,71 @@ types: # Type rewrite rules
   QSessionManager:
     pass_by: Reference
     from_cpp: "(%)"
-  QPoint: # Manual implementation with a structure copy.
+  QPoint:
     copy_structure: true
     binding_type: QPoint
-    generate_binding: false # Wrap this one manually
-    generate_wrapper: false
-    # As we're not generating a wrapper, it won't set the `crystal_type` by
-    # itself.
-    crystal_type: Point
+    generate_binding: true
+    generate_wrapper: true
     pass_by: Value
+    kind: Struct
   QPointF:
     copy_structure: true
     binding_type: QPointF
-    generate_binding: false
-    generate_wrapper: false
+    generate_binding: true
+    generate_wrapper: true
     crystal_type: PointF
     pass_by: Value
+    kind: Struct
+  QSize:
+    copy_structure: true
+    binding_type: QSize
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: Size
+    pass_by: Value
+    kind: Struct
+    ignore_methods:
+      - toCGSize
+  QSizeF:
+    copy_structure: true
+    binding_type: QSizeF
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: SizeF
+    pass_by: Value
+    kind: Struct
+  QLine:
+    copy_structure: true
+    binding_type: QLine
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: Line
+    pass_by: Value
+    kind: Struct
+  QLineF:
+    copy_structure: true
+    binding_type: QLineF
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: LineF
+    pass_by: Value
+    kind: Struct
+  QRect:
+    copy_structure: true
+    binding_type: QRect
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: Rect
+    pass_by: Value
+    kind: Struct
+  QRectF:
+    copy_structure: true
+    binding_type: QRectF
+    generate_binding: true
+    generate_wrapper: true
+    crystal_type: RectF
+    pass_by: Value
+    kind: Struct
   "QPainter::PixmapFragment":
     ignore: true
     # copy_structure: true
@@ -145,9 +194,6 @@ types: # Type rewrite rules
   CGRect: {ignore: true}
   CFURLRef: {ignore: true}
   NSURL: {ignore: true}
-  QSize:
-    ignore_methods:
-      - toCGSize
   QListWidgetItem:
     ignore_methods:
       - "operator<"

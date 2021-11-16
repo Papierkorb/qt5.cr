@@ -1,21 +1,8 @@
 module Qt
-  # Describes a 2D-point in an unknown space.  Manual wrapper class for the
-  # Qt types `QPoint` and `QPointF`.  See `Point` and `PointF` for easy use.
-  struct PointBase(T, B)
-    getter unwrap : B
-
-    def to_unsafe : B
-      @unwrap
-    end
-
-    def initialize(x = 0, y = 0)
-      @unwrap = B.new(xp: T.new(x), yp: T.new(y))
-    end
-
-    def initialize(@unwrap : B)
-    end
-
-    {% for field in %i[ x y ].map(&.id) %}
+  # Implements a few functions directly in Crystal. This should be a
+  # little bit faster than going through the call to C++.
+  module PointMethods(T)
+    {% for field in %i[x y].map(&.id) %}
       # Returns the {{ field }} value
       def {{ field }} : T
         @unwrap.{{ field }}p
@@ -93,8 +80,12 @@ module Qt
   end
 
   # A 2D point with integer (`Int32`) accuracy.
-  alias Point = PointBase(Int32, Binding::QPoint)
+  struct Point
+    include PointMethods(Int32)
+  end
 
   # A 2D point with floating-point (`Float64`) accuracy.
-  alias PointF = PointBase(Float64, Binding::QPointF)
+  struct PointF
+    include PointMethods(Float64)
+  end
 end

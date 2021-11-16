@@ -1,5 +1,5 @@
 module Qt
-  class Rect
+  struct Rect
     def to_s(io)
       io << "#{width}x#{height} @ #{x},#{y}"
     end
@@ -11,7 +11,7 @@ module Qt
     end
   end
 
-  class RectF
+  struct RectF
     def to_s(io)
       io << "#{width}x#{height} @ #{x},#{y}"
     end
