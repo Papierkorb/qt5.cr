@@ -38,9 +38,6 @@ QCoreApplication:
 QDir:
   ignore_methods:
   - addResourceSearchPath
-QLineF:
-  ignore_methods:
-  - angle
 QMimeData:
   ignore_methods:
   - trUtf8

@@ -170,6 +170,7 @@ classes:
   QStyleOptionGraphicsItem: StyleOptionGraphicsItem
   QListView: ListView
   QSize: Size
+  QSizeF: SizeF
   QListWidget: ListWidget
   QListWidgetItem: ListWidgetItem
   QMargins: Margins
