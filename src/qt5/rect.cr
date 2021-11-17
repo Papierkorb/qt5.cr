@@ -1,7 +1,7 @@
 module Qt
   struct Rect
     def to_s(io)
-      io << "#{width}x#{height} @ #{x},#{y}"
+      io << width << "x" << height << " @ " << x << "," << y
     end
 
     def inspect(io)
@@ -13,7 +13,7 @@ module Qt
 
   struct RectF
     def to_s(io)
-      io << "#{width}x#{height} @ #{x},#{y}"
+      io << width << "x" << height << " @ " << x << "," << y
     end
 
     def inspect(io)

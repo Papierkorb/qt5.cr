@@ -71,11 +71,11 @@ module Qt
     end
 
     def to_s(io)
-      io << "#{x}, #{y}"
+      io << x << ", " << y
     end
 
     def inspect(io)
-      io << "<Point: #{x}, #{y}>"
+      io << "<" << self.class.name << ": " << x << ", " << y << ">"
     end
   end
 
