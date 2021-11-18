@@ -105,6 +105,12 @@ struct CrystalProc {
   }
 };
 
+template <typename T>
+struct CrystalGCWrapper: public T, public gc_cleanup
+{
+  using T::T;
+};
+
 /// A simple wrapper around a non-pointer type that allows a single
 /// dereference operation.
 template <typename T>
