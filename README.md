@@ -68,8 +68,9 @@ on this under License below.)
 Using your system's package manager:
 
 * **ArchLinux** `pacman -S qt5-base`
-* **Debian** `apt-get install qtbase5-dev`
-* **Ubuntu** `apt-get install qtbase5-dev`
+* **Debian/Ubuntu/Devuan** `apt-get install qtbase5-dev cmake llvm-dev clang libclang-dev libz-dev libstdc++-dev`
+
+You also need `cmake`.
 
 # User perspective
 
